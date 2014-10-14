@@ -15,7 +15,7 @@ foreach ($tags as $tag) {
 }
 
 //creo il file
-$csv_folder  = getenv("DOCUMENT_ROOT").'/wikipedia/data/';
+$csv_folder  = getenv("DOCUMENT_ROOT").'/wikimole/data/';
 $filename = 'file.txt';
 
 //echo $csv_folder . $CSVFileName;
@@ -57,12 +57,12 @@ $output_test .= "</ul>";
 
 echo $output_test;
 echo "<br/>";
-*/
+
 
 $output = "<ul>";
-/*foreach ($json_parse->query as $query {
+foreach ($json_parse->query as $query {
 	$output .= "<li>" . "{$query->name}\n" . "</li>";
-}*/
+}
     foreach ( $json_parse->query as $query )
     {
     	echo "{$query->pages}\n";
