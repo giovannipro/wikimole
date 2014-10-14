@@ -1,5 +1,18 @@
- {"employees":[
-    {"firstName":"John", "lastName":"Doe"},
-    {"firstName":"Anna", "lastName":"Smith"},
-    {"firstName":"Peter", "lastName":"Jones"},
-]}
+{
+    "person": [
+        {
+            "name": {
+                "first": "John",
+                "last": "Adams"
+            },
+            "age": "40"
+        },
+        {
+            "name": {
+                "first": "Thomas",
+                "last": "Jefferson"
+            },
+            "age": "35"
+        }
+    ]
+}
