@@ -1,6 +1,12 @@
 {
-    "articles": [        
-        "Mahatma%20Gandhi",        
-        "Nelson%20Mandela"
+    "articles":[
+    	{"art" : "Mahatma Gandhi" },
+    	{"art" : "Nelson Mandela" },
+    	{"art" : "Transport" },
+    	{"art" : "Oliver Tambo" },
+    	{"art" : "Transport in South Africa" },
+    	{"art" : "Animal-powered transport" },
+    	{"art" : "Later Stone Age" },
+    	{"art" : "San people"}
     ]
-}
+}       

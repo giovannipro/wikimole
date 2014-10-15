@@ -3,22 +3,47 @@
 echo "extract.php";
 echo "<br/>";
 
-echo "ciao 009";
+echo "ciao 030";
 echo "<br/>";
 
-$articles = file_get_contents('http://localhost:8888/wikimole/articles.json');
+//richiamo il json con il nome degli articoli
+$articlesfile = file_get_contents('http://localhost:8888/wikimole/articles.json');
+$articles = json_decode($articlesfile,true);
 
 $articleName = [];
 
+//ottengo il link alle api della lingua
 foreach($articles[articles] as $c) {
-    $articleName[] = $c[0];
+    $articleName[] = $c[art];
+    //$c[art] = str_replace('"', "", $c[art]);
+    $apilink = "https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllimit=500&titles=".json_encode($c[art]);//$articleName
+    $apilink = str_replace('"', "", $apilink);
+    
+
+    $link = "'".$apilink."'";
+    echo $link;
+    //echo file_get_contents($link);
+    //echo json_decode(file_get_contents("$apilink"),true);
+    //echo json_encode($articleName)
+    echo "<br/>";
 };
 
-echo json_encode($articleName);
-echo "<br/>";
+/*
+$json = $apiLang; //file_get_contents('http://localhost:8888/wikimole/data/file.json');
+$json_parse = json_decode($json,true);
+*/
 
+//cerco api per lingua e categoria per un solo articolo
 $apiLang = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllimit=500&titles=Mahatma%20Gandhi');
 $apiCat = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=categories&format=json&cllimit=500&titles=Mahatma%20Gandhi');
+
+/*
+foreach($articles[articles] as $c) {
+    echo "<br/>";
+    $articleName[] = $c[art];
+    echo "<br/>";
+};
+*/
 
 //estraggo soltanto il json
 $dom = new DOMDocument();

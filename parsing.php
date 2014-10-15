@@ -1,7 +1,7 @@
 <?php 
 require('extract.php');
 
-echo "ciao 023";
+echo "ciao 001";
 echo "<br/>";
 
 echo "parsing.php";
@@ -17,11 +17,11 @@ $jsonTxt = rename($csv_folder . $filename, $csv_folder . "file.json");
 $json = $apiLang; //file_get_contents('http://localhost:8888/wikimole/data/file.json');
 $json_parse = json_decode($json,true); //(array)json_decode($json,true);
 
-$jsontest = file_get_contents('http://localhost:8888/wikimole/data/filetest.json');
-$json_parse_test = json_decode($jsontest, true);
+//$jsontest = file_get_contents('http://localhost:8888/wikimole/data/filetest.json');
+//$json_parse_test = json_decode($jsontest, true);
 
-$jsontestb = $apiCat;//file_get_contents('http://localhost:8888/wikimole/data/filetestb.json');
-$jsonb_parse_test = json_decode($jsontestb, true);
+//$jsontestb = $apiCat;//file_get_contents('http://localhost:8888/wikimole/data/filetestb.json');
+//$jsonb_parse_test = json_decode($jsontestb, true);
 
 //definizione dei valori sotto forma di array
 $lang = [];
