@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="library/d3.min.js" charset="utf-8"></script>
+		<title>Visualization</title>
+	</head>
+
+	<body>
+		First visualization
+
+		<script>
+            
+            d3.json('data/data.json',loaded);  
+
+            function loaded (data){
+                
+                var art = d.Language;
+
+                /*var art = d3.nest()
+                .key(function(d){
+                    var lang = d.Language;
+                });
+                .sortKeys(d3.ascending);
+                
+                .key(function(d){
+                    var cat = d.Category;
+                });
+                .sortKeys(d3.ascending);
+
+                .key(function(d){
+                    var art = d.categories;
+                });
+                .sortKeys(d3.ascending);
+                */
+				
+
+				/*cat.sort(function(a,b) {
+                    return d3.ascending(b.values.length, a.values.length)
+                })
+				*/
+
+                console.log(cat);
+
+                var groups = d3.select('svg')
+                    .selectAll('g')
+                    .data(art)
+                    .enter()
+                    .append('rect')
+                    .attr('height', 25)
+                    .attr('width', function (d,i) {
+                        return d.art;
+                    });
+
+            }
+
+
+
+
+        </script>
+
+	</body>
+
+</html> 
