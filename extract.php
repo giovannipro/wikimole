@@ -3,21 +3,15 @@
 echo "extract.php";
 echo "<br/>";
 
-<<<<<<< HEAD
+
 echo "ciao 075";
 echo "<br/>";
 
 
-=======
-echo "ciao 078";
-echo "<br/>";
-
-/*
->>>>>>> parent of 65f20dc... try again to extract list from html
 # Enable Error Reporting and Display:
 error_reporting(~0);
 ini_set('display_errors', 1);
-*/
+
 
 //richiamo il json con il nome degli articoli
 $articlesfile = file_get_contents('http://localhost:8888/wikimole/articles.json');
@@ -57,7 +51,7 @@ $template = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&p
 
 $html = file_get_contents('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info#mw-pageinfo-watchers');
 
-<<<<<<< HEAD
+
 $dom_b = new DOMDocument();
 $dom_b->loadHTML($html);
 //$list = $dom_b->getElementsByTagName('ul');
@@ -65,8 +59,7 @@ foreach ($dom_b->getElementsByTagName('li') as $dom_b) {//[@id="mw-pageinfo-temp
 //foreach ($dom_b->getElementById('wikitable') as $dom_b) {
     echo $dom_b->nodeValue.'<br />';               
 }
-=======
->>>>>>> parent of 65f20dc... try again to extract list from html
+
 
 
 

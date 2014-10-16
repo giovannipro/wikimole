@@ -1,11 +1,8 @@
 <?php 
 require('extract.php');
 
-<<<<<<< HEAD
+
 echo "ciao 006";
-=======
-echo "ciao 001";
->>>>>>> parent of 65f20dc... try again to extract list from html
 echo "<br/>";
 
 echo "parsing.php";
@@ -26,16 +23,11 @@ $jsonlang = $apilang;
 $jsoncat = $apicat;
 
 //decodifico i json
-<<<<<<< HEAD
+
 $jsonlang_parse = json_decode($apilang,true);
 $jsoncat_parse = json_decode($apicat,true);
 //$jsonlang_all_parse = json_decode($apilink_all,true);
 //$jsontemp_parse = json_decode($apitemp,true);
-
-=======
-$jsonlang_parse = json_decode($jsonlang,true);
-$jsoncat_parse = json_decode($jsoncat,true);
->>>>>>> parent of 65f20dc... try again to extract list from html
 
 //definizione dei valori sotto forma di array
 $lang = [];
