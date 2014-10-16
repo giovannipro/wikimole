@@ -1,7 +1,7 @@
 <?php 
 require('extract.php');
 
-echo "ciao 004";
+echo "ciao 006";
 echo "<br/>";
 
 echo "parsing.php";
@@ -24,6 +24,7 @@ $filenameb = 'data.txt';
 //decodifico i json
 $jsonlang_parse = json_decode($apilang,true);
 $jsoncat_parse = json_decode($apicat,true);
+//$jsonlang_all_parse = json_decode($apilink_all,true);
 //$jsontemp_parse = json_decode($apitemp,true);
 
 
@@ -40,8 +41,15 @@ foreach($jsoncat_parse[query][pages][19379][categories] as $b) {
     $cat[] = $b[title]; // 'Cat: '. $b[title];
 };
 
+/*foreach($jsonlang_all_parse[query][pages][0][langlinks] as $c) {
+    $lang_all[] = $b[title]; // 'Cat: '. $b[title];
+};*/
+
 //scrivo il contenuto del file json con i due insiemi di dati
 $twodata = '{"19379": {"Language": '.json_encode($lang).',"Category": '.json_encode($cat).'}}';
+//$articles_all = '{"articles": {"Language":'.json_encode($jsonlang_all_parse).'}}';
+
+//echo $articles_all;
 echo $twodata;
 
 //scrivo il file json con i due insiemi di dati

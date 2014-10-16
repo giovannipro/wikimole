@@ -3,8 +3,9 @@
 echo "extract.php";
 echo "<br/>";
 
-echo "ciao 054";
+echo "ciao 075";
 echo "<br/>";
+
 
 # Enable Error Reporting and Display:
 error_reporting(~0);
@@ -22,11 +23,12 @@ $articleName = [];
 //ottengo il link alle api della lingua
 foreach($articles[articles] as $c) {
     $articleName[] = $c[art];
-    $apilink = "https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllimit=500&titles=".json_encode($c[art]);//$articleName
+    $apilink = "https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllimit=500&titles=".json_encode($c[art]);
     $apilink = str_replace('"', "", $apilink);
     
     $link = "'".$apilink."'";
 
+    echo $apilink;
     echo $link;
     echo "<br/>";
 
@@ -50,7 +52,8 @@ $html = file_get_contents('https://en.wikipedia.org/w/index.php?title=Mahatma_Ga
 $dom_b = new DOMDocument();
 $dom_b->loadHTML($html);
 //$list = $dom_b->getElementsByTagName('ul');
-foreach ($dom_b->getElementsByTagName('li') as $dom_b) {
+foreach ($dom_b->getElementsByTagName('li') as $dom_b) {//[@id="mw-pageinfo-templates"]
+//foreach ($dom_b->getElementById('wikitable') as $dom_b) {
     echo $dom_b->nodeValue.'<br />';               
 }
 
@@ -69,12 +72,12 @@ $a_elements = $xpath_a->query("*//div/div[3]/table[4]/tr[2]/td[2]");//si conta a
 
 foreach ($a_elements as $a_element) {
     //$apitemp = var_dump($a_element->textContent);
-    $apitemp = $a_element->nodeValue.'<br />';   
+    $apitemp = $a_element->nodeValue.'<br />';//->nodeValue.'<br />';   
 }
 
 $test = json_encode($apitemp);
-echo $test;
-echo 'ciao <br />';
+//echo $test;
+//echo 'ciao <br />';
 
 
 
