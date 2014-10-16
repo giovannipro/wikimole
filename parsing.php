@@ -7,6 +7,10 @@ echo "<br/>";
 echo "parsing.php";
 echo "<br/>";
 
+# Enable Error Reporting and Display:
+error_reporting(~0);
+ini_set('display_errors', 1);
+
 //indico il nome del file e la sua posizione
 $csv_folder  = getenv("DOCUMENT_ROOT").'/wikimole/data/';
 $filename = 'file.txt';
