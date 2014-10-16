@@ -3,14 +3,21 @@
 echo "extract.php";
 echo "<br/>";
 
+<<<<<<< HEAD
 echo "ciao 075";
 echo "<br/>";
 
 
+=======
+echo "ciao 078";
+echo "<br/>";
+
+/*
+>>>>>>> parent of 65f20dc... try again to extract list from html
 # Enable Error Reporting and Display:
 error_reporting(~0);
 ini_set('display_errors', 1);
-
+*/
 
 //richiamo il json con il nome degli articoli
 $articlesfile = file_get_contents('http://localhost:8888/wikimole/articles.json');
@@ -18,7 +25,7 @@ $articles = json_decode($articlesfile,true);
 
 //definisco la variabile che conterrà la lista delle api della lingua
 $articleName = [];
-//$api = [];
+$api = [];
 
 //ottengo il link alle api della lingua
 foreach($articles[articles] as $c) {
@@ -44,11 +51,13 @@ echo "<br/>";
 $apilang = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllimit=500&titles=Mahatma%20Gandhi');
 $apicat = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=categories&format=json&cllimit=500&titles=Mahatma%20Gandhi');
 
-//cerco info sui template
 $template = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=transcludedin&titles=Mahatma%20Gandhi');
-$html = file_get_contents('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info');
+//echo $template;
+//echo "<br/>";
 
+$html = file_get_contents('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info#mw-pageinfo-watchers');
 
+<<<<<<< HEAD
 $dom_b = new DOMDocument();
 $dom_b->loadHTML($html);
 //$list = $dom_b->getElementsByTagName('ul');
@@ -56,47 +65,191 @@ foreach ($dom_b->getElementsByTagName('li') as $dom_b) {//[@id="mw-pageinfo-temp
 //foreach ($dom_b->getElementById('wikitable') as $dom_b) {
     echo $dom_b->nodeValue.'<br />';               
 }
-
-echo "<br/>";
-
-
+=======
+>>>>>>> parent of 65f20dc... try again to extract list from html
 
 
 
-//estraggo soltanto la list di template 
+
+// Create DOM from URL or file
+$html_a = file_get_contents('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info#mw-pageinfo-watchers');
+
+/*
 $dom_a = new DOMDocument();
-$dom_a->loadHTML($html);
 
-$xpath_a = new DOMXpath($dom_a);
-$a_elements = $xpath_a->query("*//div/div[3]/table[4]/tr[2]/td[2]");//si conta a partire da 0; se 0 non inserire nulla, es. /div
+$dom_a->validateOnParse = true; //<!-- this first
+$dom_a->loadHTML($html_a);        //'cause 'load' == 'parse
 
+//$dom_a->preserveWhiteSpace = false;
+
+
+$belement = $dom_a->getElementsByTagName('ul');//getElementById("mw-pageinfo-templates");
+//$belement = $dom_a->find('div.mw-body');
+//echo $dom_a;
+
+//$postalCodesList = [];
+*/
+$dom_a = new DOMDocument();
+$dom_a->loadHTML($html_a);
+$postalCodesList = $dom_a->getElementsByTagName('ul');
+foreach ($dom_a->/*item(0)->*/getElementsByTagName('li') as $dom_a) {
+    echo $dom_a->nodeValue.'<br />';
+    //$template = json_encode($postalCodesList);  
+    //echo $template;                  
+}
+
+
+//echo $belement->nodeValue;
+//echo "<br/>";
+
+/*
+    $dom = new DOMDocument();
+    $dom->loadHTML($data);
+    $postalCodesList = $dom->getElementsByTagName('ul');
+    foreach ($postalCodesList->item(0)->getElementsByTagName('li') as $postalCodesList) {
+        echo $postalCodesList->nodeValue.'<br />';                    
+    }
+
+/*
+$doc = new DOMDocument();
+$doc->loadHTML($html);
+$liList = $doc->getElementsByTagName('li');
+$liValues = array();
+foreach ($liList as $li) {
+    $liValues[] = $li->nodeValue;
+}
+
+var_dump($liValues);
+
+<<<<<<< HEAD
 foreach ($a_elements as $a_element) {
     //$apitemp = var_dump($a_element->textContent);
     $apitemp = $a_element->nodeValue.'<br />';//->nodeValue.'<br />';   
-}
+=======
 
+/* 
+//to fetch all images from a webpage
+$images = array();
+foreach($html->find('img') as $img) {
+ $images[] = $img->src;
+>>>>>>> parent of 65f20dc... try again to extract list from html
+}
+print_r($images);
+ 
+//to find h1 headers from a webpage
+$headlines = array();
+foreach($html->find('h1') as $header) {
+ $headlines[] = $header->plaintext;
+}
+print_r($headlines);
+
+/*
+//find the second paragraph
+$element = $html->find("p");
+
+<<<<<<< HEAD
 $test = json_encode($apitemp);
 //echo $test;
 //echo 'ciao <br />';
+=======
+//Get all data inside the <div> where class = "pricing"
+foreach($html->find('div[class=mw-body]')->outertext as $data) {
+    echo $data->outertext;
+}
+>>>>>>> parent of 65f20dc... try again to extract list from html
 
+
+$url = 'https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info#mw-pageinfo-watchers';
+
+$html = file_get_html($url);
+
+//Get all data inside the <tr> of <table class="results">
+foreach($html->find('table[class=mw-page-info] tr') as $tr) {
+    //get all <td> where class is NOT "debug"
+    //foreach($tr->find('td[class!=debug]') as $t) {
+        //get the inner HTML
+        $data_a = $t->outertext;
+    //}
+    echo $data_a;
+    echo "Non funziona";
+}
+
+
+/*
+// Find all links
+foreach($html->find('a') as $element)
+       echo $element->href . '<br>'; 
+*/
 
 
 
 /*
-$dom_c = new DOMDocument();
-$dom_c->loadHTML($html);
-$c_elements = $dom_c->query("/div/div[3]/table[4]/tr[2]");//td[2]
-//foreach ($c_elements->getElementsByTagName('td') as $dom_c) {
-foreach ($c_elements as $c_element) {
-    echo $c_elements->nodeValue.' xxx <br />';               
-}
+$dom_a = new DOMDocument();
+$dom_a->loadHTML($html_a);
 
+$xpath_a = new DOMXPath($dom_a);
+$tags_a = $xpath_a->query('div[@id="content"]');//div[@class="content"] 
+foreach ($tags_a as $tag_a) {
+    var_dump($tag_a->textContent_a);
+}
 echo "<br/>";
 */
 
-//estraggo soltanto il testo delle api lingua e categoria
+
+
+/*
+$templateb = file_get_contents('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info#mw-pageinfo-watchers');
+echo $templateb;
+echo "<br/>";
+*/
+
+/*estraggo soltanto la lista dei template
+$dom_a = new DOMDocument();
+$dom_a->loadHTML($templateb);
+
+$xpath_1 = new DOMXPath($dom_a);
+$list_a = $xpath_1->query('//tr[@id="mw-pageinfo-templates"]'); //('//div[@class="text"]')
+
+foreach ($list_a as $list_b) {
+    var_dump($list_b->lsitContent);
+}*/
+
+/*
+$html = file_get_html('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info#mw-pageinfo-watchers');
+$x = $html->find('div.mw-body',0); //.content
+echo $x;
+echo "<br/>";
+
+include "simple_html_dom.php";
+$html = new simple_html_dom();
+$html->load_file('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info#mw-pageinfo-watchers');
+$con_div = $html->find('div',0);//get value plaintext each html
+
+
+// Create DOM from URL or file
+$html = file_get_html('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info#mw-pageinfo-watchers');
+
+// Find all images
+foreach($html->find('ul') as $element_a){
+    echo $element_a->li . '<br>';
+}*/
+
+/*
+echo $con_div;
+echo "<br/>";
+*/
+
+/*
+foreach($articles[articles] as $c) {
+    echo "<br/>";
+    $articleName[] = $c[art];
+    echo "<br/>";
+};
+*/
+
+//estraggo soltanto il json
 $dom = new DOMDocument();
-$dom->loadHTML($apiLang , $apiCat);
+$dom->loadHTML($apiLang,$apiCat);
 
 $xpath = new DOMXPath($dom);
 $tags = $xpath->query('//pre'); //('//div[@class="text"]')
@@ -104,9 +257,6 @@ $tags = $xpath->query('//pre'); //('//div[@class="text"]')
 foreach ($tags as $tag) {
     var_dump($tag->textContent);
 }
-
-
-
 
 /* 
 

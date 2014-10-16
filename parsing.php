@@ -1,7 +1,11 @@
 <?php 
 require('extract.php');
 
+<<<<<<< HEAD
 echo "ciao 006";
+=======
+echo "ciao 001";
+>>>>>>> parent of 65f20dc... try again to extract list from html
 echo "<br/>";
 
 echo "parsing.php";
@@ -13,20 +17,25 @@ ini_set('display_errors', 1);
 
 //indico il nome del file e la sua posizione
 $csv_folder  = getenv("DOCUMENT_ROOT").'/wikimole/data/';
+$filename = 'file.txt';
 $filenameb = 'data.txt';
-//$filename = 'file.txt';
 
 //uso l'estensione json al posto del txt
-//$jsonTxt = rename($csv_folder . $filename, $csv_folder . "file.json");
-//$jsonlang = $apilang;
-//$jsoncat = $apicat;
+$jsonTxt = rename($csv_folder . $filename, $csv_folder . "file.json");
+$jsonlang = $apilang;
+$jsoncat = $apicat;
 
 //decodifico i json
+<<<<<<< HEAD
 $jsonlang_parse = json_decode($apilang,true);
 $jsoncat_parse = json_decode($apicat,true);
 //$jsonlang_all_parse = json_decode($apilink_all,true);
 //$jsontemp_parse = json_decode($apitemp,true);
 
+=======
+$jsonlang_parse = json_decode($jsonlang,true);
+$jsoncat_parse = json_decode($jsoncat,true);
+>>>>>>> parent of 65f20dc... try again to extract list from html
 
 //definizione dei valori sotto forma di array
 $lang = [];
@@ -58,7 +67,6 @@ $content = $twodata;
 fwrite($jsonMerged, $twodata);
 fclose($jsonMerged);
 $jsonFile = rename($csv_folder . $filenameb, $csv_folder . "data.json");
-
 
 
 
