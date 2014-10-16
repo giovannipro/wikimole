@@ -1,7 +1,7 @@
 <?php 
 require('extract.php');
 
-echo "ciao 001";
+echo "ciao 004";
 echo "<br/>";
 
 echo "parsing.php";
@@ -13,17 +13,19 @@ ini_set('display_errors', 1);
 
 //indico il nome del file e la sua posizione
 $csv_folder  = getenv("DOCUMENT_ROOT").'/wikimole/data/';
-$filename = 'file.txt';
 $filenameb = 'data.txt';
+//$filename = 'file.txt';
 
 //uso l'estensione json al posto del txt
-$jsonTxt = rename($csv_folder . $filename, $csv_folder . "file.json");
-$jsonlang = $apilang;
-$jsoncat = $apicat;
+//$jsonTxt = rename($csv_folder . $filename, $csv_folder . "file.json");
+//$jsonlang = $apilang;
+//$jsoncat = $apicat;
 
 //decodifico i json
-$jsonlang_parse = json_decode($jsonlang,true);
-$jsoncat_parse = json_decode($jsoncat,true);
+$jsonlang_parse = json_decode($apilang,true);
+$jsoncat_parse = json_decode($apicat,true);
+//$jsontemp_parse = json_decode($apitemp,true);
+
 
 //definizione dei valori sotto forma di array
 $lang = [];
@@ -48,6 +50,7 @@ $content = $twodata;
 fwrite($jsonMerged, $twodata);
 fclose($jsonMerged);
 $jsonFile = rename($csv_folder . $filenameb, $csv_folder . "data.json");
+
 
 
 
