@@ -1,0 +1,15 @@
+1.
+Estrarre Json categorie di più articoli
+
+2.
+Visualizzare graficamente numero di lingue (con rect e poi square root)
+(forse non c'è bisogno del nest)
+
+3.
+Estrarre valori da lista in HTML (lista template) con jquery
+https://gist.github.com/ziadoz/3344345
+http://stackoverflow.com/questions/5667880/simple-screen-scraping-using-jquery
+
+4.
+Inserire 2 o più articoli nel json
+
