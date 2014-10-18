@@ -1,8 +1,12 @@
 <?php 
-require('extract.php');
+require_once('extract.php');
+require_once('functions.php');
 
+# Enable Error Reporting and Display:
+error_reporting(~0);
+ini_set('display_errors', 1);
 
-echo "ciao 006";
+echo "ciao 008";
 echo "<br/>";
 
 echo "parsing.php";
@@ -47,8 +51,12 @@ foreach($jsoncat_parse[query][pages][19379][categories] as $b) {
 };*/
 
 //scrivo il contenuto del file json con i due insiemi di dati
-$twodata = '{"19379": {"Language": '.json_encode($lang).',"Category": '.json_encode($cat).'}}';
-//$articles_all = '{"articles": {"Language":'.json_encode($jsonlang_all_parse).'}}';
+//$twodata = '{"19379": {"Language": '.json_encode($lang).',"Category": '.json_encode($cat).'}}';
+$twodata = lang_cat('"19379"',$lang,$cat);
+
+//$myfunction = add(50,30);
+//echo $myfunction;
+
 
 //echo $articles_all;
 echo $twodata;
@@ -61,11 +69,15 @@ fclose($jsonMerged);
 $jsonFile = rename($csv_folder . $filenameb, $csv_folder . "data.json");
 
 
+/* 
+
+------------------------------------------
+References
+------------------------------------------
 
 
-
-
-
+Parsing foreach
+http://stackoverflow.com/questions/10758897/parsing-json-array-with-php-foreach
 
 
 ?>
