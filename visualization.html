@@ -5,58 +5,277 @@
 		<script src="library/d3.min.js" charset="utf-8"></script>
 		<title>Visualization</title>
 	</head>
-
 	<body>
-		First visualization
-
-		<script>
+		<script>      
+        //d3.json('data/data.json',loaded);  
             
-            d3.json('data/data.json',loaded);  
-
-            function loaded (data){
+        /*function loaded (data){
                 
-                var art = d.Language;
+            //var art = d3.Articles;
+            var art = d3.Keys(data[2]);
 
-                /*var art = d3.nest()
-                .key(function(d){
-                    var lang = d.Language;
-                });
-                .sortKeys(d3.ascending);
+            var jsonCircles = [{
+                    "x_axis": 30,
+                    "y_axis": 30,
+                    "radius": 20,
+                    "color" : "green"
+                },
+                {
+                    "x_axis": 70,
+                    "y_axis": 70,
+                    "radius": 20,
+                    "color" : "purple"
+                }, 
+                {
+                    "x_axis": 110,
+                    "y_axis": 100,
+                    "radius": 20,
+                    "color" : "red"
+                }
+            ];*/
+            
+            var articles = [
+    {
+        "title": "Mahatma Gandhi",
+        "languages": [
+            "af",
+            "als",
+            "am",
+            "an",
+            "ang",
+            "tl",
+            "tpi",
+            "tr",
+            "tt",
+            "tyv",
+            "uk",
+            "ur",
+            "uz",
+            "vec",
+            "vi",
+            "war",
+            "wuu",
+            "xal",
+            "xmf",
+            "yi",
+            "yo",
+            "zh",
+            "zh-classical",
+            "zh-min-nan",
+            "zh-yue"
+        ],
+        "categories": [
+            "1869 births",
+            "1948 deaths",
+            "20th-century philosophers",
+            "All Wikipedia articles written in Indian English",
+            "All articles needing style editing",
+            "All articles with unsourced statements",
+            "Alumni of University College London",
+            "Anti-poverty advocates",
+            "Anti–World War II activists",
+            "Articles with hCards",
+            "Articles with specifically marked weasel-worded phrases from May 2012",
+            "Articles with unsourced statements from April 2014",
+            "Articles with unsourced statements from March 2014",
+            "Ascetics",
+            "Assassinated Indian politicians",
+            "Wikipedia indefinitely semi-protected pages"
+        ],
+        "quantity": 29
+    },
+    {
+        "title": "Nelson Mandela",
+        "languages": [
+            "af",
+            "als",
+            "am",
+            "an",
+            "ang",
+            "tl",
+            "tpi",
+            "tr",
+            "uz",
+            "vec",
+            "vi",
+            "war",
+            "wuu",
+            "xal",
+            "xmf",
+            "yi",
+            "yo",
+            "zh",
+            "zh-classical",
+            "zh-min-nan",
+            "zh-yue"
+        ],
+        "categories": [
+            "1869 births",
+            "1948 deaths",
+            "20th-century philosophers",
+            "All Wikipedia articles written in Indian English",
+            "All articles needing style editing",
+            "All articles with unsourced statements",
+            "Alumni of University College London",
+            "Anti-poverty advocates",
+            "Anti–World War II activists",
+            "Articles with unsourced statements from April 2014",
+            "Articles with unsourced statements from March 2014",
+            "Ascetics",
+            "Assassinated Indian politicians",
+            "Wikipedia indefinitely semi-protected pages"
+        ],
+        "quantity": 26
+    },
+                 {
+        "title": "South Africa",
+        "languages": [
+            "af",
+            "als",
+            "am",
+            "an",
+            "ang",
+            "tl",
+            "tpi",
+            "tr",
+            "uz",
+            "vec",
+            "vi",
+            "war",
+            "yi",
+            "yo",
+            "zh",
+            "zh-classical",
+            "zh-min-nan",
+            "zh-yue"
+        ],
+        "categories": [
+            "1869 births",
+            "1948 deaths",
+            "20th-century philosophers",
+            "All Wikipedia articles written in Indian English",
+            "All articles needing style editing",
+            "All articles with unsourced statements",
+            "Alumni of University College London",
+            "Assassinated Indian politicians",
+            "Wikipedia indefinitely semi-protected pages"
+        ],
+        "quantity": 50
+    }
+]
                 
-                .key(function(d){
-                    var cat = d.Category;
-                });
-                .sortKeys(d3.ascending);
+            /*var svgContainer = d3.select("body").append("svg")
+                .attr("width", 200)
+                .attr("height", 200);
 
+            var circles = svgContainer.selectAll("circle")
+                .data(jsonCircles)
+                .enter()
+                .append("circle")
+            
+            var circleAttributes = circles
+                .attr("cx", function (d) { return d.x_axis; })
+                .attr("cy", function (d) { return d.y_axis; })
+                .attr("r", function (d) { return d.radius; })
+                .style("fill", function(d) { return d.color; });*/
+            
+            /*var articles = d3.nest()
                 .key(function(d){
-                    var art = d.categories;
-                });
-                .sortKeys(d3.ascending);
-                */
-				
-
-				/*cat.sort(function(a,b) {
-                    return d3.ascending(b.values.length, a.values.length)
+                    var mydata = d.categories;
                 })
-				*/
+                .sortKeys(d3.ascending)
+                .key(function(d){
+                    var mydata = d.languages;
+                })
+                .sortKeys(d3.ascending)*/
+            
+            var nested_data = d3.nest()
+            .key(function(d) { return d.categories; })
+            .entries(articles);
+            
+            // creo l'SVG
+            var svgbox = d3.select("body").append("svg")
+                .attr("width", 300)
+                .attr("height", 300);
+            
+            // creo i gruppi per ogni articolo
+            var groups = d3.select("svg")
+                .selectAll('g')
+                .data(articles)
+                .enter()
+                .append('g')
+                .attr("transform", function(d,i){
+                    return 'translate(' + (i*100) + ',0)' // (traslazione x) , (traslazione y)
+                })
+                  
+            
+            
 
-                console.log(cat);
+            
+            /*var cubes = groups.select("rect")
+                .data(articles)
+                .enter()
+                .append("rect")*/
+            
+            // creo i rettangoli di quantity
+            var quantity = groups.append("rect")
+                .data(articles)
+                //.enter()
+                /*.attr("width", function (d,i) { return Math.sqrt( d.categories) })
+                .attr("width", function (d,i) { return square(d.values) })
+                .attr("height", function (d,i) { return square(d.values) })*/
+                //.attr("width", function (d,i) { return d.quantity  })
+                .attr("height", function (d,i) { return (Math.sqrt(+d.quantity)*5 )})
+                .attr("width", function (d,i) { return (Math.sqrt(+d.quantity)*5 )})
+                .attr("fill", "red")
+    
+            // creo i rettangoli di language
+            var language = groups.append("rect")
+                .data(articles)
+                //.enter()
+                /*.attr("width", function (d,i) { return Math.sqrt( d.categories) })
+                .attr("width", function (d,i) { return square(d.values) })
+                .attr("height", function (d,i) { return square(d.values) })*/
+                //.attr("width", function (d,i) { return d.languages })
+                .attr("width", 30 )
+                .attr("height", function (d,i) { return d.categories.value })
+                .attr("fill", "blue")
+            
+            
+            
+            console.log(articles);
+                      
+            /*console.log(d3.select("body").append("svg").attr("width", 200).attr("height", 200).selectAll("circle").data(jsonCircles).enter().append("circle"));*/
 
-                var groups = d3.select('svg')
-                    .selectAll('g')
-                    .data(art)
-                    .enter()
-                    .append('rect')
-                    .attr('height', 25)
-                    .attr('width', function (d,i) {
-                        return d.art;
-                    });
+            /*
+            console.log(art);
 
-            }
+            var groups = d3.select("body").append("svg")
+                .selectAll('g')
+                .data(art)
+                .enter()
+                .append('rect')
+                .attr('height', 25)
+                .attr('width', function (d,i) {
+                    return d.art;
+                });
+
+            }*/
 
 
+/*
 
+==============================
+Riferimenti
+==============================
 
+Nest
+http://bl.ocks.org/phoebebright/raw/3176159/
+
+http://chimera.labs.oreilly.com/books/1230000000345/ch07.html#_other_methods
+https://www.dashingd3js.com/data-structures-d3js-accepts
+
+*/
         </script>
 
 	</body>
