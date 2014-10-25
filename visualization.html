@@ -82,7 +82,8 @@
             "Assassinated Indian politicians",
             "Wikipedia indefinitely semi-protected pages"
         ],
-        "quantity": 29
+        "quantity": 29,
+        "quality": 23
     },
     {
         "title": "Nelson Mandela",
@@ -125,7 +126,8 @@
             "Assassinated Indian politicians",
             "Wikipedia indefinitely semi-protected pages"
         ],
-        "quantity": 26
+        "quantity": 26,
+        "quality": 16
     },
                  {
         "title": "South Africa",
@@ -160,7 +162,8 @@
             "Assassinated Indian politicians",
             "Wikipedia indefinitely semi-protected pages"
         ],
-        "quantity": 50
+        "quantity": 50,
+        "quality": 80             
     }
 ]
                 
@@ -189,14 +192,24 @@
                 })
                 .sortKeys(d3.ascending)*/
             
-            var nested_data = d3.nest()
-            .key(function(d) { return d.categories; })
-            .entries(articles);
+            var data = d3.nest()
+                .key(function(d) { return d.categories; })
+                .sortKeys(d3.ascending)
+                .key(function(d) { return d.languages; }) 
+                .entries(articles);
+            
+            /*
+            var nested = d3.nest()
+    .key(function(d) { return d.cat; })
+    .sortKeys(d3.ascending)
+    .sortValues(compareValues)
+    .entries(data);*/
+            
             
             // creo l'SVG
             var svgbox = d3.select("body").append("svg")
-                .attr("width", 300)
-                .attr("height", 300);
+                .attr("width", 400)
+                .attr("height", 100);
             
             // creo i gruppi per ogni articolo
             var groups = d3.select("svg")
@@ -205,17 +218,9 @@
                 .enter()
                 .append('g')
                 .attr("transform", function(d,i){
-                    return 'translate(' + (i*100) + ',0)' // (traslazione x) , (traslazione y)
+                    return 'translate(' + (i*150) + ',0)' // (traslazione x) , (traslazione y)
                 })
                   
-            
-            
-
-            
-            /*var cubes = groups.select("rect")
-                .data(articles)
-                .enter()
-                .append("rect")*/
             
             // creo i rettangoli di quantity
             var quantity = groups.append("rect")
@@ -228,22 +233,25 @@
                 .attr("height", function (d,i) { return (Math.sqrt(+d.quantity)*5 )})
                 .attr("width", function (d,i) { return (Math.sqrt(+d.quantity)*5 )})
                 .attr("fill", "red")
+            
+            // creo i rettangoli di quality
+            var quantity = groups.append("rect")
+                .data(articles)
+                .attr("height", function (d,i) { return (Math.sqrt(+d.quality)*5 )})
+                .attr("width", function (d,i) { return (Math.sqrt(+d.quality)*5 )})
+                .attr("transform", 'translate(0,40)') // (traslazione x) , (traslazione y)
+                .attr("fill", "green")
     
             // creo i rettangoli di language
             var language = groups.append("rect")
                 .data(articles)
-                //.enter()
-                /*.attr("width", function (d,i) { return Math.sqrt( d.categories) })
-                .attr("width", function (d,i) { return square(d.values) })
-                .attr("height", function (d,i) { return square(d.values) })*/
-                //.attr("width", function (d,i) { return d.languages })
-                .attr("width", 30 )
-                .attr("height", function (d,i) { return d.categories.value })
+                .attr("width", function(d) { return (Math.sqrt(d.categories.length)*10 )})
+                .attr("height", function(d) { return (Math.sqrt(d.categories.length)*10 )})
+                .attr("transform", 'translate(40,0)') // (traslazione x) , (traslazione y)
                 .attr("fill", "blue")
             
-            
-            
             console.log(articles);
+            console.log(data);
                       
             /*console.log(d3.select("body").append("svg").attr("width", 200).attr("height", 200).selectAll("circle").data(jsonCircles).enter().append("circle"));*/
 
@@ -271,9 +279,12 @@ Riferimenti
 
 Nest
 http://bl.ocks.org/phoebebright/raw/3176159/
+http://matthewfieger.com/posts/me/2014/06/27/nesting_data_for_d3.html
 
 http://chimera.labs.oreilly.com/books/1230000000345/ch07.html#_other_methods
 https://www.dashingd3js.com/data-structures-d3js-accepts
+http://ireneros.com/conf/nicar/introduction-to-d3.html#45
+
 
 */
         </script>
