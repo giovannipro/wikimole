@@ -7,209 +7,14 @@
 	</head>
 	<body>
 		<script>      
-        //d3.json('data/data.json',loaded);  
+        d3.json('data/data-corretto.json',loaded);  
             
-        /*function loaded (data){
-                
-            //var art = d3.Articles;
-            var art = d3.Keys(data[2]);
-
-            var jsonCircles = [{
-                    "x_axis": 30,
-                    "y_axis": 30,
-                    "radius": 20,
-                    "color" : "green"
-                },
-                {
-                    "x_axis": 70,
-                    "y_axis": 70,
-                    "radius": 20,
-                    "color" : "purple"
-                }, 
-                {
-                    "x_axis": 110,
-                    "y_axis": 100,
-                    "radius": 20,
-                    "color" : "red"
-                }
-            ];*/
-            
-            var articles = [
-    {
-        "title": "Mahatma Gandhi",
-        "languages": [
-            "af",
-            "als",
-            "am",
-            "an",
-            "ang",
-            "tl",
-            "tpi",
-            "tr",
-            "tt",
-            "tyv",
-            "uk",
-            "ur",
-            "uz",
-            "vec",
-            "vi",
-            "war",
-            "wuu",
-            "xal",
-            "xmf",
-            "yi",
-            "yo",
-            "zh",
-            "zh-classical",
-            "zh-min-nan",
-            "zh-yue"
-        ],
-        "categories": [
-            "1869 births",
-            "1948 deaths",
-            "20th-century philosophers",
-            "All Wikipedia articles written in Indian English",
-            "All articles needing style editing",
-            "All articles with unsourced statements",
-            "Alumni of University College London",
-            "Anti-poverty advocates",
-            "Anti–World War II activists",
-            "Articles with hCards",
-            "Articles with specifically marked weasel-worded phrases from May 2012",
-            "Articles with unsourced statements from April 2014",
-            "Articles with unsourced statements from March 2014",
-            "Ascetics",
-            "Assassinated Indian politicians",
-            "Wikipedia indefinitely semi-protected pages"
-        ],
-        "quantity": 29,
-        "quality": 23
-    },
-    {
-        "title": "Nelson Mandela",
-        "languages": [
-            "af",
-            "als",
-            "am",
-            "an",
-            "ang",
-            "tl",
-            "tpi",
-            "tr",
-            "uz",
-            "vec",
-            "vi",
-            "war",
-            "wuu",
-            "xal",
-            "xmf",
-            "yi",
-            "yo",
-            "zh",
-            "zh-classical",
-            "zh-min-nan",
-            "zh-yue"
-        ],
-        "categories": [
-            "1869 births",
-            "1948 deaths",
-            "20th-century philosophers",
-            "All Wikipedia articles written in Indian English",
-            "All articles needing style editing",
-            "All articles with unsourced statements",
-            "Alumni of University College London",
-            "Anti-poverty advocates",
-            "Anti–World War II activists",
-            "Articles with unsourced statements from April 2014",
-            "Articles with unsourced statements from March 2014",
-            "Ascetics",
-            "Assassinated Indian politicians",
-            "Wikipedia indefinitely semi-protected pages"
-        ],
-        "quantity": 26,
-        "quality": 16
-    },
-                 {
-        "title": "South Africa",
-        "languages": [
-            "af",
-            "als",
-            "am",
-            "an",
-            "ang",
-            "tl",
-            "tpi",
-            "tr",
-            "uz",
-            "vec",
-            "vi",
-            "war",
-            "yi",
-            "yo",
-            "zh",
-            "zh-classical",
-            "zh-min-nan",
-            "zh-yue"
-        ],
-        "categories": [
-            "1869 births",
-            "1948 deaths",
-            "20th-century philosophers",
-            "All Wikipedia articles written in Indian English",
-            "All articles needing style editing",
-            "All articles with unsourced statements",
-            "Alumni of University College London",
-            "Assassinated Indian politicians",
-            "Wikipedia indefinitely semi-protected pages"
-        ],
-        "quantity": 50,
-        "quality": 80             
-    }
-]
-                
-            /*var svgContainer = d3.select("body").append("svg")
-                .attr("width", 200)
-                .attr("height", 200);
-
-            var circles = svgContainer.selectAll("circle")
-                .data(jsonCircles)
-                .enter()
-                .append("circle")
-            
-            var circleAttributes = circles
-                .attr("cx", function (d) { return d.x_axis; })
-                .attr("cy", function (d) { return d.y_axis; })
-                .attr("r", function (d) { return d.radius; })
-                .style("fill", function(d) { return d.color; });*/
-            
-            /*var articles = d3.nest()
-                .key(function(d){
-                    var mydata = d.categories;
-                })
-                .sortKeys(d3.ascending)
-                .key(function(d){
-                    var mydata = d.languages;
-                })
-                .sortKeys(d3.ascending)*/
-            
-            var data = d3.nest()
-                .key(function(d) { return d.categories; })
-                .sortKeys(d3.ascending)
-                .key(function(d) { return d.languages; }) 
-                .entries(articles);
-            
-            /*
-            var nested = d3.nest()
-    .key(function(d) { return d.cat; })
-    .sortKeys(d3.ascending)
-    .sortValues(compareValues)
-    .entries(data);*/
-            
-            
+        function loaded (articles){
+               
             // creo l'SVG
             var svgbox = d3.select("body").append("svg")
                 .attr("width", 400)
-                .attr("height", 100);
+                .attr("height", 150);
             
             // creo i gruppi per ogni articolo
             var groups = d3.select("svg")
@@ -220,16 +25,10 @@
                 .attr("transform", function(d,i){
                     return 'translate(' + (i*150) + ',0)' // (traslazione x) , (traslazione y)
                 })
-                  
             
             // creo i rettangoli di quantity
             var quantity = groups.append("rect")
                 .data(articles)
-                //.enter()
-                /*.attr("width", function (d,i) { return Math.sqrt( d.categories) })
-                .attr("width", function (d,i) { return square(d.values) })
-                .attr("height", function (d,i) { return square(d.values) })*/
-                //.attr("width", function (d,i) { return d.quantity  })
                 .attr("height", function (d,i) { return (Math.sqrt(+d.quantity)*5 )})
                 .attr("width", function (d,i) { return (Math.sqrt(+d.quantity)*5 )})
                 .attr("fill", "red")
@@ -242,35 +41,31 @@
                 .attr("transform", 'translate(0,40)') // (traslazione x) , (traslazione y)
                 .attr("fill", "green")
     
-            // creo i rettangoli di language
+            // creo i rettangoli di languages
             var language = groups.append("rect")
                 .data(articles)
-                .attr("width", function(d) { return (Math.sqrt(d.categories.length)*10 )})
-                .attr("height", function(d) { return (Math.sqrt(d.categories.length)*10 )})
-                .attr("transform", 'translate(40,0)') // (traslazione x) , (traslazione y)
+                .attr("width", function(d) { return (Math.sqrt(d.languages.length)*4 ) }) //(d.languages.length)/4 
+                .attr("height", function(d) { return (Math.sqrt(d.languages.length)*4 )})
+                .attr("transform", 'translate(50,40)') // (traslazione x) , (traslazione y)
+                .attr("fill", "orange")
+            
+            // creo i rettangoli di categories
+            var language = groups.append("rect")
+                .data(articles)
+                .attr("width", function(d) { return (Math.sqrt(d.categories.length)*4 )})
+                .attr("height", function(d) { return (Math.sqrt(d.categories.length)*4 )})
+                .attr("transform", 'translate(50,0)') // (traslazione x) , (traslazione y)
                 .attr("fill", "blue")
             
+            var title = groups.append("text")
+                .data(articles)
+                .attr("y", 120)
+                .text(function(d) { return d.title; });
+            
             console.log(articles);
-            console.log(data);
-                      
-            /*console.log(d3.select("body").append("svg").attr("width", 200).attr("height", 200).selectAll("circle").data(jsonCircles).enter().append("circle"));*/
 
-            /*
-            console.log(art);
-
-            var groups = d3.select("body").append("svg")
-                .selectAll('g')
-                .data(art)
-                .enter()
-                .append('rect')
-                .attr('height', 25)
-                .attr('width', function (d,i) {
-                    return d.art;
-                });
-
-            }*/
-
-
+        }
+            
 /*
 
 ==============================
