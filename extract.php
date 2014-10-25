@@ -1,11 +1,11 @@
 <?php
-require_once('extract.php');
+//require_once('parsing.php');
 require_once('functions.php');
 
 echo "extract.php";
 echo "<br/>";
 
-echo "ciao 003";
+echo "ciao 005";
 echo "<br/>";
 
 # Enable Error Reporting and Display:
@@ -56,19 +56,19 @@ foreach ($dom_b->getElementsByTagName('li') as $dom_b) {//[@id="mw-pageinfo-temp
 
 
 
-
+/*
 // Create DOM from URL or file
 $html_a = file_get_contents('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info#mw-pageinfo-watchers');
 
 $dom_a = new DOMDocument();
 $dom_a->loadHTML($html_a);
 $postalCodesList = $dom_a->getElementsByTagName('ul');
-foreach ($dom_a->/*item(0)->*/getElementsByTagName('li') as $dom_a) {
+foreach ($dom_a->getElementsByTagName('li') as $dom_a) {  //foreach ($dom_a->getElementsByTagName('li') as $dom_a) {
     echo $dom_a->nodeValue.'<br />';
     //$template = json_encode($postalCodesList);  
     //echo $template;                  
 }
-
+*/
 
 
 /*

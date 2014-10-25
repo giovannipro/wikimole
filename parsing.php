@@ -6,16 +6,11 @@ require_once('functions.php');
 error_reporting(~0);
 ini_set('display_errors', 1);
 
-echo "ciao 040";
+echo "ciao 013";
 echo "<br/>";
 
 echo "parsing.php";
 echo "<br/>";
-
-# Enable Error Reporting and Display:
-error_reporting(~0);
-ini_set('display_errors', 1);
-
 
 //indico il nome del file e la sua posizione
 $csv_folder  = getenv("DOCUMENT_ROOT").'/wikimole/data/';
@@ -86,7 +81,12 @@ foreach($jsoncat_parse_b['query']['pages']['21492751']['categories']  as $a){  /
 
 //scrivo il contenuto del file json con i due insiemi di dati
 //$twodata = '{"19379": {"Language": '.json_encode($lang).',"Category": '.json_encode($cat).'}}';
-$twodata = lang_cat("art_1",$lang,$cat,"art_2",$lang_b,$cat_b);
+//$twodata = lang_cat("art_1",$lang,$cat,"art_2",$lang_b,$cat_b);
+
+
+//$twodata = lang_cat("art_1",$lang,$cat,"art_2",$lang_b,$cat_b); --> funziona 
+
+$twodata = lang_cat("art_1",$lang,$cat,"art_2",$lang_b,$cat_b); //vedi functions.php 
 echo $twodata."<br/>";
 
 
