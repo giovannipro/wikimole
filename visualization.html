@@ -11,38 +11,50 @@
             
         function loaded (articles){
                
-            // creo l'SVG
-            var svgbox = d3.select("body").append("svg")
-                .attr("width", 400)
-                .attr("height", 150);
+            // creo gli SVG
+            var svgbox = d3.select("body")//.append("svg")
+                .selectAll('svg')
+                .data(articles)
+                .enter()
+                .append('svg')
+                .attr("width", 150)
+                .attr("height", 150)
+                .attr("transform", function(d,i){
+                    return 'translate(' + (i*170) + ',0)' // (traslazione x) , (traslazione y)
+                })
             
             // creo i gruppi per ogni articolo
-            var groups = d3.select("svg")
+            /*var groups = d3.select("svg")
                 .selectAll('g')
                 .data(articles)
                 .enter()
                 .append('g')
                 .attr("transform", function(d,i){
-                    return 'translate(' + (i*150) + ',0)' // (traslazione x) , (traslazione y)
-                })
+                    return 'translate(' + (i*170) + ',0)' // (traslazione x) , (traslazione y)
+                })*/
             
             // creo i rettangoli di quantity
-            var quantity = groups.append("rect")
+            var quantity = svgbox.append("rect")
                 .data(articles)
                 .attr("height", function (d,i) { return (Math.sqrt(+d.quantity)*5 )})
                 .attr("width", function (d,i) { return (Math.sqrt(+d.quantity)*5 )})
+                .attr("transform", function (d,i) {
+                    return  'translate(' + (45 - (Math.sqrt(+d.quantity)*5)) + ',' + (35 - (Math.sqrt(+d.quantity)*5)) + ')' // (traslazione x) , (traslazione y)   
+                })
                 .attr("fill", "red")
             
             // creo i rettangoli di quality
-            var quantity = groups.append("rect")
+            var quality = svgbox.append("rect")
                 .data(articles)
                 .attr("height", function (d,i) { return (Math.sqrt(+d.quality)*5 )})
                 .attr("width", function (d,i) { return (Math.sqrt(+d.quality)*5 )})
-                .attr("transform", 'translate(0,40)') // (traslazione x) , (traslazione y)
+                .attr("transform", function (d,i) {
+                    return  'translate(' + (40 - (Math.sqrt(+d.quality)*4))  + ',40)' // (traslazione x) , (traslazione y)   
+                })
                 .attr("fill", "green")
     
             // creo i rettangoli di languages
-            var language = groups.append("rect")
+            var language = svgbox.append("rect")
                 .data(articles)
                 .attr("width", function(d) { return (Math.sqrt(d.languages.length)*4 ) }) //(d.languages.length)/4 
                 .attr("height", function(d) { return (Math.sqrt(d.languages.length)*4 )})
@@ -50,14 +62,16 @@
                 .attr("fill", "orange")
             
             // creo i rettangoli di categories
-            var language = groups.append("rect")
+            var categories = svgbox.append("rect")
                 .data(articles)
                 .attr("width", function(d) { return (Math.sqrt(d.categories.length)*4 )})
                 .attr("height", function(d) { return (Math.sqrt(d.categories.length)*4 )})
-                .attr("transform", 'translate(50,0)') // (traslazione x) , (traslazione y)
+                .attr("transform", function (d,i) {
+                    return  'translate(50,' + (35 - (Math.sqrt( d.categories.length)*4)) + ')' // (traslazione x) , (traslazione y)   
+                })
                 .attr("fill", "blue")
             
-            var title = groups.append("text")
+            var title = svgbox.append("text")
                 .data(articles)
                 .attr("y", 120)
                 .text(function(d) { return d.title; });
