@@ -6,7 +6,7 @@ require_once('functions.php');
 error_reporting(~0);
 ini_set('display_errors', 1);
 
-echo "ciao 013";
+echo "ciao 022";
 echo "<br/>";
 
 echo "parsing.php";
@@ -27,13 +27,25 @@ $apicat = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&pro
 $apilang_b = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllimit=500&titles=Nelson%20Mandela');
 $apicat_b = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=categories&format=json&cllimit=500&titles=Nelson%20Mandela');
 
+$apilang_c = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllimit=500&titles=Transport');
+$apicat_c = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=categories&format=json&cllimit=500&titles=Transport');
+
+$apilang_d = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllimit=500&titles=Oliver%20Tambo');
+$apicat_d = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=categories&format=json&cllimit=500&titles=Oliver%20Tambo');
 
 
-$jsonlang = $apilang;
+//cambio nome della variabile --> se ne può fare a meno
+/*$jsonlang = $apilang;
 $jsoncat = $apicat;
 
 $jsonlang_b = $apilang_b;
 $jsoncat_b = $apicat_b;
+
+$jsonlang_c = $apilang_c;
+$jsoncat_c = $apicat_c;
+
+$jsonlang_d = $apilang_d;
+$jsoncat_d = $apicat_d;*/
 
 
 
@@ -43,6 +55,12 @@ $jsoncat_parse = json_decode($apicat,true);
 
 $jsonlang_parse_b = json_decode($apilang_b,true);
 $jsoncat_parse_b = json_decode($apicat_b,true);
+
+$jsonlang_parse_c = json_decode($apilang_c,true);
+$jsoncat_parse_c = json_decode($apicat_c,true);
+
+$jsonlang_parse_d = json_decode($apilang_d,true);
+$jsoncat_parse_d = json_decode($apicat_d,true);
 
 //$jsonlang_all_parse = json_decode($apilink_all,true);
 //$jsontemp_parse = json_decode($apitemp,true);
@@ -54,6 +72,12 @@ $cat = [];
 $lang_b = [];
 $cat_b = [];
 
+$lang_c = [];
+$cat_c = [];
+
+$lang_d = [];
+$cat_d = [];
+
 //estraggo una serie di valori dal json
 foreach($jsonlang_parse['query']['pages']['19379']['langlinks'] as $a) {
     $lang[] = $a['lang'];//"Lang: ". $a[lang];
@@ -63,12 +87,28 @@ foreach($jsoncat_parse['query']['pages']['19379']['categories'] as $a) {
     $cat[] = $a['title']; // 'Cat: '. $b[title];
 };
 
-foreach($jsonlang_parse_b['query']['pages']['21492751']['langlinks']  as $a){  //--->non funziona
+foreach($jsonlang_parse_b['query']['pages']['21492751']['langlinks']  as $a){  
     $lang_b[] = $a['lang'];//"Lang: ". $a[lang];
 };
 
-foreach($jsoncat_parse_b['query']['pages']['21492751']['categories']  as $a){  //--->non funziona
+foreach($jsoncat_parse_b['query']['pages']['21492751']['categories']  as $a){ 
     $cat_b[] = $a['title'];//"Lang: ". $a[lang];
+};
+
+foreach($jsonlang_parse_c['query']['pages']['18580879']['langlinks']  as $a){
+    $lang_c[] = $a['lang'];//"Lang: ". $a[lang];
+};
+
+foreach($jsoncat_parse_c['query']['pages']['18580879']['categories']  as $a){  
+    $cat_c[] = $a['title'];//"Lang: ". $a[lang];
+};
+
+foreach($jsonlang_parse_d['query']['pages']['433822']['langlinks']  as $a){ 
+    $lang_d[] = $a['lang'];//"Lang: ". $a[lang];
+};
+
+foreach($jsoncat_parse_d['query']['pages']['433822']['categories']  as $a){
+    $cat_d[] = $a['title'];//"Lang: ". $a[lang];
 };
 
 
@@ -86,7 +126,7 @@ foreach($jsoncat_parse_b['query']['pages']['21492751']['categories']  as $a){  /
 
 //$twodata = lang_cat("art_1",$lang,$cat,"art_2",$lang_b,$cat_b); --> funziona 
 
-$twodata = lang_cat("art_1",$lang,$cat,"art_2",$lang_b,$cat_b); //vedi functions.php 
+$twodata = lang_cat("art_1",$lang,$cat,"art_2",$lang_b,$cat_b,"art_3",$lang_c,$cat_c,"art_4",$lang_d,$cat_d); //vedi functions.php 
 echo $twodata."<br/>";
 
 

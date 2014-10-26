@@ -5,7 +5,7 @@ require_once('functions.php');
 echo "extract.php";
 echo "<br/>";
 
-echo "ciao 005";
+echo "ciao 007";
 echo "<br/>";
 
 # Enable Error Reporting and Display:
@@ -28,7 +28,10 @@ foreach($articles['articles'] as $key=>$val) {
     
     $link = "'".$apilink."'";
 
+    //$test = file_get_contents($apilink); 
+
     echo $apilink;
+    //echo $test;
     echo "<br/>";
 
 };
