@@ -6,7 +6,7 @@ require_once('functions.php');
 error_reporting(~0);
 ini_set('display_errors', 1);
 
-echo "ciao 022";
+echo "ciao 040";
 echo "<br/>";
 
 echo "parsing.php";
@@ -14,13 +14,10 @@ echo "<br/>";
 
 //indico il nome del file e la sua posizione
 $csv_folder  = getenv("DOCUMENT_ROOT").'/wikimole/data/';
-//$filename = 'file.txt';
-$filenameb = 'data.json';//'data.txt';
-
-//uso l'estensione json al posto del txt
-//$jsonTxt = rename($csv_folder . $filename, $csv_folder . "file.json");
+$filenameb = 'data.json';
 
 //cerco api per lingua e categoria per due articoli
+//$apilang = get_language("Mahatma Gandhi");
 $apilang = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllimit=500&titles=Mahatma%20Gandhi');
 $apicat = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&prop=categories&format=json&cllimit=500&titles=Mahatma%20Gandhi');
 
@@ -47,23 +44,24 @@ $jsoncat_c = $apicat_c;
 $jsonlang_d = $apilang_d;
 $jsoncat_d = $apicat_d;*/
 
-
+/*
+echo $apilang;
+echo "<br/>";
+echo $apicat;
+*/
 
 //decodifico i json
-$jsonlang_parse = json_decode($apilang,true);
-$jsoncat_parse = json_decode($apicat,true);
+$jsonlang_parse = decode($apilang);
+$jsoncat_parse = decode($apicat);
 
-$jsonlang_parse_b = json_decode($apilang_b,true);
-$jsoncat_parse_b = json_decode($apicat_b,true);
+$jsonlang_parse_b = decode($apilang_b);
+$jsoncat_parse_b = decode($apicat_b);
 
-$jsonlang_parse_c = json_decode($apilang_c,true);
-$jsoncat_parse_c = json_decode($apicat_c,true);
+$jsonlang_parse_c = decode($apilang_c);
+$jsoncat_parse_c = decode($apicat_c);
 
-$jsonlang_parse_d = json_decode($apilang_d,true);
-$jsoncat_parse_d = json_decode($apicat_d,true);
-
-//$jsonlang_all_parse = json_decode($apilink_all,true);
-//$jsontemp_parse = json_decode($apitemp,true);
+$jsonlang_parse_d = decode($apilang_d);
+$jsoncat_parse_d = decode($apicat_d);
 
 //definizione dei valori sotto forma di array
 $lang = [];
