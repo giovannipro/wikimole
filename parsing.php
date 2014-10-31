@@ -6,7 +6,7 @@ require_once('functions.php');
 error_reporting(~0);
 ini_set('display_errors', 1);
 
-echo "ciao 040";
+echo "ciao 042";
 echo "<br/>";
 
 echo "parsing.php";
@@ -51,6 +51,8 @@ echo $apicat;
 */
 
 //decodifico i json
+//$jsonlang_parse_t1 = decode($apilang);
+
 $jsonlang_parse = decode($apilang);
 $jsoncat_parse = decode($apicat);
 
@@ -64,6 +66,8 @@ $jsonlang_parse_d = decode($apilang_d);
 $jsoncat_parse_d = decode($apicat_d);
 
 //definizione dei valori sotto forma di array
+//$tit_1 = []
+
 $lang = [];
 $cat = [];
 
@@ -75,6 +79,11 @@ $cat_c = [];
 
 $lang_d = [];
 $cat_d = [];
+
+//estraggo il titolo del primo articolo
+/*foreach($jsonlang_parse_t1['query']['pages']['19379'] as $a) {
+    $tit_1[] = $a['title'];
+};*/
 
 //estraggo una serie di valori dal json
 foreach($jsonlang_parse['query']['pages']['19379']['langlinks'] as $a) {
@@ -125,6 +134,7 @@ foreach($jsoncat_parse_d['query']['pages']['433822']['categories']  as $a){
 //$twodata = lang_cat("art_1",$lang,$cat,"art_2",$lang_b,$cat_b); --> funziona 
 
 $twodata = lang_cat("art_1",$lang,$cat,"art_2",$lang_b,$cat_b,"art_3",$lang_c,$cat_c,"art_4",$lang_d,$cat_d); //vedi functions.php 
+//$twodata = lang_cat($articleTitle[0],$lang,$cat,$articleTitle[1],$lang_b,$cat_b,$articleTitle[2],$lang_c,$cat_c,$articleTitle[3],$lang_d,$cat_d); //vedi functions.php  --> stmpa le prime lettere del titolo dell'ultimo articolo 
 echo $twodata."<br/>";
 
 

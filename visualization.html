@@ -6,7 +6,15 @@
 		<title>Visualization</title>
 	</head>
 	<body>
-		<script>      
+        <p>It better works with Google Chrome</p>
+        <style>
+            svg {  
+            display: inline;
+            overflow: visible;
+        }
+        </style>
+		
+        <script>      
         d3.json('data/data.json',loaded);  //data/data-corretto.json
             
         function loaded (articles){
@@ -20,7 +28,7 @@
                 .attr("width", 150)
                 .attr("height", 150)
                 .attr("transform", function(d,i){
-                    return 'translate(' + (i*170) + ',0)' // (traslazione x) , (traslazione y)
+                    return 'translate(' + (i*150) + ',0)' // (traslazione x) , (traslazione y)
                 })
             
             // creo i gruppi
@@ -38,6 +46,7 @@
                 
             // creo i rettangoli di quantity
             var quantity = svgbox.append("rect")
+                //.selectAll('rect')
                 .data(articles)
                 .attr("height", function (d,i) { return (Math.sqrt(+d.quantity)*5 )})
                 .attr("width", function (d,i) { return (Math.sqrt(+d.quantity)*5 )})
@@ -63,6 +72,10 @@
                 .attr("height", function(d) { return (Math.sqrt(d.languages.length)*4 )})
                 .attr("transform", 'translate(50,40)') // (traslazione x) , (traslazione y)
                 .attr("fill", "orange")
+                .transition
+                /*.duration(100)
+                .attr("width", 0)
+                .attr("height", 0)*/
             
             // creo i rettangoli di categories
             var categories = svgbox.append("rect")
@@ -79,6 +92,25 @@
                 .attr("y", 120)
                 .text(function(d) { return d.title; });
             
+            /*ingrandisco i grafici se faccio il mousehover
+            d3.selectAll('svg')
+                .on('mouseover', function(){
+                    d3.select(this)
+                        .transition()
+                        .duration(100)
+                        .attr('width',250)
+                        .attr('height',250)
+                        //.attr('x', 10)
+                        //.attr('y', 0)
+                })
+                .on('mouseout', function(){
+                    d3.selectAll('svg')
+                        .transition()
+                        .duration(100)
+                        .attr("width", 150)
+                        .attr("height", 150)
+                })*/
+
             console.log(articles);
 
         }

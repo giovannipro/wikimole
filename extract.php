@@ -30,7 +30,10 @@ foreach($articles['articles'] as $key=>$val) {
 
     //$test = file_get_contents($apilink); 
 
+    $articleTitle = $val['title'];
+
     echo $apilink;
+    //echo $articleTitle;
     //echo $test;
     echo "<br/>";
 
