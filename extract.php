@@ -5,7 +5,7 @@ require_once('functions.php');
 echo "extract.php";
 echo "<br/>";
 
-echo "ciao 026";
+echo "ciao 028";
 echo "<br/>";
 
 # Enable Error Reporting and Display:
