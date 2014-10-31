@@ -1,7 +1,7 @@
 1
-Estrarre valori da lista in HTML (lista template) con jquery
-https://gist.github.com/ziadoz/3344345
-http://stackoverflow.com/questions/5667880/simple-screen-scraping-using-jquery
+Estrarre valori da lista in HTML (lista template) con jquery o php
+http://simplehtmldom.sourceforge.net/manual.htm
+http://www.guru.net.nz/blog/2009/06/screen-scraping-with-jquery.html
 
 2.
 

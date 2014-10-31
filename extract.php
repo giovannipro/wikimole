@@ -1,11 +1,12 @@
 <?php
 //require_once('parsing.php');
 require_once('functions.php');
+require_once('library/simple_html_dom.php');
 
 echo "extract.php";
 echo "<br/>";
 
-echo "ciao 007";
+echo "ciao 019";
 echo "<br/>";
 
 # Enable Error Reporting and Display:
@@ -19,6 +20,28 @@ $articles = json_decode($articlesfile,true);
 //definisco la variabile che conterrà la lista delle api della lingua
 $articleTitle = [];
 $api = [];
+
+//provo scraper php
+$html_test = file_get_html('');//https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info'
+//$ret = $html->find('div div div'); 
+
+echo $html_test;
+?>
+
+
+<div id="container"></div>
+<script type="text/javascript" src="library/jquery-1.11.1.min.js"></script>
+<script>
+
+    var mole = $('#container').load('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info div:first') //#mw-page-info
+    console.log();
+     
+    // Works with $.get too!    
+</script>
+
+
+
+<?php
 
 //ottengo il link alle api della lingua 
 foreach($articles['articles'] as $key=>$val) {
