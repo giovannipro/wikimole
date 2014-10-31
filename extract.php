@@ -1,16 +1,45 @@
 <?php
-require_once('extract.php');
+//require_once('parsing.php');
 require_once('functions.php');
 
 echo "extract.php";
 echo "<br/>";
 
-echo "ciao 003";
+echo "ciao 026";
 echo "<br/>";
 
 # Enable Error Reporting and Display:
 error_reporting(~0);
 ini_set('display_errors', 1);
+
+
+
+//provo scraper php
+require_once('library/simple_html_dom.php');
+$html_test = file_get_html('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info');
+$test1 = $html_test->find('a');  //find('div[id=foo]');  find("div", 0);
+//$test2 = getElementById("mw-pageinfo-firstuser");
+
+//tutti questi echo non riportano nulla perchè bloccati dal browser
+echo $test1; echo "<br/>";
+echo $test1->tag; echo "<br/>";
+echo $test1->outertext; echo "<br/>";
+echo $test1->innertext; echo "<br/>";
+echo $test1->plaintext;
+
+?>
+
+<div id="container"></div>
+<script type="text/javascript" src="library/jquery-1.11.1.min.js"></script>
+<script>
+
+    var mole = $('#container').load('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info div:first') //#mw-page-info
+    console.log();
+     
+    // Works with $.get too!    
+</script>
+
+<?php
 
 //richiamo il json con il nome degli articoli
 $articlesfile = file_get_contents('http://localhost:8888/wikimole/articles.json');
@@ -28,7 +57,13 @@ foreach($articles['articles'] as $key=>$val) {
     
     $link = "'".$apilink."'";
 
+    //$test = file_get_contents($apilink); 
+
+    $articleTitle = $val['title'];
+
     echo $apilink;
+    //echo $articleTitle;
+    //echo $test;
     echo "<br/>";
 
 };
@@ -56,19 +91,19 @@ foreach ($dom_b->getElementsByTagName('li') as $dom_b) {//[@id="mw-pageinfo-temp
 
 
 
-
+/*
 // Create DOM from URL or file
 $html_a = file_get_contents('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info#mw-pageinfo-watchers');
 
 $dom_a = new DOMDocument();
 $dom_a->loadHTML($html_a);
 $postalCodesList = $dom_a->getElementsByTagName('ul');
-foreach ($dom_a->/*item(0)->*/getElementsByTagName('li') as $dom_a) {
+foreach ($dom_a->getElementsByTagName('li') as $dom_a) {  //foreach ($dom_a->getElementsByTagName('li') as $dom_a) {
     echo $dom_a->nodeValue.'<br />';
     //$template = json_encode($postalCodesList);  
     //echo $template;                  
 }
-
+*/
 
 
 /*
