@@ -1,33 +1,33 @@
 <?php
 //require_once('parsing.php');
 require_once('functions.php');
-require_once('library/simple_html_dom.php');
 
 echo "extract.php";
 echo "<br/>";
 
-echo "ciao 019";
+echo "ciao 026";
 echo "<br/>";
 
 # Enable Error Reporting and Display:
 error_reporting(~0);
 ini_set('display_errors', 1);
 
-//richiamo il json con il nome degli articoli
-$articlesfile = file_get_contents('http://localhost:8888/wikimole/articles.json');
-$articles = json_decode($articlesfile,true);
 
-//definisco la variabile che conterrà la lista delle api della lingua
-$articleTitle = [];
-$api = [];
 
 //provo scraper php
-$html_test = file_get_html('');//https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info'
-//$ret = $html->find('div div div'); 
+require_once('library/simple_html_dom.php');
+$html_test = file_get_html('https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info');
+$test1 = $html_test->find('a');  //find('div[id=foo]');  find("div", 0);
+//$test2 = getElementById("mw-pageinfo-firstuser");
 
-echo $html_test;
+//tutti questi echo non riportano nulla perchè bloccati dal browser
+echo $test1; echo "<br/>";
+echo $test1->tag; echo "<br/>";
+echo $test1->outertext; echo "<br/>";
+echo $test1->innertext; echo "<br/>";
+echo $test1->plaintext;
+
 ?>
-
 
 <div id="container"></div>
 <script type="text/javascript" src="library/jquery-1.11.1.min.js"></script>
@@ -39,9 +39,15 @@ echo $html_test;
     // Works with $.get too!    
 </script>
 
-
-
 <?php
+
+//richiamo il json con il nome degli articoli
+$articlesfile = file_get_contents('http://localhost:8888/wikimole/articles.json');
+$articles = json_decode($articlesfile,true);
+
+//definisco la variabile che conterrà la lista delle api della lingua
+$articleTitle = [];
+$api = [];
 
 //ottengo il link alle api della lingua 
 foreach($articles['articles'] as $key=>$val) {
