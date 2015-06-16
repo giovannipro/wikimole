@@ -1,0 +1,215 @@
+<!-- APRIRE CON MAMP ACCESO -->
+<body>
+
+	<script src="jquery.min.js"></script>
+	<script src="jquery.xdomainajax.js"></script>
+
+	<script type="text/javascript">
+		
+		var url1 = "https://it.wikipedia.org/wiki/Pagina_principale";
+		var url = "grab.php";
+
+		var data = "mydata"
+
+		var element = "body"; 
+
+		$.ajax({
+		    type: "GET", //POST
+		    dataType: 'html', // text,xml,script,json,jsonp
+		    url: url1,
+		    timeout: 3000,
+		    data: data,
+		    //crossDomain : true,
+		    /*
+		    xhrFields: {
+		        withCredentials: false
+		    },
+		    password: 'pass',
+		    username: 'user',
+		    */
+		})
+	   	.success(function(result) { //done
+			
+			$("#content").append(result)
+			$("#content").load(result)
+			$("#content").html(result)
+
+			//$('#content').load(result)
+
+			a = $('#content').load(url)
+			mydata = $('#content').find('li');
+			mydata1 = ($(result).find('#main *'))
+			//myurl = $('#content').load("grab.php?url=" + url1 + element);
+	    	myurl = $('#content').load("grab.php");
+
+	    	// $('#content').html(  $(data).find('#content') );
+
+	    	console.log("Done");
+
+	    	console.log(result);
+
+	    	console.log(myurl);
+
+	    	/*
+	    	console.log(a);
+	        console.log(mydata);
+	        console.log(myurl);	        
+	        */
+
+	        $("#trigger").click(function(){
+			    $.get(url, function(result, status){ //data
+			    	//$('#content').html($(result).find('#main *'));
+
+			    	var $result = result;
+
+         			$('#content').text('The page has been successfully loaded');
+         			$('#content').append (result)
+
+			        console.log("Data: " + result + "\nStatus: " + status);
+
+			    });
+			}); 
+
+	    })
+	    .fail( function(xhr, textStatus, errorThrown) {
+	        /*alert(xhr.responseText);
+	        alert(textStatus);*/
+	        $('#content').html("Error!! Page is not loaded")	        
+	        console.log(result.message);
+	        console.log ("Fail")
+	    });
+
+	    /*$("#trigger").click(function(){
+		    $('#content').load($(this).data('url'));
+		});*/
+
+		
+
+	</script>
+
+
+	
+	<main>
+		<h1>Content</h1>
+		<button id="trigger">GET data</button>
+		<div id="content"></div>
+
+	</main>
+
+	<!-- Flickr API
+	<script type="text/javascript">
+		(function() {
+		  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+		  $.getJSON( flickerAPI, {
+		    tags: "mount rainier",
+		    tagmode: "any",
+		    format: "json"
+		  })
+		    .done(function( data ) {
+		      $.each( data.items, function( i, item ) {
+		        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+		        if ( i === 3 ) {
+		          return false;
+		        }
+		      });
+		    });
+		})();
+	</script>-->
+
+	<!-- Non funziona ma è interessante il modo in cui raccoglie dati da più pagine contemporaneamente
+	<script> 
+	function jsonp_request(url) { 
+ 
+	    var head = document.getElementsByTagName("head")[0]; 
+	    var script = document.createElement("SCRIPT"); 
+	 
+	    script.type = "text/javascript"; 
+	    script.src = url + "?cb=update_table"; 
+	    head.appendChild(script); 
+	} 
+
+	function update_table(data) { 
+ 
+	    var container = document.getElementsByTagName("div")[1]; 
+	    var html = ""; 
+	 
+	    for(var i = 0; i<data.length; i++) { 
+	        html += "<span>"+data[i].id+"</span>";
+	        html += "<span>"+data[i].title+"</span>"
+	        html += "<span>"+data[i].author+"</span>"; 
+	    } 
+	    container.innerHTML += html; 
+	}
+ 
+	window.onload = function() { 
+	 
+	    for(var i = 1; i<5; i++) { 
+	     
+	        jsonp_request("http://biblio"+i+"/libri.php"); 
+
+	    } 
+	}    
+
+	</script>-->
+
+	<!-- Funziona 
+	<script type="text/javascript">
+		var playListURL = 'http://en.wikipedia.org/w/api.php?format=json&action=query&titles=India&prop=revisions&rvprop=content&callback=?';
+	
+		$.getJSON(playListURL ,function(data) {
+			var hash = data
+	        var page_value = ""
+	        $.each(data["query"]["pages"],function(k,v){
+	            $.each(v,function(key,val){
+	            	var mydata = (key + ' ' + val)
+	              	console.log(mydata)
+	            });
+	        });
+		});
+	</script>-->
+	
+	<!-- Funziona
+	<script>
+		(function() {
+		  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+		  $.getJSON( flickerAPI, {
+		    tags: "mount rainier",
+		    tagmode: "any",
+		    format: "json"
+		  })
+		    .done(function( data ) {
+		      $.each( data.items, function( i, item ) {
+		        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+		        if ( i === 3 ) {
+		          return false;
+		        }
+		      });
+		    });
+		})();
+	</script>-->
+
+	<style type="text/css">
+		body {
+			/*overflow: hidden;*/
+			margin: 0;
+			padding: 0;
+		}
+		main{
+			padding: 3%;
+		}
+		.clear{
+			clear: both;
+		}
+		iframe{
+			border: none;
+			height: 400px;
+		}
+		#background_hover {
+			width: 94%;
+			background-color: rebeccapurple;
+			height: 400px;
+			z-index: 1;
+			position: absolute;
+		}
+	</style>
+</body>

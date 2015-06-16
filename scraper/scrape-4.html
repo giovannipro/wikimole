@@ -1,0 +1,88 @@
+<html>
+	<body>
+		<!-- Lo script funziona se inserito su htdocs-->
+		<script src="jquery.min.js"></script>
+		<script src="jquery.xdomainajax.js"></script>
+
+		<script type="text/javascript">
+
+		var url1 = "https://it.wikipedia.org/w/index.php?title=Pagina_principale&action=history"
+		var url3 = "http://localhost:8888/scraper/proxy.php"
+
+		//var data = "mydata"
+
+		var url = url3 + "?url=" + url1
+
+			$.ajax({
+	           type: 'GET',
+	           url: url,
+	           processData: true,
+	           //data: data,
+	           //dataType: "html"
+	        })
+			.done (function (res) {
+	        	//processData(data);
+
+	        	var parsedata = $.parseHTML(res);
+
+	        	mydata = []
+	        	mydata = ($(parsedata).find('#pagehistory')) //.get(1)) .children("li")
+
+	        	$('#response').html("Success! Page loaded")	
+				$('#content').html(mydata)
+				//$('#content').html(data)
+
+				
+				mydata.each(function( index ) {
+					$('#content').append(
+						index + ": " + $(this).html() 
+					);					
+					console.log ( index + ": " + $( this ).text() );
+				});
+
+				//for(i in $('.body')) console.log(i)
+
+				/*
+				var newDiv = document.createElement("div");
+				newDiv.innerHTML = "simple text";
+				$("#content")[0].appendChild(newDiv);
+				*/
+
+	        	console.log(mydata)
+	        	console.log("Done")
+
+	        })
+	        .fail( function(xhr, textStatus, errorThrown) {
+		        $('#response').html("Error! Page is not loaded")	        
+			        console.log(mydata.message);
+			        console.log ("Fail")
+	    	})
+
+	    	console.log("Proxy: " + url)
+			 
+			/*function processData(data){
+			 	//Do some stuff with the data
+			 	console.log(data)
+			 	console.log("Done")
+			}*/
+
+		</script>
+
+	<main>
+		<h1>Content</h1>
+		<button id="trigger">GET data</button>
+		<div id="response"></div>
+		<div id="content"></div>
+	</main>
+
+
+	</body>
+
+	<style>
+		#content{
+			width: 80%;
+			height: 300px;
+		}
+	</style>
+
+</html>
