@@ -6,7 +6,7 @@
 
 		<script type="text/javascript">
 
-		var url1 = "http://en.wikipedia.org/wiki/Nelson_Mandela"
+		var url1 = "https://en.wikipedia.org/wiki/Human_Rights_Day"
 		var url2 = "http://en.wikipedia.org/w/index.php?title=Nelson_Mandela&action=history" // non funziona
 		var url3 = "https://en.wikipedia.org/wiki/Mahatma_Gandhi"
 		var url4 = "https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=edit" // non funziona
@@ -16,9 +16,9 @@
 
 		https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=edit
 
-		var urlproxy = "http://localhost:8888/scraper/proxy.php"
+		var urlproxy = "http://localhost:8888/wikimole/scraper/proxy.php"
 
-		var url = urlproxy + "?url=" + url5
+		var url = urlproxy + "?url=" + url1
 
 			$.ajax({
 	           type: 'POST', //GET
@@ -58,15 +58,13 @@
 				$('#content4').html(history)
 				$('#content5').html(links)
 				
-				/*
+				
 				languages.each(function( index ) {
-					$('#content').append(
-						index + ": " + $(this).html() 
+					$('#content2').append(
+						index + ": " + $(this).html() + "<br/>"
 					);					
 					//console.log ( index + ": " + $( this ).text() );
 				});
-				*/
-
 
 
 				//for(i in $('.body')) console.log(i)
@@ -103,11 +101,11 @@
 
 		<p>Se non riesco a screpare qualcosa, usare Scraper (estensione Chrome), Outbit</p>
 		<div id="response"></div>
-		<div id="content1" class="c"></div>
-		<div id="content2" class="c"></div>
-		<div id="content3" class="c"></div>
-		<div id="content4" class="c"></div>
-		<div id="content5" class="c"></div>
+		<div id="content1" class="box"></div>
+		<div id="content2" class="box"></div>
+		<div id="content3" class="box"></div>
+		<div id="content4" class="box"></div>
+		<div id="content5" class="box"></div>
 	</main>
 
 
@@ -118,10 +116,20 @@
 			width: 80%;
 			height: 300px;
 		}
-		.c{
+		.box{
 			width: 18%;
 			float:left;
 		}
 	</style>
 
 </html>
+
+
+<!--
+
+Convertitore Unix timestamp to Readable Date/time
+http://www.onlineconversion.com/unix_time.htm
+
+
+
+-->
