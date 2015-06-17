@@ -1,31 +1,904 @@
 {
     "articles": [
         {
-            "title": "Mahatma Gandhi"
+            "index": 1,
+            "title": "Mahatma Gandhi",
+            "page_rank": 6,
+            "languages": 153,
+            "page_view": 375969,
+            "graph": "mandela.svg",
+            "myrank": 2256
         },
         {
-            "title": "Nelson Mandela"
+            "index": 2,
+            "title": "Nelson Mandela",
+            "page_rank": 6,
+            "languages": 182, 
+            "page_view": 54495,
+            "graph": "mandela.svg",
+            "myrank": 326
         },
         {
-            "title": "Transport"
+            "index": 3,
+            "title": "Transport",
+            "page_rank": 6,
+            "languages": 122,
+            "page_view": 34392,
+            "graph": "transport.svg",
+            "myrank": 206
         },
         {
-            "title": "Oliver Tambo"
+            "index": 4,
+            "title": "Oliver Tambo",
+            "page_rank": 6,
+            "languages": 21,
+            "page_view": 0,
+            "graph": "tambo.svg",
+            "myrank": 0
+        },            
+        {
+            "index": 5,
+            "title": "San people",
+            "page_rank": 6,
+            "languages": 51,
+            "page_view": 0,
+            "graph": "speople.svg",
+            "myrank": 0
         },
         {
-            "title": "Transport in South Africa"
+            "index": 6,
+            "title": "Human RightsDay",
+            "page_rank": 6,
+            "languages": 40,
+            "page_view": 0,
+            "graph": "hrghtsday.svg",
+            "myrank": 0
         },
         {
-            "title": "Animal-powered transport"
+            "index": 7,
+            "title": "Walter Sisulu",
+            "page_rank": 6,
+            "languages": 19,
+            "page_view": 0,
+            "graph": "sisulu.svg",
+            "myrank": 0
         },
         {
-            "title": "San people"
+            "index": 8,
+            "title": "Animal-powered transport",
+            "page_rank": 6,
+            "languages": 15,
+            "page_view": 0,
+            "graph": "ap_transport.svg",
+            "myrank": 0
         },
         {
-            "title": "Later Stone Age"
+            "index": 9,
+            "title": "Later Stone Age",
+            "page_rank": 6,
+            "languages": 3,
+            "page_view": 0,
+            "graph": "lsage.svg",
+            "myrank": 0
         },
         {
-            "title": "Walter Sisulu"
+            "index": 10,
+            "title": "Transport in South Africa",
+            "page_rank": 6,
+            "languages": 2,
+            "page_view": 1923,
+            "graph": "transport_sa.svg",
+            "myrank": 1
+        },
+                {
+            "index": 11,
+            "title": "Mahatma Gandhi",
+            "page_rank": 6,
+            "languages": 153,
+            "page_view": 375969,
+            "graph": "test.svg",
+            "myrank": 2256
+        },
+        {
+            "index": 12,
+            "title": "Nelson Mandela",
+            "page_rank": 6,
+            "languages": 182, 
+            "page_view": 54495,
+            "graph": "mandela.svg",
+            "myrank": 326
+        },
+        {
+            "index": 3,
+            "title": "Transport",
+            "page_rank": 6,
+            "languages": 122,
+            "page_view": 34392,
+            "graph": "mandela.svg",
+            "myrank": 206
+        },
+        {
+            "index": 4,
+            "title": "Oliver Tambo",
+            "page_rank": 6,
+            "languages": 21,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },            
+        {
+            "index": 5,
+            "title": "San people",
+            "page_rank": 6,
+            "languages": 51,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 6,
+            "title": "Human RightsDay",
+            "page_rank": 6,
+            "languages": 40,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 7,
+            "title": "Walter Sisulu",
+            "page_rank": 6,
+            "languages": 19,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 8,
+            "title": "Animal-powered transport",
+            "page_rank": 6,
+            "languages": 15,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 9,
+            "title": "Later Stone Age",
+            "page_rank": 6,
+            "languages": 3,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 20,
+            "title": "Transport in South Africa",
+            "page_rank": 6,
+            "languages": 2,
+            "page_view": 1923,
+            "graph": "mandela.svg",
+            "myrank": 1
+        },
+                {
+            "index": 1,
+            "title": "Mahatma Gandhi",
+            "page_rank": 6,
+            "languages": 153,
+            "page_view": 375969,
+            "graph": "mandela.svg",
+            "myrank": 2256
+        },
+        {
+            "index": 2,
+            "title": "Nelson Mandela",
+            "page_rank": 6,
+            "languages": 182, 
+            "page_view": 54495,
+            "graph": "mandela.svg",
+            "myrank": 326
+        },
+        {
+            "index": 3,
+            "title": "Transport",
+            "page_rank": 6,
+            "languages": 122,
+            "page_view": 34392,
+            "graph": "mandela.svg",
+            "myrank": 206
+        },
+        {
+            "index": 4,
+            "title": "Oliver Tambo",
+            "page_rank": 6,
+            "languages": 21,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },            
+        {
+            "index": 5,
+            "title": "San people",
+            "page_rank": 6,
+            "languages": 51,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 6,
+            "title": "Human RightsDay",
+            "page_rank": 6,
+            "languages": 40,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 7,
+            "title": "Walter Sisulu",
+            "page_rank": 6,
+            "languages": 19,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 8,
+            "title": "Animal-powered transport",
+            "page_rank": 6,
+            "languages": 15,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 9,
+            "title": "Later Stone Age",
+            "page_rank": 6,
+            "languages": 3,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 30,
+            "title": "Transport in South Africa",
+            "page_rank": 6,
+            "languages": 2,
+            "page_view": 1923,
+            "graph": "mandela.svg",
+            "myrank": 1
+        },
+                {
+            "index": 1,
+            "title": "Mahatma Gandhi",
+            "page_rank": 6,
+            "languages": 153,
+            "page_view": 375969,
+            "graph": "mandela.svg",
+            "myrank": 2256
+        },
+        {
+            "index": 2,
+            "title": "Nelson Mandela",
+            "page_rank": 6,
+            "languages": 182, 
+            "page_view": 54495,
+            "graph": "mandela.svg",
+            "myrank": 326
+        },
+        {
+            "index": 3,
+            "title": "Transport",
+            "page_rank": 6,
+            "languages": 122,
+            "page_view": 34392,
+            "graph": "mandela.svg",
+            "myrank": 206
+        },
+        {
+            "index": 4,
+            "title": "Oliver Tambo",
+            "page_rank": 6,
+            "languages": 21,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },            
+        {
+            "index": 5,
+            "title": "San people",
+            "page_rank": 6,
+            "languages": 51,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 6,
+            "title": "Human RightsDay",
+            "page_rank": 6,
+            "languages": 40,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 7,
+            "title": "Walter Sisulu",
+            "page_rank": 6,
+            "languages": 19,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 8,
+            "title": "Animal-powered transport",
+            "page_rank": 6,
+            "languages": 15,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 9,
+            "title": "Later Stone Age",
+            "page_rank": 6,
+            "languages": 3,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 40,
+            "title": "Transport in South Africa",
+            "page_rank": 6,
+            "languages": 2,
+            "page_view": 1923,
+            "graph": "mandela.svg",
+            "myrank": 1
+        },
+                {
+            "index": 1,
+            "title": "Mahatma Gandhi",
+            "page_rank": 6,
+            "languages": 153,
+            "page_view": 375969,
+            "graph": "mandela.svg",
+            "myrank": 2256
+        },
+        {
+            "index": 2,
+            "title": "Nelson Mandela",
+            "page_rank": 6,
+            "languages": 182, 
+            "page_view": 54495,
+            "graph": "mandela.svg",
+            "myrank": 326
+        },
+        {
+            "index": 3,
+            "title": "Transport",
+            "page_rank": 6,
+            "languages": 122,
+            "page_view": 34392,
+            "graph": "mandela.svg",
+            "myrank": 206
+        },
+        {
+            "index": 4,
+            "title": "Oliver Tambo",
+            "page_rank": 6,
+            "languages": 21,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },            
+        {
+            "index": 5,
+            "title": "San people",
+            "page_rank": 6,
+            "languages": 51,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 6,
+            "title": "Human RightsDay",
+            "page_rank": 6,
+            "languages": 40,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 7,
+            "title": "Walter Sisulu",
+            "page_rank": 6,
+            "languages": 19,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 8,
+            "title": "Animal-powered transport",
+            "page_rank": 6,
+            "languages": 15,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 9,
+            "title": "Later Stone Age",
+            "page_rank": 6,
+            "languages": 3,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 50,
+            "title": "Transport in South Africa",
+            "page_rank": 6,
+            "languages": 2,
+            "page_view": 1923,
+            "graph": "mandela.svg",
+            "myrank": 1
+        },
+                {
+            "index": 1,
+            "title": "Mahatma Gandhi",
+            "page_rank": 6,
+            "languages": 153,
+            "page_view": 375969,
+            "graph": "mandela.svg",
+            "myrank": 2256
+        },
+        {
+            "index": 2,
+            "title": "Nelson Mandela",
+            "page_rank": 6,
+            "languages": 182, 
+            "page_view": 54495,
+            "graph": "mandela.svg",
+            "myrank": 326
+        },
+        {
+            "index": 3,
+            "title": "Transport",
+            "page_rank": 6,
+            "languages": 122,
+            "page_view": 34392,
+            "graph": "mandela.svg",
+            "myrank": 206
+        },
+        {
+            "index": 4,
+            "title": "Oliver Tambo",
+            "page_rank": 6,
+            "languages": 21,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },            
+        {
+            "index": 5,
+            "title": "San people",
+            "page_rank": 6,
+            "languages": 51,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 6,
+            "title": "Human RightsDay",
+            "page_rank": 6,
+            "languages": 40,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 7,
+            "title": "Walter Sisulu",
+            "page_rank": 6,
+            "languages": 19,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 8,
+            "title": "Animal-powered transport",
+            "page_rank": 6,
+            "languages": 15,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 9,
+            "title": "Later Stone Age",
+            "page_rank": 6,
+            "languages": 3,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 60,
+            "title": "Transport in South Africa",
+            "page_rank": 6,
+            "languages": 2,
+            "page_view": 1923,
+            "graph": "mandela.svg",
+            "myrank": 1
+        },
+                {
+            "index": 1,
+            "title": "Mahatma Gandhi",
+            "page_rank": 6,
+            "languages": 153,
+            "page_view": 375969,
+            "graph": "mandela.svg",
+            "myrank": 2256
+        },
+        {
+            "index": 2,
+            "title": "Nelson Mandela",
+            "page_rank": 6,
+            "languages": 182, 
+            "page_view": 54495,
+            "graph": "mandela.svg",
+            "myrank": 326
+        },
+        {
+            "index": 3,
+            "title": "Transport",
+            "page_rank": 6,
+            "languages": 122,
+            "page_view": 34392,
+            "graph": "mandela.svg",
+            "myrank": 206
+        },
+        {
+            "index": 4,
+            "title": "Oliver Tambo",
+            "page_rank": 6,
+            "languages": 21,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },            
+        {
+            "index": 5,
+            "title": "San people",
+            "page_rank": 6,
+            "languages": 51,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 6,
+            "title": "Human RightsDay",
+            "page_rank": 6,
+            "languages": 40,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 7,
+            "title": "Walter Sisulu",
+            "page_rank": 6,
+            "languages": 19,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 8,
+            "title": "Animal-powered transport",
+            "page_rank": 6,
+            "languages": 15,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 9,
+            "title": "Later Stone Age",
+            "page_rank": 6,
+            "languages": 3,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 70,
+            "title": "Transport in South Africa",
+            "page_rank": 6,
+            "languages": 2,
+            "page_view": 1923,
+            "graph": "mandela.svg",
+            "myrank": 1
+        },
+                {
+            "index": 1,
+            "title": "Mahatma Gandhi",
+            "page_rank": 6,
+            "languages": 153,
+            "page_view": 375969,
+            "graph": "mandela.svg",
+            "myrank": 2256
+        },
+        {
+            "index": 2,
+            "title": "Nelson Mandela",
+            "page_rank": 6,
+            "languages": 182, 
+            "page_view": 54495,
+            "graph": "mandela.svg",
+            "myrank": 326
+        },
+        {
+            "index": 3,
+            "title": "Transport",
+            "page_rank": 6,
+            "languages": 122,
+            "page_view": 34392,
+            "graph": "mandela.svg",
+            "myrank": 206
+        },
+        {
+            "index": 4,
+            "title": "Oliver Tambo",
+            "page_rank": 6,
+            "languages": 21,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },            
+        {
+            "index": 5,
+            "title": "San people",
+            "page_rank": 6,
+            "languages": 51,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 6,
+            "title": "Human RightsDay",
+            "page_rank": 6,
+            "languages": 40,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 7,
+            "title": "Walter Sisulu",
+            "page_rank": 6,
+            "languages": 19,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 8,
+            "title": "Animal-powered transport",
+            "page_rank": 6,
+            "languages": 15,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 9,
+            "title": "Later Stone Age",
+            "page_rank": 6,
+            "languages": 3,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 80,
+            "title": "Transport in South Africa",
+            "page_rank": 6,
+            "languages": 2,
+            "page_view": 1923,
+            "graph": "mandela.svg",
+            "myrank": 1
+        },
+                {
+            "index": 1,
+            "title": "Mahatma Gandhi",
+            "page_rank": 6,
+            "languages": 153,
+            "page_view": 375969,
+            "graph": "mandela.svg",
+            "myrank": 2256
+        },
+        {
+            "index": 2,
+            "title": "Nelson Mandela",
+            "page_rank": 6,
+            "languages": 182, 
+            "page_view": 54495,
+            "graph": "mandela.svg",
+            "myrank": 326
+        },
+        {
+            "index": 3,
+            "title": "Transport",
+            "page_rank": 6,
+            "languages": 122,
+            "page_view": 34392,
+            "graph": "mandela.svg",
+            "myrank": 206
+        },
+        {
+            "index": 4,
+            "title": "Oliver Tambo",
+            "page_rank": 6,
+            "languages": 21,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },            
+        {
+            "index": 5,
+            "title": "San people",
+            "page_rank": 6,
+            "languages": 51,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 6,
+            "title": "Human RightsDay",
+            "page_rank": 6,
+            "languages": 40,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 7,
+            "title": "Walter Sisulu",
+            "page_rank": 6,
+            "languages": 19,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 8,
+            "title": "Animal-powered transport",
+            "page_rank": 6,
+            "languages": 15,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 9,
+            "title": "Later Stone Age",
+            "page_rank": 6,
+            "languages": 3,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 90,
+            "title": "Transport in South Africa",
+            "page_rank": 6,
+            "languages": 2,
+            "page_view": 1923,
+            "graph": "mandela.svg",
+            "myrank": 1
+        },
+                {
+            "index": 1,
+            "title": "Mahatma Gandhi",
+            "page_rank": 6,
+            "languages": 153,
+            "page_view": 375969,
+            "graph": "mandela.svg",
+            "myrank": 2256
+        },
+        {
+            "index": 2,
+            "title": "Nelson Mandela",
+            "page_rank": 6,
+            "languages": 182, 
+            "page_view": 54495,
+            "graph": "mandela.svg",
+            "myrank": 326
+        },
+        {
+            "index": 3,
+            "title": "Transport",
+            "page_rank": 6,
+            "languages": 122,
+            "page_view": 34392,
+            "graph": "mandela.svg",
+            "myrank": 206
+        },
+        {
+            "index": 4,
+            "title": "Oliver Tambo",
+            "page_rank": 6,
+            "languages": 21,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },            
+        {
+            "index": 5,
+            "title": "San people",
+            "page_rank": 6,
+            "languages": 51,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 6,
+            "title": "Human RightsDay",
+            "page_rank": 6,
+            "languages": 40,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 7,
+            "title": "Walter Sisulu",
+            "page_rank": 6,
+            "languages": 19,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 8,
+            "title": "Animal-powered transport",
+            "page_rank": 6,
+            "languages": 15,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 9,
+            "title": "Later Stone Age",
+            "page_rank": 6,
+            "languages": 3,
+            "page_view": 0,
+            "graph": "mandela.svg",
+            "myrank": 0
+        },
+        {
+            "index": 100,
+            "title": "Transport in South Africa",
+            "page_rank": 6,
+            "languages": 2,
+            "page_view": 1923,
+            "graph": "mandela.svg",
+            "myrank": 1
         }
     ]
 }

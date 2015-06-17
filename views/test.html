@@ -2,16 +2,23 @@
 <html>
 	<head>
 		<title>Data views</title>
+		<script src="../library/jquery-1.11.1.min.js"></script>
+		<script src="../library/mustache.min.js"></script>  
+		<!--<script src="../library/d3.min.js"></script>-->   
 	</head>
 
 	<body onload="articles()">
 
-		<h1>Data views</h1>
+		<main>
+			<h1>Articles</h1>
+			<div id="sampleArea"></div>
+			
+			<script>
 
-		<div id="sampleArea"></div>
 
-		<script src="../library/jquery-1.11.1.min.js"></script>
-		<script src="../library/mustache.min.js"></script>   
+			</script>
+		
+		</main>
 
 		<script>
 
@@ -24,6 +31,23 @@
 				    });
 				});
 			}
+
+			/*
+			Page rank checker
+			http://smallseotools.com/google-pagerank-checker/
+
+			Page rank checker in PHP
+			https://github.com/eyecatchup/SEOstats
+			
+			Page rank API
+			http://www.rankapi.net/docs
+			*/
+
+
+
+
+
+
 
 			/*
 			// AJAX - nested objects 
@@ -212,19 +236,25 @@
 
 		
 		<script id="personTpl" type="text/template">
-		
-		<h1>{{firstName}} {{lastName}}</h1>
-		<p>Blog URL: <a href="{{blogURL}}">{{blogURL}}</a></p>
-		
+			/*
+			<h1>{{firstName}} {{lastName}}</h1>
+			<p>Blog URL: <a href="{{blogURL}}">{{blogURL}}</a></p>
+			*/
 		</script>
 
+		<style type="text/css">
+			main{
+				width: 90%;
+				margin: 0 auto;
+			}
+		</style>
 
 
-					<!--var tpl = "{{#depts}}<h1>{{name}}</h1><ul>{{#employees}}{{>employee}}{{/employees}}</ul>{{/depts}}";
-					var partials = {employee: "<li>{{firstName}} {{lastName}} {{#avatar}} <img src='{{avatar}}' width='70px' height='70px'> {{/avatar}}{{^avatar}}<img src='http://48jwh53mcwj217jvx11dcwjj.wpengine.netdna-cdn.com/wp-content/uploads/2013/07/avatar-2.jpg' width='70px {{!-- comment--}}' height='70px'>{{/avatar}} </li>"};*/
-					//$('#sampleArea3').html(html);
-					//var html = Mustache.to_html(tpl, data, partials);
-					//var template = $('people-template').html()-->
+		<!--var tpl = "{{#depts}}<h1>{{name}}</h1><ul>{{#employees}}{{>employee}}{{/employees}}</ul>{{/depts}}";
+		var partials = {employee: "<li>{{firstName}} {{lastName}} {{#avatar}} <img src='{{avatar}}' width='70px' height='70px'> {{/avatar}}{{^avatar}}<img src='http://48jwh53mcwj217jvx11dcwjj.wpengine.netdna-cdn.com/wp-contentuploads/2013/07/avatar-2.jpg' width='70px {{!-- comment--}}' height='70px'>{{/avatar}} </li>"};*/
+		//$('#sampleArea3').html(html);
+		//var html = Mustache.to_html(tpl, data, partials);
+		//var template = $('people-template').html()-->
 
 	</body>
 </html>
