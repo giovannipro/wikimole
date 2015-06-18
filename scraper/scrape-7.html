@@ -1,0 +1,261 @@
+<html>
+	<body>
+		<!-- Lo script funziona se inserito su htdocs-->
+		<script src="jquery.min.js"></script>
+		<script src="jquery.xdomainajax.js"></script>
+
+		<script type="text/javascript">
+
+		var url1 = "https://en.wikipedia.org/wiki/Walter_Sisulu"
+		var url3 = "https://en.wikipedia.org/wiki/Mahatma_Gandhi"
+		var url2 = "http://en.wikipedia.org/w/index.php?title=Nelson_Mandela&action=history" // non funziona
+		var url4 = "https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=edit" // non funziona
+		var url5 = "https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info" // non funziona
+		var url6 = "http://en.wikipedia.org/wiki/Special:WhatLinksHere/Mahatma_Gandhi" // non funziona
+	
+		var baseurl = window.location.origin; // +window.location.pathname;
+
+		var proxy = baseurl + "/wikimole/scraper/proxy.php" //http://localhost:8888/wikimole/scraper/
+
+		var url_a = proxy + "?url=" + url1
+		var url_b = proxy + "?url=" + url3
+		
+		/*
+		var base_url = window.location.origin;
+		var host = window.location.host;
+		var pathArray = window.location.pathname.split( '/' );
+		*/
+
+		//console.log(baseurl) 
+
+			$.ajax({
+	           type: 'GET', //POST
+	           url: url_a,
+	           processData: true,
+	           //data: data,
+	           //dataType: "html"
+	        })
+			.done (function (res) {
+	        	//processData(data);
+
+	        	var parsedata = $.parseHTML(res);
+
+	        	languages = []
+	        	languages = ($(parsedata).find('.interlanguage-link')) //.get(1))
+
+				categories = []
+				categories = ($(parsedata).find('#catlinks').children('#mw-normal-catlinks').children('ul').children('li'))
+
+				quality = []
+				quality = ($(parsedata).find('.mw-indicator')) 
+
+				template = []
+				template = ($(parsedata).find('.templatesUsed'))
+
+				history = []
+				history = ($(parsedata).find('#pagehistory'))
+
+				links = []
+				links = ($(parsedata).find('#mw-whatlinkshere-list'))
+
+				references = []
+				references = ($(parsedata).find('.references'))
+
+	        	$('#response').html("Success! Page loaded")	
+				$('#content1').html(languages)
+				$('#content2').html(quality)
+
+				$('#content3').html(template)
+				$('#content4').html(history)
+				$('#content5').html(links)
+
+				$('#content6').html(references)
+				
+				
+				languages.each(function( index ) {
+					$('#content2').append(
+						index + ": " + $(this).html() + "<br/>"
+					);					
+					//console.log ( index + ": " + $( this ).text() );
+				});
+
+
+				//for(i in $('.body')) console.log(i)
+
+				/*
+				var newDiv = document.createElement("div");
+				newDiv.innerHTML = "simple text";
+				$("#content")[0].appendChild(newDiv);
+				*/
+
+	        	//console.log(languages)
+	        	console.log("Done")	
+	        	console.log("Webpage: " + url_a)
+
+	        })
+	        .fail( function(xhr, textStatus, errorThrown) {
+		        $('#response').html("Error! Page is not loaded")	        
+			        console.log(languages.message);
+			        console.log ("Fail")
+	    	})
+
+
+			 
+			/*function processData(data){
+			 	//Do some stuff with the data
+			 	console.log(data)
+			 	console.log("Done")
+			}*/
+
+
+			$.ajax({
+	           type: 'GET', //POST
+	           url: url_b,
+	           processData: true,
+	        })
+	        .done (function (res1) {
+
+	        	var parsedata = $.parseHTML(res1);
+
+	        	references = []
+				references = ($(parsedata).find('.references'))
+
+				$('#content7').html(references)
+	        })
+
+
+
+
+/*
+https://en.wikipedia.org/wiki/African_music
+https://en.wikipedia.org/wiki/Agriculture_in_South_Africa
+https://en.wikipedia.org/wiki/AIDS_orphan
+https://en.wikipedia.org/wiki/Alcohol_abuse
+https://en.wikipedia.org/wiki/Alcohol_dependence
+https://en.wikipedia.org/wiki/Alcoholism
+*/
+
+			var i;
+			var article;
+
+	        var articles = [
+	        	"https://en.wikipedia.org/wiki/Actuarial_Society_of_South_Africa_HIV/AIDS_models",
+	        	"https://en.wikipedia.org/wiki/African_Leaders_Malaria_Alliance"
+	        	//"https://en.wikipedia.org/wiki/Africa_Day"
+	        ];
+
+	        
+			//articles.forEach(function(entry) {
+			function scrape_references(url) {
+			    
+			    $.ajax({
+		           type: 'GET',
+		           url: proxy + "?url=" + url,
+		           processData: true,
+		        })
+		        .done (function (res2) {
+
+		        	var parsedata_loop = $.parseHTML(res2);
+
+		        	references2 = []
+					references2 = ($(parsedata_loop).find('.references'))
+
+					container = $('#content8')
+
+					container.html(references2) 
+
+					console.log(article)
+				});
+			};
+
+			for (article of articles){
+				//scrape_references (articles)
+				//var container = $('#content').(jQuery.inArray(article, articles))
+
+				scrape_references(article,$('#content9'))
+
+				//console.log(scrape_references(article))
+				console.log(article)
+
+				$('#content9').html(scrape_references(article),$('#content9')) 
+
+				//console.log("Loop done")
+				//console.log(myscrape)
+				//console.log(proxy + "?url=" + article)
+
+			}
+
+			var theIndex = $(articles[i]); //.data("idx", i)  
+
+			console.log(articles[2])
+			console.log(theIndex)
+			console.log(jQuery.inArray("https://en.wikipedia.org/wiki/Actuarial_Society_of_South_Africa_HIV/AIDS_models", articles))
+
+
+			scrape_references('https://en.wikipedia.org/wiki/Actuarial_Society_of_South_Africa_HIV/AIDS_models')
+			//scrape_references('https://en.wikipedia.org/wiki/African_Leaders_Malaria_Alliance')
+			//scrape_references('https://en.wikipedia.org/wiki/Africa_Day')
+
+/*
+var val;
+var a = ["a", "b", "c"];
+for (val of a) {
+    console.log(val);
+}
+*/
+
+
+
+
+		</script>
+
+	<main>
+		<h1>Content</h1>
+		<!--<button id="trigger">GET data</button>-->
+
+		<p>Se non riesco a screpare qualcosa, usare Scraper (estensione Chrome), Outbit</p>
+		<div id="response"></div>
+		<div id="content8" class="box"></div>
+		<div id="content9" class="box"></div>
+
+		<div class="clear"></div>
+
+		<div id="content1" class="box"></div>
+		<div id="content2" class="box"></div>
+		<div id="content3" class="box"></div>
+		<div id="content4" class="box"></div>
+		<div id="content5" class="box"></div>
+		<div id="content6" class="box"></div>
+		<div id="content7" class="box"></div>
+		
+		
+	</main>
+
+
+	</body>
+
+	<style>
+		#content{
+			width: 80%;
+			height: 300px;
+		}
+		.box{
+			width: 18%;
+			float:left;
+		}
+		.clear{
+			clear: both;
+		}
+	</style>
+
+</html>
+
+
+<!--
+
+Convertitore Unix timestamp to Readable Date/time
+http://www.onlineconversion.com/unix_time.htm
+
+
+
+-->
