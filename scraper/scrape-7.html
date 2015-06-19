@@ -8,6 +8,7 @@
 
 		var url1 = "https://en.wikipedia.org/wiki/Walter_Sisulu"
 		var url3 = "https://en.wikipedia.org/wiki/Mahatma_Gandhi"
+		var url7 = "https://en.wikipedia.org/wiki/Africa_Day"
 		var url2 = "http://en.wikipedia.org/w/index.php?title=Nelson_Mandela&action=history" // non funziona
 		var url4 = "https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=edit" // non funziona
 		var url5 = "https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info" // non funziona
@@ -29,11 +30,15 @@
 		//console.log(baseurl) 
 
 			$.ajax({
-	           type: 'GET', //POST
-	           url: url_a,
-	           processData: true,
-	           //data: data,
-	           //dataType: "html"
+	        	type: 'GET', //POST
+	        	url: url_a,
+	        	processData: true,
+
+	        	//data: '{"some":"json"}',
+    			//dataType: 'json',
+
+	           	//data: data,
+	           	//dataType: "html"
 	        })
 			.done (function (res) {
 	        	//processData(data);
@@ -89,8 +94,8 @@
 				*/
 
 	        	//console.log(languages)
-	        	console.log("Done")	
-	        	console.log("Webpage: " + url_a)
+	        	/*console.log("Done")	
+	        	console.log("Webpage: " + url_a)*/
 
 	        })
 	        .fail( function(xhr, textStatus, errorThrown) {
@@ -121,6 +126,7 @@
 				references = ($(parsedata).find('.references'))
 
 				$('#content7').html(references)
+
 	        })
 
 
@@ -149,9 +155,10 @@ https://en.wikipedia.org/wiki/Alcoholism
 			function scrape_references(url) {
 			    
 			    $.ajax({
-		           type: 'GET',
-		           url: proxy + "?url=" + url,
-		           processData: true,
+			    	crossOrigin: true,
+		           	type: 'GET',
+		           	url: proxy + "?url=" + url,
+		           	processData: true,
 		        })
 		        .done (function (res2) {
 
@@ -164,7 +171,7 @@ https://en.wikipedia.org/wiki/Alcoholism
 
 					container.html(references2) 
 
-					console.log(article)
+					/*console.log(references2)*/
 				});
 			};
 
@@ -175,9 +182,9 @@ https://en.wikipedia.org/wiki/Alcoholism
 				scrape_references(article,$('#content9'))
 
 				//console.log(scrape_references(article))
-				console.log(article)
+				//console.log(article)
 
-				$('#content9').html(scrape_references(article),$('#content9')) 
+				//$('#content9').html(scrape_references(article),$('#content9')) 
 
 				//console.log("Loop done")
 				//console.log(myscrape)
@@ -187,14 +194,130 @@ https://en.wikipedia.org/wiki/Alcoholism
 
 			var theIndex = $(articles[i]); //.data("idx", i)  
 
+			/*
 			console.log(articles[2])
 			console.log(theIndex)
 			console.log(jQuery.inArray("https://en.wikipedia.org/wiki/Actuarial_Society_of_South_Africa_HIV/AIDS_models", articles))
-
+			*/
 
 			scrape_references('https://en.wikipedia.org/wiki/Actuarial_Society_of_South_Africa_HIV/AIDS_models')
-			//scrape_references('https://en.wikipedia.org/wiki/African_Leaders_Malaria_Alliance')
+			scrape_references('https://en.wikipedia.org/wiki/African_Leaders_Malaria_Alliance')
 			//scrape_references('https://en.wikipedia.org/wiki/Africa_Day')
+
+
+			$.when( scrape_references(url1),scrape_references(url7) )
+    			.then(
+    				//console.log('multiple data scrape')
+    			);
+			
+
+$(document).ready(function () {
+   $.when($.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", {
+        tags: "moon",
+        tagmode: "any",
+        format: "json"
+   }),
+   $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", {
+        tags: "bird",
+        tagmode: "any",
+        format: "json"
+   })).then(function (res1, res2) {
+       $.each(res1[0].items, function (i, item) {
+          var img = $("<img/>");
+          img.attr('width', '200px');
+          img.attr('height', '150px');
+          img.attr("src", item.media.m).appendTo("#content10");
+          if (i == 3) return false;
+      })
+      $.each(res2[0].items, function (i, item) {
+          var img = $("<img/>");
+          img.attr('width', '200px');
+          img.attr('height', '150px');
+          img.attr("src", item.media.m).appendTo("#content10");
+          if (i == 3) return false;
+      })
+  });
+});
+
+
+/* ------ */
+
+//calls the provided url and calls the callback function for its return value
+function fetchBlogPosts(feed, callback){
+  $.ajax({
+    type: 'GET',
+    url: document.location.protocol +
+         '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=1000&callback=?&q=' +
+         encodeURIComponent(feed),
+    dataType: 'json',
+    error: function () {
+      alert('Unable to load feed, Incorrect path or invalid feed');
+    },
+    success: function (xml) {
+      callback(xml.responseData.feed.entries);
+    }
+  });
+}
+
+var feed = 'http://www.timsommer.be/blog/feed/';
+
+fetchBlogPosts(feed, logPosts);
+
+function logPosts(posts) {
+  	//console.log(posts);
+}
+
+
+
+var feeds = ['http://www.timsommer.be/blog/feed/',
+             'http://blog.voltje.be/feed/',
+             'http://petermorlion.blogspot.com/feeds/posts/default'];
+
+for(var i = 0; i < feeds.length; i++){
+  fetchBlogPosts(feeds[i], logPosts);
+}
+
+function logPosts(posts) {
+   //console.log(posts);
+}
+
+
+
+/* ----- */
+
+
+var queue = [
+	"https://en.wikipedia.org/wiki/Walter_Sisulu",
+	"https://en.wikipedia.org/wiki/Mahatma_Gandhi",
+	"https://en.wikipedia.org/wiki/Africa_Day"
+	];
+
+for (var i = 0; i < 3; i++)
+    $.ajax( {
+        url: proxy + "?url=" + queue[i],
+        crossOrigin: true,
+		type: 'GET',
+		processData: true,
+		dataType: "html",
+        success: function res3() {
+
+        	var parsedata_for = $.parseHTML(res3);
+
+	      	references3 = []
+	      	references3 = ($(parsedata_for).find('.references'))
+
+	       	mycontainer = $('#content11')
+
+			//mycontainer.html(references3)
+			mycontainer.append(references3)
+
+           	console.log(references3)
+           	console.log("final loop done")
+        }
+    });
+
+
+
 
 /*
 var val;
@@ -217,6 +340,8 @@ for (val of a) {
 		<div id="response"></div>
 		<div id="content8" class="box"></div>
 		<div id="content9" class="box"></div>
+		<div id="content10" class="box"></div>
+		<div id="content11" class="box"></div>
 
 		<div class="clear"></div>
 
@@ -253,9 +378,14 @@ for (val of a) {
 
 <!--
 
+Function for call the proxy
+http://goobbe.com/questions/2928320/how-to-call-more-than-one-url-from-one-button-in-jquery-ajax
+
+
 Convertitore Unix timestamp to Readable Date/time
 http://www.onlineconversion.com/unix_time.htm
 
+http://www.4guysfromrolla.com/articles/102710-1.aspx
 
 
 -->
