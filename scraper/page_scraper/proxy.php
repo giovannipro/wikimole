@@ -8,7 +8,9 @@
 	}
 	$url = urldecode($_GET['url']);
 	$url = 'https://' . str_replace('https://', '', $url); // Avoid accessing the file system
-	echo file_get_contents($url); // You should probably use cURL. The concept is the same though
 
+	?>
 
-?>
+	<div><?php echo file_get_contents($url);?>"></div>
+	 // You should probably use cURL. The concept is the same though
+	
