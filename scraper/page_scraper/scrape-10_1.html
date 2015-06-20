@@ -225,7 +225,7 @@
 						var art_name3 = art_name2.replace('28',' ')
 						var art_name4 = art_name3.replace('29',' ')
 
-						$('#content1').append('Source, Target <br/>')
+						//$('#content1').append('source, target <br/>')
 
 	            	    $.each(back, function(i,item){
 
@@ -233,7 +233,7 @@
 
 	                    	//$(document.createElement('ul'))
 	                    	
-	                    	$('#content1').append('<span class="red">' + art_name1 + '</span>, ' + cont + '<br/>')
+	                    	$('#content1').append('<span class="red">' + art_name1 + '</span>, ' + cont + ',<br/>')
 
 	                    })
 
@@ -297,8 +297,6 @@
 			
 
 			for (i of art) {
-
-				console.log(i.replace(/[^a-z0-9]+/gi,' '))
 				
 				//var title = i
 
@@ -331,7 +329,14 @@
 
 		<div class="clear"></div>
 
-		<div id="content1" class="box_50"></div>
+		<div id="content1" class="box_50">
+			
+			source, target<br/>
+			
+			<!--
+			id, label <br/>-->
+
+		</div>
 		<div id="content2" class="box_50"></div>
 		<div id="content3" class="box"></div>
 		<div id="content4" class="box"></div>

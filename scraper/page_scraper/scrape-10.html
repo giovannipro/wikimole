@@ -16,7 +16,7 @@
 
 
 			art = [
-			    "!Kung_people", //"%C7%83Kung_people"
+			    "!Kung_people",
 			    "Actuarial_Society_of_South_Africa_HIV/AIDS_models",
 			    "Africa_Day",
 			    "African_Leaders_Malaria_Alliance",
@@ -176,6 +176,7 @@
 			    "Wood",
 			    "Wool",
 			    "Youth_culture"
+			
 			]
 
 			var art_list = '../articles.json'
@@ -225,47 +226,7 @@
 						var art_name3 = art_name2.replace('28',' ')
 						var art_name4 = art_name3.replace('29',' ')
 
-						$('#content1').append('Source, Target <br/>')
-
-	            	    $.each(back, function(i,item){
-
-	                    	var cont = item.title 
-
-	                    	//$(document.createElement('ul'))
-	                    	
-	                    	$('#content1').append('<span class="red">' + art_name1 + '</span>, ' + cont + '<br/>')
-
-	                    })
-
-	                    //console.log('ok: ' + art_name1 )
-
-	                }
-	            })
-	        }    
-
-	        function get_id_label(url) {
-
-	        	$('#content1').append('id, label')
-
-	        	/*
-	            $.ajax(url, {
-	                dataType: "jsonp",
-	                success: function( wikiResponse ) {
-
-	                	var parse_back = $.parseHTML(wikiResponse); //parseHTML
-
-	                	back = []
-						back = $(wikiResponse.query.backlinks)
-
-						var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
-						var art_name1 = art_name.replace(/[^a-z0-9]+/gi,' ')
-						var art_name2 = art_name1.replace('%C7%83',' ')
-						var art_name3 = art_name2.replace('28',' ')
-						var art_name4 = art_name3.replace('29',' ')
-
-						$('#content1').append('id, label')
-
-	            	    $.each(back, function(i,item){
+	            	    $.each(art_name4, function(i,item){
 
 	                    	var cont = item.title 
 
@@ -278,17 +239,23 @@
 	                    //console.log('ok: ' + art_name1 )
 
 	                }
-
 	            })
-			*/
-	        }           
+	        }    
+
+	        /*
+	        function get_id_label(i) {
+
+	        	$('#content1').append(i)
+
+	        }  
+	        */     
 
 	        
 			for (i of art) {
 				
 				var title = i
 
-				$('#content2').html(title)
+				$('#content1').html(title)
 
 				
 				get_source_target('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=' + i)
@@ -296,20 +263,16 @@
 			}
 			
 
-			for (i of art) {
 
-				console.log(i.replace(/[^a-z0-9]+/gi,' '))
-				
-				//var title = i
+			/*
+			for (a of art) {
+			
+				var rep = (a.replace(/[^a-z0-9]+/gi,' '))
 
-				//$('#content2').html(title)
-
-				/*
-				get_source_target('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=' + i)
-				*/
-
-				//get_id_label('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=' + i)
+				console.log (rep)
+				get_id_label(a)
 			}
+			*/
 
 
 
@@ -331,7 +294,16 @@
 
 		<div class="clear"></div>
 
-		<div id="content1" class="box_50"></div>
+		<div id="content1" class="box_50">
+			
+			
+			source, target<br/>
+			
+			<!--
+			id, label <br/>-->
+
+		
+		</div>
 		<div id="content2" class="box_50"></div>
 		<div id="content3" class="box"></div>
 		<div id="content4" class="box"></div>
