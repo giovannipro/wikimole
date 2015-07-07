@@ -1,0 +1,180 @@
+<html>
+	<body>
+		<!-- Lo script funziona se inserito su htdocs-->
+		<title>Backlinks</title>
+		<script src="jquery.min.js"></script>
+		<script src="jquery.xdomainajax.js"></script>
+
+		<script type="text/javascript">
+
+			/* ------------------------------------
+			API SOURCE
+	        -------------------------------------*/
+
+
+			var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=';
+
+	        /* ------------------------------------
+			ARTICLES LIST
+	        -------------------------------------*/
+
+			var ar;
+
+			var art_list = '../articles.json' // '../articles_test.json'
+
+			// get the list of articles
+			$.getJSON(art_list, function(mydata) {
+
+				var parse_art = $.parseHTML(mydata);
+
+				articles = $(mydata)
+
+				console.log(articles)
+			
+			})
+
+			// 
+			function string_clean(string) {
+
+				string.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+			}
+
+	        /* ------------------------------------
+	        SOURCE - TARGET 
+	        -------------------------------------*/
+
+
+	        // get backlinks list for one article
+			function get_source_target(url) {
+
+	            $.ajax(url, {
+	                dataType: "jsonp",
+	                success: function( wikiResponse ) {
+
+	                	var parse_back = $.parseHTML(wikiResponse); 
+
+	                	back = []
+						back = $(wikiResponse.query.backlinks)
+
+						var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
+						
+						//var art_name_clean = string_clean(art_name)
+						var art_name_clean = art_name.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+						jQuery.each( back, function( i, val ) {
+
+							var cont = val.title 
+
+							$('#content1').append('<span class="red">' + art_name_clean  + '</span>, ' + cont + ',<br/>') 
+
+						})
+
+	                }
+	            })
+	        }    
+
+	        // get backlinks list for all of articles
+	        function get_all_source_target() {
+
+	        	$('#source_target').html('Source,Target,<br/>')
+	        
+				jQuery.each( articles, function( i, val ) {
+					
+					var title = val // i
+
+					//get_source_target('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=' + val )  // i
+					get_source_target(  backlinks + val )
+					
+				})
+
+				$('.remove').hide()
+			}
+
+
+	        /* ------------------------------------
+	        ID - LABEL 
+	        -------------------------------------*/
+
+
+	        // get id and labels for all articles
+	        function get_all_id_label(url) {
+
+	        	$('#content2').append('Id, label<br/>')
+
+	        	jQuery.each( articles, function( i, val ) {
+
+	        		val_clean = val.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+	        		$('#content2').append('<span class="red">' + val_clean  + '</span>, ' + val_clean + '<br/>')
+
+	        		console.log(val)
+
+	        		$('.remove').hide()
+
+
+	        	})
+	        }
+
+		</script>
+
+		<main>
+			<div id="response"></div>
+			<div class="box">
+				<div onclick="get_all_source_target()"><span class="remove">Get source-target</span></div>
+				<div id="source_target"></div>
+				<div id="content1" class="box_100 source_target"></div>
+			</div>
+
+			<div class="box">
+				<div id="content2" class="box_100 source_target"></div>
+				<div id="id_label"></div>
+				<div onclick="get_all_id_label()"><span class="remove">Get id-label<span></div>
+			</div>
+
+			<div class="clear"></div>
+		</main>
+
+
+	</body>
+
+	<style>
+		#content{
+			width: 80%;
+			height: 300px;
+		}
+		.box{
+			width: 50%;
+			float:left;
+		}
+		.box_50{
+			width: 50%;
+			float:left;
+		}
+		.clear{
+			clear: both;
+		}
+		.red{
+			color: red;
+		}
+		body {
+			font-size: 12px;
+		}
+	</style>
+
+</html>
+
+
+<!--
+
+Function for call the proxy
+http://goobbe.com/questions/2928320/how-to-call-more-than-one-url-from-one-button-in-jquery-ajax
+
+
+Convertitore Unix timestamp to Readable Date/time
+http://www.onlineconversion.com/unix_time.htm
+
+http://www.4guysfromrolla.com/articles/102710-1.aspx
+
+
+-->
