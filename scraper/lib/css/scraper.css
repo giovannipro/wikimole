@@ -40,6 +40,14 @@ main{
 	top: 30%;
 	padding-left: 30px;
 }
+#title h2{
+	font-size: 14px;
+	color: gray;
+	position: relative;
+	top: 25%;
+	font-weight: lighter;
+	padding-left: 30px;
+}
 .one {
 	background-color: #95E8DD;
 	text-align: center;

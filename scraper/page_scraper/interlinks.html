@@ -1,0 +1,312 @@
+<html>
+	<body>
+		<!-- Script works if loaded by MAMP -->
+		<title>Interlinks</title>
+		<script src="../lib/js/jquery.min.js"></script>
+		<script src="../lib/js/jquery.xdomainajax.js"></script>
+		<link rel="stylesheet" href="../lib/css/scraper.css" rel="stylesheet">
+		<script type="text/javascript">
+
+	        /* ------------------------------------
+			SOURCE
+	        -------------------------------------*/
+
+	        var baseurl = 'http://localhost:8888/wikimole/scraper/page_scraper/';
+
+	        var proxy = baseurl + 'proxy_interlinks.php' + "?url=" 
+
+
+	        /* ------------------------------------
+			ARTICLES LIST
+	        -------------------------------------*/
+
+			var art_list = '../articles/articles_test.json' // '../articles.json'
+
+			var list = [
+				'https://en.wikipedia.org/wiki/nelson_mandela',
+				'https://en.wikipedia.org/wiki/mahatma_gandhi'
+			]	
+
+
+			// get the list of articles
+			$.getJSON(art_list, function(mydata) {
+
+				var parse_art = $.parseHTML(mydata);
+
+				articles = $(mydata)
+
+				console.log(articles)
+			
+			})
+
+	        /* ------------------------------------
+	        SOURCE - TARGET 
+	        -------------------------------------*/
+
+			/*
+			var url = "https://en.wikipedia.org/wiki/nelson_mandela"
+
+			//var url;
+
+			var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+			*/
+ 
+			function scrape_interlinks(url) {
+			    
+			    $.ajax({			    	
+		           	type: 'GET',
+		           	url: proxy + url,
+		           	processData: true,
+		           	//dataType: 'json',
+		           	//crossOrigin: true,
+		        })
+		        .done (function (get_func) {
+
+		        	var parsedata_func = $.parseHTML(get_func);
+
+		        	ref_func = []
+					ref_func = ($(parsedata_func).find('.mw-redirect')) // find('#content') .references
+
+					container = $('#source_target')
+
+					//container.html( ref_func ) 
+
+					jQuery.each( ref_func, function( i, val ) {
+
+						var cont = val
+
+						var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+						container.append ('<span class="red">' + url_clean + '</span>, ' + cont + '</br>' )  // url_clean 
+
+						console.log( i + ' ' + val  )
+
+					})
+
+					$('.hide_1').hide()
+
+				})
+				.error (function (xhr, ajaxOptions, thrownError) {
+			        console.log(xhr.status);
+			        console.log(thrownError);
+				});
+
+			}
+
+	        // get backlinks list for one article
+			function get_source_target() {
+
+				$('#source_target').html('Source,Target,<br/>')
+
+				jQuery.each( list, function( i, val ) { // articles
+
+					//var link = val
+
+					scrape_interlinks( val )
+
+					console.log( val )
+
+				})			
+			}
+
+			//scrape_interlinks(url)	
+
+			get_source_target() 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			/*
+
+
+		var url1 = "https://en.wikipedia.org/wiki/Walter_Sisulu"
+		var url3 = "https://en.wikipedia.org/wiki/Mahatma_Gandhi"
+		var url7 = "https://en.wikipedia.org/wiki/Africa_Day"
+
+		var url8 = "https://en.wikipedia.org/wiki/Special:WhatLinksHere/Walter_Sisulu&limit=500"
+		var url9 = "https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bltitle=Nelson_Mandela&bllimit=500&format=json"
+
+		var url2 = "http://en.wikipedia.org/w/index.php?title=Nelson_Mandela&action=history" // non funziona
+		var url4 = "https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=edit" // non funziona
+		var url5 = "https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&action=info" // non funziona
+		var url6 = "http://en.wikipedia.org/wiki/Special:WhatLinksHere/Mahatma_Gandhi" // non funziona
+	
+		var baseurl = window.location.origin; // +window.location.pathname;
+
+		var proxy = baseurl + "/wikimole/scraper/proxy.php" //http://localhost:8888/wikimole/scraper/
+		var proxy_1 = baseurl + "/wikimole/scraper/proxy_1.php" 
+		var proxy_2 = baseurl + "/wikimole/scraper/proxy_2.php" 
+
+
+		var url_a = proxy + "?url=" + url1
+		var url_b = proxy + "?url=" + url3
+		
+
+			var queue = [
+				"https://en.wikipedia.org/wiki/Walter_Sisulu",
+				"https://en.wikipedia.org/wiki/Mahatma_Gandhi",
+				//"https://en.wikipedia.org/wiki/Africa_Day"
+				];
+
+				//console.log("queue: " + queue)
+
+			for (var i = 0; i < 1; i++) {
+
+				var myqueue = $.each(queue, function(index,val){
+						//console.log("val: " + val)
+					})
+
+			    $.ajax({
+	        		type: 'GET',
+	        		url: proxy + "?url=" + myqueue,
+	        		processData: true,
+	        	})
+	        	.done (function (res_1) {
+
+		        	var parsedata_for_1 = $.parseHTML(res_1);
+
+			      	references_1 = []
+			      	references_1 = ($(parsedata_for_1).find('.references'))
+
+			      	//console.log(proxy + "?url=" + queue)
+
+			      	//console.log(myqueue)
+
+					//$('#content' + i ).html(references_1)
+
+				})
+			}
+
+
+
+
+			$.ajax({
+	       		type: 'GET',
+	       		url: proxy + "?url=" + url1,
+	       		processData: true,
+	       	})
+	       	.done (function (res_a) {
+	       		var pars_1 = $.parseHTML(res_a);
+
+			    ref_1 = []
+			  	ref_1 = ($(pars_1).find('.references'))
+
+			  	$('#content1').html(ref_1)
+	       	
+	       	})
+
+	       	$.ajax({
+	       		type: 'GET',
+	       		url: proxy_1 + "?url=" + url3,
+	       		processData: true,
+	       	})
+	       	.done (function (res_b) {
+	       		var pars_2 = $.parseHTML(res_b);
+
+			    ref_2 = []
+			  	ref_2 = ($(pars_2).find('.references'))
+	       		
+	       		$('#content2').html(ref_2)
+
+	       	})
+
+
+
+
+	       	
+	       	function scrape_ref(url,prox) {
+			    
+			    $.ajax({
+			    	crossOrigin: true,
+		           	type: 'GET',
+		           	url: prox + "?url=" + url,
+		           	processData: true,
+		           	dataType: 'json',
+		        })
+		        .done (function (res_func) {
+
+		        	var parsedata_func = $.parseHTML(res_func);
+
+		        	ref_func = []
+					ref_func = ($(parsedata_func).find('#mw-whatlinkshere-list')) //.references
+
+					container = $('#content4')
+
+					container.html(ref_func) 
+
+				});
+			};
+
+			scrape_ref(url9,proxy_2)	
+
+
+			//scrape_ref('https://en.wikipedia.org/wiki/Walter_Sisulu',proxy)
+			//scrape_ref('https://en.wikipedia.org/wiki/Africa_Day',proxy_1)	
+			
+
+
+
+/*  -----  */
+			
+			/*
+			console.log('test: 1')
+
+			console.log(proxy_2 + "?url=" + url9)
+
+	       	console.log(proxy + "?url=" + url1)
+	        console.log(proxy_1 + "?url=" + url3)
+	        */
+
+
+		</script>
+
+		<main>
+			<div id="title" class="hide_1">
+				<h1>Interlinks<h1>
+				<h2>Links to other Wikipedia pages</h2>
+			</div>
+			<div class="box">
+				<div class="label one hide_1" onclick=""><span>Get source-target</span></div><!-- get_all_source_target()-->
+				<div id="source_target" class="hide_2"></div>
+				<div id="content1" class="box_100 hide_2" onclick="hide()"></div>
+			</div>
+
+			<div class="box">
+				<div class="label two hide_1" onclick="get_all_id_label()"><span>Get id-label<span></div>
+				<div id="id_label" class="hide_2"></div>				
+				<div id="content2" class="box_100 hide_2" onclick="hide()"></div>
+			</div>
+
+			<div class="clear"></div>
+		</main>
+
+	</body>
+</html>
+
+
+<!--
+
+Function for call the proxy
+http://goobbe.com/questions/2928320/how-to-call-more-than-one-url-from-one-button-in-jquery-ajax
+
+
+Convertitore Unix timestamp to Readable Date/time
+http://www.onlineconversion.com/unix_time.htm
+
+http://www.4guysfromrolla.com/articles/102710-1.aspx
+
+
+-->
