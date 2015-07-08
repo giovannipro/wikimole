@@ -88,7 +88,7 @@
 						}
 						else {
 
-							container.append ('<span class="red">' + url_clean + '</span>, ' + cont + ',</br>' ) // cont
+							container.append ('<span class="red">' + url_clean + '</span>, ' + cont + '</br>' ) // cont
 
 							console.log( url) // i + ' ' + val 
 						}
@@ -108,7 +108,7 @@
 	        // get backlinks list for one article
 			function get_source_target() {
 
-				$('#source_target').html('Source,Target,<br/>')
+				$('#source_target').html('Source,Target<br/>')
 
 				jQuery.each( articles, function( i, val ) { //  list
 
@@ -129,7 +129,7 @@
 	       	// get id and labels for all articles
 	        function get_id_label(url) {
 
-	        	$('#content2').append('Id, Label<br/>')
+	        	$('#content2').append('Id,Label<br/>')
 
 	        	jQuery.each( articles, function( i, val ) {
 
