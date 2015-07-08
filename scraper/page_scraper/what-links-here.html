@@ -97,6 +97,8 @@
 					
 				})
 
+	        	console.log('Done');	
+				
 				$('.hide_1').hide()
 			}
 
@@ -126,16 +128,20 @@
 		<main>
 			<div id="title" class="hide_1">
 				<h1>What links here<h1>
-				<h2></h2>
+				<h2>Links from other Wikipedia pages</h2>
 			</div>
 			<div class="box">
-				<div class="label one hide_1" onclick="get_all_source_target()"><span>Get source-target</span></div>
+				<div class="label one hide_1" onclick="get_all_source_target()">
+					<span>Get source-target (edges)</span>
+				</div>
 				<div id="source_target" class="hide_2"></div>
 				<div id="content1" class="box_100 hide_2" onclick="hide()"></div>
 			</div>
 
 			<div class="box">
-				<div class="label two hide_1" onclick="get_all_id_label()"><span>Get id-label<span></div>
+				<div class="label two hide_1" onclick="get_all_id_label()">
+					<span>Get id-label (nodes)<span>
+				</div>
 				<div id="id_label" class="hide_2"></div>				
 				<div id="content2" class="box_100 hide_2" onclick="hide()"></div>
 			</div>

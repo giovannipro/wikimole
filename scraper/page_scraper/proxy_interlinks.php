@@ -9,8 +9,10 @@
 	$url = urldecode($_GET['url']);
 	$url = 'https://' . str_replace('https://', '', $url); // Avoid accessing the file system
 
-	?>
+	//$id = $doc->getElementById('#content')
 
-	<div><?php echo file_get_contents($url);?>"></div>
-	 // You should probably use cURL. The concept is the same though
+?>
+
+<div><?php echo file_get_contents($url);?>"></div>  <!-- url -->
+<!-- You should probably use cURL. The concept is the same though -->
 	
