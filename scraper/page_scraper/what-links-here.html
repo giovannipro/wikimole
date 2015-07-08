@@ -1,18 +1,32 @@
 <html>
 	<body>
-		<!-- Lo script funziona se inserito su htdocs-->
+		<!-- Script works if loaded by MAMP -->
 		<title>Backlinks</title>
-		<script src="jquery.min.js"></script>
-		<script src="jquery.xdomainajax.js"></script>
-
+		<script src="../lib/js/jquery.min.js"></script>
+		<!--<script src="jquery.xdomainajax.js"></script>-->
+		<link rel="stylesheet" href="../lib/css/scraper.css" rel="stylesheet">
 		<script type="text/javascript">
 
 			/* ------------------------------------
 			API SOURCE
 	        -------------------------------------*/
 
-
 			var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=';
+
+			/* ------------------------------------
+	        Contextual functions
+	        -------------------------------------*/
+
+			// clean the string
+			function string_clean(string) {
+				string.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+			}
+
+			// hide graphical elements
+			function hide() {
+				$('.hide_2').hide
+				$('.hide_1').show
+			}
 
 	        /* ------------------------------------
 			ARTICLES LIST
@@ -20,7 +34,7 @@
 
 			var ar;
 
-			var art_list = '../articles.json' // '../articles_test.json'
+			var art_list = '../articles/articles.json' // '../articles_test.json'
 
 			// get the list of articles
 			$.getJSON(art_list, function(mydata) {
@@ -29,16 +43,9 @@
 
 				articles = $(mydata)
 
-				console.log(articles)
+				//console.log(articles)
 			
 			})
-
-			// 
-			function string_clean(string) {
-
-				string.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
-
-			}
 
 	        /* ------------------------------------
 	        SOURCE - TARGET 
@@ -88,19 +95,17 @@
 					
 				})
 
-				$('.remove').hide()
+				$('.hide_1').hide()
 			}
-
 
 	        /* ------------------------------------
 	        ID - LABEL 
 	        -------------------------------------*/
 
-
 	        // get id and labels for all articles
 	        function get_all_id_label(url) {
 
-	        	$('#content2').append('Id, label<br/>')
+	        	$('#content2').append('Id, Label<br/>')
 
 	        	jQuery.each( articles, function( i, val ) {
 
@@ -108,10 +113,8 @@
 
 	        		$('#content2').append('<span class="red">' + val_clean  + '</span>, ' + val_clean + '<br/>')
 
-	        		console.log(val)
-
-	        		$('.remove').hide()
-
+	        		//console.log(val)
+	        		$('.hide_1').hide()
 
 	        	})
 	        }
@@ -119,17 +122,17 @@
 		</script>
 
 		<main>
-			<div id="response"></div>
+			<div id="title" class="hide_1"><h1>What links here<h1></div>
 			<div class="box">
-				<div onclick="get_all_source_target()"><span class="remove">Get source-target</span></div>
-				<div id="source_target"></div>
-				<div id="content1" class="box_100 source_target"></div>
+				<div class="label one hide_1" onclick="get_all_source_target()"><span>Get source-target</span></div>
+				<div id="source_target" class="hide_2"></div>
+				<div id="content1" class="box_100 hide_2" onclick="hide()"></div>
 			</div>
 
 			<div class="box">
-				<div id="content2" class="box_100 source_target"></div>
-				<div id="id_label"></div>
-				<div onclick="get_all_id_label()"><span class="remove">Get id-label<span></div>
+				<div class="label two hide_1" onclick="get_all_id_label()"><span>Get id-label<span></div>
+				<div id="id_label" class="hide_2"></div>				
+				<div id="content2" class="box_100 hide_2" onclick="hide()"></div>
 			</div>
 
 			<div class="clear"></div>
@@ -138,43 +141,4 @@
 
 	</body>
 
-	<style>
-		#content{
-			width: 80%;
-			height: 300px;
-		}
-		.box{
-			width: 50%;
-			float:left;
-		}
-		.box_50{
-			width: 50%;
-			float:left;
-		}
-		.clear{
-			clear: both;
-		}
-		.red{
-			color: red;
-		}
-		body {
-			font-size: 12px;
-		}
-	</style>
-
 </html>
-
-
-<!--
-
-Function for call the proxy
-http://goobbe.com/questions/2928320/how-to-call-more-than-one-url-from-one-button-in-jquery-ajax
-
-
-Convertitore Unix timestamp to Readable Date/time
-http://www.onlineconversion.com/unix_time.htm
-
-http://www.4guysfromrolla.com/articles/102710-1.aspx
-
-
--->

@@ -1,0 +1,56 @@
+body { 
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: tahoma, verdana, sans-serif;
+	font-size: 12px;
+}
+main{
+	width: 100%;
+	height: 100%;
+}
+#title{
+	height: 20%;			
+}
+.box{
+	width: 50%;
+	float:left;
+	height: 80%;
+}
+.box_50{
+	width: 50%;
+	float:left;
+}
+.label{
+	height: 100%;
+}
+.label:hover{
+	cursor: pointer;
+}
+.label span {
+	display: block;
+	position: relative;
+	top: 50%;
+	font-size: 16px;
+	color: white;
+}
+#title h1{
+	font-size: 14px;
+	position: relative;
+	top: 30%;
+	padding-left: 30px;
+}
+.one {
+	background-color: #95E8DD;
+	text-align: center;
+}
+.two {
+	background-color: #97A6FF;
+	text-align: center;
+}
+.clear{
+	clear: both;
+}
+.red{
+	color: red;
+}
