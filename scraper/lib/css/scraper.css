@@ -12,14 +12,14 @@ main{
 #title{
 	height: 20%;			
 }
-.box{
-	width: 50%;
-	float:left;
+.box_100{
+	width: 100%;
 	height: 80%;
 }
 .box_50{
 	width: 50%;
 	float:left;
+	height: 80%;
 }
 .label{
 	height: 100%;
