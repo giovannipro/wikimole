@@ -56,6 +56,27 @@ main{
 	background-color: #97A6FF;
 	text-align: center;
 }
+.three{
+	background-color: #DADCDF;
+	text-align: center;
+}
+#data{
+	overflow-y: scroll;
+	background-color: #DADCDF;
+}/*
+#data .label{
+	height: auto;
+}*/
+#data div {
+	cursor: default;
+	padding: 10px;
+}
+#data span {
+	color: black;
+	text-align: left;
+	top: 0;
+	font-size: 10px;
+}
 .clear{
 	clear: both;
 }
