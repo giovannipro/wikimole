@@ -243,7 +243,7 @@
 		*/
 		
 
-		require("PRclass.php");
+		require("../lib/php/PRclass.php");
 		//$url = array("http://www.maind.supsi.ch/", "http://www.supsi.ch/", "http://www.fablab.supsi.ch/");
 		$pr = new PR();
 
