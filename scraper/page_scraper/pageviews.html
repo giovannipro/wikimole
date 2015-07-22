@@ -1,0 +1,242 @@
+<html>
+	<body>
+		<!-- Script works if loaded by MAMP -->
+		<title>Interlinks</title>
+		<script src="../lib/js/jquery.min.js"></script>
+		<script src="../lib/js/jquery.xdomainajax.js"></script>
+		<link rel="stylesheet" href="../lib/css/scraper.css" rel="stylesheet">
+		<script type="text/javascript">
+
+	        /* ------------------------------------
+			SOURCE
+	        -------------------------------------*/
+
+	        var baseurl = 'http://localhost:8888/wikimole/scraper/page_scraper/';
+
+	        var proxy = baseurl + 'proxy_interlinks.php' + "?url=" ;
+
+	        var wikilink = 'https://en.wikipedia.org/wiki/';
+
+
+	        /* ------------------------------------
+			ARTICLES LIST
+	        -------------------------------------*/
+
+			var art_list = '../articles/articles.json' // '../articles_test.json'
+
+			var list = [
+				'https://en.wikipedia.org/wiki/nelson_mandela',
+				'https://en.wikipedia.org/wiki/mahatma_gandhi'
+			]	
+
+
+			// get the list of articles
+			$.getJSON(art_list, function(mydata) {
+
+				var parse_art = $.parseHTML(mydata);
+
+				articles = $(mydata)
+
+				//console.log( articles )
+			
+			})
+
+	        /* ------------------------------------
+	        GET ONE MONTH
+	        -------------------------------------*/
+
+	        var service = "http://stats.grok.se/json/en/"
+
+	       	var date = "201506"
+
+	        var url = "africa"
+
+	        var proxy_link = proxy + service + date + '/' + url
+
+	        console.log ( proxy_link )
+
+
+	        function get_monthly_pageview(url) {
+
+	            $.ajax( url, {
+	                dataType: "jsonp",
+	                success: function( wikiResponse ) {
+
+	                	console.log ( wikiResponse )
+
+	                	var parse_pagv = $.parseHTML(wikiResponse); 
+
+	                	pagv = []
+						pagv = $(wikiResponse)
+
+	                	/* var parse_back = $.parseHTML(wikiResponse); 
+
+	                	back = []
+						back = $(wikiResponse.query.backlinks)
+
+						var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
+						
+						//var art_name_clean = string_clean(art_name)
+						var art_name_clean = art_name.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+						jQuery.each( back, function( i, val ) {
+
+							var cont = val.title 
+
+							$('#content1').append('<span class="red">' + art_name_clean  + '</span>, ' + cont + '<br/>') 
+
+						})*/
+
+	            		
+
+	            		console.log ('ok')
+
+	                },   
+					error : function (xhr, ajaxOptions, thrownError) {
+				        console.log(xhr.status);
+				        console.log(thrownError);
+					}
+				})
+
+				$('.hide_1').hide()
+
+			}
+
+			get_monthly_pageview( proxy_link )
+
+			// http://stats.grok.se/json/en/201506/africa
+			// http://localhost:8888/wikimole/scraper/page_scraper/proxy_interlinks.php?url=http://stats.grok.se/json/en/201506/africa
+
+			/*
+			var url = "https://en.wikipedia.org/wiki/nelson_mandela"
+
+			//var url;
+
+			var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+			*/
+
+			/*
+ 
+			function scrape_interlinks(url) {
+			    
+			    $.ajax({			    	
+		           	type: 'GET',
+		           	url: proxy + wikilink + url,
+		           	processData: true,
+		           	//dataType: 'json',
+		           	//crossOrigin: true,
+		        })
+		        .done (function (get_func) {
+
+		        	var parsedata_func = $.parseHTML(get_func);
+
+		        	get = []
+					get = ($(parsedata_func).find('#content').find('a')) // find('#content') .references
+
+					container = $('#source_target')
+
+					//container.html( get_func ) 
+
+					jQuery.each( get, function( i, val ) {
+
+						//console.log( i + val)
+
+						var cont = val;
+						//var cont_clean = cont.replace('http://localhost:8888/wiki/','');	
+						//var cont_clean = cont.replace('http://localhost:8888/wiki/','');				
+
+						var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+						if ( val == '') {
+							return ''
+						}
+						else {
+
+							container.append ('<span class="red">' + url_clean + '</span>, ' + cont + '</br>' ) // cont
+
+							console.log( url) // i + ' ' + val 
+						}
+
+					})
+
+					$('.hide_1').hide()
+
+				})
+				.error (function (xhr, ajaxOptions, thrownError) {
+			        console.log(xhr.status);
+			        console.log(thrownError);
+				});
+
+			}
+
+	        // get backlinks list for one article
+			function get_source_target() {
+
+				$('#source_target').html('Source,Target<br/>')
+
+				jQuery.each( articles, function( i, val ) { //  list
+
+					//var link = val
+					scrape_interlinks( val )
+					//console.log( i )
+
+				})	
+
+				// console.log('Done');	
+	
+			}
+
+			/* ------------------------------------
+	        ID - LABEL 
+	        -------------------------------------
+
+	       	// get id and labels for all articles
+	        function get_id_label(url) {
+
+	        	$('#content2').append('Id,Label<br/>')
+
+	        	jQuery.each( articles, function( i, val ) {
+
+	        		val_clean = val.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+	        		$('#content2').append('<span class="red">' + val_clean  + '</span>, ' + val_clean + '<br/>')
+
+	        		//console.log(val)
+	        		$('.hide_1').hide()
+
+	        	})
+	        }
+
+*/
+
+
+
+		</script>
+
+		<main>
+			<div id="title" class="hide_1">
+				<h1>Page views<h1>
+				<h2>From 15.12.2013 to 31.07.2015</h2>
+			</div>
+			<div class="box">
+				<div class="label one hide_1" onclick="">
+					<span>Get source-target (edges)</span>
+					<!-- to be sure each edge is downloaded see Firebug > Network > Time column-->
+				</div><!-- get_all_source_target()-->
+				<div id="source_target" class="hide_2"></div>
+				<div id="content1" class="box_100 hide_2" onclick="hide()"></div>
+			</div>
+
+			<div class="box">
+				<div class="label two hide_1" onclick="get_id_label()">
+					<span>Get id-label (nodes)<span>
+				</div>
+				<div id="id_label" class="hide_2"></div>				
+				<div id="content2" class="box_100 hide_2" onclick="hide()"></div>
+			</div>
+
+			<div class="clear"></div>
+		</main>
+
+	</body>
+</html>

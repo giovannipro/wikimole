@@ -71,7 +71,7 @@
 
 							var cont = val.title 
 
-							$('#content1').append('<span class="red">' + art_name_clean  + '</span>, ' + cont + ',<br/>') 
+							$('#content1').append('<span class="red">' + art_name_clean  + '</span>, ' + cont + '<br/>') 
 
 						})
 
@@ -86,7 +86,7 @@
 	        // get backlinks list for all of articles
 	        function get_all_source_target() {
 
-	        	$('#source_target').html('Source,Target,<br/>')
+	        	$('#source_target').html('Source,Target<br/>')
 	        
 				jQuery.each( articles, function( i, val ) {
 					
@@ -109,7 +109,7 @@
 	        // get id and labels for all articles
 	        function get_all_id_label(url) {
 
-	        	$('#content2').append('Id, Label<br/>')
+	        	$('#content2').append('Id,Label<br/>')
 
 	        	jQuery.each( articles, function( i, val ) {
 
