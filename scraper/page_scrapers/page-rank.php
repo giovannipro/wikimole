@@ -146,7 +146,6 @@ ini_set('display_errors', 1);
 				    "San_people",
 				    "San_religion",
 				    "San_rock_art",
-				    "San_rock_art",
 				    "Sand",
 				    "Scale_(map)",
 				    "Scientific_classification_(disambiguation)",
