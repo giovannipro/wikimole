@@ -57,10 +57,12 @@
 	                dataType: "jsonp",
 	                success: function( wikiResponse ) {
 
-	                	var parse_back = $.parseHTML(wikiResponse); 
+	                	var parse_back = $.parseHTML(wikiResponse);
 
 	                	back = []
 						back = $(wikiResponse.query.backlinks)
+
+						//console.log(back) 
 
 						var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
 						
@@ -74,6 +76,8 @@
 							$('#content1').append('<span class="red">' + art_name_clean  + '</span>, ' + cont + '<br/>') 
 
 						})
+
+	                	console.log(url)
 
 	                },   
 					error : function (xhr, ajaxOptions, thrownError) {
@@ -93,7 +97,7 @@
 					var title = val // i
 
 					//get_source_target('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=' + val )  // i
-					get_source_target(  backlinks + val )
+					get_source_target( backlinks + val )
 					
 				})
 

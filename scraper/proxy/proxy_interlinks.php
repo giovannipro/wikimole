@@ -13,6 +13,6 @@
 
 ?>
 
-<div><?php echo file_get_contents($url);?>"></div>  <!-- url -->
+<div><?php echo file_get_contents($url);?> </div>  <!-- url -->
 <!-- You should probably use cURL. The concept is the same though -->
 	
