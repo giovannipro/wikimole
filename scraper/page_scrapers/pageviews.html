@@ -8,13 +8,14 @@
 		<script type="text/javascript">
 
 
-			var interlink = 'http://localhost:8888/wikimole/scraper/proxy/proxy_interlinks.php?url=africa'
+			var interlink = 'http://localhost:8888/wikimole/scraper/proxy/proxy_interlinks.php?url=nelson_mandela'
 
-			var whatlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=africa'
+			var whatlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=nelson_mandela'
 
+			/*
 			console.log(interlink)
 			console.log(whatlinks)
-
+			*/
 
 	        /* ------------------------------------
 			SOURCE
@@ -25,7 +26,6 @@
 	        var proxy = baseurl + 'proxy_pageviews.php' + "?url=" ;
 
 	        var wikilink = 'https://en.wikipedia.org/wiki/';
-
 
 	        /* ------------------------------------
 			ARTICLES LIST
@@ -57,11 +57,11 @@
 
 	       	var date = "201506"
 
-	        var url = "africa"
+	        var article = "nelson_mandela"
 
-	        var proxy_link = proxy + service + date + '/' + url
+	        var proxy_link = proxy + service + date + '/' + article
 
-	        function get_monthly_pageview(url) {
+	        function get_one_month_pageview(url) {
 
 	  		    $.ajax({			    	
 		           	type: 'GET',
@@ -72,25 +72,81 @@
 		        })
 				.done (function (wikiResponse) {
 
-					var parse_pagv = $.parseHTML(wikiResponse);
+					var parse_pagv = $.parseHTML(wikiResponse); //parseHTML
 
-					back = []
-					back = $(wikiResponse).get(0)// .innerHTML//
+					//var pag = []
+					var myJson = ""
 
-					console.log(back) 
+					pag = $(wikiResponse)[0].results  //.output //[0]   //.eq(1)//.get(0)//.toString //.lenght //.get(0).get[1]//  .innerHTML//
 
-					container = $('#pageviews')
+					//console.log(pag) 
 
-					container.append(back)
+			      	var container = $('#pageviews')
+
+			      	//container.append('[{"article": "' + article + '"},')
+
+					jQuery.each( pag, function( i, val ) {
+
+						var pag = []
+
+						var out =  val .replace('<html><head/><body>','').replace('</body></html>','')
+
+						var output = out + ',<br/>'
+
+						//var myJson = $.param( output, true );
+						//var myJson = pag.push(output);
+						//var myJson = JSON.stringify ( [ output ] );
 
 
-					jQuery.each( back, function( i, val ) {
+						console.log (out)
+						container.append(output) //append
 
-						var cont = val//.title 
+						//console.log (myJson)
+						
 
-						//console.log(cont) 
+						/*
+						var out = [];
 
-	            	/*
+						out.push( val );
+
+						var output = jQuery.parseJSON(out);
+						*/
+
+						//var output =  out + ',' //,<br/>'
+						//var output_clean = output.replace('[object Object],','')
+
+
+						//container.append(out)
+
+
+
+						//console.log (output)
+
+						//console.log (output_clean)
+						//container.append(output_clean)
+
+						//var json_str = JSON.stringify(output_clean);
+						//var json_str = $toJSON(output_clean);
+						//var json_str = jQuery.parseJSON(out);
+
+						//var json_str = $.JSON.decode(out)
+						
+
+						//console.log(json_str)
+						//container.append(json_str)
+
+					})
+
+					//container.append(']')
+
+				// $('.hide_1').hide()
+
+				})
+				.error (function (xhr, ajaxOptions, thrownError) {
+			        console.log(xhr.status);
+			        console.log(thrownError);
+
+			        /*
 						200 OK
 						301 Moved Permanently
 						400 Bad Request
@@ -101,217 +157,50 @@
 						503 Service Unavailable
 			        */
 
-			    	})
-
-				// $('.hide_1').hide()
-
-				})
-				.error (function (xhr, ajaxOptions, thrownError) {
-			        console.log(xhr.status);
-			        console.log(thrownError);
 				});
 
 			}
 
-			get_monthly_pageview(proxy_link)
+			function get_monthly_pageview(article) {
 
-			//get_monthly_pageview('http://localhost:8888/wikimole/scraper/proxy/proxy_interlinks.php?url=https://en.wikipedia.org/wiki/nelson_mandela')
-	        	/*
+				$('#pageviews').append('[{"article": "' + article + '"},')
 
-	            $.ajax({			    	
-		           	type: 'GET',
-		           	url: url,
-		           	processData: true,
-		           	//dataType: 'HTML',
-		           	crossOrigin: true,
-		        })
-	            .done (function (wikiResponse) {
+				var array = [];
 
-	            	console.log ( url )
+				for (i = 1; i < 10; i++) { 
 
-		        	var parse_pagv = $.parseHTML(wikiResponse);
+					//console.log(service + '20140' + i + '/' + article)
 
-		        	pagv = []
-					pagv = ($(parse_pagv)) //.find('div'))
+					get_one_month_pageview(service + '20140' + i + '/' + article)
+				}
 
-					console.log ( pagv )
+				for (i = 10; i < 13; i++) { 
 
-					jQuery.each( pagv.find('div'), function( i, val ) {
+					//console.log(service + '2014' + i + '/' + article)
 
-						console.log(val) 
+					get_one_month_pageview(service + '2014' + i + '/' + article)
+				}
 
-					})
-	            
+				//$('#pageviews').append('{"article": ' + article + '},')
 
+								
+				//container.append(']')
 
-	            /*
-	            $.ajax( url, {
-	                dataType: "HTML", //jsonp 
-	                //crossDomain: true,
-	                success: function(wikiResponse) {
+				/*
+				jQuery.each( articles, function( i, val ) {
 
-	                	//console.log( wikiResponse );
+					get_one_month_pageview(proxy_link)
 
-	                	var parse_pagv = $.parseHTML(wikiResponse); 
-
-	                	pagv = []
-						pagv = $(wikiResponse).find('div')
-
-						//console.log( pagv )
-						/*
-						jQuery.each( pagv, function( i, val ) {
-
-							var cont = val
-
-							console.log( cont )
-
-						})*/
-						
-						
-	                	/* var parse_back = $.parseHTML(wikiResponse); 
-
-	                	back = []
-						back = $(wikiResponse.query.backlinks)
-
-						var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
-						
-						//var art_name_clean = string_clean(art_name)
-						var art_name_clean = art_name.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
-
-						jQuery.each( back, function( i, val ) {
-
-							var cont = val.title 
-
-							$('#content1').append('<span class="red">' + art_name_clean  + '</span>, ' + cont + '<br/>') 
-
-						})*/
-
-	            		/* 
-	            		console.log('ok')
-
-	                }) 
-					.error (function (xhr, ajaxOptions, thrownError) {
-				        console.log(xhr.status)
-				        console.log(thrownError)
-
-					})*/
-
-				
-
-
-
-			//get_monthly_pageview('http://localhost:8888/wikimole/scraper/proxy/proxy_interlinks.php?url=https://en.wikipedia.org/wiki/nelson_mandela')
-
-
-
-
-
-			// http://stats.grok.se/json/en/201506/africa
-			// http://localhost:8888/wikimole/scraper/page_scraper/proxy_interlinks.php?url=http://stats.grok.se/json/en/201506/africa
-
-			/*
-			var url = "https://en.wikipedia.org/wiki/nelson_mandela"
-
-			//var url;
-
-			var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
-			*/
-
-			/*
- 
-			function scrape_interlinks(url) {
-			    
-			    $.ajax({			    	
-		           	type: 'GET',
-		           	url: proxy + wikilink + url,
-		           	processData: true,
-		           	//dataType: 'json',
-		           	//crossOrigin: true,
-		        })
-		        .done (function (get_func) {
-
-		        	var parsedata_func = $.parseHTML(get_func);
-
-		        	get = []
-					get = ($(parsedata_func).find('#content').find('a')) // find('#content') .references
-
-					container = $('#source_target')
-
-					//container.html( get_func ) 
-
-					jQuery.each( get, function( i, val ) {
-
-						//console.log( i + val)
-
-						var cont = val;
-						//var cont_clean = cont.replace('http://localhost:8888/wiki/','');	
-						//var cont_clean = cont.replace('http://localhost:8888/wiki/','');				
-
-						var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
-
-						if ( val == '') {
-							return ''
-						}
-						else {
-
-							container.append ('<span class="red">' + url_clean + '</span>, ' + cont + '</br>' ) // cont
-
-							console.log( url) // i + ' ' + val 
-						}
-
-					})
-
-					$('.hide_1').hide()
+					console.log(articles)
 
 				})
-				.error (function (xhr, ajaxOptions, thrownError) {
-			        console.log(xhr.status);
-			        console.log(thrownError);
-				});
+				*/
 
 			}
 
-	        // get backlinks list for one article
-			function get_source_target() {
-
-				$('#source_target').html('Source,Target<br/>')
-
-				jQuery.each( articles, function( i, val ) { //  list
-
-					//var link = val
-					scrape_interlinks( val )
-					//console.log( i )
-
-				})	
-
-				// console.log('Done');	
-	
-			}
-
-			/* ------------------------------------
-	        ID - LABEL 
-	        -------------------------------------
-
-	       	// get id and labels for all articles
-	        function get_id_label(url) {
-
-	        	$('#content2').append('Id,Label<br/>')
-
-	        	jQuery.each( articles, function( i, val ) {
-
-	        		val_clean = val.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
-
-	        		$('#content2').append('<span class="red">' + val_clean  + '</span>, ' + val_clean + '<br/>')
-
-	        		//console.log(val)
-	        		$('.hide_1').hide()
-
-	        	})
-	        }
-
-*/
-
-
+			//get_one_month_pageview(proxy_link)
+			get_monthly_pageview(article)
+			//get_monthly_pageview(whatlinks)
 
 		</script>
 
