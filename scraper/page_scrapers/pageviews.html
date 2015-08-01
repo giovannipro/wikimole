@@ -9,7 +9,6 @@
 
 
 			var interlink = 'http://localhost:8888/wikimole/scraper/proxy/proxy_interlinks.php?url=nelson_mandela'
-
 			var whatlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=nelson_mandela'
 
 			/*
@@ -31,7 +30,7 @@
 			ARTICLES LIST
 	        -------------------------------------*/
 
-			var art_list = '../articles/articles.json' // '../articles_test.json'
+			var art_list = '../articles/articles_test.json' // '../articles.json'
 
 			var list = [
 				'https://en.wikipedia.org/wiki/nelson_mandela',
@@ -57,7 +56,7 @@
 
 	       	var date = "201506"
 
-	        var article = "nelson_mandela"
+	        var article = "nelson_mandela" //
 
 	        var proxy_link = proxy + service + date + '/' + article
 
@@ -74,10 +73,9 @@
 
 					var parse_pagv = $.parseHTML(wikiResponse); //parseHTML
 
-					//var pag = []
-					var myJson = ""
+					//var pag = []; var myJson = ""
 
-					pag = $(wikiResponse)[0].results  //.output //[0]   //.eq(1)//.get(0)//.toString //.lenght //.get(0).get[1]//  .innerHTML//
+					pag = $(wikiResponse)[0].results // 
 
 					//console.log(pag) 
 
@@ -85,67 +83,122 @@
 
 			      	//container.append('[{"article": "' + article + '"},')
 
+			      	/*
+			      	function get_one_obj(article) {
+
+			      		var c = []
+			      		console.log(c)
+						console.log(o)
+
+			      	}
+					*/
+	
+
 					jQuery.each( pag, function( i, val ) {
 
-						var pag = []
+						var obj = {},  view = []
 
-						var out =  val .replace('<html><head/><body>','').replace('</body></html>','')
+						var out =  val.replace('<html><head/><body>','').replace('</body></html>','')
 
 						var output = out + ',<br/>'
 
-						//var myJson = $.param( output, true );
-						//var myJson = pag.push(output);
-						//var myJson = JSON.stringify ( [ output ] );
+						var myObj = $.parseJSON(out)
+
+						var day = myObj.daily_views
+
+						console.log(day)
+
+						//obj.push(view)
+
+						//console.log(obj)
 
 
-						console.log (out)
-						container.append(output) //append
+/*
 
-						//console.log (myJson)
-						
+var element = {}, cart = [];
+element.id = id;
+element.quantity = quantity;
+cart.push(element);
+*/
+						//console.log(day.length)
+						//x.push(myObj)
 
 						/*
-						var out = [];
-
-						out.push( val );
-
-						var output = jQuery.parseJSON(out);
+						$.map(day, function (n) {
+						    c.push(n);
+						    //o.push(n);
+						});
 						*/
 
-						//var output =  out + ',' //,<br/>'
-						//var output_clean = output.replace('[object Object],','')
+						for (var i = 0; i < 10; i++) { //daily_views.length
+						    $.merge(obj, day); // [i]
+ 
+						};
+
+						//var x = $.map( myObj.daily_views, function( k, v ) { //jQuery.each
+						/*var daily_views = jQuery.each( day, function(  k, v ) {
+
+								//var k = v
+								//var v = v
+
+								return y =  [k , v]
+
+								c.push(k)
+
+								//$.merge(items, responseData.data.items);
+
+								//var pv_parse = $.parseJSON(pv)
+								//new_x = [v , k]
+								//console.log (v , k)
+								//console.log(i)
+								//console.log(v)								
+								//$.map( page_views, function( i, val ) { 
+
+								//console.log(k)
 
 
-						//container.append(out)
-
-
-
-						//console.log (output)
-
-						//console.log (output_clean)
-						//container.append(output_clean)
-
-						//var json_str = JSON.stringify(output_clean);
-						//var json_str = $toJSON(output_clean);
-						//var json_str = jQuery.parseJSON(out);
-
-						//var json_str = $.JSON.decode(out)
 						
+						})*/
 
-						//console.log(json_str)
-						//container.append(json_str)
+						
+						
+						function collect() {
+							var ret = {};
+						  	var len = arguments.length;
+						  	for (var i=0; i<len; i++) {
+						    	for (var p in arguments[i]) {
+						        	ret[p] = arguments[i][p];
+						      	}
+						    }
+						    return ret;
+						}
+						
+						var collect = collect(day)
+
+						//console.log(collect)
+						//console.log(x)
+
+						/*
+						var new_object = $.extend({}, object1, object2);
+						$.extend(true, obj1, obj2);
+						*/
+
+						//console.log(myobj)
+						
+						//console.log ( myObj )
+						//console.log (out)
+
+						//container.append(output) 
+						//container.append(']')	
+						// $('.hide_1').hide()
 
 					})
 
-					//container.append(']')
-
-				// $('.hide_1').hide()
-
+	
 				})
 				.error (function (xhr, ajaxOptions, thrownError) {
 			        console.log(xhr.status);
 			        console.log(thrownError);
-
 			        /*
 						200 OK
 						301 Moved Permanently
@@ -156,51 +209,44 @@
 						500 Internal Server Error
 						503 Service Unavailable
 			        */
-
-				});
-
+				})
 			}
+
+			var array = [];
 
 			function get_monthly_pageview(article) {
 
-				$('#pageviews').append('[{"article": "' + article + '"},')
+				var head =   article //'[{"article": "' + article + '"},'
 
-				var array = [];
+				console.log(head)
+
+				$('#tit').append( $("<div/>").append(head));
 
 				for (i = 1; i < 10; i++) { 
 
-					//console.log(service + '20140' + i + '/' + article)
-
 					get_one_month_pageview(service + '20140' + i + '/' + article)
+
 				}
 
 				for (i = 10; i < 13; i++) { 
 
-					//console.log(service + '2014' + i + '/' + article)
-
 					get_one_month_pageview(service + '2014' + i + '/' + article)
 				}
-
-				//$('#pageviews').append('{"article": ' + article + '},')
-
-								
-				//container.append(']')
-
-				/*
-				jQuery.each( articles, function( i, val ) {
-
-					get_one_month_pageview(proxy_link)
-
-					console.log(articles)
-
-				})
-				*/
-
 			}
 
-			//get_one_month_pageview(proxy_link)
+			/*function get_full_obj (article){
+				
+				jQuery.each( pag, function( i, val ) {
+
+					
+
+				}
+			
+			}*/
+
+
+			//get_full_obj (article)
 			get_monthly_pageview(article)
-			//get_monthly_pageview(whatlinks)
 
 		</script>
 
@@ -214,6 +260,7 @@
 					<span>Get pageviews</span>
 					<!-- to be sure each edge is downloaded see Firebug > Network > Time column-->
 				</div><!-- get_all_source_target()-->
+				<div id="tit" class="hide_2"></div>
 				<div id="pageviews" class="hide_2"></div>
 				<div id="content1" class="hide_2" onclick="hide()"></div>
 			</div>
