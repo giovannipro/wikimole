@@ -92,7 +92,8 @@
 
 			      	}
 					*/
-	
+					
+					//function x() {}
 
 					jQuery.each( pag, function( i, val ) {
 
@@ -104,62 +105,14 @@
 
 						var myObj = $.parseJSON(out)
 
-						var day = myObj.daily_views
+						var day = myObj.daily_views //.month
 
-						console.log(day)
-
-						//obj.push(view)
-
-						//console.log(obj)
-
-
-/*
-
-var element = {}, cart = [];
-element.id = id;
-element.quantity = quantity;
-cart.push(element);
-*/
-						//console.log(day.length)
-						//x.push(myObj)
-
-						/*
-						$.map(day, function (n) {
-						    c.push(n);
-						    //o.push(n);
-						});
-						*/
+						//return day
 
 						for (var i = 0; i < 10; i++) { //daily_views.length
 						    $.merge(obj, day); // [i]
  
 						};
-
-						//var x = $.map( myObj.daily_views, function( k, v ) { //jQuery.each
-						/*var daily_views = jQuery.each( day, function(  k, v ) {
-
-								//var k = v
-								//var v = v
-
-								return y =  [k , v]
-
-								c.push(k)
-
-								//$.merge(items, responseData.data.items);
-
-								//var pv_parse = $.parseJSON(pv)
-								//new_x = [v , k]
-								//console.log (v , k)
-								//console.log(i)
-								//console.log(v)								
-								//$.map( page_views, function( i, val ) { 
-
-								//console.log(k)
-
-
-						
-						})*/
-
 						
 						
 						function collect() {
@@ -175,22 +128,8 @@ cart.push(element);
 						
 						var collect = collect(day)
 
-						//console.log(collect)
-						//console.log(x)
-
-						/*
-						var new_object = $.extend({}, object1, object2);
-						$.extend(true, obj1, obj2);
-						*/
-
-						//console.log(myobj)
-						
-						//console.log ( myObj )
-						//console.log (out)
-
-						//container.append(output) 
-						//container.append(']')	
-						// $('.hide_1').hide()
+						console.log(pag.length)
+						console.log(collect)
 
 					})
 
