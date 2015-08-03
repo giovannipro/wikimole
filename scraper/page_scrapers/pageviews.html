@@ -7,14 +7,10 @@
 		<link rel="stylesheet" href="../lib/css/scraper.css" rel="stylesheet">
 		<script type="text/javascript">
 
+			// var interlink = 'http://localhost:8888/wikimole/scraper/proxy/proxy_interlinks.php?url=nelson_mandela';
+			// var whatlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=nelson_mandela';
 
-			var interlink = 'http://localhost:8888/wikimole/scraper/proxy/proxy_interlinks.php?url=nelson_mandela'
-			var whatlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=nelson_mandela'
-
-			/*
-			console.log(interlink)
-			console.log(whatlinks)
-			*/
+			var resultsss = {};
 
 	        /* ------------------------------------
 			SOURCE
@@ -24,7 +20,11 @@
 
 	        var proxy = baseurl + 'proxy_pageviews.php' + "?url=" ;
 
-	        var wikilink = 'https://en.wikipedia.org/wiki/';
+	        //var wikilink = 'https://en.wikipedia.org/wiki/';
+
+	        var service = "http://stats.grok.se/json/en/"; // '201506/nelson_mandela
+
+	        //var proxy_service = proxy + service;
 
 	        /* ------------------------------------
 			ARTICLES LIST
@@ -52,87 +52,40 @@
 	        GET ONE MONTH
 	        -------------------------------------*/
 
-	        var service = "http://stats.grok.se/json/en/"
-
 	       	var date = "201506"
+	        var article_a = "nelson_mandela"
+	        //var proxy_link = proxy_service + date + '/' + article
 
-	        var article = "nelson_mandela" //
+	        //function get_one_month_pageview(url) {
+	        function get_one_month_pageview(yearString, monthString, article) {
 
-	        var proxy_link = proxy + service + date + '/' + article
+	        	//var url = proxy + service + yearString + '/' + monthString + '/' + article;
+	        	var url1 = proxy + service + yearString + monthString +  '/' + article
+	        	var url2 = service + yearString + monthString +  '/' + article
 
-	        function get_one_month_pageview(url) {
+	        	console.log(url2)
 
 	  		    $.ajax({			    	
 		           	type: 'GET',
-		           	url: url,
+		           	url: url2,
 		           	processData: true,
-		           	//dataType: 'json',
-		           	//crossOrigin: true,
+		           	dataType: 'json',
+		           	crossOrigin: true,
 		        })
 				.done (function (wikiResponse) {
 
-					var parse_pagv = $.parseHTML(wikiResponse); //parseHTML
+					//var parse_pagv = $.parseHTML(wikiResponse); 
 
-					//var pag = []; var myJson = ""
+					pag = $(wikiResponse)[0].results
+					console.log(wikiResponse);
 
-					pag = $(wikiResponse)[0].results // 
+			      	var container = $('#pageviews');
 
-					//console.log(pag) 
+			      	//resultsss[dateString] = wikiResponse.daily_views;
+			      	resultsss = wikiResponse.daily_views;
 
-			      	var container = $('#pageviews')
-
-			      	//container.append('[{"article": "' + article + '"},')
-
-			      	/*
-			      	function get_one_obj(article) {
-
-			      		var c = []
-			      		console.log(c)
-						console.log(o)
-
-			      	}
-					*/
-					
-					//function x() {}
-
-					jQuery.each( pag, function( i, val ) {
-
-						var obj = {},  view = []
-
-						var out =  val.replace('<html><head/><body>','').replace('</body></html>','')
-
-						var output = out + ',<br/>'
-
-						var myObj = $.parseJSON(out)
-
-						var day = myObj.daily_views //.month
-
-						//return day
-
-						for (var i = 0; i < 10; i++) { //daily_views.length
-						    $.merge(obj, day); // [i]
- 
-						};
-						
-						
-						function collect() {
-							var ret = {};
-						  	var len = arguments.length;
-						  	for (var i=0; i<len; i++) {
-						    	for (var p in arguments[i]) {
-						        	ret[p] = arguments[i][p];
-						      	}
-						    }
-						    return ret;
-						}
-						
-						var collect = collect(day)
-
-						console.log(pag.length)
-						console.log(collect)
-
-					})
-
+					console.log(resultsss);
+					console.log(day);
 	
 				})
 				.error (function (xhr, ajaxOptions, thrownError) {
@@ -151,41 +104,37 @@
 				})
 			}
 
-			var array = [];
+			//var array = [];
 
 			function get_monthly_pageview(article) {
 
-				var head =   article //'[{"article": "' + article + '"},'
+				//var head =   article //'[{"article": "' + article + '"},'
+				console.log(article)
 
-				console.log(head)
-
-				$('#tit').append( $("<div/>").append(head));
+				$('#tit').append( $("<div/>").append(article));
 
 				for (i = 1; i < 10; i++) { 
 
-					get_one_month_pageview(service + '20140' + i + '/' + article)
+					//var dateString = '20140' + i;
+					var yearString = '2014' ;
+					var monthString = '0'+i ;
+
+					get_one_month_pageview(yearString, monthString, article);
+					//get_one_month_pageview(service, dateString, article);
+					//get_one_month_pageview(service + '20140' + i + '/' + article)
 
 				}
 
 				for (i = 10; i < 13; i++) { 
 
-					get_one_month_pageview(service + '2014' + i + '/' + article)
+					var yearString = '2014' ;
+					var monthString =  i ;
+
+					get_one_month_pageview(yearString, monthString, article);
 				}
 			}
 
-			/*function get_full_obj (article){
-				
-				jQuery.each( pag, function( i, val ) {
-
-					
-
-				}
-			
-			}*/
-
-
-			//get_full_obj (article)
-			get_monthly_pageview(article)
+			get_monthly_pageview(article_a)
 
 		</script>
 
@@ -195,7 +144,7 @@
 				<h2>From 1.12.2013 to 31.07.2015</h2>
 			</div>
 			<div class="box_100">
-				<div class="label one hide_1" onclick="" style="">
+				<div class="label one hide_1" onclick="get_monthly_pageview()" style="">
 					<span>Get pageviews</span>
 					<!-- to be sure each edge is downloaded see Firebug > Network > Time column-->
 				</div><!-- get_all_source_target()-->
