@@ -80,6 +80,6 @@ main{
 .clear{
 	clear: both;
 }
-.red{
+.red, .problem{
 	color: red;
 }

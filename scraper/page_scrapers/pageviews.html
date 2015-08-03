@@ -52,41 +52,50 @@
 	        GET ONE MONTH
 	        -------------------------------------*/
 
-	       	var date = "201506"
-	        var article_a = "nelson_mandela"
+	       	//var date = "201506"
 	        //var proxy_link = proxy_service + date + '/' + article
+	        var article_a = "nelson_mandela"
+
+	        var container = $('#pageviews');
 
 	        //function get_one_month_pageview(url) {
-	        function get_one_month_pageview(yearString, monthString, article) {
+	        function get_one_month_pageview(yearString, monthString, article) { //dateString
 
-	        	//var url = proxy + service + yearString + '/' + monthString + '/' + article;
 	        	var url1 = proxy + service + yearString + monthString +  '/' + article
 	        	var url2 = service + yearString + monthString +  '/' + article
 
-	        	console.log(url2)
+	        	//var url3 = proxy + service + dateString +  '/' + article
+
+	        	var url_test = 'http://localhost:8888/wikimole/scraper/lib/test.json'
+
+	        	console.log(url1)
 
 	  		    $.ajax({			    	
 		           	type: 'GET',
-		           	url: url2,
+		           	url: url1,
 		           	processData: true,
-		           	dataType: 'json',
+		           	dataType: 'json', // html
 		           	crossOrigin: true,
 		        })
 				.done (function (wikiResponse) {
 
-					//var parse_pagv = $.parseHTML(wikiResponse); 
-
-					pag = $(wikiResponse)[0].results
-					console.log(wikiResponse);
-
-			      	var container = $('#pageviews');
-
-			      	//resultsss[dateString] = wikiResponse.daily_views;
-			      	resultsss = wikiResponse.daily_views;
+					resultsss[yearString]  = wikiResponse.daily_views; // //dateString
+					//resultsss = wikiResponse.daily_views;
 
 					console.log(resultsss);
-					console.log(day);
-	
+
+					//console.log(wikiResponse);
+
+					//var parse_pagv = $.parseJSON(wikiResponse); 
+					//var parse_pagv = JSON.parse(wikiResponse)
+					
+					//var out =  parse_pagv.replace('<html><head/><body>','').replace('</body></html>','')
+					//pag = $(wikiResponse)[0].results
+					//console.log(out);
+
+			      	//resultsss[dateString] = wikiResponse.daily_views;
+			      	
+					
 				})
 				.error (function (xhr, ajaxOptions, thrownError) {
 			        console.log(xhr.status);
@@ -108,33 +117,30 @@
 
 			function get_monthly_pageview(article) {
 
-				//var head =   article //'[{"article": "' + article + '"},'
 				console.log(article)
 
-				$('#tit').append( $("<div/>").append(article));
-
-				for (i = 1; i < 10; i++) { 
+				for (i = 1; i < 2; i++) { // (i = 1; i < 10; i++)
 
 					//var dateString = '20140' + i;
 					var yearString = '2014' ;
 					var monthString = '0'+i ;
 
-					get_one_month_pageview(yearString, monthString, article);
+					get_one_month_pageview(yearString, monthString, article);  // dateString
 					//get_one_month_pageview(service, dateString, article);
 					//get_one_month_pageview(service + '20140' + i + '/' + article)
-
 				}
 
-				for (i = 10; i < 13; i++) { 
+				for (i = 10; i < 11; i++) { // (i = 10; i < 13; i++) 
 
+					//var dateString = '2014' + i;
 					var yearString = '2014' ;
 					var monthString =  i ;
 
-					get_one_month_pageview(yearString, monthString, article);
+					get_one_month_pageview(yearString, monthString, article); // dateString
 				}
 			}
 
-			get_monthly_pageview(article_a)
+			//get_monthly_pageview(article_a)
 
 		</script>
 
@@ -144,7 +150,7 @@
 				<h2>From 1.12.2013 to 31.07.2015</h2>
 			</div>
 			<div class="box_100">
-				<div class="label one hide_1" onclick="get_monthly_pageview()" style="">
+				<div class="label one hide_1" onclick="get_monthly_pageview(article_a)" style="">
 					<span>Get pageviews</span>
 					<!-- to be sure each edge is downloaded see Firebug > Network > Time column-->
 				</div><!-- get_all_source_target()-->

@@ -1,7 +1,7 @@
 <html>
 	<body>
 		<!-- Script works if loaded by MAMP -->
-		<title>Interlinks</title>
+		<title>Internal factors</title>
 		<script src="../lib/js/jquery.min.js"></script>
 		<script src="../lib/js/jquery.xdomainajax.js"></script>
 		<link rel="stylesheet" href="../lib/css/scraper.css" rel="stylesheet">
@@ -12,9 +12,7 @@
 	        -------------------------------------*/
 
 	        var baseurl = 'http://localhost:8888/wikimole/scraper/proxy/';
-
-	        var proxy = baseurl + 'proxy_interlinks.php' + "?url=" ;
-
+	        var proxy = baseurl + 'proxy_internal-factors.php' + "?url=" ;
 	        var wikilink = 'https://en.wikipedia.org/wiki/';
 
 
@@ -22,13 +20,14 @@
 			ARTICLES LIST
 	        -------------------------------------*/
 
-			var art_list = '../articles/articles_test.json' // '../article.json'
+	        var art = 'nelson_mandela'
+
+			var art_list = '../articles/articles_test.json' // '../articles.json'
 
 			var list = [
 				'https://en.wikipedia.org/wiki/nelson_mandela',
 				'https://en.wikipedia.org/wiki/mahatma_gandhi'
 			]	
-
 
 			// get the list of articles
 			$.getJSON(art_list, function(mydata) {
@@ -42,12 +41,14 @@
 			})
 
 	        /* ------------------------------------
-	        SOURCE - TARGET 
+	        REFERENCES
 	        -------------------------------------*/
 
-			
+	        container = $('#source_target')
+
+	        console.log(proxy + wikilink + art) 
  
-			function scrape_interlinks(url) {
+			function get_references(url) {
 			    
 			    $.ajax({			    	
 		           	type: 'GET',
@@ -56,58 +57,49 @@
 		           	//dataType: 'json',
 		           	//crossOrigin: true,
 		        })
-		        .done (function (get_func) {
+		        .done (function (get_ref) {
 
-		        	var parsedata_func = $.parseHTML(get_func);
+		        	var parsedata_func = $.parseHTML(get_ref);
 
 		        	get = []
-					get = ($(parsedata_func).find('#mw-content-text').find('a')) //.find('#content')
+					get = ($(parsedata_func).find('#content').find('a'))  //($(parsedata_func).find('#content').find('.references'))    // .find('li') .find('references')
 
-					//console.log(get)
+					console.log(get) 
 
+		        	jQuery.each( get, function( i, val ) {
+
+		        		txt = $(this).prop('outerHTML')
+
+		        		//var x = val
+
+		        		console.log(txt) 
+
+		        	})
+
+					
+					
+					/*
 					jQuery.each( get, function( i, val ) {
 
-						//var cont = val;	
-						var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+						console.log(get) 
 
-						/*
-						var str1 = "ABCDEFGHIJKLMNOP";
-						var str2 = "DEFG";
-						if(str1.indexOf(str2) != -1){
-						    alert(str2 + " found");
-						}
-						//console.log(val)
-						
+						//var cont = val;			
 
-						var categories = [ "specialword", "word1", "word2" ]
-						var found = $.inArray('specialword', categories) > -1;
-						console.log(found)
-						*/
+						//var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
-						//console.log ($(this));
-						//console.log (val);
-
-						txt = $(this).prop('outerHTML')
-						console.log(txt)
-
-						var findme_1 = new RegExp ('^');
-						var findme_2 = 'food';
-
-						container = $('#source_target')
-						//console.log(val)
-						
-						if ($(this).contains(findme_2)) { // (txt.match(findme_2))// ($(this).text().match(findme))   ( val.indexOf(findme) >- 1 );   str.match(/ain/g); test(); match() 
-							return 'xxxxx'
-						}
-						if ( val == ' ' )  {
+						if ( val == '') {
 							return ''
 						}
-						else {  //( val == findme ) 
-							container.append ('<span class="red">' + url_clean + '</span>, ' + val + '</br>' ) // cont
-							//console.log(url) // i + ' ' + val 
+						else {
+
+							//container.append ('<span class="red">' + url_clean + '</span>, ' + cont + '</br>' ) // cont
+
+							console.log(get) // i + ' ' + val 
 						}
 
 					})
+
+*/
 
 					$('.hide_1').hide()
 
@@ -140,6 +132,7 @@
 	        ID - LABEL 
 	        -------------------------------------*/
 
+	        /*
 	       	// get id and labels for all articles
 	        function get_id_label(url) {
 
@@ -156,16 +149,21 @@
 
 	        	})
 	        }
+	        */
+
+
+		get_references(art)
+
 
 		</script>
 
 		<main>
 			<div id="title" class="hide_1">
-				<h1>Interlinks <span class="problem">-> remove external links</span><h1>
-				<h2>Links to other Wikipedia pages</h2>
+				<h1>Internal factors<h1>
+				<!--<h2>Links to other Wikipedia pages</h2>-->
 			</div>
 			<div class="box_50">
-				<div class="label one hide_1" onclick="get_source_target()">
+				<div class="label one hide_1" onclick="get_references()">
 					<span>Get source-target (edges)</span>
 					<!-- to be sure each edge is downloaded see Firebug > Network > Time column-->
 				</div><!-- get_all_source_target()-->
