@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Data views</title>
+		<script src="lib/js/jquery-1.11.1.min.js"></script>
+		<script src="lib/js/mustache.min.js"></script>  
+		<!--<script src="../library/d3.min.js"></script>-->   
+	</head>
+
+	<body onload="articles()">
+
+		<main>
+			<h1>Articles</h1>
+			<div id="sampleArea"></div>
+			
+			<script>
+
+
+			</script>
+		
+		</main>
+
+		<script>
+
+
+			function articles() {
+				$.get('template/template.tpl', function(tpl) {
+				    $.getJSON('data/data.json', function(data) {
+				        var html = Mustache.render(tpl, data);
+				        $('#sampleArea').html(html);
+				    });
+				});
+			}
+
+			/*
+			Page rank checker
+			http://smallseotools.com/google-pagerank-checker/
+
+			Page rank checker in PHP
+			https://github.com/eyecatchup/SEOstats
+			
+			Page rank API
+			http://www.rankapi.net/docs
+			*/
+
+
+
+
+
+
+
+			/*
+			// AJAX - nested objects 
+			function static1() {  
+				$.getJSON('data3.json', function(data) {
+					var template = "<p>{{name.first}} {{name.last}}</p>skills: <ul>{{#skills}}<li>{{.}}</li>{{/skills}}";
+					var html = Mustache.to_html(template, data);
+					$('#sampleArea').html(html);
+				});
+			}
+
+			// Ajax - nested objects - conditions
+			function static2() {
+				$.getJSON('data4.json', function(data) {
+					var template = $('#people_template').html();
+			    	var info = Mustache.to_html(template, data);
+			    	$('#sampleArea2').html(info);
+				});	
+			}	
+			
+			// Basic sample
+			function sample1() {
+				var person = {
+					"name": "Chris",
+					"surname": "Anderson",
+					"blogURL": "http://coenraets.org"
+				};
+				var template = "<h1>{{name}} {{surname}}</h1> Blog: {{blogURL}} ";
+				var html = Mustache.to_html(template, person);
+				$('#sampleArea').html(html);
+			}
+
+			// Basic Sample using Ajax Data
+			function sample2() {
+				$.getJSON('data.json', function(data) {
+					var template = "<h1>{{firstName}} {{lastName}}</h1>Blog: {{blogURL}}";
+					var html = Mustache.to_html(template, data);
+					$('#sampleArea').html(html);
+				});
+			}
+			
+			// Externalized Template
+			function sample3() {
+				$.getJSON('data2.json', function(data) {
+					var template = $('#personTpl').html();
+					var html = Mustache.to_html(template, data);
+					$('#sampleArea').html(html);
+				});
+			}
+	
+			//  Enumerable Section
+			function sample4() {
+				var data = {name: "John Smith", skills: ['JavaScript', 'PHP', 'Java']};
+				var tpl = "{{name}} skills:<ul>{{#skills}}<li>{{.}}</li>{{/skills}}</ul>";
+				var html = Mustache.to_html(tpl, data);
+				$('#sampleArea').html(html);
+			}
+			
+			// Enumerable Section with Objects
+			function sample5() {
+				var data = {
+					employees: [
+					{	firstName: "Christophe",
+						lastName: "Coenraets"},
+					{	firstName: "John",
+						lastName: "Smith"}
+					]};
+				var template = "Employees:<ul>{{#employees}}<li>{{firstName}} {{lastName}}</li>{{/employees}}</ul>";
+				var html = Mustache.to_html(template, data);
+				$('#sampleArea').html(html);
+			}
+
+			// Nested Object
+			function sample6() {
+				var person = {
+					firstName: "Christophe",
+					lastName: "Coenraets",
+					blogURL: "http://coenraets.org",
+					manager : {
+						firstName: "John",
+						lastName: "Smith"
+					}
+				};
+				var template = "<h1>{{firstName}} {{lastName}}</h1><p>{{blogURL}}</p>Manager: {{manager.firstName}} {{manager.lastName}}";
+				var html = Mustache.to_html(template, person);
+				$('#sampleArea').html(html);
+			}
+			
+			// Dereferencing
+			function sample7() {
+				var person = {
+					firstName: "John",
+					lastName: "Smith",
+					blogURL: "http://johnsmith.com",
+					manager : {
+						firstName: "Lisa",
+						lastName: "Jones"
+					}
+				};
+				var tpl = "<h1>{{firstName}} {{lastName}}</h1><p>{{blogURL}}</p>{{#manager}}Manager: {{firstName}} {{lastName}}{{/manager}}";
+				var html = Mustache.to_html(tpl, person);
+				$('#sampleArea').html(html);
+			}
+
+			// Function
+			function sample8() {
+				var product = {
+					name: "FooBar",
+					price: 100,
+					salesTax: 0.05,
+					totalPrice: function() {
+						return this.price + this.price * this.salesTax;
+					}
+				};
+				var template = "<p>Product Name: {{name}}</p>Price: {{totalPrice}}";
+				var html = Mustache.to_html(template, product);
+				$('#sampleArea').html(html);
+			}
+			
+			// Condition
+			function sample9() {
+				var data = {
+					employees: [
+					{	firstName: "Christophe",
+						lastName: "Coenraets",
+						fullTime: true,
+						phone: "617-123-4567"
+					},
+					{	firstName: "John",
+						lastName: "Smith",
+						fullTime: false,
+						phone: "617-987-6543"
+					},
+					{	firstName: "Lisa",
+						lastName: "Jones",
+						fullTime: true,
+						phone: "617-111-2323"
+					},
+					]};
+				var tpl = "Employees:<ul>{{#employees}}<li>{{firstName}} {{lastName}}{{#fullTime}} {{phone}}{{/fullTime}}</li>{{/employees}}</ul>";
+				var html = Mustache.to_html(tpl, data);
+				$('#sampleArea').html(html);
+			}
+			
+			//Partials
+			function sample10() {
+				var data = {
+					firstName: "Christophe",
+					lastName: "Coenraets",
+					address: "1 Main street",
+					city: "Boston",
+					state: "MA",
+					zip: "02106"
+				};
+
+				var template = "<h1>{{firstName}} {{lastName}}</h1>{{>address}}";
+				var partials = {address: "<p>{{address}}</p>{{city}}, {{state}} {{zip}}"};
+				var html = Mustache.to_html(template, data, partials);
+				$('#sampleArea').html(html);
+			}
+			
+			// Partials in Enumerable Section
+			function sample11() {
+				var data = { depts: [
+					{	name: "Engineering",
+						employees: [
+							{firstName: "Christophe", lastName: "Coenraets"},
+							{firstName: "John", lastName: "Smith"}]
+					},
+					{	name: "Sales",
+						employees: [
+							{firstName: "Paula", lastName: "Taylor"},
+							{firstName: "Lisa", lastName: "Jones"}]
+					}]
+				};
+
+				var tpl = "{{#depts}}<h1>{{name}}</h1><ul>{{#employees}}{{>employee}}{{/employees}}</ul>{{/depts}}";
+				var partials = {employee: "<li>{{firstName}} {{lastName}}</li>"};
+				var html = Mustache.to_html(tpl, data, partials);
+				$('#sampleArea').html(html);
+			}
+			
+
+			*/
+		</script>   
+
+		
+		<script id="personTpl" type="text/template">
+			/*
+			<h1>{{firstName}} {{lastName}}</h1>
+			<p>Blog URL: <a href="{{blogURL}}">{{blogURL}}</a></p>
+			*/
+		</script>
+
+		<style type="text/css">
+			main{
+				width: 90%;
+				margin: 0 auto;
+			}
+		</style>
+
+
+		<!--var tpl = "{{#depts}}<h1>{{name}}</h1><ul>{{#employees}}{{>employee}}{{/employees}}</ul>{{/depts}}";
+		var partials = {employee: "<li>{{firstName}} {{lastName}} {{#avatar}} <img src='{{avatar}}' width='70px' height='70px'> {{/avatar}}{{^avatar}}<img src='http://48jwh53mcwj217jvx11dcwjj.wpengine.netdna-cdn.com/wp-contentuploads/2013/07/avatar-2.jpg' width='70px {{!-- comment--}}' height='70px'>{{/avatar}} </li>"};*/
+		//$('#sampleArea3').html(html);
+		//var html = Mustache.to_html(tpl, data, partials);
+		//var template = $('people-template').html()-->
+
+	</body>
+</html>

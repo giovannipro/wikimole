@@ -21,6 +21,16 @@ main{
 	float:left;
 	height: 80%;
 }
+.box_25{
+	width: 25%;
+	float:left;
+	height: 80%;
+}
+.box_20{
+	width: 20%;
+	float:left;
+	height: 80%;
+}
 .label{
 	height: 100%;
 }

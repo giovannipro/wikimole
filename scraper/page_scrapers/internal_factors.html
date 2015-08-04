@@ -20,21 +20,19 @@
 			ARTICLES LIST
 	        -------------------------------------*/
 
-	        var art = 'mahatma_gandhi' //nelson_mandela' // 'Childbirth_in_Benin'
+	        var art = 'oliver_tambo' //mahatma_gandhi'
 
 			var art_list = '../articles/articles.json' // '../articles_test.json'
 
 			var list = [
-				'nelson_mandela', //https://en.wikipedia.org/wiki/
-				'mahatma_gandhi' //https://en.wikipedia.org/wiki/
+				'mahatma_gandhi',  //nelson_mandela',
+				'Isitwalandwe_Medal', //Lucky_(Waiting_for_Godot)'
+				'Oliver_Tambo'
 			]	
 
 			$.getJSON(art_list, function(mydata) {
 
-				//var parse_art = $.parseHTML(mydata);
-
 				articles = $(mydata)
-				//console.log( articles )
 			
 			})
 
@@ -43,8 +41,6 @@
 	        /* ------------------------------------
 	        REFERENCES
 	        -------------------------------------*/
-
-	        //var resultsss = {};
  
 			function get_references(url) {
 			    
@@ -66,6 +62,8 @@
 
 					var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
+					container.append('article, references</br>')	
+
 		        	jQuery.each( get, function( i, val ) {
 
 		        		txt = $(this).prop('outerHTML')
@@ -75,9 +73,6 @@
 		        		sum++;
 
 		        	})
-
-		        	//resultsss[url] = sum
-		        	//console.log(resultsss)
 
 		        	console.log(url_clean + ':' + sum)
 		        	container.append(url_clean + ', ' + sum + '</br>')	        	
@@ -94,14 +89,9 @@
 
 			function get_all_references() {
 
-				//$('#source_target').html('Source,Target<br/>')
 				jQuery.each( articles, function( i, val ) {  //articles;   // art_list; list 
 
 					get_references(val)
-					//console.log(resultsss)
-					//console.log(val)
-					//console.log(art_list)
-
 				})	
 
 			}
@@ -132,23 +122,15 @@
 
 					container = $('#source_target')
 
+					container.append('article, seeAlso</br>')	
+
 		        	jQuery.each( get, function( i, val ) {
 
 		        		txt = $(this).prop('outerHTML')
 
 		        		sum++;
 
-		        		/*if (val == 0) {
-		        			return '0'
-		        		}*/
-
-		        		//console.log(val)
-		        		//console.log(url)
-
 		        	})
-
-		        	//resultsss[url] = sum
-		        	//console.log(resultsss)
 
 		        	console.log(url_clean + ':' + sum)
 		        	container.append(url_clean + ', ' + sum + '</br>')	        	
@@ -165,18 +147,198 @@
 
 			function get_all_seeAlso() {
 
-				//$('#source_target').html('Source,Target<br/>')
-				jQuery.each( articles, function( i, val ) {  //list; articles;  art_list; list 
+				jQuery.each( articles, function( i, val ) {  //list; articles;
 
 					get_seeAlso(val)
-					//console.log(resultsss)
-					//console.log(val)
-					//console.log(art_list)
 
 				})	
 
 			}
 
+			/* ------------------------------------
+	        NOTES
+	        -------------------------------------*/
+
+			function get_notes(url) {
+			    
+			    $.ajax({			    	
+		           	type: 'GET',
+		           	url: proxy + wikilink + url,
+		           	processData: true,
+		           	//dataType: 'json',
+		           	//crossOrigin: true,
+		        })
+		        .done (function (get_ref) {
+
+		        	var parsedata_func = $.parseHTML(get_ref);
+
+		        	get = []
+					get = ($(parsedata_func).find('#mw-content-text').find('#Notes').closest( "h2" ).next().find('li'))  //.find('ul')) //.find('.div-col').find('li').find('a'))   //; .find('.references').find('li'))
+
+					sum = 0;
+
+					var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+					container = $('#source_target')
+
+					container.append('article, notes</br>')	
+
+		        	jQuery.each( get, function( i, val ) {
+
+		        		txt = $(this).prop('outerHTML')
+
+		        		sum++;
+
+		        	})
+
+		        	//console.log(url_clean + ':' + sum)
+		        	container.append(url_clean + ', ' + sum + '</br>')	        	
+
+					$('.hide_1').hide()
+
+				})
+				.error (function (xhr, ajaxOptions, thrownError) {
+			        console.log(xhr.status);
+			        console.log(thrownError);
+				});
+
+			}
+
+			function get_all_notes() {
+
+				jQuery.each( articles, function( i, val ) {  // art; list; articles; 
+
+					get_notes(val)
+
+				})	
+
+			}
+
+			/* ------------------------------------
+	        NOTES
+	        -------------------------------------*/
+
+			function get_issues(url) {
+			    
+			    $.ajax({			    	
+		           	type: 'GET',
+		           	url: proxy + wikilink + url,
+		           	processData: true,
+		           	//dataType: 'json',
+		           	//crossOrigin: true,
+		        })
+		        .done (function (get_ref) {
+
+		        	var parsedata_func = $.parseHTML(get_ref);
+
+		        	get = []
+					get = ($(parsedata_func)/*.find('#mw-content-text')*/.find('.ambox').find('.mbox-text-span')) // mbox-text-span; .find('.metadata').find('tbody')) // ambox-content;  .find('#Notes').closest( "h2" ).next().find('li')) 
+
+					sum = 0;
+
+					var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+		        	jQuery.each( get, function( i, val ) {
+
+		        		txt = $(this).prop('outerHTML')
+
+		        		//console.log(txt)
+
+		        		sum++;
+
+		        	})
+
+		        	console.log(url_clean + ':' + sum)
+		        	container.append(url_clean + ', ' + sum + '</br>')	        	
+
+					$('.hide_1').hide()
+
+				})
+				.error (function (xhr, ajaxOptions, thrownError) {
+			        console.log(xhr.status);
+			        console.log(thrownError);
+				});
+
+			}
+
+			function get_all_issues() {
+
+				container = $('#source_target')
+				container.append('article, issues</br>')	
+
+				jQuery.each( articles, function( i, val ) {  //  list; articles;
+
+					get_issues(val)
+
+
+
+				})	
+
+			}
+
+			/* ------------------------------------
+	        IMAGES
+	        -------------------------------------*/
+
+			function get_images(url) {
+			    
+			    $.ajax({			    	
+		           	type: 'GET',
+		           	url: proxy + wikilink + url,
+		           	processData: true,
+		           	//dataType: 'json',
+		           	//crossOrigin: true,
+		        })
+		        .done (function (get_ref) {
+
+		        	var parsedata_func = $.parseHTML(get_ref);
+
+		        	get = []
+					get = ($(parsedata_func).find('#mw-content-text').find('.thumb'))  //.find('.image') 
+
+					sum = 0;
+
+					var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+		        	jQuery.each( get, function( i, val ) {
+
+		        		txt = $(this).prop('outerHTML')
+
+		        		//console.log(val)
+
+		        		sum++;
+
+		        		//container.append(url + '<br/>' + txt + '<br/><br/>')	
+
+		        	})
+
+		        	console.log(url_clean + ':' + sum)
+		        	container.append(url_clean + ', ' + sum + '</br>')	
+
+					$('.hide_1').hide()
+
+				})
+				.error (function (xhr, ajaxOptions, thrownError) {
+			        console.log(xhr.status);
+			        console.log(thrownError);
+				});
+
+			}
+
+			function get_all_images() {
+
+				container = $('#source_target')
+				container.append('article, images</br>')	
+
+				jQuery.each( articles, function( i, val ) {  //  list; articles;
+
+					get_images(val)
+
+
+
+				})	
+
+			}
 
 
 		</script>
@@ -186,7 +348,7 @@
 				<h1>Internal factors<h1>
 				<!--<h2>Links to other Wikipedia pages</h2>-->
 			</div>
-			<div class="box_50">
+			<div class="box_20">
 				<div class="label one hide_1" onclick="get_all_references()">
 					<span>Get references</span>
 					<!-- to be sure each edge is downloaded see Firebug > Network > Time column-->
@@ -195,9 +357,33 @@
 				<div id="content1" class="hide_2" onclick="hide()"></div>
 			</div>
 
-			<div class="box_50">
+			<div class="box_20">
 				<div class="label two hide_1" onclick="get_all_seeAlso()">
 					<span>Get see also<span>
+				</div>
+				<div id="id_label" class="hide_2"></div>				
+				<div id="content2" class="hide_2" onclick="hide()"></div>
+			</div>
+
+			<div class="box_20">
+				<div class="label three hide_1" onclick="get_all_notes()">
+					<span>Get notes<span>
+				</div>
+				<div id="id_label" class="hide_2"></div>				
+				<div id="content2" class="hide_2" onclick="hide()"></div>
+			</div>
+
+			<div class="box_20">
+				<div class="label one hide_1" onclick="get_all_issues()">
+					<span>Get issues<span>
+				</div>
+				<div id="id_label" class="hide_2"></div>				
+				<div id="content2" class="hide_2" onclick="hide()"></div>
+			</div>
+
+			<div class="box_20">
+				<div class="label two hide_1" onclick="get_all_images()">
+					<span>Get images<span>
 				</div>
 				<div id="id_label" class="hide_2"></div>				
 				<div id="content2" class="hide_2" onclick="hide()"></div>

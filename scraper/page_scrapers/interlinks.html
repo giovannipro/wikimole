@@ -70,23 +70,6 @@
 						//var cont = val;	
 						var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
-						/*
-						var str1 = "ABCDEFGHIJKLMNOP";
-						var str2 = "DEFG";
-						if(str1.indexOf(str2) != -1){
-						    alert(str2 + " found");
-						}
-						//console.log(val)
-						
-
-						var categories = [ "specialword", "word1", "word2" ]
-						var found = $.inArray('specialword', categories) > -1;
-						console.log(found)
-						*/
-
-						//console.log ($(this));
-						//console.log (val);
-
 						txt = $(this).prop('outerHTML')
 						console.log(txt)
 
@@ -94,7 +77,6 @@
 						var findme_2 = 'food';
 
 						container = $('#source_target')
-						//console.log(val)
 						
 						/*if ($(this).contains(findme_2)) {  
 							return 'xxxxx'

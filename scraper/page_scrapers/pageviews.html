@@ -10,7 +10,7 @@
 			// var interlink = 'http://localhost:8888/wikimole/scraper/proxy/proxy_interlinks.php?url=nelson_mandela';
 			// var whatlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=nelson_mandela';
 
-			var resultsss = {};
+			var yearPV = {};
 
 	        /* ------------------------------------
 			SOURCE
@@ -52,18 +52,15 @@
 	        GET ONE MONTH
 	        -------------------------------------*/
 
-	       	//var date = "201506"
-	        //var proxy_link = proxy_service + date + '/' + article
 	        var article_a = "nelson_mandela"
 
 	        var container = $('#pageviews');
 
 	        //function get_one_month_pageview(url) {
-	        function get_one_month_pageview(yearString, monthString, article) { //dateString
+	        function get_one_month_pageview(yearString, monthString, article, doPrint) { //dateString
 
 	        	var url1 = proxy + service + yearString + monthString +  '/' + article
 	        	var url2 = service + yearString + monthString +  '/' + article
-
 	        	//var url3 = proxy + service + dateString +  '/' + article
 
 	        	var url_test = 'http://localhost:8888/wikimole/scraper/lib/test.json'
@@ -78,24 +75,26 @@
 		           	crossOrigin: true,
 		        })
 				.done (function (wikiResponse) {
+					if (!yearPV.hasOwnProperty(yearString)) {
+						yearPV[yearString] = {};
+					}
 
-					resultsss[yearString]  = wikiResponse.daily_views; // //dateString
-					//resultsss = wikiResponse.daily_views;
+					yearPV[yearString][monthString]  = wikiResponse.daily_views; // dateString
 
-					console.log(resultsss);
+					if (doPrint)
+						console.log(yearPV);
 
-					//console.log(wikiResponse);
+					container = $('#pageviews')
 
-					//var parse_pagv = $.parseJSON(wikiResponse); 
-					//var parse_pagv = JSON.parse(wikiResponse)
-					
-					//var out =  parse_pagv.replace('<html><head/><body>','').replace('</body></html>','')
-					//pag = $(wikiResponse)[0].results
-					//console.log(out);
+					jQuery.each( yearPV, function( x ) {
+						jQuery.each( x, function( x, y ) {
+							container.append ( x + y )
+						})
+						container.append ( x )						
+					})
 
-			      	//resultsss[dateString] = wikiResponse.daily_views;
+					//if (undefined) console.log('ciao')
 			      	
-					
 				})
 				.error (function (xhr, ajaxOptions, thrownError) {
 			        console.log(xhr.status);
@@ -119,24 +118,24 @@
 
 				console.log(article)
 
-				for (i = 1; i < 2; i++) { // (i = 1; i < 10; i++)
+				$('.hide_1').hide()
+
+				for (i = 1; i < 10; i++) { // (i = 1; i < 2; i++)
 
 					//var dateString = '20140' + i;
 					var yearString = '2014' ;
 					var monthString = '0'+i ;
 
 					get_one_month_pageview(yearString, monthString, article);  // dateString
-					//get_one_month_pageview(service, dateString, article);
-					//get_one_month_pageview(service + '20140' + i + '/' + article)
 				}
 
-				for (i = 10; i < 11; i++) { // (i = 10; i < 13; i++) 
+				for (i = 10; i < 13; i++) { // (i = 10; i < 11; i++) 
 
 					//var dateString = '2014' + i;
 					var yearString = '2014' ;
-					var monthString =  i ;
+					var monthString =  i + '';
 
-					get_one_month_pageview(yearString, monthString, article); // dateString
+					get_one_month_pageview(yearString, monthString, article, monthString === '12'); // dateString
 				}
 			}
 
