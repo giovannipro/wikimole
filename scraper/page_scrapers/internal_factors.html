@@ -20,7 +20,7 @@
 			ARTICLES LIST
 	        -------------------------------------*/
 
-	        var art = 'nelson_mandela'
+	        var art = 'nelson_mandela' // 'Childbirth_in_Benin'
 
 			var art_list = '../articles/articles_test.json' // '../articles.json'
 
@@ -29,13 +29,11 @@
 				'https://en.wikipedia.org/wiki/mahatma_gandhi'
 			]	
 
-			// get the list of articles
 			$.getJSON(art_list, function(mydata) {
 
 				var parse_art = $.parseHTML(mydata);
 
 				articles = $(mydata)
-
 				// console.log( articles )
 			
 			})
@@ -44,7 +42,7 @@
 	        REFERENCES
 	        -------------------------------------*/
 
-	        container = $('#source_target')
+	        
 
 	        console.log(proxy + wikilink + art) 
  
@@ -62,21 +60,34 @@
 		        	var parsedata_func = $.parseHTML(get_ref);
 
 		        	get = []
-					get = ($(parsedata_func).find('#content').find('a'))  //($(parsedata_func).find('#content').find('.references'))    // .find('li') .find('references')
+					get = ($(parsedata_func).find('#mw-content-text').find('.references').find('li'))
+						//.find('.reflist').find('li').find('.citation'))
+						//.find('.external'))
+					//.find('li').find('.reference')) //.a  //($(parsedata_func).find('#content').find('.references'))    // .find('li') .find('references')
 
-					console.log(get) 
+					//console.log(get) 
+
+					arr = []
+
+					sum = 0;
 
 		        	jQuery.each( get, function( i, val ) {
 
 		        		txt = $(this).prop('outerHTML')
 
-		        		//var x = val
+		        		container = $('#source_target')
+		        		/*container.append('<span>' + i + '-'  + txt +  '</span><br/>' )*/
 
-		        		console.log(txt) 
+		        		sum++;
+
+		        		
 
 		        	})
 
-					
+		        	console.log(url + '-' + sum)
+		        	container.append(url + ', ' + sum)
+
+					//console.log(arr)
 					
 					/*
 					jQuery.each( get, function( i, val ) {
