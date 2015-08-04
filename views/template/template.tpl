@@ -26,7 +26,7 @@
 		-->
 
 		{{#graph}} <!-- if graph exists -->
-			<img src="graphs/{{graph}}" class="graph"></img>
+			<img src="../graphs/{{graph}}" class="graph"></img>
 		{{/graph}}
 		{{^graph}}<!-- if not -->
 			

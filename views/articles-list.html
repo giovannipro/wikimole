@@ -1,17 +1,18 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Data views</title>
+		<title>Articles</title>
 		<script src="lib/js/jquery-1.11.1.min.js"></script>
 		<script src="lib/js/mustache.min.js"></script>  
 		<!--<script src="../library/d3.min.js"></script>-->   
 	</head>
 
-	<body onload="articles()">
+	<body onload="articles()"> <!-- sample1()  --> 
 
 		<main>
 			<h1>Articles</h1>
 			<div id="sampleArea"></div>
+			<div id="sampleArea1"></div>
 			
 			<script>
 
@@ -24,8 +25,8 @@
 
 
 			function articles() {
-				$.get('template/template.tpl', function(tpl) {
-				    $.getJSON('data/data.json', function(data) {
+				$.get('template/template_articles-list.tpl', function(tpl) {
+				    $.getJSON('data/articles_features.json', function(data) {
 				        var html = Mustache.render(tpl, data);
 				        $('#sampleArea').html(html);
 				    });
@@ -67,6 +68,8 @@
 			    	$('#sampleArea2').html(info);
 				});	
 			}	
+
+			*/
 			
 			// Basic sample
 			function sample1() {
@@ -77,9 +80,10 @@
 				};
 				var template = "<h1>{{name}} {{surname}}</h1> Blog: {{blogURL}} ";
 				var html = Mustache.to_html(template, person);
-				$('#sampleArea').html(html);
+				$('#sampleArea1').html(html);
 			}
 
+			/*
 			// Basic Sample using Ajax Data
 			function sample2() {
 				$.getJSON('data.json', function(data) {
