@@ -20,31 +20,31 @@
 			ARTICLES LIST
 	        -------------------------------------*/
 
-	        var art = 'nelson_mandela' // 'Childbirth_in_Benin'
+	        var art = 'mahatma_gandhi' //nelson_mandela' // 'Childbirth_in_Benin'
 
-			var art_list = '../articles/articles_test.json' // '../articles.json'
+			var art_list = '../articles/articles.json' // '../articles_test.json'
 
 			var list = [
-				'https://en.wikipedia.org/wiki/nelson_mandela',
-				'https://en.wikipedia.org/wiki/mahatma_gandhi'
+				'nelson_mandela', //https://en.wikipedia.org/wiki/
+				'mahatma_gandhi' //https://en.wikipedia.org/wiki/
 			]	
 
 			$.getJSON(art_list, function(mydata) {
 
-				var parse_art = $.parseHTML(mydata);
+				//var parse_art = $.parseHTML(mydata);
 
 				articles = $(mydata)
-				// console.log( articles )
+				//console.log( articles )
 			
 			})
+
+			console.log(proxy + wikilink + art) 
 
 	        /* ------------------------------------
 	        REFERENCES
 	        -------------------------------------*/
 
-	        
-
-	        console.log(proxy + wikilink + art) 
+	        //var resultsss = {};
  
 			function get_references(url) {
 			    
@@ -61,56 +61,26 @@
 
 		        	get = []
 					get = ($(parsedata_func).find('#mw-content-text').find('.references').find('li'))
-						//.find('.reflist').find('li').find('.citation'))
-						//.find('.external'))
-					//.find('li').find('.reference')) //.a  //($(parsedata_func).find('#content').find('.references'))    // .find('li') .find('references')
-
-					//console.log(get) 
-
-					arr = []
 
 					sum = 0;
+
+					var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
 		        	jQuery.each( get, function( i, val ) {
 
 		        		txt = $(this).prop('outerHTML')
 
 		        		container = $('#source_target')
-		        		/*container.append('<span>' + i + '-'  + txt +  '</span><br/>' )*/
 
 		        		sum++;
 
-		        		
-
 		        	})
 
-		        	console.log(url + '-' + sum)
-		        	container.append(url + ', ' + sum)
+		        	//resultsss[url] = sum
+		        	//console.log(resultsss)
 
-					//console.log(arr)
-					
-					/*
-					jQuery.each( get, function( i, val ) {
-
-						console.log(get) 
-
-						//var cont = val;			
-
-						//var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
-
-						if ( val == '') {
-							return ''
-						}
-						else {
-
-							//container.append ('<span class="red">' + url_clean + '</span>, ' + cont + '</br>' ) // cont
-
-							console.log(get) // i + ' ' + val 
-						}
-
-					})
-
-*/
+		        	console.log(url_clean + ':' + sum)
+		        	container.append(url_clean + ', ' + sum + '</br>')	        	
 
 					$('.hide_1').hide()
 
@@ -122,48 +92,91 @@
 
 			}
 
-	        // get backlinks list for one article
-			function get_source_target() {
+			function get_all_references() {
 
-				$('#source_target').html('Source,Target<br/>')
+				//$('#source_target').html('Source,Target<br/>')
+				jQuery.each( articles, function( i, val ) {  //articles;   // art_list; list 
 
-				jQuery.each( articles, function( i, val ) { //  list
-
-					//var link = val
-					scrape_interlinks( val )
-					//console.log( i )
+					get_references(val)
+					//console.log(resultsss)
+					//console.log(val)
+					//console.log(art_list)
 
 				})	
 
-				// console.log('Done');	
-	
 			}
 
 			/* ------------------------------------
-	        ID - LABEL 
+	        SEE ALSO
 	        -------------------------------------*/
 
-	        /*
-	       	// get id and labels for all articles
-	        function get_id_label(url) {
+			function get_seeAlso(url) {
+			    
+			    $.ajax({			    	
+		           	type: 'GET',
+		           	url: proxy + wikilink + url,
+		           	processData: true,
+		           	//dataType: 'json',
+		           	//crossOrigin: true,
+		        })
+		        .done (function (get_ref) {
 
-	        	$('#content2').append('Id,Label<br/>')
+		        	var parsedata_func = $.parseHTML(get_ref);
 
-	        	jQuery.each( articles, function( i, val ) {
+		        	get = []
+					get = ($(parsedata_func).find('#mw-content-text').find('#See_also').closest( "h2" ).next().find('li'))  //.find('ul')) //.find('.div-col').find('li').find('a'))   //; .find('.references').find('li'))
 
-	        		val_clean = val.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+					sum = 0;
 
-	        		$('#content2').append('<span class="red">' + val_clean  + '</span>, ' + val_clean + '<br/>')
+					var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
-	        		//console.log(val)
-	        		$('.hide_1').hide()
+					container = $('#source_target')
 
-	        	})
-	        }
-	        */
+		        	jQuery.each( get, function( i, val ) {
 
+		        		txt = $(this).prop('outerHTML')
 
-		get_references(art)
+		        		sum++;
+
+		        		/*if (val == 0) {
+		        			return '0'
+		        		}*/
+
+		        		//console.log(val)
+		        		//console.log(url)
+
+		        	})
+
+		        	//resultsss[url] = sum
+		        	//console.log(resultsss)
+
+		        	console.log(url_clean + ':' + sum)
+		        	container.append(url_clean + ', ' + sum + '</br>')	        	
+
+					$('.hide_1').hide()
+
+				})
+				.error (function (xhr, ajaxOptions, thrownError) {
+			        console.log(xhr.status);
+			        console.log(thrownError);
+				});
+
+			}
+
+			function get_all_seeAlso() {
+
+				//$('#source_target').html('Source,Target<br/>')
+				jQuery.each( articles, function( i, val ) {  //list; articles;  art_list; list 
+
+					get_seeAlso(val)
+					//console.log(resultsss)
+					//console.log(val)
+					//console.log(art_list)
+
+				})	
+
+			}
+
 
 
 		</script>
@@ -174,8 +187,8 @@
 				<!--<h2>Links to other Wikipedia pages</h2>-->
 			</div>
 			<div class="box_50">
-				<div class="label one hide_1" onclick="get_references()">
-					<span>Get source-target (edges)</span>
+				<div class="label one hide_1" onclick="get_all_references()">
+					<span>Get references</span>
 					<!-- to be sure each edge is downloaded see Firebug > Network > Time column-->
 				</div><!-- get_all_source_target()-->
 				<div id="source_target" class="hide_2"></div>
@@ -183,8 +196,8 @@
 			</div>
 
 			<div class="box_50">
-				<div class="label two hide_1" onclick="get_id_label()">
-					<span>Get id-label (nodes)<span>
+				<div class="label two hide_1" onclick="get_all_seeAlso()">
+					<span>Get see also<span>
 				</div>
 				<div id="id_label" class="hide_2"></div>				
 				<div id="content2" class="hide_2" onclick="hide()"></div>
