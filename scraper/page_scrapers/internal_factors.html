@@ -27,7 +27,8 @@
 			var list = [
 				'mahatma_gandhi',  //nelson_mandela',
 				'Isitwalandwe_Medal', //Lucky_(Waiting_for_Godot)'
-				'Oliver_Tambo'
+				'Oliver_Tambo',
+				'Children%27s_Act,_2005'
 			]	
 
 			$.getJSON(art_list, function(mydata) {
@@ -294,25 +295,30 @@
 		        	var parsedata_func = $.parseHTML(get_ref);
 
 		        	get = []
-					get = ($(parsedata_func).find('#mw-content-text').find('.thumb'))  //.find('.image') 
+					get1 = ($(parsedata_func).find('#mw-content-text').find('.thumb'))  //.find('.image') 
+					get2 = ($(parsedata_func).find('.image')) 
 
 					sum = 0;
 
 					var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
-		        	jQuery.each( get, function( i, val ) {
+		        	jQuery.each( get1, function( i, val ) {
 
 		        		txt = $(this).prop('outerHTML')
-
-		        		//console.log(val)
-
 		        		sum++;
-
-		        		//container.append(url + '<br/>' + txt + '<br/><br/>')	
 
 		        	})
 
-		        	console.log(url_clean + ':' + sum)
+		        	jQuery.each( get2, function( i, val ) {
+
+		        		txt = $(this).prop('outerHTML')
+		        		sum++;
+
+		        	})
+
+		        	console.log(sum)
+
+		        	//console.log(url_clean + ':' + sum)
 		        	container.append(url_clean + ', ' + sum + '</br>')	
 
 					$('.hide_1').hide()
