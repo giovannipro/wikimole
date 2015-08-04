@@ -65,7 +65,7 @@
 
 	        	var url_test = 'http://localhost:8888/wikimole/scraper/lib/test.json'
 
-	        	console.log(url1)
+	        	//console.log(url1)
 
 	  		    $.ajax({			    	
 		           	type: 'GET',
@@ -81,20 +81,30 @@
 
 					yearPV[yearString][monthString]  = wikiResponse.daily_views; // dateString
 
-					if (doPrint)
-						console.log(yearPV);
-
 					container = $('#pageviews')
 
-					jQuery.each( yearPV, function( x ) {
-						jQuery.each( x, function( x, y ) {
-							container.append ( x + y )
-						})
-						container.append ( x )						
-					})
+					if (doPrint)
+						console.log(yearPV['2014']);
 
-					//if (undefined) console.log('ciao')
-			      	
+					/*$.each(yearPV, function (i, item) {
+						'<p>' + item '</p>'
+					})*/
+
+				    jQuery.each( yearPV, function( i, field ) {
+				    	//container.append(  i+ '-' + field );
+				    	//container.append(yearPV);
+
+				    	jQuery.each( field, function( a, b ) {
+				    		//container.append( v + '-' + k);
+				    		//console.log( a + b ) //( k + '-' + v)
+
+				    		jQuery.each( b, function( k, v ) {
+				    			container.append( k + ': ' + v  + '<br/>') // + '-' + v);
+
+				    		})
+				    	})
+				    });
+
 				})
 				.error (function (xhr, ajaxOptions, thrownError) {
 			        console.log(xhr.status);
@@ -110,7 +120,82 @@
 						503 Service Unavailable
 			        */
 				})
-			}
+			};
+
+
+
+
+					/*
+					jQuery.each( yearPV, function( x ) { //
+
+						//container.append ( x )	 //yearPV[yearString][monthString]  .toString()
+
+						//console.log(x)
+
+						jQuery.each( x , function( k ) {
+
+							container.append ( k ) // k.toString() + 
+							console.log( k )
+
+						})
+					*/
+
+
+
+/*
+$.each(product.items, function (i, item) {
+    details += '<li class="name"><a href="#">' + item.name + '</a></li>'; 
+});
+*/
+
+					
+
+					//console.log(yearPV)
+
+					//container.append (yearPV['2014'].toString())	
+
+					//console.log(yearPV['2014'])
+
+					//container.append (yearPV[i,val])	
+					//console.log(yearPV)
+
+					
+					//jQuery.each( yearPV, function( x ) {
+
+						//container.append ( x )
+						//container.append (x.toString())		
+
+						
+						/*
+						jQuery.each( x, function( k , v ) {
+							//container.append (y.toString())
+						})
+						*/
+
+						/*
+						var blkstr = $.map(yearPV, function(val,index) {
+					    var str = index + ":" + val;
+					    	return str;
+
+					    container = $('#pageviews')
+					    container.append (str)
+						
+						}) //.join(", ");
+						*/
+
+						
+
+/*
+var blkstr = $.map(value, function(val,index) {
+     var str = index + ":" + val;
+     return str;
+}).join(", ");					
+*/
+
+					//})
+
+					//if (undefined) console.log('ciao')
+			      
 
 			//var array = [];
 

@@ -25,8 +25,8 @@
 			var art_list = '../articles/articles_test.json' // '../article.json'
 
 			var list = [
-				'https://en.wikipedia.org/wiki/nelson_mandela',
-				'https://en.wikipedia.org/wiki/mahatma_gandhi'
+				'https://en.wikipedia.org/wiki/Lake_Van',  // nelson_mandela
+				'https://en.wikipedia.org/wiki/Isitwalandwe_Medal'  // mahatma_gandhi
 			]	
 
 
@@ -71,15 +71,21 @@
 						var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
 						txt = $(this).prop('outerHTML')
-						console.log(txt)
+						//console.log(txt)
+						console.log(val)
 
-						var findme_1 = new RegExp ('^');
-						var findme_2 = 'food';
+						var findme_1 = new RegExp ('wiki');
+						var findme_2 = 'A summary of the Properties of Acids for the beginning chemistry student';
 
 						container = $('#source_target')
+
+						//console.log(eval(val))
 						
 						/*if ($(this).contains(findme_2)) {  
 							return 'xxxxx'
+						}
+						if ( val == findme_1 )  {
+							return 'xxx'
 						}*/
 						if ( val == ' ' )  {
 							return ''
