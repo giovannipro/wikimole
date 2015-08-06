@@ -22,7 +22,7 @@
 			ARTICLES LIST
 	        -------------------------------------*/
 
-			var art_list = '../articles/articles_test.json' // '../article.json'
+			var art_list = '../articles/articles.json' // '../article_test.json'
 
 			var list = [
 				'https://en.wikipedia.org/wiki/Lake_Van',  // nelson_mandela
@@ -71,28 +71,18 @@
 						var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
 						txt = $(this).prop('outerHTML')
-						//console.log(txt)
-						console.log(val)
 
-						var findme_1 = new RegExp ('wiki');
-						var findme_2 = 'A summary of the Properties of Acids for the beginning chemistry student';
+						//console.log(val)
 
-						container = $('#source_target')
+						var findme = window.location.origin + '/wiki/'; //https://en.wikipedia.org/wiki/
 
-						//console.log(eval(val))
-						
-						/*if ($(this).contains(findme_2)) {  
-							return 'xxxxx'
-						}
-						if ( val == findme_1 )  {
-							return 'xxx'
-						}*/
-						if ( val == ' ' )  {
-							return ''
-						}
-						else {  //( val == findme ) 
-							container.append ('<span class="red">' + url_clean + '</span>, ' + val + '</br>' ) // cont
-							//console.log(url) // i + ' ' + val 
+						container = $('#source_target');
+						var href = $(val).prop('href');
+
+						var href_clean = href.replace('http://localhost:8888/wiki/','').replace(/_/g, ' ').replace(/,/g, ';');
+
+						if (typeof href === 'string' && href.indexOf(findme) === 0) {
+							container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' ); //val
 						}
 
 					})
@@ -137,7 +127,7 @@
 
 	        		val_clean = val.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
-	        		$('#content2').append('<span class="red">' + val_clean  + '</span>, ' + val_clean + '<br/>')
+	        		$('#content2').append('<span class="red">' + val_clean  + '</span>,' + val_clean + '<br/>')
 
 	        		//console.log(val)
 	        		$('.hide_1').hide()
@@ -149,7 +139,7 @@
 
 		<main>
 			<div id="title" class="hide_1">
-				<h1>Interlinks <span class="problem">-> remove external links</span><h1>
+				<h1>Interlinks<h1><!-- <span class="problem">-> remove external links</span> -->
 				<h2>Links to other Wikipedia pages</h2>
 			</div>
 			<div class="box_50">

@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 ?>
 
 	<html>
-	<body>
+	<body onload="hide_1()">
 		<!-- Script works if loaded by MAMP -->
 		<title>Page rank</title>
 		<script src="../lib/js/jquery.min.js"></script>
@@ -14,10 +14,13 @@ ini_set('display_errors', 1);
 
 		<script type="text/javascript">
 
-			function hide() {
+			function hide_1() {
+				$('#data').hide()
+			}
 
-				$('form').hide()
-
+			function hide_2() {
+				$('.hide_2').hide()
+				$('#data').show()
 			}
 			
 		</script>
@@ -29,13 +32,17 @@ ini_set('display_errors', 1);
 				// remove special characters (%, #)
 				$url = array (
 				    "Convenience_food",
+				    "!Kung_people",
 				    "Acid",
 				    "Africa_Day",
+				    "African_music",
 				    "Agriculture_in_South_Africa",
 				    "AIDS_orphan",
 				    "Alcohol_abuse",
 				    "Alcohol_dependence",
 				    "Alcoholism",
+				    "Aloe_vera",
+				    "Aloe",
 				    "Animal_husbandry",
 				    "Animal_husbandry_in_South_Africa",
 				    "Animal-powered_transport",
@@ -45,6 +52,7 @@ ini_set('display_errors', 1);
 				    "Base_(chemistry)",
 				    "Bias",
 				    "Bicycle",
+				    "Bill_of_Rights_%28South_Africa%29",
 				    "Biome",
 				    "Bird_nest",
 				    "Boiling",
@@ -54,10 +62,13 @@ ini_set('display_errors', 1);
 				    "Cell_(biology)",
 				    "Ceramic",
 				    "Child_abuse",
+				    "Children%27s_Act_%28South_Africa%29",
+				    "Children%27s_Day",
 				    "Circuit_diagram",
 				    "Clay",
 				    "Climate",
 				    "Coal_in_South_Africa",
+				    "Coal",
 				    "Control_variable",
 				    "Cooking",
 				    "Cradle_of_Humankind",
@@ -67,12 +78,15 @@ ini_set('display_errors', 1);
 				    "Discrimination",
 				    "Domestic_violence",
 				    "Domestic_violence_in_South_Africa",
+				    "Drakensberg",
+				    "Duration_%28music%29",
 				    "Economy_of_South_Africa",
 				    "Ecosystem",
 				    "Electrical_conductor",
 				    "Electrical_network",
 				    "Electricity_generation",
 				    "Energy_in_South_Africa",
+				    "Fair_trade",
 				    "Farm",
 				    "Fiber",
 				    "Fire_safety",
@@ -84,15 +98,19 @@ ini_set('display_errors', 1);
 				    "Food_security",
 				    "Food_vs._fuel",
 				    "Frances_Baard",
+				    "Free_State_%28province%29",
+				    "Freedom_Day_%28South_Africa%29",
 				    "Gana_and_Gwi_people",
 				    "Gangster",
 				    "Gauteng",
+				    "Gender_stereotypes",
 				    "Glass",
 				    "Griqua_people",
 				    "Hand_washing",
 				    "Health",
 				    "Health_care_in_South_Africa",
 				    "Herero_and_Namaqua_Genocide",
+				    "Heritage_Day_%28South_Africa%29",
 				    "History_of_South_Africa",
 				    "History_of_writing",
 				    "HIV",
@@ -103,6 +121,7 @@ ini_set('display_errors', 1);
 				    "Human_Rights_Day",
 				    "Human_swimming",
 				    "Hydraulics",
+				    "Insulator_%28electricity%29",
 				    "Khoikhoi",
 				    "Khoikhoi_mythology",
 				    "Later_Stone_Age",
@@ -122,7 +141,9 @@ ini_set('display_errors', 1);
 				    "Music_of_South_Africa",
 				    "National_anthem_of_South_Africa",
 				    "National_symbols_of_South_Africa",
+				    "National_Women%27s_Day",
 				    "Nelson_Mandela",
+				    "Nest",
 				    "Noise_pollution",
 				    "Oliver_Tambo",
 				    "Outer_space",
@@ -130,6 +151,7 @@ ini_set('display_errors', 1);
 				    "Paper",
 				    "People_Against_Gangsterism_and_Drugs",
 				    "Petrol-paraffin_engine",
+				    "Pitch_%28music%29",
 				    "Pneumatics",
 				    "Politics_of_South_Africa",
 				    "Pollution",
@@ -148,7 +170,6 @@ ini_set('display_errors', 1);
 				    "San_rock_art",
 				    "Sand",
 				    "Scale_(map)",
-				    "Scientific_classification_(disambiguation)",
 				    "Scientific_method",
 				    "Settling",
 				    "Sexism",
@@ -161,13 +182,14 @@ ini_set('display_errors', 1);
 				    "Stereotype",
 				    "Steve_Biko",
 				    "Structure_(disambiguation)",
+				    "Tap_%28valve%29",
 				    "Textile",
 				    "Trade",
-				    "Transport",
 				    "Transport",
 				    "Transport_in_South_Africa",
 				    "Two_foot_gauge_railways_in_South_Africa",
 				    "Vibration",
+				    "Volume_%28disambiguation%29",
 				    "Walter_Sisulu",
 				    "Water_filter",
 				    "Water_pollution",
@@ -183,6 +205,7 @@ ini_set('display_errors', 1);
 				    "Wood",
 				    "Wool",
 				    "Youth_culture"
+
 				);
 
 				require("../lib/php/PRclass.php");
@@ -196,23 +219,18 @@ ini_set('display_errors', 1);
 		?>
 
 		<main>
-			<div id="title" class="hide_1">
+			<div id="title" class="hide_2">
 				<h1>Google page rank<h1>
 				<h2></h2>
 			</div>
-			<div class="box_50">
-				<div id="one" class="label one hide_1"><!-- pr() / get_source_target() -->
+			<div class="box_100 hide_2">
+				<div id="one" class="label one"><!-- pr() / get_source_target() -->
 					<span>
-						.
-						<form><button name="get" onclick="hide()">Page Rank</button></form>
+						<form><button name="get" onclick="hide_2()">Page Rank</button></form>
 					</span>
 				</div>
 			</div>
-			<div class="box_50" id="data">
-				<div class="label three" onclick="">
-					<span><?php if (isset($_REQUEST['get'])) pr(); ?><span>
-				</div>
-			</div>
+			<span id="data"><?php if (isset($_REQUEST['get'])) pr(); ?><span>
 			<div class="clear"></div>
 		</main>
 

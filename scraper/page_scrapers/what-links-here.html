@@ -72,12 +72,13 @@
 						jQuery.each( back, function( i, val ) {
 
 							var cont = val.title 
+							var cont_clean = cont.replace(/,/g, ';')
 
-							$('#content1').append('<span class="red">' + art_name_clean  + '</span>, ' + cont + '<br/>') 
+							$('#content1').append('<span class="red">' + art_name_clean  + '</span>,' + cont_clean + '<br/>') 
 
 						})
 
-	                	console.log(url)
+	                	//console.log(url)
 
 	                },   
 					error : function (xhr, ajaxOptions, thrownError) {
@@ -119,7 +120,7 @@
 
 	        		val_clean = val.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
-	        		$('#content2').append('<span class="red">' + val_clean  + '</span>, ' + val_clean + '<br/>')
+	        		$('#content2').append('<span class="red">' + val_clean  + '</span>,' + val_clean + '<br/>')
 
 	        		//console.log(val)
 	        		$('.hide_1').hide()
