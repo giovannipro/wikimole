@@ -52,19 +52,17 @@
 	        GET ONE MONTH
 	        -------------------------------------*/
 
-	        var article_a = "nelson_mandela"
-
-	        var container = $('#pageviews');
+	        var article_a = "Bullying" //nelson_mandela; Bullying; Gender
 
 	        //function get_one_month_pageview(url) {
 	        function get_one_month_pageview(yearString, monthString, article, doPrint) { //dateString
+				
+				var container = $('#pageviews');
 
 	        	var url1 = proxy + service + yearString + monthString +  '/' + article
 	        	var url2 = service + yearString + monthString +  '/' + article
-	        	//var url3 = proxy + service + dateString +  '/' + article
 
 	        	var url_test = 'http://localhost:8888/wikimole/scraper/lib/test.json'
-
 	        	//console.log(url1)
 
 	  		    $.ajax({			    	
@@ -79,31 +77,71 @@
 						yearPV[yearString] = {};
 					}
 
-					yearPV[yearString][monthString]  = wikiResponse.daily_views; // dateString
+					yearPV[yearString][monthString]  = wikiResponse.daily_views;
 
-					container = $('#pageviews')
 
 					if (doPrint)
-						console.log(yearPV['2014']);
+						console.log(yearPV[yearString]);
 
-					/*$.each(yearPV, function (i, item) {
-						'<p>' + item '</p>'
-					})*/
+					//console.log(yearPV[yearString][monthString])
 
-				    jQuery.each( yearPV, function( i, field ) {
-				    	//container.append(  i+ '-' + field );
-				    	//container.append(yearPV);
+					jQuery.each( yearPV[yearString][monthString], function( i, v ) { // 
 
-				    	jQuery.each( field, function( a, b ) {
-				    		//container.append( v + '-' + k);
-				    		//console.log( a + b ) //( k + '-' + v)
+				    	//container.append( '"' + i  + '":' + v + ',');
+
+				    })
+
+					//get_csv(yearString,monthString)
+
+				    /*jQuery.each( yearPV[yearString][monthString], function( i, v ) {
+
+				    	container.append( i  + ',' + v + '<br/>');
+
+				    })*/
+
+				    //container.append(']')
+
+				    /*jQuery.each( yearPV[yearString][monthString], function( i, v ) {
+
+				    	container.append( i  + ',' + v + '<br/>');
+
+				    })
+				    
+				    
+					jQuery.each( yearPV[yearString][monthString], function( i, v ) {
+
+				    	container.append( i  + ':' + v + ',');
+
+				    })
+					*/
+
+				    /*
+				    jQuery.each( yearPV[yearString][monthString], function( i, v ) {
+
+				    	container.append( i  + ',');
+				    	//container.append( v  + ',');
+
+				    	/*jQuery.each( field, function( a, b ) {
+
+				    		container.append( a + ':' + b  + ',');
 
 				    		jQuery.each( b, function( k, v ) {
-				    			container.append( k + ': ' + v  + '<br/>') // + '-' + v);
+				    			container.append( k + ': ' + v  + ','); //<br/>
 
 				    		})
 				    	})
 				    });
+
+				    container.append('<br/>');
+
+				    jQuery.each( yearPV[yearString][monthString], function( i, v ) {
+
+				    	container.append( v  + ',');
+
+				    });
+
+				    container.append('<br/>');
+				    */
 
 				})
 				.error (function (xhr, ajaxOptions, thrownError) {
@@ -122,109 +160,68 @@
 				})
 			};
 
-
-
-
-					/*
-					jQuery.each( yearPV, function( x ) { //
-
-						//container.append ( x )	 //yearPV[yearString][monthString]  .toString()
-
-						//console.log(x)
-
-						jQuery.each( x , function( k ) {
-
-							container.append ( k ) // k.toString() + 
-							console.log( k )
-
-						})
-					*/
-
-
-
-/*
-$.each(product.items, function (i, item) {
-    details += '<li class="name"><a href="#">' + item.name + '</a></li>'; 
-});
-*/
-
-					
-
-					//console.log(yearPV)
-
-					//container.append (yearPV['2014'].toString())	
-
-					//console.log(yearPV['2014'])
-
-					//container.append (yearPV[i,val])	
-					//console.log(yearPV)
-
-					
-					//jQuery.each( yearPV, function( x ) {
-
-						//container.append ( x )
-						//container.append (x.toString())		
-
-						
-						/*
-						jQuery.each( x, function( k , v ) {
-							//container.append (y.toString())
-						})
-						*/
-
-						/*
-						var blkstr = $.map(yearPV, function(val,index) {
-					    var str = index + ":" + val;
-					    	return str;
-
-					    container = $('#pageviews')
-					    container.append (str)
-						
-						}) //.join(", ");
-						*/
-
-						
-
-/*
-var blkstr = $.map(value, function(val,index) {
-     var str = index + ":" + val;
-     return str;
-}).join(", ");					
-*/
-
-					//})
-
-					//if (undefined) console.log('ciao')
-			      
-
-			//var array = [];
-
 			function get_monthly_pageview(article) {
 
-				console.log(article)
+				//console.log(article)
+				 var container = $('#pageviews');
 
 				$('.hide_1').hide()
 
-				for (i = 1; i < 10; i++) { // (i = 1; i < 2; i++)
+				//container.append(article + ',')
 
-					//var dateString = '20140' + i;
+				container.append('[{"article":"' + article + '"},{<br/>')
+				
+				for (i = 1; i < 10; i++) { 
+
 					var yearString = '2014' ;
 					var monthString = '0'+i ;
 
-					get_one_month_pageview(yearString, monthString, article);  // dateString
+					get_one_month_pageview(yearString, monthString, article, monthString === '12'); 
 				}
+				
+				for (i = 10; i < 13; i++) {
 
-				for (i = 10; i < 13; i++) { // (i = 10; i < 11; i++) 
-
-					//var dateString = '2014' + i;
 					var yearString = '2014' ;
 					var monthString =  i + '';
 
-					get_one_month_pageview(yearString, monthString, article, monthString === '12'); // dateString
+					get_one_month_pageview(yearString, monthString, article, monthString === '12'); 
+
 				}
+
+				for (i = 12; i < 13; i++) {
+
+					var yearString = '2013' ;
+					var monthString =  i + '';
+
+					get_one_month_pageview(yearString, monthString, article, monthString === '12'); 
+
+				}
+
+				get_csv(yearString,monthString)
+
 			}
 
-			//get_monthly_pageview(article_a)
+			//console.log(yearPV[2013])
+
+			function get_csv(yearString,monthString) {
+
+				var container = $('#pageviews');
+
+				jQuery.each( yearPV[yearString][monthString], function( i, v ) {
+
+					//container.append( '"' + i  + '":' + v + ',<br/>');
+					//console.log(i + ':' + v)
+					
+					container.append( '"' + i  + '":' + v + ',');
+					//console.log( '"' + i  + '":' + v + ',');
+
+				})
+
+				container.append('}]')
+
+			}
+
+			//get_csv(article_a)
 
 		</script>
 
@@ -242,15 +239,6 @@ var blkstr = $.map(value, function(val,index) {
 				<div id="pageviews" class="hide_2"></div>
 				<div id="content1" class="hide_2" onclick="hide()"></div>
 			</div>
-
-			<!--<div class="box">
-				<div class="label two hide_1" onclick="get_id_label()">
-					<span>Get id-label (nodes)<span>
-				</div>
-				<div id="id_label" class="hide_2"></div>				
-				<div id="content2" class="hide_2" onclick="hide()"></div>
-			</div>-->
-
 			<div class="clear"></div>
 		</main>
 
