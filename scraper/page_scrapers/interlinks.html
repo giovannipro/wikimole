@@ -13,10 +13,31 @@
 
 	        var baseurl = 'http://localhost:8888/wikimole/scraper/proxy/';
 
+	        var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=';
+
+	        /*
+	        https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=food
+	        https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&batchcomplete=&bltitle=food
+			*/
+
 	        var proxy = baseurl + 'proxy_interlinks.php' + "?url=" ;
 
 	        var wikilink = 'https://en.wikipedia.org/wiki/';
 
+	        /* ------------------------------------
+			FINDME
+	        -------------------------------------*/
+
+	        var origin = window.location.origin + '/wiki/';
+
+			var findme =  origin;
+			var findme1 = origin + 'User:';
+			var findme2 = origin + 'Template';
+			var findme3 = origin + 'Talk:';
+			var findme4 = origin + 'Help:';
+			var findme5 = origin + 'File:';
+			var findme6 = origin + 'Wikipedia:'
+			var findme7 = origin + 'Category:'
 
 	        /* ------------------------------------
 			ARTICLES LIST
@@ -25,8 +46,8 @@
 			var art_list = '../articles/articles.json' // '../article_test.json'
 
 			var list = [
-				'https://en.wikipedia.org/wiki/Lake_Van',  // nelson_mandela
-				'https://en.wikipedia.org/wiki/Isitwalandwe_Medal'  // mahatma_gandhi
+				'nelson_mandela',  // nelson_mandela
+				'Freedom Day (South Africa)'  // mahatma_gandhi
 			]	
 
 
@@ -44,8 +65,6 @@
 	        /* ------------------------------------
 	        SOURCE - TARGET 
 	        -------------------------------------*/
-
-			
  
 			function scrape_interlinks(url) {
 			    
@@ -74,15 +93,28 @@
 
 						//console.log(val)
 
-						var findme = window.location.origin + '/wiki/'; //https://en.wikipedia.org/wiki/
-
 						container = $('#source_target');
 						var href = $(val).prop('href');
 
+						//console.log(href)
+
 						var href_clean = href.replace('http://localhost:8888/wiki/','').replace(/_/g, ' ').replace(/,/g, ';');
 
-						if (typeof href === 'string' && href.indexOf(findme) === 0) {
-							container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' ); //val
+						if (typeof href === 'string' && href.indexOf(findme) === 0 )  {
+
+							//container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' );
+							
+							if (href.indexOf(findme1) !== 0  && href.indexOf(findme2) !== 0 && href.indexOf(findme3) !== 0 && href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0 && href.indexOf(findme6) !== 0)  {
+
+								container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' );
+								//container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' );
+								//container.append ('si-' + href_clean + '<br/>')
+							}
+							else {
+								console.log('no-' + href_clean )
+								
+							}
+						
 						}
 
 					})
@@ -135,6 +167,164 @@
 	        	})
 	        }
 
+	        /* ------------------------------------
+	        AMOUNT OF EXIT LINKS
+	        -------------------------------------*/
+ 
+			function exitlinks(url) {
+			    
+			    $.ajax({			    	
+		           	type: 'GET',
+		           	url: proxy + wikilink + url,
+		           	processData: true,
+		           	//dataType: 'json',
+		           	//crossOrigin: true,
+		        })
+		        .done (function (get_func) {
+
+		        	container = $('#exitlinks');
+
+		        	var sum = 0
+
+		        	var parsedata_func = $.parseHTML(get_func);
+
+		        	get = []
+					get = ($(parsedata_func).find('#mw-content-text').find('a'))
+
+					container.append('<span class="red">' + url + '</span>,' )
+
+					jQuery.each( get, function( i, val ) {
+
+						//var cont = val;	
+						var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+						var findme = window.location.origin + '/wiki/'; //https://en.wikipedia.org/wiki/
+
+						var href = $(val).prop('href');
+
+						var href_clean = href.replace('http://localhost:8888/wiki/','').replace(/_/g, ' ').replace(/,/g, ';');
+
+						if (typeof href === 'string' && href.indexOf(findme) === 0) {
+							//container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' ); //val
+
+							
+
+							if (href.indexOf(findme1) !== 0  && href.indexOf(findme2) !== 0 && href.indexOf(findme3) !== 0 && href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0 && href.indexOf(findme6) !== 0 && href.indexOf(findme7) !== 0)  {
+
+								//container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' );
+								//container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' );
+								//container.append ('si-' + href_clean + '<br/>')
+
+								sum++;
+							}
+							else {
+								console.log('no-' + href_clean )
+								
+							}
+
+						}
+
+					})
+
+					container.append('<span>' + sum + '</span><br/>')
+					//console.log(sum)
+
+					$('.hide_1').hide()
+
+				})
+				.error (function (xhr, ajaxOptions, thrownError) {
+			        console.log(xhr.status);
+			        console.log(thrownError);
+				});
+
+			}
+
+			// get entry links for one article
+			function get_n_exitlink() {
+
+				$('#exitlinks').html('article,exitlinks<br/>')
+
+				jQuery.each( articles, function( i, val ) { //  list
+
+					exitlinks( val )
+
+				})	
+	
+			}
+
+	        /* ------------------------------------
+	        AMOUNT OF ENTRY LINKS
+	        -------------------------------------*/
+ 
+			function entrylinks(url) {
+			    
+			    $.ajax(url, {
+	                dataType:  "jsonp",
+	                success: function( wikiResponse ) {
+
+	                	//console.log(wikiResponse)
+
+	                	container = $('#entrylinks');
+
+		        		var sum = 0
+
+	                	var parse_back = $.parseHTML(wikiResponse);
+
+	                	back = []
+						back = $(wikiResponse.query.backlinks)
+
+						//console.log(back) 
+
+						var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
+						
+						//var art_name_clean = string_clean(art_name)
+						//var art_name_clean = art_name.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+						container.append('<span class="red">' + art_name + ',</span>' )
+
+						jQuery.each( back, function( i, val ) {
+
+							/*
+							var cont = val.title 
+							var cont_clean = cont.replace(/,/g, ';')
+
+							$('#content1').append('<span class="red">' + art_name_clean  + '</span>,' + cont_clean + '<br/>') 
+							
+							*/
+							sum++;
+
+						})
+
+						container.append('<span>' + sum + '</span><br/>')
+
+						$('.hide_1').hide()
+
+	                	//console.log(url)
+
+	                },   
+					error : function (xhr, ajaxOptions, thrownError) {
+				        console.log(xhr.status);
+				        console.log(thrownError);
+					}
+	            })
+
+			}
+
+			// get entry links for one article
+			function get_n_entrylink() {
+
+				$('#entrylinks').html('article,entrylinks<br/>')
+
+				jQuery.each( articles, function( i, val ) { // articles; list;
+
+					entrylinks( backlinks + val )
+
+					//console.log( backlinks + val )
+
+				})	
+	
+			}
+
 		</script>
 
 		<main>
@@ -142,7 +332,7 @@
 				<h1>Interlinks<h1><!-- <span class="problem">-> remove external links</span> -->
 				<h2>Links to other Wikipedia pages</h2>
 			</div>
-			<div class="box_50">
+			<div class="box_25">
 				<div class="label one hide_1" onclick="get_source_target()">
 					<span>Get source-target (edges)</span>
 					<!-- to be sure each edge is downloaded see Firebug > Network > Time column-->
@@ -151,11 +341,27 @@
 				<div id="content1" class="hide_2" onclick="hide()"></div>
 			</div>
 
-			<div class="box_50">
+			<div class="box_25">
 				<div class="label two hide_1" onclick="get_id_label()">
 					<span>Get id-label (nodes)<span>
 				</div>
 				<div id="id_label" class="hide_2"></div>				
+				<div id="content2" class="hide_2" onclick="hide()"></div>
+			</div>
+
+			<div class="box_25">
+				<div class="label three hide_1" onclick="get_n_entrylink()">
+					<span>Get amount of entry links<span>
+				</div>
+				<div id="entrylinks" class="hide_2"><!--<table></table>--></div>				
+				<div id="content2" class="hide_2" onclick="hide()"></div>
+			</div>
+
+			<div class="box_25">
+				<div class="label one hide_1" onclick="get_n_exitlink()">
+					<span>Get amount of exit links<span>
+				</div>
+				<div id="exitlinks" class="hide_2"></div>				
 				<div id="content2" class="hide_2" onclick="hide()"></div>
 			</div>
 
