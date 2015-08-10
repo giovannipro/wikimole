@@ -607,7 +607,7 @@ EDITS
 -------------------------------------*/
 
 // get edits for one article
-function edits(url) {
+function edits_json(url) {
     
     $.ajax(url, {
         dataType:  "jsonp",
@@ -663,15 +663,97 @@ function edits(url) {
 
 }
 
+function edits_csv(url) {
+    
+    $.ajax(url, {
+        dataType:  "jsonp",
+        success: function( wikiResponse ) {
+
+        	//console.log(wikiResponse)
+
+        	container = $('#edits');
+        	url_clean = url.replace(edit_api, '')
+        	
+        	obj = []
+			obj = $(wikiResponse.query.pageids)//.pages)[0]
+
+			pageids = obj[0].toString()
+			edit =  $(wikiResponse.query.pages)[0][pageids].revisions //.pageids; .revisions
+
+        	//console.log(edit)
+        	console.log(url_clean)
+
+        	jQuery.each( edit, function( i , v ) {
+
+        		container.append( url_clean + ',' )
+
+        		jQuery.each( v, function( i, v ) {
+
+        			//container.append( v + ',')
+        	   		
+        			
+        	   		if (i.indexOf("size")  === 0 ) {
+        	   			container.append( v )
+        	   		}
+        	   	   	if (i.indexOf("timestamp")  === 0 ) {
+        	   	   		// str.substring(1, 4); 
+        	   			container.append( v.substring(0, 10) + ',' ); 
+        	   		}
+        	   		if (i.indexOf("user")  === 0 ) {
+        	   			container.append( v + ',')
+        	   		}
+        	   		else {
+        	   			//
+        	   		}
+        	   	})
+
+        	   	/*
+
+        		if ( i === (edit.length-1)) {
+        			container.append( '<br/>' )
+        		}
+        		else {
+        			container.append( ',<br/>' )
+        		}
+        		*/
+
+        		//})
+
+        		container.append( '</br>')
+        	
+        	})
+
+        	//container.append( ']}],<br/>' )
+
+			$('.hide_1').hide()
+        },   
+		error : function (xhr, ajaxOptions, thrownError) {
+	        console.log(xhr.status);
+	        console.log(thrownError);
+		}
+    })
+
+}
+
 // get entry links for all of article
-function get_all_edits() {
+function get_all_edits_json() {
 	var container = $('#edits')
-	jQuery.each( articles, function( i, val ) { // articles; list;
-		edits( edit_api + val )
+	jQuery.each( list, function( i, val ) { // articles; list;
+		edits_json( edit_api + val )
 		//container.append( '[{"article":"' + val + '"},{"edit":[<br/>')
 
 		//  start : '{"edits": ['
 		//  end : 	']}'		
+		console.log(val)
+	})	
+}
+
+// get entry links for all of article
+function get_all_edits_csv() {
+	var container = $('#edits')
+	container.append('article,user,timestamp,size<br/>')
+	jQuery.each( articles, function( i, val ) { // articles; list;
+		edits_csv( edit_api + val )	
 		console.log(val)
 	})	
 }

@@ -1,3 +1,7 @@
+html, body {
+	margin: 0;
+	padding: 0; 
+}
 .bar {
     fill: steelblue;
 }
@@ -15,4 +19,15 @@
 }
 .x.axis path {
     display: none;
+}
+.svg_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    vertical-align: middle;
 }
