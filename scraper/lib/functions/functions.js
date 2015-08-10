@@ -12,6 +12,9 @@ var proxy = baseurl + 'proxy_interlinks.php' + "?url=" ;
 var proxy_pageview = baseurl + 'proxy_pageviews.php' + "?url=" ;
 var wikilink = 'https://en.wikipedia.org/wiki/';
 var pageview_service = "http://stats.grok.se/json/en/"; // '201506/nelson_mandela
+var edit_api = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=5&rvend=1419984000&rvdir=newer&indexpageids=&titles='; //  until Wed, 31 Dec 2014 00:00:00 GMT
+	
+	//500
 
 /* ------------------------------------
 ARTICLES LIST
@@ -21,6 +24,7 @@ var art_list = '../articles/articles_test.json'; // '../articles/articles_test';
 
 var list = [
 	'nelson_mandela',
+	'africa', //nelson_mandela
 	'cool' //Freedom Day (South Africa)
 ]	
 
@@ -562,4 +566,120 @@ function get_all_monthly_pageview(yearString,article) {
 		//console.log(val)	
 	})
 
+}
+
+/* ------------------------------------
+EDITS
+-------------------------------------*/
+
+// get edits for one article
+function edits(url) {
+    
+    $.ajax(url, {
+        dataType:  "jsonp",
+        success: function( wikiResponse ) {
+
+        	container = $('#edits');
+        	//console.log(wikiResponse)
+        	url_clean = url.replace(edit_api, '')
+        	container.html( '[{"article":"' + url_clean + '"},{"edit":[<br/>')
+
+        	obj = []
+			obj = $(wikiResponse.query.pageids)//.pages)[0]
+
+			pageids = obj[0].toString()
+
+			edit =  $(wikiResponse.query.pages)[0][pageids].revisions //.pageids; .revisions
+
+			//console.log(pageids)
+        	//console.log(obj)
+        	console.log(edit)
+
+        	jQuery.each( edit, function( i , v ) {
+
+        		container.append( '{' )
+
+        		jQuery.each( v, function( i, v ) {
+        	
+        			//href.indexOf(findme)
+					/*console.log(i)
+        			console.log(v)
+					*/
+
+        	   		if (i.indexOf("size")  === 0 ) {
+        	   			container.append( '"' +i + '":' + v )
+        	   		}
+        	   		else{
+        	   			container.append( '"' +i + '":"' + v + '",')
+        	   		}
+
+        	   	
+        	   	})
+
+        		if ( i === (edit.length-1)) {
+        			container.append( '}<br/>' )
+        			//console.log (edit.length)
+        			//console.log(i)
+        		}
+        		else {
+        			container.append( '},<br/>' )
+        			//console.log (edit.length)
+        			//console.log(i)
+        		}
+        	
+        	})
+
+        	container.append( ']}]<br/>' )
+
+        	/*
+			obj = []
+			edit = []
+
+			obj = $(wikiResponse.query.pages) //[0]; .pages
+
+			var pageids = obj.pageids
+			
+			edit = obj.pages
+
+			obj2 = obj
+
+			console.log(obj)
+			console.log(pageids)
+			console.log(edit)
+
+    		/*var sum = 0
+           	var parse_back = $.parseHTML(wikiResponse);
+
+        	back = []
+
+
+			var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
+			container.append('<span class="red">' + art_name + ',</span>' )
+
+			jQuery.each( back, function( i, val ) {
+				sum++;
+			})
+
+			container.append('<span>' + sum + '</span><br/>')
+			*/
+
+			$('.hide_1').hide()
+        },   
+		error : function (xhr, ajaxOptions, thrownError) {
+	        console.log(xhr.status);
+	        console.log(thrownError);
+		}
+    })
+
+}
+
+// get entry links for all of article
+function get_all_edits() {
+	var container = $('#edits')
+	jQuery.each( list, function( i, val ) { // articles; list;
+		edits( edit_api + val )
+		//container.html( '[{"article":"' + val + '"},{"edit":[<br/>')
+		
+		console.log(val)
+	})	
 }
