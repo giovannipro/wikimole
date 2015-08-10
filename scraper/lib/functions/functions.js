@@ -12,20 +12,20 @@ var proxy = baseurl + 'proxy_interlinks.php' + "?url=" ;
 var proxy_pageview = baseurl + 'proxy_pageviews.php' + "?url=" ;
 var wikilink = 'https://en.wikipedia.org/wiki/';
 var pageview_service = "http://stats.grok.se/json/en/"; // '201506/nelson_mandela
-var edit_api = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=5&rvend=1419984000&rvdir=newer&indexpageids=&titles='; //  until Wed, 31 Dec 2014 00:00:00 GMT
+var edit_api = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvend=1419984000&rvdir=newer&indexpageids=&titles='; //  until Wed, 31 Dec 2014 00:00:00 GMT
 	
-	//500
+	// &rvlimit=5
 
 /* ------------------------------------
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json'; // '../articles/articles_test';
+var art_list = '../articles/articles.json'; // '../articles/articles_test';
 
 var list = [
 	'nelson_mandela',
-	'africa', //nelson_mandela
-	'cool' //Freedom Day (South Africa)
+	'africa'//, //nelson_mandela
+	//'cool' //Freedom Day (South Africa)
 ]	
 
 // get the list of articles
@@ -490,12 +490,15 @@ var article_a = "Bullying" //nelson_mandela; Bullying; Gender
 function get_one_month_pageview(yearString, monthString, article, doPrint) {
 	
 	//var container = $('#' + article);
-	var container = $('');
+	//var container = $('');
 
 	var with_proxy = proxy_pageview + pageview_service + yearString + monthString +  '/' + article
 	var no_proxy = pageview_service + yearString + monthString +  '/' + article
 
+	var container = $('#pageviews');
 	//console.log(with_proxy)
+
+	//container.append( '[{"article":"' + article + '"},{"pageviews":[<br/>')
 
 	var url_test = 'http://localhost:8888/wikimole/scraper/lib/test.json'
 
@@ -516,12 +519,17 @@ function get_one_month_pageview(yearString, monthString, article, doPrint) {
 		yearPV[yearString][monthString] = wikiResponse.daily_views;
 
 		if (doPrint) {
-			console.log(yearPV[yearString]);
+			//console.log(yearPV[yearString]);
 		}
 
+		
+		//container.append( '[{"article":"' + article + '"},{"pageviews":[<br/>')
+
 		jQuery.each( yearPV[yearString][monthString], function( i, v ) {
-			var container = $('.row');
-			container.append('<tr><td>' + article + '</td><td>' + i +'</td><td>' + v +'</tr>')
+			//var container = $('.row');
+			//container.append('<tr><td>' + article + '</td><td>' + i +'</td><td>' + v +'</tr>')
+			//container.append( '"' + article + '","' + i +'",' + v +'</br>')
+			container.append( article + ',' + i +',' + v +'</br>')
 	    })
 
 	})
@@ -544,10 +552,12 @@ function get_one_month_pageview(yearString, monthString, article, doPrint) {
 function get_monthly_pageview(article) {
 	var container = $('#pageviews');
 	$('.hide_1').hide()
+
+	//container.append( '[{"article":"' + article + '"},{"pageviews":[<br/>')
 	
 	for (i = 1; i < 10; i++) { 
 		var yearString = '2014' ;
-		var monthString = '0'+i ;
+		var monthString = '0'+i ;		
 		get_one_month_pageview(yearString, monthString, article);
 	}
 	for (i = 10; i < 13; i++) {
@@ -561,9 +571,12 @@ function get_all_monthly_pageview(yearString,article) {
 	var container = $('#pageviews');
 
 	jQuery.each( articles, function( i, val ) { //list; articles;
-		container.append('<table id="' + val + '" class="row" style="float:left; width:100%; font-size:10px;"></table>')
+		//container.append('<table id="' + val + '" class="row" style="float:left; width:100%; font-size:10px;"></table>')
+
+		//container.append( '[{"article":"' + val + '"},{"pageviews":[<br/>')
+
 		get_monthly_pageview( val )
-		//console.log(val)	
+		console.log(val)	
 	})
 
 }
@@ -579,89 +592,45 @@ function edits(url) {
         dataType:  "jsonp",
         success: function( wikiResponse ) {
 
-        	container = $('#edits');
         	//console.log(wikiResponse)
+
+        	container = $('#edits');
         	url_clean = url.replace(edit_api, '')
-        	container.html( '[{"article":"' + url_clean + '"},{"edit":[<br/>')
+        	
+        	container.append( '[{"article":"' + url_clean + '"},{"edit":[<br/>')
 
         	obj = []
 			obj = $(wikiResponse.query.pageids)//.pages)[0]
 
 			pageids = obj[0].toString()
-
 			edit =  $(wikiResponse.query.pages)[0][pageids].revisions //.pageids; .revisions
 
-			//console.log(pageids)
-        	//console.log(obj)
-        	console.log(edit)
+        	//console.log(edit)
+        	console.log(url_clean)
 
         	jQuery.each( edit, function( i , v ) {
 
         		container.append( '{' )
 
         		jQuery.each( v, function( i, v ) {
-        	
-        			//href.indexOf(findme)
-					/*console.log(i)
-        			console.log(v)
-					*/
-
         	   		if (i.indexOf("size")  === 0 ) {
         	   			container.append( '"' +i + '":' + v )
         	   		}
         	   		else{
         	   			container.append( '"' +i + '":"' + v + '",')
         	   		}
-
-        	   	
         	   	})
 
         		if ( i === (edit.length-1)) {
         			container.append( '}<br/>' )
-        			//console.log (edit.length)
-        			//console.log(i)
         		}
         		else {
         			container.append( '},<br/>' )
-        			//console.log (edit.length)
-        			//console.log(i)
         		}
         	
         	})
 
-        	container.append( ']}]<br/>' )
-
-        	/*
-			obj = []
-			edit = []
-
-			obj = $(wikiResponse.query.pages) //[0]; .pages
-
-			var pageids = obj.pageids
-			
-			edit = obj.pages
-
-			obj2 = obj
-
-			console.log(obj)
-			console.log(pageids)
-			console.log(edit)
-
-    		/*var sum = 0
-           	var parse_back = $.parseHTML(wikiResponse);
-
-        	back = []
-
-
-			var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
-			container.append('<span class="red">' + art_name + ',</span>' )
-
-			jQuery.each( back, function( i, val ) {
-				sum++;
-			})
-
-			container.append('<span>' + sum + '</span><br/>')
-			*/
+        	container.append( ']}],<br/>' )
 
 			$('.hide_1').hide()
         },   
@@ -676,10 +645,12 @@ function edits(url) {
 // get entry links for all of article
 function get_all_edits() {
 	var container = $('#edits')
-	jQuery.each( list, function( i, val ) { // articles; list;
+	jQuery.each( articles, function( i, val ) { // articles; list;
 		edits( edit_api + val )
-		//container.html( '[{"article":"' + val + '"},{"edit":[<br/>')
-		
+		//container.append( '[{"article":"' + val + '"},{"edit":[<br/>')
+
+		//  start : '{"edits": ['
+		//  end : 	']}'		
 		console.log(val)
 	})	
 }
