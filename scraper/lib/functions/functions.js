@@ -80,7 +80,10 @@ function scrape_exitlinks(url) {
 			var container = $('#source_target')
 
 			if (typeof href === 'string' && href.indexOf(findme) === 0 )  {
-				if (href.indexOf(findme1) !== 0  && href.indexOf(findme2) !== 0 && href.indexOf(findme3) !== 0 && href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0 && href.indexOf(findme6) !== 0)  {
+				/*if (href.indexOf(findme1) !== 0  && href.indexOf(findme2) !== 0 && href.indexOf(findme3) !== 0 && href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0 && href.indexOf(findme6) !== 0)  {
+					container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' );
+				}*/
+				if ( href.indexOf(findme5) !== 0 )  {
 					container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' );
 				}
 				else {
@@ -193,6 +196,21 @@ function exitlinks(url) {
 
 		container.append('<span class="red">' + url + '</span>,' )
 
+		/* ---------------- 
+    	FINDME 
+    	---------------- */
+    	var origin = window.location.origin + '/wiki/';
+		var findme =  origin;
+		var findme1 = origin + 'User:';
+		var findme2 = origin + 'Template';
+		var findme3 = origin + 'Talk:';
+		var findme4 = origin + 'Help:';
+		var findme5 = origin + 'File:';
+		var findme6 = origin + 'Wikipedia:'
+		var findme7 = origin + 'Category:'
+		/* -------------- */
+
+
 		jQuery.each( get, function( i, val ) {
 
 			var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
@@ -202,7 +220,10 @@ function exitlinks(url) {
 
 			if (typeof href === 'string' && href.indexOf(findme) === 0) {
 
-				if (href.indexOf(findme1) !== 0  && href.indexOf(findme2) !== 0 && href.indexOf(findme3) !== 0 && href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0 && href.indexOf(findme6) !== 0 && href.indexOf(findme7) !== 0)  {
+				/*if (href.indexOf(findme1) !== 0  && href.indexOf(findme2) !== 0 && href.indexOf(findme3) !== 0 && href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0 && href.indexOf(findme6) !== 0 && href.indexOf(findme7) !== 0)  {
+					sum++;
+				}*/
+				if ( href.indexOf(findme5) !== 0  )  {
 					sum++;
 				}
 				else {
