@@ -20,6 +20,10 @@ html, body {
 .x.axis path {
     display: none;
 }
+#chart {
+    display: block;
+    position: relative;
+}
 .svg_content {
     position: absolute;
     top: 0;
@@ -28,6 +32,6 @@ html, body {
     right: 0;
     margin: auto;
     width: 90%;
-    height: 90%;
+    /*height: 90%;*/
     vertical-align: middle;
 }
