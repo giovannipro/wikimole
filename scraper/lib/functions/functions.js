@@ -83,11 +83,11 @@ function scrape_exitlinks(url) {
 				/*if (href.indexOf(findme1) !== 0  && href.indexOf(findme2) !== 0 && href.indexOf(findme3) !== 0 && href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0 && href.indexOf(findme6) !== 0)  {
 					container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' );
 				}*/
-				if ( href.indexOf(findme5) !== 0 )  {
+				if ( href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0 )  {
 					container.append ('<span class="red">' + url_clean + '</span>,' + href_clean  + '</br>' );
 				}
 				else {
-					console.log('no-' + href_clean )
+					console.log('no: ' + href_clean )
 				}
 			}
 		})
@@ -106,7 +106,7 @@ function get_exitlinks_st() {
 	var container = $('#source_target')
 	$('#source_target').append('Source,Target<br/>')
 
-	jQuery.each( articles, function( i, val ) {
+	jQuery.each( list, function( i, val ) {
 		scrape_exitlinks( val )
 	})
 
@@ -127,6 +127,99 @@ function get_exitlinks_il(url) {
 }
 
 /* ------------------------------------
+ENTRY LINKS
+-------------------------------------*/
+
+// clean the string
+function string_clean(string) {
+	string.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+}
+
+// hide graphical elements
+function hide() {
+	$('.hide_2').hide
+	$('.hide_1').show
+}
+
+/* -------- SOURCE - TARGET --------*/
+
+// get backlinks list for one aricle
+function get_source_target(url) {
+
+    $.ajax(url, {
+        dataType: "jsonp",
+        success: function( wikiResponse ) {
+
+        	var parse_back = $.parseHTML(wikiResponse);
+
+        	back = []
+			back = $(wikiResponse.query.backlinks)
+
+			//console.log(back) 
+
+			var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
+			
+			//var art_name_clean = string_clean(art_name)
+			var art_name_clean = art_name.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+			jQuery.each( back, function( i, val ) {
+
+				var cont = val.title 
+				var cont_clean = cont.replace(/,/g, ';')
+
+				$('#content1').append('<span class="red">' + art_name_clean  + '</span>,' + cont_clean + '<br/>') 
+
+			})
+
+        	//console.log(url)
+
+        },   
+		error : function (xhr, ajaxOptions, thrownError) {
+	        console.log(xhr.status);
+	        console.log(thrownError);
+		}
+    })
+}    
+
+// get backlinks list for all of articles
+function get_all_source_target() {
+
+	$('#source_target').html('Source,Target<br/>')
+
+	jQuery.each( articles, function( i, val ) {
+		
+		var title = val // i
+
+		//get_source_target('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=' + val )  // i
+		get_source_target( backlinks + val )
+		
+	})
+
+	console.log('Done');	
+	
+	$('.hide_1').hide()
+}
+
+/* -------- ID - LABEL  --------*/
+
+// get id and labels for all articles
+function get_all_id_label(url) {
+
+	$('#content2').append('Id,Label<br/>')
+
+	jQuery.each( articles, function( i, val ) {
+
+		val_clean = val.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+		$('#content2').append('<span class="red">' + val_clean  + '</span>,' + val_clean + '<br/>')
+
+		//console.log(val)
+		$('.hide_1').hide()
+
+	})
+}
+
+/* ------------------------------------
 AMOUNT OF ENTRY LINKS
 -------------------------------------*/
 
@@ -138,20 +231,108 @@ function entrylinks(url) {
         success: function( wikiResponse ) {
 
         	container = $('#entrylinks');
+
     		var sum = 0
+    		var page = 0
+    		var user = 0
+    		var port = 0
+    		var templ = 0
+    		var utalk = 0
+    		var cat = 0
+
+           	
            	var parse_back = $.parseHTML(wikiResponse);
 
         	back = []
-			back = $(wikiResponse.query.backlinks)
+			back = $(wikiResponse.query.backlinks) // [1]
 
-			var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
+			//console.log(back)
+
+			var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','').replace(/_/g, ' ')
 			container.append('<span class="red">' + art_name + ',</span>' )
 
+			var link = []
+
+			var findme1 = 'User';
+			var findme2 = 'Template';
+			var findme3 = 'Talk:';
+			var findme4 = 'Help:';
+			var findme5 = 'File:';
+			var findme6 = 'Wikipedia'
+			var findme7 = 'Category:';
+			var findme8 = 'Portal';
+			var findme9 = 'User talk';
+
 			jQuery.each( back, function( i, val ) {
-				sum++;
+				
+				// container.append('<span>' + i + '-' + val + '</span><br/>')
+				var link = val //$(val)
+
+				//console.log(link)
+
+				/*
+				if ( link.val().indexOf('user') === 0 ) {
+					//if ( href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0 )  {
+					container.append('<span>' + link + '</span>')
+					sum++;
+				}
+				else {
+					console.log(val)
+				}*/
+				//if ( val.indexOf('user') !== 0 ) {
+
+					jQuery.each( val, function( ind, v ) {
+
+						//console.log(v)
+
+						//if ( v.indexOf('talk') === 0 ) {
+						if (typeof v === 'string'  &&  v !== ''  &&  v.indexOf(findme6) !== 0 &&  v.indexOf(findme9) !== 0  ) {
+
+
+							if ( v.indexOf(findme1) === 0  ) { 
+								user++;
+								sum++;
+								console.log(v)
+								//container.append('<span>' + v + '</span><br/>') //  + ind + '-'
+							}
+							if ( v.indexOf(findme8) === 0  ) { 
+								port++;
+								sum++;
+								console.log(v)
+								//container.append('<span>' + v + '</span><br/>') //  + ind + '-'
+							}
+							if ( v.indexOf(findme2) === 0  ) { 
+								templ++;
+								sum++;
+								console.log(v)
+								//container.append('<span>' + v + '</span><br/>') //  + ind + '-'
+							}
+							if ( v.indexOf(findme9) === 0  ) { 
+								utalk++;
+								sum++;
+								console.log(v)
+								//container.append('<span>' + v + '</span><br/>') //  + ind + '-'
+							}
+							if ( v.indexOf(findme7) === 0  ) { 
+								cat++;
+								sum++;
+								console.log(v)
+							}
+							if ( v.indexOf(findme1) !== 0 && v.indexOf(findme8) !== 0 && v.indexOf(findme2) !== 0 && v.indexOf(findme9) !== 0  && v.indexOf(findme7) !== 0) { // pages
+								console.log(v)
+								page++;
+								sum++;
+							}
+						}
+						else {
+							//console.log('no: '+ v)
+						}
+					})
+
+				//}
 			})
 
-			container.append('<span>' + sum + '</span><br/>')
+			container.append('<span>' + page + ',' + user + ',' + port + ',' + templ + ',' + cat + ',' + sum + '</span><br/>')
 			$('.hide_1').hide()
         },   
 		error : function (xhr, ajaxOptions, thrownError) {
@@ -165,7 +346,8 @@ function entrylinks(url) {
 // get entry links for all of article
 function get_n_entrylink() {
 
-	$('#entrylinks').html('article,entrylinks<br/>')
+	//article(exit),page,user,template,category,talk,total
+	$('#entrylinks').html('article(entr),page,user,portal,template,category,total<br/>')
 	jQuery.each( articles, function( i, val ) { // articles; list;
 		entrylinks( backlinks + val )
 	})	
@@ -187,14 +369,23 @@ function exitlinks(url) {
     .done (function (get_func) {
 
     	container = $('#exitlinks');
+
     	var sum = 0
+    	var user = 0
+    	var templ = 0
+    	var cat = 0
+    	var talk = 0
+    	var page = 0
+    	var port = 0
 
     	var parsedata_func = $.parseHTML(get_func);
 
     	get = []
 		get = ($(parsedata_func).find('#mw-content-text').find('a'))
 
-		container.append('<span class="red">' + url + '</span>,' )
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+		container.append('<span class="red">' + url_clean + '</span>,' )
 
 		/* ---------------- 
     	FINDME 
@@ -207,31 +398,67 @@ function exitlinks(url) {
 		var findme4 = origin + 'Help:';
 		var findme5 = origin + 'File:';
 		var findme6 = origin + 'Wikipedia:'
-		var findme7 = origin + 'Category:'
+		var findme7 = origin + 'Category:';
+		var findme8 = origin + 'Portal';
 		/* -------------- */
 
 
 		jQuery.each( get, function( i, val ) {
 
-			var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 			var findme = window.location.origin + '/wiki/'; //https://en.wikipedia.org/wiki/
 			var href = $(val).prop('href');
 			var href_clean = href.replace('http://localhost:8888/wiki/','').replace(/_/g, ' ').replace(/,/g, ';');
 
-			if (typeof href === 'string' && href.indexOf(findme) === 0) {
+			//console.log(href)
 
-				/*if (href.indexOf(findme1) !== 0  && href.indexOf(findme2) !== 0 && href.indexOf(findme3) !== 0 && href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0 && href.indexOf(findme6) !== 0 && href.indexOf(findme7) !== 0)  {
-					sum++;
-				}*/
-				if ( href.indexOf(findme5) !== 0  )  {
-					sum++;
+			if (typeof href === 'string' && href.indexOf(findme) === 0 ) {
+
+				//sum++;
+
+				if ( href.indexOf(findme4) !== 0 && href.indexOf(findme5) !== 0  && href.indexOf(findme6) !== 0 )  {
+					
+					if ( href.indexOf(findme1) === 0 )  {
+						user++;
+						sum++;
+						console.log(href_clean)
+						//user_ar.push(href_clean)
+					}
+					if ( href.indexOf(findme2) === 0 )  {
+						templ++;
+						sum++;
+						console.log(href_clean)
+					}
+					if ( href.indexOf(findme7) === 0 )  {
+						cat++;
+						sum++;
+						console.log(href_clean)
+					}
+					/*if ( href.indexOf(findme3) === 0 )  {
+						talk++;
+						sum++;
+						console.log(href_clean)
+					}*/
+					if ( href.indexOf(findme8) === 0 )  {
+						port++;
+						sum++;
+						console.log(href_clean)
+					}
+					else {
+						page++;
+						sum++;
+						console.log(href_clean)
+					}
 				}
 				else {
-					console.log('no-' + href_clean )
+					console.log('no: ' + href_clean )
 				}
 			}
+			else {
+				console.log('no: ' + href_clean )
+			}
+
 		})
-		container.append('<span>' + sum + '</span><br/>')
+		container.append('<span>' + page + ',' + user + ',' + port + ',' + templ + ',' + cat  + ',' + sum + '</span><br/>')
 		$('.hide_1').hide()
 	})
 	.error (function (xhr, ajaxOptions, thrownError) {
@@ -244,8 +471,9 @@ function exitlinks(url) {
 // get entry links for one article
 function get_n_exitlink() {
 	var container = $('#exitlinks')
-	container.html('article,exitlinks<br/>')
-	jQuery.each( articles, function( i, val ) { //  list
+	//article(entry),page,user,portal,template,category,total
+	container.html('article(exit),page,user,portal,template,category,total<br/>')
+	jQuery.each( articles, function( i, val ) { // articles;  list;
 		exitlinks( val )
 	})
 }
