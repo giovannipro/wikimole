@@ -736,7 +736,7 @@ PAGE VIEWS
 var yearPV = {};
 var article_a = "Bullying" //nelson_mandela; Bullying; Gender
 
-function get_one_month_pageview(yearString, monthString, article, doPrint) {
+function get_one_daily_pageview(yearString, monthString, article, doPrint) {
 	
 	//var container = $('#' + article);
 	//var container = $('');
@@ -798,7 +798,7 @@ function get_one_month_pageview(yearString, monthString, article, doPrint) {
 	})
 };
 
-function get_monthly_pageview(article) {
+function get_daily_pageview(article) {
 	var container = $('#pageviews');
 	$('.hide_1').hide()
 
@@ -807,16 +807,16 @@ function get_monthly_pageview(article) {
 	for (i = 1; i < 10; i++) { 
 		var yearString = '2014' ;
 		var monthString = '0'+i ;		
-		get_one_month_pageview(yearString, monthString, article);
+		get_one_daily_pageview(yearString, monthString, article);
 	}
 	for (i = 10; i < 13; i++) {
 		var yearString = '2014' ;
 		var monthString =  i + '';
-		get_one_month_pageview(yearString, monthString, article, monthString === '12'); 
+		get_one_daily_pageview(yearString, monthString, article, monthString === '12'); 
 	}
 }
 
-function get_all_monthly_pageview(yearString,article) {
+function get_all_daily_pageview(yearString,article) {
 	var container = $('#pageviews');
 
 	jQuery.each( articles, function( i, val ) { //list; articles;
@@ -824,11 +824,107 @@ function get_all_monthly_pageview(yearString,article) {
 
 		//container.append( '[{"article":"' + val + '"},{"pageviews":[<br/>')
 
-		get_monthly_pageview( val )
+		get_daily_pageview( val )
 		console.log(val)	
 	})
 
 }
+
+/* ------------------------------------
+YEARLY PAGE VIEWS
+-------------------------------------*/
+
+var yearPV = {};
+var article_a = "Bullying" //nelson_mandela; Bullying; Gender
+
+function get_one_year_pageview(yearString, monthString, article, doPrint) {
+	
+	//var container = $('#' + article);
+	//var container = $('');
+
+	var with_proxy = proxy_pageview + pageview_service + yearString + monthString +  '/' + article
+	var no_proxy = pageview_service + yearString + monthString +  '/' + article
+
+	var container = $('#pageviews');
+	//var url_test = 'http://localhost:8888/wikimole/scraper/lib/test.json'
+
+	    $.ajax({			    	
+       	type: 'GET',
+       	url: with_proxy,
+       	processData: true,
+       	dataType: 'json', // html
+       	crossOrigin: true,
+    })
+	.done (function (wikiResponse) {
+		if (!yearPV.hasOwnProperty(yearString)) {
+			yearPV[yearString] = {};
+		}
+
+		//console.log(wikiResponse)
+
+		yearPV[yearString][monthString] = wikiResponse.daily_views;
+
+		article_clean = article.replace(/,/g, ';')
+
+		if (doPrint) {
+			//console.log(yearPV[yearString]);
+		}
+
+		var year = 0
+
+		//container.append( '[{"article":"' + article + '"},{"pageviews":[<br/>')
+
+		jQuery.each( yearPV[yearString][monthString], function( i, v ) {
+			year =  year + v
+			//var container = $('.row');
+			//container.append('<tr><td>' + article + '</td><td>' + i +'</td><td>' + v +'</tr>')
+			//container.append( '"' + article + '","' + i +'",' + v +'</br>')
+			//container.append( article + ',' + i +',' + v +'</br>')
+			//console.log(i + ':' + v)
+			//console.log(article_clean + ',' + year  +'</br>')
+	    })
+
+	    container.append( article_clean + ',' + monthString + ',' + year  +'</br>')
+
+	})
+	.error (function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+	})
+};
+
+function get_yearly_pageview(article) {
+	var container = $('#pageviews');
+	$('.hide_1').hide()
+
+	//container.append( '[{"article":"' + article + '"},{"pageviews":[<br/>')
+	
+	for (i = 1; i < 10; i++) { 
+		var yearString = '2014' ;
+		var monthString = '0'+i ;		
+		get_one_year_pageview(yearString, monthString, article);
+	}
+	for (i = 10; i < 13; i++) { //13
+		var yearString = '2014' ;
+		var monthString =  i + '';
+		get_one_year_pageview(yearString, monthString, article, monthString === '12'); 
+	}
+}
+
+function get_all_yearly_pageview(yearString,article) {
+	var container = $('#pageviews');
+
+	jQuery.each( articles, function( i, val ) { //list; articles;
+		//container.append('<table id="' + val + '" class="row" style="float:left; width:100%; font-size:10px;"></table>')
+
+		//container.append( '[{"article":"' + val + '"},{"pageviews":[<br/>')
+
+		get_yearly_pageview( val )
+		console.log(val)	
+	})
+
+}
+
 
 /* ------------------------------------
 EDITS
@@ -850,7 +946,6 @@ function edits_json(url) {
 
         	obj = []
 			obj = $(wikiResponse.query.pageids)//.pages)[0]
-
 			pageids = obj[0].toString()
 			edit =  $(wikiResponse.query.pages)[0][pageids].revisions //.pageids; .revisions
 

@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<title>Articles</title>
-		<script src="lib/js/jquery-1.11.1.min.js"></script>
-		<script src="lib/js/mustache.min.js"></script>  
+		<script src="lib/js/jquery-1.11.1.min.js" defer></script>
+		<script src="lib/js/mustache.min.js" defer></script>  
 		<!--<script src="../library/d3.min.js"></script>-->   
 	</head>
 
@@ -13,20 +13,14 @@
 			<h1>Articles</h1>
 			<div id="sampleArea"></div>
 			<div id="sampleArea1"></div>
-			
-			<script>
-
-
-			</script>
-		
 		</main>
 
 		<script>
 
 
 			function articles() {
-				$.get('template/template_articles-list.tpl', function(tpl) {
-				    $.getJSON('data/articles_features.json', function(data) {
+				$.get('template/template_articles.tpl', function(tpl) {
+				    $.getJSON('data/articles.json', function(data) {
 				        var html = Mustache.render(tpl, data);
 				        $('#sampleArea').html(html);
 				    });
@@ -43,11 +37,6 @@
 			Page rank API
 			http://www.rankapi.net/docs
 			*/
-
-
-
-
-
 
 
 			/*

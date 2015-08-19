@@ -6,11 +6,14 @@
 		<br/>
 		
 		<ul>
+			<li>Incoming links: {{entry_links}}</li>
+			<li>Outgoing links: {{exit_links}}</li>
 			<li>Notes: {{notes}}</li>
 			<li>Issues: {{issues}}</li>
 			<li>References: {{references}}</li>
 			<li>See Also: {{seeAlso}}</li>
 			<li>Images: {{images}}</li>
+			<li>Page rank: {{pagerank}}</li>
 		</ul>
 		<!--<br/>
 		
