@@ -4,7 +4,7 @@ var margin = {top: 20, right: 20, bottom: 80, left: 50},
     width = 1200 - margin.left - margin.right;
     //height = 100 - margin.top - margin.bottom;
 
-var streamHeight = 60;
+var streamHeight = 100;
 
 var dateFormat = d3.time.format("%d.%m.%y"); // %Y-%m-%d
 
@@ -35,11 +35,11 @@ var dateFormat = d3.time.format("%d.%m.%y"); // %Y-%m-%d
     %% - a literal "%" character.
 */
 
-d3.csv("../../data/edit_test1.csv", function(error, data) { // _test
+d3.csv("../../data/ed.csv", function(error, data) { // ed; edit_test1; _test ;
     if (error) throw error;
 
     // set x and y domain
-    var sizeDomain = d3.extent(data, function(d){return +d.difference }) //Math.round()
+    var sizeDomain = d3.extent(data, function(d){return  +d.size/+d.article }) //Math.round()
     var timeDomain = d3.extent(data, function(d){return dateFormat.parse(d.date)})
 
     // nest dataset for every article 
@@ -47,12 +47,12 @@ d3.csv("../../data/edit_test1.csv", function(error, data) { // _test
 
     // sort in descending order of total amount of edits
     data.sort(function(a,b){
-        var a = d3.sum(a.values, function(d){return +d.difference}) //size
-        var b = d3.sum(b.values, function(d){return +d.difference}) //size
+        var a = d3.sum(a.values, function(d){return Math.abs(+d.difference)  }) //size
+        var b = d3.sum(b.values, function(d){return Math.abs(+d.difference)  }) //size
         return a - b
     })
 
-    var height = (data.length * streamHeight) // - margin.top - margin.bottom
+    var height = data.length * streamHeight // - margin.top - margin.bottom
 
     console.log(data)
 
@@ -70,9 +70,9 @@ d3.csv("../../data/edit_test1.csv", function(error, data) { // _test
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient('bottom') //bottom
-        //.ticks(d3.time.months,12)
-        .ticks(d3.time.years, 1)
-        .tickFormat(d3.time.format('%y'))
+        .ticks(d3.time.years,1)
+        //.ticks(d3.time.months, 1)
+        .tickFormat(d3.time.format('%Y')) // %m
         .tickSize(height)
         .tickSubdivide(true)
         //.tickFormat(null)
@@ -87,14 +87,14 @@ d3.csv("../../data/edit_test1.csv", function(error, data) { // _test
     // set y axis  
     var yAxis = d3.scale.linear()
         .domain(sizeDomain)
-        .range([0, height - margin.top - margin.bottom]); //0
+        .range([0, height - margin.top - margin.bottom ]); //0
 
-    var area = d3.svg.area()
+    var line = d3.svg.line()
         .interpolate("linear") // bundle
         .x(function(d) { return x(dateFormat.parse(d.date)) }) 
 
-        .y0(0)
-        .y1(function(d) { return ( - yAxis(+d.difference) / 1 )   }); // ( yAxis(Math.round(+d.difference)) / 2) 
+        //.y0(0)
+        .y(function(d) { return - (+d.difference ) / 900 /*( - yAxis(+d.difference)  ) */  }); // ( yAxis(Math.round(+d.difference)) / 2) 
 
         //.y0(function(d) { return -yAxis(Math.round(+d.size)) / 2 })       // in the middle
         //.y1(function(d) { return yAxis(Math.round(+d.size)) / 2 /*-yAxis(Math.round(+d.difference)) / 10*/  });
@@ -110,23 +110,23 @@ d3.csv("../../data/edit_test1.csv", function(error, data) { // _test
         
 
     var svg = d3.select("#chart").append("svg")
-        .attr("width", width + padding) //margin.left + margin.right)
+        .attr("width", width + margin.left + margin.right) //margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom ) 
         .attr('viewBox','0 0 ' + (width + margin.left + margin.right) + ' ' + (height + margin.top + margin.bottom) ) // + width + ' ' + height)
         .attr('class','svg_content')
 
-    var path = svg.selectAll("path")
+    var edit = svg.selectAll("path")
         .data(data)
         .enter()
         .append("path")
         .attr('class', function(d){
             return (d.key)
         })
-        .attr("transform", function(d, i) { return "translate(0," + y(d.key)  + ")"; })
-        .style("fill", "blue")
-        .style("stroke", "none")
-        .style("stroke-width", "none")
-        .attr("d", function(d){ return area(d.values) })
+        .attr("transform", function(d, i) { return "translate(0," + (y(d.key) + padding)   + ")"; })
+        .style("fill", "none") // §ue
+        .style("stroke", "blue")  //none
+        .style("stroke-width", "1")
+        .attr("d", function(d){ return line(d.values) })
 
 
     /*var lines = path.select("g")
@@ -140,22 +140,24 @@ d3.csv("../../data/edit_test1.csv", function(error, data) { // _test
         .append('line')
         .attr('x1', 0)
         .attr('x2', width - margin.left - margin.right)
-        .attr("y1", function(d){return y(d.key)})
-        .attr("y2", function(d){return y(d.key)})
+        .attr("y1", function(d){return y(d.key) + padding })
+        .attr("y2", function(d){return y(d.key) + padding })
         .attr("class","olines axis")
-        .style("stroke", "blue")
+        .style("stroke", "#ccc")
+        .style("stroke-width", "1")
+
 
     var text = svg.selectAll("text")
         .data(data)
         .enter().append("text")
         .attr("x", -10)
         .attr("dy",5)
-        .attr("y", function(d){return y(d.key)})
-        .style("font-size",14)
+        .attr("y", function(d){return y(d.key) + padding })
+        .style("font-size",12)
         .style("letter-spacing",1)
         .style("font-weight",200)
         .style("text-anchor","end")
-        .text(function(d,i){return  ( (i + 1) + ': ' + d.key) })
+        .text(function(d,i){return  (i + 1) +  ': ' +  (d.key) })
 
     var legend = svg.append("g")
         .attr("class","legend");
