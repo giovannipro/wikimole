@@ -19,7 +19,6 @@ article,date,pageview
 !Kung people,2014-01-25,9
 !Kung people,2014-01-26,19
 !Kung people,2014-01-27,23
-!Kung people,2014-01-06,0
 !Kung people,2014-01-07,28
 !Kung people,2014-01-04,12
 !Kung people,2014-01-05,3
@@ -71,7 +70,6 @@ article,date,pageview
 !Kung people,2014-06-13,35
 !Kung people,2014-06-18,28
 !Kung people,2014-06-19,24
-!Kung people,2014-06-31,0
 !Kung people,2014-06-09,24
 !Kung people,2014-06-08,22
 !Kung people,2014-06-03,24
@@ -93,7 +91,6 @@ article,date,pageview
 !Kung people,2014-06-28,27
 !Kung people,2014-06-30,22
 !Kung people,2014-04-30,24
-!Kung people,2014-04-31,0
 !Kung people,2014-04-16,28
 !Kung people,2014-04-17,22
 !Kung people,2014-04-14,34
@@ -183,8 +180,6 @@ article,date,pageview
 !Kung people,2014-02-18,20
 !Kung people,2014-02-19,31
 !Kung people,2014-02-08,19
-!Kung people,2014-02-30,0
-!Kung people,2014-02-31,0
 !Kung people,2014-07-17,26
 !Kung people,2014-07-16,38
 !Kung people,2014-07-15,21
@@ -218,7 +213,6 @@ article,date,pageview
 !Kung people,2014-07-21,38
 !Kung people,2014-09-19,24
 !Kung people,2014-09-18,25
-!Kung people,2014-09-31,0
 !Kung people,2014-09-30,48
 !Kung people,2014-09-15,44
 !Kung people,2014-09-14,37
@@ -340,7 +334,6 @@ article,date,pageview
 !Kung people,2014-12-16,48
 !Kung people,2014-12-24,28
 !Kung people,2014-12-25,25
-!Kung people,2014-08-28,0
 !Kung people,2014-08-30,27
 !Kung people,2014-08-31,21
 !Kung people,2014-08-09,35
@@ -403,7 +396,6 @@ Convenience food,2014-01-09,316
 Convenience food,2014-01-31,273
 Convenience food,2014-01-30,347
 Convenience food,2014-04-30,324
-Convenience food,2014-04-31,0
 Convenience food,2014-04-16,286
 Convenience food,2014-04-17,257
 Convenience food,2014-04-14,298
@@ -462,8 +454,6 @@ Convenience food,2014-02-17,361
 Convenience food,2014-02-18,327
 Convenience food,2014-02-19,367
 Convenience food,2014-02-08,264
-Convenience food,2014-02-30,0
-Convenience food,2014-02-31,0
 Convenience food,2014-05-27,294
 Convenience food,2014-05-06,412
 Convenience food,2014-05-21,327
@@ -536,7 +526,6 @@ Convenience food,2014-06-12,295
 Convenience food,2014-06-13,224
 Convenience food,2014-06-18,257
 Convenience food,2014-06-19,220
-Convenience food,2014-06-31,0
 Convenience food,2014-06-09,271
 Convenience food,2014-06-08,218
 Convenience food,2014-06-03,303
@@ -590,7 +579,6 @@ Convenience food,2014-07-20,155
 Convenience food,2014-07-21,260
 Convenience food,2014-09-19,238
 Convenience food,2014-09-18,288
-Convenience food,2014-09-31,0
 Convenience food,2014-09-30,299
 Convenience food,2014-09-15,284
 Convenience food,2014-09-14,193
@@ -630,7 +618,6 @@ Convenience food,2014-11-26,279
 Convenience food,2014-11-29,167
 Convenience food,2014-11-28,163
 Convenience food,2014-11-30,143
-Convenience food,2014-11-31,0
 Convenience food,2014-11-14,231
 Convenience food,2014-11-15,215
 Convenience food,2014-11-16,216
@@ -650,7 +637,6 @@ Convenience food,2014-11-07,251
 Convenience food,2014-11-06,256
 Convenience food,2014-11-05,313
 Convenience food,2014-11-04,298
-Convenience food,2014-08-28,0
 Convenience food,2014-08-30,165
 Convenience food,2014-08-31,158
 Convenience food,2014-08-09,146
@@ -790,7 +776,6 @@ Acid,2014-02-21,2977
 Acid,2014-02-20,3539
 Acid,2014-02-09,2527
 Acid,2014-02-22,1922
-Acid,2014-02-29,0
 Acid,2014-02-28,3023
 Acid,2014-02-10,3742
 Acid,2014-02-11,3973
@@ -803,8 +788,6 @@ Acid,2014-02-17,3402
 Acid,2014-02-18,3557
 Acid,2014-02-19,3584
 Acid,2014-02-08,2051
-Acid,2014-02-30,0
-Acid,2014-02-31,0
 Acid,2014-03-13,3401
 Acid,2014-03-12,3596
 Acid,2014-03-11,3769
@@ -837,7 +820,6 @@ Acid,2014-03-24,3598
 Acid,2014-03-25,4000
 Acid,2014-03-27,3537
 Acid,2014-04-30,3490
-Acid,2014-04-31,0
 Acid,2014-04-16,3454
 Acid,2014-04-17,3057
 Acid,2014-04-14,3403
@@ -908,7 +890,6 @@ Acid,2014-06-12,3107
 Acid,2014-06-13,2500
 Acid,2014-06-18,3101
 Acid,2014-06-19,3296
-Acid,2014-06-31,0
 Acid,2014-06-09,3117
 Acid,2014-06-08,1947
 Acid,2014-06-03,3406
@@ -960,7 +941,6 @@ Acid,2014-07-22,3337
 Acid,2014-07-23,3121
 Acid,2014-07-20,1981
 Acid,2014-07-21,3307
-Acid,2014-08-28,0
 Acid,2014-08-30,1612
 Acid,2014-08-31,2083
 Acid,2014-08-09,1724
@@ -1033,7 +1013,6 @@ Acid,2014-11-26,2870
 Acid,2014-11-29,1493
 Acid,2014-11-28,1882
 Acid,2014-11-30,1338
-Acid,2014-11-31,0
 Acid,2014-11-14,2652
 Acid,2014-11-15,1830
 Acid,2014-11-16,2052
@@ -1055,7 +1034,6 @@ Acid,2014-11-05,3183
 Acid,2014-11-04,3291
 Acid,2014-09-19,3107
 Acid,2014-09-18,3422
-Acid,2014-09-31,0
 Acid,2014-09-30,3584
 Acid,2014-09-15,3459
 Acid,2014-09-14,2254

@@ -1,11 +1,11 @@
 {{#articles}}
 	<div>
 		<div class="">
-			<!--<h2>-->
+			<h2>
 				<a href="https://en.wikipedia.org/wiki/{{article}}" target="_blank">
 					{{article}}
 				</a>
-			<!--<h2>-->
+			<h2>
 		</div>
 		<div class="box_100">
 			<div class="box_11">Inc. links: {{entry_links}}</div>

@@ -39,7 +39,7 @@ d3.csv("../../data/ed.csv", function(error, data) { // ed; edit_test1; _test ;
     if (error) throw error;
 
     // set x and y domain
-    var sizeDomain = d3.extent(data, function(d){return  +d.size/+d.article }) //Math.round()
+    var sizeDomain = d3.extent(data, function(d){return  +d.size }) ///+d.article; Math.round()
     var timeDomain = d3.extent(data, function(d){return dateFormat.parse(d.date)})
 
     // nest dataset for every article 
@@ -70,7 +70,7 @@ d3.csv("../../data/ed.csv", function(error, data) { // ed; edit_test1; _test ;
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient('bottom') //bottom
-        .ticks(d3.time.years,1)
+        .ticks(d3.time.years,10)
         //.ticks(d3.time.months, 1)
         .tickFormat(d3.time.format('%Y')) // %m
         .tickSize(height)
@@ -91,7 +91,7 @@ d3.csv("../../data/ed.csv", function(error, data) { // ed; edit_test1; _test ;
 
     var line = d3.svg.line()
         .interpolate("linear") // bundle
-        .x(function(d) { return x(dateFormat.parse(d.date)) }) 
+        .x(function(d) { return x(dateFormat.parse(d.date))  }) 
 
         //.y0(0)
         .y(function(d) { return - (+d.difference ) / 900 /*( - yAxis(+d.difference)  ) */  }); // ( yAxis(Math.round(+d.difference)) / 2) 
@@ -123,7 +123,7 @@ d3.csv("../../data/ed.csv", function(error, data) { // ed; edit_test1; _test ;
             return (d.key)
         })
         .attr("transform", function(d, i) { return "translate(0," + (y(d.key) + padding)   + ")"; })
-        .style("fill", "none") // §ue
+        .style("fill", "none") // blue
         .style("stroke", "blue")  //none
         .style("stroke-width", "1")
         .attr("d", function(d){ return line(d.values) })
@@ -159,12 +159,14 @@ d3.csv("../../data/ed.csv", function(error, data) { // ed; edit_test1; _test ;
         .style("text-anchor","end")
         .text(function(d,i){return  (i + 1) +  ': ' +  (d.key) })
 
+    /*
     var legend = svg.append("g")
         .attr("class","legend");
 
     var vlines = legend.append("g")
         .attr("class","vlines axis")
         .call(xAxis)
+    */
 
 })
     /*

@@ -7,7 +7,6 @@ main{
     width: 90%;
     margin: 0 auto;
 }
-/*
 .bar {
     fill: steelblue;
 }
@@ -32,17 +31,17 @@ main{
     text-align: center;
 }
 .svg_content {
-    position: relative;
+    /*position: relative;*/
+    margin: auto;
+    width: 90%;
+    /*height: 90%;
+    position: absolute;*/
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    margin: auto;
-    width: 90%;
-    height: 90%;
-    position: absolute;
     vertical-align: middle;
-}*/
+}
 header h2{
   /*position: fixed;
   width: 100%;*/
@@ -66,7 +65,7 @@ header h2{
 #articles{
     border-top: 3px solid black;
     margin: 0 0 30px; 
-    padding: 50px 0 0; 
+    padding: 20px 0 0; 
 }
 .box_100 {
     width: 100%;
