@@ -3,17 +3,42 @@
 	<head>
 		<title>Articles</title>
 		<script src="lib/js/jquery-1.11.1.min.js" defer></script>
-		<script src="lib/js/mustache.min.js" defer></script>  
+		<script src="lib/js/mustache.min.js" defer></script>
+		<link rel="stylesheet" type="text/css" href="lib/css/view.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>  
 		<!--<script src="../library/d3.min.js"></script>-->   
 	</head>
 
 	<body onload="articles()"> <!-- sample1()  --> 
 
-		<main>
-			<h1>Articles</h1>
-			<div id="sampleArea"></div>
-			<div id="sampleArea1"></div>
+		<main><!--  onload="stickyIt() -->
+			<header id="header">
+				<h2>Wikipedia Primary School</h2>
+				<h1>Articles</h1>
+				<h5>Last updated on 20<sup>th</sup> August 2015</h5>
+			</header>
+			<!--<div id="labels">
+				<div class="box_11">Incoming links</div>
+				<div class="box_11">Outgoing links</div>
+				<div class="box_11">Page rank</div>
+				<div class="box_11">Daily pageview</div>
+				<div class="box_11">Issues</div>
+				<div class="box_11">References</div>
+				<div class="box_11">Notes</div>
+				<div class="box_11">Images</div>
+				<div class="box_11">See Also</div>
+			</div>-->
+			<div id="articles">
+				
+			</div>
+			<!--<div id="sampleArea1"></div>-->
 		</main>
+
+	<script type="text/javascript">
+
+
+
+	</script>
 
 		<script>
 
@@ -22,9 +47,46 @@
 				$.get('template/template_articles.tpl', function(tpl) {
 				    $.getJSON('data/articles.json', function(data) {
 				        var html = Mustache.render(tpl, data);
-				        $('#sampleArea').html(html);
+				        $('#articles').html(html);
 				    });
 				});
+			}
+
+			function sitcky() {
+
+				$(window).scroll(function() {
+
+					if ($(this).scrollTop() > 1){  
+					    $('header').addClass("sticky");
+					}
+					else{
+					    $('header').removeClass("sticky");
+					}
+				});
+
+			}
+
+			// Create a clone of the menu, right next to original.
+			/*$('.menu').addClass('original').clone().insertAfter('.menu').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
+
+			scrollIntervalID = setInterval(stickIt, 10);*/
+
+			//var _rys = jQuery.noConflict();
+
+			function stickyIt() {
+
+				/*_rys$("document").ready(function(){ */
+				
+					$(window).scroll(function () {
+						if ($(this).scrollTop() > 10) {
+							$('#header').addClass("sticky");
+						} else {
+							$('#header').removeClass("sticky");
+						}
+					});
+
+				//});
+
 			}
 
 			/*
@@ -236,10 +298,7 @@
 		</script>
 
 		<style type="text/css">
-			main{
-				width: 90%;
-				margin: 0 auto;
-			}
+
 		</style>
 
 
