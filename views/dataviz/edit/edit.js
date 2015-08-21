@@ -35,7 +35,7 @@ var dateFormat = d3.time.format("%d.%m.%y"); // %Y-%m-%d
     %% - a literal "%" character.
 */
 
-d3.csv("../../data/ed.csv", function(error, data) { // ed; edit_test1; _test ;
+d3.csv("../../data/edit.csv", function(error, data) { // ed; edit_test1; _test ;
     if (error) throw error;
 
     // set x and y domain

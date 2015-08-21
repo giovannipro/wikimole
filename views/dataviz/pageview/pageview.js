@@ -40,7 +40,7 @@ var fontweight = 300;
 */
 
 // get data (it must to be ordered for article and in cronological order)
-d3.csv("../../data/pageview1.csv", function(error, data) { // ed; edit_test1; _test ;
+d3.csv("../../data/pageview.csv", function(error, data) { // ed; edit_test1; _test ;
     if (error) throw error;
 
     // set x and y domain

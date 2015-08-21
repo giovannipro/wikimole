@@ -11,7 +11,7 @@
 			<div class="box_11">Inc. links: {{entry_links}}</div>
 			<div class="box_11">Out. links: {{exit_links}}</div>
 			<div class="box_11">Page rank: {{pagerank}}</div>
-			<div class="box_11">Daily pageview: {{daily_pageview}}</div>
+			<div class="box_11">Daily page views: {{daily_pageview}}</div>
 			<div class="box_11">Issues: {{issues}}</div>
 			<div class="box_11">References: {{references}}</div>
 			<div class="box_11">Notes: {{notes}}</div>
