@@ -859,7 +859,7 @@ function get_one_year_pageview(yearString, monthString, article, doPrint) {
 		if (!yearPV.hasOwnProperty(yearString)) {
 			yearPV[yearString] = {};
 		}
-
+		
 		//console.log(wikiResponse)
 
 		yearPV[yearString][monthString] = wikiResponse.daily_views;
@@ -892,6 +892,24 @@ function get_one_year_pageview(yearString, monthString, article, doPrint) {
         console.log(thrownError);
 	})
 };
+
+function get_monthly_pageview(article) {
+	var container = $('#pageviews');
+	$('.hide_1').hide()
+
+	//container.append( '[{"article":"' + article + '"},{"pageviews":[<br/>')
+	
+	for (i = 1; i < 10; i++) { 
+		var yearString = '2014' ;
+		var monthString = '0'+i ;		
+		get_one_year_pageview(yearString, monthString, article);
+	}
+	for (i = 10; i < 13; i++) { //13
+		var yearString = '2014' ;
+		var monthString =  i + '';
+		get_one_year_pageview(yearString, monthString, article, monthString === '12'); 
+	}
+}
 
 function get_yearly_pageview(article) {
 	var container = $('#pageviews');
