@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Articles</title>
+		<script src="lib/js/jquery-1.11.1.min.js" defer></script>
+		<!--<script src="lib/js/mustache.min.js" defer></script>-->
+		<script src="lib/js/handlebars-v4.0.2.js" defer></script>
+		<link rel="stylesheet" type="text/css" href="lib/css/view.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body onload="articles()"> 
+
+		<main><!--  onload="stickyIt() -->
+			<header id="header">
+				<h2>Wikipedia Primary School</h2>
+				<h1>Articles</h1>
+				<!--<h5>Last updated on 20<sup>th</sup> August 2015</h5>-->
+				<h5>Last updated on 24<sup>th</sup> September 2015</h5>
+			</header>
+
+			<div id="articles"></div>
+		
+		</main>
+
+		<script>
+
+			function articles() {
+
+				var source = "<p>Hello, my name is {{name}}. I am from {{hometown}}. I have " + "{{kids.length}} kids:</p>" + "<ul>{{#kids}}<li>{{name}} is {{age}}</li>{{/kids}}</ul>";
+
+				var template = Handlebars.compile(source);
+
+				var data = { "name": "Alan", "hometown": "Somewhere, TX", "kids": [{"name": "Jimmy", "age": "12"}, {"name": "Sally", "age": "4"}]};
+
+				var result = template(data);
+
+				document.getElementById('articles').innerhtml = result;
+
+				/*
+		        var source;
+	    	    var template;
+
+	    	    var path = 'template/template_articles.tpl';
+
+	    	    $.when(
+
+		            $.ajax({
+	    		        dataType: "json",
+	            		url: "data/articles.json"
+	        		}),
+
+  		        	$.ajax({
+		            	url:"template/template_articles.tpl"
+        			})
+
+		        	.done(function(data,html){
+				
+				        var template = Handlebars.compile(html); //(html[0])
+	        			$(template(data[0])).appendTo("#articles");
+
+	        			console.log(template)
+	        		})
+
+        		)
+*/
+
+
+	        	/*
+				var template_source  = $.get('template/template_articles.tpl').html();	
+
+				var template = Handlebars.compile(template_source);	
+
+				var context = {username: "alan", firstName: "Alan", lastName: "Johnson", email: "alan@test.com" };
+
+				var output = template(context);
+
+				document.getElementById('articles').innerhtml = output;
+
+				/*
+				$.get('template/template_articles.tpl', function (data) {
+
+				    var template = Handlebars.compile(data);
+				    $(target).html(template(jsonData));
+				
+				}, 'html')
+
+				var source  = $.get('template/template_articles.tpl').html();
+
+	  			var template = Handlebars.compile(source);
+			  	
+			  	var data = { users: [
+			    	{username: "alan", firstName: "Alan", lastName: "Johnson", email: "alan@test.com" },
+			      	{username: "allison", firstName: "Allison", lastName: "House", email: "allison@test.com" },
+			      	{username: "ryan", firstName: "Ryan", lastName: "Carson", email: "ryan@test.com" }
+			    ]};
+
+	  			$("#articles").html(template(data));
+				
+
+				/*$.get('template/template_articles.tpl', function(tpl) {
+				    $.getJSON('data/articles.json', function(data) {
+				        var html = Mustache.render(tpl, data);
+				        $('#articles').html(html);
+				    });
+				});*/
+			}
+
+			/*
+			function sitcky() {
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 1){  
+					    $('header').addClass("sticky");
+					}
+					else{
+					    $('header').removeClass("sticky");
+					}
+				});
+			
+			}
+			*/
+
+		</script>   
+
+	</body>
+</html>
+
+
+
+<!-- 
+
+On articles_list.json put 
+{
+  "articles": [
+		...
+	]
+}
+
+
+-->

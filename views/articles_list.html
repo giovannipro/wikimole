@@ -3,65 +3,142 @@
 	<head>
 		<title>Articles</title>
 		<script src="lib/js/jquery-1.11.1.min.js" defer></script>
-		<script src="lib/js/mustache.min.js" defer></script>
-		<!--<script src="lib/js/handlebars-v4.0.2.js" defer></script>-->
+		<script src="lib/js/handlebars-v4.0.2.js" defer></script>
 		<link rel="stylesheet" type="text/css" href="lib/css/view.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	</head>
-
 	<body onload="articles()"> 
-
-		<main><!--  onload="stickyIt() -->
+		<main>
 			<header id="header">
 				<h2>Wikipedia Primary School</h2>
 				<h1>Articles</h1>
-				<!--<h5>Last updated on 20<sup>th</sup> August 2015</h5>-->
-				<h5>Last updated on 24<sup>th</sup> September 2015</h5>
+				<h5>
+					Last updated on September 24<sup>th</sup> 2015; 
+					(previous August 20<sup>th</sup> 2015)
+				</h5>
 			</header>
 
 			<div id="articles"></div>
 		
 		</main>
-
 		<script>
+			function articles() {
 
-			/*
+				var template_source = 'template/template_articles.tpl';
+				var data_source = 'data/articles.json';
+				var target = '#articles';
 
-			var source   = $("#articles").html();
-  			var template = Handlebars.compile(source);
-		  	var data = { users: [
-		    	{username: "alan", firstName: "Alan", lastName: "Johnson", email: "alan@test.com" },
-		      	{username: "allison", firstName: "Allison", lastName: "House", email: "allison@test.com" },
-		      	{username: "ryan", firstName: "Ryan", lastName: "Carson", email: "ryan@test.com" }
-		    ]};
-  			$("#content-placeholder").html(template(data));
-			*/
 
-			
-			function articles() {				
-				$.get('template/template_articles.tpl', function(tpl) {
-				    $.getJSON('data/articles.json', function(data) {
-				        var html = Mustache.render(tpl, data);
-				        $('#articles').html(html);
+				$.get( template_source , function(tpl) {
+				    $.getJSON( data_source , function(data) {
+
+				    	var template = Handlebars.compile(tpl); 
+
+				    	$(target).html(template(data));
+
 				    });
+
 				});
+
+				Handlebars.registerHelper('compare', function(lvalue, rvalue, options) {
+
+				    if (arguments.length < 3)
+				        throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
+
+				    var operator = options.hash.operator || "==";
+
+				    var operators = {
+				        '==':       function(l,r) { return l == r; },
+				        '===':      function(l,r) { return l === r; },
+				        '!=':       function(l,r) { return l != r; },
+				        '<':        function(l,r) { return l < r; },
+				        '>':        function(l,r) { return l > r; },
+				        '<=':       function(l,r) { return l <= r; },
+				        '>=':       function(l,r) { return l >= r; },
+				        'typeof':   function(l,r) { return typeof l == r; }
+				    }
+
+				    if (!operators[operator])
+				        throw new Error("Handlerbars Helper 'compare' doesn't know the operator "+operator);
+
+				    var result = operators[operator](lvalue,rvalue);
+
+				    if( result ) {
+				        return options.fn(this);
+				    } else {
+				        return options.inverse(this);
+				    }
+
+				});
+
+				Handlebars.registerHelper('if_more', function(a) {
+				    if(a > 0)
+				        return ('+++a') ;
+				    if(a < 0)
+				        return ('---a') ;
+				    else
+				    	return ('000a') ;
+				});
+
+				Handlebars.registerHelper('iff', function(a, operator, b, opts) {
+				    var bool = false;
+				    switch(operator) {
+				       case '==':
+				           bool = a == b;
+				           break;
+				       case '>':
+				           bool = a > b;
+				           break;
+				       case '<':
+				           bool = a < b;
+				           break;
+				       default:
+				           throw "Unknown operator " + operator;
+				    }
+				 
+				    if (bool) {
+				        return opts.fn(this);
+				    } else {
+				        return opts.inverse(this);
+				    }
+				});
+
 			}
 
-			/*
-			function sitcky() {
-				$(window).scroll(function() {
-					if ($(this).scrollTop() > 1){  
-					    $('header').addClass("sticky");
-					}
-					else{
-					    $('header').removeClass("sticky");
-					}
-				});
-			
+
+
+		</script>
+		<style type="text/css">
+			.green{
+				background-color: #0BC10B;
+				display: block;
+				padding: 10px 5px;
+				width: 34px;
+				text-align: center;
 			}
-			*/
-
-		</script>   
-
+			.red{
+				background-color: #FF5E00;
+				display: block;
+				padding: 10px 5px;
+				width: 34px;
+				text-align: center;
+			}			
+			.gray{
+				background-color: #D8D8D8;
+				display: block;
+				padding: 10px 5px;
+				width: 34px;
+				text-align: center;
+			}
+			.white{
+				background-color: #F3F3F3;
+				display: block;
+				padding: 10px 5px;
+				width: 34px;
+				text-align: center;
+			}
+		</style>
 	</body>
 </html>
+
+<!--<span style ="background-color:red">{{entry_links_diff}}</span>-->

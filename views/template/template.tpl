@@ -1,4 +1,4 @@
-{{#articles}}
+{{#each articles}}
 	<div class="left">
 		
 		{{index}} - 
@@ -35,7 +35,7 @@
 		{{i}}
 
 	</div>
-{{/articles}}
+{{/each}}
 
 
 <!--
