@@ -13,8 +13,8 @@ var proxy_pageview = baseurl + 'proxy_pageviews.php' + "?url=" ;
 var pageview_service = "http://stats.grok.se/json/en/"; // '201506/nelson_mandela
 var edit_api = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvend=1419984000&rvdir=newer&indexpageids=&titles='; //  until Wed, 31 Dec 2014 00:00:00 GMT*/
 var wikilink = 'https://en.wikipedia.org/wiki/';
-var edits = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=100&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles='; 
-var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle='
+var edits_15 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles='; 
+var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=1000&format=json&bltitle='
 
 
 /* ------------------------------------
@@ -51,131 +51,61 @@ function hide() {
 }
 
 
-
 /* ------------------------------------
 EDITS
 -------------------------------------*/
 
 /*
-// get edits for one article
-function edits_json(url) {
-    
-    $.ajax(url, {
-        dataType:  "jsonp",
-        success: function( wikiResponse ) {
-
-        	//console.log(wikiResponse)
-
-        	container = $('#edits');
-        	url_clean = url.replace(edits, '')
-        	
-        	container.append( '[{"article":"' + url_clean + '"},{"edit":[<br/>')
-
-        	obj = []
-			obj = $(wikiResponse.query.pageids)//.pages)[0]
-			pageids = obj[0].toString()
-			edit =  $(wikiResponse.query.pages)[0][pageids].revisions //.pageids; .revisions
-
-        	//console.log(edit)
-        	console.log(url_clean)
-
-        	jQuery.each( edit, function( i , v ) {
-
-        		container.append( '{' )
-
-        		jQuery.each( v, function( i, v ) {
-        	   		if (i.indexOf("size")  === 0 ) {
-        	   			container.append( '"' +i + '":' + v )
-        	   		}
-        	   		else{
-        	   			container.append( '"' +i + '":"' + v + '",')
-        	   		}
-        	   	})
-
-        		if ( i === (edit.length-1)) {
-        			container.append( '}<br/>' )
-        		}
-        		else {
-        			container.append( '},<br/>' )
-        		}
-        	
-        	})
-
-        	container.append( ']}],<br/>' )
-
-			$('.hide_1').hide()
-        },   
-		error : function (xhr, ajaxOptions, thrownError) {
-	        console.log(xhr.status);
-	        console.log(thrownError);
-		}
-    })
-
-}
+size in più o meno
+editori unici
+edit
 */
 
-function edits_csv(url) {
+function get_edits(url) {
     
     $.ajax(url, {
         dataType:  "jsonp",
         success: function( wikiResponse ) {
 
-        	//console.log(wikiResponse)
-
         	container = $('#edits');
-        	url_clean = url.replace(edits, '')
+        	url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=','').replace(edits, '')
         	
         	obj = []
-			obj = $(wikiResponse.query.pageids)//.pages)[0]
+			obj = $(wikiResponse.query.pageids)
 
 			pageids = obj[0].toString()
-			edit =  $(wikiResponse.query.pages)[0][pageids].revisions //.pageids; .revisions
+			edit =  $(wikiResponse.query.pages)[0][pageids].revisions
+
+			editors =  $(wikiResponse.query.pages)[0][pageids].revisions.user
 
         	console.log(edit)
-        	//console.log(url_clean)
+        	//console.log(editors)
 
-        	
-        	/*
-        	jQuery.each( edit, function( i , v ) {
+        	sum = 0
 
-        		container.append( url_clean + ',' )
+        	jQuery.each( edit, function( a,b ) {
 
-        		jQuery.each( v, function( i, v ) {
+        		jQuery.each( b, function( k,v ) {
 
-        			//container.append( v + ',')
-        	   		
-        			
-        	   		if (i.indexOf("size")  === 0 ) {
-        	   			container.append( v )
-        	   		}
-        	   	   	if (i.indexOf("timestamp")  === 0 ) {
-        	   	   		// str.substring(1, 4); 
-        	   			container.append( v.substring(0, 10) + ',' ); 
-        	   		}
-        	   		if (i.indexOf("user")  === 0 ) {
-        	   			container.append( v + ',')
-        	   		}
-        	   		else {
-        	   			//
-        	   		}
-        	   	})
-
-        		if ( i === (edit.length-1)) {
-        			container.append( '<br/>' )
-        		}
-        		else {
-        			container.append( ',<br/>' )
-        		}
+        			console.log(v)
+        		
+        			if (k.indexOf("bot")  === 1 ) {
+        				sum++;
+        				console.log('si')
+        			}
         		
         		})
-        	*/
 
-        		container.append( '</br>')
-        	
-        	//})
+				//console.log(b)
 
-        	//container.append( ']}],<br/>' )
+				container.append()
+        		/*console.log(sum)
+        		console.log(b)*/
 
+        	})
+
+        	console.log(sum)
+        	container.append(url_clean + ',' + sum + '</br>')
 			$('.hide_1').hide()
         },   
 		error : function (xhr, ajaxOptions, thrownError) {
@@ -185,28 +115,65 @@ function edits_csv(url) {
     })
 
 }
-
-/*
-// get entry links for all of article
-function get_all_edits_json() {
-	var container = $('#edits')
-	jQuery.each( list, function( i, val ) { // articles; list;
-		edits_json( edits + val )
-		//container.append( '[{"article":"' + val + '"},{"edit":[<br/>')
-
-		//  start : '{"edits": ['
-		//  end : 	']}'		
-		console.log(val)
-	})	
-}
-*/
 
 // get entry links for all of article
 function get_all_edits() {
 	var container = $('#edits')
-	//container.append('article,user,timestamp,size<br/>')
+	//container.append( articles +',<br/>')
 	jQuery.each( articles, function( i, val ) { // articles; list;
-		edits_csv( edits + val )	
-		console.log(val)
+		get_edits( edits_15 + val )
+		//container.append( articles +',')	
+		//console.log(list)
+	})	
+}
+
+
+function get_editors(url) {
+    
+    $.ajax(url, {
+        dataType:  "jsonp",
+        success: function( wikiResponse ) {
+
+        	container = $('#edits');
+        	url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=','').replace(edits, '')
+        	
+        	obj = []
+			obj = $(wikiResponse.query.pageids)
+
+			pageids = obj[0].toString()
+			edit =  $(wikiResponse.query.pages)[0][pageids].revisions
+
+        	console.log(edit)
+
+        	sum = 0
+
+        	jQuery.each( edit, function( a,b ) {
+
+        		sum++;
+				container.append()
+        		/*console.log(sum)
+        		console.log(b)*/
+
+        	})
+
+        	container.append(url_clean + ',' + sum + '</br>')
+			$('.hide_1').hide()
+        },   
+		error : function (xhr, ajaxOptions, thrownError) {
+	        console.log(xhr.status);
+	        console.log(thrownError);
+		}
+    })
+
+}
+
+// get entry links for all of articl5e
+function get_all_editors() {
+	var container = $('#edits')
+	//container.append( articles +',<br/>')
+	jQuery.each( articles, function( i, val ) { // articles; list;
+		get_edits( edits_15 + val )
+		//container.append( articles +',')	
+		//console.log(list)
 	})	
 }

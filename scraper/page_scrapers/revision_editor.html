@@ -4,8 +4,8 @@
 		<title>Revisions and editors</title>
 		<link rel="stylesheet" href="../lib/css/scraper.css" rel="stylesheet">
 	</head>
-	<body onload="test()">
-		<main onload="get_n_edits('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=100&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=HIV')">
+	<body onload="test(); get_all_edits">
+		<main>
 			<div id="title" class="hide_1">
 				<h1>Revisions and editors</h1>
 			</div>
@@ -13,15 +13,15 @@
 				<div class="label one hide_1" onclick="get_all_edits()">
 					<span>Get number of edits</span>
 				</div>
-				<div id="" class="hide_2"></div>
+				<div id="edits" class="hide_2"></div>
 				<div id="content1" class="hide_2" onclick="hide()"></div>
 			</div>
 
 			<div class="box_33">
-				<div class="label three hide_1" onclick="get_all_id_label()">
-					<span>Get id-label (nodes)<span>
+				<div class="label three hide_1" onclick="get_all_editors()">
+					<span>Get unique editors<span>
 				</div>
-				<div id="id_label" class="hide_2"></div>				
+				<div id="editors" class="hide_2"></div>				
 				<div id="content2" class="hide_2" onclick="hide()"></div>
 			</div>
 
