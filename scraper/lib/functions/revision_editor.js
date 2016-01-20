@@ -78,34 +78,73 @@ function get_edits(url) {
 
 			editors =  $(wikiResponse.query.pages)[0][pageids].revisions.user
 
-        	console.log(edit)
+        	//console.log(edit)
         	//console.log(editors)
 
         	sum = 0
 
+            findme1 = 'bot'
+            //findme2 = 'Bot'
+
         	jQuery.each( edit, function( a,b ) {
 
-        		jQuery.each( b, function( k,v ) {
+                
 
-        			console.log(v)
+                user = b.user
+
+                //console.log(user)
+
+                if ( user.toLowerCase().indexOf(findme1) >= 0 ) {  // >= ===  || user.indexOf(findme2) !== 0   0 
+                        
+                        user.toLowerCase().replace(findme1, " bot");
+
+                    //console.log(user)
+                    //console.log('bot')
+                }
+                else {
+                    console.log(user)
+                    //console.log('no bot')
+
+                    sum++
+                }
+
+                //console.log(b.user)
+
+                /*console.log(b)
+
+                console.log(sum)
+                console.log(b.user)
+                console.log(b.timestamp)
+                console.log(b.size)
+
+
+        		/*
+                jQuery.each( b, function( k,v ) {
+
+        			//console.log(v)
         		
-        			if (k.indexOf("bot")  === 1 ) {
+                    if (k.indexOf("bot")  === 1 ) {
         				sum++;
         				console.log('si')
         			}
         		
         		})
+                */
 
 				//console.log(b)
 
-				container.append()
+				//container.append()
         		/*console.log(sum)
         		console.log(b)*/
 
         	})
 
-        	console.log(sum)
-        	container.append(url_clean + ',' + sum + '</br>')
+            container.append(url_clean)
+            container.append(',')
+            container.append(sum)
+
+        	/*console.log(sum)
+        	container.append(url_clean + ',' + sum + '</br>')*/
 			$('.hide_1').hide()
         },   
 		error : function (xhr, ajaxOptions, thrownError) {
