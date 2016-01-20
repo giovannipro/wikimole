@@ -7,13 +7,9 @@ SOURCE
 -------------------------------------*/
 
 var baseurl = 'http://localhost:8888/wikimole/scraper/proxy/';
-/*var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=';
-var proxy = baseurl + 'proxy_interlinks.php' + "?url=" ;
-var proxy_pageview = baseurl + 'proxy_pageviews.php' + "?url=" ;
-var pageview_service = "http://stats.grok.se/json/en/"; // '201506/nelson_mandela
-var edit_api = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvend=1419984000&rvdir=newer&indexpageids=&titles='; //  until Wed, 31 Dec 2014 00:00:00 GMT*/
 var wikilink = 'https://en.wikipedia.org/wiki/';
 var edits_15 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles='; 
+var edits_14 = '';
 var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=1000&format=json&bltitle='
 
 
@@ -77,7 +73,7 @@ function get_edits(url) {
 			edit =  $(wikiResponse.query.pages)[0][pageids].revisions
             //users = $(wikiResponse.query.pages)[0][pageids].revisions.user
 
-        	console.log(edit)
+        	//console.log(edit)
 
         	sum_edits = 0
             sum_editors = 0
@@ -93,14 +89,21 @@ function get_edits(url) {
             });
             */
 
-            console.log(edit)
+            size_array = []
+            user_array = []
+
+            var result = [];
 
         	jQuery.each( edit, function( a,b ) {
 
                 user = b.user
+                size = b.size
 
+
+                /*
                 sorted_user = []
                 sorted_user.push( this );
+                */
 
                 //sorted_user.push(b.user)
                 //sorted_user.sort()
@@ -116,22 +119,49 @@ function get_edits(url) {
                         
                     user.toLowerCase().replace(findme1, " bot");
 
+
                 }
                 else {
                     //console.log(user)
                     sum_edits++
+                    sum_editors++
 
                     user_clean = user.replace(/./g,'_')
 
+                    user_array.push( user );
+                    sorted_user_array =  user_array.sort()
 
+                    
+
+                    $.each(sorted_user_array, function(i, e) {
+                        if ($.inArray(e, result) == -1) {
+                            result.push(e);
+                            //console.log(e)
+                            sum_editors++
+                        }
+                    })
 
 
                     /*
-                    if (sorted_user[a + 1] !== sorted_user[a]  ) {
+                    function unique(list) {
+                        
+                        $.each(list, function(i, e) {
+                            if ($.inArray(e, result) == -1) result.push(e);
+                        });
+                        return result;
+                    }*/
+
+                    //var thelist = ["ball_1", "ball_13", "ball_23", "ball_1"];
+                    //console.log(unique(thelist));
+
+
+                    /*
+
+                    if (sorted_user_array[a + 1] !== sorted_user_array[a]  ) {
                         console.log (user)
                     }
                     else {
-                        console.log ('no - ' + user)
+                        //console.log ('no - ' + user)
                     }
                     */
 
@@ -163,12 +193,14 @@ function get_edits(url) {
 
         	})
     
-            console.log(sorted_user)
+            //console.log(sorted_user_array)
+            console.log(result)
             //sorted_user.sort()
             //console.log(sorted_user)
 
             container.append(url_clean + ',')
-            container.append(sum_edits + '<br/>')
+            container.append(sum_edits + ',')
+            container.append(sum_editors + '<br/>')
 
 			$('.hide_1').hide()
         },   
@@ -183,7 +215,7 @@ function get_edits(url) {
 // get entry links for all of article
 function get_all_edits() {
 	var container = $('#edits')
-    container.append('article,edits<br/>')
+    container.append('article,edits,unique_editors,avg_size<br/>')
 	jQuery.each( articles, function( i, val ) {
 		get_edits( edits_15 + val )
 	})	
@@ -200,7 +232,7 @@ function get_editors(url) {
         success: function( wikiResponse ) {
 
         	container = $('#edits');
-        	url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=','').replace(edits, '').replace(/_/g,' ')
+        	url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=','').replace(/_/g,' ').replace(edits, '')
         	
         	obj = []
 			obj = $(wikiResponse.query.pageids)
