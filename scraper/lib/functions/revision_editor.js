@@ -21,7 +21,7 @@ var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json'; //  articles  /  articles_test
+var art_list = '../articles/articles.json'; //  articles  /  articles_test
 
 var list = [
 	'nelson_mandela',
@@ -68,83 +68,108 @@ function get_edits(url) {
         success: function( wikiResponse ) {
 
         	container = $('#edits');
-        	url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=','').replace(edits, '')
+        	url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=','').replace(edits, '').replace('_',' ')
         	
         	obj = []
 			obj = $(wikiResponse.query.pageids)
 
 			pageids = obj[0].toString()
 			edit =  $(wikiResponse.query.pages)[0][pageids].revisions
+            //users = $(wikiResponse.query.pages)[0][pageids].revisions.user
 
-			editors =  $(wikiResponse.query.pages)[0][pageids].revisions.user
+        	console.log(edit)
 
-        	//console.log(edit)
-        	//console.log(editors)
-
-        	sum = 0
+        	sum_edits = 0
+            sum_editors = 0
 
             findme1 = 'bot'
-            //findme2 = 'Bot'
+
+            //sorted_user = []
+            //sorted_user.push($(wikiResponse.query.pages)[0][pageids].revisions)
+
+            /*
+            sorted_user.sort(function (a, b) {
+                return b.user.localeCompare( b.user );
+            });
+            */
+
+            console.log(edit)
 
         	jQuery.each( edit, function( a,b ) {
 
-                
-
                 user = b.user
 
-                //console.log(user)
+                sorted_user = []
+                sorted_user.push( this );
 
-                if ( user.toLowerCase().indexOf(findme1) >= 0 ) {  // >= ===  || user.indexOf(findme2) !== 0   0 
+                //sorted_user.push(b.user)
+                //sorted_user.sort()
+
+                //$.each( user, function( x ) {
+                
+                //});
+
+                
+
+
+                if ( user.toLowerCase().indexOf(findme1) >= 0 ) {
                         
-                        user.toLowerCase().replace(findme1, " bot");
+                    user.toLowerCase().replace(findme1, " bot");
 
-                    //console.log(user)
-                    //console.log('bot')
                 }
                 else {
-                    console.log(user)
-                    //console.log('no bot')
+                    //console.log(user)
+                    sum_edits++
 
-                    sum++
+                    user_clean = user.replace(/./g,'_')
+
+
+
+
+                    /*
+                    if (sorted_user[a + 1] !== sorted_user[a]  ) {
+                        console.log (user)
+                    }
+                    else {
+                        console.log ('no - ' + user)
+                    }
+                    */
+
+                    //var arr = [9, 9, 111, 2, 3, 4, 4, 5, 7];
+                    //var sorted_arr = arr.sort(); // You can define the comparing function here. 
+                                                 // JS by default uses a crappy string compare.
+                    /*
+                    var results = [];
+                    for (var i = 0; i < user.length - 1; i++) {
+                        if (user[i + 1] == user[i]) {
+                            results.push(user[i]);
+                        }
+                    }*/
+
+                    /*
+                    var unique = $(user_clean).filter(i,itm){
+                        return i == $(user_clean).index(itm);
+                    }
+                    */
+
+                    /*
+                    $(user_clean).filter(function(i,itm){  // $.makeArray($(user).filter(function(i,itm){ 
+                        return i == $(user_clean).index(itm);
+                    })
+                    
+                    */
+
                 }
 
-                //console.log(b.user)
-
-                /*console.log(b)
-
-                console.log(sum)
-                console.log(b.user)
-                console.log(b.timestamp)
-                console.log(b.size)
-
-
-        		/*
-                jQuery.each( b, function( k,v ) {
-
-        			//console.log(v)
-        		
-                    if (k.indexOf("bot")  === 1 ) {
-        				sum++;
-        				console.log('si')
-        			}
-        		
-        		})
-                */
-
-				//console.log(b)
-
-				//container.append()
-        		/*console.log(sum)
-        		console.log(b)*/
-
         	})
+    
+            console.log(sorted_user)
+            //sorted_user.sort()
+            //console.log(sorted_user)
 
-            container.append(url_clean)
-            container.append(',')
-            container.append(sum)
+            container.append(url_clean + ',')
+            container.append(sum_edits + '<br/>')
 
-        	/*console.log(sum)
-        	container.append(url_clean + ',' + sum + '</br>')*/
 			$('.hide_1').hide()
         },   
 		error : function (xhr, ajaxOptions, thrownError) {
@@ -158,13 +183,14 @@ function get_edits(url) {
 // get entry links for all of article
 function get_all_edits() {
 	var container = $('#edits')
-	//container.append( articles +',<br/>')
-	jQuery.each( articles, function( i, val ) { // articles; list;
+    container.append('article,edits<br/>')
+	jQuery.each( articles, function( i, val ) {
 		get_edits( edits_15 + val )
-		//container.append( articles +',')	
-		//console.log(list)
 	})	
 }
+
+
+/* ------------------------------------------------------------ */
 
 
 function get_editors(url) {
@@ -174,7 +200,7 @@ function get_editors(url) {
         success: function( wikiResponse ) {
 
         	container = $('#edits');
-        	url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=','').replace(edits, '')
+        	url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=','').replace(edits, '').replace(/_/g,' ')
         	
         	obj = []
 			obj = $(wikiResponse.query.pageids)
@@ -190,8 +216,6 @@ function get_editors(url) {
 
         		sum++;
 				container.append()
-        		/*console.log(sum)
-        		console.log(b)*/
 
         	})
 
@@ -206,13 +230,10 @@ function get_editors(url) {
 
 }
 
-// get entry links for all of articl5e
+// get entry links for all of articles
 function get_all_editors() {
 	var container = $('#edits')
-	//container.append( articles +',<br/>')
-	jQuery.each( articles, function( i, val ) { // articles; list;
+	jQuery.each( articles, function( i, val ) { 
 		get_edits( edits_15 + val )
-		//container.append( articles +',')	
-		//console.log(list)
 	})	
 }
