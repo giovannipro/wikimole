@@ -8,8 +8,8 @@ SOURCE
 
 var baseurl = 'http://localhost:8888/wikimole/scraper/proxy/';
 var wikilink = 'https://en.wikipedia.org/wiki/';
-var edits_15 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles='; 
-var edits_14 = '';
+var edits_15 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=1000&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles='; 
+var edits_14 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=1000&rvstart=1388530800&rvend=1419980400&rvdir=newer&indexpageids=&titles=';
 var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=1000&format=json&bltitle='
 
 
@@ -17,7 +17,7 @@ var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json'; //  articles  /  articles_test
+var art_list = '../articles/updated_articles_list.json'; //  articles_test    / updated_articles_list
 
 var list = [
 	'nelson_mandela',
@@ -64,7 +64,7 @@ function get_edits(url) {
         success: function( wikiResponse ) {
 
         	container = $('#edits');
-        	url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=','').replace(edits, '').replace('_',' ')
+        	url_clean = url.replace(edits_14,'').replace(edits, '').replace('_',' ')
         	
         	obj = []
 			obj = $(wikiResponse.query.pageids)
@@ -72,11 +72,11 @@ function get_edits(url) {
 			pageids = obj[0].toString()
 			edit =  $(wikiResponse.query.pages)[0][pageids].revisions
             //users = $(wikiResponse.query.pages)[0][pageids].revisions.user
-
         	//console.log(edit)
 
         	sum_edits = 0
             sum_editors = 0
+            sum_size = 0
 
             findme1 = 'bot'
 
@@ -94,11 +94,13 @@ function get_edits(url) {
 
             var result = [];
 
+            var sumX = 0
+            var total = 0
+
         	jQuery.each( edit, function( a,b ) {
 
                 user = b.user
                 size = b.size
-
 
                 /*
                 sorted_user = []
@@ -112,26 +114,20 @@ function get_edits(url) {
                 
                 //});
 
-                
-
-
                 if ( user.toLowerCase().indexOf(findme1) >= 0 ) {
                         
                     user.toLowerCase().replace(findme1, " bot");
-
 
                 }
                 else {
                     //console.log(user)
                     sum_edits++
-                    sum_editors++
+                    
 
                     user_clean = user.replace(/./g,'_')
 
                     user_array.push( user );
                     sorted_user_array =  user_array.sort()
-
-                    
 
                     $.each(sorted_user_array, function(i, e) {
                         if ($.inArray(e, result) == -1) {
@@ -141,66 +137,38 @@ function get_edits(url) {
                         }
                     })
 
+                    size_array.push(size)
 
                     /*
-                    function unique(list) {
-                        
-                        $.each(list, function(i, e) {
-                            if ($.inArray(e, result) == -1) result.push(e);
-                        });
-                        return result;
-                    }*/
-
-                    //var thelist = ["ball_1", "ball_13", "ball_23", "ball_1"];
-                    //console.log(unique(thelist));
-
-
-                    /*
-
-                    if (sorted_user_array[a + 1] !== sorted_user_array[a]  ) {
-                        console.log (user)
-                    }
-                    else {
-                        //console.log ('no - ' + user)
+                    for (var i = 0; i < size_array.length; i++) {
+                        total += size_array[i] << 0;
                     }
                     */
 
-                    //var arr = [9, 9, 111, 2, 3, 4, 4, 5, 7];
-                    //var sorted_arr = arr.sort(); // You can define the comparing function here. 
-                                                 // JS by default uses a crappy string compare.
-                    /*
-                    var results = [];
-                    for (var i = 0; i < user.length - 1; i++) {
-                        if (user[i + 1] == user[i]) {
-                            results.push(user[i]);
-                        }
-                    }*/
-
-                    /*
-                    var unique = $(user_clean).filter(i,itm){
-                        return i == $(user_clean).index(itm);
-                    }
-                    */
-
-                    /*
-                    $(user_clean).filter(function(i,itm){  // $.makeArray($(user).filter(function(i,itm){ 
-                        return i == $(user_clean).index(itm);
-                    })
+                    total = eval(size_array.join("+"))
+                    average = Math.round(total / size_array.length)
                     
+                    /*
+                    length = size_array.length
+                    console.log(length)
+                    
+                    var sumX = size_array.reduce(function(a, b) { return a + b; });
+                    var avgX = sumX / length;
                     */
 
                 }
 
         	})
-    
-            //console.log(sorted_user_array)
+
             console.log(result)
-            //sorted_user.sort()
-            //console.log(sorted_user)
+            console.log(size_array)
+            console.log(total)
+            console.log(average)
 
             container.append(url_clean + ',')
             container.append(sum_edits + ',')
-            container.append(sum_editors + '<br/>')
+            container.append(sum_editors + ',')
+            container.append(average + '<br/>')
 
 			$('.hide_1').hide()
         },   
@@ -217,7 +185,7 @@ function get_all_edits() {
 	var container = $('#edits')
     container.append('article,edits,unique_editors,avg_size<br/>')
 	jQuery.each( articles, function( i, val ) {
-		get_edits( edits_15 + val )
+		get_edits( edits_14 + val )
 	})	
 }
 
@@ -268,4 +236,6 @@ function get_all_editors() {
 	jQuery.each( articles, function( i, val ) { 
 		get_edits( edits_15 + val )
 	})	
+
+    // Articles with no edits will no displayed
 }
