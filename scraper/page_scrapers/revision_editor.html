@@ -2,6 +2,7 @@
 	<head>
 		<!-- Script works if loaded by MAMP -->
 		<title>Revisions and editors</title>
+		<script src="../lib/js/jquery.min.js" defer></script>
 		<link rel="stylesheet" href="../lib/css/scraper.css" rel="stylesheet">
 	</head>
 	<body onload="test(); get_all_edits">
@@ -9,7 +10,7 @@
 			<div id="title" class="hide_1">
 				<h1>Revisions and editors</h1>
 			</div>
-			<div class="box_33">
+			<div class="box_50">
 				<div class="label one hide_1" onclick="get_all_edits()">
 					<span>Get number of edits</span>
 				</div>
@@ -17,7 +18,7 @@
 				<div id="content1" class="hide_2" onclick="hide()"></div>
 			</div>
 
-			<div class="box_33">
+			<div class="box_50">
 				<div class="label three hide_1" onclick="get_all_editors()">
 					<span>Get unique editors<span>
 				</div>
@@ -25,20 +26,19 @@
 				<div id="content2" class="hide_2" onclick="hide()"></div>
 			</div>
 
-			<div class="box_33">
+			<!--<div class="box_33">
 				<div class="label two hide_1" onclick="get_all_id_label()">
 					<span>Get id-label (nodes)<span>
 				</div>
 				<div id="id_label" class="hide_2"></div>				
 				<div id="content2" class="hide_2" onclick="hide()"></div>
-			</div>
+			</div>-->
 
 			<div class="clear"></div>
 		</main>
 
 
 	</body>
-	<script src="../lib/js/jquery.min.js" defer></script>
 	<script src="../lib/js/jquery.xdomainajax.js" defer></script>
 	<script src="../lib/functions/revision_editor.js" defer></script>
 </html>

@@ -11,6 +11,7 @@ var wikilink = 'https://en.wikipedia.org/wiki/';
 var edits_15 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=1000&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles='; 
 var edits_14 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=1000&rvstart=1388530800&rvend=1419980400&rvdir=newer&indexpageids=&titles=';
 var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=1000&format=json&bltitle='
+var user_contributs = 'https://it.wikipedia.org/w/api.php?action=query&list=usercontribs&format=json&ucnamespace=0&ucprop=title|timestamp|size|sizediff|flags&ucuser'
 
 
 /* ------------------------------------
@@ -21,7 +22,9 @@ var art_list = '../articles/updated_articles_list.json'; //  articles_test    / 
 
 var list = [
 	'nelson_mandela',
-	'africa'
+	'africa',
+    'AIDS',
+    'sexism'
 ]	
 
 // get the list of articles
@@ -29,11 +32,6 @@ $.getJSON(art_list, function(mydata) {
 	var parse_art = $.parseHTML(mydata);
 	articles = $(mydata)
 })
-
-
-/* ------------------------------------
-ENTRY LINKS
--------------------------------------*/
 
 // clean the string
 function string_clean(string) {
@@ -101,18 +99,6 @@ function get_edits(url) {
 
                 user = b.user
                 size = b.size
-
-                /*
-                sorted_user = []
-                sorted_user.push( this );
-                */
-
-                //sorted_user.push(b.user)
-                //sorted_user.sort()
-
-                //$.each( user, function( x ) {
-                
-                //});
 
                 if ( user.toLowerCase().indexOf(findme1) >= 0 ) {
                         
@@ -190,8 +176,10 @@ function get_all_edits() {
 }
 
 
-/* ------------------------------------------------------------ */
 
+/* ------------------------------------
+USERS
+-------------------------------------*/
 
 function get_editors(url) {
     
@@ -199,43 +187,86 @@ function get_editors(url) {
         dataType:  "jsonp",
         success: function( wikiResponse ) {
 
-        	container = $('#edits');
-        	url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420066800&rvend=1448924400&rvdir=newer&indexpageids=&titles=','').replace(/_/g,' ').replace(edits, '')
-        	
-        	obj = []
-			obj = $(wikiResponse.query.pageids)
+            container = $('#edits');
+            url_clean = url.replace(edits_15,'').replace(edits, '').replace('_',' ')
+            
+            obj = []
+            obj = $(wikiResponse.query.pageids)
 
-			pageids = obj[0].toString()
-			edit =  $(wikiResponse.query.pages)[0][pageids].revisions
+            pageids = obj[0].toString()
+            edit =  $(wikiResponse.query.pages)[0][pageids].revisions
 
-        	console.log(edit)
+            sum_edits = 0
+            sum_editors = 0
+            sum_size = 0
 
-        	sum = 0
+            findme1 = 'bot'
 
-        	jQuery.each( edit, function( a,b ) {
+            size_array = []
+            user_array = []
 
-        		sum++;
-				container.append()
+            var result = [];
 
-        	})
+            var sumX = 0
+            var total = 0
 
-        	container.append(url_clean + ',' + sum + '</br>')
-			$('.hide_1').hide()
+            jQuery.each( edit, function( a,b ) {
+
+                user = b.user
+                size = b.size
+
+                if ( user.toLowerCase().indexOf(findme1) >= 0 ) {
+                        
+                    user.toLowerCase().replace(findme1, " bot");
+
+                }
+                else {
+                    //sum_edits++
+                    
+                    user_clean = user.replace(/./g,'_').replace(/ /g,'_')
+
+                    user_array.push( user );
+                    user_array_sort =  user_array.sort()
+
+                    $.each(user_array_sort, function(i, e) {
+                        if ($.inArray(e, result) == -1) {
+
+                            result.push(e);
+                            
+                        }
+                    })
+
+                    sorted_result = result.sort()
+
+                }
+
+            })
+
+            //test1 = result.replace(/./g,'_').replace(/ /g,'_')
+
+            console.log(result)
+
+            test = JSON.stringify(result);
+
+            //container.append(url_clean + ':<br>')
+            container.append(test + '<br>')
+
+            $('.hide_1').hide()
         },   
-		error : function (xhr, ajaxOptions, thrownError) {
-	        console.log(xhr.status);
-	        console.log(thrownError);
-		}
+        error : function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.status);
+            console.log(thrownError);
+        }
     })
 
 }
 
-// get entry links for all of articles
+// get entry links for all of article
 function get_all_editors() {
-	var container = $('#edits')
-	jQuery.each( articles, function( i, val ) { 
-		get_edits( edits_15 + val )
-	})	
-
-    // Articles with no edits will no displayed
+    var container = $('#edits')
+    //container.append('article,edits,unique_editors,avg_size<br/>')
+    jQuery.each( articles, function( i, val ) {
+        get_editors( edits_15 + val )
+        console.log(val)
+    })  
 }
