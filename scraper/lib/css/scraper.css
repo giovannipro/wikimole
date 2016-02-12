@@ -1,3 +1,9 @@
+.scraper {
+	background-color: #95E8DD;
+	padding: 1% 0;
+}
+
+/*
 body { 
 	margin: 0;
 	padding: 0;
@@ -82,7 +88,8 @@ main{
 #data .label{
 	height: auto;
 }*/
-#data div {
+
+/*#data div {
 	cursor: default;
 	padding: 10px;
 }
@@ -97,4 +104,4 @@ main{
 }
 .red, .problem{
 	color: red;
-}
+}*/
