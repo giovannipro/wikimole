@@ -8,8 +8,6 @@ WIKIPEDIA API
 
 //var baseurl = 'http://localhost:8888/wikimole/scraper/proxy/';
 //var wikilink = 'https://en.wikipedia.org/wiki/';
-//var edits_14 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvdir=newer&indexpageids=&titles='; 
-
 var edits_14 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=';
 var edits_15 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1451606399&rvend=1420070400&rvlimit=10rvdir=newer&indexpageids=&titles=';
 
@@ -77,13 +75,8 @@ function hide() {
 EDITS
 -------------------------------------*/
 
-/*
-size in più o meno
-editori unici
-edit
-*/
-
 function get_edits(url) {
+    // edits,unique_editors,avgerage_size
     
     $.ajax(url, {
         dataType:  "jsonp",
@@ -146,37 +139,16 @@ function get_edits(url) {
 
                     total = eval(size_array.join("+"))
                     average = Math.round(total / size_array.length)
-
-                    /*
-                    for (var i = 0; i < size_array.length; i++) {
-                        total += size_array[i] << 0;
-                    }
-                    */
-
-                    /*
-                    length = size_array.length
-                    console.log(length)
-                    
-                    var sumX = size_array.reduce(function(a, b) { return a + b; });
-                    var avgX = sumX / length;
-                    */
                 }
         	})
     
-            console.log(index)
+            console.log(index + '-' + url_clean)
             console.log(sorted_result)
-
-            /*console.log(size_array)
-            console.log(total)
-            console.log(average)*/
 
             container.append(url_clean + ',')
             container.append(sum_edits + ',')
             container.append(sum_editors + ',')
             container.append(average + '<br/>')
-
-                
-
         },   
 		error : function (xhr, ajaxOptions, thrownError) {
 	        console.log(xhr.status);
@@ -188,7 +160,7 @@ function get_edits(url) {
 
 // get entry links for all of article
 function get_all_edits_2014() {
-	var container = $('#edits')
+	var container = $('#output')
     index = 0
 
     container.append('article_2014,edits,unique_editors,avg_size<br/>')
@@ -214,9 +186,8 @@ function get_all_edits_2015() {
 }
 
 
-
 /* ------------------------------------
-USERS
+EDITORS
 -------------------------------------*/
 
 function get_editors(url) {
@@ -225,8 +196,8 @@ function get_editors(url) {
         dataType:  "jsonp",
         success: function( wikiResponse ) {
 
-            container = $('#edits');
-            url_clean = url.replace(edits_15,'').replace('_',' ');  //.replace(edits, '')
+            container = $('#output');
+            url_clean = url.replace(edits_14,'').replace(edits_15,'').replace('/ /g','_');
             
             obj = []
             obj = $(wikiResponse.query.pageids)
@@ -236,21 +207,22 @@ function get_editors(url) {
             findme1 = 'bot'
 
             user_array = []
-            result = [];
+            result = []
+            sorted_result = []
+
+            all_clean = []
 
             var sumX = 0
             var total = 0
 
-            console.log(edit)
+            index++
 
             jQuery.each( edit, function( a,b ) {
 
                 user = b.user
 
                 if ( user.toLowerCase().indexOf(findme1) >= 0 ) {
-                        
                     user.toLowerCase().replace(findme1, " bot");
-
                 }
                 else {
                     user_clean = user.replace(/./g,'_').replace(/ /g,'_')
@@ -261,40 +233,73 @@ function get_editors(url) {
                     $.each(user_array_sort, function(i, e) {
                         if ($.inArray(e, result) == -1) {
 
+                            //e_clean = e.replace('/ /g','_');
                             result.push(e);
-                            
+                            all.push(e);
                         }
                     })
-
                     sorted_result = result.sort()
-
                 }
-
             })
 
-            //test = JSON.stringify(result);
-            container.append(result + ',<br>')
-            console.log(result)
+            all_sort = all.sort();
 
-            $('.hide_1').hide()
+            $.each(all_sort, function(i, a) {
+                if ($.inArray(a, all_clean) == -1) {
+                    all_clean.push(a);
+                }
+            })
+            sorted_all_clean = all_clean.sort()
+
+
+            if (index ==  stop) {  //
+                container.append(sorted_all_clean + ',<br/>')
+            }
+
+            console.log(index)
+            console.log(url_clean)
+            console.log(result)
         },   
         error : function (xhr, ajaxOptions, thrownError) {
             console.log(xhr.status);
             console.log(thrownError);
         }
     })
-
 }
 
 // get entry links for all of article
-function get_all_editors() {
-    var container = $('#edits')
+function get_all_editors_2015() {
+    //var container = $('#output')
     //container.append('article,edits,unique_editors,avg_size<br/>')
+    index = 0
+    stop = 0
+    all = []
+
     jQuery.each( articles, function( i, val ) {
         get_editors( edits_15 + val )
-        console.log(val)
-    })  
+        stop++
+    }) 
+    //console.log(stop)
+
+    $('#hide_a').hide();
+    $('#hide_b').show();
 }
+
+function get_all_editors_2014() {
+    index = 0
+    stop = 0
+    all = []
+
+    jQuery.each( articles, function( i, val ) {
+        get_editors( edits_14 + val )
+        stop++
+    }) 
+    //console.log(stop)
+    
+    $('#hide_a').hide();
+    $('#hide_b').show();
+}
+
 
 /* ------------------------------------
 EDITED ARTICLES
@@ -329,11 +334,8 @@ function get_edited_articles(url) {
                     if ($.inArray(e, result) == -1) {
                         result.push(e);
                     }
-
                 })
-                
                 sorted_result = result.sort()
-
             })
 
             console.log(result)
@@ -352,7 +354,7 @@ function get_edited_articles(url) {
 
 // get entry links for all of article
 function get_all_edited_articles() {
-    var container = $('#edits')
+    var container = $('#output')
     //container.append('article,edits,unique_editors,avg_size<br/>')
     jQuery.each( editors, function( i, val ) {
         get_edited_articles( user_contributs_15 + val )
