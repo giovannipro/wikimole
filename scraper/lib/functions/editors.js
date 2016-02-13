@@ -11,10 +11,12 @@ WIKIPEDIA API
 var edits_14 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=';
 var edits_15 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1451606399&rvend=1420070400&rvlimit=10rvdir=newer&indexpageids=&titles=';
 
+// it is valid only for registered editors 
+var user_contributs_14 = 'https://it.wikipedia.org/w/api.php?action=query&list=usercontribs&format=json&ucstart=1420070399&ucend=1388534400&ucprop=ids%7Ctitle%7Ctimestamp%7Ccomment%7Csize%7Csizediff%7Cflags%7Ctags&ucuser='; // %7Cparsedcomment
+var user_contributs_15 = 'https://it.wikipedia.org/w/api.php?action=query&list=usercontribs&format=json&ucstart=1451606399&ucend=1420070400&ucprop=ids%7Ctitle%7Ctimestamp%7Ccomment%7Csize%7Csizediff%7Cflags%7Ctags&ucuser='; // %7Cparsedcomment
+
 /*
 var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=1000&format=json&bltitle=';
-var user_contributs_14 = 'https://it.wikipedia.org/w/api.php?action=query&list=usercontribs&format=json&ucstart=1420070399&ucend=1388534400&ucprop=ids|title|timestamp|comment|parsedcomment|size|sizediff|flags|tags&ucuser=';
-var user_contributs_15 = 'https://it.wikipedia.org/w/api.php?action=query&list=usercontribs&format=json&ucstart=1451606399&ucend=1420070400&ucprop=ids|title|timestamp|comment|parsedcomment|size|sizediff|flags|tags&ucuser=';
 */
 
 /*
@@ -305,25 +307,55 @@ function get_all_editors_2014() {
 EDITED ARTICLES
 -------------------------------------*/
 
+var editor_list_14 = '../../data/edits/editors_14.csv';  // editors_14    editors_test
+var editor_list_15 = '../../data/edits/editors_15.csv';  // editors_15    editors_test
+
+// get the list of editors
+editors_14 = []
+editors_15 = []
+
+$.get(editor_list_14, function(data) {
+
+    var rows = data.split(",\n");
+    
+    rows.forEach( function getvalues(ourrow) {
+
+        //var columns = ourrow.split(",");
+        editors_14.push(ourrow)
+        //console.log(ourrow)
+    })
+    //console.log(editors_14)
+});
+
+$.get(editor_list_15, function(data) {
+
+    var rows = data.split(",\n");
+    
+    rows.forEach( function getvalues(ourrow) {
+        editors_15.push(ourrow)
+    })
+});
+
 function get_edited_articles(url) {
     
     $.ajax(url, {
         dataType:  "jsonp",
         success: function( wikiResponse ) {
 
-            container = $('#edits');
-            url_clean = url.replace(user_contributs_15,'').replace('_',' ')
+            container = $('#output');
+            url_clean = url.replace(user_contributs_14,'').replace(user_contributs_15,'').replace('_',' ')
 
             user_art = $(wikiResponse.query.usercontribs)
             
             //console.log(wikiResponse)
-            console.log(user_art)
+            //console.log(user_art)
     
             result = []
             art_array = []
 
-            jQuery.each( user_art, function( a,b ) {
+            index++
 
+            jQuery.each( user_art, function( a,b ) {
 
                 art = b.title
                 art_array.push(art)
@@ -335,14 +367,23 @@ function get_edited_articles(url) {
                         result.push(e);
                     }
                 })
-                sorted_result = result.sort()
             })
+            sorted_result = result.sort()
 
-            console.log(result)
-            container.append(url_clean + '<br>')
-            container.append(sorted_result + ',<br>')
+            //console.log(sorted_result)
+            //container.append(url_clean + '<br>')
 
-            $('.hide_1').hide()
+            if (sorted_result !== null) {
+                container.append(sorted_result + ',<br>')
+                //console.log(sorted_result)
+            }
+
+            //container.append(sorted_result + '<br>')
+
+            if (index == stop) {  //
+                console.log('> finished');
+            }
+
         },   
         error : function (xhr, ajaxOptions, thrownError) {
             console.log(xhr.status);
@@ -353,11 +394,35 @@ function get_edited_articles(url) {
 }
 
 // get entry links for all of article
-function get_all_edited_articles() {
+function get_all_edited_articles_2014() {
     var container = $('#output')
     //container.append('article,edits,unique_editors,avg_size<br/>')
-    jQuery.each( editors, function( i, val ) {
+    index = 0
+    stop = 0
+
+    jQuery.each( editors_14, function( i, val ) {
+        get_edited_articles( user_contributs_14 + val )
+        console.log(val)
+        stop++
+    })  
+
+    $('#hide_a').hide();
+    $('#hide_b').show();
+}
+
+function get_all_edited_articles_2015() {
+    var container = $('#output')
+    //container.append('article,edits,unique_editors,avg_size<br/>')
+    index = 0
+    stop = 0
+
+    jQuery.each( editors_15, function( i, val ) {
         get_edited_articles( user_contributs_15 + val )
         console.log(val)
+        stop++
     })  
+
+    $('#hide_a').hide();
+    $('#hide_b').show();
 }
+
