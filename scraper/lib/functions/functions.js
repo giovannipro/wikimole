@@ -154,8 +154,7 @@ function get_source_target(url) {
 
         	back = []
 			back = $(wikiResponse.query.backlinks)
-
-			//console.log(back) 
+			//console.log(back)
 
 			var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','')
 			
@@ -170,7 +169,6 @@ function get_source_target(url) {
 				$('#content1').append('<span class="red">' + art_name_clean  + '</span>,' + cont_clean + '<br/>') 
 
 			})
-
         	//console.log(url)
 
         },   
