@@ -8,19 +8,11 @@ WIKIPEDIA API
 
 //var baseurl = 'http://localhost:8888/wikimole/scraper/proxy/';
 //var wikilink = 'https://en.wikipedia.org/wiki/';
-
 var edits_14 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=';
 var edits_15 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1451606399&rvend=1420070400&rvlimit=10rvdir=newer&indexpageids=&titles=';
-
-                https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=
-
-// it is valid only for registered editors 
 var user_contributs_14 = 'https://en.wikipedia.org/w/api.php?action=query&list=usercontribs&format=json&ucstart=1420070399&ucend=1388534400&ucprop=ids%7Ctitle%7Ctimestamp%7Ccomment%7Csize%7Csizediff%7Cflags%7Ctags&ucuser='; // %7Cparsedcomment
 var user_contributs_15 = 'https://en.wikipedia.org/w/api.php?action=query&list=usercontribs&format=json&ucstart=1451606399&ucend=1420070400&ucprop=ids%7Ctitle%7Ctimestamp%7Ccomment%7Csize%7Csizediff%7Cflags%7Ctags&ucuser='; // %7Cparsedcomment
-
-/*
-var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=1000&format=json&bltitle=';
-*/
+//var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=1000&format=json&bltitle=';
 
 /*
 http://www.epochconverter.com/
@@ -41,7 +33,8 @@ ARTICLES AND EDITORS LIST
 
 var art_list = '../articles/articles_test.json';  // articles  articles_test
 
-var editor_list_14 = '../../data/edits/editors_test.csv';  // editors_14    editors_test
+// it does not contain bots
+var editor_list_14 = '../../data/edits/editors_14.csv';  // editors_14    editors_test
 var editor_list_15 = '../../data/edits/editors_15.csv';  // editors_15    editors_test
 
 var edited_articles_14 = '../../data/edits/edited_articles_14.csv'; // edited_articles_14  articles_test
@@ -88,8 +81,8 @@ FINDME
 
 var wikipedia = 'Wikipedia:'
 var user = 'User:'
-var category = 'category'
-var help = 'Help:'
+var category = 'Category'
+var help = 'Help'
 var project = 'Project:'
 var template =  'Template:'
 var discussion =  'Discussion:'
@@ -99,14 +92,16 @@ var user_discussion = 'User discussion:'
 var wiki_dscussion = 'Wikipedia discussion:'
 var Talk = 'Talk'
 var talk = 'talk:'
+var template = 'Template'
 var user_talk = 'User talk:'
-var draft = 'draft'
+var draft = 'Draft'
 var mediawiki = 'MediaWiki'
 var w_talk = 'Wikipedia talk'
+var e_p_talk = 'Education Program talk'
+var file = 'File'
+var portal = 'Portal'
 
-//var user_talk = 'User talk:'
-
-
+/*
 var discussion_proj_it = 'Discussioni progetto:'
 var user_discussion_it = 'Discussioni utente:'
 var wiki_dscussion_it = 'Discussioni Wikipedia:'
@@ -116,6 +111,7 @@ var user_it = 'Utente:'
 var category_it = 'Categoria:'
 var project_it = 'Progetto:'
 var discussion_it =  'Discussione:'
+*/
 
 
 /* ------------------------------------
@@ -367,8 +363,8 @@ $.get(editor_list_14, function(data) {
         editors_14.push(ourrow)
         //console.log(ourrow)
     })
-    //console.log(editors_14)
 });
+
 
 $.get(editor_list_15, function(data) {
 
@@ -379,37 +375,25 @@ $.get(editor_list_15, function(data) {
     })
 });
 
+/*
 function get_sizediff(val) {
 
         $.ajax(val, {
         dataType:  "jsonp",
         success: function( wikiResponse ) {
-
             //console.log(wikiResponse)
 
             container = $('#output');
-            //val_clean = val.replace(edits_14, '')
             
             obj = []
-            obj = $(wikiResponse.query.pageids)//.pages)[0]
+            obj = $(wikiResponse.query.pageids)
             
             pageids = obj[0].toString()
-            edits_14 =  $(wikiResponse.query.pages)[0][pageids].revisions //.pageids; .revisions
-
-            //console.log(edit)
-            //console.log(val_clean)
-
-            //val_clean = val.replace(edits_14, '')
+            edits_14 =  $(wikiResponse.query.pages)[0][pageids].revisions
 
             val_clean = val.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=', '')
 
-            //console.log(val_clean)
-
-            //container.append(val_clean + ',' )
-
             jQuery.each( edits_14, function( i , v ) {
-                
-
 
                 jQuery.each( v, function( i, v ) {
                     //container.append( v + ',')
@@ -431,6 +415,8 @@ function get_sizediff(val) {
     })
 }
 
+*/
+
 function get_edited_articles(url) {
     
     $.ajax(url, {
@@ -444,47 +430,156 @@ function get_edited_articles(url) {
             //console.log(wikiResponse)
             //console.log(user_art)
     
-            result = []
-            art_array = []
-            size_array = []
+            /*
+            result = [];
+            art_array = [];
+            size_array = [];
             total = []
-            
-            
             art_obj =  {}; // []
-
             result_b = []
             art_array_b = []
-            
-            test = []
+            var test = [];
+            */
 
-            jQuery.each( user_art, function( a,b ) {
+            var my_dict = {};
+
+            index++;
+
+            for (var i=0; i<user_art.length; i++) {
+                var b = user_art[i],
+                pid = String(b.pageid);
+
+                if (!my_dict.hasOwnProperty(pid)) {
+                    my_dict[pid] = {
+                        title: b.title,
+                        size: b.size,
+                        tot: b.size,
+                        count: 1,
+                        avg: b.size
+                    }
+                    continue;
+                }
+
+                var art_data = my_dict[pid];
+
+                var size = b.size,
+                tot = art_data.tot + size,
+                count = art_data.count + 1,
+                new_avg = Math.ceil(tot/count);
+
+                my_dict[pid].size = size;
+                my_dict[pid].tot = tot;
+                my_dict[pid].count = count;
+                my_dict[pid].avg = new_avg;
+            }
+            console.log(my_dict); 
+
+            jQuery.each( my_dict, function( a, b ) {
+                //console.log(b.title)
+                //console.log(b.avg)
+                //console.log(b.count)
+
+                title = b.title
+
+                if (
+                    title.indexOf(discussion_template)!== 0 && 
+                    title.indexOf(template)!== 0 &&  
+                    title.indexOf(category)!== 0 &&  
+                    title.indexOf(discussion) !== 0  &&
+                    title.indexOf(discussion) !== 0  &&                              
+                    title.indexOf(user_discussion) !== 0 && 
+                    title.indexOf(wiki_dscussion) !== 0  &&
+                    title.indexOf(wikipedia) !== 0 && 
+                    title.indexOf(help) !== 0 && 
+                    title.indexOf(project) !== 0 && 
+                    title.indexOf(discussion_proj) !== 0 &&
+                    title.indexOf(user) !== 0 && 
+                    title.indexOf(Talk) !== 0 && 
+                    title.indexOf(talk) !== 0 && 
+                    title.indexOf(user_talk) !== 0 && 
+                    title.indexOf(draft) !== 0 && 
+                    title.indexOf(w_talk) !== 0 && 
+                    title.indexOf(mediawiki) !== 0 &&
+                    title.indexOf(file) !== 0 &&
+                    title.indexOf(portal) !== 0 &&
+                    title.indexOf(template) !== 0 &&
+                    title.indexOf(e_p_talk) !== 0
+                    )
+                    {
+                        //result.push(e);
+                        //console.log(art_obj.art)
+                        //console.log(art_obj.size)
+                        container.append(b.title + ',' + b.avg + ','  + b.count +',<br/>')
+                    }
+                    else {
+                        console.log('no: ' + b.title)
+                    }
                 
-                art_b = b.title
-                size = b.size
-                //console.log(art)
-
-                
-                //total = eval(sizediff.join("+"))
-                art_obj.title = art_b
-
-                sizze = []
-                sizze += size
-                avg_size = sizze //index
-
-                art_obj.size = avg_size
-                console.log(art_obj)
-                test.push(art_obj)
             })
-
             
-            
-            console.log(test)
 
+            /*
+
+            //jQuery.each( my_dict, function( a, b ) {
+            for (var i=0; i<my_dict.length; i++) {
+
+                console.log('yes')
+
+                mytitle = String(title);
+
+                if (my_dict.hasOwnProperty(title)) {
+                    console.log(mytitle)
+                }
+            
+            }
+            */
+
+
+            //console.log("QUI");
+            
+            // jQuery.each( user_art, function( a,b ) {
+            //     art_b = b.title
+            //     size = b.size
+            //     //console.log(art)
+                
+            //     //total = eval(sizediff.join("+"))
+                
+            //     sizze = []
+            //     sizze += size
+            //     avg_size = sizze //index
+
+            //     art_obj.title = art_b
+            //     art_obj.size = avg_size
+
+
+
+            //     console.log(art_obj)
+            //     test.push(art_obj)
+            // })
+
+            //console.log(test)
             //test.push(art_obj)
-            
 
-            index++
+            /*
+            obj = []
+            obj = $(wikiResponse.query.pageids)
+            pageids = obj[0].toString()
+            edit =  $(wikiResponse.query.pages)[0][pageids].revisions
 
+            findme1 = 'bot'
+
+            user_array = []
+            result = []
+            sorted_result = []
+
+            all_clean = []
+            )
+             
+             */
+
+
+
+            /*
             jQuery.each( user_art, function( a,b ) {
 
                 art = b.title
@@ -494,27 +589,12 @@ function get_edited_articles(url) {
 
                 size = b.size
 
-                //size_array.push(size)
-                //console.log(size_array)
-                //size_array =  size.sort()
-                //console.log(art + '-' +sizediff)
-                //console.log(art + '-' + sizediff_array)
-                //console.log(art_array_sort)
-                
                 $.each(art_array_sort, function(i, e) {
                     
                     // remove duplicated items
                     if ($.inArray(e, result) == -1) {
 
                         size_array.push(size)
-
-                        /*sizze = []
-                        sizze += size
-
-                        art_obj.art = art
-                        art_obj.size = sizze*/
-
-
 
                         // get only articles
                         if ( 
@@ -539,45 +619,33 @@ function get_edited_articles(url) {
                             )   
                             {
                             result.push(e);
-
                             //console.log(art_obj.art)
                             //console.log(art_obj.size)
                         }
                         else {
                             //console.log('no: ' + e )
                         }
-                        
-
                     }
                 })
-
-                
-
-
-                //console.log(total)
-                //total = eval(sizediff_array.join("+"))
-                //average = Math.round(total / sizediff_array.length)
-
             })
             
             sorted_result = result.sort()
-            
-            // check if array is empty
-            if (sorted_result.length !== 0) {
-                container.append(sorted_result + ',<br/>')
-                console.log(sorted_result)
-                //console.log(art_obj)
-            }
+            */
 
+            // check if array is empty
+            /*
+            if (sorted_result.length !== 0) {
+                //container.append(sorted_result + ',<br/>')
+                console.log(my_dict)
+            }
+            */
+
+            /*
             jQuery.each( sorted_result, function( i, val) {
-                get_sizediff( edits_14 + val)
+                //get_sizediff( edits_14 + val)
                 //console.log(val)
             })
-
-            /*$.each(size_array, function(i, e) {
-                total = eval(size_array.join("+"))
-            })
-            console.log(total);*/
+            */
 
             if (index == stop) {  //
                 console.log('> finished');
@@ -595,7 +663,7 @@ function get_edited_articles(url) {
 // get entry links for all of article
 function get_all_edited_articles_2014() {
     var container = $('#output')
-    //container.append('article,edits,unique_editors,avg_size<br/>')
+    container.append('article,avg_size,edits<br/>')
     index = 0
     stop = 0
 
@@ -612,7 +680,7 @@ function get_all_edited_articles_2014() {
 
 function get_all_edited_articles_2015() {
     var container = $('#output')
-    //container.append('article,edits,unique_editors,avg_size<br/>')
+    container.append('article,avg_size,edits<br/>')
     index = 0
     stop = 0
 
