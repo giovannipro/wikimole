@@ -1,0 +1,712 @@
+{
+  "articles": [
+    {
+      "art": "!Kung_people",
+      "stat": "-"
+    },
+    {
+      "art": "Acid",
+      "stat": "-"
+    },
+    {
+      "art": "Africa_Day",
+      "stat": "-"
+    },
+    {
+      "art": "African_music ",
+      "stat": "-"
+    },
+    {
+      "art": "Agriculture_in_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "AIDS_orphan",
+      "stat": "-"
+    },
+    {
+      "art": "Alcohol_abuse",
+      "stat": "-"
+    },
+    {
+      "art": "Alcohol_dependence",
+      "stat": "-"
+    },
+    {
+      "art": "Alcoholism",
+      "stat": "-"
+    },
+    {
+      "art": "Aloe",
+      "stat": "-"
+    },
+    {
+      "art": "Aloe_vera",
+      "stat": "-"
+    },
+    {
+      "art": "Animal_husbandry",
+      "stat": "-"
+    },
+    {
+      "art": "Animal_husbandry_in_South_Africa",
+      "stat": "d"
+    },
+    {
+      "art": "Animal-powered_transport",
+      "stat": "-"
+    },
+    {
+      "art": "Apartheid",
+      "stat": "-"
+    },
+    {
+      "art": "Atom",
+      "stat": "-"
+    },
+    {
+      "art": "Automobile",
+      "stat": "-"
+    },
+    {
+      "art": "Base_(chemistry)",
+      "stat": "-"
+    },
+    {
+      "art": "Bias",
+      "stat": "-"
+    },
+    {
+      "art": "Bicycle",
+      "stat": "-"
+    },
+    {
+      "art": "Bill_of_Rights_(South_Africa)",
+      "stat": "-"
+    },
+    {
+      "art": "Biome",
+      "stat": "-"
+    },
+    {
+      "art": "Bird_nest",
+      "stat": "-"
+    },
+    {
+      "art": "Boiling",
+      "stat": "-"
+    },
+    {
+      "art": "Borehole",
+      "stat": "-"
+    },
+    {
+      "art": "Bullying",
+      "stat": "-"
+    },
+    {
+      "art": "Castle_of_Good_Hope",
+      "stat": "-"
+    },
+    {
+      "art": "Cell_(biology)",
+      "stat": "-"
+    },
+    {
+      "art": "Ceramic",
+      "stat": "-"
+    },
+    {
+      "art": "Child_abuse",
+      "stat": "-"
+    },
+    {
+      "art": "Childrens_Act_(South_Africa)",
+      "stat": "-"
+    },
+    {
+      "art": "Childrens_Day",
+      "stat": "-"
+    },
+    {
+      "art": "Circuit_diagram",
+      "stat": "-"
+    },
+    {
+      "art": "Clay",
+      "stat": "-"
+    },
+    {
+      "art": "Climate",
+      "stat": "-"
+    },
+    {
+      "art": "Coal",
+      "stat": "-"
+    },
+    {
+      "art": "Coal_in_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Control_variable",
+      "stat": "-"
+    },
+    {
+      "art": "Convenience_food",
+      "stat": "d"
+    },
+    {
+      "art": "Cooking",
+      "stat": "-"
+    },
+    {
+      "art": "Cradle_of_Humankind",
+      "stat": "-"
+    },
+    {
+      "art": "Decanting",
+      "stat": "-"
+    },
+    {
+      "art": "Dependent_and_independent_variables",
+      "stat": "-"
+    },
+    {
+      "art": "Design",
+      "stat": "d"
+    },
+    {
+      "art": "Discrimination",
+      "stat": "-"
+    },
+    {
+      "art": "Domestic_violence",
+      "stat": "-"
+    },
+    {
+      "art": "Domestic_violence_in_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Drakensberg",
+      "stat": "-"
+    },
+    {
+      "art": "Duration_(music)",
+      "stat": "-"
+    },
+    {
+      "art": "Economy_of_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Ecosystem",
+      "stat": "-"
+    },
+    {
+      "art": "Electrical_conductor",
+      "stat": "-"
+    },
+    {
+      "art": "Electrical_network",
+      "stat": "-"
+    },
+    {
+      "art": "Electricity_generation",
+      "stat": "-"
+    },
+    {
+      "art": "Energy_in_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Fair_trade",
+      "stat": "-"
+    },
+    {
+      "art": "Farm",
+      "stat": "-"
+    },
+    {
+      "art": "Fiber",
+      "stat": "-"
+    },
+    {
+      "art": "Fire_safety",
+      "stat": "-"
+    },
+    {
+      "art": "Flag_of_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Food",
+      "stat": "-"
+    },
+    {
+      "art": "Food_groups",
+      "stat": "-"
+    },
+    {
+      "art": "Food_pyramid_(nutrition)",
+      "stat": "-"
+    },
+    {
+      "art": "Food_security",
+      "stat": "-"
+    },
+    {
+      "art": "Food_vs._fuel",
+      "stat": "-"
+    },
+    {
+      "art": "Frances_Baard",
+      "stat": "-"
+    },
+    {
+      "art": "Free_State_(province)",
+      "stat": "-"
+    },
+    {
+      "art": "Freedom_Day_(South_Africa)",
+      "stat": "-"
+    },
+    {
+      "art": "Gana_and_Gwi_people",
+      "stat": "-"
+    },
+    {
+      "art": "Gangster",
+      "stat": "-"
+    },
+    {
+      "art": "Gas",
+      "stat": "n"
+    },
+    {
+      "art": "Gauteng",
+      "stat": "-"
+    },
+    {
+      "art": "Gender_role",
+      "stat": "n"
+    },
+    {
+      "art": "Gender_stereotypes",
+      "stat": "d"
+    },
+    {
+      "art": "Glass",
+      "stat": "-"
+    },
+    {
+      "art": "Griqua_people",
+      "stat": "-"
+    },
+    {
+      "art": "Hand_washing",
+      "stat": "-"
+    },
+    {
+      "art": "Health",
+      "stat": "-"
+    },
+    {
+      "art": "Health_care_in_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Herero_and_Namaqua_Genocide",
+      "stat": "-"
+    },
+    {
+      "art": "Heritage_Day_(South_Africa)",
+      "stat": "-"
+    },
+    {
+      "art": "History_of_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "History_of_writing",
+      "stat": "-"
+    },
+    {
+      "art": "HIV",
+      "stat": "-"
+    },
+    {
+      "art": "HIV/AIDS",
+      "stat": "-"
+    },
+    {
+      "art": "Home_safety",
+      "stat": "-"
+    },
+    {
+      "art": "Hottentot_Venus",
+      "stat": "-"
+    },
+    {
+      "art": "Human_nutrition",
+      "stat": "-"
+    },
+    {
+      "art": "Human_Rights_Day",
+      "stat": "-"
+    },
+    {
+      "art": "Human_swimming",
+      "stat": "-"
+    },
+    {
+      "art": "Hydraulics",
+      "stat": "-"
+    },
+    {
+      "art": "Insulator_(electricity)",
+      "stat": "-"
+    },
+    {
+      "art": "Kaditshwene",
+      "stat": "n"
+    },
+    {
+      "art": "Khoikhoi",
+      "stat": "-"
+    },
+    {
+      "art": "Khoikhoi_mythology",
+      "stat": "-"
+    },
+    {
+      "art": "Later_Stone_Age",
+      "stat": "-"
+    },
+    {
+      "art": "Latitude",
+      "stat": "-"
+    },
+    {
+      "art": "Liquid_fuel",
+      "stat": "-"
+    },
+    {
+      "art": "List_of_South_Africans",
+      "stat": "-"
+    },
+    {
+      "art": "Longitude",
+      "stat": "-"
+    },
+    {
+      "art": "Mahatma_Gandhi",
+      "stat": "-"
+    },
+    {
+      "art": "Makhonjwa_Mountains",
+      "stat": "n"
+    },
+    {
+      "art": "Malaria",
+      "stat": "-"
+    },
+    {
+      "art": "Mandela_Day",
+      "stat": "-"
+    },
+    {
+      "art": "Map",
+      "stat": "-"
+    },
+    {
+      "art": "Mapungubwe",
+      "stat": "-"
+    },
+    {
+      "art": "Mapungubwe_Museum",
+      "stat": "-"
+    },
+    {
+      "art": "Mapungubwe_National_Park",
+      "stat": "-"
+    },
+    {
+      "art": "Mind_map",
+      "stat": "n"
+    },
+    {
+      "art": "Mining_industry_of_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Mpumalanga",
+      "stat": "-"
+    },
+    {
+      "art": "Music_of_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "National_anthem_of_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "National_symbols_of_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "National_Womens_Day",
+      "stat": "-"
+    },
+    {
+      "art": "Nelson_Mandela",
+      "stat": "-"
+    },
+    {
+      "art": "Nest",
+      "stat": "d"
+    },
+    {
+      "art": "Noise_pollution",
+      "stat": "-"
+    },
+    {
+      "art": "Oliver_Tambo",
+      "stat": "-"
+    },
+    {
+      "art": "Outer_space",
+      "stat": "-"
+    },
+    {
+      "art": "Outline_of_domestic_violence",
+      "stat": "-"
+    },
+    {
+      "art": "Paper",
+      "stat": "-"
+    },
+    {
+      "art": "People_Against_Gangsterism_and_Drugs",
+      "stat": "-"
+    },
+    {
+      "art": "Petrol-paraffin_engine",
+      "stat": "-"
+    },
+    {
+      "art": "Pitch_(music)",
+      "stat": "-"
+    },
+    {
+      "art": "Pneumatics",
+      "stat": "-"
+    },
+    {
+      "art": "Politics_of_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Pollution",
+      "stat": "-"
+    },
+    {
+      "art": "Processed_food",
+      "stat": "n"
+    },
+    {
+      "art": "Rail_transport",
+      "stat": "-"
+    },
+    {
+      "art": "Rail_transport_in_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Reconciliation_Day",
+      "stat": "-"
+    },
+    {
+      "art": "Reproduction",
+      "stat": "-"
+    },
+    {
+      "art": "Republic_of_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Right_to_food",
+      "stat": "-"
+    },
+    {
+      "art": "Road_map",
+      "stat": "-"
+    },
+    {
+      "art": "Rock_(geology)",
+      "stat": "-"
+    },
+    {
+      "art": "San_healing_practices",
+      "stat": "-"
+    },
+    {
+      "art": "San_languages",
+      "stat": "-"
+    },
+    {
+      "art": "San_people",
+      "stat": "-"
+    },
+    {
+      "art": "San_religion",
+      "stat": "-"
+    },
+    {
+      "art": "San_rock_art",
+      "stat": "-"
+    },
+    {
+      "art": "Sand",
+      "stat": "-"
+    },
+    {
+      "art": "Scale_(map)",
+      "stat": "-"
+    },
+    {
+      "art": "Scientific_method",
+      "stat": "-"
+    },
+    {
+      "art": "Settling",
+      "stat": "-"
+    },
+    {
+      "art": "Sexism",
+      "stat": "-"
+    },
+    {
+      "art": "Sieving",
+      "stat": "-"
+    },
+    {
+      "art": "Soil",
+      "stat": "-"
+    },
+    {
+      "art": "Sound",
+      "stat": "-"
+    },
+    {
+      "art": "South_African_cuisine",
+      "stat": "-"
+    },
+    {
+      "art": "South_African_locomotive_history",
+      "stat": "-"
+    },
+    {
+      "art": "Standard_Model",
+      "stat": "-"
+    },
+    {
+      "art": "Stereotype",
+      "stat": "-"
+    },
+    {
+      "art": "Steve_Biko",
+      "stat": "-"
+    },
+    {
+      "art": "Tap_(valve)",
+      "stat": "d"
+    },
+    {
+      "art": "Textile",
+      "stat": "-"
+    },
+    {
+      "art": "Trade",
+      "stat": "-"
+    },
+    {
+      "art": "Transport",
+      "stat": "-"
+    },
+    {
+      "art": "Transport_in_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Two_foot_gauge_railways_in_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Vibration",
+      "stat": "-"
+    },
+    {
+      "art": "Walter_Sisulu",
+      "stat": "-"
+    },
+    {
+      "art": "Water_filter",
+      "stat": "-"
+    },
+    {
+      "art": "Water_pollution",
+      "stat": "-"
+    },
+    {
+      "art": "Water_privatization_in_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Water_supply_and_sanitation_in_South_Africa",
+      "stat": "-"
+    },
+    {
+      "art": "Water_well",
+      "stat": "-"
+    },
+    {
+      "art": "Wax",
+      "stat": "-"
+    },
+    {
+      "art": "Western_Cape",
+      "stat": "-"
+    },
+    {
+      "art": "Wetlands",
+      "stat": "-"
+    },
+    {
+      "art": "Wildlife_conservation",
+      "stat": "-"
+    },
+    {
+      "art": "Wildlife_management",
+      "stat": "-"
+    },
+    {
+      "art": "Winnie_Madikizela-Mandela",
+      "stat": "-"
+    },
+    {
+      "art": "Wood",
+      "stat": "-"
+    },
+    {
+      "art": "Wool",
+      "stat": "-"
+    },
+    {
+      "art": "Youth_culture",
+      "stat": "-"
+    }
+  ]
+}

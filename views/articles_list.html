@@ -2,143 +2,174 @@
 <html>
 	<head>
 		<title>Articles</title>
-		<script src="lib/js/jquery-1.11.1.min.js" defer></script>
-		<script src="lib/js/handlebars-v4.0.2.js" defer></script>
 		<link rel="stylesheet" type="text/css" href="lib/css/view.css">
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="lib/css/sidr.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/sidr_light.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!--<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+		<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	</head>
 	<body onload="articles()"> 
+		<div id="topbar">
+			<main>
+				<a id="simple-menu" href="#sidr"  style="padding-left:0"><i class="fa fa-bars fa-lg"></i></a>
+				<a href="articles_list.html" style="font-weight:bold; padding-left:0;">Wikipedia Primary School</a>
+				<a href="articles_list.html"  class="here first_menu">Articles</a>
+				<a href="updates.html" class="first_menu">Updates</a>
+			</main>
+		</div>
+
+		<div id="sidr">
+		  	<ul>
+				<li><a href="articles_list.html"  class="here">Articles</a></li>
+				<li><a href="updates.html">Updates</a></li>
+		 	 </ul>
+		</div>
+		
 		<main>
 			<header id="header">
-				<h2>Wikipedia Primary School</h2>
 				<h1>Articles</h1>
+				<h4>
+					<a href="https://meta.wikimedia.org/wiki/Research:Wikipedia_Primary_School_SSAJRP_programme/Evaluation" target="_blank">Wikimedia page</a>
+				</h4>
 				<h5>
 					Last updated on September 24<sup>th</sup> 2015; 
 					(previous August 20<sup>th</sup> 2015)
 				</h5>
 			</header>
+			
+			<hr class="line">
 
 			<div id="articles"></div>
-		
+			
 		</main>
 		<script>
 			function articles() {
 
-				var template_source = 'template/template_articles.tpl';
+				var template_source = 'template/articles.tpl';
 				var data_source = 'data/articles.json';
 				var target = '#articles';
 
 
 				$.get( template_source , function(tpl) {
-				    $.getJSON( data_source , function(data) {
+					$.getJSON( data_source , function(data) {
 
-				    	var template = Handlebars.compile(tpl); 
+						var template = Handlebars.compile(tpl); 
 
-				    	$(target).html(template(data));
+						$(target).html(template(data));
 
-				    });
+					});
 
 				});
 
 				Handlebars.registerHelper('compare', function(lvalue, rvalue, options) {
 
-				    if (arguments.length < 3)
-				        throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
+					if (arguments.length < 3)
+						throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
 
-				    var operator = options.hash.operator || "==";
+					var operator = options.hash.operator || "==";
 
-				    var operators = {
-				        '==':       function(l,r) { return l == r; },
-				        '===':      function(l,r) { return l === r; },
-				        '!=':       function(l,r) { return l != r; },
-				        '<':        function(l,r) { return l < r; },
-				        '>':        function(l,r) { return l > r; },
-				        '<=':       function(l,r) { return l <= r; },
-				        '>=':       function(l,r) { return l >= r; },
-				        'typeof':   function(l,r) { return typeof l == r; }
-				    }
+					var operators = {
+						'==':       function(l,r) { return l == r; },
+						'===':      function(l,r) { return l === r; },
+						'!=':       function(l,r) { return l != r; },
+						'<':        function(l,r) { return l < r; },
+						'>':        function(l,r) { return l > r; },
+						'<=':       function(l,r) { return l <= r; },
+						'>=':       function(l,r) { return l >= r; },
+						'typeof':   function(l,r) { return typeof l == r; }
+					}
 
-				    if (!operators[operator])
-				        throw new Error("Handlerbars Helper 'compare' doesn't know the operator "+operator);
+					if (!operators[operator])
+						throw new Error("Handlerbars Helper 'compare' doesn't know the operator "+operator);
 
-				    var result = operators[operator](lvalue,rvalue);
+					var result = operators[operator](lvalue,rvalue);
 
-				    if( result ) {
-				        return options.fn(this);
-				    } else {
-				        return options.inverse(this);
-				    }
+					if( result ) {
+						return options.fn(this);
+					} else {
+						return options.inverse(this);
+					}
 
 				});
 
 				Handlebars.registerHelper('if_more', function(a) {
-				    if(a > 0)
-				        return ('+++a') ;
-				    if(a < 0)
-				        return ('---a') ;
-				    else
-				    	return ('000a') ;
+					if(a > 0)
+						return ('+++a') ;
+					if(a < 0)
+						return ('---a') ;
+					else
+						return ('000a') ;
 				});
 
 				Handlebars.registerHelper('iff', function(a, operator, b, opts) {
-				    var bool = false;
-				    switch(operator) {
-				       case '==':
-				           bool = a == b;
-				           break;
-				       case '>':
-				           bool = a > b;
-				           break;
-				       case '<':
-				           bool = a < b;
-				           break;
-				       default:
-				           throw "Unknown operator " + operator;
-				    }
-				 
-				    if (bool) {
-				        return opts.fn(this);
-				    } else {
-				        return opts.inverse(this);
-				    }
+					var bool = false;
+					switch(operator) {
+						case '==':
+						bool = a == b;
+						break;
+						case '>':
+						bool = a > b;
+						break;
+						case '<':
+						bool = a < b;
+						break;
+						default:
+						throw "Unknown operator " + operator;
+					}
+
+					if (bool) {
+						return opts.fn(this);
+					} else {
+						return opts.inverse(this);
+					}
 				});
 
+				Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
+				    lvalue = parseFloat(lvalue);
+				    rvalue = parseFloat(rvalue);
+				        
+				    return {
+				        "+": lvalue + rvalue,
+				        "-": lvalue - rvalue,
+				        "*": lvalue * rvalue,
+				        "/": lvalue / rvalue,
+				        "%": lvalue % rvalue
+				    }[operator];
+				});
+
+				var rendered = Handlebars.compile(
+				    '{{#each values}}' + 
+				    'i={{@index}}: ' +
+				    'i+1 = {{math @index "+" 1}}, ' + 
+				    'i-0.5 = {{math @index "+" "-0.5"}}, ' + 
+				    'i/2 = {{math @index "*" 2}}, ' + 
+				    'i%2 = {{math @index "%" 2}}, ' + 
+				    'i*i = {{math @index "*" @index}}\n' +
+				    '{{/each}}'
+				)({
+				    values : [ 'a', 'b', 'c', 'd', 'e' ]
+				});
+
+				$("#result").html(rendered);
+
 			}
-
-
 
 		</script>
-		<style type="text/css">
-			.green{
-				background-color: #0BC10B;
-				display: block;
-				padding: 10px 5px;
-				width: 34px;
-				text-align: center;
-			}
-			.red{
-				background-color: #FF5E00;
-				display: block;
-				padding: 10px 5px;
-				width: 34px;
-				text-align: center;
-			}			
-			.gray{
-				background-color: #D8D8D8;
-				display: block;
-				padding: 10px 5px;
-				width: 34px;
-				text-align: center;
-			}
-			.white{
-				background-color: #F3F3F3;
-				display: block;
-				padding: 10px 5px;
-				width: 34px;
-				text-align: center;
-			}
-		</style>
+
+
+		<script src="lib/js/jquery-1.11.1.min.js"></script><!-- defer -->
+		<script src="lib/js/handlebars-v4.0.2.js"></script><!-- defer -->
+		<!-- mobile menu -->
+	 	<script src="lib/js/jquery.sidr.js"></script>
+		
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+			  	$('#simple-menu').sidr();
+			});
+
+		</script>
 	</body>
 </html>
-
-<!--<span style ="background-color:red">{{entry_links_diff}}</span>-->

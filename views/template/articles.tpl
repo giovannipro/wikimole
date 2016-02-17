@@ -1,7 +1,7 @@
 {{#each articles}}
 	<div>
 		<div class="">
-			<h2>
+			<h2>{{math @index "+" 1}} -
 				<a href="https://en.wikipedia.org/wiki/{{article}}" target="_blank">
 					{{article}}
 				</a>
@@ -81,7 +81,7 @@
 				References: {{references_sep15}}
 				<br/>
 				{{#iff references_diff '>' 0 }}
-					<span class="green">{{references_diff}}</span>
+					<span class="green">+{{references_diff}}</span>
 				{{else}}
 					{{#iff references_diff '<' 0 }}
 						<span class="red">{{references_diff}}</span>
@@ -94,7 +94,7 @@
 				Notes: {{notes_sep15}}
 				<br/>
 				{{#iff notes_diff '>' 0 }}
-					<span class="green">{{notes_diff}}</span>
+					<span class="green">+{{notes_diff}}</span>
 				{{else}}
 					{{#iff notes_diff '<' 0 }}
 						<span class="red">{{notes_diff}}</span>
@@ -107,7 +107,7 @@
 				Images: {{images_sep15}}
 				<br/>
 				{{#iff images_diff '>' 0 }}
-					<span class="green">{{images_diff}}</span>
+					<span class="green">+{{images_diff}}</span>
 				{{else}}
 					{{#iff images_diff '<' 0 }}
 						<span class="red">{{images_diff}}</span>
@@ -120,7 +120,7 @@
 				See Also: {{seeAlso_sep15}}
 				<br/>
 				{{#iff seeAlso_diff '>' 0 }}
-					<span class="green">{{seeAlso_diff}}</span>
+					<span class="green">+{{seeAlso_diff}}</span>
 				{{else}}
 					{{#iff seeAlso_diff '<' 0 }}
 						<span class="red">{{seeAlso_diff}}</span>
