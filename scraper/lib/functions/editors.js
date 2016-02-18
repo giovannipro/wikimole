@@ -8,11 +8,12 @@ WIKIPEDIA API
 
 //var baseurl = 'http://localhost:8888/wikimole/scraper/proxy/';
 //var wikilink = 'https://en.wikipedia.org/wiki/';
+//var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=1000&format=json&bltitle=';
 var edits_14 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=';
 var edits_15 = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1451606399&rvend=1420070400&rvlimit=10rvdir=newer&indexpageids=&titles=';
 var user_contributs_14 = 'https://en.wikipedia.org/w/api.php?action=query&list=usercontribs&format=json&ucstart=1420070399&ucend=1388534400&ucprop=ids%7Ctitle%7Ctimestamp%7Ccomment%7Csize%7Csizediff%7Cflags%7Ctags&ucuser='; // %7Cparsedcomment
 var user_contributs_15 = 'https://en.wikipedia.org/w/api.php?action=query&list=usercontribs&format=json&ucstart=1451606399&ucend=1420070400&ucprop=ids%7Ctitle%7Ctimestamp%7Ccomment%7Csize%7Csizediff%7Cflags%7Ctags&ucuser='; // %7Cparsedcomment
-//var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=1000&format=json&bltitle=';
+var user_info = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info&list=users&meta=&titles=&inprop=&usprop=blockinfo%7Cgroups%7Crights%7Ceditcount%7Cregistration%7Cemailable%7Cgender&ususers=';
 
 /*
 http://www.epochconverter.com/
@@ -31,7 +32,7 @@ http://www.epochconverter.com/
 ARTICLES AND EDITORS LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json';  // articles  articles_test
+var art_list = '../articles/articles.json';  // articles  articles_test
 
 // it does not contain bots
 var editor_list_14 = '../../data/edits/editors_14.csv';  // editors_14    editors_test
@@ -44,7 +45,8 @@ var list = [
     'nelson_mandela',
     'africa',
     'AIDS',
-    'sexism'
+    'sexism',
+    'Alcohol_abuse'
 ];  
 
 var editors = [
@@ -79,26 +81,29 @@ function hide() {
 FINDME
 -------------------------------------*/
 
-var wikipedia = 'Wikipedia:';
-var user = 'User:';
-var category = 'Category';
-var help = 'Help';
-var project = 'Project:';
-var discussion =  'Discussion:';
-var discussion_template =  'Discussion template:';
-var discussion_proj = 'Discussion project:';
-var user_discussion = 'User discussion:';
-var wiki_dscussion = 'Wikipedia discussion:';
-var Talk = 'Talk';
-var talk = 'talk:';
-var template = 'Template';
-var user_talk = 'User talk:';
-var draft = 'Draft';
-var mediawiki = 'MediaWiki';
-var w_talk = 'Wikipedia talk';
-var e_p_talk = 'Education Program talk';
-var file = 'File';
-var portal = 'Portal';
+
+var findme1 = 'bot',
+
+wikipedia = 'Wikipedia:',
+user = 'User:',
+category = 'Category',
+help = 'Help',
+project = 'Project:',
+discussion =  'Discussion:',
+discussion_template =  'Discussion template:',
+discussion_proj = 'Discussion project:',
+user_discussion = 'User discussion:',
+wiki_dscussion = 'Wikipedia discussion:',
+Talk = 'Talk',
+talk = 'talk:',
+template = 'Template',
+user_talk = 'User talk:',
+draft = 'Draft',
+mediawiki = 'MediaWiki',
+w_talk = 'Wikipedia talk',
+e_p_talk = 'Education Program talk';
+file = 'File'
+portal = 'Portal';
 
 
 /* ------------------------------------
@@ -113,8 +118,8 @@ function get_edits(url) {
         success: function( wikiResponse ) {
             //console.log(wikiResponse)
 
-            container = $('#edits');
-            url_clean = url.replace(edits_14,'').replace(edits_15,'').replace(edits, '').replace('_',' ');
+            container = $('#output');
+            url_clean = url.replace('_',' ').replace(edits_14, '').replace(edits_15, '');
             
             obj = [];
             obj = $(wikiResponse.query.pageids);
@@ -128,8 +133,6 @@ function get_edits(url) {
 
             index++;
 
-            findme1 = 'bot';
-
             size_array = [];
             user_array = [];
 
@@ -137,6 +140,14 @@ function get_edits(url) {
 
             //var sumX = 0;
             //var total = 0;
+
+
+            if (edit == null) {
+                console.log(url + ' - null');
+            }
+            else{
+                // ok;
+            }
             
             jQuery.each( edit, function( a,b ) {
 
@@ -168,15 +179,21 @@ function get_edits(url) {
                     total = eval(size_array.join("+"));
                     average = Math.round(total / size_array.length);
                 }
+
             });
     
             console.log(index + '-' + url_clean);
             console.log(sorted_result);
 
             container.append(url_clean + ',');
-            container.append(sum_edits + ',');
             container.append(sum_editors + ',');
+            container.append(sum_edits + ',');
             container.append(average + '<br/>');
+
+            if (index == stop) { 
+                console.log('DONE');
+            }
+
         },   
         error : function (xhr, ajaxOptions, thrownError) {
             console.log(xhr.status);
@@ -190,24 +207,36 @@ function get_edits(url) {
 function get_all_edits_2014() {
     var container = $('#output');
     index = 0;
+    stop = 0;
 
-    container.append('article_2014,edits,unique_editors,avg_size<br/>');
+    container.append('article_2014,unique_editors,edits,avg_size<br/>');
     jQuery.each( articles, function( i, val ) {
         get_edits( edits_14 + val );
+        stop++;
     }); 
+
+    if (index == stop) { 
+        console.log('DONE');
+    }
 
     $('#hide_a').hide();
     $('#hide_b').show();
 }
 
 function get_all_edits_2015() {
-    var container = $('#edits');
+    var container = $('#output');
     index = 0;
+    stop = 0;
 
-    container.append('article_2015,edits,unique_editors,avg_size<br/>');
+    container.append('article_2015,unique_editors,edits,avg_size<br/>');
     jQuery.each( articles, function( i, val ) {
         get_edits( edits_15 + val );
+        stop++;
     });  
+
+    if (index == stop) { 
+        console.log('DONE');
+    }
 
     $('#hide_a').hide();
     $('#hide_b').show();
@@ -284,8 +313,7 @@ function get_editors(url) {
                 container.append(sorted_all_clean + ',<br/>');
             }
 
-            console.log(index);
-            console.log(url_clean);
+            console.log(index + ' - ' + url_clean);
             console.log(result);
         },   
         error : function (xhr, ajaxOptions, thrownError) {
@@ -402,45 +430,55 @@ function get_edited_articles(url) {
 
             jQuery.each( my_dict, function( a, b ) {
 
-                title = b.title;
+                t = b.title
 
-                if (
-                    title.indexOf(discussion_template)!== 0 && 
-                    title.indexOf(template)!== 0 &&  
-                    title.indexOf(category)!== 0 &&  
-                    title.indexOf(discussion) !== 0  &&
-                    title.indexOf(discussion) !== 0  &&                              
-                    title.indexOf(user_discussion) !== 0 && 
-                    title.indexOf(wiki_dscussion) !== 0  &&
-                    title.indexOf(wikipedia) !== 0 && 
-                    title.indexOf(help) !== 0 && 
-                    title.indexOf(project) !== 0 && 
-                    title.indexOf(discussion_proj) !== 0 &&
-                    title.indexOf(user) !== 0 && 
-                    title.indexOf(Talk) !== 0 && 
-                    title.indexOf(talk) !== 0 && 
-                    title.indexOf(user_talk) !== 0 && 
-                    title.indexOf(draft) !== 0 && 
-                    title.indexOf(w_talk) !== 0 && 
-                    title.indexOf(mediawiki) !== 0 &&
-                    title.indexOf(file) !== 0 &&
-                    title.indexOf(portal) !== 0 &&
-                    title.indexOf(template) !== 0 &&
-                    title.indexOf(e_p_talk) !== 0
-                    )
+                title = t.replace(/,/g, "_");
 
-                    {
-                        container.append(b.title + ',' + b.avg + ','  + b.count +',<br/>');
+                limit = 0
+
+                if (b.count > limit ) {
+                    
+                    if (
+                        title.indexOf(discussion_template)!== 0 && 
+                        title.indexOf(template)!== 0 &&  
+                        title.indexOf(category)!== 0 &&  
+                        title.indexOf(discussion) !== 0  &&
+                        title.indexOf(discussion) !== 0  &&                              
+                        title.indexOf(user_discussion) !== 0 && 
+                        title.indexOf(wiki_dscussion) !== 0  &&
+                        title.indexOf(wikipedia) !== 0 && 
+                        title.indexOf(help) !== 0 && 
+                        title.indexOf(project) !== 0 && 
+                        title.indexOf(discussion_proj) !== 0 &&
+                        title.indexOf(user) !== 0 && 
+                        title.indexOf(Talk) !== 0 && 
+                        title.indexOf(talk) !== 0 && 
+                        title.indexOf(user_talk) !== 0 && 
+                        title.indexOf(draft) !== 0 && 
+                        title.indexOf(w_talk) !== 0 && 
+                        title.indexOf(mediawiki) !== 0 &&
+                        title.indexOf(file) !== 0 &&
+                        title.indexOf(portal) !== 0 &&
+                        title.indexOf(template) !== 0 &&
+                        title.indexOf(e_p_talk) !== 0
+                        )
+
+                        {   
+                            container.append(title + ',' + b.count + ','  + b.avg +',<br/>');  
+                        }
+                          
+                    else {
+                        // console.log('no: ' + b.title);
                     }
-                else {
-                    console.log('no: ' + b.title);
+
+                    //console.log(b.count) 
+                
                 }
             });
 
             if (index == stop) { 
-                console.log('> finished');
+                console.log('DONE');
             }
-
 
         },   
         error : function (xhr, ajaxOptions, thrownError) {
@@ -453,7 +491,7 @@ function get_edited_articles(url) {
 // get entry links for all of article
 function get_all_edited_articles_2014() {
     var container = $('#output');
-    container.append('article,avg_size,edits<br/>');
+    container.append('article_14,edits,avg_size,<br/>');
     index = 0;
     stop = 0;
 
@@ -469,7 +507,7 @@ function get_all_edited_articles_2014() {
 
 function get_all_edited_articles_2015() {
     var container = $('#output');
-    container.append('article,avg_size,edits<br/>');
+    container.append('article_15,avg_size,edits<br/>');
     index = 0;
     stop = 0;
 
@@ -482,4 +520,185 @@ function get_all_edited_articles_2015() {
     $('#hide_a').hide();
     $('#hide_b').show();
 }
+
+
+/* ------------------------------------
+EDITORS INFO
+-------------------------------------*/
+
+//var female = 0;
+
+function get_editor_info(url,art) {
+
+    var male = 0,
+    female = 0,
+    bot = 0,
+    unknown = 0;
+
+    $.ajax(url, {
+    dataType:  "jsonp",
+    success: function( wikiResponse ) {
+        //console.log(wikiResponse)
+
+        container = $('#output');
+
+        url_clean = url.replace('https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info&list=users&meta=&titles=&inprop=&usprop=blockinfo%7Cgroups%7Crights%7Ceditcount%7Cregistration%7Cemailable%7Cgender&ususers=','')
+
+        name = $(wikiResponse.query.users)[0].name;
+        gender = $(wikiResponse.query.users)[0].gender;
+        editcount = $(wikiResponse.query.users)[0].editcount;
+        emailable = $(wikiResponse.query.users)[0].emailable;
+        registration = $(wikiResponse.query.users)[0].registration;
+
+        rights = $(wikiResponse.query.users)[0].rights
+
+        /*console.log(name)
+        console.log(gender)
+        console.log(editcount)
+        console.log(emailable)
+        console.log(registration)*/
+        
+        /*if (gender.indexOf('unknown') >= 0  ) {
+            unknown++;
+        }*/
+        //console.log(unknown)
+
+        var my_user = {};
+        
+        rights_count = 0
+
+        jQuery.each( rights, function( i, val ) {
+            //console.log(val)
+            rights_count++
+        })
+
+        my_user = {
+            name: name,
+            gender: gender,
+            editcount: editcount,
+            emailable: emailable,
+            registration: registration,
+            rigths: rights_count
+        };
+
+        console.log(my_user)
+
+        stop++;
+
+        art_clean = art.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=','')
+        //container.append(art_clean+ ',')
+        container.append(art_clean + ',')
+
+        container.append(my_user.name + ',')
+        container.append(my_user.gender + ',')
+        container.append(my_user.editcount + ',')
+        container.append(my_user.emailable + ',')
+        container.append(my_user.registration + ',')
+        container.append(my_user.rigths + ',<br/>')
+
+        /*
+        if (my_user.gender === 'female' ){  // (my_user.gender.indexOf('male') >= 0 )
+            //female++
+            //console.log('male')
+            container.append(female)
+        }
+        else if (my_user.gender.indexOf('bot') >= 0 ) {
+            //bot++
+            //console.log('female')
+        }
+        else if (my_user.gender.indexOf('unknown') >= 0 ) {
+            unknown++
+            //console.log('bot')
+        }
+        else {
+            male++
+            //console.log('unknown')
+            container.append(male)
+        }
+
+        */
+
+        if (index == stop) { 
+            console.log('DONE');
+        }
+        
+    },
+    error : function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+        }
+    })
+}
+
+function get_editor_name(url) {
+
+    $.ajax(url, {
+        dataType:  "jsonp",
+        success: function( wikiResponse ) {
+            console.log(wikiResponse)
+
+            //var index_1 = 0;
+
+            container = $('#output');
+            url_clean = url.replace('_',' ').replace(edits_14, '').replace(edits_15, '');
+            
+            obj = [];
+            obj = $(wikiResponse.query.pageids);
+
+            pageids = obj[0].toString();
+            edit =  $(wikiResponse.query.pages)[0][pageids].revisions;
+
+            var users = [];
+
+            result = []
+
+            jQuery.each( edit, function( i, val ) {
+
+                var user = val.user;
+                
+                users.push(user)
+
+                users_sort = users.sort()
+
+                $.each(users_sort, function(i, e) {
+                    if ($.inArray(e, result) == -1) {
+                        result.push(e);
+                        index++;
+                    }
+                });
+        
+            })
+
+            console.log(url_clean)
+            console.log(result)
+
+            jQuery.each( result, function( i, val ) {
+                
+                get_editor_info(user_info + val, url)
+                //container.append(url)
+            })
+        },   
+        error : function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.status);
+            console.log(thrownError);
+        }
+    });
+
+}
+
+function get_all_editor_info_2014() {
+    var container = $('#output');
+    container.append('article,editor,gender,editcount,emailable,registration,rigths<br/>');
+    index = 0;
+    stop = 0;
+
+    jQuery.each( articles, function( i, val ) {
+        get_editor_name( edits_14 + val );
+        //console.log(val);
+    });  
+
+    $('#hide_a').hide();
+    $('#hide_b').show();
+}
+
 
