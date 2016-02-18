@@ -41,6 +41,8 @@ var editor_list_15 = '../../data/edits/editors_15.csv';  // editors_15    editor
 var edited_articles_14 = '../../data/edits/edited_articles_14.csv'; // edited_articles_14  articles_test
 var edited_articles_15 = '../../data/edits/edited_articles_15.csv'; // edited_articles_15  articles_test
 
+var editor_identity = '../../data/edits/editors_identity_2014.csv';  // editors_identity_2014
+
 var list = [
     'nelson_mandela',
     'africa',
@@ -179,7 +181,6 @@ function get_edits(url) {
                     total = eval(size_array.join("+"));
                     average = Math.round(total / size_array.length);
                 }
-
             });
     
             console.log(index + '-' + url_clean);
@@ -523,17 +524,12 @@ function get_all_edited_articles_2015() {
 
 
 /* ------------------------------------
-EDITORS INFO
+EDITORS INFO - DATA PER EDITOR
 -------------------------------------*/
 
-//var female = 0;
+var pack = [];
 
 function get_editor_info(url,art) {
-
-    var male = 0,
-    female = 0,
-    bot = 0,
-    unknown = 0;
 
     $.ajax(url, {
     dataType:  "jsonp",
@@ -552,17 +548,6 @@ function get_editor_info(url,art) {
 
         rights = $(wikiResponse.query.users)[0].rights
 
-        /*console.log(name)
-        console.log(gender)
-        console.log(editcount)
-        console.log(emailable)
-        console.log(registration)*/
-        
-        /*if (gender.indexOf('unknown') >= 0  ) {
-            unknown++;
-        }*/
-        //console.log(unknown)
-
         var my_user = {};
         
         rights_count = 0
@@ -572,8 +557,11 @@ function get_editor_info(url,art) {
             rights_count++
         })
 
+        user_name_clean = name.replace(',','_')
+
         my_user = {
-            name: name,
+            //art: art_clean,
+            name: user_name_clean,
             gender: gender,
             editcount: editcount,
             emailable: emailable,
@@ -582,44 +570,61 @@ function get_editor_info(url,art) {
         };
 
         console.log(my_user)
+        //pack.push(my_user)
+
+        json = JSON.stringify(my_user)
+        //console.log(json)
 
         stop++;
 
         art_clean = art.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=','')
-        //container.append(art_clean+ ',')
+        
+        pack = [];
+
+        email = my_user.emailable
+
+        pack.push(art_clean)
+        pack.push(my_user.name)
+        pack.push(my_user.gender)
+        pack.push(my_user.editcount)
+        pack.push(my_user.registration)
+
+        if ( email === '') {
+            // nothing
+            pack.push('undefined')
+            //console.log('undefined')
+        }
+        else{
+            //pack.push(my_user.emailable)
+            pack.push('no')
+            //console.log('no')
+        }
+
+        pack.push(my_user.rigths)
+        
+        /*
         container.append(art_clean + ',')
 
-        container.append(my_user.name + ',')
+        container.append(user_name_clean + ',')
         container.append(my_user.gender + ',')
         container.append(my_user.editcount + ',')
         container.append(my_user.emailable + ',')
         container.append(my_user.registration + ',')
         container.append(my_user.rigths + ',<br/>')
-
-        /*
-        if (my_user.gender === 'female' ){  // (my_user.gender.indexOf('male') >= 0 )
-            //female++
-            //console.log('male')
-            container.append(female)
-        }
-        else if (my_user.gender.indexOf('bot') >= 0 ) {
-            //bot++
-            //console.log('female')
-        }
-        else if (my_user.gender.indexOf('unknown') >= 0 ) {
-            unknown++
-            //console.log('bot')
-        }
-        else {
-            male++
-            //console.log('unknown')
-            container.append(male)
-        }
-
+        
+        //container.append(json + ',')
         */
+
+        //my_pack = JSON.stringify(pack)
+        //console.log(my_pack)
+
+        
+        container.append(pack + '<br/>')
+
 
         if (index == stop) { 
             console.log('DONE');
+            console.log(pack)
         }
         
     },
@@ -629,6 +634,8 @@ function get_editor_info(url,art) {
         }
     })
 }
+
+
 
 function get_editor_name(url) {
 
@@ -647,10 +654,14 @@ function get_editor_name(url) {
 
             pageids = obj[0].toString();
             edit =  $(wikiResponse.query.pages)[0][pageids].revisions;
+            title = $(wikiResponse.query.pages)[0][pageids].title
 
-            var users = [];
+            //console.log(title)
 
-            result = []
+            var users = [],
+            result = [];
+
+            //result.push(title)
 
             jQuery.each( edit, function( i, val ) {
 
@@ -666,7 +677,6 @@ function get_editor_name(url) {
                         index++;
                     }
                 });
-        
             })
 
             console.log(url_clean)
@@ -675,8 +685,9 @@ function get_editor_name(url) {
             jQuery.each( result, function( i, val ) {
                 
                 get_editor_info(user_info + val, url)
-                //container.append(url)
+                
             })
+
         },   
         error : function (xhr, ajaxOptions, thrownError) {
             console.log(xhr.status);
@@ -688,17 +699,113 @@ function get_editor_name(url) {
 
 function get_all_editor_info_2014() {
     var container = $('#output');
-    container.append('article,editor,gender,editcount,emailable,registration,rigths<br/>');
+    //container.append('article,editor,gender,editcount,emailable,registration,rigths,<br/>');
     index = 0;
     stop = 0;
+    container.append('article,editor,gender,editcount,registration,emailable,rigths<br/>')
 
     jQuery.each( articles, function( i, val ) {
         get_editor_name( edits_14 + val );
-        //console.log(val);
     });  
 
     $('#hide_a').hide();
     $('#hide_b').show();
+}
+/* ------------------------------------
+ARTICLE - DATA PER ARTICLE 
+-------------------------------------*/
+
+function get_article_identity(){
+
+    $.ajax(editor_identity, {
+        type: 'GET',
+        dataType:  "text",
+        success: function( wikiResponse ) {
+            console.log(wikiResponse)   
+            
+            var rows = wikiResponse.split(",\n");
+
+            console.log(rows);
+
+        },
+        error : function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.status);
+            console.log(thrownError);
+        }
+    });
+
+    //info = {}
+    //art_identity = {};
+
+
+
+    /*
+    // get the list of info for every editor
+    $.getJSON(editor_identity, function(mydata) {
+        var parse = $.parseHTML(mydata);
+        console.log(mydata)
+
+        var male = 0,
+        female = 0,
+        bot = 0,
+        unknown = 0;
+
+        index = 0;
+        stop = 0;
+
+        index++
+
+        //gen = []
+        edi = []
+        ema = []
+        reg = []
+        rig = []
+
+        stop++
+
+        index_1 = 0;
+        stop_1 = 0;
+        
+        jQuery.each( mydata, function( i, val ) {
+
+            index_1++
+            stop_1++
+
+            console.log(val.name)
+
+            gender = val.gender
+            
+            if (gender.indexOf('female') !== 0  ) {
+                female++
+            }
+            else if (gender.indexOf('unknown') !== 0  )  {
+                unknown++
+            }
+            else {
+                male++
+            }
+
+            console.log(val.editcount)
+            console.log(val.emailable)
+            console.log(val.registration)
+            console.log(val.rigths)
+
+        })
+
+        if (index_1 == stop_1) { 
+            console.log( 'female:' + female)
+            console.log( 'unknown:' + unknown)
+            console.log( 'male:' + male)
+        }
+
+        console.log(index_1);
+        console.log(stop_1);
+
+        if (index == stop) { 
+            console.log('DONE');
+        }
+    });
+    */
 }
 
 
