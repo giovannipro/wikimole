@@ -35,13 +35,13 @@ ARTICLES AND EDITORS LIST
 var art_list = '../articles/articles.json';  // articles  articles_test
 
 // it does not contain bots
-var editor_list_14 = '../../data/edits/editors_14.csv';  // editors_14    editors_test
+var editor_list_14 = '../../data/edits/editors_test.csv';  // editors_14    editors_test
 var editor_list_15 = '../../data/edits/editors_15.csv';  // editors_15    editors_test
 
 var edited_articles_14 = '../../data/edits/edited_articles_14.csv'; // edited_articles_14  articles_test
 var edited_articles_15 = '../../data/edits/edited_articles_15.csv'; // edited_articles_15  articles_test
 
-var editor_identity = '../../data/edits/editors_identity_2014.csv';  // editors_identity_2014
+var editor_identity = '../../data/edits/identity_test.csv';  // editors_identity_2014  identity_test
 
 var list = [
     'nelson_mandela',
@@ -84,7 +84,7 @@ FINDME
 -------------------------------------*/
 
 
-var findme1 = 'bot',
+var findme1 = 'xxxxxxxxxx', //bot
 
 wikipedia = 'Wikipedia:',
 user = 'User:',
@@ -262,7 +262,7 @@ function get_editors(url) {
             pageids = obj[0].toString();
             edit =  $(wikiResponse.query.pages)[0][pageids].revisions;
 
-            findme1 = 'bot';
+            findme1 = 'xxxxxxxxxx'; // bot
 
             user_array = [];
             result = [];
@@ -276,7 +276,9 @@ function get_editors(url) {
 
             jQuery.each( edit, function( a,b ) {
 
-                user = b.user;
+                us = b.user
+                user = us.replace(/,/g,'_');
+
 
                 if ( user.toLowerCase().indexOf(findme1) >= 0 ) {
                     user.toLowerCase().replace(findme1, " bot");
@@ -331,6 +333,7 @@ function get_all_editors_2015() {
     index = 0;
     stop = 0;
     all = [];
+    console.log(2015)
 
     jQuery.each( articles, function( i, val ) {
         get_editors( edits_15 + val );
@@ -345,6 +348,7 @@ function get_all_editors_2014() {
     index = 0;
     stop = 0;
     all = [];
+    console.log(2014)
 
     jQuery.each( articles, function( i, val ) {
         get_editors( edits_14 + val );
@@ -427,7 +431,7 @@ function get_edited_articles(url) {
                 my_dict[pid].count = count;
                 my_dict[pid].avg = new_avg;
             }
-            console.log(my_dict); 
+            //console.log(my_dict); 
 
             jQuery.each( my_dict, function( a, b ) {
 
@@ -492,14 +496,26 @@ function get_edited_articles(url) {
 // get entry links for all of article
 function get_all_edited_articles_2014() {
     var container = $('#output');
+    console.log('2014');
+
     container.append('article_14,edits,avg_size,<br/>');
     index = 0;
     stop = 0;
 
     jQuery.each( editors_14, function( i, val ) {
-        get_edited_articles( user_contributs_14 + val );
-        console.log(val);
+        //console.log(val);
         stop++;
+
+        bot = 'bot';
+        val_lc = val.toLowerCase();
+
+        if (val_lc.indexOf(bot) >= 0 ) {
+            //console.log('>>> bot: ' + val_lc);
+        }
+        else{
+            console.log(val)
+            get_edited_articles( user_contributs_14 + val );
+        }
     });
 
     $('#hide_a').hide();
@@ -508,14 +524,28 @@ function get_all_edited_articles_2014() {
 
 function get_all_edited_articles_2015() {
     var container = $('#output');
+    console.log('2015');
+
     container.append('article_15,avg_size,edits<br/>');
     index = 0;
     stop = 0;
 
     jQuery.each( editors_15, function( i, val ) {
-        get_edited_articles( user_contributs_15 + val );
-        console.log(val);
+        //console.log(val);
         stop++;
+
+        bot = 'bot';
+        val_lc = val.toLowerCase();
+
+        console.log(val_lc);
+
+        if (val_lc.indexOf(bot) >= 0 ) {
+            console.log('>>> bot: ' + val_lc);
+        }
+        else{
+            //console.log(val_lc)
+            get_edited_articles( user_contributs_15 + val );
+        }
     });  
 
     $('#hide_a').hide();
@@ -527,9 +557,9 @@ function get_all_edited_articles_2015() {
 EDITORS INFO - DATA PER EDITOR
 -------------------------------------*/
 
-var pack = [];
-
 function get_editor_info(url,art) {
+
+    var pack = [];
 
     $.ajax(url, {
     dataType:  "jsonp",
@@ -572,20 +602,32 @@ function get_editor_info(url,art) {
         console.log(my_user)
         //pack.push(my_user)
 
-        json = JSON.stringify(my_user)
+        //json = JSON.stringify(my_user)
         //console.log(json)
 
         stop++;
 
-        art_clean = art.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=','')
-        
+        //art_clean = art.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=','')
+        art_clean = art.replace(edits_14,'').replace(edits_15,'')
+
         pack = [];
 
         email = my_user.emailable
 
         pack.push(art_clean)
         pack.push(my_user.name)
-        pack.push(my_user.gender)
+        
+        name_low = name.toLowerCase()
+
+        if (name_low.indexOf('bot') >= 0 )  {
+            pack.push('bot')
+            //console.log('bot' + name_low)
+        }
+        else {
+            pack.push(my_user.gender)
+            //console.log('nobot' + name_low)
+        }
+
         pack.push(my_user.editcount)
         pack.push(my_user.registration)
 
@@ -595,32 +637,12 @@ function get_editor_info(url,art) {
             //console.log('undefined')
         }
         else{
-            //pack.push(my_user.emailable)
             pack.push('no')
-            //console.log('no')
         }
 
         pack.push(my_user.rigths)
-        
-        /*
-        container.append(art_clean + ',')
 
-        container.append(user_name_clean + ',')
-        container.append(my_user.gender + ',')
-        container.append(my_user.editcount + ',')
-        container.append(my_user.emailable + ',')
-        container.append(my_user.registration + ',')
-        container.append(my_user.rigths + ',<br/>')
-        
-        //container.append(json + ',')
-        */
-
-        //my_pack = JSON.stringify(pack)
-        //console.log(my_pack)
-
-        
         container.append(pack + '<br/>')
-
 
         if (index == stop) { 
             console.log('DONE');
@@ -634,8 +656,6 @@ function get_editor_info(url,art) {
         }
     })
 }
-
-
 
 function get_editor_name(url) {
 
@@ -683,11 +703,8 @@ function get_editor_name(url) {
             console.log(result)
 
             jQuery.each( result, function( i, val ) {
-                
                 get_editor_info(user_info + val, url)
-                
             })
-
         },   
         error : function (xhr, ajaxOptions, thrownError) {
             console.log(xhr.status);
@@ -699,113 +716,54 @@ function get_editor_name(url) {
 
 function get_all_editor_info_2014() {
     var container = $('#output');
-    //container.append('article,editor,gender,editcount,emailable,registration,rigths,<br/>');
     index = 0;
     stop = 0;
-    container.append('article,editor,gender,editcount,registration,emailable,rigths<br/>')
+    container.append('article_15,editor,gender,editcount,registration,emailable,rigths<br/>')
 
     jQuery.each( articles, function( i, val ) {
-        get_editor_name( edits_14 + val );
+        
+
+        bot = 'bot';
+        val_lc = val.toLowerCase();
+
+        console.log(val_lc);
+
+        if (val_lc.indexOf(bot) >= 0 ) {
+            console.log('>>> bot: ' + val_lc);
+        }
+        else{
+            get_editor_name( edits_14 + val );
+        }
+
     });  
 
     $('#hide_a').hide();
     $('#hide_b').show();
 }
-/* ------------------------------------
-ARTICLE - DATA PER ARTICLE 
--------------------------------------*/
 
-function get_article_identity(){
+function get_all_editor_info_2015() {
+    var container = $('#output');
+    index = 0;
+    stop = 0;
+    container.append('article_15,editor,gender,editcount,registration,emailable,rigths<br/>')
 
-    $.ajax(editor_identity, {
-        type: 'GET',
-        dataType:  "text",
-        success: function( wikiResponse ) {
-            console.log(wikiResponse)   
-            
-            var rows = wikiResponse.split(",\n");
-
-            console.log(rows);
-
-        },
-        error : function (xhr, ajaxOptions, thrownError) {
-            console.log(xhr.status);
-            console.log(thrownError);
-        }
-    });
-
-    //info = {}
-    //art_identity = {};
-
-
-
-    /*
-    // get the list of info for every editor
-    $.getJSON(editor_identity, function(mydata) {
-        var parse = $.parseHTML(mydata);
-        console.log(mydata)
-
-        var male = 0,
-        female = 0,
-        bot = 0,
-        unknown = 0;
-
-        index = 0;
-        stop = 0;
-
-        index++
-
-        //gen = []
-        edi = []
-        ema = []
-        reg = []
-        rig = []
-
-        stop++
-
-        index_1 = 0;
-        stop_1 = 0;
+    jQuery.each( articles, function( i, val ) {
         
-        jQuery.each( mydata, function( i, val ) {
 
-            index_1++
-            stop_1++
+        bot = 'bot';
+        val_lc = val.toLowerCase();
 
-            console.log(val.name)
+        console.log(val_lc);
 
-            gender = val.gender
-            
-            if (gender.indexOf('female') !== 0  ) {
-                female++
-            }
-            else if (gender.indexOf('unknown') !== 0  )  {
-                unknown++
-            }
-            else {
-                male++
-            }
-
-            console.log(val.editcount)
-            console.log(val.emailable)
-            console.log(val.registration)
-            console.log(val.rigths)
-
-        })
-
-        if (index_1 == stop_1) { 
-            console.log( 'female:' + female)
-            console.log( 'unknown:' + unknown)
-            console.log( 'male:' + male)
+        if (val_lc.indexOf(bot) >= 0 ) {
+            console.log('>>> bot: ' + val_lc);
+        }
+        else{
+            get_editor_name( edits_15 + val );
         }
 
-        console.log(index_1);
-        console.log(stop_1);
+    });  
 
-        if (index == stop) { 
-            console.log('DONE');
-        }
-    });
-    */
+    $('#hide_a').hide();
+    $('#hide_b').show();
 }
-
-
