@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="../lib/bootstrap-3.3.6-dist2/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../lib/css/scraper.css">
 	</head>
-	<body onload="test()">
+	<body onload="test_1();test_2()">
 		<main class="container-fluid" id="hide_b">
 			<div id="output"></div>
 		</main>
@@ -22,65 +22,93 @@
 					</h5>
 				</div>
 			</div>
+
+			<hr>
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Article's features</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Outgoing links</h3>
+					<!--<p>article,edits,unique_editors,avg_size</p>-->
+				</div>
+			</div>
+			<div class="row scraper">
+				<div class="col-md-4" onclick="get_exitlinks_st()">
+					<h4>Edge: source,target<h4>
+				</div>
+				<div class="col-md-4" onclick="get_exitlinks_il()">
+					<h4>Node: id,label<h4>
+				</div>
+			</div>
+
+
 			<hr>
 
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Edits, size, editors</h2>
+					<h2>Edits</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Edits, size, editors</h3>
 					<p>article,edits,unique_editors,avg_size</p>
 				</div>
 			</div>
 			<div class="row scraper">
 				<div class="col-md-4" onclick="get_all_edits_2014()">
-					<h3>2014<h3>
+					<h4>2014<h4>
 				</div>
 				<div class="col-md-4" onclick="get_all_edits_2015()">
-					<h3>2015<h3>
+					<h4>2015<h4>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12">
-					<h2>All editors (bots included)</h2>
+					<h3>All editors (bots included)</h3>
 					<p>editors</p>
 				</div>
 			</div>
 			<div class="row scraper">
 				<div class="col-md-4" onclick="get_all_editors_2014()">
-					<h3>2014<h3>
+					<h4>2014<h4>
 				</div>
 				<div class="col-md-4" onclick="get_all_editors_2015()">
-					<h3>2015<h3>
+					<h4>2015<h4>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12">
-					<h2>All edited articles (human only)</h2>
+					<h3>All edited articles (human only)</h3>
 					<p>edited_articles</p>
 				</div>
 			</div>
 			<div class="row scraper">
 				<div class="col-md-4" onclick="get_all_edited_articles_2014()">
-					<h3>2014<h3>
+					<h4>2014<h4>
 				</div>
 				<div class="col-md-4" onclick="get_all_edited_articles_2015()">
-					<h3>2015<h3>
+					<h4>2015<h4>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12">
-					<h2>All editors info</h2>
+					<h3>All editors info</h3>
 					<p>article,editor,gender,editcount,emailable,registration,rigths</p>
 				</div>
 			</div>
 			<div class="row scraper">
 				<div class="col-md-4" onclick="get_all_editor_info_2014()">
-					<h3>All user info 2014<h3>
+					<h4>All user info 2014<h4>
 				</div>
 				<div class="col-md-4" onclick="get_all_editor_info_2015()">
-					<h3>All user info 2015<h3>
+					<h4>All user info 2015<h4>
 				</div>		
 			</div>
 
@@ -89,4 +117,5 @@
 	<script src="../lib/js/jquery.min.js" defer></script>
 	<script src="../lib/js/jquery.xdomainajax.js" defer></script>
 	<script src="../lib/functions/editors.js" defer></script>
+	<script src="../lib/functions/features.js" defer></script>
 </html>
