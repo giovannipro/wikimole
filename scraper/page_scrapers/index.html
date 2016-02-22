@@ -29,10 +29,39 @@
 					<h2>Article's features</h2>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Amount of links</h3>
+					<p>article,page,user,portal,template,category,total</p>
+				</div>
+			</div>
+			<div class="row scraper">
+				<div class="col-md-4" onclick="get_n_entrylink()">
+					<h4>Incoming links<h4>
+				</div>
+				<div class="col-md-4" onclick="get_n_exitlink()">
+					<h4>Outgoing links<h4>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Incoming links</h3>
+				</div>
+			</div>
+			<div class="row scraper">
+				<div class="col-md-4" onclick="get_entrylinks_st()">
+					<h4>Edge: source,target<h4>
+				</div>
+				<div class="col-md-4" onclick="get_entrylinks_il()">
+					<h4>Node: id,label<h4>
+				</div>
+			</div>
+
 			<div class="row">
 				<div class="col-md-12">
 					<h3>Outgoing links</h3>
-					<!--<p>article,edits,unique_editors,avg_size</p>-->
 				</div>
 			</div>
 			<div class="row scraper">
