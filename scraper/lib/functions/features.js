@@ -22,20 +22,11 @@ var list = [
     "Domestic violence in South Africa"
 ];  
 
-//  "sexism",
-//	"Alcohol_abuse"
-//	"nelson_mandela
-// 'sexism',
-// 'Alcohol_abuse'
-// 'africa',
-//    'AIDS'
-
 // get the list of articles
 $.getJSON(art_list, function(mydata) {
     var parse_art = $.parseHTML(mydata);
     articles = $(mydata);
 });
-
 
 /* ---------------- 
 FINDME 
@@ -62,18 +53,279 @@ issn = 'International Standard Serial Number',
 isni = 'International Standard Name Identifier',
 portal = 'Portal';
 
-/*
-// total amount of links
-var findme1 = 'User',
-findme2 = 'Template',
-findme3 = 'Talk:',
-findme4 = 'Help:',
-findme5 = 'File:',
-findme6 = 'Wikipedia',
-findme7 = 'Category:',
-findme8 = 'Portal',
-;
-*/
+
+/* ------------------------------------
+ISSUES
+-------------------------------------*/
+
+function get_issues(url) {
+    
+    $.ajax({			    	
+       	type: 'GET',
+       	url: proxy + wikilink + url,
+       	processData: true,
+    })
+    .done (function (get_ref) {
+
+    	var parsedata_func = $.parseHTML(get_ref);
+    	get = []
+		get = ($(parsedata_func).find('.ambox').find('.mbox-text-span'))
+
+		sum = 0;
+
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+		container = $('#output')
+
+    	jQuery.each( get, function( i, val ) {
+    		txt = $(this).prop('outerHTML')
+    		sum++;
+    	})
+    	container.append(url_clean + ',' + sum + '</br>')	        	
+
+		$('#hide_a').hide();
+    	$('#hide_b').show();
+
+	})
+	.error (function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+	});
+}
+
+function get_all_issues() {
+	container = $('#output')
+	container.append('article,issues</br>')
+	jQuery.each( articles, function( i, val ) {  //  list; articles;
+		get_issues(val)
+		console.log(wikilink + val)
+	})	
+}
+
+
+/* ------------------------------------
+REFERENCES
+-------------------------------------*/
+
+function get_references(url) {
+    
+    $.ajax({			    	
+       	type: 'GET',
+       	url: proxy + wikilink + url,
+       	processData: true,
+    })
+    .done (function (get_ref) {
+
+    	var parsedata_func = $.parseHTML(get_ref);
+    	get = []
+		get = ($(parsedata_func).find('#mw-content-text').find('.references').find('li'))
+
+		sum = 0;
+
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+		var container = $('#output')
+
+    	jQuery.each( get, function( i, val ) {
+    		txt = $(this).prop('outerHTML')
+    		sum++;
+    	})
+
+    	container.append(url_clean + ',' + sum + '</br>')	
+
+		$('#hide_a').hide();
+    	$('#hide_b').show();
+
+	})
+	.error (function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+	});
+}
+
+function get_all_references() {
+	var container = $('#output')
+	container.append('article,references</br>')
+	jQuery.each( articles, function( i, val ) {  //articles;   // art_list; list 
+		get_references(val)
+		console.log(wikilink + val)
+	})	
+}
+
+
+/* ------------------------------------
+NOTES
+-------------------------------------*/
+
+function get_notes(url) {
+    
+    $.ajax({			    	
+       	type: 'GET',
+       	url: proxy + wikilink + url,
+       	processData: true,
+    })
+    .done (function (get_ref) {
+
+    	var parsedata_func = $.parseHTML(get_ref);
+    	get = []
+		get = ($(parsedata_func).find('#mw-content-text').find('#Notes').closest( "h2" ).next().find('li'))  
+
+		sum = 0;
+
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+		container = $('#output')
+		
+    	jQuery.each( get, function( i, val ) {
+    		txt = $(this).prop('outerHTML')
+    		sum++;
+    	})
+    	container.append(url_clean + ',' + sum + '</br>')	        	
+
+		$('#hide_a').hide();
+    	$('#hide_b').show();
+
+	})
+	.error (function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+	});
+}
+
+function get_all_notes() {
+	container = $('#output')
+	container.append('article,notes</br>')	
+	jQuery.each( articles, function( i, val ) {  // art; list; articles; 
+		get_notes(val)
+		console.log(wikilink + val)
+	})
+}
+
+
+/* ------------------------------------
+IMAGES
+-------------------------------------*/
+
+function get_images(url) {
+    
+    $.ajax({			    	
+       	type: 'GET',
+       	url: proxy + wikilink + url,
+       	processData: true,
+    })
+    .done (function (get_ref) {
+
+    	var parsedata_func = $.parseHTML(get_ref)
+    	//var filtered = parsedata_func.filter('.mbox-image');
+
+    	get = []
+    	get1 = []
+    	get2 = []
+
+    	//get = ($(parsedata_func).find('#mw-content-text').filter( ".metadata" ))
+		get1 = $(parsedata_func).find('#mw-content-text').find('.thumbimage') // .find('.thumb')  .filter( ".mbox-image" )
+		get2 = $(parsedata_func).find('#mw-content-text').find('.image')
+		
+		/*console.log(url)
+		console.log(get1)
+		console.log(get2)*/
+
+		sum = 0;
+
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+		
+		container = $('#output')
+    	
+    	jQuery.each( get1, function( i, val ) {
+    		txt = $(this).prop('href');
+    		//txt_clean = txt.replace('http://localhost:8888/','');
+			if (txt != undefined) {
+				console.log(txt)
+				sum++;	
+			}
+			else{}
+			//sum++;
+			//console.log(wikilink + txt)
+    	})
+    	jQuery.each( get2, function( i, val ) {
+    		txt = $(this).prop('href')
+    		//txt_clean = txt.replace('http://localhost:8888/','')
+			if (txt != undefined) {
+				console.log(txt)
+				sum++;	
+			}
+			else{}
+			//sum++;
+    	})
+    	
+    	container.append(url_clean + ',' + sum + '</br>')	
+
+		$('#hide_a').hide();
+    	$('#hide_b').show();
+
+	})
+	.error (function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+	});
+}
+
+function get_all_images() {
+	container = $('#output')
+	container.append('article,images</br>')	
+	jQuery.each( articles, function( i, val ) {  //  list; articles;
+		get_images(val)
+		console.log(wikilink + val)
+	})	
+}
+
+/* ------------------------------------
+SEE ALSO
+-------------------------------------*/
+
+function get_seeAlso(url) {
+    
+    $.ajax({			    	
+       	type: 'GET',
+       	url: proxy + wikilink + url,
+       	processData: true,
+    })
+    .done (function (get_ref) {
+
+    	var parsedata_func = $.parseHTML(get_ref);
+    	get = []
+		get = ($(parsedata_func).find('#mw-content-text').find('#See_also').closest( "h2" ).next().find('li'))
+
+		sum = 0;
+
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+
+		$('#hide_a').hide();
+    	$('#hide_b').show();
+
+    	jQuery.each( get, function( i, val ) {
+    		txt = $(this).prop('outerHTML')
+    		sum++;
+    	})
+
+    	container.append(url_clean + ',' + sum + '</br>')	        	
+
+		$('.hide_1').hide()
+	})
+	.error (function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+	});
+}
+
+function get_all_seeAlso() {
+	container = $('#output')
+	container.append('article,seeAlso</br>')	
+	jQuery.each( articles, function( i, val ) {  //list; articles;
+		console.log(wikilink + val)
+		get_seeAlso(val)
+	})	
+}
+
 
 /* ------------------------------------
 ENTRY LINKS

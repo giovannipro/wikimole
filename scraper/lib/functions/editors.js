@@ -29,7 +29,7 @@ http://www.epochconverter.com/
 ARTICLES AND EDITORS LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json';  // articles  articles_test
+var art_list = '../articles/articles_test.json';  // articles  articles_test
 
 // it does not contain bots
 var editor_list_14 = '../../data/edits/editors_test.csv';  // editors_14    editors_test
@@ -72,9 +72,8 @@ function string_clean(string) {
 function hide() {
     $('#hide_a').hide();
     $('#hide_b').show();
-    console.log('works');
+    //console.log('works');
 }
-
 
 /* ------------------------------------
 FINDME
