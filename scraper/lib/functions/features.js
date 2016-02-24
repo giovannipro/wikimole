@@ -11,11 +11,14 @@ var proxy = baseurl + 'proxy_interlinks.php' + "?url=" ;
 var wikilink = 'https://en.wikipedia.org/wiki/';
 var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=';
 
+var proxy_pageview = baseurl + 'proxy_pageviews.php' + "?url=" ;
+var pageview_service = "http://stats.grok.se/json/en/";
+
 /* ------------------------------------
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json';  // articles articles_1of2 articles_2of2  articles_test
+var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
     "Reconciliation_Day",
@@ -299,17 +302,16 @@ function get_seeAlso(url) {
 
 		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
-		$('#hide_a').hide();
-    	$('#hide_b').show();
-
     	jQuery.each( get, function( i, val ) {
     		txt = $(this).prop('outerHTML')
     		sum++;
     	})
 
+   		$('#hide_a').hide();
+    	$('#hide_b').show();
+
     	container.append(url_clean + ',' + sum + '</br>')	        	
 
-		$('.hide_1').hide()
 	})
 	.error (function (xhr, ajaxOptions, thrownError) {
         console.log(xhr.status);
@@ -318,11 +320,11 @@ function get_seeAlso(url) {
 }
 
 function get_all_seeAlso() {
-	container = $('#output')
-	container.append('article,seeAlso</br>')	
+	container = $('#output');
+	container.append('article,seeAlso</br>');	
 	jQuery.each( articles, function( i, val ) {  //list; articles;
-		console.log(wikilink + val)
-		get_seeAlso(val)
+		console.log(wikilink + val);
+		get_seeAlso(val);
 	})	
 }
 
@@ -664,7 +666,6 @@ function exitlinks(url) {
 					//console.log('article: ' + v)
 				}
 			}
-
 		})
         
         $('#hide_a').hide();
@@ -687,4 +688,72 @@ function get_n_exitlink() {
 	jQuery.each( articles, function( i, val ) { // list articles
 		exitlinks( val )
 	})
+}
+
+
+/* ------------------------------------
+PAGE VIEWS
+-------------------------------------*/
+
+var yearPV = {};
+
+function get_one_daily_pageview(yearString, monthString, article, doPrint) {
+
+	var with_proxy = proxy_pageview + pageview_service + yearString + monthString +  '/' + article,
+	no_proxy = pageview_service + yearString + monthString +  '/' + article;
+
+	var container = $('#output');
+
+	    $.ajax({			    	
+       	type: 'GET',
+       	url: with_proxy,
+       	processData: true,
+       	dataType: 'json',
+       	crossOrigin: true,
+    })
+	.done (function (wikiResponse) {
+		if (!yearPV.hasOwnProperty(yearString)) {
+			yearPV[yearString] = {};
+		}
+
+		yearPV[yearString][monthString] = wikiResponse.daily_views;
+
+		if (doPrint) {
+			//console.log(yearPV[yearString]);
+		}
+
+		jQuery.each( yearPV[yearString][monthString], function( i, v ) {
+			container.append( article + ',' + i +',' + v +'</br>')
+	    })
+	})
+	.error (function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+	})
+};
+
+function get_daily_pageview(article,yearString) {
+	var container = $('#output');
+	
+	for (i = 1; i < 10; i++) { 
+		var monthString = '0'+i ;		
+		get_one_daily_pageview(yearString, monthString, article);
+	}
+	for (i = 10; i < 13; i++) {
+		var monthString =  i + '';
+		get_one_daily_pageview(yearString, monthString, article, monthString === '12'); 
+	}
+	$('#hide_a').hide();
+    $('#hide_b').show();
+}
+
+function get_all_daily_pageview(yearString,article) {
+	var container = $('#output');
+	console.log(yearString)
+
+	jQuery.each( articles, function( i, val ) {
+		get_daily_pageview( val, yearString)
+		console.log(val)	
+	})
+
 }
