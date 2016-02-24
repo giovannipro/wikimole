@@ -12,6 +12,8 @@ var user_contributs_14 = 'https://en.wikipedia.org/w/api.php?action=query&list=u
 var user_contributs_15 = 'https://en.wikipedia.org/w/api.php?action=query&list=usercontribs&format=json&ucstart=1451606399&ucend=1420070400&ucprop=ids%7Ctitle%7Ctimestamp%7Ccomment%7Csize%7Csizediff%7Cflags%7Ctags&ucuser='; // %7Cparsedcomment
 var user_info = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info&list=users&meta=&titles=&inprop=&usprop=blockinfo%7Cgroups%7Crights%7Ceditcount%7Cregistration%7Cemailable%7Cgender&ususers=';
 
+var edit_api = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvend=1451606399&rvdir=newer&indexpageids=&titles='; // 1419984000 -  until Wed, 31 Dec 2014 00:00:00 GMT
+
 /*
 http://www.epochconverter.com/
 
@@ -24,12 +26,11 @@ http://www.epochconverter.com/
 31.12.2015, 23:59:59    1451606399
 */
 
-
 /* ------------------------------------
 ARTICLES AND EDITORS LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json';  // articles  articles_test
+var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 // it does not contain bots
 var editor_list_14 = '../../data/edits/editors_test.csv';  // editors_14    editors_test
@@ -60,7 +61,7 @@ var editors = [
 // get the list of articles
 $.getJSON(art_list, function(mydata) {
     var parse_art = $.parseHTML(mydata);
-    articles = $(mydata);
+    articles_b = $(mydata);
 });
 
 // clean the string
@@ -207,7 +208,7 @@ function get_all_edits_2014() {
     stop = 0;
 
     container.append('article_2014,unique_editors,edits,avg_size<br/>');
-    jQuery.each( articles, function( i, val ) {
+    jQuery.each( articles_b, function( i, val ) {
         get_edits( edits_14 + val );
         stop++;
     }); 
@@ -226,7 +227,7 @@ function get_all_edits_2015() {
     stop = 0;
 
     container.append('article_2015,unique_editors,edits,avg_size<br/>');
-    jQuery.each( articles, function( i, val ) {
+    jQuery.each( articles_b, function( i, val ) {
         get_edits( edits_15 + val );
         stop++;
     });  
@@ -331,7 +332,7 @@ function get_all_editors_2015() {
     all = [];
     console.log(2015)
 
-    jQuery.each( articles, function( i, val ) {
+    jQuery.each( articles_b, function( i, val ) {
         get_editors( edits_15 + val );
         stop++;
     }); 
@@ -346,7 +347,7 @@ function get_all_editors_2014() {
     all = [];
     console.log(2014)
 
-    jQuery.each( articles, function( i, val ) {
+    jQuery.each( articles_b, function( i, val ) {
         get_editors( edits_14 + val );
         stop++;
     }); 
@@ -676,7 +677,6 @@ function get_editor_name(url) {
 
             var users = [],
             result = [];
-
             //result.push(title)
 
             jQuery.each( edit, function( i, val ) {
@@ -716,7 +716,7 @@ function get_all_editor_info_2014() {
     stop = 0;
     container.append('article_15,editor,gender,editcount,registration,emailable,rigths<br/>')
 
-    jQuery.each( articles, function( i, val ) {
+    jQuery.each( articles_b, function( i, val ) {
         
 
         bot = 'bot';
@@ -743,7 +743,7 @@ function get_all_editor_info_2015() {
     stop = 0;
     container.append('article_15,editor,gender,editcount,registration,emailable,rigths<br/>')
 
-    jQuery.each( articles, function( i, val ) {
+    jQuery.each( articles_b, function( i, val ) {
         
 
         bot = 'bot';
@@ -760,6 +760,74 @@ function get_all_editor_info_2015() {
 
     });  
 
+    $('#hide_a').hide();
+    $('#hide_b').show();
+}
+
+
+/* ------------------------------------
+EDITS CHRONOLOGY
+-------------------------------------*/
+
+// get edits for one article
+function edits_csv(url) {
+    
+    $.ajax(url, {
+        dataType:  "jsonp",
+        success: function( wikiResponse ) {
+        //console.log(wikiResponse)
+
+            container = $('#output');
+            url_clean = url.replace(edit_api, '')
+            
+            obj = []
+            obj = $(wikiResponse.query.pageids)
+
+            pageids = obj[0].toString()
+            edit =  $(wikiResponse.query.pages)[0][pageids].revisions
+
+            //console.log(edit)
+            //console.log(url_clean)
+
+            jQuery.each( edit, function( i , v ) {
+
+                user = v.user;
+                timestamp = v.timestamp;
+                size = v.size;
+
+                user_clean = user.replace("'",'').replace(',','_')
+                timestamp_clean = timestamp.substring(0, 10); 
+
+                user_low = user.toLowerCase()
+                //console.log(user_low)
+
+                if ( user_low.indexOf("bot")  >= 0 ) {
+                    //console.log('bot: ' + user)
+                } else {
+                    container.append(url_clean + ',' );
+                    container.append(user_clean + ',' );
+                    container.append(timestamp_clean+ ',');
+                    container.append(size + '</br>');
+                }
+            })
+        },   
+        error : function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.status);
+            console.log(thrownError);
+        }
+    })
+
+}
+
+// get entry links for all of article
+function get_all_edits_csv() {
+    var container = $('#output')
+
+    container.append('article,user,timestamp,size<br/>')
+    jQuery.each( articles_b, function( i, val ) { // articles; list;
+        edits_csv( edit_api + val ) 
+        console.log(val)
+    })  
     $('#hide_a').hide();
     $('#hide_b').show();
 }

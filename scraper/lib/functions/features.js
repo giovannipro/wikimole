@@ -18,7 +18,7 @@ var pageview_service = "http://stats.grok.se/json/en/";
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
     "Reconciliation_Day",
@@ -28,7 +28,7 @@ var list = [
 // get the list of articles
 $.getJSON(art_list, function(mydata) {
     var parse_art = $.parseHTML(mydata);
-    articles = $(mydata);
+    articles_a = $(mydata);
 });
 
 /* ---------------- 
@@ -99,7 +99,7 @@ function get_issues(url) {
 function get_all_issues() {
 	container = $('#output')
 	container.append('article,issues</br>')
-	jQuery.each( articles, function( i, val ) {  //  list; articles;
+	jQuery.each( articles_a, function( i, val ) {  //  list; articles;
 		get_issues(val)
 		console.log(wikilink + val)
 	})	
@@ -148,7 +148,7 @@ function get_references(url) {
 function get_all_references() {
 	var container = $('#output')
 	container.append('article,references</br>')
-	jQuery.each( articles, function( i, val ) {  //articles;   // art_list; list 
+	jQuery.each( articles_a, function( i, val ) {  //articles_a;   // art_list; list 
 		get_references(val)
 		console.log(wikilink + val)
 	})	
@@ -197,7 +197,7 @@ function get_notes(url) {
 function get_all_notes() {
 	container = $('#output')
 	container.append('article,notes</br>')	
-	jQuery.each( articles, function( i, val ) {  // art; list; articles; 
+	jQuery.each( articles_a, function( i, val ) {  // art; list; articles_a; 
 		get_notes(val)
 		console.log(wikilink + val)
 	})
@@ -275,7 +275,7 @@ function get_images(url) {
 function get_all_images() {
 	container = $('#output')
 	container.append('article,images</br>')	
-	jQuery.each( articles, function( i, val ) {  //  list; articles;
+	jQuery.each( articles_a, function( i, val ) {  //  list; articles_a;
 		get_images(val)
 		console.log(wikilink + val)
 	})	
@@ -322,7 +322,7 @@ function get_seeAlso(url) {
 function get_all_seeAlso() {
 	container = $('#output');
 	container.append('article,seeAlso</br>');	
-	jQuery.each( articles, function( i, val ) {  //list; articles;
+	jQuery.each( articles_a, function( i, val ) {  //list; articles_a;
 		console.log(wikilink + val);
 		get_seeAlso(val);
 	})	
@@ -379,7 +379,7 @@ function get_source_target(url) {
 function get_entrylinks_st() {
 	$('#output').html('Source,Target<br/>');
 
-	jQuery.each( articles, function( i, val ) {
+	jQuery.each( articles_a, function( i, val ) {
 		var title = val;
 		get_source_target( backlinks + val );
 		console.log(wikilink + val);
@@ -390,7 +390,7 @@ function get_entrylinks_st() {
 function get_entrylinks_il(url) {
 	$('#output').append('Id,Label<br/>');
 
-	jQuery.each( articles, function( i, val ) {
+	jQuery.each( articles_a, function( i, val ) {
 
 		val_clean = val.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 
@@ -475,7 +475,7 @@ function get_exitlinks_st() {
 	container.append('Source,Target<br/>');
 	//console.log(articles)
 
-	jQuery.each( articles, function( i, val ) {
+	jQuery.each( articles_a, function( i, val ) {
 		console.log(wikilink + val);
 		scrape_exitlinks( val );
 	});
@@ -487,7 +487,7 @@ function get_exitlinks_il(url) {
 	var container = $('#output');
 	container.append('Id,Label<br/>');
 
-	jQuery.each( articles, function( i, val ) {
+	jQuery.each( articles_a, function( i, val ) {
 		val_clean = val.replace(/^-/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/,/g, ';').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
 		
 		console.log(wikilink + val_clean);	
@@ -589,7 +589,7 @@ function entrylinks(url) {
 function get_n_entrylink() {
 
 	$('#output').html('article(entry),page,user,portal,template,category,total<br/>');
-	jQuery.each( articles, function( i, val ) {  // articles list
+	jQuery.each( articles_a, function( i, val ) {  // articles list
 		entrylinks( backlinks + val );
 		console.log( wikilink + val)
 	});	
