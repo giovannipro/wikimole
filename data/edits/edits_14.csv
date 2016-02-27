@@ -1,161 +1,162 @@
-article_2014,edits,unique_editors,avg_size
+article 2014,unique editors,edits,avg size
 !Kung people,1,1,44
-Acid,7,5,31094
-Agriculture in_South_Africa,9,7,12694
-Alcohol abuse,8,6,45487
-Alcohol dependence,10,6,9593
-Aloe,10,6,17832
-Animal husbandry,10,9,8281
-Aloe vera,10,8,33162
-Animal husbandry_in_South_Africa,9,4,2974
-Africa Day,5,5,2208
-Alcoholism,9,5,106586
-Animal-powered transport,3,2,3036
-Atom,10,6,109841
+Acid,6,10,32621
+Africa Day,6,6,2209
+Agriculture in South Africa,8,10,12698
+Alcohol abuse,8,10,45495
+Alcohol dependence,6,10,9593
+Alcoholism,6,10,106565
+Aloe vera,8,10,33162
+Aloe,6,10,17832
+Animal husbandry,9,10,8281
+Animal husbandry in South Africa,5,10,2981
+Animal-powered transport,2,3,3036
+Apartheid,8,10,148634
+Atom,6,10,109841
 Automobile,2,2,53
-Apartheid,9,7,148503
-Bias,9,6,4964
-Bicycle,7,6,65642
-Bird nest,8,6,58393
-Ceramic,9,5,17641
-Bullying,10,6,58967
-Boiling,9,7,10370
-Base (chemistry),9,9,11771
-Borehole,8,6,5351
-Castle of_Good_Hope,10,8,9771
-Cell (biology),8,6,44452
-Biome,9,7,25238
-Child abuse,9,6,103467
-Children's Day,10,8,62072
-Climate,9,7,33036
-Domestic violence,10,6,178888
-Cooking,9,7,34535
-Clay,10,2,11026
-Coal in_South_Africa,7,4,12491
-Control variable,9,4,3708
-Convenience food,7,6,22655
-Circuit diagram,10,7,10045
-Discrimination,9,6,63471
-Dependent and_independent_variables,2,2,9741
-Cradle of_Humankind,9,9,9486
-Coal,9,9,79929
-Design,10,7,29401
-Domestic violence_in_South_Africa,9,8,15023
-Duration (music),7,5,2823
-Electrical conductor,10,7,10242
-Economy of_South_Africa,10,9,76796
-Electricity generation,10,7,32443
-Free State_(province),10,3,20595
-Food vs._fuel,9,7,30347
-Gangster,10,10,42655
-Food,8,8,61703
-Electrical network,9,8,7916
-Energy in_South_Africa,9,7,13720
+Base (chemistry),10,10,11770
+Bias,7,10,4965
+Bicycle,9,10,65630
+Biome,8,10,25241
+Bird nest,8,10,58389
+Boiling,8,10,10362
+Borehole,6,8,5351
+Bullying,6,10,58967
+Castle of Good Hope,8,10,9771
+Cell (biology),8,10,44438
+Ceramic,6,10,17727
+Child abuse,7,10,103452
+Children's Act 2005,2,3,3577
+Children's Day,8,10,62072
+Circuit diagram,7,10,10045
+Clay,2,10,11026
+Climate,8,10,33033
+Coal in South Africa,7,10,12491
+Coal,10,10,79926
+Control variable,5,10,3599
+Convenience food,8,10,22670
+Cooking,8,10,34530
+Cradle of Humankind,10,10,9478
+Dependent and independent variables,2,2,9741
+Design,7,10,29401
+Discrimination,7,10,63467
+Domestic violence,6,10,178888
+Domestic violence in South Africa,9,10,14967
+Drakensberg,5,10,25678
+Duration (music),6,8,2828
+Economy of South Africa,9,10,76796
+Ecosystem,9,10,51995
+Electrical conductor,7,10,10242
+Electrical network,9,10,7905
+Electricity generation,7,10,32443
+Energy in South Africa,8,10,13715
+Fair trade,7,10,102158
+Farm,7,10,18112
+Fiber,5,10,11206
+Fire safety,8,10,15528
+Flag of South Africa,8,10,15691
+Food pyramid (nutrition),5,10,28153
+Food security,9,10,96732
+Food vs. fuel,8,10,29699
+Food,10,10,61698
 Frances Baard,1,1,9119
-Fire safety,9,7,15535
-Farm,10,7,18112
-Gender stereotypes,2,1,35
-Fiber,9,4,11208
-Gender role,10,9,85099
-Flag of_South_Africa,10,8,15691
-Freedom Day_(South_Africa),8,6,1250
-Heritage Day_(South_Africa),9,5,3642
-Hottentot Venus,10,4,5153
-Human nutrition,10,5,111717
-Gas,9,8,38930
-History of_South_Africa,8,7,82808
-Drakensberg,9,4,25718
-HIV/AIDS,8,6,151487
+Free State (province),3,10,20595
+Freedom Day (South Africa),8,10,1252
+Gana and Gwi people,2,6,1410
+Gangster,10,10,42655
+Gas,9,10,38928
+Gauteng,7,10,45295
+Gender role,9,10,85099
+Gender stereotypes,1,2,35
+Glass,7,10,59316
+Griqua people,4,6,11472
+Hand washing,8,10,36999
+Health,9,10,34103
+Herero and Namaqua Genocide,10,10,57125
+Heritage Day (South Africa),6,10,3625
+History of South Africa,9,10,82811
+History of writing,8,10,45024
+HIV,7,10,82752
+HIV/AIDS,8,10,151509
 Home safety,4,4,6121
-Food security,8,7,96463
-Herero and_Namaqua_Genocide,7,7,57155
-Hand washing,10,8,36999
-Griqua people,6,4,11472
-History of_writing,10,8,45024
-Glass,10,7,59316
-Gauteng,9,6,45290
-Food pyramid_(nutrition),9,4,28138
-HIV,8,5,82764
-Health,10,9,34103
-Khoikhoi mythology,0,0,34103
-Insulator (electricity),7,7,27735
-List of_South_Africans,10,9,52249
-Later Stone_Age,10,1,7928
-Ecosystem,9,8,51998
-Map,9,8,18362
-Latitude,9,6,41787
-Human swimming,8,6,26104
-Mind map,8,7,16123
-Longitude,9,9,24463
-Makhonjwa Mountains,2,1,4236
-Khoikhoi,10,8,11769
-Hydraulics,8,5,11341
-National anthem_of_South_Africa,10,5,6500
-Mandela Day,10,9,3248
+Hottentot Venus,4,10,5153
+Human nutrition,5,10,111717
+Human Rights Day,9,10,12909
+Human swimming,7,10,26098
+Hydraulics,6,10,11340
+Insulator (electricity),10,10,27738
+Khoikhoi mythology,2,2,28
+Khoikhoi,8,10,11769
+Later Stone Age,1,10,7928
+Latitude,7,10,41785
 Liquid fuel,10,10,13878
-National Women's_Day,7,7,2802
-Petrol-paraffin engine,10,3,6001
-Politics of_South_Africa,9,9,9628
-Outer space,9,8,92331
-Reproduction,10,7,21968
-Mahatma Gandhi,10,1,160926
-Nelson Mandela,9,4,175780
-Gana and_Gwi_people,6,2,1410
-Rail transport,9,7,67712
+List of South Africans,9,10,52249
+Longitude,10,10,24457
+Mahatma Gandhi,1,10,160926
+Makhonjwa Mountains,1,2,4236
+Malaria,8,10,124371
+Mandela Day,9,10,3248
+Map,9,10,18886
+Mind map,8,10,16122
+Mining industry of South Africa,9,10,18617
+Mpumalanga,7,10,18194
+Music of South Africa,10,10,55186
+National anthem of South Africa,5,10,6500
+National symbols of South Africa,8,10,5762
+National Women's Day,8,8,2831
+Nelson Mandela,5,10,175788
+Nest,7,10,22292
+Noise pollution,9,10,17857
+Oliver Tambo,9,10,10965
+Outer space,9,10,92330
+Outline of domestic violence,8,10,40337
+Paper,8,10,27467
+People Against Gangsterism and Drugs,1,6,7053
+Petrol-paraffin engine,3,10,6001
 Pitch (music),10,10,26235
-Pollution,9,3,42079
-National symbols_of_South_Africa,8,6,5748
+Pneumatics,7,10,7167
+Politics of South Africa,10,10,9606
+Pollution,4,10,41770
+Rail transport,8,10,67712
+Rail transport in South Africa,8,9,13432
+Reproduction,7,10,21968
+Right to food,6,7,51735
 Road map,7,7,8026
-San rock_art,7,5,6713
-Outline of_domestic_violence,9,7,40356
-Pneumatics,10,7,7167
-People Against_Gangsterism_and_Drugs,6,1,7053
-Oliver Tambo,9,8,10947
-San people,10,6,61911
-Sexism,10,6,137112
-San healing_practices,4,2,12480
-San religion,8,7,17138
-Sand,9,9,13946
-Rock (geology),9,7,14463
-Rail transport_in_South_Africa,7,6,13420
-Fair trade,7,4,100699
-Settling,5,4,10363
-Human Rights_Day,10,9,12909
-Scientific method,9,9,140683
-Mining industry_of_South_Africa,10,9,18617
-Malaria,9,7,124276
-Noise pollution,9,8,17859
-Paper,9,7,27462
-Mpumalanga,10,7,18194
-Scale (map),9,7,33223
-Music of_South_Africa,10,10,55186
+Rock (geology),8,10,14434
+San healing practices,2,4,12480
+San people,6,10,61911
+San religion,9,10,17136
+San rock art,5,7,6713
+Sand,10,10,13962
+Scale (map),8,10,33224
+Scientific method,10,10,140657
+Settling,5,6,10360
+Sexism,6,10,137112
+Soil,3,10,198460
 Sound,10,10,16569
-Soil,10,3,198460
-Nest,10,7,22292
-Right to_food,6,5,51608
-Trade,8,6,38973
-Vibration,10,8,42707
-Water supply_and_sanitation_in_South_Africa,9,7,57560
-Transport in_South_Africa,9,9,8464
-Water pollution,9,8,37663
-South African_locomotive_history,10,4,269344
-Steve Biko,10,6,28788
-Stereotype,9,5,83290
-Tap (valve),7,6,16881
-Standard Model,10,5,46223
-Transport,10,8,39030
-Textile,10,9,27714
+South African cuisine,10,10,19152
+South African locomotive history,4,10,269344
+Standard Model,5,10,46223
+Stereotype,6,10,83288
+Steve Biko,6,10,28788
+Tap (valve),7,8,16903
+Textile,9,10,27714
+Trade,7,10,38960
+Transport in South Africa,10,10,8455
+Transport,8,10,39030
+Two foot gauge railways in South Africa,1,1,49
+Vibration,8,10,42707
 Walter Sisulu,9,9,9728
-Water filter,8,7,10045
-Two foot_gauge_railways_in_South_Africa,0,0,10045
-Wildlife conservation,10,7,17564
+Water filter,8,10,10042
+Water pollution,9,10,37664
+Water supply and sanitation in South Africa,8,10,57520
+Water well,9,10,28883
+Wax,9,10,11705
+Western Cape,10,10,36133
 Wetlands,1,1,38
-Water well,9,8,28893
-Wax,9,8,11710
-Wool,8,5,69472
-Wildlife management,3,2,19757
-Wood,10,7,49844
-Western Cape,9,9,36136
-Youth culture,10,7,22380
-South African_cuisine,9,9,19153
-Winnie Madikizela-Mandela,10,9,28175
+Wildlife conservation,7,10,17564
+Wildlife management,3,4,19753
+Winnie Madikizela-Mandela,9,10,28175
+Wood,7,10,49844
+Wool,6,10,63069
+Youth culture,7,10,22380

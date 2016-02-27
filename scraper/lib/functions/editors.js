@@ -30,10 +30,10 @@ http://www.epochconverter.com/
 ARTICLES AND EDITORS LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 // it does not contain bots
-var editor_list_14 = '../../data/edits/editors_test.csv';  // editors_14    editors_test
+var editor_list_14 = '../../data/edits/editors_14.csv';  // editors_14    editors_test
 var editor_list_15 = '../../data/edits/editors_15.csv';  // editors_15    editors_test
 
 var edited_articles_14 = '../../data/edits/edited_articles_14.csv'; // edited_articles_14  articles_test
@@ -85,24 +85,24 @@ var findme1 = 'xxxxxxxxxx', //bot
 
 wikipedia = 'Wikipedia:',
 user = 'User:',
-category = 'Category',
-help = 'Help',
+category = 'Category:',
+help = 'Help:',
 project = 'Project:',
 discussion =  'Discussion:',
 discussion_template =  'Discussion template:',
 discussion_proj = 'Discussion project:',
 user_discussion = 'User discussion:',
 wiki_dscussion = 'Wikipedia discussion:',
-Talk = 'Talk',
 talk = 'talk:',
+Talk = 'Talk:',
 template = 'Template',
 user_talk = 'User talk:',
 draft = 'Draft',
 mediawiki = 'MediaWiki',
 w_talk = 'Wikipedia talk',
 e_p_talk = 'Education Program talk';
-file = 'File'
-portal = 'Portal';
+file = 'File:'
+portal = 'Portal:';
 
 
 /* ------------------------------------
@@ -118,7 +118,7 @@ function get_edits(url) {
             //console.log(wikiResponse)
 
             container = $('#output');
-            url_clean = url.replace('_',' ').replace(edits_14, '').replace(edits_15, '');
+            url_clean = url.replace(/_/g,' ').replace(edits_14, '').replace(edits_15, '');
             
             obj = [];
             obj = $(wikiResponse.query.pageids);
@@ -128,18 +128,14 @@ function get_edits(url) {
 
             sum_edits = 0;
             sum_editors = 0;
+            sum_unique_editors = 0;
             sum_size = 0;
 
             index++;
 
-            size_array = [];
-            user_array = [];
-
-            var result = [];
-
-            //var sumX = 0;
-            //var total = 0;
-
+            var size_array = [],
+            user_array = [],
+            result = [];
 
             if (edit == null) {
                 console.log(url + ' - null');
@@ -169,7 +165,7 @@ function get_edits(url) {
                             result.push(e);
                             sorted_result = result.sort();
 
-                            sum_editors++;
+                            sum_unique_editors++;
                         }
                     });
 
@@ -179,12 +175,12 @@ function get_edits(url) {
                     average = Math.round(total / size_array.length);
                 }
             });
-    
+
             console.log(index + '-' + url_clean);
             console.log(sorted_result);
 
             container.append(url_clean + ',');
-            container.append(sum_editors + ',');
+            container.append(sum_unique_editors + ',');
             container.append(sum_edits + ',');
             container.append(average + '<br/>');
 
@@ -432,11 +428,11 @@ function get_edited_articles(url) {
 
             jQuery.each( my_dict, function( a, b ) {
 
-                t = b.title
-
+                var t = b.title,
+                limit = 0,
                 title = t.replace(/,/g, "_");
-
-                limit = 0
+                title_low = title.toString().toLowerCase()
+                //console.log(title_low)
 
                 if (b.count > limit ) {
                     
@@ -464,17 +460,14 @@ function get_edited_articles(url) {
                         title.indexOf(template) !== 0 &&
                         title.indexOf(e_p_talk) !== 0
                         )
-
                         {   
-                            container.append(title + ',' + b.count + ','  + b.avg +',<br/>');  
-                        }
-                          
+                            container.append(title + ',' + b.count + ','  + b.avg +',<br/>'); 
+                            //console.log('si: ' + title); 
+                        }                          
                     else {
-                        // console.log('no: ' + b.title);
+                        console.log('no: ' + title);
                     }
-
                     //console.log(b.count) 
-                
                 }
             });
 
@@ -510,7 +503,7 @@ function get_all_edited_articles_2014() {
             //console.log('>>> bot: ' + val_lc);
         }
         else{
-            console.log(val)
+            //console.log(val)
             get_edited_articles( user_contributs_14 + val );
         }
     });
@@ -597,14 +590,8 @@ function get_editor_info(url,art) {
         };
 
         console.log(my_user)
-        //pack.push(my_user)
-
-        //json = JSON.stringify(my_user)
-        //console.log(json)
-
         stop++;
 
-        //art_clean = art.replace('https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp%7Cuser%7Csize&rvlimit=500&rvstart=1420070399&rvend=1388534400&rvlimit=10rvdir=newer&indexpageids=&titles=','')
         art_clean = art.replace(edits_14,'').replace(edits_15,'')
 
         pack = [];

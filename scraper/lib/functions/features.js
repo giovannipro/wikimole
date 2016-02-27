@@ -18,7 +18,7 @@ var pageview_service = "http://stats.grok.se/json/en/";
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
     "Reconciliation_Day",
