@@ -29,7 +29,7 @@ var plot = svg.append("g")
 get data
 ------------------------- */
 
-d3.csv("../../data/edited_articles_15.csv", loaded); //edited_articles_15   edited_articles_14
+d3.csv("../../data/20160227/edited_articles_15.csv", loaded); //edited_articles_15   edited_articles_14
 
 function loaded (data){
 

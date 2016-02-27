@@ -685,7 +685,7 @@ function exitlinks(url) {
 function get_n_exitlink() {
 	var container = $('#output')
 	container.html('article(exit),page,user,portal,template,category,total<br/>')
-	jQuery.each( articles, function( i, val ) { // list articles
+	jQuery.each( articles_a, function( i, val ) { // list articles
 		exitlinks( val )
 	})
 }
