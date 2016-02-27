@@ -3,24 +3,36 @@ main variables
 ------------------------- */
 
 var w = window;
+width = w.outerWidth,
+height = width + (width*0.5)
+rectPadding = 10;
 
-var width = w.outerWidth; 
-var height = 4000;
-var rectPadding = 10;
+var margin = {top: 50, right: 50, bottom: 50, left: 50},
+nomargin_w = width - margin ;
 
-var margin = {top: 50, right: 50, bottom: 50, left: 50};
-var nomargin_w = width - margin ;
+var padding = width/100,
+offset = padding*1.5,
+2offset = offset*2,
+bar_h = 5;
 
-var padding = 10;
-var bar_h = 8;
+var start_id = padding,
+start_out = padding*5,
+start_in = padding*60,
+start_label = padding*75;
 
-var start_id = padding;
-var start_label = padding*5;
-var start_in = padding*50;
-var start_out = padding*52;
+var font_size = '0.6em';
 
-var set_out = 6;
-var set_in = 4;
+var c_page = '#35B7BB',
+c_user = '#EC4C4E',
+c_category = '#5CB44E';
+c_template = '#EC9144',
+c_portal = '#AD72C0',
+c_benchmark = 'black';
+
+//var set_out = 6;
+//var set_in = 4;
+
+var test = 'test,100,100,100,100,100,500,500,500,500,500,1500,3500,2000,3500'
 
 /* -----------------------
 set plot
@@ -42,7 +54,7 @@ d3.csv("../../data/20160227/in_out_links.csv", loaded); // in_out_links
 
 function loaded (data){
 
-	data.sort(function(a,b) {return b.total_in-a.total_in;});
+	data.sort(function(a,b) {return a.total_in-b.total_in;});
 
 	console.log(width + ',' + height)
 	console.log(data)
@@ -59,37 +71,33 @@ set axis
 
 	var x_in = d3.scale.linear()
 		.domain([0,500])
-        .range([start_in,(padding*35)]);
+        .range([start_in,(start_label-offset) ]);
 
 	var in_Axis = d3.svg.axis()
         .scale(x_in)
         .ticks(5)
-        .tickSize(3)
+        .tickSize(-height + (margin.top*2) )
         .orient('top')
 	typeof(in_Axis);
 
 	var x_out = d3.scale.linear()
 		.domain([0,3770])
-        .range([(padding*52),(width-margin.left*2)]);
+        .range([(start_in-offset),start_out]);
 
 	var out_Axis = d3.svg.axis()
         .scale(x_out)
         .ticks(10)
         .tickSize(-height + (margin.top*2) )
-        //.outerTickSize(3)
         .orient('top')
-        //.tickPadding(3)
-        //.innerTickSize(1)
 	typeof(out_Axis);
 
 /* -----------------------
 visualize grid
 ------------------------- */
 
-	// v_lines
-	/*var vl_in = plot.append('g')
+	var vl_in = plot.append('g')
 		.attr('class','v_lines')
-		.call(in_Axis);*/
+		.call(in_Axis);
 
 	var vl_out = plot.append('g')
 		.attr('class','v_lines')
@@ -98,17 +106,18 @@ visualize grid
 	// o_lines
 	var o_lines = plot.append('g')
 		.attr('class','o_lines')
-		.attr('transform','translate(0,' + (bar_h/bar_h) + ')' )  
+		.attr('transform','translate(0,' + (bar_h-(bar_h/2.5)) + ')' )  
 
-	for (var i=0; i<data.length; i++) {
-		o_lines.append('line')
-		.attr('x1', 0)
-		.attr('y1', i * ((height - margin.top - margin.bottom) / (data.length) ))
-		.attr('x2', width - margin.top - margin.bottom)
-		.attr('y2', i * ((height - margin.top - margin.bottom) / (data.length) )) 
-		.attr('class','o_line')
+	for (var i=0; i<data.length; i++) { 
+		if( i % 5 == 0 ){
+       		o_lines.append('line')
+			.attr('x1', 0)
+			.attr('y1', i * ((height - margin.top - margin.bottom) / (data.length) ))
+			.attr('x2', width - margin.top - margin.bottom)
+			.attr('y2', i * ((height - margin.top - margin.bottom) / (data.length) )) 
+			.attr('class','o_line')
+    	}
 	}
-
 
 /* -----------------------
 visualize elements
@@ -123,7 +132,7 @@ visualize elements
 			return d.article_14
 		})
 		.attr('transform',function(d,i) {
-			return 'translate(0,' + (((height-margin.bottom-margin.top) / (data.length) ) * i) + ')' // (i*padding)
+			return 'translate(0,' + (((height-margin.bottom-margin.top) / (data.length) ) * i) + ')' 
 		})	
 
 	article.append('text')
@@ -134,6 +143,7 @@ visualize elements
 		.text(function (d,i){
 			return i + 1
 		})
+		.attr("font-size",font_size)
 		.attr('class','id')
 
 	article.append('text')
@@ -144,83 +154,93 @@ visualize elements
 		.text(function (d,i){
 			return d.article
 		})
+		.attr("font-size",font_size)
 		.attr('class','text')
 
 /* --- in ---  */
 /* ----------  */
 
+var in_link = article.append('g')
+		.attr('class','in')
+	
 	// article
-	article.append('rect')
-		.attr('class','art')
-		.attr('x',function(d,i){
-			return (padding*50) - (d.page_in/set_in)
-		})
+	in_link.append('rect')
+		.attr('class','page')
+		.attr('x',start_in)
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.page_in/set_in)
+			return (d.page_in * (start_label-start_in-offset) / max_in )
 		})
+		.attr('fill',c_page)
 		.attr('height',bar_h)
 
 	// user
-	article.append('rect')
+	in_link.append('rect')
 		.attr('class','user')
-		.attr('x',function(d,i){
-			return (padding*50) - (d.page_in/set_in) - (d.user_in/set_in)
+		.attr('x', function(d,i){
+			return start_in + (d.page_in * (start_label-start_in-offset) / max_in )
 		})
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.user_in/set_in)
+			return (d.user_in * (start_label-start_in-offset) / max_in )
 		})
+		.attr('fill',c_user)
 		.attr('height',bar_h)
 
 	// category
-	article.append('rect')
+	in_link.append('rect')
 		.attr('class','category')
 		.attr('x',function(d,i){
-			return (padding*50) - (d.page_in/set_in) - (d.user_in/set_in) - (d.category_in/set_in)
+			return start_in + ((d.page_in) * (start_label-start_in-offset) / max_in ) + ((d.user_in) * (start_label-start_in-offset) / max_in )
 		})
 		.attr('y', bar_h )
 		.attr('width',function(d,i){
-			return (d.category_in/set_in)
+			return (d.category_in * (start_label-start_in-offset) / max_in)
 		})
+		.attr('fill',c_category)
 		.attr('height',bar_h)
 
 	// template
-	article.append('rect')
+	in_link.append('rect')
 		.attr('class','template')
 		.attr('x',function(d,i){
-			return (padding*50) - (d.page_in/set_in) - (d.user_in/set_in) - (d.category_in/set_in) - (d.template_in/set_in)
-		})
-		.attr('y', bar_h)
-		.attr('width',function(d,i){
-			return (d.template_in/set_in)
-		})
-		.attr('height',bar_h)
-
-	// portal
-	article.append('rect')
-		.attr('class','portal')
-		.attr('x',function(d,i){
-			return (padding*50) - (d.page_in/set_in) - (d.user_in/set_in) - (d.category_in/set_in) - (d.template_in/set_in) - (d.portal_in/set_in)
+			return start_in + ((d.page_in) * (start_label-start_in-offset) / max_in ) + ((d.user_in) * (start_label-start_in-offset) / max_in ) + ((d.category_in) * (start_label-start_in-offset) / max_in )
 		})
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.portal_in/set_in)
+			return (d.template_in * (start_label-start_in-offset) / max_in )
 		})
+		.attr('fill',c_template)
 		.attr('height',bar_h)
 
-	// benchmark
-	article.append('rect')
+	// portal
+	in_link.append('rect')
+		.attr('class','portal')
+		.attr('x', function(d,i){
+			return start_in + ((d.page_in) * (start_label-start_in-offset) / max_in ) + ((d.user_in) * (start_label-start_in-offset) / max_in ) + ((d.category_in) * (start_label-start_in-offset) / max_in ) + (d.template_in * (start_label-start_in-offset) / max_in )
+		})
+		.attr('y',bar_h )
+		.attr('width',function(d,i){
+			return (d.portal_in * (start_label-start_in-offset) / max_in )
+		})
+		.attr('fill',c_portal)
+		.attr('height',bar_h)
+
+	// in - benchmark
+	in_link.append('rect')
 		.attr('class','benchmark')
 		.attr('x',function(d,i){
-			return (padding*50) - d.total_in_2015/set_in
+			return start_in + (d.total_in_2015 * (start_label-start_in-offset) / max_in )
 		})
 		.attr('y',bar_h )
 		.attr('width',2)
 		.attr('height',bar_h)
+		.attr('fill',c_benchmark)
+
 
 /* --- out ---  */
 /* ----------  */
+
 
 	var out_link = article.append('g')
 		.attr('class','out')
@@ -228,97 +248,78 @@ visualize elements
 	// article
 	out_link.append('rect')
 		.attr('class','art')
-		.attr('x',start_out)
+		.attr('x', function(d,i){
+			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out ))
+		}) 
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.page_out * (width-(margin.left*2)-start_out) / max_out )
+			return (((start_in-start_out-offset) * d.page_out) / max_out )
 		})
+		.attr('fill',c_page) 
 		.attr('height',bar_h)
 
 	// user
 	out_link.append('rect')
 		.attr('class','user')
 		.attr('x', function(d,i){
-			return start_out + (d.page_out * (width-(margin.left*2)-start_out) / max_out )
+			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out )) - (((start_in-start_out-offset) * d.user_out) / max_out ) 
 		})
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.user_out * (width-(margin.left*2)-start_out) / max_out )
+			return (((start_in-start_out-offset) * d.user_out) / max_out )
 		})
+		.attr('fill',c_user)
 		.attr('height',bar_h)
 
 	// category
 	out_link.append('rect')
 		.attr('class','category')
 		.attr('x',function(d,i){
-			return start_out + ((d.page_out) * (width-(margin.left*2)-start_out) / max_out ) + ((d.user_out) * (width-(margin.left*2)-start_out) / max_out )
+			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out )) - (((start_in-start_out-offset) * d.user_out) / max_out ) - (((start_in-start_out-offset) * d.category_out) / max_out )
 		})
 		.attr('y', bar_h )
-		.attr('width',function(d,i){
-			return (d.category_out * (width-(margin.left*2)-start_out) / max_out )
+		.attr('width', function(d,i){
+			return (((start_in-start_out-offset) * d.category_out) / max_out )
 		})
+		.attr('fill',c_category) 
 		.attr('height',bar_h)
 
 	// template
 	out_link.append('rect')
 		.attr('class','template')
 		.attr('x',function(d,i){
-			return start_out + ((d.page_out) * (width-(margin.left*2)-start_out) / max_out ) + ((d.user_out) * (width-(margin.left*2)-start_out) / max_out ) + ((d.category_out) * (width-(margin.left*2)-start_out) / max_out )
+			return  start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out )) - (((start_in-start_out-offset) * d.user_out) / max_out )  - (((start_in-start_out-offset) * d.category_out) / max_out ) - (((start_in-start_out-offset) * d.template_out) / max_out )
 		})
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.template_out * (width-(margin.left*2)-start_out) / max_out )
+			return (((start_in-start_out-offset) * d.template_out) / max_out )
 		})
+		.attr('fill',c_template) 
 		.attr('height',bar_h)
 
 	// portal
 	out_link.append('rect')
 		.attr('class','portal')
 		.attr('x', function(d,i){
-			return start_out + ((d.page_out) * (width-(margin.left*2)-start_out) / max_out ) + ((d.user_out) * (width-(margin.left*2)-start_out) / max_out ) + ((d.category_out) * (width-(margin.left*2)-start_out) / max_out ) + (d.template_out * (width-(margin.left*2)-start_out) / max_out )
+			return  start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out )) - (((start_in-start_out-offset) * d.user_out) / max_out )  - (((start_in-start_out-offset) * d.category_out) / max_out ) - (((start_in-start_out-offset) * d.template_out) / max_out ) - (((start_in-start_out-offset) * d.portal_out) / max_out )
 		})
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.portal_out * (width-(margin.left*2)-start_out) / max_out )
+			return (((start_in-start_out-offset) * d.portal_out) / max_out )
 		})
+		.attr('fill',c_portal) 
 		.attr('height',bar_h)
 
 	// out - benchmark
 	out_link.append('rect')
 		.attr('class','benchmark')
 		.attr('x',function(d,i){
-			return start_out + (d.total_out_2015 * (width-(margin.left*2)-start_out) / max_out )
+			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
 		})
 		.attr('y',bar_h )
 		.attr('width',2)
 		.attr('height',bar_h)
-		.attr('fill','red')  //none
-
-
-
-
-	/*
-	for (var i=(padding*52); i<=(padding*110); i=i+(padding)) {
-		v_lines.append('line')
-		.attr('x1',i)
-		.attr('y1', (padding))
-		.attr('x2', i)
-		.attr("y2", height-(padding))
-		.attr('class','v_line')
-	}
-	*/
-
-	/*for (var j=25; j <= height-25; j=j+25) {
-	    v_lines.append("svg:line")
-	        .attr("x1", j)
-	        .attr("y1", 25)
-	        .attr("x2", j)
-	        .attr("y2", height-25)
-	        .style("stroke", "rgb(6,120,155)")
-	        .style("stroke-width", 2);            
-	};
-	*/
-
+		.attr('fill',c_benchmark)
 
 };
 
