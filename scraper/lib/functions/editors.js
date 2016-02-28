@@ -30,7 +30,7 @@ http://www.epochconverter.com/
 ARTICLES AND EDITORS LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 // it does not contain bots
 var editor_list_14 = '../../data/edits/editors_14.csv';  // editors_14    editors_test
@@ -40,6 +40,16 @@ var edited_articles_14 = '../../data/edits/edited_articles_14.csv'; // edited_ar
 var edited_articles_15 = '../../data/edits/edited_articles_15.csv'; // edited_articles_15  articles_test
 
 var editor_identity = '../../data/edits/identity_test.csv';  // editors_identity_2014  identity_test
+
+// get the list of articles
+$.getJSON(art_list, function(mydata) {
+    var parse_art = $.parseHTML(mydata);
+    articles_b = $(mydata);
+});
+
+/* ------------------------------------
+LISTS
+-------------------------------------*/
 
 var list = [
     'nelson_mandela',
@@ -58,28 +68,86 @@ var editors = [
     'example'
 ];
 
-// get the list of articles
-$.getJSON(art_list, function(mydata) {
-    var parse_art = $.parseHTML(mydata);
-    articles_b = $(mydata);
-});
+var community = [
+    'Agriculture in South Africa',
+    'Apartheid',
+    'Bicycle',
+    'Children"s Act (South Africa)',
+    'Children"s Day',
+    'Coal in South Africa',
+    'Cradle of Humankind',
+    'Discrimination',
+    'Domestic violence',
+    'Domestic violence in South Africa',
+    'Frances Baard',
+    'Gender role',
+    'Hand washing',
+    'Health care in South Africa',
+    'Herero and Namaqua Genocide',
+    'Heritage Day (South Africa)',
+    'Human Rights Day',
+    'Khoikhoi',
+    'Mapungubwe Museum',
+    'National Women"s Day',
+    'Nelson Mandela',
+    'Oliver Tambo',
+    'Reconciliation Day',
+    'Republic of South Africa',
+    'San healing practices',
+    'San people',
+    'San rock art',
+    'Sexism',
+    'Transport in South Africa',
+    'Walter Sisulu',
+    'Water pollution',
+    'Water privatization in South Africa',
+    'Water supply and sanitation in South Africa',
+    'Western Cape',
+    'Winnie Madikizela-Mandela',
+    'Wood'
+];
 
-// clean the string
-function string_clean(string) {
-    string.replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
-}
+var review = [
+    'Agriculture in South Africa',
+    'Apartheid',
+    'Bicycle',
+    'Children"s Act (South Africa)',
+    'Children"s Day',
+    'Cradle of Humankind',
+    'Domestic violence in South Africa',
+    'Gender role',
+    'Hand washing',
+    'Health care in South Africa',
+    'Heritage Day (South Africa)',
+    'Human Rights Day',
+    'Khoikhoi',
+    'Mapungubwe Museum',
+    'National Women"s Day',
+    'Nelson Mandela',
+    'Oliver Tambo',
+    'Reconciliation Day',
+    'San healing practices',
+    'San people',
+    'San rock art',
+    'Walter Sisulu',
+    'Water pollution',
+    'Water privatization in South Africa',
+    'Water supply and sanitation in South Africa',
+    'Western Cape'
+];
 
-// hide graphical elements
-function hide() {
-    $('#hide_a').hide();
-    $('#hide_b').show();
-    //console.log('works');
-}
+var new_articles = [
+    'Gas',
+    'Gender role',
+    'Kaditshwene',
+    'Makhonjwa Mountains',
+    'Mind map',
+    'Processed food'
+];
 
 /* ------------------------------------
 FINDME
 -------------------------------------*/
-
 
 var findme1 = 'xxxxxxxxxx', //bot
 
@@ -430,7 +498,7 @@ function get_edited_articles(url) {
 
                 var t = b.title,
                 limit = 0,
-                title = t.replace(/,/g, "_");
+                title = t.replace(/_/g, " ").replace(/,/g, "_");
                 title_low = title.toString().toLowerCase()
                 //console.log(title_low)
 
@@ -461,11 +529,32 @@ function get_edited_articles(url) {
                         title.indexOf(e_p_talk) !== 0
                         )
                         {   
-                            container.append(title + ',' + b.count + ','  + b.avg +',<br/>'); 
-                            //console.log('si: ' + title); 
+                            container.append(title + ',' + b.count + ','  + b.avg + ','); 
+
+                            if ($.inArray(title, community) != -1 ) {
+                                container.append('true,')
+                            }
+                            else if ($.inArray(title, community) -1 ) {
+                                container.append('false,')
+                            }
+
+                            if ($.inArray(title, review) != -1 ) {
+                                //console.log('review')
+                                container.append('true,')
+                            }
+                            else if ($.inArray(title, review) -1 ) {
+                                container.append('false,')
+                            }
+
+                            if ($.inArray(title, new_articles) != -1 ) {
+                                container.append('true,<br/>')
+                            }
+                            else if ($.inArray(title, new_articles) -1 ) {
+                                container.append('false,<br/>')
+                            }
                         }                          
                     else {
-                        console.log('no: ' + title);
+                        //console.log('no: ' + title);
                     }
                     //console.log(b.count) 
                 }
@@ -488,7 +577,7 @@ function get_all_edited_articles_2014() {
     var container = $('#output');
     console.log('2014');
 
-    container.append('article_14,edits,avg_size,<br/>');
+    container.append('article_14,edits,avg_size,community,review,new<br/>');
     index = 0;
     stop = 0;
 
@@ -516,7 +605,7 @@ function get_all_edited_articles_2015() {
     var container = $('#output');
     console.log('2015');
 
-    container.append('article_15,avg_size,edits<br/>');
+    container.append('article_15,edits,avg_size,community,review,new<br/>');
     index = 0;
     stop = 0;
 
