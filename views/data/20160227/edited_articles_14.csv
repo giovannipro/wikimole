@@ -76,6 +76,7 @@ Substance abuse,6,63548,false,false,false
 Vehicle registration plates of Ukraine,6,13502,false,false,false
 Water filter,6,50225,false,false,false
 Water well,6,144439,false,false,false
-Test_a,1,1,true,true,true
-Test_b,1,1,true,true,true
-Test_c,1,1,true,true,true
+Test_a,1,2000000,true,true,true
+Test_b,1,1000000,true,true,true
+Test_c,1,500000,true,true,true
+Test_d,1,250000,true,true,true
