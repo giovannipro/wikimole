@@ -23,7 +23,7 @@ start_label = padding*14,
 start_bar = padding*38;
 
 var c_bubble = '#35B7BB',
-c_bar = 'black', // 5CB44E
+c_bar = 'black', 
 c_line = 'black',
 c_tick = '#636362'; 
 
@@ -62,37 +62,6 @@ icons
 // new article
 var defs = d3.select('#d3_plot').append("svg:defs")
     
-/*
-defs.append("marker")
-    .attr("id","new_article")
-    .append("circle")
-    .attr('cx','40')
-    .attr('cy','40')
-    .attr('r','40')
-
-defs.append("g")
-    .attr("id","iconCustom")
-	.append('path')
-	.attr('width', 200)
-	.attr('height', 200)
-    //.attr("refX", 6 + 3)
-    //.attr("refY", 2)
-    //.attr("markerWidth", 6)
-    //.attr("markerHeight", 4)
-    .attr("orient", "auto")
-    .attr("d","M3.5,2H2.7C3,1.8,3.3,1.5,3.3,1.1c0-0.6-0.4-1-1-1c-0.6,0-1,0.4-1,1c0,0.4,0.2,0.7,0.6,0.9H1.1C0.7,2,0.4,2.3,0.4,2.6v1.9c0,0.3,0.3,0.6,0.6,0.6h0.2c0,0,0,0.1,0,0.1v1.9c0,0.3,0.2,0.6,0.3,0.6h1.3c0.2,0,0.3-0.3,0.3-0.6V5.3c0,0,0-0.1,0-0.1h0.2c0.3,0,0.6-0.3,0.6-0.6V2.6C4.1,2.3,3.8,2,3.5,2z");
-
-defs.append("g")
-    .attr("id","new_art")
-    .append('rect')
-    .attr('width','100')
-    .attr('height','100')
-    .append('rect')
-    .attr('width','300')
-    .attr('height','400')
-    .attr('fill','red')
-*/
-
 /* -----------------------
 set axis
 ------------------------- */

@@ -1,8 +1,9 @@
-Source,Target
+source,target
 !Kung_people,Anthropology
 !Kung_people,Ashanti to Zulu
 !Kung_people,Cultural anthropology
 !Kung_people,Eskimo kinship
+!Kung_people,Extended female sexuality
 !Kung_people,Firewalking
 !Kung_people,Friends of Peoples Close to Nature
 !Kung_people,Haplogroup A (Y-DNA)
@@ -34,7 +35,6 @@ Source,Target
 !Kung_people,Template:Patriarchy (ethnography)
 !Kung_people,Traditional African medicine
 !Kung_people,User talk:Yackthompson
-!Kung_people,User:ClueBot III/Documentation
 !Kung_people,User:ClueBot III/Indices/File talk:Battle of Aleppo map.svg
 !Kung_people,User:ClueBot III/Indices/File talk:Edith Brown Clement.jpg
 !Kung_people,User:ClueBot III/Indices/File talk:H1N1 map.svg
@@ -44,12 +44,14 @@ Source,Target
 !Kung_people,User:ClueBot III/Indices/Module talk:Convert
 !Kung_people,User:ClueBot III/Indices/Talk:14th Army involvement in Transnistria
 !Kung_people,User:ClueBot III/Indices/Talk:Ben Fitzgerald
+!Kung_people,User:ClueBot III/Indices/Talk:Black Panther Party
 !Kung_people,User:ClueBot III/Indices/Talk:Circumstellar habitable zone
 !Kung_people,User:ClueBot III/Indices/Talk:Current cast of Neighbours
 !Kung_people,User:ClueBot III/Indices/Talk:David G. Hartwell
 !Kung_people,User:ClueBot III/Indices/Talk:Declan Napier
-!Kung_people,User:ClueBot III/Indices/Talk:Donna Freedman
 !Kung_people,User:ClueBot III/Indices/Talk:Karl Kennedy
+!Kung_people,User:ClueBot III/Indices/Talk:Kathryn Cramer
+!Kung_people,User:ClueBot III/Indices/Talk:Libby Kennedy
 !Kung_people,User:ClueBot III/Indices/Talk:List of Neighbours characters
 !Kung_people,User:ClueBot III/Indices/Talk:Louisa Johnson (singer)
 !Kung_people,User:ClueBot III/Indices/Talk:Lyn Scully
@@ -60,10 +62,10 @@ Source,Target
 !Kung_people,User:ClueBot III/Indices/Talk:Run Run Shaw
 !Kung_people,User:ClueBot III/Indices/Talk:Russell Simmons
 !Kung_people,User:ClueBot III/Indices/Talk:Samsung Group
-!Kung_people,User:ClueBot III/Indices/Talk:Sophie Ramsay
 !Kung_people,User:ClueBot III/Indices/Talk:Stephanie Scully
 !Kung_people,User:ClueBot III/Indices/Talk:Susan Kennedy
 !Kung_people,User:ClueBot III/Indices/Talk:The Bill
+!Kung_people,User:ClueBot III/Indices/Talk:Toadfish Rebecchi
 !Kung_people,User:ClueBot III/Indices/Talk:Yo Gabba Gabba!
 !Kung_people,User:ClueBot III/Indices/Template talk:.NET Framework version history
 !Kung_people,User:ClueBot III/Indices/Template talk:.NET Framework version history/Archives/
@@ -77,13 +79,12 @@ Source,Target
 !Kung_people,User:ClueBot III/Indices/User talk:Bishalbaishya2012
 !Kung_people,User:ClueBot III/Indices/User talk:Blue Riband
 !Kung_people,User:ClueBot III/Indices/User talk:Brendankm
+!Kung_people,User:ClueBot III/Indices/User talk:Brightlight12345
 !Kung_people,User:ClueBot III/Indices/User talk:BrillLyle
 !Kung_people,User:ClueBot III/Indices/User talk:Chemistrygeek/Archives/
 !Kung_people,User:ClueBot III/Indices/User talk:DeNoel
 !Kung_people,User:ClueBot III/Indices/User talk:Extremepro
 !Kung_people,User:ClueBot III/Indices/User talk:Fltyingpig/Archives/ 1/Archives/ 1/Archives/ 1
-!Kung_people,User:ClueBot III/Indices/User talk:Hza a 9
-!Kung_people,User:ClueBot III/Indices/User talk:Jeffrd10
 !Kung_people,User:ClueBot III/Indices/User talk:Jguard18
 !Kung_people,User:ClueBot III/Indices/User talk:JPMcGrath
 !Kung_people,User:ClueBot III/Indices/User talk:Langus-TxT
@@ -91,7 +92,6 @@ Source,Target
 !Kung_people,User:ClueBot III/Indices/User talk:Liekmudkipz
 !Kung_people,User:ClueBot III/Indices/User talk:Love Krittaya
 !Kung_people,User:ClueBot III/Indices/User talk:Meaningful Username
-!Kung_people,User:ClueBot III/Indices/User talk:Megs
 !Kung_people,User:ClueBot III/Indices/User talk:Morenooso/Archives
 !Kung_people,User:ClueBot III/Indices/User talk:Musa Raza/Archives
 !Kung_people,User:ClueBot III/Indices/User talk:Mwacha
@@ -121,14 +121,12 @@ Source,Target
 !Kung_people,User:ClueBot III/Indices/User talk:WheresTristan
 !Kung_people,User:ClueBot III/Indices/User talk:Wikicology
 !Kung_people,User:ClueBot III/Indices/User talk:WilyD
-!Kung_people,User:ClueBot III/Indices/User:ClueBot III/Documentation
 !Kung_people,User:ClueBot III/Indices/User:DASHBot/False Postive Reports
 !Kung_people,User:ClueBot III/Indices/User:DASHBot/WebCiteLogs
 !Kung_people,User:ClueBot III/Indices/User:Fortuna Imperatrix Mundi/Skip
 !Kung_people,User:ClueBot III/Indices/User:Theopolisme/CVUAEnroll
 !Kung_people,User:ClueBot III/Indices/User:Zamaster4536/sandbox
 !Kung_people,User:ClueBot III/Indices/Wikipedia talk:Abuse response/Guidelines
-!Kung_people,User:ClueBot III/Indices/Wikipedia talk:Edit filter/False positives
 !Kung_people,User:ClueBot III/Indices/Wikipedia talk:Requested moves
 !Kung_people,User:ClueBot III/Indices/Wikipedia talk:WikiProject Alternate History
 !Kung_people,User:ClueBot III/Indices/Wikipedia talk:WikiProject Law Enforcement
@@ -137,6 +135,7 @@ Source,Target
 !Kung_people,User:Fortuna Imperatrix Mundi/Skip
 !Kung_people,User:Physis/Interested in
 !Kung_people,User:QuackGuru/sandboxx
+!Kung_people,User:SarahH04/sandbox
 !Kung_people,User:Wmahan/Articles with self-references
 !Kung_people,Village head
 !Kung_people,Wikipedia talk:Naming conventions (languages)/Archive 3
@@ -1031,6 +1030,7 @@ African_music,Seperewa
 African_music,Sheer Sound
 African_music,Sipho Mabuse
 African_music,So (album)
+African_music,Solar Shears
 African_music,Soldier's Joy (fiddle tune)
 African_music,Soutak
 African_music,South African College of Music
@@ -1199,6 +1199,7 @@ Agriculture_in_South_Africa,Mineral Revolution
 Agriculture_in_South_Africa,Mining industry of South Africa
 Agriculture_in_South_Africa,Minister of Defence and Military Veterans
 Agriculture_in_South_Africa,Minister of State Security (South Africa)
+Agriculture_in_South_Africa,Music of South Africa
 Agriculture_in_South_Africa,National Forensic DNA Database of South Africa
 Agriculture_in_South_Africa,National Intelligence Agency (South Africa)
 Agriculture_in_South_Africa,National Treasury (South Africa)
@@ -1248,7 +1249,6 @@ Agriculture_in_South_Africa,Telephone numbers in South Africa
 Agriculture_in_South_Africa,Television in South Africa
 Agriculture_in_South_Africa,Template:Economy of South Africa
 Agriculture_in_South_Africa,Template:South Africa topics
-Agriculture_in_South_Africa,The Roots of Developing Agriculture in The South African Context
 Agriculture_in_South_Africa,Tourism in South Africa
 Agriculture_in_South_Africa,Transport in South Africa
 Agriculture_in_South_Africa,United Christian Democratic Party
@@ -1330,7 +1330,6 @@ AIDS_orphan,HIV
 AIDS_orphan,HIV disease progression rates
 AIDS_orphan,HIV drug resistance
 AIDS_orphan,HIV Drug Resistance Database
-AIDS_orphan,HIV immunity
 AIDS_orphan,HIV superinfection
 AIDS_orphan,HIV tropism
 AIDS_orphan,HIV vaccine
@@ -1424,6 +1423,7 @@ AIDS_orphan,Hong Kong AIDS Foundation
 AIDS_orphan,Housing Works
 AIDS_orphan,Human trafficking in Lesotho
 AIDS_orphan,Index of HIV/AIDS-related articles
+AIDS_orphan,Innate resistance to HIV
 AIDS_orphan,International AIDS Society
 AIDS_orphan,Joint United Nations Programme on HIV/AIDS
 AIDS_orphan,List of countries by HIV/AIDS adult prevalence rate
@@ -1601,6 +1601,7 @@ Alcohol_abuse,Culture-bound syndrome
 Alcohol_abuse,Daniel L. Ryan
 Alcohol_abuse,Dartmouth College
 Alcohol_abuse,David Strickland
+Alcohol_abuse,Delirium
 Alcohol_abuse,Delirium tremens
 Alcohol_abuse,Diego Maradona
 Alcohol_abuse,Dieulafoy's lesion
@@ -2117,6 +2118,7 @@ Alcohol_dependence,Mood disorder
 Alcohol_dependence,Nalmefene
 Alcohol_dependence,Naltrexone
 Alcohol_dependence,Neramexane
+Alcohol_dependence,Neurogenomics
 Alcohol_dependence,Nicotine
 Alcohol_dependence,Nicotine poisoning
 Alcohol_dependence,Nicotine withdrawal
@@ -2126,7 +2128,6 @@ Alcohol_dependence,Opioid addiction and dependence
 Alcohol_dependence,Opioid overdose
 Alcohol_dependence,Outline of the human brain
 Alcohol_dependence,Outline of wine
-Alcohol_dependence,Paddington alcohol test
 Alcohol_dependence,Phosphodiesterase-4 inhibitor
 Alcohol_dependence,Physical dependence
 Alcohol_dependence,Poly drug use
@@ -2242,6 +2243,7 @@ Alcohol_dependence,User:SLavis/Books/DDaI
 Alcohol_dependence,User:Tvivio/sandbox
 Alcohol_dependence,User:Vishakavijayakumar/sandbox
 Alcohol_dependence,User:West.andrew.g/2014 Top Medical Articles
+Alcohol_dependence,User:West.andrew.g/Popular medical pages
 Alcohol_dependence,User:Xyn1/Substance dependence
 Alcohol_dependence,Varenicline
 Alcohol_dependence,Wernicke–Korsakoff syndrome
@@ -2425,6 +2427,7 @@ Alcoholism,Gail Russell
 Alcoholism,Gale Storm
 Alcoholism,Gamma-Hydroxybutyric acid
 Alcoholism,Gary Kildall
+Alcoholism,Gary Oldman
 Alcoholism,Gavin MacLeod
 Alcoholism,Gene Robinson
 Alcoholism,George Best
@@ -2510,7 +2513,6 @@ Alcoholism,Kelly McGillis
 Alcoholism,Kelsey Grammer
 Alcoholism,Kenneth Rexroth
 Alcoholism,Ketosis
-Alcoholism,Kleptomania
 Alcoholism,Korsakoff's syndrome
 Alcoholism,Krapp's Last Tape
 Alcoholism,Kristin Davis
@@ -2598,12 +2600,12 @@ Alcoholism,Pellagra
 Alcoholism,Penny Arcade
 Alcoholism,Peter Altenberg
 Alcoholism,Peter Kürten
-Alcoholism,Peter Tatchell
 Alcoholism,Phil Crane
 Alcoholism,Phil Katz
 Alcoholism,Phil Ochs
 Alcoholism,Pneumonia
 Alcoholism,Pornography addiction
+Alcoholism,Positive psychology
 Alcoholism,Prime Suspect
 Alcoholism,Prince Albert Victor; Duke of Clarence and Avondale
 Alcoholism,Prohibition
@@ -2713,7 +2715,7 @@ Alcoholism,Tobacco
 Alcoholism,Tobey Maguire
 Alcoholism,Tom DeLay
 Alcoholism,Tommy Prince
-Alcoholism,Tony Adams
+Alcoholism,Tony Adams (English footballer)
 Alcoholism,Tony Curtis
 Alcoholism,Tony Hancock
 Alcoholism,Topiramate
@@ -2756,6 +2758,7 @@ Aloe,Agarwood
 Aloe,Agave
 Aloe,Agave americana
 Aloe,Agriodendron
+Aloe,Al-Dimashqi (geographer)
 Aloe,Alamaealoe
 Aloe,Albany thickets
 Aloe,Alchamaloe
@@ -3008,7 +3011,6 @@ Aloe,Portal:Bible/Featured chapter/Numbers 24
 Aloe,Portal:Bible/Featured chapter/Psalms
 Aloe,Portal:Bible/Featured chapter/Psalms 45
 Aloe,Portal:Bible/Featured chapter/Song of Solomon
-Aloe,Portal:Bible/Featured chapter/Song of Solomon 4
 Aloe,Portal:Pharmacy and Pharmacology
 Aloe,Portal:Pharmacy and Pharmacology/Did you know
 Aloe,Postage stamps of Batum under British occupation
@@ -3379,6 +3381,7 @@ Aloe_vera,User talk:192.139.27.28
 Aloe_vera,User talk:194.144.249.2
 Aloe_vera,User talk:194.152.92.39
 Aloe_vera,User talk:2.101.194.254
+Aloe_vera,User talk:202.154.12.132
 Aloe_vera,User talk:203.115.145.142
 Aloe_vera,User talk:203.198.185.14
 Aloe_vera,User talk:203.25.141.5
@@ -3832,6 +3835,7 @@ Animal_husbandry,Agriculture
 Animal_husbandry,Agriculture in ancient Greece
 Animal_husbandry,Agriculture in Canada
 Animal_husbandry,Agriculture in Iran
+Animal_husbandry,Agriculture in Mongolia
 Animal_husbandry,Agriculture in the Empire of Japan
 Animal_husbandry,Agroforestry
 Animal_husbandry,Agronomy
@@ -4117,7 +4121,6 @@ Animal_husbandry,Montebello; New York
 Animal_husbandry,Morus (plant)
 Animal_husbandry,Nambassa
 Animal_husbandry,Narayan Rane
-Animal_husbandry,Navajo Nation
 Animal_husbandry,Nawa District
 Animal_husbandry,Neolithic
 Animal_husbandry,Neolithic Revolution
@@ -4206,6 +4209,7 @@ Animal_husbandry,South Holland
 Animal_husbandry,South Region (Cameroon)
 Animal_husbandry,Speciation
 Animal_husbandry,Sperlinga
+Animal_husbandry,Spontaneously hypertensive rat
 Animal_husbandry,Stephen Moulton Babcock
 Animal_husbandry,Stock breeding
 Animal_husbandry,Stock-breeding
@@ -4259,7 +4263,6 @@ Animal_husbandry,University of Agriculture (Faisalabad)
 Animal_husbandry,Upper Mustang
 Animal_husbandry,Ural (region)
 Animal_husbandry,Urban agriculture
-Animal_husbandry,User talk:66.133.207.244
 Animal_husbandry,User talk:66.99.153.2
 Animal_husbandry,User talk:82.43.64.245
 Animal_husbandry,User talk:BillC/Archive1
@@ -4860,9 +4863,9 @@ Atom,Atomic chemical
 Atom,Atomic electron transition
 Atom,Atomic number
 Atom,Atomic orbital
+Atom,Atomic physics
 Atom,Atomic theory
 Atom,Atomic; molecular; and optical physics
-Atom,Atomicity (database systems)
 Atom,Atomization
 Atom,Atoms
 Atom,Attosecond
@@ -5078,7 +5081,6 @@ Atom,Lewis acids and bases
 Atom,Light-emitting diode
 Atom,List of experiments
 Atom,List of Lithuanians
-Atom,List of particles
 Atom,London dispersion force
 Atom,Magenta
 Atom,Magnetar
@@ -5133,6 +5135,7 @@ Atom,Noun
 Atom,Nuclear chemistry
 Atom,Nuclear fission
 Atom,Nuclear isomer
+Atom,Nuclear physics
 Atom,Nucleon
 Atom,Oak Ridge National Laboratory
 Atom,Ohm's law
@@ -5264,7 +5267,6 @@ Atom,Technological convergence
 Atom,Tellurium
 Atom,The Age of Spiritual Machines
 Atom,The Diamond Age
-Atom,The Sifl and Olly Show
 Atom,Theory of everything
 Atom,There's Plenty of Room at the Bottom
 Atom,Thermionic emission
@@ -5303,6 +5305,7 @@ Atom,Wilhelm Wien
 Atom,William Kingdon Clifford
 Atom,William Prout
 Atom,William Thomson; 1st Baron Kelvin
+Atom,Wu Xing
 Atom,X-ray
 Atom,X-ray astronomy
 Atom,X-ray crystallography
@@ -5409,6 +5412,7 @@ Automobile,County Galway
 Automobile,County Waterford
 Automobile,Coventry
 Automobile,Crankshaft
+Automobile,Crash test dummy
 Automobile,Crater Lake National Park
 Automobile,Crayon
 Automobile,Culebra; Puerto Rico
@@ -5799,7 +5803,6 @@ Automobile,Westford; Massachusetts
 Automobile,Wheel
 Automobile,White Motor Company
 Automobile,Wikipedia talk:Offensive material
-Automobile,William Howard Taft
 Automobile,Wilsonville; Oregon
 Automobile,Winton Motor Carriage Company
 Automobile,Wolfsburg
@@ -5819,6 +5822,7 @@ Base_(chemistry),Acetal
 Base_(chemistry),Acetate
 Base_(chemistry),Acetyl
 Base_(chemistry),Acetyl chloride
+Base_(chemistry),Acetylide
 Base_(chemistry),Acid
 Base_(chemistry),Acid catalysis
 Base_(chemistry),Acid dissociation constant
@@ -5831,6 +5835,7 @@ Base_(chemistry),Actin
 Base_(chemistry),Actinide
 Base_(chemistry),Activated carbon
 Base_(chemistry),Acyl
+Base_(chemistry),Adenine phosphoribosyltransferase
 Base_(chemistry),Alcohol
 Base_(chemistry),Aldehyde
 Base_(chemistry),Aldol condensation
@@ -6057,7 +6062,6 @@ Base_(chemistry),John Dalton
 Base_(chemistry),Joseph Marie Élisabeth Durocher
 Base_(chemistry),Keto–enol tautomerism
 Base_(chemistry),Knoevenagel condensation
-Base_(chemistry),Kodiak tobacco
 Base_(chemistry),Lanthanum
 Base_(chemistry),Lead(II) hydroxide
 Base_(chemistry),Letts nitrile synthesis
@@ -6121,6 +6125,7 @@ Base_(chemistry),Nitroxyl
 Base_(chemistry),Non-nucleophilic base
 Base_(chemistry),Nonmetal
 Base_(chemistry),Nucleobase
+Base_(chemistry),Nucleophile
 Base_(chemistry),Nucleophilic acyl substitution
 Base_(chemistry),Nucleophilic aromatic substitution
 Base_(chemistry),Nylon
@@ -6168,7 +6173,6 @@ Base_(chemistry),Polypropylene
 Base_(chemistry),Polypropylene glycol
 Base_(chemistry),Portal:Biotechnology/Selected articles
 Base_(chemistry),Portal:Biotechnology/Selected articles/January
-Base_(chemistry),Portal:Chemistry
 Base_(chemistry),Potassium
 Base_(chemistry),Potassium bicarbonate
 Base_(chemistry),Potassium bisulfate
@@ -6742,6 +6746,7 @@ Bias,User:Andries/Wikipedia:controversy
 Bias,User:Benlisquare
 Bias,User:BlankVerse/rants
 Bias,User:Brideshead
+Bias,User:Carlossuarez46/Smithlist
 Bias,User:Claude.Xanadu
 Bias,User:Cyan/kidnapped/Anthropic bias
 Bias,User:Dunning/meaning
@@ -7025,6 +7030,7 @@ Bicycle,Magdalen Islands
 Bicycle,Marshall Taylor
 Bicycle,Martha's Vineyard
 Bicycle,Matra
+Bicycle,Medina quarter
 Bicycle,Metal matrix composite
 Bicycle,Michael Schumacher
 Bicycle,Michel Vaillant
@@ -7202,7 +7208,6 @@ Bicycle,Train
 Bicycle,Trans Canada Trail
 Bicycle,Transmission (mechanics)
 Bicycle,Transport in Anguilla
-Bicycle,Transport in Bangladesh
 Bicycle,Transport in China
 Bicycle,Transport in Nauru
 Bicycle,Travel
@@ -7300,7 +7305,6 @@ Biome,Adansonia
 Biome,Addo Elephant National Park
 Biome,Adenostoma fasciculatum
 Biome,Afar Triangle
-Biome,Africa
 Biome,Afrotropic ecozone
 Biome,Alberta
 Biome,Albertine Rift montane forests
@@ -7617,6 +7621,8 @@ Biome,Poaceae
 Biome,Pontic–Caspian steppe
 Biome,Populus tremuloides
 Biome,Portal:Cornwall/Selected picture
+Biome,Portal:Ecology
+Biome,Portal:Ecology/Selected article
 Biome,Portal:Nunavut
 Biome,Porto Velho
 Biome,Potentilla
@@ -7692,7 +7698,6 @@ Biome,Talk:Mediterranean climate
 Biome,Talk:Montane grasslands and shrublands
 Biome,Talk:Nearctic ecozone
 Biome,Talk:Phytochorion
-Biome,Talk:Taiga
 Biome,Talk:Tap water
 Biome,Talk:Tropical and subtropical moist broadleaf forests
 Biome,Talk:Uvs Lake
@@ -8107,7 +8112,6 @@ Bird_nest,Pink-headed warbler
 Bird_nest,Piping plover
 Bird_nest,Pitta
 Bird_nest,Plumage
-Bird_nest,Portal:Birds
 Bird_nest,Potoo
 Bird_nest,Pririt batis
 Bird_nest,Procellariiformes
@@ -8160,6 +8164,7 @@ Bird_nest,Sand martin
 Bird_nest,Sandgrouse
 Bird_nest,Sandhill crane
 Bird_nest,Sandpiper
+Bird_nest,Savage Islands
 Bird_nest,Savanna hawk
 Bird_nest,Scaled pigeon
 Bird_nest,Scarlet ibis
@@ -8323,7 +8328,7 @@ Boiling,Bublik
 Boiling,Byzantine cuisine
 Boiling,Cajun cuisine
 Boiling,Candy making
-Boiling,Cannabis foods
+Boiling,Cannabis edibles
 Boiling,Caramelization
 Boiling,Cavitation
 Boiling,Cavitation modelling
@@ -8777,8 +8782,6 @@ Borehole,Blood Falls
 Borehole,Bore hole
 Borehole,Bore-hole
 Borehole,Boreholde
-Borehole,Borehole 10-x
-Borehole,Borehole mining
 Borehole,Boreholes
 Borehole,Borewell
 Borehole,Boring (earth)
@@ -8827,6 +8830,7 @@ Borehole,Dorthe Dahl-Jensen
 Borehole,Downhole heat exchanger
 Borehole,Dracunculiasis
 Borehole,Drill cuttings
+Borehole,Drill hole
 Borehole,Drilling rig
 Borehole,Drinking water
 Borehole,Dudley
@@ -8881,6 +8885,7 @@ Borehole,In situ leach
 Borehole,India Mark II
 Borehole,International Geo Sample Number
 Borehole,Iron roughneck
+Borehole,Isotopes of californium
 Borehole,John Chatterton
 Borehole,Joseph Elkington
 Borehole,Kellingley Colliery
@@ -8981,6 +8986,7 @@ Borehole,Shallow foundation
 Borehole,ShapeAccelArray
 Borehole,Shear strength (soil)
 Borehole,Shear wave splitting
+Borehole,Sheppton Mine Disaster and Rescue
 Borehole,Sidoarjo mud flow
 Borehole,Sieve analysis
 Borehole,Silt
@@ -9523,7 +9529,7 @@ Bullying,Tarja Turunen
 Bullying,Teabagging
 Bullying,Teasing
 Bullying,Teenage suicide in the United States
-Bullying,Template:Education tasks
+Bullying,Thalía
 Bullying,That's So Raven
 Bullying,The Adventures of Pete & Pete
 Bullying,The Apprentice (UK TV series)
@@ -9718,6 +9724,7 @@ Cell_(biology),1 micrometre
 Cell_(biology),1660s
 Cell_(biology),1663
 Cell_(biology),1665
+Cell_(biology),1866 in science
 Cell_(biology),1951
 Cell_(biology),1966
 Cell_(biology),1996
@@ -9779,7 +9786,6 @@ Cell_(biology),Brown algae
 Cell_(biology),Brugada syndrome
 Cell_(biology),Bud
 Cell_(biology),Calcium
-Cell_(biology),Calmodulin
 Cell_(biology),Cannula
 Cell_(biology),Carbohydrate catabolism
 Cell_(biology),Carcinogen
@@ -9842,7 +9848,6 @@ Cell_(biology),Cyanobacteria
 Cell_(biology),Cyclic nucleotide
 Cell_(biology),Cystic fibrosis
 Cell_(biology),Cytokinesis
-Cell_(biology),Cytology
 Cell_(biology),Cytopathology
 Cell_(biology),Cytoplasm
 Cell_(biology),Cytoskeleton
@@ -9925,6 +9930,7 @@ Cell_(biology),Genetic code
 Cell_(biology),Genetic engineering
 Cell_(biology),Genetics
 Cell_(biology),Genotype
+Cell_(biology),Germ cell
 Cell_(biology),Gland
 Cell_(biology),Globin
 Cell_(biology),Glutathione
@@ -10759,7 +10765,6 @@ Child_abuse,Attachment parenting
 Child_abuse,Attachment theory
 Child_abuse,Au pair
 Child_abuse,Auglaize County; Ohio
-Child_abuse,Baby Blues
 Child_abuse,Baby colic
 Child_abuse,Babysitting
 Child_abuse,Banksy
@@ -10946,7 +10951,6 @@ Child_abuse,Iraq prison abuse scandals
 Child_abuse,Island Pond; Vermont
 Child_abuse,Israeli hip hop
 Child_abuse,It (novel)
-Child_abuse,J. T. LeRoy
 Child_abuse,Jacqueline Livingston
 Child_abuse,James Dobson
 Child_abuse,Janet Reno
@@ -10961,6 +10965,7 @@ Child_abuse,John Holt (educator)
 Child_abuse,John Wayne Gacy
 Child_abuse,Joseph Paul Franklin
 Child_abuse,Josephine Baker
+Child_abuse,JT LeRoy
 Child_abuse,Julie Gregory
 Child_abuse,Juvenile delinquency
 Child_abuse,Juvenile Delinquents Act
@@ -10980,6 +10985,7 @@ Child_abuse,Legal drinking age
 Child_abuse,Legal guardian
 Child_abuse,Legal separation
 Child_abuse,Legitimacy (family law)
+Child_abuse,Leneen Forde
 Child_abuse,Lex Luthor
 Child_abuse,LGBT adoption
 Child_abuse,Life imprisonment
@@ -11227,6 +11233,7 @@ Children's_Act;_2005,User:NoclaimsBot/List/C
 Children's_Act;_2005,Wikipedia talk:WikiProject South Africa
 Children's_Day,'Let it Snow' Christmas Parade
 Children's_Day,2008 Sichuan earthquake
+Children's_Day,31 Minutos
 Children's_Day,A Charlie Brown Christmas
 Children's_Day,A Christmas Carol
 Children's_Day,A Christmas Story
@@ -11375,9 +11382,9 @@ Children's_Day,International Children's Day
 Children's_Day,International Childrens Day
 Children's_Day,International Day of the African Child
 Children's_Day,Isaiah
-Children's_Day,İstanbul Toy Museum
 Children's_Day,It's a Small World
 Children's_Day,It's a Wonderful Life
+Children's_Day,İstanbul Toy Museum
 Children's_Day,Jack Frost
 Children's_Day,January
 Children's_Day,January 11
@@ -11423,6 +11430,7 @@ Children's_Day,List of postage stamps of India
 Children's_Day,Little Christmas
 Children's_Day,Little Jack Horner
 Children's_Day,Lynda Thomas
+Children's_Day,March
 Children's_Day,March 1
 Children's_Day,March 17
 Children's_Day,Mary (mother of Jesus)
@@ -11662,7 +11670,6 @@ Children's_Day,User talk:66.129.35.132
 Children's_Day,User talk:66.206.96.142
 Children's_Day,User talk:66.32.158.177
 Children's_Day,User talk:66.64.223.2
-Children's_Day,User talk:68.3.185.129
 Children's_Day,User talk:69.250.199.117
 Children's_Day,User talk:76.69.68.93
 Children's_Day,User talk:78.138.19.34
@@ -13234,6 +13241,7 @@ Coal,Milutin Milanković
 Coal,Mineral
 Coal,Mineral County; West Virginia
 Coal,Mineral; Illinois
+Coal,Morwell; Victoria
 Coal,Moscow; Ohio
 Coal,Moselle
 Coal,Muhlenberg County; Kentucky
@@ -13290,7 +13298,6 @@ Coal,Radioactive waste
 Coal,Rail transport
 Coal,Ralph Chaplin
 Coal,Reilly Township; Schuylkill County; Pennsylvania
-Coal,Renewable energy
 Coal,Rheumatoid arthritis
 Coal,Rhineland
 Coal,Richwood; West Virginia
@@ -14160,7 +14167,6 @@ Cooking,Prosumer
 Cooking,Pyramid
 Cooking,Pyre
 Cooking,Pyrolysis
-Cooking,Queer Eye
 Cooking,Quern-stone
 Cooking,Racloir
 Cooking,Raw foodism
@@ -14708,6 +14714,7 @@ Dependent_and_independent_variables,User talk:24.192.236.86
 Dependent_and_independent_variables,User talk:24.245.30.159
 Dependent_and_independent_variables,User talk:24.34.106.90
 Dependent_and_independent_variables,User talk:24.93.112.29
+Dependent_and_independent_variables,User talk:2601:141:101:9DB0:893E:F1FB:61B0:9D1E
 Dependent_and_independent_variables,User talk:49.151.26.204
 Dependent_and_independent_variables,User talk:50.205.109.251
 Dependent_and_independent_variables,User talk:50.5.116.94
@@ -15022,7 +15029,6 @@ Design,Design engineer
 Design,Design for Six Sigma
 Design,Design language
 Design,Design life
-Design,Design of experiments
 Design,Design paradigm
 Design,Design pattern
 Design,Design research
@@ -15065,6 +15071,7 @@ Design,Flow (psychology)
 Design,FLTK
 Design,Formal equivalence checking
 Design,Foundry model
+Design,Franklin W. Olin College of Engineering
 Design,Friedensreich Hundertwasser
 Design,Fundação Armando Alvares Penteado
 Design,Futures studies
@@ -15074,7 +15081,6 @@ Design,Georgian architecture
 Design,Georgian Technical University
 Design,Gerrit Rietveld
 Design,Giacomo Leoni
-Design,Goldsmiths; University of London
 Design,Grab It for a Second
 Design,Graphic design
 Design,Greatest Hits (Aerosmith album)
@@ -15124,6 +15130,7 @@ Design,Interior architecture
 Design,Interior design
 Design,Interstate 880
 Design,Isamu Noguchi
+Design,Isokon
 Design,It's Only Rock 'n Roll
 Design,Italian language
 Design,Iterative design
@@ -15152,7 +15159,6 @@ Design,Led Zeppelin (album)
 Design,Leeds College of Art
 Design,Letterkenny Institute of Technology
 Design,Level design
-Design,Lia Menna Barreto
 Design,Lighting designer
 Design,Limit state design
 Design,List of Canadian artists
@@ -15304,6 +15310,7 @@ Design,Structural engineering
 Design,Student design competition
 Design,Style
 Design,Sunderland Lustreware
+Design,Surrey Institute of Art & Design; University College
 Design,Sustainable urban infrastructure
 Design,Switch
 Design,SylvaC
@@ -16133,7 +16140,6 @@ Domestic_violence,Jeffrey Dahmer
 Domestic_violence,Joe Biden
 Domestic_violence,John Soane
 Domestic_violence,John Waters (columnist)
-Domestic_violence,John Y. Brown; Jr.
 Domestic_violence,Joseph P. Kennedy II
 Domestic_violence,Josh Brolin
 Domestic_violence,Judy Erola
@@ -16146,6 +16152,7 @@ Domestic_violence,Kelsey Grammer
 Domestic_violence,Kimberly Guilfoyle
 Domestic_violence,Kindergarten Cop
 Domestic_violence,Kinship
+Domestic_violence,Ku Klux Klan
 Domestic_violence,Kurt Cobain
 Domestic_violence,L.A. Law
 Domestic_violence,La Toya Jackson
@@ -17027,6 +17034,7 @@ Duration_(music),Twelve-bar blues
 Duration_(music),Unmeasured prelude
 Duration_(music),User talk:110.175.175.253
 Duration_(music),User talk:202.6.146.119
+Duration_(music),User talk:203.122.240.100
 Duration_(music),User talk:81.153.136.10
 Duration_(music),User talk:85.211.49.116
 Duration_(music),User talk:86.11.21.135
@@ -17326,7 +17334,6 @@ Economy_of_South_Africa,List of rivers of South Africa
 Economy_of_South_Africa,List of South Africa-related topics
 Economy_of_South_Africa,List of South African artists
 Economy_of_South_Africa,List of South African poets
-Economy_of_South_Africa,List of South African provinces by Human Development Index
 Economy_of_South_Africa,List of South African television series
 Economy_of_South_Africa,List of South Africans
 Economy_of_South_Africa,List of years in South Africa
@@ -17346,6 +17353,7 @@ Economy_of_South_Africa,Minister of State Security (South Africa)
 Economy_of_South_Africa,Ministerial Conference
 Economy_of_South_Africa,Monetary policy of South Africa
 Economy_of_South_Africa,Most favoured nation
+Economy_of_South_Africa,Music of South Africa
 Economy_of_South_Africa,National Intelligence Agency (South Africa)
 Economy_of_South_Africa,National Treasury (South Africa)
 Economy_of_South_Africa,Nedbank
@@ -17871,6 +17879,7 @@ Ecosystem,North Cascades National Park
 Ecosystem,Northwood; New Hampshire
 Ecosystem,Numbat
 Ecosystem,Oceanography
+Ecosystem,Odonata
 Ecosystem,Oil spill
 Ecosystem,Oklahoma
 Ecosystem,Oligocene
@@ -17953,7 +17962,6 @@ Ecosystem,Sociotechnical system
 Ecosystem,Soil
 Ecosystem,Soil retrogression and degradation
 Ecosystem,Soil science
-Ecosystem,Solar System
 Ecosystem,Solnhofen limestone
 Ecosystem,Somerset Levels
 Ecosystem,South Georgia and the South Sandwich Islands
@@ -18072,6 +18080,7 @@ Electrical_conductor,Cavallo's multiplier
 Electrical_conductor,Charge carrier
 Electrical_conductor,Charge density
 Electrical_conductor,Charge-induced voltage alteration
+Electrical_conductor,Charged current
 Electrical_conductor,Chemical synapse
 Electrical_conductor,Chiclet keyboard
 Electrical_conductor,Classical and quantum conductivity
@@ -18101,7 +18110,6 @@ Electrical_conductor,Copper loss
 Electrical_conductor,Copper-clad aluminium wire
 Electrical_conductor,Coulomb's law
 Electrical_conductor,Covariant formulation of classical electromagnetism
-Electrical_conductor,Crystal
 Electrical_conductor,Crystallography
 Electrical_conductor,Current density
 Electrical_conductor,Current transformer
@@ -18239,6 +18247,7 @@ Electrical_conductor,Lightning rocket
 Electrical_conductor,Lightning rod
 Electrical_conductor,List of Israeli inventions and discoveries
 Electrical_conductor,Liénard–Wiechert potential
+Electrical_conductor,London equations
 Electrical_conductor,Loop antenna
 Electrical_conductor,Lorentz force
 Electrical_conductor,Luttinger liquid
@@ -18275,6 +18284,7 @@ Electrical_conductor,Mush winding
 Electrical_conductor,Nathan Stubblefield
 Electrical_conductor,Near and far field
 Electrical_conductor,Neptune
+Electrical_conductor,Neutral current
 Electrical_conductor,Noise (electronics)
 Electrical_conductor,Non-line-of-sight propagation
 Electrical_conductor,Norris Bradbury
@@ -18301,7 +18311,6 @@ Electrical_conductor,Polybenzimidazole fiber
 Electrical_conductor,Polyphase system
 Electrical_conductor,Polythiazyl
 Electrical_conductor,Portable cord
-Electrical_conductor,Portal:Chemistry
 Electrical_conductor,Portal:Chemistry/Selected biography
 Electrical_conductor,Portal:Chemistry/Selected biography/2
 Electrical_conductor,Portal:Electromagnetism
@@ -18341,6 +18350,7 @@ Electrical_conductor,Salt (chemistry)
 Electrical_conductor,Saturation velocity
 Electrical_conductor,Second Industrial Revolution
 Electrical_conductor,Semiconductor
+Electrical_conductor,Series and parallel circuits
 Electrical_conductor,Short circuit
 Electrical_conductor,Silver
 Electrical_conductor,Soft matter
@@ -18365,7 +18375,6 @@ Electrical_conductor,Talk:Diode bridge
 Electrical_conductor,Talk:Electrical conduction
 Electrical_conductor,Talk:Electrical conductor
 Electrical_conductor,Talk:Insulator (electricity)
-Electrical_conductor,Talk:List of common misconceptions/Archive 11
 Electrical_conductor,Talk:Network
 Electrical_conductor,Talk:Semiconductor
 Electrical_conductor,Talk:Technology/Archive 2
@@ -18476,7 +18485,6 @@ Electrical_conductor,User talk:91.84.109.35
 Electrical_conductor,User talk:92.0.108.172
 Electrical_conductor,User talk:94.15.3.149
 Electrical_conductor,User talk:96.246.235.78
-Electrical_conductor,User talk:97.106.72.151
 Electrical_conductor,User talk:98.113.225.148
 Electrical_conductor,User talk:99.179.155.94
 Electrical_conductor,User talk:99.185.128.185
@@ -18555,6 +18563,7 @@ Electrical_network,Capacitor discharge ignition
 Electrical_network,Capacitor types
 Electrical_network,Category:Atmospheric electricity
 Electrical_network,Charge density
+Electrical_network,Charged current
 Electrical_network,Christmas lights
 Electrical_network,Circuit (electricity)
 Electrical_network,Circuit breaker
@@ -18704,6 +18713,7 @@ Electrical_network,List of theorems
 Electrical_network,List of United States Navy ratings
 Electrical_network,Liénard–Wiechert potential
 Electrical_network,LMS Imagine.Lab Amesim
+Electrical_network,London equations
 Electrical_network,Lorentz force
 Electrical_network,Low-k dielectric
 Electrical_network,LTI system theory
@@ -18737,6 +18747,7 @@ Electrical_network,Negative impedance converter
 Electrical_network,Network
 Electrical_network,Network analysis (electrical circuits)
 Electrical_network,Network analyzer (electrical)
+Electrical_network,Neutral current
 Electrical_network,Non-dim circuit
 Electrical_network,Norton's theorem
 Electrical_network,Ohm's law
@@ -18766,6 +18777,7 @@ Electrical_network,Power Grid
 Electrical_network,Power quality compression algorithm
 Electrical_network,Power systems CAD
 Electrical_network,Power-system automation
+Electrical_network,Poynting vector
 Electrical_network,Precision rectifier
 Electrical_network,Programmable Array Logic
 Electrical_network,Programmable logic array
@@ -18936,7 +18948,6 @@ Electrical_network,User talk:Spinningspark/Archive 13
 Electrical_network,User talk:TStein
 Electrical_network,User:Amizra/Books/Honors Physics
 Electrical_network,User:Archimerged/Template/Electromagnetism
-Electrical_network,User:Blackairplane/Books/Build Like Stark
 Electrical_network,User:Brews ohare/Free space
 Electrical_network,User:Chaos/Electromagnetism
 Electrical_network,User:Daniele.tampieri/draft
@@ -18946,11 +18957,8 @@ Electrical_network,User:Doziledoux/Books/Electrical Engineering
 Electrical_network,User:Elcap/Types of capacitor
 Electrical_network,User:Emijrp/FirstPages
 Electrical_network,User:Gyromax Balance
-Electrical_network,User:HhhipBot/Cleanup listing/Physics/Unreferenced
 Electrical_network,User:HhhipBot/Physics pages/General
 Electrical_network,User:Ignirtoq/Electromagnetic tensor
-Electrical_network,User:Igrek/10000/Physical sciences
-Electrical_network,User:Im ksiva/Books/Electricity
 Electrical_network,User:Itpastorn/dko/ccna1-3.1-3
 Electrical_network,User:Jambaugh/Sandbox/EM
 Electrical_network,User:Jetson123/Books/Circuit Lab
@@ -19149,6 +19157,7 @@ Electricity_generation,Energy conversion efficiency
 Electricity_generation,Energy demand management
 Electricity_generation,Energy development
 Electricity_generation,Energy Future Holdings
+Electricity_generation,Energy in Bulgaria
 Electricity_generation,Energy in Japan
 Electricity_generation,Energy in Thailand
 Electricity_generation,Energy in the United Kingdom
@@ -19336,7 +19345,6 @@ Electricity_generation,Portal:Energy/Did you know
 Electricity_generation,Portal:Energy/Energy topics
 Electricity_generation,Portal:Energy/Selected article
 Electricity_generation,Portal:Energy/Selected picture
-Electricity_generation,Portal:Iceland
 Electricity_generation,Portal:Iceland/Selected article
 Electricity_generation,Portal:Quebec
 Electricity_generation,Portal:South Australia/Selected article
@@ -19563,6 +19571,7 @@ Energy_in_South_Africa,KaXu Solar One
 Energy_in_South_Africa,Kelvin Power Station
 Energy_in_South_Africa,Kendal Power Station
 Energy_in_South_Africa,Khi Solar One
+Energy_in_South_Africa,Kinangop Wind Park
 Energy_in_South_Africa,Koeberg Nuclear Power Station
 Energy_in_South_Africa,Komati Power Station
 Energy_in_South_Africa,Kouga Dam
@@ -19599,6 +19608,7 @@ Energy_in_South_Africa,Talk:Energy in Russia
 Energy_in_South_Africa,Talk:Energy in South Africa
 Energy_in_South_Africa,Template:Energy by country
 Energy_in_South_Africa,Template:Power in South Africa
+Energy_in_South_Africa,Tororo Wind Power Station
 Energy_in_South_Africa,Tutuka Power Station
 Energy_in_South_Africa,User talk:Watti Renew
 Energy_in_South_Africa,User:Steve92341/Books/South Africa
@@ -19758,6 +19768,7 @@ Fair_trade,Fairtrade Labelling Organizations International
 Fair_trade,Fairtrade Town
 Fair_trade,Fast Food Nation
 Fair_trade,Feminist economics
+Fair_trade,FLO International
 Fair_trade,Flying geese paradigm
 Fair_trade,Folkhemmet
 Fair_trade,Food and drink prohibitions
@@ -19885,7 +19896,6 @@ Fair_trade,Media; Pennsylvania
 Fair_trade,Mennonite Central Committee
 Fair_trade,Mercantilism
 Fair_trade,Millennium Development Goals
-Fair_trade,Modern liberalism in the United States
 Fair_trade,Modernization theory
 Fair_trade,Moissanite
 Fair_trade,Mr. Scruff
@@ -19932,7 +19942,6 @@ Fair_trade,Porto Alegre Manifesto
 Fair_trade,Preferential trading area
 Fair_trade,Primitive accumulation of capital
 Fair_trade,Progressive Democrats of America
-Fair_trade,Progressivism in the United States
 Fair_trade,Protectionism
 Fair_trade,Puerto Rican Independence Party
 Fair_trade,Puma SE
@@ -19943,7 +19952,6 @@ Fair_trade,Ramsay MacDonald
 Fair_trade,Raúl Prebisch
 Fair_trade,Reefer Madness (2003 book)
 Fair_trade,Renmin University of China
-Fair_trade,RepRap project
 Fair_trade,Richard Adams (Traidcraft)
 Fair_trade,RMIT University
 Fair_trade,Rob Altemeyer
@@ -20040,6 +20048,7 @@ Fair_trade,Trade restriction
 Fair_trade,Trade union
 Fair_trade,Trade war
 Fair_trade,Traidcraft
+Fair_trade,Transnational organized crime
 Fair_trade,Transnationalism
 Fair_trade,Transparency (behavior)
 Fair_trade,Transparency International
@@ -20059,7 +20068,6 @@ Fair_trade,United Nations Global Compact
 Fair_trade,United Nations Industrial Development Organization
 Fair_trade,University of Puget Sound
 Fair_trade,User talk:195.113.79.25
-Fair_trade,User talk:195.12.30.130
 Fair_trade,User talk:212.219.248.236
 Fair_trade,User talk:212.47.81.72
 Fair_trade,User talk:217.204.206.164
@@ -20070,6 +20078,7 @@ Fair_trade,User talk:Borisblue
 Fair_trade,User talk:Garzo/archive
 Fair_trade,User talk:KDRGibby
 Fair_trade,User talk:Le Anh-Huy
+Fair_trade,User talk:Redeft18
 Fair_trade,User talk:Stirling Newberry/02
 Fair_trade,User talk:Uris/LibertyPartII
 Fair_trade,User:Anthere/biodiversity
@@ -20079,6 +20088,7 @@ Fair_trade,User:Gozar
 Fair_trade,User:Mike McGregor (Can)
 Fair_trade,User:Rashed
 Fair_trade,User:Sam Spade/Theoretical Biases
+Fair_trade,User:Scartol
 Fair_trade,User:Silence/Deae
 Fair_trade,Van Houtte
 Fair_trade,Vandana Shiva
@@ -20130,7 +20140,6 @@ Farm,Alexandrovsk-Sakhalinsky (town)
 Farm,Alice Mary Robertson
 Farm,Alphonse James de Rothschild
 Farm,American Veterinary Medical Association
-Farm,Amherst; New York
 Farm,Antônio Conselheiro
 Farm,Aquaculture
 Farm,Askim
@@ -20459,6 +20468,7 @@ Farm,Pollination
 Farm,Polyface Farm
 Farm,Portal:Astronomy/Picture/1 June 2005
 Farm,Portal:Astronomy/Picture/June 2005
+Farm,Portal:Astronomy/Picture/Week 16 2006
 Farm,Portal:Contents/Overviews
 Farm,Portal:Current events/April 2004
 Farm,Powers Boothe
@@ -20930,6 +20940,7 @@ Fiber,Poplin
 Fiber,Portal:Agriculture and Agronomy
 Fiber,Portal:Agriculture and Agronomy/Intro
 Fiber,Portal:Agriculture and Agronomy/Sustainable Agriculture
+Fiber,Portal:Ecology
 Fiber,Portal:Ecology/Selected picture
 Fiber,Pultrusion
 Fiber,Qiviut
@@ -20939,7 +20950,6 @@ Fiber,Quipu
 Fiber,Rabbit hair
 Fiber,Raffia palm
 Fiber,Ramie
-Fiber,Rape
 Fiber,Rape kit
 Fiber,Rayon
 Fiber,Red forest duiker
@@ -20981,6 +20991,7 @@ Fiber,Soy protein
 Fiber,Spandex
 Fiber,Special Period
 Fiber,Specific energy
+Fiber,Specific strength
 Fiber,Spider silk
 Fiber,Spindle (textiles)
 Fiber,Spinning (textiles)
@@ -21892,6 +21903,7 @@ Flag_of_South_Africa,User talk:Tungsten
 Flag_of_South_Africa,User talk:Walls of Jericho/Archive 1
 Flag_of_South_Africa,User talk:YOUGOTMAIL123
 Flag_of_South_Africa,User talk:Zscout370/Archive 1
+Flag_of_South_Africa,User:Anon My
 Flag_of_South_Africa,User:AstaBOTh15/listify1
 Flag_of_South_Africa,User:Boothman
 Flag_of_South_Africa,User:Boston/DYK
@@ -21922,7 +21934,6 @@ Flag_of_South_Africa,User:Raul654/workbench/FA.13057132
 Flag_of_South_Africa,User:Raul654/workbench/FA.14519335
 Flag_of_South_Africa,User:Raul654/workbench/FA.19991164
 Flag_of_South_Africa,User:Raul654/workbench/FA.22182086
-Flag_of_South_Africa,User:Rfl/Old
 Flag_of_South_Africa,User:Robin van der Vliet/sandbox
 Flag_of_South_Africa,User:Scook6871/College of Charleston Men's Rugby Football Club
 Flag_of_South_Africa,User:SelectionBot/0.7/A-1
@@ -22071,6 +22082,7 @@ Food,Essential fatty acid
 Food,Ethology
 Food,Etymologiae
 Food,Eucalyptus
+Food,Exeter Township; Berks County; Pennsylvania
 Food,Family and consumer science
 Food,Famine
 Food,Fasting
@@ -22082,6 +22094,7 @@ Food,Flood
 Food,Food coloring
 Food,Food drying
 Food,Food energy
+Food,Food web
 Food,Food writing
 Food,Forest
 Food,Fossil fuel
@@ -22167,6 +22180,7 @@ Food,Sauce
 Food,Sausage
 Food,Sautéing
 Food,Scheveningen
+Food,Scientist
 Food,Seafood
 Food,Seed bank
 Food,Service (economics)
@@ -22233,7 +22247,7 @@ Food,Talk:Calvados
 Food,Talk:Candy corn
 Food,Talk:Canna (plant)
 Food,Talk:Cannabis
-Food,Talk:Cannabis foods
+Food,Talk:Cannabis edibles
 Food,Talk:Cantonese cuisine
 Food,Talk:Cappuccino
 Food,Talk:Capsicum
@@ -22331,7 +22345,6 @@ Food,Talk:Magnesium
 Food,Talk:Malt
 Food,Talk:Mango
 Food,Talk:Maple sugar
-Food,Talk:Maple syrup
 Food,Talk:Marsala wine
 Food,Talk:Martini (cocktail)
 Food,Talk:Mayonnaise
@@ -22363,7 +22376,6 @@ Food,Talk:Orchidaceae
 Food,Talk:Oyakodon
 Food,Talk:Oyster
 Food,Talk:Paella
-Food,Talk:Pancake
 Food,Talk:Pasta
 Food,Talk:Pasty
 Food,Talk:Pavlova (food)
@@ -22431,7 +22443,6 @@ Food,Talk:Wine
 Food,Talk:Winter wheat
 Food,Talk:Wok
 Food,Talk:Yeast
-Food,Talk:Yogurt
 Food,Talk:Yorkshire pudding
 Food,The Raven: Anarchist Quarterly
 Food,Tobacco industry
@@ -22538,6 +22549,7 @@ Food_pyramid_(nutrition),User:EranBot/Copyright/4
 Food_pyramid_(nutrition),User:KimUnderwood/Books/K-Book
 Food_pyramid_(nutrition),User:SamuelRiv/Bot
 Food_pyramid_(nutrition),User:West.andrew.g/2014 Top Medical Articles
+Food_pyramid_(nutrition),User:West.andrew.g/Popular medical pages
 Food_pyramid_(nutrition),Zone diet
 Food_security,1915 Palestine locust infestation
 Food_security,2004 Africa locust infestation
@@ -23336,7 +23348,6 @@ Food_vs._fuel,User:Louis Do Nothing
 Food_vs._fuel,User:Lucideer
 Food_vs._fuel,User:Lucideer/Userboxes/Sandbox
 Food_vs._fuel,User:Macalla Spain
-Food_vs._fuel,User:Magioladitis/sandbox
 Food_vs._fuel,User:Marian Sokolski/sandbox
 Food_vs._fuel,User:Matsci trogdor/Sandbox
 Food_vs._fuel,User:Matt.leeck
@@ -23804,6 +23815,7 @@ Free_State_(province),Trichoneura (plant)
 Free_State_(province),Trompsburg
 Free_State_(province),Tseki
 Free_State_(province),Tshiame
+Free_State_(province),Tshifhiwa Munyai
 Free_State_(province),Tussen-die-Riviere Nature Reserve
 Free_State_(province),Tweeling
 Free_State_(province),Tweespruit
@@ -23958,7 +23970,6 @@ Gangster,Al Capone
 Gangster,Albert Warner
 Gangster,Andrei Sinyavsky
 Gangster,Andrey Kozlov
-Gangster,Andy Hunter (EastEnders)
 Gangster,Angelo Badalamenti
 Gangster,Angelo La Barbera
 Gangster,Angri
@@ -24013,7 +24024,6 @@ Gangster,Danny DeVito
 Gangster,Dare to Be Stupid
 Gangster,Dave Courtney
 Gangster,Dead Air
-Gangster,Dennis Rickman
 Gangster,Destiny Fulfilled
 Gangster,Divide and Conquer (film)
 Gangster,Doctor Death (comics)
@@ -24078,6 +24088,7 @@ Gangster,Haunted History (1998 TV series)
 Gangster,Henry Morgan (humorist)
 Gangster,Hercules in New York
 Gangster,Hip hop fashion
+Gangster,HM Prison Brixton
 Gangster,Ho King Commercial Building
 Gangster,Holker Street
 Gangster,Homie
@@ -24118,6 +24129,7 @@ Gangster,Lake of Fire (song)
 Gangster,Lash LeRoux
 Gangster,Lawrence Dobkin
 Gangster,Lecrae
+Gangster,Legionnaire (film)
 Gangster,Leslie Howard (actor)
 Gangster,LGBT symbols
 Gangster,Lidsville
@@ -24167,6 +24179,7 @@ Gangster,Michael Gardiner
 Gangster,Michael Pelligrino
 Gangster,Mickey Cohen
 Gangster,Mickey Marcus
+Gangster,Midnight My Love
 Gangster,Minneapolis
 Gangster,Mobster
 Gangster,Mobsters
@@ -24250,12 +24263,12 @@ Gangster,Shiney Ahuja
 Gangster,Sicilian Mafia
 Gangster,Signs (Snoop Dogg song)
 Gangster,Sinister Dexter
-Gangster,Sippenhaft
 Gangster,Smile (Lily Allen song)
 Gangster,Snoop Dogg
 Gangster,Soapy Smith
 Gangster,Sols
 Gangster,St Trinian's School
+Gangster,Steven Crea
 Gangster,Straight Outta Compton
 Gangster,Straight Outta Lynwood
 Gangster,Strike Force (TV series)
@@ -24316,6 +24329,7 @@ Gangster,Urban Gothic (TV series)
 Gangster,User talk:152.9.102.200
 Gangster,User talk:164.116.22.137
 Gangster,User talk:168.170.202.150
+Gangster,User talk:168.216.65.74
 Gangster,User talk:169.241.28.75
 Gangster,User talk:195.195.161.242
 Gangster,User talk:198.190.212.45
@@ -24333,18 +24347,14 @@ Gangster,User talk:24.123.190.146
 Gangster,User talk:63.161.208.174
 Gangster,User talk:64.251.57.195
 Gangster,User talk:64.39.127.111
-Gangster,User talk:64.59.200.100
 Gangster,User talk:64.75.117.1
 Gangster,User talk:65.175.173.172
 Gangster,User talk:66.139.27.254
-Gangster,User talk:67.183.176.214
 Gangster,User talk:68.102.38.66
 Gangster,User talk:68.113.102.38
 Gangster,User talk:68.45.112.246
-Gangster,User talk:69.174.124.219
 Gangster,User talk:69.181.252.72
 Gangster,User talk:69.183.106.88
-Gangster,User talk:69.197.133.160
 Gangster,User talk:69.216.165.202
 Gangster,User talk:71.128.216.184
 Gangster,User talk:71.139.97.201
@@ -24353,6 +24363,7 @@ Gangster,User talk:72.159.134.78
 Gangster,User talk:72.165.143.162
 Gangster,User talk:72.59.30.247
 Gangster,User talk:74.96.102.143
+Gangster,User talk:81.152.245.141
 Gangster,User talk:82.17.79.125
 Gangster,User talk:86.1.173.255
 Gangster,User talk:86.138.224.202
@@ -24370,6 +24381,7 @@ Gangster,User talk:Littleman finke1
 Gangster,User talk:Pablojosehernando
 Gangster,User talk:Pureprincess21
 Gangster,User talk:Uwishuwereme
+Gangster,User talk:Yellabella
 Gangster,User:5aret/5aret's userboxes2
 Gangster,User:Alex43223/boxes
 Gangster,User:AYArktos~enwiki/sandbox/Haddock exclamations
@@ -24555,7 +24567,6 @@ Gas,Diazepam
 Gas,Dilithium
 Gas,Distillation
 Gas,Diving physics
-Gas,Drude model
 Gas,Dry ice
 Gas,Dye laser
 Gas,Economy of Azerbaijan
@@ -24717,6 +24728,7 @@ Gas,Maxwell–Boltzmann statistics
 Gas,Melissa officinalis
 Gas,Melting
 Gas,Melting point
+Gas,Metallic hydrogen
 Gas,Meteorology
 Gas,Međimurje County
 Gas,Mixture
@@ -25809,7 +25821,6 @@ Gender_role,Talk:Gender role
 Gender_role,Talk:Gender role/Archive 2003
 Gender_role,Talk:Gender role/Archive 2004
 Gender_role,Talk:Gender-specific and gender-neutral pronouns
-Gender_role,Talk:Gender/Archive 1
 Gender_role,Talk:Gender/Archive 2
 Gender_role,Talk:Girly girl
 Gender_role,Talk:Glabrousness
@@ -25861,6 +25872,7 @@ Gender_role,User talk:Haiduc/Archives 2005
 Gender_role,User talk:Jaimenote
 Gender_role,User talk:Kim é‡‘
 Gender_role,User talk:Lvlarx
+Gender_role,User talk:Runner1928
 Gender_role,User talk:Stuartyeates
 Gender_role,User talk:Tpbradbury
 Gender_role,User:AlexR/gender
@@ -26633,6 +26645,7 @@ Griqua_people,Minister of State Security (South Africa)
 Griqua_people,Miscegenation
 Griqua_people,Mulatto
 Griqua_people,Multiracial
+Griqua_people,Music of South Africa
 Griqua_people,Nama people
 Griqua_people,Natalia Republic
 Griqua_people,National Forensic DNA Database of South Africa
@@ -26898,6 +26911,7 @@ Hand_washing,Population health
 Hand_washing,Portal:Viruses/Selected article
 Hand_washing,Portal:Viruses/Selected article/11
 Hand_washing,Portal:Viruses/Selected article/7
+Hand_washing,Positive deviance
 Hand_washing,PRECEDE-PROCEED model
 Hand_washing,Preventive healthcare
 Hand_washing,Professional degrees of public health
@@ -26979,7 +26993,6 @@ Hand_washing,User talk:69.211.224.92
 Hand_washing,User talk:71.197.126.14
 Hand_washing,User talk:71.210.93.238
 Hand_washing,User talk:71.211.236.216
-Hand_washing,User talk:71.82.121.11
 Hand_washing,User talk:72.94.21.151
 Hand_washing,User talk:75.5.205.96
 Hand_washing,User talk:76.120.243.40
@@ -26993,7 +27006,7 @@ Hand_washing,User talk:98.231.226.84
 Hand_washing,User talk:99.23.148.156
 Hand_washing,User talk:Bakercrew1
 Hand_washing,User talk:Cmichael/Archive 5
-Hand_washing,User talk:Doc James
+Hand_washing,User talk:Doc James/Archive 89
 Hand_washing,User talk:EvMsmile
 Hand_washing,User talk:Hrothgar15
 Hand_washing,User talk:Jchapple88
@@ -27042,6 +27055,7 @@ Hand_washing,User:Wbm1058/Proposed mergers/Log/August 2011
 Hand_washing,User:WeijiBaikeBianji/sandbox14
 Hand_washing,User:West.andrew.g/2014 Top Medical Articles
 Hand_washing,User:West.andrew.g/Dead links/Archive 910
+Hand_washing,User:West.andrew.g/Popular medical pages
 Hand_washing,User:Zodon/Family planning in the United States
 Hand_washing,Vector control
 Hand_washing,Ventilator-associated pneumonia
@@ -27239,6 +27253,7 @@ Health,Instituto Butantan
 Health,International Baby Food Action Network
 Health,International Consumer Research & Testing
 Health,International Polar Year
+Health,International Policy Network
 Health,Jaime Lerner
 Health,Jesuit Refugee Service
 Health,Joan Carretero i Grau
@@ -27484,6 +27499,7 @@ Health,The London Museums of Health & Medicine
 Health,The Lord of the Rings Online
 Health,The Pas
 Health,The Raven: Anarchist Quarterly
+Health,Thengamara Mohila Sabuj Sangha
 Health,Timeline of the SARS outbreak
 Health,Traditional Chinese medicine
 Health,Traditional medicine
@@ -27599,6 +27615,7 @@ Health_care_in_South_Africa,Military history of South Africa
 Health_care_in_South_Africa,Military Skills Development System
 Health_care_in_South_Africa,Minister of Defence and Military Veterans
 Health_care_in_South_Africa,Minister of State Security (South Africa)
+Health_care_in_South_Africa,Music of South Africa
 Health_care_in_South_Africa,National Forensic DNA Database of South Africa
 Health_care_in_South_Africa,National Intelligence Agency (South Africa)
 Health_care_in_South_Africa,New National Party (South Africa)
@@ -28316,7 +28333,6 @@ History_of_South_Africa,Talk:History of South Africa in the apartheid era/Archiv
 History_of_South_Africa,Talk:History of South Africa/Archive 1
 History_of_South_Africa,Talk:History of the San Francisco Giants
 History_of_South_Africa,Talk:J. R. R. Tolkien/Archive 3
-History_of_South_Africa,Talk:South Africa
 History_of_South_Africa,Talk:South Africa/Archive 1
 History_of_South_Africa,Talk:South Africa/Archive 5
 History_of_South_Africa,Talk:South-West Africa
@@ -28402,6 +28418,7 @@ History_of_South_Africa,User talk:72.81.207.204
 History_of_South_Africa,User talk:74.176.204.104
 History_of_South_Africa,User talk:74.94.175.177
 History_of_South_Africa,User talk:75.53.153.0
+History_of_South_Africa,User talk:77.40.150.66
 History_of_South_Africa,User talk:77.61.120.82
 History_of_South_Africa,User talk:78.151.143.72
 History_of_South_Africa,User talk:84.144.85.241
@@ -29248,6 +29265,7 @@ HIV,NAMES Project AIDS Memorial Quilt
 HIV,Nate Mendel
 HIV,Natural killer cell
 HIV,Needle exchange programme
+HIV,Needle sharing
 HIV,Nephrotic syndrome
 HIV,Nigeria
 HIV,Non-Hodgkin lymphoma
@@ -29328,7 +29346,6 @@ HIV,Ridgecrest; California
 HIV,Rock Hudson
 HIV,Rotavirus
 HIV,Roy Cohn
-HIV,Rudolf Nureyev
 HIV,Ryan White
 HIV,Safe sex
 HIV,Same-sex marriage in the United States
@@ -30095,6 +30112,7 @@ Human_nutrition,Ital
 Human_nutrition,Johns Hopkins Bloomberg School of Public Health
 Human_nutrition,Junk food
 Human_nutrition,Kashrut
+Human_nutrition,Katherine O. Musgrave
 Human_nutrition,Ketogenic diet
 Human_nutrition,Last Men in London
 Human_nutrition,Laundry symbol
@@ -30151,12 +30169,14 @@ Human_nutrition,Plant-based diet
 Human_nutrition,Plumpy'nut
 Human_nutrition,Population health
 Human_nutrition,Portal talk:Food
+Human_nutrition,Portal:Food
 Human_nutrition,Portal:Food/Selected ingredient
 Human_nutrition,Portal:Food/Selected ingredient/14
 Human_nutrition,Portal:Food/Selected person
 Human_nutrition,Portal:Food/Selected person/16
 Human_nutrition,Portion control (dieting)
 Human_nutrition,Portion size
+Human_nutrition,Positive deviance
 Human_nutrition,PRECEDE-PROCEED model
 Human_nutrition,Preventive healthcare
 Human_nutrition,Professional degrees of public health
@@ -30319,7 +30339,6 @@ Human_nutrition,User:Goorgle/Books/Nutrition and Diets
 Human_nutrition,User:Goorgle/Books/Nutrition and Diets 2.0
 Human_nutrition,User:Gronk Oz/Bare URLs
 Human_nutrition,User:Harish k87/Books/CBSE CLASS VI SCIENCE
-Human_nutrition,User:Headbomb/sandbox3
 Human_nutrition,User:Iieeeric/sandbox
 Human_nutrition,User:Jaardouin/The China Study
 Human_nutrition,User:Jatscgsah/sandbox/SCGSAH
@@ -30351,6 +30370,7 @@ Human_nutrition,User:West.andrew.g/2014 Top Medical Articles
 Human_nutrition,User:West.andrew.g/Dead links/Archive 470
 Human_nutrition,User:West.andrew.g/Dead links/Archive 472
 Human_nutrition,User:West.andrew.g/Dead links/Archive 774
+Human_nutrition,User:West.andrew.g/Popular medical pages
 Human_nutrition,User:Xelatermite/sandbox
 Human_nutrition,User:YSHAMAN16/Books/HUMANS - CELLS TO CONSCIOUSNESS
 Human_nutrition,User:Zodon/Family planning in the United States
@@ -31625,6 +31645,7 @@ Insulator_(electricity),Anosy Region
 Insulator_(electricity),Antenna (radio)
 Insulator_(electricity),ARRT-Antenna
 Insulator_(electricity),AS/NZS 3760
+Insulator_(electricity),Atomic-terrace low-angle shadowing
 Insulator_(electricity),Backstay insulator
 Insulator_(electricity),Bakelite
 Insulator_(electricity),Band-gap engineering
@@ -31644,6 +31665,7 @@ Insulator_(electricity),Capacitor types
 Insulator_(electricity),Ceramic
 Insulator_(electricity),Ceramic capacitor
 Insulator_(electricity),Charge density
+Insulator_(electricity),Charged current
 Insulator_(electricity),Charles François de Cisternay du Fay
 Insulator_(electricity),Classical electromagnetism
 Insulator_(electricity),Classical electromagnetism and special relativity
@@ -31758,6 +31780,7 @@ Insulator_(electricity),List of electromagnetism equations
 Insulator_(electricity),List of semiconductor materials
 Insulator_(electricity),List of synthetic polymers
 Insulator_(electricity),Liénard–Wiechert potential
+Insulator_(electricity),London equations
 Insulator_(electricity),Longwave radio mast Hellissandur
 Insulator_(electricity),Lorentz force
 Insulator_(electricity),Lutsk compact overhead powerline
@@ -31783,6 +31806,7 @@ Insulator_(electricity),Metamaterial cloaking
 Insulator_(electricity),Mott insulator
 Insulator_(electricity),Nanogenerator
 Insulator_(electricity),Neuron
+Insulator_(electricity),Neutral current
 Insulator_(electricity),New York City Subway
 Insulator_(electricity),Nickel–cadmium battery
 Insulator_(electricity),Nitride
@@ -31821,6 +31845,7 @@ Insulator_(electricity),Portal:Physics/2007 Selected pictures
 Insulator_(electricity),Portal:Physics/Selected picture/Week 11; 2007
 Insulator_(electricity),Positronic (company)
 Insulator_(electricity),Power cable
+Insulator_(electricity),Poynting vector
 Insulator_(electricity),Pressure washer
 Insulator_(electricity),Properties of metals; metalloids and nonmetals
 Insulator_(electricity),PTC rubber
@@ -31839,6 +31864,7 @@ Insulator_(electricity),Sculptured thin film
 Insulator_(electricity),Self-regulating heater
 Insulator_(electricity),Semiconductor
 Insulator_(electricity),Semimetal
+Insulator_(electricity),Series and parallel circuits
 Insulator_(electricity),Shoshone Transmission Line
 Insulator_(electricity),Signaling of the New York City Subway
 Insulator_(electricity),Simmons Bedding Company
@@ -32734,6 +32760,7 @@ Latitude,Cloud
 Latitude,Cocoa bean
 Latitude,Comet Hyakutake
 Latitude,Common blackbird
+Latitude,Common loon
 Latitude,Common redshank
 Latitude,Compostela Valley
 Latitude,Conquistador
@@ -32844,7 +32871,6 @@ Latitude,Global Positioning System
 Latitude,GLONASS
 Latitude,Gnomon
 Latitude,Great horned owl
-Latitude,Great northern loon
 Latitude,Great Red Spot
 Latitude,Greenish warbler
 Latitude,Greenock
@@ -33015,6 +33041,7 @@ Latitude,Radiosonde
 Latitude,Rembrandt; Iowa
 Latitude,Rhumb line
 Latitude,Rizal
+Latitude,Roaring Forties
 Latitude,Robert Peary
 Latitude,Rocket launch
 Latitude,Rockhampton
@@ -33039,7 +33066,6 @@ Latitude,Shoreline Park; Mississippi
 Latitude,Siberian stonechat
 Latitude,Sidereal time
 Latitude,Singapore
-Latitude,Siquijor
 Latitude,Snowball Earth
 Latitude,Solar constant
 Latitude,Solar cycle
@@ -33172,7 +33198,6 @@ Liquid_fuel,Micro-Space
 Liquid_fuel,Moscow State University of Fine Chemical Technologies
 Liquid_fuel,Panicum virgatum
 Liquid_fuel,Persistent organic pollutant
-Liquid_fuel,Portal:Spaceflight
 Liquid_fuel,Portal:Spaceflight/Selected biography
 Liquid_fuel,Portal:Spaceflight/Selected biography/1
 Liquid_fuel,Portal:Spaceflight/Selected biography/April 2009
@@ -33269,6 +33294,7 @@ List_of_South_Africans,Military history of South Africa
 List_of_South_Africans,Military Skills Development System
 List_of_South_Africans,Minister of Defence and Military Veterans
 List_of_South_Africans,Minister of State Security (South Africa)
+List_of_South_Africans,Music of South Africa
 List_of_South_Africans,National Forensic DNA Database of South Africa
 List_of_South_Africans,National Intelligence Agency (South Africa)
 List_of_South_Africans,New National Party (South Africa)
@@ -33648,12 +33674,14 @@ Longitude,Matvei Gedenschtrom
 Longitude,Maurice Loewy
 Longitude,Mercury (planet)
 Longitude,Meridian (geography)
+Longitude,Meridian (perimetry; visual field)
 Longitude,Michael Palin
 Longitude,Midnight sun
 Longitude,Mile
 Longitude,Military grid reference system
 Longitude,Minute and second of arc
 Longitude,Montjuïc
+Longitude,Moon landing
 Longitude,Mount Canobolas
 Longitude,Moving frame
 Longitude,Muhammad ibn Musa al-Khwarizmi
@@ -33703,7 +33731,6 @@ Longitude,Polar motion
 Longitude,Polar orbit
 Longitude,Polheim
 Longitude,Portal:Current events/May 2005
-Longitude,Portal:United Kingdom
 Longitude,Portuguese Empire
 Longitude,Position fixing
 Longitude,Prime meridian
@@ -33998,7 +34025,6 @@ Mahatma_Gandhi,Epistemological idealism
 Mahatma_Gandhi,Ernest Callenbach
 Mahatma_Gandhi,Esperanto
 Mahatma_Gandhi,Fascism
-Mahatma_Gandhi,February 22
 Mahatma_Gandhi,Feroze Gandhi
 Mahatma_Gandhi,Foreign relations of Bahrain
 Mahatma_Gandhi,Foreign relations of India
@@ -34011,6 +34037,7 @@ Mahatma_Gandhi,Gandhi (film)
 Mahatma_Gandhi,Gandhigram Rural Institute
 Mahatma_Gandhi,Gandhiji
 Mahatma_Gandhi,Gary Johnson
+Mahatma_Gandhi,Geolibertarianism
 Mahatma_Gandhi,German idealism
 Mahatma_Gandhi,Ghandi
 Mahatma_Gandhi,Ghanshyam Das Birla
@@ -34105,7 +34132,6 @@ Mahatma_Gandhi,Koenraad Elst
 Mahatma_Gandhi,Kottayam district
 Mahatma_Gandhi,Kris Kristofferson
 Mahatma_Gandhi,Krishna
-Mahatma_Gandhi,Kshatriya
 Mahatma_Gandhi,Kumbh Mela
 Mahatma_Gandhi,Lahiri Mahasaya
 Mahatma_Gandhi,Lakshmi
@@ -34309,6 +34335,7 @@ Mahatma_Gandhi,Tamil language
 Mahatma_Gandhi,Tantra
 Mahatma_Gandhi,Tehran
 Mahatma_Gandhi,The Good Life (1975 TV series)
+Mahatma_Gandhi,The Kingdom of God Is Within You
 Mahatma_Gandhi,Thiruvananthapuram
 Mahatma_Gandhi,Thomas Hobbes
 Mahatma_Gandhi,Thrissur
@@ -34499,6 +34526,7 @@ Malaria,Demographics of Swaziland
 Malaria,Demographics of the Republic of the Congo
 Malaria,Demographics of Yemen
 Malaria,Dengue fever
+Malaria,Developing country
 Malaria,Disease
 Malaria,DNA vaccination
 Malaria,Dodo
@@ -34757,7 +34785,6 @@ Malaria,Richard Pryor
 Malaria,Rickard Christophers
 Malaria,Rideau Canal
 Malaria,Ridley Park; Pennsylvania
-Malaria,Robert Burns Woodward
 Malaria,Robert Dudley; 1st Earl of Leicester
 Malaria,Rockefeller Foundation
 Malaria,Roger Waters
@@ -35287,6 +35314,7 @@ Map,Rand McNally
 Map,Regenstein Library
 Map,Reiner Gamma
 Map,Relay race
+Map,Remix culture
 Map,Rendering (computer graphics)
 Map,Representation of a Lie superalgebra
 Map,Rest area
@@ -35371,7 +35399,6 @@ Map,University of Michigan Library
 Map,User talk:67.43.21.100
 Map,User talk:Viriditas/Archive 2
 Map,User:AlexTheMartian
-Map,User:Apathyjunkie
 Map,User:BrendanRyan
 Map,User:Burwellian
 Map,User:Chingwakabungya
@@ -35684,7 +35711,6 @@ Mind_map,Design life
 Mind_map,Design management
 Mind_map,Design methods
 Mind_map,Design museum
-Mind_map,Design of experiments
 Mind_map,Design paradigm
 Mind_map,Design patent
 Mind_map,Design pattern
@@ -36066,6 +36092,7 @@ Mind_map,Web navigation
 Mind_map,Web Ontology Language
 Mind_map,Web science
 Mind_map,Web Science Trust
+Mind_map,Wikipedia talk:No original research/Archive 56
 Mind_map,WikkaWiki
 Mind_map,XHTML+RDFa
 Mind_map,XMind
@@ -36150,46 +36177,17 @@ Mining_industry_of_South_Africa,Military history of South Africa
 Mining_industry_of_South_Africa,Military Skills Development System
 Mining_industry_of_South_Africa,Mineral and Petroleum Resources Development Act; 2002
 Mining_industry_of_South_Africa,Mineral Revolution
-Mining_industry_of_South_Africa,Mining in Djibouti
-Mining_industry_of_South_Africa,Mining in Ethiopia
 Mining_industry_of_South_Africa,Mining in South Africa
-Mining_industry_of_South_Africa,Mining industry of Algeria
-Mining_industry_of_South_Africa,Mining industry of Angola
-Mining_industry_of_South_Africa,Mining industry of Burundi
-Mining_industry_of_South_Africa,Mining industry of Cameroon
-Mining_industry_of_South_Africa,Mining industry of Chad
-Mining_industry_of_South_Africa,Mining industry of Egypt
-Mining_industry_of_South_Africa,Mining industry of Equatorial Guinea
-Mining_industry_of_South_Africa,Mining industry of Ghana
-Mining_industry_of_South_Africa,Mining industry of Guinea
-Mining_industry_of_South_Africa,Mining industry of Ivory Coast
-Mining_industry_of_South_Africa,Mining industry of Lesotho
-Mining_industry_of_South_Africa,Mining industry of Liberia
-Mining_industry_of_South_Africa,Mining industry of Libya
-Mining_industry_of_South_Africa,Mining industry of Madagascar
-Mining_industry_of_South_Africa,Mining industry of Malawi
-Mining_industry_of_South_Africa,Mining industry of Mali
-Mining_industry_of_South_Africa,Mining industry of Morocco
-Mining_industry_of_South_Africa,Mining industry of Nigeria
-Mining_industry_of_South_Africa,Mining industry of Senegal
-Mining_industry_of_South_Africa,Mining industry of South Sudan
-Mining_industry_of_South_Africa,Mining industry of Sudan
-Mining_industry_of_South_Africa,Mining industry of Swaziland
 Mining_industry_of_South_Africa,Mining industry of Tanzania
-Mining_industry_of_South_Africa,Mining industry of the Democratic Republic of the Congo
 Mining_industry_of_South_Africa,Mining industry of the Gambia
-Mining_industry_of_South_Africa,Mining industry of Togo
-Mining_industry_of_South_Africa,Mining industry of Tunisia
-Mining_industry_of_South_Africa,Mining industry of Uganda
-Mining_industry_of_South_Africa,Mining industry of Zimbabwe
 Mining_industry_of_South_Africa,Minister of Defence and Military Veterans
 Mining_industry_of_South_Africa,Minister of State Security (South Africa)
+Mining_industry_of_South_Africa,Music of South Africa
 Mining_industry_of_South_Africa,National Forensic DNA Database of South Africa
 Mining_industry_of_South_Africa,National Intelligence Agency (South Africa)
 Mining_industry_of_South_Africa,National Treasury (South Africa)
 Mining_industry_of_South_Africa,New National Party (South Africa)
 Mining_industry_of_South_Africa,Nicky Oppenheimer
-Mining_industry_of_South_Africa,Oil and mining industry of Niger
 Mining_industry_of_South_Africa,Parliament of South Africa
 Mining_industry_of_South_Africa,Poetry Africa
 Mining_industry_of_South_Africa,Politics of South Africa
@@ -36235,7 +36233,6 @@ Mining_industry_of_South_Africa,Telecommunications in South Africa
 Mining_industry_of_South_Africa,Telephone numbers in South Africa
 Mining_industry_of_South_Africa,Television in South Africa
 Mining_industry_of_South_Africa,Template:Economy of South Africa
-Mining_industry_of_South_Africa,Template:Mining in Africa
 Mining_industry_of_South_Africa,Template:South Africa topics
 Mining_industry_of_South_Africa,Tourism in South Africa
 Mining_industry_of_South_Africa,Transport in South Africa
@@ -36266,9 +36263,7 @@ Mining_industry_of_South_Africa,User talk:Hi me. I Love me
 Mining_industry_of_South_Africa,User talk:Jethro B/Archive 1
 Mining_industry_of_South_Africa,User talk:Lihaas/Archive 6
 Mining_industry_of_South_Africa,User talk:Natethegreat0112
-Mining_industry_of_South_Africa,User talk:Rjhatl
 Mining_industry_of_South_Africa,User:Bozsovics/Books/South Afrika
-Mining_industry_of_South_Africa,User:Egoli/sandbox6
 Mining_industry_of_South_Africa,User:Iopensa/To do
 Mining_industry_of_South_Africa,User:Johnuniq/Convert warnings
 Mining_industry_of_South_Africa,User:NoclaimsBot/List/M
@@ -36344,7 +36339,6 @@ Mpumalanga,Canyon
 Mpumalanga,Cape mole-rat
 Mpumalanga,Capillipedium
 Mpumalanga,Carolina; Mpumalanga
-Mpumalanga,Caspersnek Pass
 Mpumalanga,Category:Flora of South Africa
 Mpumalanga,Category:Flora of Southern Africa
 Mpumalanga,Category:Mpumalanga geography stubs
@@ -36724,6 +36718,7 @@ Mpumalanga,Transvaal dwarf chameleon
 Mpumalanga,Transvaal Ndebele language
 Mpumalanga,Transvaal Province
 Mpumalanga,Treur River barb
+Mpumalanga,Tshifhiwa Munyai
 Mpumalanga,Tsonga language
 Mpumalanga,Tsonga people
 Mpumalanga,Tutuka Power Station
@@ -36795,7 +36790,6 @@ Music_of_South_Africa,Arrangement
 Music_of_South_Africa,Association of Community Access Broadcasters
 Music_of_South_Africa,Azanian People's Organisation
 Music_of_South_Africa,Baroque music
-Music_of_South_Africa,Biggest selling British acts of all time
 Music_of_South_Africa,Biometrics use by the South African government
 Music_of_South_Africa,Black conductors
 Music_of_South_Africa,Black Consciousness Movement
@@ -36895,6 +36889,7 @@ Music_of_South_Africa,List of best-selling music artists
 Music_of_South_Africa,List of best-selling singles
 Music_of_South_Africa,List of best-selling singles in South Korea
 Music_of_South_Africa,List of best-selling singles in Spain
+Music_of_South_Africa,List of biggest selling British acts of all time
 Music_of_South_Africa,List of companies of South Africa
 Music_of_South_Africa,List of cultural and regional genres of music
 Music_of_South_Africa,List of diplomatic missions of South Africa
@@ -37013,6 +37008,7 @@ Music_of_South_Africa,Music of Zambia
 Music_of_South_Africa,Music of Zimbabwe
 Music_of_South_Africa,Music psychology
 Music_of_South_Africa,Music school
+Music_of_South_Africa,Music technology
 Music_of_South_Africa,Music technology (electronic and digital)
 Music_of_South_Africa,Music theory
 Music_of_South_Africa,Music therapy
@@ -37161,6 +37157,7 @@ Music_of_South_Africa,User talk:80.194.5.172
 Music_of_South_Africa,User talk:81.157.79.42
 Music_of_South_Africa,User talk:83.100.208.106
 Music_of_South_Africa,User talk:84.168.235.97
+Music_of_South_Africa,User talk:84.187.179.145
 Music_of_South_Africa,User talk:85.119.209.197
 Music_of_South_Africa,User talk:86.129.68.75
 Music_of_South_Africa,User talk:86.153.172.224
@@ -37358,6 +37355,7 @@ National_anthem_of_South_Africa,User talk:41.208.50.176
 National_anthem_of_South_Africa,User talk:41.240.103.210
 National_anthem_of_South_Africa,User talk:41.244.100.219
 National_anthem_of_South_Africa,User talk:41.6.106.36
+National_anthem_of_South_Africa,User talk:64.8.188.156
 National_anthem_of_South_Africa,User talk:68.49.132.82
 National_anthem_of_South_Africa,User talk:69.92.94.234
 National_anthem_of_South_Africa,User talk:71.115.210.84
@@ -37373,6 +37371,7 @@ National_anthem_of_South_Africa,User talk:90.213.9.163
 National_anthem_of_South_Africa,User talk:94.174.173.244
 National_anthem_of_South_Africa,User talk:94.5.254.125
 National_anthem_of_South_Africa,User talk:98.248.157.202
+National_anthem_of_South_Africa,User talk:ArikPietz
 National_anthem_of_South_Africa,User talk:Marcha Libertadora
 National_anthem_of_South_Africa,User talk:Preye1234
 National_anthem_of_South_Africa,User talk:Stinkycurrymonster
@@ -37780,6 +37779,7 @@ Nelson_Mandela,Jan Smuts
 Nelson_Mandela,Jane Addams
 Nelson_Mandela,Janez Drnovšek
 Nelson_Mandela,Jawaharlal Nehru
+Nelson_Mandela,Jayaprakash Narayan
 Nelson_Mandela,Jeff Bezos
 Nelson_Mandela,Jimmy Carter
 Nelson_Mandela,Jody Williams
@@ -37896,7 +37896,6 @@ Nelson_Mandela,Parliamentary system
 Nelson_Mandela,Party of European Socialists
 Nelson_Mandela,Pat Summitt
 Nelson_Mandela,Paul Rodgers
-Nelson_Mandela,Peacekeeping
 Nelson_Mandela,Pelé
 Nelson_Mandela,Peter Akinola
 Nelson_Mandela,Peter Gabriel
@@ -38118,6 +38117,7 @@ Nest,Brad Adkins
 Nest,Brazilian tanager
 Nest,Bridled titmouse
 Nest,Bristlebill
+Nest,Bronx Zoo
 Nest,Brood parasite
 Nest,Brown songlark
 Nest,Browns Park National Wildlife Refuge
@@ -38136,6 +38136,7 @@ Nest,Clutch (eggs)
 Nest,Cochineal
 Nest,Collared kingfisher
 Nest,Common carder bee
+Nest,Common loon
 Nest,Common snapping turtle
 Nest,Common starling
 Nest,Common waxbill
@@ -38207,7 +38208,6 @@ Nest,Goose barnacle
 Nest,Goose egg addling
 Nest,Gordon Beruldsen
 Nest,Gould's mouse
-Nest,Great northern loon
 Nest,Greater kestrel
 Nest,Green-head ant
 Nest,Grey kestrel
@@ -39276,6 +39276,7 @@ Oliver_Tambo,User talk:24.188.18.14
 Oliver_Tambo,User talk:41.133.69.120
 Oliver_Tambo,User talk:68.197.38.122
 Oliver_Tambo,User talk:71.220.71.177
+Oliver_Tambo,User talk:72.221.114.65
 Oliver_Tambo,User talk:77.58.215.34
 Oliver_Tambo,User talk:77.96.103.194
 Oliver_Tambo,User talk:82.219.228.197
@@ -39336,7 +39337,6 @@ Outer_space,Adenine
 Outer_space,Aerospace
 Outer_space,Airspace
 Outer_space,Alan Shepard
-Outer_space,Albedo Anthropomorphics
 Outer_space,Alexey Leonov
 Outer_space,Alliant Techsystems
 Outer_space,Allotropes of carbon
@@ -39431,7 +39431,6 @@ Outer_space,Earth in science fiction
 Outer_space,Earth's magnetic field
 Outer_space,Eileen Collins
 Outer_space,El Chapulín Colorado
-Outer_space,Elon Musk
 Outer_space,Encyclopedia Astronautica
 Outer_space,Energy development
 Outer_space,Environmental movement
@@ -39465,7 +39464,6 @@ Outer_space,Glenn L. Martin Company
 Outer_space,Glycine
 Outer_space,Gold (color)
 Outer_space,Golomb ruler
-Outer_space,Graphene
 Outer_space,Graphite
 Outer_space,Great Barrier Reef
 Outer_space,Greenhouse effect
@@ -39540,8 +39538,6 @@ Outer_space,Life on Mars
 Outer_space,List of experiments from Lilo & Stitch
 Outer_space,List of historical period drama films
 Outer_space,List of human spaceflight programs
-Outer_space,List of International Space Station spacewalks
-Outer_space,List of interstellar and circumstellar molecules
 Outer_space,List of inventors
 Outer_space,List of micronations
 Outer_space,List of reported UFO sightings
@@ -39622,7 +39618,6 @@ Outer_space,Palomar Observatory
 Outer_space,Panspermia
 Outer_space,Patrick Moore
 Outer_space,Paul J. Weitz
-Outer_space,Phoenix (video game)
 Outer_space,Phosphine
 Outer_space,Pikmin
 Outer_space,Planetarium
@@ -39763,8 +39758,10 @@ Outer_space,User talk:Reubenbarton
 Outer_space,User talk:Ryjaz
 Outer_space,User talk:Theon~enwiki
 Outer_space,User:Imjustmatthew
-Outer_space,User:Michael Rawdon/Temp/X-Men
+Outer_space,User:Krik~enwiki/mp
+Outer_space,User:Krik~enwiki/nmp
 Outer_space,User:PBP
+Outer_space,User:Rfl
 Outer_space,User:Roscoe x
 Outer_space,User:Sj/pages
 Outer_space,User:Wolf530
@@ -39802,6 +39799,7 @@ Outline_of_domestic_violence,Acid throwing
 Outline_of_domestic_violence,Act as 1 Campaign
 Outline_of_domestic_violence,Address confidentiality program
 Outline_of_domestic_violence,AHA Foundation
+Outline_of_domestic_violence,Androcide
 Outline_of_domestic_violence,Atheist feminism
 Outline_of_domestic_violence,Battered person syndrome
 Outline_of_domestic_violence,Battered woman defense
@@ -39921,6 +39919,7 @@ Outline_of_domestic_violence,Portal:Contents/Society and social sciences/Outline
 Outline_of_domestic_violence,Power and control in abusive relationships
 Outline_of_domestic_violence,Power and Control: Domestic Violence in America
 Outline_of_domestic_violence,Pregnancy from rape
+Outline_of_domestic_violence,Prevalence of female genital mutilation by country
 Outline_of_domestic_violence,Prison rape
 Outline_of_domestic_violence,Protection of Women from Domestic Violence Act; 2005
 Outline_of_domestic_violence,Psychological abuse
@@ -40001,6 +40000,7 @@ Outline_of_domestic_violence,Violence against women in Tamil Nadu
 Outline_of_domestic_violence,We Are Sthlm sexual assaults
 Outline_of_domestic_violence,Wikipedia talk:WikiProject Outlines
 Outline_of_domestic_violence,Wikipedia talk:WikiProject Outlines/Drafts/Outline of astrophysics
+Outline_of_domestic_violence,Witch trials in the early modern period
 Outline_of_domestic_violence,Women in Argentina
 Outline_of_domestic_violence,Women in India
 Outline_of_domestic_violence,Women's shelter
@@ -41268,6 +41268,7 @@ Pneumatics,Powder (substance)
 Pneumatics,Power hammer
 Pneumatics,Power tool
 Pneumatics,Power transmission
+Pneumatics,Powered exoskeleton
 Pneumatics,Professional video camera
 Pneumatics,Programmable thermostat
 Pneumatics,Prva Petoletka
@@ -41466,6 +41467,7 @@ Pneumatics,User talk:TheGrimReaper NS
 Pneumatics,User:Ag0700/Books/BehaveNeuro
 Pneumatics,User:Ag0700/Books/fluid dynamics
 Pneumatics,User:Ag0700/Books/Physics- up to research
+Pneumatics,User:Ben.rajesh/sandbox
 Pneumatics,User:BluSkyy
 Pneumatics,User:Brfa/sandbox
 Pneumatics,User:Btrflyflwr/Books/jan
@@ -41703,6 +41705,7 @@ Politics_of_South_Africa,Minister of State Security (South Africa)
 Politics_of_South_Africa,Minority Front
 Politics_of_South_Africa,Molotov Cocktail (magazine)
 Politics_of_South_Africa,Municipalities of South Africa
+Politics_of_South_Africa,Music of South Africa
 Politics_of_South_Africa,Musicians Union of South Africa
 Politics_of_South_Africa,N2 Gateway
 Politics_of_South_Africa,Natal Indian Congress
@@ -41782,7 +41785,6 @@ Politics_of_South_Africa,Politics of Nigeria
 Politics_of_South_Africa,Politics of Rwanda
 Politics_of_South_Africa,Politics of Réunion
 Politics_of_South_Africa,Politics of Saint Helena
-Politics_of_South_Africa,Politics of Saint Helena; Ascension and Tristan da Cunha
 Politics_of_South_Africa,Politics of Senegal
 Politics_of_South_Africa,Politics of Seychelles
 Politics_of_South_Africa,Politics of Sierra Leone
@@ -42087,6 +42089,7 @@ Pollution,Cnidaria
 Pollution,Cobitidae
 Pollution,Coltan
 Pollution,Commerce City; Colorado
+Pollution,Common loon
 Pollution,Common murre
 Pollution,Compressed-air vehicle
 Pollution,Conservation in Australia
@@ -42111,7 +42114,6 @@ Pollution,Deforestation
 Pollution,Demography of the United Kingdom
 Pollution,Denez Prigent
 Pollution,Deregulation
-Pollution,Dhaka
 Pollution,Dian Lake
 Pollution,Diesel locomotive
 Pollution,Dirty subsidy
@@ -42200,7 +42202,6 @@ Pollution,Go-kart
 Pollution,Godzilla vs. Hedorah
 Pollution,Golden eagle
 Pollution,Grand Excursion
-Pollution,Great northern loon
 Pollution,Great white pelican
 Pollution,Greater London Council
 Pollution,Green Party (UK)
@@ -42917,7 +42918,7 @@ Rail_transport,Talk:Bristol Parkway railway station
 Rail_transport,Talk:Brooklyn Bridge
 Rail_transport,Talk:Brushaber v. Union Pacific Railroad Co.
 Rail_transport,Talk:Cable car (railway)
-Rail_transport,Talk:Central line
+Rail_transport,Talk:Central line (London Underground)
 Rail_transport,Talk:Channel Tunnel
 Rail_transport,Talk:Classification yard
 Rail_transport,Talk:CN Tower
@@ -43162,6 +43163,7 @@ Rail_transport_in_South_Africa,History of rail transport in the Central African 
 Rail_transport_in_South_Africa,History of rail transport in the Comoros
 Rail_transport_in_South_Africa,Janney coupler
 Rail_transport_in_South_Africa,Johannesburg-Durban High Speed Rail
+Rail_transport_in_South_Africa,Kalk Bay
 Rail_transport_in_South_Africa,Kei Rail
 Rail_transport_in_South_Africa,Kenya Railways Corporation
 Rail_transport_in_South_Africa,Kowie Railway 0-6-0T
@@ -43198,6 +43200,7 @@ Rail_transport_in_South_Africa,NGR Class K 2-6-0T
 Rail_transport_in_South_Africa,NGR Class N 4-6-2T 1906
 Rail_transport_in_South_Africa,North British Locomotive Company
 Rail_transport_in_South_Africa,NZASM 10 Tonner 0-4-0T
+Rail_transport_in_South_Africa,NZASM 13 Tonner 0-4-0T
 Rail_transport_in_South_Africa,NZASM 14 Tonner 0-4-0T
 Rail_transport_in_South_Africa,NZASM 18 Tonner 0-6-0ST
 Rail_transport_in_South_Africa,NZASM 19 Tonner 0-4-2T
@@ -43500,9 +43503,14 @@ Rail_transport_in_South_Africa,South African locomotive numbering and classifica
 Rail_transport_in_South_Africa,South African NG 0-4-0T 1899
 Rail_transport_in_South_Africa,South African rail transport
 Rail_transport_in_South_Africa,South African railroads
+Rail_transport_in_South_Africa,South African steam locomotive tenders
+Rail_transport_in_South_Africa,South African type YB tender
+Rail_transport_in_South_Africa,South African type YC tender
+Rail_transport_in_South_Africa,South African type YE tender
 Rail_transport_in_South_Africa,South African type ZA tender
 Rail_transport_in_South_Africa,South African type ZB tender
 Rail_transport_in_South_Africa,South African type ZC tender
+Rail_transport_in_South_Africa,South African type ZE tender
 Rail_transport_in_South_Africa,South West African 2-8-0
 Rail_transport_in_South_Africa,South West African 2-8-0T
 Rail_transport_in_South_Africa,South West African Class Ha
@@ -43552,25 +43560,25 @@ Rail_transport_in_South_Africa,User:West.andrew.g/Dead links/Archive 532
 Rail_transport_in_South_Africa,Zambia Railways
 Reconciliation_Day,Moreira Chonguica
 Reproduction,20-Hydroxyecdysone
+Reproduction,2007 pet food recalls
 Reproduction,Abbotsbury
 Reproduction,Abiotic component
+Reproduction,Abolitionism (bioethics)
 Reproduction,Abscission
-Reproduction,Acanthopterygii
 Reproduction,Accipitriformes
-Reproduction,Acipenseriformes
 Reproduction,Adaptation
 Reproduction,Adaptation and Natural Selection
+Reproduction,Adhesion (medicine)
 Reproduction,Aerobiology
 Reproduction,Aetites
 Reproduction,Affirmation: Gay & Lesbian Mormons
 Reproduction,American alligator
-Reproduction,Amphibious fish
-Reproduction,Ampullae of Lorenzini
 Reproduction,Anal sex
 Reproduction,Anatomy
 Reproduction,Angela Meder
 Reproduction,Angry Kid
 Reproduction,Animal Diversity Web
+Reproduction,Animal migration
 Reproduction,Animal sex
 Reproduction,Animal sexual behaviour
 Reproduction,Animal welfare
@@ -43583,15 +43591,14 @@ Reproduction,Asian Dust
 Reproduction,Atomised (film)
 Reproduction,Aurora trout
 Reproduction,Autogamy
+Reproduction,Avian ecology field methods
 Reproduction,Axel Kahn
 Reproduction,Babymaking
+Reproduction,Baconao
 Reproduction,Banksia cuneata
 Reproduction,Barbary dove
-Reproduction,Barbel (anatomy)
 Reproduction,Barreleye
 Reproduction,Batteries Included (song)
-Reproduction,Beluga (sturgeon)
-Reproduction,Bichir
 Reproduction,Biochemical oxygen demand
 Reproduction,Biodiversity
 Reproduction,Biogenesis
@@ -43600,18 +43607,18 @@ Reproduction,Biological interaction
 Reproduction,Biological life cycle
 Reproduction,Biological process
 Reproduction,Biologist
+Reproduction,Biology
 Reproduction,Biomechanics
 Reproduction,Birth
 Reproduction,Black caiman
 Reproduction,Black-throated loon
-Reproduction,Blennioidei
 Reproduction,Blue-throated macaw
 Reproduction,Botany
 Reproduction,Breeding
 Reproduction,Bridgeman Art Library
 Reproduction,Brood (comics)
+Reproduction,Bruce Bagemihl
 Reproduction,Brush rabbit
-Reproduction,Bubble nest
 Reproduction,Budgerigar
 Reproduction,Caenorhabditis elegans
 Reproduction,Callichthyidae
@@ -43619,64 +43626,63 @@ Reproduction,Camelina sativa
 Reproduction,Carboxypeptidase
 Reproduction,Cardinal tetra
 Reproduction,Castration
+Reproduction,Category:Organisms
 Reproduction,Category:Reproduction
 Reproduction,Cell biology
 Reproduction,Cell division
+Reproduction,Center for the Evaluation of Risks to Human Reproduction
+Reproduction,Chinese Classification of Mental Disorders
 Reproduction,Chiroteuthidae
 Reproduction,Chlamydophila pneumoniae
 Reproduction,Chondrophore
 Reproduction,Chrysippus
 Reproduction,Chuvans
 Reproduction,Classical planet
-Reproduction,Clupeiformes
-Reproduction,Coarse fishing
-Reproduction,Coelacanth
-Reproduction,Coldwater fish
+Reproduction,Clerodendrum
 Reproduction,Columbia spotted frog
-Reproduction,Combtooth blenny
+Reproduction,Common loon
 Reproduction,Common marmoset
+Reproduction,Community (ecology)
 Reproduction,Conscience clause (medical)
 Reproduction,Conservation biology
+Reproduction,Cow-hocked
 Reproduction,Crocodile
 Reproduction,Crossover (genetic algorithm)
 Reproduction,Cryptobiosis
+Reproduction,Culicinae
 Reproduction,Cultural reproduction
 Reproduction,Curculioninae
 Reproduction,Cycloheximide
 Reproduction,Darwinism
 Reproduction,Deep sea fish
-Reproduction,Demersal fish
 Reproduction,Depleted uranium
 Reproduction,Desert monitor
 Reproduction,Desmidiales
 Reproduction,Diapause
 Reproduction,Digital reproduction
 Reproduction,DNA
-Reproduction,Dorsal fin
 Reproduction,Douwe Dabbert
 Reproduction,Duiker
 Reproduction,Dynamic energy budget
+Reproduction,Dynamic mutation
 Reproduction,Ecological niche
 Reproduction,Ecology
 Reproduction,Ecosystem ecology
 Reproduction,Ectrodactyly–ectodermal dysplasia–cleft syndrome
 Reproduction,Edinburgh Zoo
-Reproduction,Egg case (Chondrichthyes)
 Reproduction,Egg cell
 Reproduction,Eight-circuit model of consciousness
-Reproduction,Elasmobranchii
-Reproduction,Electric fish
-Reproduction,Elopomorpha
 Reproduction,Elves (Discworld)
 Reproduction,Embryonic diapause
 Reproduction,Endocrinology
 Reproduction,Endolith
+Reproduction,Ensenada Institute of Technology
 Reproduction,Environmental issues in Puget Sound
 Reproduction,Epitoky
 Reproduction,Ethology
-Reproduction,European eel
+Reproduction,Eucharius Rösslin
+Reproduction,European Federation for Primatology
 Reproduction,European Society of Human Reproduction and Embryology
-Reproduction,Euryhaline
 Reproduction,Evens
 Reproduction,Evolutionary algorithm
 Reproduction,Evolutionary biology
@@ -43687,41 +43693,34 @@ Reproduction,Extinction
 Reproduction,Family planning
 Reproduction,Feminist science fiction
 Reproduction,Fertilisation
-Reproduction,Filter feeder
-Reproduction,Fish
-Reproduction,Fish anatomy
-Reproduction,Fish locomotion
 Reproduction,Fish migration
-Reproduction,Fish reproduction
 Reproduction,Fisherian runaway
-Reproduction,Flathead grey mullet
 Reproduction,Flower
 Reproduction,Flowering plant
-Reproduction,Flying fish
 Reproduction,FMRFamide
 Reproduction,Food irradiation
 Reproduction,Food web
 Reproduction,Fortunio Liceti
+Reproduction,Four Fs (evolution)
 Reproduction,Fowlsheugh
 Reproduction,Fragmentation (reproduction)
-Reproduction,Game fish
-Reproduction,Garfish
-Reproduction,Gasterosteiformes
+Reproduction,Function (biology)
+Reproduction,Gender in speculative fiction
 Reproduction,Gender role
 Reproduction,Gene
 Reproduction,Generation
 Reproduction,Genetics
+Reproduction,Genetics of aggression
 Reproduction,Germline
 Reproduction,Giant Gippsland earthworm
 Reproduction,Giant mouse lemur
 Reproduction,Giant pangolin
-Reproduction,Gill slit
+Reproduction,Giant white-tailed rat
 Reproduction,Goby
 Reproduction,Golden poison frog
 Reproduction,Golden trevally
 Reproduction,Gonadotropin
 Reproduction,Great blue heron
-Reproduction,Great northern loon
 Reproduction,Group 5 element
 Reproduction,GVU
 Reproduction,Habitat
@@ -43730,7 +43729,7 @@ Reproduction,Helen Fisher (anthropologist)
 Reproduction,Heliciculture
 Reproduction,Help talk:Interlanguage links/Esperanto
 Reproduction,Help:Interlanguage links/Esperanto
-Reproduction,Holostei
+Reproduction,Highgate Ostrich Show Farm
 Reproduction,Homosexuality
 Reproduction,Horizontal gene transfer
 Reproduction,Hormone
@@ -43739,9 +43738,10 @@ Reproduction,Human
 Reproduction,Human behavioral ecology
 Reproduction,Human reproduction
 Reproduction,Human reproductive system
+Reproduction,Hypersensitive response
+Reproduction,Hypothalamic–pituitary–thyroid axis
 Reproduction,Hypselosaurus
 Reproduction,I Can Hardly Wait
-Reproduction,Ichthyology
 Reproduction,Imitation
 Reproduction,Impossible Man
 Reproduction,In vitro fertilisation
@@ -43754,31 +43754,35 @@ Reproduction,International Association for the Advancement of Ethnology and Euge
 Reproduction,Intimate part
 Reproduction,Intracellular parasite
 Reproduction,Intraspecific breeding
+Reproduction,Inuka
 Reproduction,Invasive species
 Reproduction,Jackson's mongoose
 Reproduction,James Burnett; Lord Monboddo
 Reproduction,Jameson's red rock hare
 Reproduction,Japanese hare
+Reproduction,Japanese roughshark
+Reproduction,Joan Malleson
 Reproduction,John Bright
 Reproduction,Juxta
 Reproduction,Karl Kehrle
+Reproduction,Kisspeptin
+Reproduction,Kurt Benirschke
 Reproduction,Laboratory mouse
 Reproduction,Laboratory rat
 Reproduction,Lake Vida
-Reproduction,Lateral line
+Reproduction,Lates longispinis
 Reproduction,LaVeyan Satanism
+Reproduction,Lesser sand eel
+Reproduction,Lesser wax moth
 Reproduction,LGBT themes in speculative fiction
 Reproduction,Liberal eugenics
+Reproduction,Library of Congress Classification:Class Q -- Science
 Reproduction,Life
-Reproduction,List of common fish names
+Reproduction,Limit of Vision
 Reproduction,List of Dewey Decimal classes
-Reproduction,List of fish families
 Reproduction,List of MeSH codes (G05)
 Reproduction,List of MeSH codes (G08)
-Reproduction,Lists of prehistoric fish
-Reproduction,Lophius piscatorius
 Reproduction,Lottery principle
-Reproduction,Lungfish
 Reproduction,Lysis (disambiguation)
 Reproduction,Lytic cycle
 Reproduction,Major depressive disorder
@@ -43797,8 +43801,6 @@ Reproduction,Melamine
 Reproduction,Melatonin
 Reproduction,Membranipora membranacea
 Reproduction,Men's rights movement
-Reproduction,Meristics
-Reproduction,Merlangius
 Reproduction,Microevolution
 Reproduction,Milton Diamond
 Reproduction,Mimicry
@@ -43808,7 +43810,6 @@ Reproduction,Modern evolutionary synthesis
 Reproduction,Monocarpic
 Reproduction,Monocyclic spawning
 Reproduction,Montefino
-Reproduction,Mouthbrooder
 Reproduction,Mycoplasma pneumoniae
 Reproduction,Nanobiotechnology
 Reproduction,Nanosaur
@@ -43816,18 +43817,16 @@ Reproduction,Natural environment
 Reproduction,Naturalisation (biology)
 Reproduction,Nature
 Reproduction,Navagraha
-Reproduction,Neopterygii
 Reproduction,Nest box
 Reproduction,Newburgh; Aberdeenshire
 Reproduction,Non-renewable resource
+Reproduction,Northern red-legged frog
+Reproduction,Nucellar embryony
 Reproduction,Offspring
-Reproduction,Oily fish
 Reproduction,Onychophora
-Reproduction,Operculum (fish)
 Reproduction,Opposition to pornography
 Reproduction,Osmia lignaria
-Reproduction,Osteoglossomorpha
-Reproduction,Otolith
+Reproduction,Ouachita madtom
 Reproduction,Oudtshoorn
 Reproduction,Pachypodium ambongense
 Reproduction,Pachypodium baronii
@@ -43839,18 +43838,19 @@ Reproduction,Parasitism
 Reproduction,Parasitoid
 Reproduction,Parent–offspring conflict
 Reproduction,Pearl gourami
-Reproduction,Pelagic fish
 Reproduction,Peripatetic school
-Reproduction,Photophore
 Reproduction,Phrymaceae
 Reproduction,Pikmin (series)
 Reproduction,Pilus
-Reproduction,Pipefish
 Reproduction,Pollination
 Reproduction,Polycyclic spawning
 Reproduction,Polyp
 Reproduction,Population genetics
 Reproduction,Port Lympne Wild Animal Park
+Reproduction,Portal:Ecology
+Reproduction,Portal:Ecology/Selected article
+Reproduction,Portal:Environment
+Reproduction,Portal:Medicine/Selected Article Archive (2006)
 Reproduction,Portal:Medicine/Selected article/31; 2006
 Reproduction,Postmodern art
 Reproduction,Pregnancy (mammals)
@@ -43861,10 +43861,11 @@ Reproduction,Procreation
 Reproduction,Procreative
 Reproduction,Production of antibiotics
 Reproduction,Propagation
-Reproduction,Pseudobranch
 Reproduction,Psychological adaptation
 Reproduction,R/K selection theory
+Reproduction,Rajiv Gandhi Centre for Biotechnology
 Reproduction,Red panda
+Reproduction,Red Queen hypothesis
 Reproduction,Red-breasted merganser
 Reproduction,Reef lobster
 Reproduction,Regeneration (biology)
@@ -43880,23 +43881,23 @@ Reproduction,Reproductive behavior
 Reproduction,Reproductive Behaviour
 Reproduction,Reproductive medicine
 Reproduction,Reproductive strategy
+Reproduction,Reproductive suppression
 Reproduction,Reproductive technology
+Reproduction,Resource
 Reproduction,Rhizobia
 Reproduction,Richard von Krafft-Ebing
 Reproduction,Ridgway's rail
 Reproduction,Robert Ridgway
 Reproduction,Robert Rosen (theoretical biologist)
-Reproduction,Roe
-Reproduction,Round goby
+Reproduction,Rotaria
 Reproduction,Sabertooth fish
 Reproduction,Sacculina
+Reproduction,Safari Show Farm
 Reproduction,Sand dollar
-Reproduction,Sand goby
 Reproduction,Saprolegnia
 Reproduction,Satanism
 Reproduction,Saturniidae
 Reproduction,Sawfish
-Reproduction,Schreckstoff
 Reproduction,Scientific literature
 Reproduction,Seasonal affective disorder
 Reproduction,Secondary metabolite
@@ -43904,7 +43905,6 @@ Reproduction,Seed
 Reproduction,Selection (biology)
 Reproduction,Selection methods in plant breeding based on mode of reproduction
 Reproduction,Self-fertilisation
-Reproduction,Self-Fertilization
 Reproduction,Self-fertilization
 Reproduction,Self-pollination
 Reproduction,Self-replication
@@ -43912,6 +43912,7 @@ Reproduction,Severino Antinori
 Reproduction,Sex education
 Reproduction,Sexual abstinence
 Reproduction,Sexual characteristics
+Reproduction,Sexual conflict
 Reproduction,Sexual inhibition
 Reproduction,Sexual maturity
 Reproduction,Sexual ritual
@@ -43919,27 +43920,25 @@ Reproduction,Sexual selection
 Reproduction,Sexual violence
 Reproduction,Sexuality in older age
 Reproduction,Sexuality in Star Trek
-Reproduction,Shark
 Reproduction,Siphon (mollusc)
 Reproduction,Skinner v. Oklahoma
 Reproduction,Slimehead
+Reproduction,Smallest organisms
 Reproduction,Sociality
 Reproduction,Son
 Reproduction,South Region (Cameroon)
-Reproduction,Spawning trigger
-Reproduction,Spiral valve
+Reproduction,Sporogenesis
 Reproduction,Spotted paddle-tail newt
 Reproduction,Star Wolf (David Gerrold)
 Reproduction,Sterilization (medicine)
 Reproduction,Steroid
 Reproduction,Steroid hormone
-Reproduction,Suckermouth
 Reproduction,Surrogacy
 Reproduction,Swarming (honey bee)
-Reproduction,Swim bladder
-Reproduction,Syngnathidae
-Reproduction,Syngnathiformes
+Reproduction,Synodontis
 Reproduction,Systematics
+Reproduction,Talk:Allogamy
+Reproduction,Talk:Amanda Marcotte
 Reproduction,Talk:Ciliate
 Reproduction,Talk:Copepod
 Reproduction,Talk:Copulation
@@ -43950,6 +43949,7 @@ Reproduction,Talk:DNA/Archive 3
 Reproduction,Talk:DNA/Archive 4
 Reproduction,Talk:DNA/Archive 7
 Reproduction,Talk:Food web
+Reproduction,Talk:Helonias
 Reproduction,Talk:Heteronormativity/Archive 3
 Reproduction,Talk:Heterosexuality
 Reproduction,Talk:Heterosexuality/Archive 1
@@ -43964,13 +43964,14 @@ Reproduction,Talk:Sexual reproduction
 Reproduction,Talk:The Hanged Man (Tarot card)
 Reproduction,Talk:THE LOTTERY PRINCIPLE
 Reproduction,Talk:Timeline of human evolution
+Reproduction,Talk:Tui (bird)
 Reproduction,Telegony (pregnancy)
-Reproduction,Teleost
 Reproduction,Telescopefish
 Reproduction,Tenctonese
 Reproduction,The Ancestor's Tale
 Reproduction,The Baby Squad
 Reproduction,The Dragon Society
+Reproduction,The Fatal Eggs
 Reproduction,THE LOTTERY PRINCIPLE
 Reproduction,The Obsidian Chronicles
 Reproduction,The Sex Files
@@ -43978,14 +43979,14 @@ Reproduction,The Three Laws of Robotics in popular culture
 Reproduction,The Two Gentlemen of Verona
 Reproduction,Thermal pollution
 Reproduction,Third gender
-Reproduction,Threefin blenny
 Reproduction,Tiger
 Reproduction,Toxicity class
 Reproduction,Trace fossil classification
 Reproduction,Trophic egg
-Reproduction,Tropical fish
 Reproduction,Tungsten
 Reproduction,Ulothrix
+Reproduction,University of Tripoli
+Reproduction,Uppsala University Hospital
 Reproduction,Uranium in the environment
 Reproduction,User talk:Alex.tan
 Reproduction,User talk:Finlay McWalter/archive1
@@ -43999,11 +44000,14 @@ Reproduction,User:Deryck Chan/Todo List
 Reproduction,User:Edzhandle
 Reproduction,User:Harmil/Sexual characteristics
 Reproduction,User:Ike9898
+Reproduction,User:Jecrell
 Reproduction,User:John D. Croft
+Reproduction,User:MarsRover/Sandbox
 Reproduction,User:Peak/Sandbox
 Reproduction,User:Sahriar
 Reproduction,User:The Anome/The three thousand
 Reproduction,User:Vogon/Paranoia rewrite
+Reproduction,User:Zozoulia
 Reproduction,Utopia
 Reproduction,Utopian and dystopian fiction
 Reproduction,Vagina
@@ -44011,23 +44015,23 @@ Reproduction,Vanadium
 Reproduction,Verbascum thapsus
 Reproduction,Veterinary physician
 Reproduction,Violet-green swallow
+Reproduction,Vitellogenesis
 Reproduction,Vomeronasal organ
 Reproduction,Water buffalo
 Reproduction,Water net
-Reproduction,Weberian apparatus
 Reproduction,Weed of cultivation
 Reproduction,Western skink
 Reproduction,Western tragopan
 Reproduction,Where Late the Sweet Birds Sang
-Reproduction,Whitefish (fisheries term)
 Reproduction,Wikipedia talk:Counter-Vandalism Unit/Archive 4
-Reproduction,Wrasse
+Reproduction,World Association of Zoos and Aquariums
 Reproduction,Xenoestrogen
 Reproduction,Xenoma
 Reproduction,Yellow-browed bunting
 Reproduction,Ythan Estuary
 Reproduction,Yukon Delta National Wildlife Refuge
 Reproduction,Zeidae
+Reproduction,Zoidogamy
 Reproduction,Zoology
 Republic_of_South_Africa,16th Summit of the Non-Aligned Movement
 Republic_of_South_Africa,1967 IAAF World Race Walking Cup
@@ -44049,6 +44053,7 @@ Republic_of_South_Africa,Amblyodipsas
 Republic_of_South_Africa,Amblyodipsas concolor
 Republic_of_South_Africa,Amblyodipsas microphthalma
 Republic_of_South_Africa,Amblyodipsas polylepis
+Republic_of_South_Africa,Amore Bekker
 Republic_of_South_Africa,Andre Botha (cricketer)
 Republic_of_South_Africa,Andries Treurnicht
 Republic_of_South_Africa,Antelope
@@ -44102,7 +44107,9 @@ Republic_of_South_Africa,Diceros bicornis bicornis
 Republic_of_South_Africa,Dirk du Toit
 Republic_of_South_Africa,Donald Gips
 Republic_of_South_Africa,Draft:Mandela family
+Republic_of_South_Africa,Draft:State of the Nation Address 2015
 Republic_of_South_Africa,Drug prohibition law
+Republic_of_South_Africa,Dumile Feni
 Republic_of_South_Africa,Eastern black rhinoceros
 Republic_of_South_Africa,Eden College Durban
 Republic_of_South_Africa,Edward Philip Solomon
@@ -44330,7 +44337,6 @@ Republic_of_South_Africa,User:Sarahar
 Republic_of_South_Africa,User:Solarys-fr/Activia
 Republic_of_South_Africa,User:The Z UKBG
 Republic_of_South_Africa,User:W'a kabuya
-Republic_of_South_Africa,User:Xiuxiusux/Zwelidumile Dumile Feni
 Republic_of_South_Africa,User:XTerminator2000/Sandpit/Telkom SA
 Republic_of_South_Africa,User:Yera.marcos/Sandbox/Infoboxes/Person
 Republic_of_South_Africa,USS Meredith (DD-890)
@@ -44821,6 +44827,7 @@ Rock_(geology),Mount Jefferson (Oregon)
 Rock_(geology),Mount Mazama
 Rock_(geology),Mount Monadnock
 Rock_(geology),Mountain
+Rock_(geology),Mountain chain
 Rock_(geology),Mountaineering
 Rock_(geology),Mousepad
 Rock_(geology),Musical instrument classification
@@ -44894,7 +44901,6 @@ Rock_(geology),Railroad car
 Rock_(geology),Randaberg
 Rock_(geology),Rapids
 Rock_(geology),Red Rock Township; Mower County; Minnesota
-Rock_(geology),Rednal
 Rock_(geology),Regolith
 Rock_(geology),Retaining wall
 Rock_(geology),Rhode Island
@@ -45221,6 +45227,7 @@ San_people,Lascaux
 San_people,Lebanese people in South Africa
 San_people,Lemba people
 San_people,Leonardville; Namibia
+San_people,Lesotho
 San_people,Liphofung Historical Site
 San_people,List of current constituent African monarchs
 San_people,List of ethnic groups of Africa
@@ -45269,7 +45276,6 @@ San_people,Pondo people
 San_people,Portal talk:South Africa
 San_people,Portal:Current events/2010 February 17
 San_people,Portal:Current events/February 2010
-San_people,Portal:South Africa
 San_people,Portal:South Africa/Selected article
 San_people,Portal:South Africa/Selected article/9
 San_people,Portuguese South African
@@ -45799,6 +45805,7 @@ San_religion,User:Caelifera
 San_religion,User:Celticmath
 San_religion,User:Devilishlyhandsome/Atheism 3.0
 San_religion,User:Devilishlyhandsome/Atheism 3.0 ExhibitA
+San_religion,User:DraculavanHelsing/Books/African Mythology
 San_religion,User:Erniefernandez/ritualmm
 San_religion,User:Falano/Books/creation myths
 San_religion,User:Gonzales John/sandbox
@@ -45810,6 +45817,7 @@ San_religion,User:Jshflynn/The State/Religion
 San_religion,User:Juancastaneira/Books/Cuadro de Religion I
 San_religion,User:JustinLillich/Books/Religion
 San_religion,User:JustinLillich/Books/ReligionPages
+San_religion,User:Karoshbn/Books/WORLD MYTHOLOGY II - Africa & Arctic
 San_religion,User:Mauk111/Templates2
 San_religion,User:Muntuwandi/The evolutionary origins of religion
 San_religion,User:NotYourDay123/sandbox
@@ -45818,6 +45826,7 @@ San_religion,User:RUL3R/Scientology revision
 San_religion,User:Scriberius/Nav
 San_religion,User:Signaj90/sandbox2
 San_religion,User:Takashi Ueki/test
+San_religion,User:The Chicken Ex-terminator
 San_religion,User:Ukabia/Odinani
 San_religion,User:VictoriaGrayson/sandbox/temp
 San_religion,User:Zolotoi kryzhovnik/sandbox
@@ -45855,6 +45864,7 @@ San_rock_art,Cave painting
 San_rock_art,Drakensberg
 San_rock_art,Giraffe
 San_rock_art,Karoo Supergroup
+San_rock_art,Lesotho
 San_rock_art,Prehistoric art
 San_rock_art,Rock art of the Bushmen
 San_rock_art,San healing practices
@@ -47807,6 +47817,7 @@ Soil,Fern
 Soil,Ferruginous hawk
 Soil,Fertilizer
 Soil,Fick's laws of diffusion
+Soil,Field Museum of Natural History
 Soil,Fire ant
 Soil,Fishery
 Soil,Flax
@@ -47933,7 +47944,6 @@ Soil,Mineral
 Soil,Mineralogy
 Soil,Mining
 Soil,Mixture
-Soil,Monitor lizard
 Soil,Monogonont
 Soil,Moraine
 Soil,Motorcycle speedway
@@ -48149,6 +48159,7 @@ Sound,19-inch rack
 Sound,3D audio effect
 Sound,5-Methoxy-diisopropyltryptamine
 Sound,Absolute threshold of hearing
+Sound,Academy of Motion Picture Arts and Sciences
 Sound,Accordion
 Sound,Acoustic homing
 Sound,Acoustic theory
@@ -48164,7 +48175,6 @@ Sound,Amplitude
 Sound,Analog signal
 Sound,Anechoic chamber
 Sound,Aphasia
-Sound,Architectural acoustics
 Sound,Aristoxenus
 Sound,Articulatory phonetics
 Sound,Artificial cardiac pacemaker
@@ -48233,7 +48243,6 @@ Sound,Clarinet
 Sound,Close-up
 Sound,Closed captioning
 Sound,CMusic
-Sound,Cochlear implant
 Sound,Codec
 Sound,Coherence (physics)
 Sound,Coherer
@@ -48323,7 +48332,6 @@ Sound,Fundamental frequency
 Sound,Game engine
 Sound,Georg von Békésy
 Sound,Ghetto house
-Sound,Gjallarhorn (band)
 Sound,Gleipnir
 Sound,Glk (software)
 Sound,Gramophone record
@@ -48417,6 +48425,7 @@ Sound,MPEG-4
 Sound,Multichannel television sound
 Sound,Music
 Sound,Music of Pakistan
+Sound,Music technology (electronic and digital)
 Sound,MUSIC-N
 Sound,Musical note
 Sound,Musique concrète
@@ -48563,6 +48572,7 @@ Sound,Surgery
 Sound,Syfy
 Sound,Synchronization
 Sound,Talk:Argument
+Sound,Talk:Cochlear implant
 Sound,Talk:Compendium
 Sound,Talk:Compressibility
 Sound,Talk:Definition of music
@@ -48969,7 +48979,7 @@ South_African_cuisine,Montenegrin cuisine
 South_African_cuisine,Moroccan cuisine
 South_African_cuisine,Mrouzia
 South_African_cuisine,Mulukhiyah
-South_African_cuisine,Méchoui
+South_African_cuisine,Music of South Africa
 South_African_cuisine,Namibian cuisine
 South_African_cuisine,National dish
 South_African_cuisine,National Intelligence Agency (South Africa)
@@ -49220,6 +49230,7 @@ South_African_locomotive_history,NGR Class K 0-6-0ST
 South_African_locomotive_history,NGR Class K 2-6-0T
 South_African_locomotive_history,NGR Class N 4-6-2T 1906
 South_African_locomotive_history,NZASM 10 Tonner 0-4-0T
+South_African_locomotive_history,NZASM 13 Tonner 0-4-0T
 South_African_locomotive_history,NZASM 14 Tonner 0-4-0T
 South_African_locomotive_history,NZASM 18 Tonner 0-6-0ST
 South_African_locomotive_history,NZASM 19 Tonner 0-4-2T
@@ -49480,9 +49491,14 @@ South_African_locomotive_history,South African Class U 2-6-2+2-6-2
 South_African_locomotive_history,South African Clayton Railmotor
 South_African_locomotive_history,South African locomotive numbering and classification
 South_African_locomotive_history,South African NG 0-4-0T 1899
+South_African_locomotive_history,South African steam locomotive tenders
+South_African_locomotive_history,South African type YB tender
+South_African_locomotive_history,South African type YC tender
+South_African_locomotive_history,South African type YE tender
 South_African_locomotive_history,South African type ZA tender
 South_African_locomotive_history,South African type ZB tender
 South_African_locomotive_history,South African type ZC tender
+South_African_locomotive_history,South African type ZE tender
 South_African_locomotive_history,South West African 2-8-0
 South_African_locomotive_history,South West African 2-8-0T
 South_African_locomotive_history,South West African Class Ha
@@ -49513,20 +49529,20 @@ Standard_Model,331 model
 Standard_Model,6 (number)
 Standard_Model,Abdus Salam
 Standard_Model,Action at a distance
-Standard_Model,ALEPH experiment
 Standard_Model,Alternatives to the Standard Model Higgs
-Standard_Model,An Exceptionally Simple Theory of Everything
 Standard_Model,Andrew Strominger
 Standard_Model,Anomaly (physics)
 Standard_Model,Anti-gravity
-Standard_Model,Ashok Das
+Standard_Model,Antineutron
+Standard_Model,Antiparticle
+Standard_Model,Antiproton
 Standard_Model,Astronomical radio source
 Standard_Model,Asymmetry
 Standard_Model,Asymptotic freedom
 Standard_Model,ATLAS experiment
 Standard_Model,Atom
-Standard_Model,Automatic calculation of particle interaction or decay
-Standard_Model,B meson
+Standard_Model,Axino
+Standard_Model,Axion
 Standard_Model,BaBar experiment
 Standard_Model,Background field method
 Standard_Model,Baryogenesis
@@ -49536,6 +49552,8 @@ Standard_Model,Baryon number
 Standard_Model,Beta function (physics)
 Standard_Model,Big Bang
 Standard_Model,Bilepton
+Standard_Model,Bottom quark
+Standard_Model,Bound state
 Standard_Model,Brans–Dicke theory
 Standard_Model,Brian Greene
 Standard_Model,BRST quantization
@@ -49555,6 +49573,7 @@ Standard_Model,Causal dynamical triangulation
 Standard_Model,Causal sets
 Standard_Model,Charge (physics)
 Standard_Model,Chargino
+Standard_Model,Charm quark
 Standard_Model,Chern–Simons theory
 Standard_Model,Chien-Shiung Wu
 Standard_Model,Chiral gauge theory
@@ -49563,7 +49582,6 @@ Standard_Model,Chirality (physics)
 Standard_Model,CLEO (particle detector)
 Standard_Model,Collider Detector at Fermilab
 Standard_Model,Color charge
-Standard_Model,Color–flavor locking
 Standard_Model,Compact Muon Solenoid
 Standard_Model,Conformal field theory
 Standard_Model,Conservation law
@@ -49575,28 +49593,38 @@ Standard_Model,Cosmological constant
 Standard_Model,Coupling constant
 Standard_Model,Crossing (physics)
 Standard_Model,Custodial symmetry
-Standard_Model,D meson
 Standard_Model,D0 experiment
-Standard_Model,Daniel Z. Freedman
 Standard_Model,Dark matter
 Standard_Model,David B. Kaplan
+Standard_Model,Davydov soliton
 Standard_Model,Deceleration parameter
 Standard_Model,Deductive-nomological model
 Standard_Model,Deep inelastic scattering
+Standard_Model,Delta baryon
+Standard_Model,Dilaton
 Standard_Model,Dimensionless physical constant
+Standard_Model,Diquark
 Standard_Model,Dirac equation
 Standard_Model,Dirac fermion
 Standard_Model,Domain wall
 Standard_Model,DONUT
 Standard_Model,Double electron capture
+Standard_Model,Down quark
 Standard_Model,Effective field theory
 Standard_Model,Electromagnetic mass
 Standard_Model,Electromagnetism
 Standard_Model,Electron
+Standard_Model,Electron hole
+Standard_Model,Electron neutrino
 Standard_Model,Electroweak interaction
 Standard_Model,Elementary particle
 Standard_Model,Event generator
+Standard_Model,Exciton
+Standard_Model,Exotic atom
 Standard_Model,Exotic baryon
+Standard_Model,Exotic hadron
+Standard_Model,Exotic meson
+Standard_Model,Exotic particle
 Standard_Model,Faddeev–Popov ghost
 Standard_Model,False vacuum
 Standard_Model,Fermi's interaction
@@ -49622,12 +49650,14 @@ Standard_Model,Gauge fixing
 Standard_Model,Gaugino
 Standard_Model,Generation (particle physics)
 Standard_Model,Georgi–Glashow model
-Standard_Model,Gerald Gabrielse
 Standard_Model,Giorgi Dvali
 Standard_Model,Glueball
+Standard_Model,Gluino
 Standard_Model,Gluon
 Standard_Model,Goldstone boson
 Standard_Model,Grand Unified Theory
+Standard_Model,Graviphoton
+Standard_Model,Graviscalar
 Standard_Model,Gravitational wave
 Standard_Model,Gravitino
 Standard_Model,Graviton
@@ -49637,6 +49667,7 @@ Standard_Model,Group (mathematics)
 Standard_Model,Group theory
 Standard_Model,H1 (particle detector)
 Standard_Model,Haag's theorem
+Standard_Model,Hadron
 Standard_Model,Hans Bethe
 Standard_Model,Hans-Hermann Hupfeld
 Standard_Model,Hidden sector
@@ -49654,15 +49685,13 @@ Standard_Model,Inflation (cosmology)
 Standard_Model,Infrared fixed point
 Standard_Model,International Linear Collider
 Standard_Model,Introduction to gauge theory
-Standard_Model,Introduction to M-theory
 Standard_Model,Introduction to quantum mechanics
 Standard_Model,Invariance mechanics
 Standard_Model,ISOLTRAP
 Standard_Model,Isospin
 Standard_Model,J. Robert Oppenheimer
+Standard_Model,J/psi meson
 Standard_Model,John Clive Ward
-Standard_Model,John Iliopoulos
-Standard_Model,José W. F. Valle
 Standard_Model,Kaluza–Klein theory
 Standard_Model,Kaon
 Standard_Model,Klaus Hasselmann
@@ -49674,7 +49703,6 @@ Standard_Model,Lambda baryon
 Standard_Model,Lambda-CDM model
 Standard_Model,Landau pole
 Standard_Model,Large Electron–Positron Collider
-Standard_Model,Large extra dimension
 Standard_Model,Large Hadron Collider
 Standard_Model,Lattice gauge theory
 Standard_Model,Lattice QCD
@@ -49690,29 +49718,35 @@ Standard_Model,List of group theory topics
 Standard_Model,List of Korean Americans
 Standard_Model,List of letters used in mathematics and science
 Standard_Model,List of mathematical topics in quantum theory
+Standard_Model,List of mesons
 Standard_Model,List of particles
 Standard_Model,List of unsolved problems in physics
 Standard_Model,Loop quantum gravity
 Standard_Model,Lorentz covariance
 Standard_Model,LSZ reduction formula
 Standard_Model,Magnetic field
+Standard_Model,Magnetic monopole
+Standard_Model,Magnon
 Standard_Model,Majorana equation
 Standard_Model,Majorana fermion
 Standard_Model,Majoron
 Standard_Model,Makoto Kobayashi (physicist)
-Standard_Model,Marcela Carena
 Standard_Model,Mass
 Standard_Model,Mass gap
 Standard_Model,Massive gravity
 Standard_Model,Mass–energy equivalence
 Standard_Model,Meson
+Standard_Model,Mesonic molecule
 Standard_Model,Michel parameters
 Standard_Model,MiniBooNE
 Standard_Model,Minimal Supersymmetric Standard Model
 Standard_Model,Model building (particle physics)
 Standard_Model,Molecular Hamiltonian
+Standard_Model,Molecule
 Standard_Model,Moo-Young Han
 Standard_Model,Muon
+Standard_Model,Muon neutrino
+Standard_Model,Muonium
 Standard_Model,N-vector model
 Standard_Model,Nambu–Jona-Lasinio model
 Standard_Model,Naturalness (physics)
@@ -49733,7 +49767,9 @@ Standard_Model,Nuclear astrophysics
 Standard_Model,Nuclear force
 Standard_Model,Nuclear physics
 Standard_Model,Nuclear structure
+Standard_Model,Nucleon
 Standard_Model,Omega baryon
+Standard_Model,Orders of magnitude (time)
 Standard_Model,Outline of physics
 Standard_Model,Pakistan
 Standard_Model,Parity (physics)
@@ -49746,17 +49782,27 @@ Standard_Model,Particle zoo
 Standard_Model,Partition function (quantum field theory)
 Standard_Model,Path integral formulation
 Standard_Model,Penguin diagram
+Standard_Model,Pentaquark
 Standard_Model,Peskin–Takeuchi parameter
 Standard_Model,Peter Higgs
 Standard_Model,Peter Woit
 Standard_Model,Phenomenology (particle physics)
 Standard_Model,Philosophy of thermal and statistical physics
+Standard_Model,Phonon
+Standard_Model,Photino
 Standard_Model,Photon
 Standard_Model,Physics
 Standard_Model,Physics beyond the Standard Model
+Standard_Model,Pion
+Standard_Model,Planck particle
 Standard_Model,Planck scale
+Standard_Model,Plasmon
 Standard_Model,Plekton
 Standard_Model,Point particle
+Standard_Model,Polariton
+Standard_Model,Polarizability
+Standard_Model,Polaron
+Standard_Model,Pomeron
 Standard_Model,Pontecorvo–Maki–Nakagawa–Sakata matrix
 Standard_Model,Portal:Current events/March 2006
 Standard_Model,Portal:Physics/2006 Selected articles
@@ -49768,13 +49814,14 @@ Standard_Model,Portal:Physics/Selected article/Week 50; 2006
 Standard_Model,Portal:Physics/Topics
 Standard_Model,Portal:Science/Featured article
 Standard_Model,Portal:Science/Featured article/15
+Standard_Model,Positron
+Standard_Model,Positronium
 Standard_Model,Precision tests of QED
 Standard_Model,Preon
 Standard_Model,Proca action
 Standard_Model,Propagator
 Standard_Model,Proton
 Standard_Model,Proton decay
-Standard_Model,QCDOC
 Standard_Model,Quantization (physics)
 Standard_Model,Quantum chromodynamics
 Standard_Model,Quantum cosmology
@@ -49785,17 +49832,22 @@ Standard_Model,Quantum gauge theory
 Standard_Model,Quantum gravity
 Standard_Model,Quark
 Standard_Model,Quark model
+Standard_Model,Quarkonium
 Standard_Model,Quark–lepton complementarity
 Standard_Model,Quartic interaction
+Standard_Model,Quasiparticle
 Standard_Model,Radio Ice Cherenkov Experiment
 Standard_Model,Randall–Sundrum model
 Standard_Model,Reality
 Standard_Model,Relativistic wave equations
 Standard_Model,Renormalization
 Standard_Model,Renormalization group
+Standard_Model,Rho meson
 Standard_Model,Rishon model
+Standard_Model,Roton
 Standard_Model,Satyendra Nath Bose
 Standard_Model,Scalar (physics)
+Standard_Model,Scalar boson
 Standard_Model,Scalar field
 Standard_Model,Scalar–tensor theory
 Standard_Model,Scattering theory
@@ -49805,6 +49857,7 @@ Standard_Model,Seesaw mechanism
 Standard_Model,Sfermion
 Standard_Model,Sigma baryon
 Standard_Model,Sine-Gordon equation
+Standard_Model,Skyrmion
 Standard_Model,SM
 Standard_Model,SO(10) (physics)
 Standard_Model,Special unitary group
@@ -49814,28 +49867,25 @@ Standard_Model,Spin foam
 Standard_Model,Split supersymmetry
 Standard_Model,Spontaneous symmetry breaking
 Standard_Model,Standard model
-Standard_Model,Standard model (basic details)
 Standard_Model,Standard Model (mathematical formulation)
-Standard_Model,Standard model of particle physics
 Standard_Model,Standard solar model
 Standard_Model,Sterile neutrino
 Standard_Model,Steven Weinberg
 Standard_Model,Strange B meson
+Standard_Model,Strange quark
 Standard_Model,String-net liquid
 Standard_Model,Strong interaction
 Standard_Model,Stueckelberg action
 Standard_Model,Subatomic particle
 Standard_Model,Sudbury Neutrino Observatory
-Standard_Model,Sundance Bilson-Thompson
 Standard_Model,Super-Kamiokande
 Standard_Model,Supergravity
 Standard_Model,Superpartner
 Standard_Model,Supersplit supersymmetry
 Standard_Model,Supersymmetry
 Standard_Model,Symmetry (physics)
+Standard_Model,Tachyon
 Standard_Model,Talk:Angels & Demons (film)
-Standard_Model,Talk:Aquatic ape hypothesis/Archive 3
-Standard_Model,Talk:Astrology/Archive 11
 Standard_Model,Talk:ATLAS experiment
 Standard_Model,Talk:Baryogenesis
 Standard_Model,Talk:Elementary event
@@ -49849,11 +49899,9 @@ Standard_Model,Talk:Intelligent design/Archive 25
 Standard_Model,Talk:Isospin
 Standard_Model,Talk:Kaluza–Klein theory
 Standard_Model,Talk:List of particles
-Standard_Model,Talk:Mass/Archive4
 Standard_Model,Talk:Non-contact force
 Standard_Model,Talk:Particle physics/Archive 1
 Standard_Model,Talk:Physics beyond the Standard Model
-Standard_Model,Talk:Physics/Archive 4
 Standard_Model,Talk:Physics/wip/00:07; 30 September 2006 (UTC)
 Standard_Model,Talk:Physics/wip/Archive;forDefinition
 Standard_Model,Talk:Physics/wip/Archive;forDefinition2
@@ -49863,7 +49911,6 @@ Standard_Model,Talk:Preon
 Standard_Model,Talk:Proton–proton chain reaction
 Standard_Model,Talk:Quantum electrodynamics
 Standard_Model,Talk:Standard Model
-Standard_Model,Talk:Supernova/Archive 1
 Standard_Model,Talk:Supertask
 Standard_Model,Talk:Tevatron
 Standard_Model,Talk:The Tao of Physics
@@ -49871,63 +49918,51 @@ Standard_Model,Talk:Theory of everything/Archive 1
 Standard_Model,Talk:Timeline of particle discoveries
 Standard_Model,Talk:Unitary group
 Standard_Model,Talk:Wireless power transfer
+Standard_Model,Tau (particle)
 Standard_Model,Tau neutrino
 Standard_Model,Technicolor (physics)
-Standard_Model,Template:Beyond the Standard Model
-Standard_Model,Template:Quantum field theories
+Standard_Model,Template:Particles
 Standard_Model,Template:Quantum field theory
-Standard_Model,Template:Subfields of physics
 Standard_Model,Tests of special relativity
 Standard_Model,Tetraquark
 Standard_Model,Tevatron
 Standard_Model,The Astonishing Hypothesis
 Standard_Model,The Elegant Universe
-Standard_Model,The Five Ages of the Universe
-Standard_Model,The God Particle: If the Universe Is the Answer; What Is the Question?
 Standard_Model,The Road to Reality
 Standard_Model,The Tao of Physics
 Standard_Model,The Way the World Is
 Standard_Model,Theory of everything
 Standard_Model,Thirring model
 Standard_Model,Time
-Standard_Model,Time (Orders of magnitude)
 Standard_Model,Timeline of atomic and subatomic physics
 Standard_Model,Timeline of particle discoveries
 Standard_Model,Toda field theory
 Standard_Model,Top quark
 Standard_Model,Top quark condensate
 Standard_Model,Topological quantum field theory
-Standard_Model,Toroidal ring model
 Standard_Model,Toshihide Maskawa
 Standard_Model,Two-photon physics
 Standard_Model,Type II supernova
 Standard_Model,Unified field theory
 Standard_Model,Universal extra dimension
 Standard_Model,Universe
-Standard_Model,Unparticle physics
+Standard_Model,Up quark
+Standard_Model,Upsilon meson
 Standard_Model,User talk:208.0.206.225
-Standard_Model,User talk:71.67.136.154
-Standard_Model,User talk:91.0.122.80
 Standard_Model,User talk:Ancheta Wis/b
 Standard_Model,User talk:Ancheta Wis/p
 Standard_Model,User talk:Ancheta Wis/t
 Standard_Model,User talk:Ancheta Wis/u
 Standard_Model,User talk:Ancheta Wis/w
 Standard_Model,User talk:Benplowman
-Standard_Model,User:Astro61/Sandbox
 Standard_Model,User:AtilimGunesBaydin
 Standard_Model,User:Avriette/Quark
 Standard_Model,User:Beland/Todo
 Standard_Model,User:Chaos/Quantum Mechanics
 Standard_Model,User:CYD
 Standard_Model,User:Daniel Quinlan/redirects6n
-Standard_Model,User:Dendodge
 Standard_Model,User:DirkvdM
-Standard_Model,User:Drbogdan
 Standard_Model,User:Gandalf61/sandbox
-Standard_Model,User:Hadoooookin/core
-Standard_Model,User:Kborland
-Standard_Model,User:Mdd/List of types of scientific models
 Standard_Model,User:Michael C Price/draft
 Standard_Model,User:Michael C Price/mega
 Standard_Model,User:Mpatel/sandbox/Field (physics)
@@ -49937,18 +49972,15 @@ Standard_Model,User:Reddi
 Standard_Model,User:Riffsyphon1024
 Standard_Model,User:SelketBot/Vital articles
 Standard_Model,User:Silence/VA3
-Standard_Model,User:Tim Barber
-Standard_Model,User:TimothyRias/temp2
 Standard_Model,User:Tmcsheery/rewrite of Physics
-Standard_Model,User:TriTertButoxy/Sandbox
+Standard_Model,User:Unidiode
 Standard_Model,User:WillowW/Mass of the photon
-Standard_Model,User:WillowW/Universe notes
 Standard_Model,User:Xerxes314
-Standard_Model,User:Yamara/Time
 Standard_Model,User:Zaz-en
 Standard_Model,Vacuum expectation value
 Standard_Model,Vacuum state
 Standard_Model,Vector boson
+Standard_Model,Vector meson
 Standard_Model,W and Z bosons
 Standard_Model,Walter Dröscher
 Standard_Model,Warm dark matter
@@ -49964,11 +49996,10 @@ Standard_Model,Wikipedia talk:Requests for arbitration/Paranormal/Proposed decis
 Standard_Model,Wikipedia talk:Requests for comment/Iasson
 Standard_Model,Wikipedia talk:Wikipedians/Archive 1
 Standard_Model,Wikipedia talk:WikiProject Mathematics/Archive 24
-Standard_Model,Wikipedia talk:WikiProject Mathematics/Archive2007
 Standard_Model,WITCH experiment
+Standard_Model,Xi baryon
 Standard_Model,Yang–Mills existence and mass gap
 Standard_Model,Yang–Mills theory
-Standard_Model,Yoji Totsuka
 Standard_Model,Yukawa interaction
 Standard_Model,Zero-point energy
 Standard_Model,ZEUS (particle detector)
@@ -50320,6 +50351,7 @@ Stereotype,Sexism
 Stereotype,Sexual objectification
 Stereotype,Sexual orientation
 Stereotype,Shane Bond
+Stereotype,Shawn Daivari
 Stereotype,Shin Saimdang
 Stereotype,Shuang Wen School
 Stereotype,Simon Bar Sinister
@@ -50445,6 +50477,7 @@ Stereotype,Waiting for Guffman
 Stereotype,Walter Lippmann
 Stereotype,Waylon Smithers
 Stereotype,West Country English
+Stereotype,White privilege
 Stereotype,White supremacy
 Stereotype,Wilhelm Busch
 Stereotype,William Greaves
@@ -50482,7 +50515,6 @@ Steve_Biko,African Writers Series
 Steve_Biko,Africanization
 Steve_Biko,Afrikaner Broederbond
 Steve_Biko,Afrikaner Weerstandsbeweging
-Steve_Biko,Afrikaners
 Steve_Biko,Afrocentrism
 Steve_Biko,Aga Khan Palace
 Steve_Biko,Ahimsa
@@ -50684,7 +50716,6 @@ Steve_Biko,List of biographical films
 Steve_Biko,List of black Academy Award winners and nominees
 Steve_Biko,List of cases of police brutality
 Steve_Biko,List of eponymous roads in London
-Steve_Biko,List of existentialists
 Steve_Biko,List of films based on actual events
 Steve_Biko,List of historical period drama films
 Steve_Biko,List of people assassinated in Africa
@@ -50774,6 +50805,7 @@ Steve_Biko,Portal:Military history of Africa/Quotes
 Steve_Biko,Portal:Military history of Africa/Quotes/1
 Steve_Biko,Portal:Military history of Africa/Selected anniversaries/August
 Steve_Biko,Portal:Military history of Africa/Selected anniversaries/August 18
+Steve_Biko,Portal:South Africa
 Steve_Biko,Portal:South Africa/Quotes
 Steve_Biko,Portal:South Africa/Selected biography
 Steve_Biko,Purna Swaraj
@@ -50924,6 +50956,7 @@ Steve_Biko,User:Johnfreez
 Steve_Biko,User:MartinBotIII/Logs/270807 3
 Steve_Biko,User:Nooffence
 Steve_Biko,User:Paradoxos
+Steve_Biko,User:Smmurphy/Personal bests
 Steve_Biko,User:Wmahan/Links to redirects from misspellings
 Steve_Biko,Vaishnava Jana To
 Steve_Biko,Vallabhbhai Patel
@@ -51073,7 +51106,6 @@ Tap_(valve),User talk:82.18.69.246
 Tap_(valve),User talk:86.145.73.43
 Tap_(valve),User talk:88.107.66.187/Archive 1
 Tap_(valve),User talk:88.203.106.181
-Tap_(valve),User talk:88.96.93.217
 Tap_(valve),User talk:92.9.143.97
 Tap_(valve),User talk:96.28.83.170
 Tap_(valve),User talk:97.117.85.132
@@ -51225,7 +51257,6 @@ Textile,Decoupage
 Textile,Deep River (North Carolina)
 Textile,Denim
 Textile,Derry; New Hampshire
-Textile,Dhaka
 Textile,Diaper
 Textile,Dimona
 Textile,Dipsacus
@@ -51581,6 +51612,7 @@ Textile,Velvet
 Textile,Victoria and Albert Museum
 Textile,Vilvoorde
 Textile,Vinyon
+Textile,Wallet
 Textile,Watercolor painting
 Textile,Watermill
 Textile,Waxhaw; North Carolina
@@ -52665,6 +52697,7 @@ Transport_in_South_Africa,Military history of South Africa
 Transport_in_South_Africa,Military Skills Development System
 Transport_in_South_Africa,Minister of Defence and Military Veterans
 Transport_in_South_Africa,Minister of State Security (South Africa)
+Transport_in_South_Africa,Music of South Africa
 Transport_in_South_Africa,National Forensic DNA Database of South Africa
 Transport_in_South_Africa,National Intelligence Agency (South Africa)
 Transport_in_South_Africa,New National Party (South Africa)
@@ -52999,7 +53032,6 @@ Vibration,Jane Arden (director)
 Vibration,Jean le Rond d'Alembert
 Vibration,Jerk (physics)
 Vibration,Joachim-Ernst Berendt
-Vibration,Joseph Fourier
 Vibration,Joseph-Louis Lagrange
 Vibration,Katamari Damacy Mobile
 Vibration,Kazoo
@@ -53068,6 +53100,7 @@ Vibration,Music psychology
 Vibration,Musical road
 Vibration,Myofascial trigger point
 Vibration,Nanometrology
+Vibration,Native American flute
 Vibration,Neuroma
 Vibration,New York State Route 747
 Vibration,Newton's law of universal gravitation
@@ -53535,7 +53568,7 @@ Walter_Sisulu,Khusro Faramurz Rustamji
 Walter_Sisulu,King Kong (musical)
 Walter_Sisulu,Kishan Maharaj
 Walter_Sisulu,Kishori Amonkar
-Walter_Sisulu,Kotha Satchidanda Murthy
+Walter_Sisulu,Kotha Satchidananda Murthy
 Walter_Sisulu,Kottayan Katankot Venugopal
 Walter_Sisulu,Krishnaswamy Kasturirangan
 Walter_Sisulu,Kumar Gandharva
@@ -53959,6 +53992,7 @@ Water_filter,User talk:Dekatech
 Water_filter,User talk:Ichicoo
 Water_filter,User talk:Joesmith1978
 Water_filter,User talk:Liehann
+Water_filter,User talk:M10 official
 Water_filter,User talk:Miss emoji bae72
 Water_filter,User talk:Pallwiki
 Water_filter,User talk:Rwricker
@@ -54010,7 +54044,6 @@ Water_pollution,Anacostia River
 Water_pollution,Androscoggin River
 Water_pollution,Animal husbandry
 Water_pollution,Anoxic event
-Water_pollution,Anoxic waters
 Water_pollution,Anthropogenic hazard
 Water_pollution,Aquatic biomonitoring
 Water_pollution,Aquatic toxicology
@@ -54029,7 +54062,6 @@ Water_pollution,Biosphere
 Water_pollution,Blue Bridge (Oregon)
 Water_pollution,Blue Earth River
 Water_pollution,Blue Flag beach
-Water_pollution,Blue sucker
 Water_pollution,Boil-water advisory
 Water_pollution,Brazil
 Water_pollution,Bremer River (Queensland)
@@ -54107,6 +54139,7 @@ Water_pollution,Environmental issues in Thailand
 Water_pollution,Environmental issues in Turkey
 Water_pollution,Environmental law
 Water_pollution,Environmental movement
+Water_pollution,Environmental planning
 Water_pollution,Environmental policy
 Water_pollution,Environmental science
 Water_pollution,Environmental stewardship (England)
@@ -54250,6 +54283,7 @@ Water_pollution,MARPOL 73/78
 Water_pollution,Maurício Waldman
 Water_pollution,Mayfly
 Water_pollution,McMurdo Sound
+Water_pollution,Meat industry
 Water_pollution,Media filter
 Water_pollution,Melpar
 Water_pollution,Meramec River
@@ -54991,6 +55025,7 @@ Water_well,Swanscombe
 Water_well,Sweet Track
 Water_well,Talk:Autonomous building
 Water_well,Talk:Hala'ib Triangle
+Water_well,Talk:Well-order
 Water_well,Talk:Wells; Somerset
 Water_well,Tannin
 Water_well,Tap water
@@ -55083,6 +55118,7 @@ Wax,Antioxidant
 Wax,Antitranspirant
 Wax,Antonio Magliabechi
 Wax,Apep
+Wax,Apis andreniformis
 Wax,Apis florea
 Wax,Areca nut
 Wax,Arjuna
@@ -55296,7 +55332,6 @@ Wax,Kerosene
 Wax,Lacquer
 Wax,Lactitol
 Wax,Lajos Kossuth
-Wax,Landscape with the Fall of Icarus
 Wax,Lanolin
 Wax,Laser printing
 Wax,Lauraceae
@@ -56390,7 +56425,6 @@ Wetlands,National System of Conservation Areas
 Wetlands,National Wetlands Coalition
 Wetlands,National Zoo of Malaysia
 Wetlands,Neman (river)
-Wetlands,Nemunas Delta
 Wetlands,New Bedford Regional Airport
 Wetlands,New Jersey Department of Environmental Protection
 Wetlands,New Jersey Meadowlands
@@ -56511,6 +56545,7 @@ Wetlands,Union Bay Natural Area
 Wetlands,United States Army Corps of Engineers
 Wetlands,User:Information Habitat
 Wetlands,User:Jlconkle
+Wetlands,User:Joshurtree
 Wetlands,User:Marshman
 Wetlands,Utica; New York
 Wetlands,Vancouver Lake
@@ -57364,6 +57399,7 @@ Wildlife_management,User talk:173.185.183.6
 Wildlife_management,User talk:188.3.59.192
 Wildlife_management,User talk:198.60.181.13
 Wildlife_management,User talk:2001:558:6040:2:29FC:3786:DE3C:5836
+Wildlife_management,User talk:205.202.59.201
 Wildlife_management,User talk:207.28.224.190
 Wildlife_management,User talk:207.28.77.6
 Wildlife_management,User talk:216.228.36.144
@@ -57826,6 +57862,7 @@ Winnie_Madikizela-Mandela,User talk:196.32.0.40
 Winnie_Madikizela-Mandela,User talk:203.59.179.80
 Winnie_Madikizela-Mandela,User talk:209.247.5.240
 Winnie_Madikizela-Mandela,User talk:212.214.82.19
+Winnie_Madikizela-Mandela,User talk:216.48.140.172
 Winnie_Madikizela-Mandela,User talk:216.90.47.234
 Winnie_Madikizela-Mandela,User talk:220.225.145.195
 Winnie_Madikizela-Mandela,User talk:24.26.5.105
@@ -57834,7 +57871,6 @@ Winnie_Madikizela-Mandela,User talk:41.29.114.149
 Winnie_Madikizela-Mandela,User talk:57.82.10.65
 Winnie_Madikizela-Mandela,User talk:60.234.191.51
 Winnie_Madikizela-Mandela,User talk:62.199.69.20
-Winnie_Madikizela-Mandela,User talk:62.232.224.14
 Winnie_Madikizela-Mandela,User talk:62.24.245.196
 Winnie_Madikizela-Mandela,User talk:62.30.97.155
 Winnie_Madikizela-Mandela,User talk:63.233.41.74
@@ -58030,7 +58066,6 @@ Wood,Column (botany)
 Wood,Combustion
 Wood,Composite material
 Wood,Condensation
-Wood,Cookware and bakeware
 Wood,Coppicing
 Wood,Corset
 Wood,Covered bridge
@@ -58232,7 +58267,7 @@ Wood,Nuclear power plant
 Wood,Oak
 Wood,Oakwood; Georgia
 Wood,Oar
-Wood,Ochroma pyramidale
+Wood,Ochroma
 Wood,Opal
 Wood,Osijek
 Wood,Outline of biology
@@ -58418,6 +58453,7 @@ Wood,Woodworking
 Wood,Woodworking joints
 Wood,Woody
 Wood,Workbench
+Wood,Wu Xing
 Wood,X-ray photoelectron spectroscopy
 Wood,Xylem
 Wood,Young's modulus
