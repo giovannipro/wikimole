@@ -8,7 +8,42 @@
 	<body>
 		<div id="svg_container">
 		</div>
-		<script type="text/javascript" src="edits_x_editors.js" defer></script> 
+
+		<svg id="defs">
+			<defs>
+			    <g id="comm_rev">
+			    	<g>
+						<path d="M42.52,5c20.688,0,37.52,16.832,37.52,37.52c0,20.688-16.832,37.52-37.52,37.52C21.832,80.04,5,63.208,5,42.52C5,21.832,21.832,5,42.52,5 M42.52,0C19.037,0,0,19.037,0,42.52c0,23.482,19.037,42.52,42.52,42.52c23.482,0,42.52-19.037,42.52-42.52C85.04,19.037,66.002,0,42.52,0L42.52,0z"/>
+					</g>
+					<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="1.63" y1="43.015" x2="84.399" y2="43.015"/>
+					<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="43.015" y1="1.63" x2="43.015" y2="84.399"/>
+					<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="13.75" y1="13.751" x2="72.277" y2="72.278"/>
+					<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="72.278" y1="13.751" x2="13.751" y2="72.278"/>
+			    </g>
+				
+				<g id="rev">
+					<g>
+					<path d="M42.52,5c20.688,0,37.52,16.832,37.52,37.52S63.208,80.04,42.52,80.04S5,63.208,5,42.52S21.832,5,42.52,5 M42.52,0 C19.037,0,0,19.037,0,42.52c0,23.482,19.037,42.52,42.52,42.52c23.482,0,42.52-19.037,42.52-42.52C85.04,19.037,66.002,0,42.52,0
+					L42.52,0z"/>
+					</g>
+					<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="13.751" y1="13.751" x2="72.278" y2="72.278"/>
+					<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="72.278" y1="13.751" x2="13.751" y2="72.278"/>
+				</g>
+
+				<g id="comm">
+					<circle cx="42.52" cy="42.52" r="42.52"/>
+					<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="1.63" y1="43.015" x2="84.399" y2="43.015"/>
+					<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="43.015" y1="1.63" x2="43.015" y2="84.399"/>
+				</g>
+
+				<g id="new">
+					<circle cx="42.52" cy="42.52" r="42.52"/>
+				</g>
+
+		 	</defs>
+		</svg>
+
+		<script type="text/javascript" src="edits_x_editor.js" defer></script> 
 	<body>
 	<style type="text/css">
 	body{
@@ -16,6 +51,9 @@
 		padding: 0;
 		font-family: Open Sans, Tahoma, Sans-serif;
 		font-weight: 0.5em;
+	}
+	#defs{
+		display: none;
 	}
 	.bubble{
 		opacity: 0.7;

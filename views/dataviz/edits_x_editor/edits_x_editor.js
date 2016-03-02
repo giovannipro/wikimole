@@ -15,22 +15,21 @@ offset = padding*1.5,
 bar_h = 5;
 
 var start_id = padding,
-start_out = padding*20,
+start_out = padding*10,
 start_in = padding*52,
 start_label = padding*75;
 
 var font_size = '0.6em';
 
-var c_page = '#35B7BB',
+var /*
 c_user = '#EC4C4E',
 c_category = '#5CB44E';
 c_template = '#EC9144',
-c_portal = '#AD72C0',
+c_portal = '#AD72C0',*/
+c_exe = '#35B7BB',
 c_benchmark = 'black',
 c_line = 'black',
 c_tick = '#636362';
-
-var test = 'test,100,100,100,100,100,500,500,500,500,500,1500,3500,2000,3500'
 
 /* -----------------------
 set plot
@@ -48,26 +47,23 @@ var plot = svg.append("g")
 get data
 ------------------------- */
 
-d3.csv("../../data/20160227/in_out_links.csv", loaded);
+d3.csv("../../data/20160227/edits_x_editor.csv", loaded);
 
 function loaded (data){
 
-	data.sort(function(a,b) {return a.total_in-b.total_in;});
+	data.sort(function(a,b) {return a.editsxeditor_2015-b.editsxeditor_2015;});
 
 	console.log(width + ',' + height)
 	console.log(data)
 
-	var max_in = d3.max(data, function(d) { return +d.total_in - (+d.page_in) ;} );
-	var max_out = d3.max(data, function(d) { return +d.total_out - (+d.page_out) ;} );
-	console.log(max_in)
-	console.log(max_out)
-	//console.log(width-(margin.left*2)- (padding*52))
+	var max = d3.max(data, function(d) { return +d.editsxeditor_2015 ;} );
+	console.log(max)
 
 /* -----------------------
 set axis
 ------------------------- */
 
-	var x_in = d3.scale.linear()
+	/*var x_in = d3.scale.linear()
 		.domain([0,107])
         .range([start_in,(start_label-offset) ]);
 
@@ -76,10 +72,10 @@ set axis
         .ticks(5)
         .tickSize(-height + (margin.top*2) )
         .orient('top')
-    typeof(in_Axis);
+    typeof(in_Axis);*/
 
 	var x_out = d3.scale.linear()
-		.domain([0,155])
+		.domain([0,max])
         .range([(start_in-offset),start_out]);
 
 	var out_Axis = d3.svg.axis()
@@ -93,14 +89,14 @@ set axis
 visualize grid
 ------------------------- */
 
-	var vl_in = plot.append('g')
+	/*var vl_in = plot.append('g')
 		.attr('class','v_lines')
 		.call(in_Axis)
 	.selectAll('text')
         .attr("transform", "rotate(90)")
         .style("text-anchor", "start")
         .attr('fill',c_tick)
-        .attr("font-size",font_size)
+        .attr("font-size",font_size)*/
 
 	var vl_out = plot.append('g')
 		.attr('class','v_lines')
@@ -169,7 +165,7 @@ visualize elements
 /* --- in ---  */
 /* ----------  */
 
-var in_link = article.append('g')
+/*var in_link = article.append('g')
 		.attr('class','in')
 
 	// user
@@ -261,76 +257,24 @@ var in_link = article.append('g')
 	var out_link = article.append('g')
 		.attr('class','out')
 	
-	// user
+	// edits per editor
 	out_link.append('rect')
-		.attr('class','user')
+		.attr('class','exe')
 		.attr('x', function(d,i){
-			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.user_out) / max_out ))
+			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.editsxeditor_2015) / max ))
 		}) 
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (((start_in-start_out-offset) * d.user_out) / max_out )
+			return (((start_in-start_out-offset) * d.editsxeditor_2015) / max )
 		})
-		.attr('fill',c_user) 
+		.attr('fill',c_exe) 
 		.attr('height',bar_h)
-
-	// user
-	out_link.append('rect')
-		.attr('class','category')
-		.attr('x', function(d,i){
-			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.user_out) / max_out )) - (((start_in-start_out-offset) * d.category_out) / max_out ) 
-		})
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (((start_in-start_out-offset) * d.category_out) / max_out )
-		})
-		.attr('fill',c_category)
-		.attr('height',bar_h)
-
-	// template
-	out_link.append('rect')
-		.attr('class','template')
-		.attr('x',function(d,i){
-			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.user_out) / max_out )) - (((start_in-start_out-offset) * d.category_out) / max_out ) - (((start_in-start_out-offset) * d.template_out) / max_out )
-		})
-		.attr('y', bar_h )
-		.attr('width', function(d,i){
-			return (((start_in-start_out-offset) * d.template_out) / max_out )
-		})
-		.attr('fill',c_template) 
-		.attr('height',bar_h)
-
-	// portal
-	out_link.append('rect')
-		.attr('class','portal')
-		.attr('x',function(d,i){
-			return  start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.user_out) / max_out )) - (((start_in-start_out-offset) * d.category_out) / max_out )  - (((start_in-start_out-offset) * d.template_out) / max_out ) - (((start_in-start_out-offset) * d.portal_out) / max_out )
-		})
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (((start_in-start_out-offset) * d.portal_out) / max_out )
-		})
-		.attr('fill',c_portal) 
-		.attr('height',bar_h)
-
-	// portal
-	/*out_link.append('rect')
-		.attr('class','portal')
-		.attr('x', function(d,i){
-			return  start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out )) - (((start_in-start_out-offset) * d.user_out) / max_out )  - (((start_in-start_out-offset) * d.category_out) / max_out ) - (((start_in-start_out-offset) * d.template_out) / max_out ) - (((start_in-start_out-offset) * d.portal_out) / max_out )
-		})
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (((start_in-start_out-offset) * d.portal_out) / max_out )
-		})
-		.attr('fill',c_portal) 
-		.attr('height',bar_h)*/
 
 	// out - benchmark
-	/*out_link.append('line')
+	out_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
-			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
+			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / ms ))
 		})
 		.attr('y1',function(d,i){
 			return bar_h+(bar_h)
@@ -343,7 +287,6 @@ var in_link = article.append('g')
 		})
 		.attr('stroke',c_benchmark)
 		.attr('stroke-width',1)
-	*/
 
 };
 
