@@ -32,9 +32,11 @@
 				<h1>Updates</h1>
 				<h4>
 					<a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_South_Africa/Wikipedia_Primary_School/Articles_list" target="_blank">Official list of articles in Wikipedia</a>
+					&#9679;
+					<a href="https://dl.dropboxusercontent.com/u/95554914/wikipedia_primary_school/views/wikiDataviz.pdf" target="_blank">Data visualization (draft)</a>
 				</h4>
 				<h5>
-					Last update: January 22<sup>nd</sup> 2016
+					Last update: March 2<sup>nd</sup>, 2016
 				</h5>
 			</header>
 			
@@ -112,6 +114,34 @@
 				return opts.inverse(this);
 			}
 		});
+
+		Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
+		    lvalue = parseFloat(lvalue);
+		    rvalue = parseFloat(rvalue);
+		        
+		    return {
+		        "+": lvalue + rvalue,
+		        "-": lvalue - rvalue,
+		        "*": lvalue * rvalue,
+		        "/": lvalue / rvalue,
+		        "%": lvalue % rvalue
+		    }[operator];
+		});
+
+		var rendered = Handlebars.compile(
+		   	'{{#each values}}' + 
+		   	'i={{@index}}: ' +
+		    'i+1 = {{math @index "+" 1}}, ' + 
+		    'i-0.5 = {{math @index "+" "-0.5"}}, ' + 
+		    'i/2 = {{math @index "*" 2}}, ' + 
+		    'i%2 = {{math @index "%" 2}}, ' + 
+		    'i*i = {{math @index "*" @index}}\n' +
+		    '{{/each}}'
+		)({
+		    values : [ 'a', 'b', 'c', 'd', 'e' ]
+		});
+
+
 		</script>
 	
 		<script type="text/javascript">

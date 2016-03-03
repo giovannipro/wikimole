@@ -17,16 +17,12 @@ bar_h = 5;
 var start_id = padding,
 start_out = padding*10,
 start_in = padding*52,
+start_icon = padding*70,
 start_label = padding*75;
 
 var font_size = '0.6em';
 
-var /*
-c_user = '#EC4C4E',
-c_category = '#5CB44E';
-c_template = '#EC9144',
-c_portal = '#AD72C0',*/
-c_exe = '#35B7BB',
+var c_exe = '#35B7BB',
 c_benchmark = 'black',
 c_line = 'black',
 c_tick = '#636362';
@@ -80,7 +76,7 @@ set axis
 
 	var out_Axis = d3.svg.axis()
         .scale(x_out)
-        .ticks(10)
+        .ticks(5)
         .tickSize(-height + (margin.top*2) )
         .orient('top')
 	typeof(out_Axis);
@@ -162,97 +158,8 @@ visualize elements
 		.attr("font-size",font_size)
 		.attr('class','text')
 
-/* --- in ---  */
-/* ----------  */
-
-/*var in_link = article.append('g')
-		.attr('class','in')
-
-	// user
-	in_link.append('rect')
-		.attr('class','user')
-		.attr('x',start_in)
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (d.user_in * (start_label-start_in-offset) / max_in )
-		})
-		.attr('fill',c_user)
-		.attr('height',bar_h)
-
-	// category
-	in_link.append('rect')
-		.attr('class','category')
-		.attr('x', function(d,i){
-			return start_in + (d.user_in * (start_label-start_in-offset) / max_in )
-		})
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (d.category_in * (start_label-start_in-offset) / max_in )
-		})
-		.attr('fill',c_category)
-		.attr('height',bar_h)
-
-	// template
-	in_link.append('rect')
-		.attr('class','template')
-		.attr('x',function(d,i){
-			return start_in + ((d.user_in) * (start_label-start_in-offset) / max_in ) + ((d.category_in) * (start_label-start_in-offset) / max_in )
-		})
-		.attr('y', bar_h )
-		.attr('width',function(d,i){
-			return (d.template_in * (start_label-start_in-offset) / max_in)
-		})
-		.attr('fill',c_template)
-		.attr('height',bar_h)
-
-	// portal
-	in_link.append('rect')
-		.attr('class','template')
-		.attr('x',function(d,i){
-			return start_in + ((d.user_in) * (start_label-start_in-offset) / max_in ) + ((d.category_in) * (start_label-start_in-offset) / max_in ) + ((d.template_in) * (start_label-start_in-offset) / max_in )
-		})
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (d.portal_in * (start_label-start_in-offset) / max_in )
-		})
-		.attr('fill',c_portal)
-		.attr('height',bar_h)
-
-	// portal
-	/*in_link.append('rect')
-		.attr('class','portal')
-		.attr('x', function(d,i){
-			return start_in + ((d.page_in) * (start_label-start_in-offset) / max_in ) + ((d.user_in) * (start_label-start_in-offset) / max_in ) + ((d.category_in) * (start_label-start_in-offset) / max_in ) + (d.template_in * (start_label-start_in-offset) / max_in )
-		})
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (d.portal_in * (start_label-start_in-offset) / max_in )
-		})
-		.attr('fill',c_portal)
-		.attr('height',bar_h)
-	*/
-
-	// in - benchmark
-	/*in_link.append('line')
-		.attr('class','benchmark')
-		.attr('x1',function(d,i){
-			return start_in + (d.total_in_2015 * (start_label-start_in-offset) / max_in )
-		})
-		.attr('y1',function(d,i){
-			return bar_h+(bar_h)
-		})
-		.attr('x2',function(d,i){
-			return start_in + (d.total_in_2015 * (start_label-start_in-offset) / max_in )
-		})
-		.attr('y2',function(d,i){
-			return bar_h
-		})
-		.attr('stroke',c_benchmark)
-		.attr('stroke-width',1)
-	*/
-
-/* --- out ---  */
-/* ----------  */
+/* --- edits per editor ---  */
+/* ------------------------  */
 
 	var out_link = article.append('g')
 		.attr('class','out')
@@ -274,19 +181,64 @@ visualize elements
 	out_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
-			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / ms ))
+			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.editsxeditor_2014) / max ))
 		})
 		.attr('y1',function(d,i){
 			return bar_h+(bar_h)
 		})
 		.attr('x2',function(d,i){
-			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
+			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.editsxeditor_2014) / max ))
 		})
 		.attr('y2',function(d,i){
 			return bar_h
 		})
 		.attr('stroke',c_benchmark)
 		.attr('stroke-width',1)
+
+/* -----------------------
+icons
+------------------------- */
+
+    // icons
+	var icons = article.append('g')
+		.attr('class','icons')
+		.attr('transform','translate(' + start_icon  + ',' + (-bar_h*2) +')' ) 
+	
+	// community/review	
+	d3.selectAll(".icons").append('g')
+		//.attr('transform','translate('+ (-padding*1.5) + ',0)' ) 
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if (d.community == 'true') {
+				if (d.review == 'true') {
+					return '#comm_rev'
+				}
+				return '#comm'
+			}
+			else {
+			}
+		})
+		.attr("x", 0)
+		.attr("y", bar_h-(bar_h/2) )	
+    	//.attr('transform','scale(0.2)')
+		.attr('transform','scale(' + ((height - margin.top - margin.bottom) / (data.length) / 100)  + ')' )
+
+	// new
+	d3.selectAll(".icons").append('g')
+		.attr('transform','translate('+ (-padding*1.5) + ',0)' ) 
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if (d.new == 'true') {
+				return '#new'
+			}
+			else {
+			}
+		})
+		.attr("x", 0)
+		.attr("y", bar_h/2)	
+		//.attr('transform','scale(0.2)')
+		.attr('transform','scale(' + ((height - margin.top - margin.bottom) / (data.length) / 100)  + ')' )
+
 
 };
 
