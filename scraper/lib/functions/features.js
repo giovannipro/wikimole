@@ -155,10 +155,33 @@ function get_issues(url) {
     		txt = $(this).prop('outerHTML')
     		sum++;
     	})
-    	container.append(url_clean + ',' + sum + '</br>')	        	
 
 		$('#hide_a').hide();
     	$('#hide_b').show();
+
+    	container.append(url_clean + ',' + sum + ',')	        	
+
+        if ($.inArray(url_clean, community) != -1 ) {
+            container.append('true,')
+        }
+        else if ($.inArray(url_clean, community) -1 ) {
+            container.append('false,')
+        }
+
+        if ($.inArray(url_clean, review) != -1 ) {
+            //console.log('review')
+            container.append('true,')
+        }
+        else if ($.inArray(url_clean, review) -1 ) {
+            container.append('false,')
+        }
+
+        if ($.inArray(url_clean, new_articles) != -1 ) {
+            container.append('true,<br/>')
+        }
+        else if ($.inArray(url_clean, new_articles) -1 ) {
+            container.append('false,<br/>')
+        } 
 
 	})
 	.error (function (xhr, ajaxOptions, thrownError) {
@@ -169,7 +192,7 @@ function get_issues(url) {
 
 function get_all_issues() {
 	container = $('#output')
-	container.append('article,issues</br>')
+	container.append('article,issues,community,review,new_article<br/>')
 	jQuery.each( articles_a, function( i, val ) {  //  list; articles;
 		get_issues(val)
 		console.log(wikilink + val)
@@ -382,11 +405,7 @@ function get_seeAlso(url) {
     	$('#hide_b').show();
 
     	container.append(url_clean + ',' + sum + '</br>')
-
-   		if (index == stop) { 
-           	console.log('DONE');
-      	}	        	
-
+	        	
 	})
 	.error (function (xhr, ajaxOptions, thrownError) {
         console.log(xhr.status);
@@ -626,7 +645,7 @@ function entrylinks(url) {
 
 			index++;
 
-			var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','').replace(/_/g, ' ');
+			var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','').replace(/_/g, ' ').replace(/,/g, '_');
 			container.append('<span class="red">' + art_name + ',</span>' );
 
 			var link = [];
@@ -675,7 +694,30 @@ function entrylinks(url) {
             $('#hide_a').hide();
     		$('#hide_b').show();
 
-			container.append('<span>' + page + ',' + user + ',' + port + ',' + templ + ',' + cat + ',' + sum + '</span><br/>');
+			container.append('<span>' + page + ',' + user + ',' + port + ',' + templ + ',' + cat + ',' + sum + '</span>');
+
+            if ($.inArray(art_name, community) != -1 ) {
+                container.append('true,')
+            }
+            else if ($.inArray(art_name, community) -1 ) {
+                container.append('false,')
+            }
+
+            if ($.inArray(art_name, review) != -1 ) {
+                //console.log('review')
+                container.append('true,')
+            }
+            else if ($.inArray(art_name, review) -1 ) {
+                container.append('false,')
+            }
+
+            if ($.inArray(art_name, new_articles) != -1 ) {
+                container.append('true,<br/>')
+            }
+            else if ($.inArray(art_name, new_articles) -1 ) {
+                container.append('false,<br/>')
+            }               
+
         },   
 		error : function (xhr, ajaxOptions, thrownError) {
 	        console.log(xhr.status);
@@ -689,7 +731,7 @@ function get_n_entrylink() {
 	index = 0;
     stop = 0;
 
-	$('#output').html('article(entry),page,user,portal,template,category,total<br/>');
+	$('#output').html('article(entry),page,user,portal,template,category,total,community,review,new_article<br/>');
 	jQuery.each( articles_a, function( i, val ) {  // articles list
 		entrylinks( backlinks + val );
 		console.log( wikilink + val);

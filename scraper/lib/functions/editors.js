@@ -51,6 +51,7 @@ $.getJSON(art_list, function(mydata) {
 LISTS
 -------------------------------------*/
 
+/*
 var list = [
     'nelson_mandela',
     'africa',
@@ -67,6 +68,7 @@ var editors = [
     'Nanno1992',
     'example'
 ];
+*/
 
 var community = [
     'Agriculture in South Africa',
@@ -91,7 +93,7 @@ var community = [
     'National Women"s Day',
     'Nelson Mandela',
     'Oliver Tambo',
-    'Reconciliation Day',
+    'Day of Reconciliation',
     'Republic of South Africa',
     'San healing practices',
     'San people',
@@ -131,7 +133,7 @@ var review = [
     'San rock art',
     'Walter Sisulu',
     'Water pollution',
-    'Water privatization in South Africa',
+    'Water privatisation in South Africa',
     'Water supply and sanitation in South Africa',
     'Western Cape'
 ];

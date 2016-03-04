@@ -1,178 +1,176 @@
-article,issues
-!Kung people,1
-Acid,1
-Africa Day,0
-African music,0
-Agriculture in South Africa,0
-AIDS orphan,0
-Alcohol abuse,0
-Alcohol dependence,0
-Alcoholism,0
-Aloe vera,0
-Aloe,1
-Animal husbandry in South Africa,2
-Animal husbandry,2
-Animal-powered transport,0
-Apartheid,0
-Atom,0
-Automobile,1
-Base (chemistry),1
-Bias,0
-Bicycle,0
-Bill of Rights (South Africa),0
-Biome,1
-Bird nest,0
-Boiling,1
-Borehole,0
-Bullying,2
-Castle of Good Hope,0
-Cell (biology),0
-Ceramic,1
-Child abuse,0
-Children's Act_2005,0
-Children's Day,0
-Circuit diagram,1
-Clay,0
-Climate,0
-Coal in South Africa,0
-Coal,0
-Control variable,0
-Convenience food,0
-Cooking,0
-Cradle of Humankind,0
-Decanting,0
-Dependent and independent variables,0
-Design,1
-Discrimination,4
-Domestic violence in South Africa,0
-Domestic violence,1
-Drakensberg,0
-Duration (music),0
-Economy of South Africa,0
-Ecosystem,0
-Electrical conductor,0
-Electrical network,1
-Electricity generation,1
-Energy in South Africa,0
-Fair trade,2
-Farm,0
-Fiber,1
-Fire safety,4
-Flag of South Africa,0
-Food groups,0
-Food pyramid (nutrition),1
-Food security,1
-Food vs. fuel,0
-Food,0
-Frances Baard,0
-Free State (province),0
-Freedom Day (South Africa),0
-Gana and Gwi people,2
-Gangster,1
-Gas,0
-Gauteng,0
-Gender role,4
-Gender stereotypes,4
-Glass,1
-Griqua people,0
-Hand washing,0
-Health care in South Africa,0
-Health,2
-Herero and Namaqua Genocide,1
-Heritage Day (South Africa),0
-History of South Africa,4
-History of writing,1
-HIV,0
-HIV/AIDS,0
-Home safety,2
-Hottentot Venus,0
-Human nutrition,2
-Human Rights Day,0
-Human swimming,0
-Hydraulics,0
-Insulator (electricity),0
-Kaditshwene,0
-Khoikhoi mythology,0
-Khoikhoi,1
-Later Stone Age,0
-Latitude,0
-Liquid fuel,1
-List of South Africans,1
-Longitude,0
-Mahatma Gandhi,0
-Makhonjwa Mountains,0
-Malaria,0
-Mandela Day,0
-Map,0
-Mapungubwe Museum,0
-Mapungubwe National Park,0
-Mapungubwe,0
-Mind map,0
-Mining industry of South Africa,1
-Mpumalanga,0
-Music of South Africa,2
-National anthem of South Africa,0
-National symbols of South Africa,0
-National Women's Day,0
-Nelson Mandela,0
-Nest,0
-Noise pollution,0
-Oliver Tambo,1
-Outer space,0
-Outline of domestic violence,0
-Paper,0
-People Against Gangsterism and Drugs,0
-Petrol-paraffin engine,1
-Pitch (music),1
-Pneumatics,0
-Politics of South Africa,1
-Pollution,0
-Processed food,0
-Rail transport in South Africa,0
-Rail transport,0
-Reconciliation Day,0
-Reproduction,0
-Republic of South Africa,1
-Right to food,0
-Road map,0
-Rock (geology),0
-San healing practices,1
-San languages,0
-San people,0
-San religion,0
-San rock art,0
-Sand,1
-Scale (map),2
-Scientific method,3
-Settling,0
-Sexism,0
-Sieving,1
-Soil,0
-Sound,0
-South African cuisine,1
-South African locomotive history,0
-Standard Model,2
-Stereotype,1
-Steve Biko,0
-Tap (valve),1
-Textile,0
-Trade,0
-Transport in South Africa,0
-Transport,0
-Two foot gauge railways in South Africa,0
-Vibration,1
-Walter Sisulu,0
-Water filter,1
-Water pollution,0
-Water privatization in South Africa,0
-Water supply and sanitation in South Africa,0
-Water well,0
-Wax,0
-Western Cape,2
-Wetlands,0
-Wildlife conservation,0
-Wildlife management,0
-Winnie Madikizela-Mandela,2
-Wood,1
-Wool,0
-Youth culture,1
+article,issues,community,review,new_article
+2 ft gauge railways in South Africa,0,false,false,false,
+Acid,2,false,false,false,
+Africa Day,0,false,false,false,
+Agriculture in South Africa,0,true,true,false,
+AIDS orphan,0,false,false,false,
+Alcohol abuse,0,false,false,false,
+Alcohol dependence,0,false,false,false,
+Alcoholism,0,false,false,false,
+Aloe vera,0,false,false,false,
+Aloe,1,false,false,false,
+Animal husbandry in South Africa,2,false,false,false,
+Animal husbandry,1,false,false,false,
+Animal-powered transport,0,false,false,false,
+Apartheid,0,true,true,false,
+Atom,0,false,false,false,
+Base (chemistry),1,false,false,false,
+Bias,0,false,false,false,
+Bicycle,0,true,true,false,
+Biome,1,false,false,false,
+Bird nest,0,false,false,false,
+Boiling,1,false,false,false,
+Borehole,0,false,false,false,
+Bullying,2,false,false,false,
+Car,1,false,false,false,
+Castle of Good Hope,0,false,false,false,
+Cell (biology),0,false,false,false,
+Ceramic,1,false,false,false,
+Chapter Two of the Constitution of South Africa,0,false,false,false,
+Child abuse,2,false,false,false,
+Children's Act, 2005,0,false,false,false,
+Children's Day,0,false,false,false,
+Circuit diagram,1,false,false,false,
+Clay,0,false,false,false,
+Climate,0,false,false,false,
+Coal in South Africa,0,true,false,false,
+Coal,0,false,false,false,
+Control variable,0,false,false,false,
+Convenience food,0,false,false,false,
+Cooking,0,false,false,false,
+Cradle of Humankind,0,true,true,false,
+Day of Reconciliation,0,true,false,false,
+Decantation,0,false,false,false,
+Dependent and independent variables,0,false,false,false,
+Design,1,false,false,false,
+Discrimination,4,true,false,false,
+Domestic violence in South Africa,0,true,true,false,
+Domestic violence,1,true,false,false,
+Drakensberg,0,false,false,false,
+Duration (music),0,false,false,false,
+Economy of South Africa,0,false,false,false,
+Ecosystem,0,false,false,false,
+Electrical conductor,0,false,false,false,
+Electrical network,1,false,false,false,
+Electricity generation,1,false,false,false,
+Energy in South Africa,0,false,false,false,
+Fair trade,2,false,false,false,
+Farm,0,false,false,false,
+Fiber,1,false,false,false,
+Fire safety,4,false,false,false,
+Flag of South Africa,0,false,false,false,
+Food group,0,false,false,false,
+Food pyramid (nutrition),1,false,false,false,
+Food security,1,false,false,false,
+Food vs. fuel,0,false,false,false,
+Food,0,false,false,false,
+Frances Baard,0,true,false,false,
+Free State (province),0,false,false,false,
+Freedom Day (South Africa),0,false,false,false,
+Gana and Gwi people,2,false,false,false,
+Gangster,1,false,false,false,
+Gas,0,false,false,true,
+Gauteng,0,false,false,false,
+Gender role,4,true,true,true,
+Glass,1,false,false,false,
+Griqua people,0,false,false,false,
+Hand washing,0,true,true,false,
+Health,2,false,false,false,
+Healthcare in South Africa,0,false,false,false,
+Herero and Namaqua Genocide,1,true,false,false,
+Heritage Day (South Africa),0,true,true,false,
+History of South Africa,4,false,false,false,
+History of writing,1,false,false,false,
+HIV,0,false,false,false,
+HIV/AIDS,0,false,false,false,
+Home safety,2,false,false,false,
+Human nutrition,2,false,false,false,
+Human Rights Day,0,true,true,false,
+Human swimming,0,false,false,false,
+Hydraulics,0,false,false,false,
+Insulator (electricity),0,false,false,false,
+Kaditshwene,0,false,false,true,
+Khoikhoi,1,true,true,false,
+Khoisan languages,0,false,false,false,
+Kingdom of Mapungubwe,0,false,false,false,
+Later Stone Age,0,false,false,false,
+Latitude,0,false,false,false,
+Liquid fuel,1,false,false,false,
+List of South Africans,1,false,false,false,
+Longitude,0,false,false,false,
+Mahatma Gandhi,0,false,false,false,
+Makhonjwa Mountains,0,false,false,true,
+Malaria,0,false,false,false,
+Mandela Day,0,false,false,false,
+Map,0,false,false,false,
+Mapungubwe Museum,0,true,true,false,
+Mapungubwe National Park,0,false,false,false,
+Mind map,0,false,false,true,
+Mining industry of South Africa,1,false,false,false,
+Mpumalanga,0,false,false,false,
+Music of Africa,2,false,false,false,
+Music of South Africa,2,false,false,false,
+National anthem of South Africa,0,false,false,false,
+National symbols of South Africa,0,false,false,false,
+National Women's Day,0,false,false,false,
+Nelson Mandela,0,true,true,false,
+Nest,0,false,false,false,
+Noise pollution,0,false,false,false,
+Oliver Tambo,1,true,true,false,
+Outer space,0,false,false,false,
+Outline of domestic violence,0,false,false,false,
+Paper,0,false,false,false,
+People Against Gangsterism and Drugs,0,false,false,false,
+Petrol-paraffin engine,1,false,false,false,
+Pitch (music),1,false,false,false,
+Pneumatics,0,false,false,false,
+Politics of South Africa,1,false,false,false,
+Pollution,0,false,false,false,
+Rail transport in South Africa,0,false,false,false,
+Rail transport,0,false,false,false,
+Reproduction,0,false,false,false,
+Right to food,0,false,false,false,
+Road map,0,false,false,false,
+Rock (geology),0,false,false,false,
+Saartjie Baartman,0,false,false,false,
+San healing practices,1,true,true,false,
+San people,0,true,true,false,
+San religion,0,false,false,false,
+San religion,0,false,false,false,
+San rock art,0,true,true,false,
+Sand,1,false,false,false,
+Scale (map),2,false,false,false,
+Scientific method,3,false,false,false,
+Settling,0,false,false,false,
+Sexism,0,true,false,false,
+Sieve,1,false,false,false,
+Soil,0,false,false,false,
+Sound,0,false,false,false,
+South Africa,1,false,false,false,
+South African cuisine,1,false,false,false,
+South African locomotive history,0,false,false,false,
+Standard Model,2,false,false,false,
+Stereotype,1,false,false,false,
+Steve Biko,0,false,false,false,
+Tap (valve),1,false,false,false,
+Textile,0,false,false,false,
+Trade,0,false,false,false,
+Transport in South Africa,0,true,false,false,
+Transport,0,false,false,false,
+Vibration,1,false,false,false,
+Walter Sisulu,0,true,true,false,
+Water filter,1,false,false,false,
+Water pollution,0,true,true,false,
+Water privatisation in South Africa,0,false,true,false,
+Water supply and sanitation in South Africa,0,true,true,false,
+Water well,0,false,false,false,
+Wax,0,false,false,false,
+Western Cape,2,true,true,false,
+Wetland,0,false,false,false,
+Wildlife conservation,0,false,false,false,
+Wildlife management,0,false,false,false,
+Winnie Madikizela-Mandela,2,true,false,false,
+Wood,1,true,false,false,
+Wool,0,false,false,false,
+Youth culture,1,false,false,false,
+ǃKung people,1,false,false,false,
