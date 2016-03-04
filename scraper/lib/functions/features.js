@@ -14,11 +14,13 @@ var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&
 var proxy_pageview = baseurl + 'proxy_pageviews.php' + "?url=" ;
 var pageview_service = "http://stats.grok.se/json/en/";
 
+var redirect = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=redirects&list=&titles='
+
 /* ------------------------------------
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_2of2.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
     "Reconciliation_Day",
@@ -56,6 +58,74 @@ issn = 'International Standard Serial Number',
 isni = 'International Standard Name Identifier',
 doi = 'Digital object identifier',
 portal = 'Portal';
+
+
+/* ------------------------------------
+CHECK TITLES OF THE ARTICLES
+-------------------------------------*/
+
+function check_title(url) {
+
+    $.ajax(url, {
+        dataType: "jsonp",
+        success: function( wikiResponse ) {
+        	//console.log(wikiResponse)
+        	
+            obj = [];
+            obj = $(wikiResponse.query.pages)[0];
+
+			index++;
+
+			url_clean = url.replace(redirect,'')
+			
+			container.append( '<a target="_blank" href="' + wikilink + url_clean + '">' + url_clean + '</a>')
+
+	    	jQuery.each( obj, function( i, val ) {
+
+	    		redirects = val.redirects
+	    		//console.log(redirects)
+
+				if (jQuery.type(redirects) === 'undefined') {
+					container.append( ' - <span style="color:red">check</span><br/>');
+					warnings++
+				}
+				else{
+					//console.log('ok');
+					container.append('<br/>');
+				}
+
+		 	})
+
+            $('#hide_a').hide();
+    		$('#hide_b').show();
+	    	
+	    	if (index == stop) { 
+	    		console.log('warnings: ' + warnings);
+	           	console.log('DONE');
+	      	}
+        },   
+		error : function (xhr, ajaxOptions, thrownError) {
+	        console.log(xhr.status);
+	        console.log(thrownError);
+		}
+    });
+}
+
+function check_all_titles() {
+
+	container = $('#output')
+
+	index = 0;
+    stop = 0;
+    warnings = 0;
+
+	jQuery.each( articles_a, function( i, val ) {
+		var title = val;
+		check_title( redirect + val );
+		//console.log(wikilink + val)
+		stop++;
+	});
+}
 
 
 /* ------------------------------------
