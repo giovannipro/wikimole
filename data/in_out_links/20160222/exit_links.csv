@@ -27,7 +27,7 @@ Castle of Good Hope,135,0,0,0,0,135
 Cell (biology),777,0,0,6,0,783
 Ceramic,238,0,0,0,0,238
 Chapter Two of the Constitution of South Africa,309,0,1,6,1,317
-Child abuse,1671,0,4,13,2,1690
+Child abuse,1672,0,4,13,2,1691
 Children's Act, 2005,27,0,0,0,0,27
 Children's Day,832,0,0,2,0,834
 Circuit diagram,110,0,1,0,0,111
@@ -42,14 +42,14 @@ Cradle of Humankind,198,0,0,4,0,202
 Day of Reconciliation,45,0,0,2,0,47
 Decantation,23,0,0,2,0,25
 Dependent and independent variables,119,0,0,0,0,119
-Design,660,0,3,2,0,665
+Design,656,0,3,2,0,661
 Discrimination,1428,0,5,8,3,1444
 Domestic violence in South Africa,197,0,0,2,0,199
 Domestic violence,3739,0,0,22,2,3763
 Drakensberg,458,0,0,4,0,462
 Duration (music),344,0,1,7,1,353
 Economy of South Africa,1093,0,3,8,3,1107
-Ecosystem,1090,0,8,12,9,1119
+Ecosystem,1092,0,8,12,9,1121
 Electrical conductor,201,0,0,2,0,203
 Electrical network,180,0,1,2,0,183
 Electricity generation,470,0,6,2,4,482
@@ -61,7 +61,7 @@ Fire safety,338,0,0,4,5,347
 Flag of South Africa,246,0,2,4,0,252
 Food group,141,0,0,0,1,142
 Food pyramid (nutrition),360,0,2,0,0,362
-Food security,1257,0,5,4,5,1271
+Food security,1258,0,5,4,5,1272
 Food vs. fuel,960,0,2,2,3,967
 Food,1742,0,12,10,10,1774
 Frances Baard,102,0,0,0,0,102
@@ -72,21 +72,22 @@ Gangster,617,0,3,2,0,622
 Gas,520,0,0,4,0,524
 Gauteng,756,0,1,4,0,761
 Gender role,1173,0,5,6,3,1187
+Gender stereotypes,1173,0,5,6,3,1187
 Glass,1038,0,0,9,1,1048
 Griqua people,212,0,0,2,0,214
 Hand washing,707,0,0,6,4,717
 Health,489,0,1,0,0,490
 Healthcare in South Africa,329,0,1,6,3,339
-Herero and Namaqua Genocide,732,0,3,6,0,741
+Herero and Namaqua Genocide,736,0,3,6,0,745
 Heritage Day (South Africa),58,0,0,2,0,60
-History of South Africa,1620,0,2,11,114,1747
+History of South Africa,1622,0,2,11,114,1749
 History of writing,1112,0,0,10,4,1126
 HIV,1519,0,2,8,0,1529
 HIV/AIDS,2647,0,2,8,0,2657
 Home safety,68,0,0,0,0,68
 Human nutrition,1853,0,4,10,13,1880
 Human Rights Day,196,0,2,0,1,199
-Human swimming,436,0,1,2,0,439
+Human swimming,435,0,1,2,0,438
 Hydraulics,218,0,0,2,0,220
 Insulator (electricity),328,0,1,2,0,331
 Kaditshwene,53,0,0,4,0,57
@@ -98,7 +99,7 @@ Latitude,478,0,0,2,0,480
 Liquid fuel,153,0,0,0,0,153
 List of South Africans,1198,0,1,2,20,1221
 Longitude,606,0,1,10,1,618
-Mahatma Gandhi,3379,0,7,21,13,3420
+Mahatma Gandhi,3380,0,7,21,13,3421
 Makhonjwa Mountains,42,0,0,4,0,46
 Malaria,2098,0,0,6,0,2104
 Mandela Day,132,0,0,2,2,136
@@ -125,7 +126,8 @@ Petrol-paraffin engine,107,0,0,0,0,107
 Pitch (music),458,0,0,7,0,465
 Pneumatics,145,0,0,2,0,147
 Politics of South Africa,624,0,2,14,5,645
-Pollution,869,0,1,6,4,880
+Pollution,870,0,1,6,4,881
+Processed food,356,0,2,2,0,360
 Rail transport in South Africa,261,0,0,2,0,263
 Rail transport,1115,0,5,10,1,1131
 Reproduction,389,0,1,2,1,393
@@ -134,15 +136,14 @@ Road map,125,0,0,0,0,125
 Rock (geology),261,0,1,0,0,262
 Saartjie Baartman,443,0,2,0,0,445
 San healing practices,62,0,1,1,0,64
-San people,824,0,0,6,0,830
-San religion,315,0,1,6,2,324
+San people,842,0,0,6,0,848
 San religion,315,0,1,6,2,324
 San rock art,70,0,0,0,0,70
 Sand,456,0,0,4,1,461
 Scale (map),169,0,0,0,0,169
 Scientific method,1651,0,5,4,7,1667
 Settling,86,0,0,0,0,86
-Sexism,2649,0,12,13,11,2685
+Sexism,2650,0,12,13,11,2686
 Sieve,79,0,1,0,0,80
 Soil,1894,0,7,4,6,1911
 Sound,412,0,0,4,1,417
@@ -160,7 +161,7 @@ Transport,1190,0,4,8,7,1209
 Vibration,311,0,0,2,0,313
 Walter Sisulu,581,0,1,6,7,595
 Water filter,137,0,0,0,0,137
-Water pollution,825,0,11,8,7,851
+Water pollution,826,0,11,8,7,852
 Water privatisation in South Africa,65,0,0,0,0,65
 Water supply and sanitation in South Africa,494,0,0,2,0,496
 Water well,413,0,0,2,0,415

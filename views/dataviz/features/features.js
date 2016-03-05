@@ -21,11 +21,11 @@ start_label = padding*75;
 
 var font_size = '0.8em';
 
-var c_page = '#35B7BB',
-c_user = '#EC4C4E',
-c_category = '#5CB44E';
-c_template = '#EC9144',
-c_portal = '#AD72C0',
+var c_issues = '#EC4C4E',
+c_reference = '#49A0D8',
+c_note = '#A8D2A2',
+c_image = '#F5A3BD'
+c_seeAlso = '#36B7BB',
 c_benchmark = 'black';
 
 var w_line = '0.5px',
@@ -48,39 +48,45 @@ var plot = svg.append("g")
 get data
 ------------------------- */
 
-d3.csv("../../data/20160227/in_out_links.csv", loaded);
+d3.csv("../../data/20160227/features.csv", loaded);
 
 function loaded (data){
 
-	data.sort(function(a,b) {return a.total_in-b.total_in;});
+	data.sort(function(a,b) {
+		
+		total_2016 = a.references + a.notes + a.images + a.seeAlso
+		total_2015 = a.references_2015 + a.notes_2015 + a.images_2015 + a.seeAlso_2015 
+		
+		return a.total - b.total;
+	});
 
 	console.log(width + ',' + height)
 	console.log(data)
 
-	var max_in = d3.max(data, function(d) { return +d.total_in;} );
-	var max_out = d3.max(data, function(d) { return +d.total_out;} );
+	var max_issue = d3.max(data, function(d) { return +d.issues_2015 ;} );
+	var max_tot = d3.max(data, function(d) { return +d.total ;} );
 
 /* -----------------------
 set axis
 ------------------------- */
 
-	var x_in = d3.scale.linear()
-		.domain([0,500])
+	var x_issue = d3.scale.linear()
+		.domain([0,max_issue])
         .range([start_in,(start_icon-offset) ]);
 
 	var in_Axis = d3.svg.axis()
-        .scale(x_in)
-        .ticks(5)
+        .scale(x_issue)
+        .ticks(10)
         .tickSize(-height + (margin.top*2) )
         .orient('top')
     typeof(in_Axis);
 
-	var x_out = d3.scale.linear()
-		.domain([0,3770])
+	var x_tot = d3.scale.linear()
+		.domain([0,max_tot])
         .range([(start_in-offset),start_out]);
 
 	var out_Axis = d3.svg.axis()
-        .scale(x_out)
+        .scale(x_tot)
         .ticks(10)
         .tickSize(-height + (margin.top*2) )
         .orient('top')
@@ -164,7 +170,7 @@ visualize elements
 		.attr("font-size",font_size)
 		.attr('class','text')
 
-/* --- in ---  */
+/* --- issues  */
 /* ----------  */
 
 var in_link = article.append('g')
@@ -172,78 +178,26 @@ var in_link = article.append('g')
 
 	// article
 	in_link.append('rect')
-		.attr('class','page')
+		.attr('class','issue')
 		.attr('x',start_in)
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.page_in * (start_icon-start_in-offset) / max_in )
+			return (d.issues * (start_icon-start_in-offset) / max_issue )
 		})
-		.attr('fill',c_page)
-		.attr('height',bar_h)
-
-	// user
-	in_link.append('rect')
-		.attr('class','user')
-		.attr('x', function(d,i){
-			return start_in + (d.page_in * (start_icon-start_in-offset) / max_in )
-		})
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (d.user_in * (start_icon-start_in-offset) / max_in )
-		})
-		.attr('fill',c_user)
-		.attr('height',bar_h)
-
-	// category
-	in_link.append('rect')
-		.attr('class','category')
-		.attr('x',function(d,i){
-			return start_in + ((d.page_in) * (start_icon-start_in-offset) / max_in ) + ((d.user_in) * (start_icon-start_in-offset) / max_in )
-		})
-		.attr('y', bar_h )
-		.attr('width',function(d,i){
-			return (d.category_in * (start_icon-start_in-offset) / max_in)
-		})
-		.attr('fill',c_category)
-		.attr('height',bar_h)
-
-	// template
-	in_link.append('rect')
-		.attr('class','template')
-		.attr('x',function(d,i){
-			return start_in + ((d.page_in) * (start_icon-start_in-offset) / max_in ) + ((d.user_in) * (start_icon-start_in-offset) / max_in ) + ((d.category_in) * (start_icon-start_in-offset) / max_in )
-		})
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (d.template_in * (start_icon-start_in-offset) / max_in )
-		})
-		.attr('fill',c_template)
-		.attr('height',bar_h)
-
-	// portal
-	in_link.append('rect')
-		.attr('class','portal')
-		.attr('x', function(d,i){
-			return start_in + ((d.page_in) * (start_icon-start_in-offset) / max_in ) + ((d.user_in) * (start_icon-start_in-offset) / max_in ) + ((d.category_in) * (start_icon-start_in-offset) / max_in ) + (d.template_in * (start_icon-start_in-offset) / max_in )
-		})
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (d.portal_in * (start_icon-start_in-offset) / max_in )
-		})
-		.attr('fill',c_portal)
+		.attr('fill',c_issues)
 		.attr('height',bar_h)
 
 	// in - benchmark
 	in_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
-			return start_in + (d.total_in_2014 * (start_icon-start_in-offset) / max_in )
+			return start_in + (d.issues * (start_icon-start_in-offset) / max_issue )
 		})
 		.attr('y1',function(d,i){
 			return bar_h+(bar_h)
 		})
 		.attr('x2',function(d,i){
-			return start_in + (d.total_in_2014 * (start_icon-start_in-offset) / max_in )
+			return start_in + (d.issues * (start_icon-start_in-offset) / max_issue )
 		})
 		.attr('y2',function(d,i){
 			return bar_h
@@ -251,89 +205,79 @@ var in_link = article.append('g')
 		.attr('stroke',c_benchmark)
 		.attr('stroke-width',1)
 
-/* --- out ---  */
-/* ----------  */
+/* --- other features ---  */
+/* ----------------------  */
 
 
 	var out_link = article.append('g')
-		.attr('class','out')
+		.attr('class','other')
 	
-	// article
+	// references
 	out_link.append('rect')
 		.attr('class','art')
 		.attr('x', function(d,i){
-			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out ))
+			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.references) / max_tot ))
 		}) 
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (((start_in-start_out-offset) * d.page_out) / max_out )
+			return (((start_in-start_out-offset) * d.references) / max_tot )
 		})
-		.attr('fill',c_page) 
+		.attr('fill',c_reference) 
 		.attr('height',bar_h)
 
-	// user
+	// notes
 	out_link.append('rect')
-		.attr('class','user')
+		.attr('class','notes')
 		.attr('x', function(d,i){
-			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out )) - (((start_in-start_out-offset) * d.user_out) / max_out ) 
+			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.references) / max_tot )) - (((start_in-start_out-offset) * d.notes) / max_tot ) 
 		})
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (((start_in-start_out-offset) * d.user_out) / max_out )
+			return (((start_in-start_out-offset) * d.notes) / max_tot )
 		})
-		.attr('fill',c_user)
+		.attr('fill',c_note)
 		.attr('height',bar_h)
 
-	// category
+	// images
 	out_link.append('rect')
-		.attr('class','category')
+		.attr('class','images')
 		.attr('x',function(d,i){
-			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out )) - (((start_in-start_out-offset) * d.user_out) / max_out ) - (((start_in-start_out-offset) * d.category_out) / max_out )
+			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.references) / max_tot )) - (((start_in-start_out-offset) * d.notes) / max_tot ) - (((start_in-start_out-offset) * d.images) / max_tot )
 		})
 		.attr('y', bar_h )
 		.attr('width', function(d,i){
-			return (((start_in-start_out-offset) * d.category_out) / max_out )
+			return (((start_in-start_out-offset) * d.images) / max_tot )
 		})
-		.attr('fill',c_category) 
+		.attr('fill',c_image) 
 		.attr('height',bar_h)
 
-	// template
+	// see also
 	out_link.append('rect')
-		.attr('class','template')
+		.attr('class','seeAlso')
 		.attr('x',function(d,i){
-			return  start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out )) - (((start_in-start_out-offset) * d.user_out) / max_out )  - (((start_in-start_out-offset) * d.category_out) / max_out ) - (((start_in-start_out-offset) * d.template_out) / max_out )
+			return  start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.references) / max_tot )) - (((start_in-start_out-offset) * d.notes) / max_tot )  - (((start_in-start_out-offset) * d.images) / max_tot ) - (((start_in-start_out-offset) * d.seeAlso) / max_tot )
 		})
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (((start_in-start_out-offset) * d.template_out) / max_out )
+			return (((start_in-start_out-offset) * d.seeAlso) / max_tot )
 		})
-		.attr('fill',c_template) 
+		.attr('fill',c_seeAlso) 
+		.attr('height',bar_h)
 		.attr('height',bar_h)
 
-	// portal
-	out_link.append('rect')
-		.attr('class','portal')
-		.attr('x', function(d,i){
-			return  start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.page_out) / max_out )) - (((start_in-start_out-offset) * d.user_out) / max_out )  - (((start_in-start_out-offset) * d.category_out) / max_out ) - (((start_in-start_out-offset) * d.template_out) / max_out ) - (((start_in-start_out-offset) * d.portal_out) / max_out )
-		})
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (((start_in-start_out-offset) * d.portal_out) / max_out )
-		})
-		.attr('fill',c_portal) 
-		.attr('height',bar_h)
-
-	// out - benchmark
+	// tot - benchmark
 	out_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
-			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2014) / max_out ))
+			return start_out /* - 2*/ + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_2015) / max_tot ))
+			//return start_out
 		})
 		.attr('y1',function(d,i){
 			return bar_h+(bar_h)
 		})
 		.attr('x2',function(d,i){
-			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2014) / max_out ))
+			return start_out /* - 2*/ + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_2015) / max_tot ))
+			//return start_out
 		})
 		.attr('y2',function(d,i){
 			return bar_h
@@ -361,7 +305,11 @@ icons
 				}
 				return '#comm'
 			}
+			else if (d.review === 'true') {
+				return '#rev'
+			}
 			else {
+
 			}
 		})
 		.attr("x", 0)

@@ -57,7 +57,7 @@ function loaded (data){
 	console.log(width + ',' + height)
 	console.log(data)
 
-	var max_in = d3.max(data, function(d) { return +d.total_in;} );
+	var max_in = d3.max(data, function(d) { return +d.total_in_2015;} );
 	var max_out = d3.max(data, function(d) { return +d.total_out;} );
 
 /* -----------------------
@@ -65,7 +65,7 @@ set axis
 ------------------------- */
 
 	var x_in = d3.scale.linear()
-		.domain([0,500])
+		.domain([0,max_in])
         .range([start_in,(start_icon-offset) ]);
 
 	var in_Axis = d3.svg.axis()
@@ -76,7 +76,7 @@ set axis
     typeof(in_Axis);
 
 	var x_out = d3.scale.linear()
-		.domain([0,3770])
+		.domain([0,max_out])
         .range([(start_in-offset),start_out]);
 
 	var out_Axis = d3.svg.axis()
@@ -237,13 +237,13 @@ var in_link = article.append('g')
 	in_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
-			return start_in + (d.total_in_2014 * (start_icon-start_in-offset) / max_in )
+			return start_in + (d.total_in_2015 * (start_icon-start_in-offset) / max_in )
 		})
 		.attr('y1',function(d,i){
 			return bar_h+(bar_h)
 		})
 		.attr('x2',function(d,i){
-			return start_in + (d.total_in_2014 * (start_icon-start_in-offset) / max_in )
+			return start_in + (d.total_in_2015 * (start_icon-start_in-offset) / max_in )
 		})
 		.attr('y2',function(d,i){
 			return bar_h
@@ -327,13 +327,13 @@ var in_link = article.append('g')
 	out_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
-			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2014) / max_out ))
+			return start_out /*- 2*/ + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
 		})
 		.attr('y1',function(d,i){
 			return bar_h+(bar_h)
 		})
 		.attr('x2',function(d,i){
-			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2014) / max_out ))
+			return start_out /*- 2*/ + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
 		})
 		.attr('y2',function(d,i){
 			return bar_h
@@ -361,7 +361,11 @@ icons
 				}
 				return '#comm'
 			}
+			else if (d.review === 'true') {
+				return '#rev'
+			}
 			else {
+
 			}
 		})
 		.attr("x", 0)

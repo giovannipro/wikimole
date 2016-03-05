@@ -147,7 +147,7 @@ function get_issues(url) {
 
 		sum = 0;
 
-		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(',', "_");
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(', ', "_");
 
 		container = $('#output')
 
@@ -155,9 +155,6 @@ function get_issues(url) {
     		txt = $(this).prop('outerHTML')
     		sum++;
     	})
-
-		$('#hide_a').hide();
-    	$('#hide_b').show();
 
     	container.append(url_clean + ',' + sum + ',')	        	
 
@@ -177,10 +174,10 @@ function get_issues(url) {
         }
 
         if ($.inArray(url_clean, new_articles) != -1 ) {
-            container.append('true,<br/>')
+            container.append('true<br/>')
         }
         else if ($.inArray(url_clean, new_articles) -1 ) {
-            container.append('false,<br/>')
+            container.append('false<br/>')
         } 
 
 	})
@@ -197,6 +194,9 @@ function get_all_issues() {
 		get_issues(val)
 		console.log(wikilink + val)
 	})	
+
+	$('#hide_a').hide();
+   	$('#hide_b').show();
 }
 
 
@@ -219,7 +219,7 @@ function get_references(url) {
 
 		sum = 0;
 
-		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(',', "_");
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(', ', "_");
 		var container = $('#output')
 
     	jQuery.each( get, function( i, val ) {
@@ -268,7 +268,7 @@ function get_notes(url) {
 
 		sum = 0;
 
-		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(',', "_");
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(', ', "_");
 
 		container = $('#output')
 		
@@ -312,23 +312,23 @@ function get_images(url) {
     .done (function (get_ref) {
 
     	var parsedata_func = $.parseHTML(get_ref)
-    	//var filtered = parsedata_func.filter('.mbox-image');
 
     	get = []
     	get1 = []
     	get2 = []
 
-    	//get = ($(parsedata_func).find('#mw-content-text').filter( ".metadata" ))
-		get1 = $(parsedata_func).find('#mw-content-text').find('.thumbimage') // .find('.thumb')  .filter( ".mbox-image" )
-		get2 = $(parsedata_func).find('#mw-content-text').find('.image')
-		
+		get1 = $(parsedata_func).find('#mw-content-text').find('.thumbimage')
+		//get2 = $(parsedata_func).find('#mw-content-text').find('.image')
+		get3 = ($(parsedata_func).find('.thumb').find('a').find('img'));
+
 		/*console.log(url)
 		console.log(get1)
 		console.log(get2)*/
+		//console.log(get3)
 
 		sum = 0;
 
-		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(',', "_");
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(', ', "_");
 		
 		container = $('#output')
     	
@@ -343,7 +343,7 @@ function get_images(url) {
 			//sum++;
 			//console.log(wikilink + txt)
     	})
-    	jQuery.each( get2, function( i, val ) {
+    	/*jQuery.each( get2, function( i, val ) {
     		txt = $(this).prop('href')
     		//txt_clean = txt.replace('http://localhost:8888/','')
 			if (txt != undefined) {
@@ -352,12 +352,20 @@ function get_images(url) {
 			}
 			else{}
 			//sum++;
+    	})*/
+    	jQuery.each( get3, function( i, val ) {
+    		//txt = $(this).prop('href')
+			if (val != undefined) {
+				console.log(val)
+				sum++;	
+			}
+			else{
+				//console.log(val)
+			}
+			//sum++;
     	})
     	
     	container.append(url_clean + ',' + sum + '</br>')	
-
-		$('#hide_a').hide();
-    	$('#hide_b').show();
 
 	})
 	.error (function (xhr, ajaxOptions, thrownError) {
@@ -373,6 +381,9 @@ function get_all_images() {
 		get_images(val)
 		console.log(wikilink + val)
 	})	
+
+	$('#hide_a').hide();
+    $('#hide_b').show();
 }
 
 /* ------------------------------------
@@ -401,9 +412,6 @@ function get_seeAlso(url) {
     		sum++;
     	})
 
-   		$('#hide_a').hide();
-    	$('#hide_b').show();
-
     	container.append(url_clean + ',' + sum + '</br>')
 	        	
 	})
@@ -420,6 +428,8 @@ function get_all_seeAlso() {
 		console.log(wikilink + val);
 		get_seeAlso(val);
 	})	
+	$('#hide_a').hide();
+	$('#hide_b').show();
 }
 
 
@@ -645,7 +655,7 @@ function entrylinks(url) {
 
 			index++;
 
-			var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','').replace(/_/g, ' ').replace(/,/g, '_');
+			var art_name = url.replace('https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=','').replace(/_/g, ' ').replace(/, /g, '_');
 			container.append('<span class="red">' + art_name + ',</span>' );
 
 			var link = [];
@@ -712,10 +722,10 @@ function entrylinks(url) {
             }
 
             if ($.inArray(art_name, new_articles) != -1 ) {
-                container.append('true,<br/>')
+                container.append('true<br/>')
             }
             else if ($.inArray(art_name, new_articles) -1 ) {
-                container.append('false,<br/>')
+                container.append('false<br/>')
             }               
 
         },   
@@ -768,7 +778,7 @@ function exitlinks(url) {
     	var get = [],
 		get = ($(parsedata_func).find('#mw-content-text').find('a'));
 
-		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'");
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(', ', '_');
 
 		container.append('<span class="red">' + url_clean + '</span>,' )
 

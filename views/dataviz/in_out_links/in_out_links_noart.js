@@ -16,7 +16,7 @@ bar_h = 5;
 
 var start_id = padding,
 start_out = padding*20,
-start_in = padding*60,
+start_in = padding*52,
 start_icon = padding*73,
 start_label = padding*75;
 
@@ -53,15 +53,23 @@ d3.csv("../../data/20160227/in_out_links.csv", loaded);
 
 function loaded (data){
 
-	data.sort(function(a,b) {return a.total_in-b.total_in;});
+	data.sort(function(a,b) {
+		return a.total_in-b.total_in;
+
+		benchmark = a.total_in_2015 - a.page_in
+
+	});
 
 	console.log(width + ',' + height)
 	console.log(data)
 
 	var max_in = d3.max(data, function(d) { return +d.total_in - (+d.page_in) ;} );
 	var max_out = d3.max(data, function(d) { return +d.total_out - (+d.page_out) ;} );
+	//var max_out = d3.max(data, function(d) { return +d.total_out_2015 - (+d.page_out_2015) ;} );
+
 	console.log(max_in)
 	console.log(max_out)
+
 	//console.log(width-(margin.left*2)- (padding*52))
 
 /* -----------------------
@@ -239,23 +247,22 @@ var in_link = article.append('g')
 	*/
 
 	// in - benchmark
-	/*in_link.append('line')
+	in_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
-			return start_in + (d.total_in_2015 * (start_label-start_in-offset) / max_in )
+			return start_in + ( (d.total_in_2015-d.page_in_2015)  * (start_label-start_in-offset) / max_in )
 		})
 		.attr('y1',function(d,i){
 			return bar_h+(bar_h)
 		})
 		.attr('x2',function(d,i){
-			return start_in + (d.total_in_2015 * (start_label-start_in-offset) / max_in )
+			return start_in + ((d.total_in_2015-d.page_in_2015) * (start_label-start_in-offset) / max_in )
 		})
 		.attr('y2',function(d,i){
 			return bar_h
 		})
 		.attr('stroke',c_benchmark)
 		.attr('stroke-width',1)
-	*/
 
 /* --- out ---  */
 /* ----------  */
@@ -329,23 +336,24 @@ var in_link = article.append('g')
 		.attr('height',bar_h)*/
 
 	// out - benchmark
-	/*out_link.append('line')
+	out_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
-			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
+			return start_out /*- 2*/ + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * (d.total_out_2015 - d.page_out_2015) ) / max_out ))
+			//return start_in - offset //-start_in-offset
 		})
 		.attr('y1',function(d,i){
 			return bar_h+(bar_h)
 		})
 		.attr('x2',function(d,i){
-			return start_out - 2 + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
+			return start_out /*- 2*/ + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * (d.total_out_2015 - d.page_out_2015) ) / max_out ))
+			//return start_in - offset
 		})
 		.attr('y2',function(d,i){
 			return bar_h
 		})
 		.attr('stroke',c_benchmark)
 		.attr('stroke-width',1)
-	*/
 
 /* -----------------------
 icons
@@ -367,7 +375,11 @@ icons
 				}
 				return '#comm'
 			}
+			else if (d.review === 'true') {
+				return '#rev'
+			}
 			else {
+
 			}
 		})
 		.attr("x", 0)
