@@ -12,30 +12,22 @@ nomargin_h = height - margin.top - margin.bottom ;
 
 var padding = width/100,
 offset = padding*1.5,
-bar_h = 5;
+bar_h = 5,
+offset = padding*10;
 
-/*
-var start_id = padding,
-start_out = padding*20,
-start_in = padding*60,
-start_icon = padding*73,
-start_label = padding*75;
-*/
+var start_circle = padding*12,
+start_label = padding*15;
 
-var font_size = '0.8em';
+var font_size = '0.7em';
 
-var c_issues = '#EC4C4E',
-c_reference = '#49A0D8',
-c_note = '#A8D2A2',
-c_image = '#F5A3BD'
-c_seeAlso = '#36B7BB',
-c_benchmark = 'black';
+var c_circle = '#9E9E9E'
 
 var w_line = '0.5px',
 c_line = '#9E9E9E',
 c_tick = '#636362';
 
 var x = 10;
+var records = 177; 
 
 /* -----------------------
 set plot
@@ -57,19 +49,15 @@ d3.csv("../../data/20160227/edits_and_editors_2014_2015.csv", loaded);
 
 function loaded (data){
 
-	/*data.sort(function(a,b) {
-		
-		total_2016 = a.references + a.notes + a.images + a.seeAlso
-		total_2015 = a.references_2015 + a.notes_2015 + a.images_2015 + a.seeAlso_2015 
-		
-		return a.total - b.total;
-	});*/
+	data.sort(function(a,b) {
+		return a.edits_2014 - b.edits_2014;
+	});
 
 	console.log(width + ',' + height)
 	console.log(data)
 
-	var max_edits = d3.max(data, function(d) { return +d.edits_2015} );
-	var max_editors = d3.max(data, function(d) { return +d.unique_editors_2015 ;} );
+	var max_edits = d3.max(data, function(d) { return +d.edits_2014} );
+	var max_editors = d3.max(data, function(d) { return +d.unique_editors_2014 ;} );
 
 	console.log(max_edits)
 	console.log(max_editors)
@@ -80,7 +68,7 @@ set axis
 
 	var x_edits = d3.scale.linear()
 		.domain([0,max_edits])
-        .range([0,width-(margin.left*2) ]);
+        .range([0,nomargin_h-offset ]);
 
 	var x_Axis = d3.svg.axis()
         .scale(x_edits)
@@ -91,7 +79,7 @@ set axis
 
 	var y_editors = d3.scale.linear()
 		.domain([0,max_editors])
-        .range([0,height]);
+        .range([0,nomargin_h-offset]);
 
 	var y_Axis = d3.svg.axis()
         .scale(y_editors)
@@ -153,6 +141,129 @@ var article = plot.selectAll('.article')
 		return d.article
 	})
 
+// 2014
+article.append('circle')
+	/*.attr('cx',function(d,i){
+		return (nomargin_w * d.edits_2014) / max_edits
+	})*/
+	.attr('cx', start_circle)
+	.attr('cy',function(d,i){
+		//return (nomargin_h * d.edits_2014) / max_edits 
+		return (( (nomargin_h-offset) * d.unique_editors_2014) / max_editors )
+	})
+	.attr('r',function(d,i){
+		return Math.sqrt(d.avg_size_2014 / 3.14) / 1.5;
+	})
+	.attr('fill','none')
+	.attr('stroke','green')
+
+/* --- title ------------  */
+/* ----------------------  */
+
+console.log(((nomargin_w - (start_circle + (padding*1) ) ) * 10 ) / max_edits )
+
+var title = plot.selectAll('.title')
+	.data(data)
+	.enter()
+	.append('g')
+	.attr('class','title')
+	.attr('transform',function(d,i){
+		return 'translate(' 
+			+ /*((start_circle+(padding*10))*/ + (((nomargin_w - start_circle ) *d.edits_2014 ) / records )   //  max_edits
+			+ ',' 
+			+ ((( (nomargin_h-offset) * d.unique_editors_2014) / max_editors) + (padding*5) )   +')'
+	})
+
+title.append('g')
+	.attr('transform',function(d,i){
+		return	'translate(' + i*8 +',0)'
+	})
+	.append('text')
+    .attr('dy', '.20em')
+    .attr('dx', '.20em')
+	.text(function (d,i){
+		return d.article
+	})
+	.attr("font-size",font_size)	
+	.attr('transform','rotate(-90)')
+
+title.append('g')
+	.attr('transform',function(d,i){
+		return	'translate(' + i*8 +',0)'
+	})
+	.append('text')
+    .attr('dy', '.20em')
+    .attr('dx', '.20em')	
+	.text(function (d,i){
+		return d.unique_editors_2014 + ',' + d.edits_2014
+	})
+	.attr('font-size',font_size)
+
+/* --- edits ------------  */
+/* ----------------------  */
+
+title.append('g')
+	.attr('transform',function(d,i){
+		return	'translate(' + i*8 +',0)'
+	})
+	.append('line')
+	.attr('class','edit')
+	.attr('x1',5)
+	.attr('y1',0)
+	.attr('x2',5)
+	.attr('y2',function(d,i){
+		return   -(180 * d.edits_2014 / max_edits)  // (  ( (nomargin_h-offset) * d.unique_editors_2014) / max_editors ) * d.edits_2014 / max_edits 
+	})
+	.attr('stroke','red')
+
+/*
+title.append('g')
+	.attr('transform','translate(0,20)')
+	.attr('class','edit')
+	
+d3.selectAll('.edit').append('text')
+    .attr('dy', '.20em')
+    .attr('dx', '.20em')	
+	.text(function (d,i){
+		return d.unique_editors_2014
+	})
+	.attr('transform','rotate(-90)')
+
+title.append('text')
+    .attr('dy', '.20em')
+    .attr('dx', '.20em')
+	.text(function (d,i){
+		//return i + 1
+		return d.article
+	})
+	.attr("font-size",font_size)	
+	.attr('transform','rotate(-90)')
+
+/*
+	.append('g')
+	.attr('class','title')
+	//.attr('transform','rotate(90 100 100)')
+	.attr('transform',function(d,i){
+		return 'translate(100,'+ (( (nomargin_h-offset) * d.unique_editors_2014) / max_editors) + ')'
+	})
+	.attr('transform','rotate(90)')
+
+d3.selectAll('.title').append('text')
+    //.attr('y',0)
+    .attr('dy', '.20em')
+    .attr('dx', '.20em')
+	.text(function (d,i){
+		//return i + 1
+		return d.article
+	})
+	.attr("font-size",font_size)
+
+*/
+
+
+
+
+
 // lines
 /*article.append('line')
 	.attr('class','line')
@@ -163,28 +274,16 @@ var article = plot.selectAll('.article')
 		return  (nomargin_h * d.unique_editors_2014) / max_editors
 	})
 	.attr('x2',function(d,i){
-		return (nomargin_w * d.edits_2015) / max_edits 
+		return (nomargin_w * d.edits_2014) / max_edits 
 	})
 	.attr('y2',function(d,i){
-		return (nomargin_h * d.unique_editors_2015) / max_editors
+		return (nomargin_h * d.unique_editors_2014) / max_editors
 	})
 	.attr('stroke',c_line)
 	.attr('stroke-width',1)
 */
 
-// 2015
-article.append('circle')
-	.attr('cx',function(d,i){
-		return (nomargin_w * d.edits_2015) / max_edits
-	})
-	.attr('cy',function(d,i){
-		return (nomargin_h * d.unique_editors_2015) / max_editors
-	})
-	.attr('r',function(d,i){
-		return d.avg_size_2015 / 1000
-	})
-	.attr('fill','none')
-	.attr('stroke','black')
+
 
 
 	/*
@@ -199,8 +298,6 @@ article.append('circle')
 		})
 		.attr('fill',c_issues)
 		.attr('height',bar_h)
-
-
 
 /*
 	var article = plot.selectAll('.article')
