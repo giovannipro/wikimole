@@ -16,7 +16,8 @@ bar_h = 5;
 
 var start_id = padding,
 start_out = padding*20,
-start_in = padding*52,
+start_in = padding*60,
+start_icon = padding*73,
 start_label = padding*75;
 
 var font_size = '0.6em';
@@ -26,11 +27,11 @@ c_user = '#EC4C4E',
 c_category = '#5CB44E';
 c_template = '#EC9144',
 c_portal = '#AD72C0',
-c_benchmark = 'black',
-c_line = 'black',
-c_tick = '#636362';
+c_benchmark = 'black';
 
-var test = 'test,100,100,100,100,100,500,500,500,500,500,1500,3500,2000,3500'
+var w_line = '0.5px',
+c_line = '#9E9E9E',
+c_tick = '#636362';
 
 /* -----------------------
 set plot
@@ -69,7 +70,7 @@ set axis
 
 	var x_in = d3.scale.linear()
 		.domain([0,107])
-        .range([start_in,(start_label-offset) ]);
+        .range([start_in,(start_icon-offset) ]);
 
 	var in_Axis = d3.svg.axis()
         .scale(x_in)
@@ -125,6 +126,7 @@ visualize grid
 			.attr('y2', i * ((height - margin.top - margin.bottom) / (data.length) )) 
 			.attr('class','o_line')
 			.attr('stroke',c_line)
+			.attr('stroke-width',w_line)
     	}
 	}
 
@@ -178,7 +180,7 @@ var in_link = article.append('g')
 		.attr('x',start_in)
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.user_in * (start_label-start_in-offset) / max_in )
+			return (d.user_in * (start_icon-start_in-offset) / max_in )
 		})
 		.attr('fill',c_user)
 		.attr('height',bar_h)
@@ -187,11 +189,11 @@ var in_link = article.append('g')
 	in_link.append('rect')
 		.attr('class','category')
 		.attr('x', function(d,i){
-			return start_in + (d.user_in * (start_label-start_in-offset) / max_in )
+			return start_in + (d.user_in * (start_icon-start_in-offset) / max_in )
 		})
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.category_in * (start_label-start_in-offset) / max_in )
+			return (d.category_in * (start_icon-start_in-offset) / max_in )
 		})
 		.attr('fill',c_category)
 		.attr('height',bar_h)
@@ -200,11 +202,11 @@ var in_link = article.append('g')
 	in_link.append('rect')
 		.attr('class','template')
 		.attr('x',function(d,i){
-			return start_in + ((d.user_in) * (start_label-start_in-offset) / max_in ) + ((d.category_in) * (start_label-start_in-offset) / max_in )
+			return start_in + ((d.user_in) * (start_icon-start_in-offset) / max_in ) + ((d.category_in) * (start_icon-start_in-offset) / max_in )
 		})
 		.attr('y', bar_h )
 		.attr('width',function(d,i){
-			return (d.template_in * (start_label-start_in-offset) / max_in)
+			return (d.template_in * (start_icon-start_in-offset) / max_in)
 		})
 		.attr('fill',c_template)
 		.attr('height',bar_h)
@@ -213,11 +215,11 @@ var in_link = article.append('g')
 	in_link.append('rect')
 		.attr('class','template')
 		.attr('x',function(d,i){
-			return start_in + ((d.user_in) * (start_label-start_in-offset) / max_in ) + ((d.category_in) * (start_label-start_in-offset) / max_in ) + ((d.template_in) * (start_label-start_in-offset) / max_in )
+			return start_in + ((d.user_in) * (start_icon-start_in-offset) / max_in ) + ((d.category_in) * (start_icon-start_in-offset) / max_in ) + ((d.template_in) * (start_icon-start_in-offset) / max_in )
 		})
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			return (d.portal_in * (start_label-start_in-offset) / max_in )
+			return (d.portal_in * (start_icon-start_in-offset) / max_in )
 		})
 		.attr('fill',c_portal)
 		.attr('height',bar_h)
@@ -345,6 +347,50 @@ var in_link = article.append('g')
 		.attr('stroke-width',1)
 	*/
 
+/* -----------------------
+icons
+------------------------- */
+
+    // icons
+	var icons = article.append('g')
+		.attr('class','icons')
+		.attr('transform','translate(' + start_icon  + ',' + (bar_h*0.5) +')' ) 
+	
+	// community/review	
+	d3.selectAll(".icons").append('g')
+		//.attr('transform','translate('+ (-padding*1.5) + ',0)' ) 
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if (d.community === 'true') {
+				if (d.review === 'true') {
+					return '#comm_rev'
+				}
+				return '#comm'
+			}
+			else {
+			}
+		})
+		.attr("x", 0)
+		.attr("y", bar_h-(bar_h/2) )	
+    	//.attr('transform','scale(0.2)')
+		.attr('transform','scale(' + ((height - margin.top - margin.bottom) / (data.length) / 100)  + ')' )
+
+	// new
+	d3.selectAll(".icons").append('g')
+		.attr('transform','translate('+ (-padding) + ',0)' ) 
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if (d.new_article === 'true') {
+				return '#new'
+			}
+			else {
+			}
+		})
+		.attr("x", 0)
+		.attr("y", bar_h/2)	
+		//.attr('transform','scale(0.2)')
+		.attr('transform','scale(' + ((height - margin.top - margin.bottom) / (data.length) / 100)  + ')' )
+		
 };
 
 
