@@ -1,159 +1,177 @@
-article_2015,unique_editors,edits,avg_size
-Acid,6,10,36502
-Africa Day,5,10,2275
-Agriculture in_South_Africa,8,10,12917
-AIDS orphan,6,6,2764
-Alcohol abuse,7,10,46366
-Alcohol dependence,7,10,9075
-Alcoholism,9,10,108471
-Aloe vera,6,10,30838
-Aloe,5,10,19002
-Animal husbandry,7,10,17893
-Animal-powered transport,3,4,3058
-Apartheid,10,10,151694
-Atom,8,10,111088
-Automobile,2,2,72
-Base (chemistry),8,10,19747
-Bias,9,10,66235
-Bicycle,7,10,68401
-Biome,7,10,20549
-Bird nest,8,10,59768
-Boiling,10,10,10744
-Borehole,5,6,5452
-Bullying,9,10,60070
-Castle of_Good_Hope,7,10,9950
-Cell (biology),5,10,45853
-Ceramic,8,10,18790
-Child abuse,3,10,124328
-Children's Act,_2005,1,1,3628
-Children's Day,8,10,65274
-Circuit diagram,9,10,10381
-Clay,8,10,11028
-Climate,10,10,36811
-Coal in_South_Africa,8,10,13292
-Coal,8,10,96046
-Control variable,8,10,3285
-Convenience food,6,10,24331
-Cooking,8,10,38618
-Cradle of_Humankind,8,10,11730
-Dependent and_independent_variables,9,10,13099
-Design,7,10,29229
-Discrimination,6,10,86549
-Domestic violence,9,10,295333
-Domestic violence_in_South_Africa,6,10,14291
-Drakensberg,7,10,28544
-Duration (music),4,4,2872
-Economy of_South_Africa,7,10,79169
-Ecosystem,8,10,52080
-Electrical conductor,9,10,10397
-Electrical network,9,10,8021
-Electricity generation,6,10,34796
-Energy in_South_Africa,4,10,16081
-Fair trade,6,10,125704
-Farm,10,10,21887
-Fiber,5,10,12290
-Fire safety,8,10,15332
-Flag of_South_Africa,7,10,15513
-Food pyramid_(nutrition),9,10,30187
-Food security,7,10,107384
-Food vs._fuel,7,10,84242
-Food,9,10,63384
-Frances Baard,4,4,9043
-Free State_(province),9,10,20946
-Freedom Day_(South_Africa),6,10,1585
-Gana and_Gwi_people,5,8,1521
-Gangster,9,10,42544
-Gas,10,10,38546
-Gauteng,7,10,46772
-Gender role,10,10,109337
-Glass,8,10,60716
-Griqua people,7,9,11696
-Hand washing,7,10,46389
-Health,10,10,37981
-Herero and_Namaqua_Genocide,8,10,59906
-Heritage Day_(South_Africa),8,10,4006
-History of_South_Africa,3,10,135083
-History of_writing,8,10,45927
-HIV,5,10,91248
-HIV/AIDS,6,10,158396
-Home safety,5,10,6936
-Human nutrition,8,10,118739
-Human Rights_Day,7,10,17084
-Human swimming,9,10,24652
-Hydraulics,7,10,10901
-Insulator (electricity),8,10,28307
-Kaditshwene,3,10,3959
-Khoikhoi,10,10,12405
-Later Stone_Age,7,8,7670
-Latitude,7,10,41697
-Liquid fuel,5,6,13891
-List of_South_Africans,10,10,53448
-Longitude,10,10,20234
-Mahatma Gandhi,10,10,175981
-Makhonjwa Mountains,6,6,4349
-Malaria,7,10,131592
-Mandela Day,5,6,3748
-Map,7,10,28836
-Mapungubwe Museum,1,1,2591
-Mapungubwe National_Park,3,10,13760
-Mind map,6,10,14531
-Mining industry_of_South_Africa,8,10,19273
-Mpumalanga,9,10,17506
-Music of_South_Africa,6,10,56080
-National anthem_of_South_Africa,9,10,6616
-National symbols_of_South_Africa,5,6,5584
-National Women's_Day,7,10,3815
-Nelson Mandela,6,10,175720
-Nest,7,10,23425
-Noise pollution,8,10,17100
-Oliver Tambo,7,10,13325
-Outer space,7,10,97114
-Outline of_domestic_violence,4,8,40447
-Paper,9,10,28779
-People Against_Gangsterism_and_Drugs,1,2,8187
-Petrol-paraffin engine,4,8,7061
-Pitch (music),8,10,26791
-Pneumatics,7,10,7217
-Politics of_South_Africa,10,10,9831
-Pollution,9,10,43516
-Rail transport,7,10,66926
-Rail transport_in_South_Africa,7,9,13594
-Reproduction,3,10,24160
-Right to_food,4,4,50590
-Road map,8,9,8062
-Rock (geology),7,10,14608
-San healing_practices,5,6,10242
-San people,7,10,62149
-San religion,6,10,17546
-San rock_art,3,10,7261
-Sand,8,10,14728
-Scale (map),9,10,33368
-Scientific method,7,10,143552
-Settling,7,10,10334
-Sexism,6,10,167142
-Soil,9,10,199366
-Sound,5,10,28775
-South African_cuisine,7,10,19052
-South African_locomotive_history,2,10,88023
-Standard Model,9,10,48734
-Stereotype,8,10,83106
-Steve Biko,8,10,29642
-Tap (valve),9,10,13519
-Textile,6,10,28155
-Trade,8,10,35471
-Transport in_South_Africa,8,8,8567
-Transport,8,10,39327
-Vibration,9,10,42741
-Walter Sisulu,8,10,10366
-Water filter,9,10,10854
-Water pollution,6,10,37378
-Water supply_and_sanitation_in_South_Africa,8,10,58253
-Water well,10,10,29907
-Wax,10,10,11774
-Western Cape,9,10,42628
-Wildlife conservation,6,10,12316
-Wildlife management,8,10,20003
-Winnie Madikizela-Mandela,8,10,28534
-Wood,7,10,51023
-Wool,7,10,38039
-Youth culture,6,10,22693
+article_2015,unique_editors,edits,avg_size,community,review,new_articles
+2 ft gauge railways in South Africa,4,7,21440,false,false,false
+Acid,6,10,36502,false,false,false
+Africa Day,5,10,2275,false,false,false
+Agriculture in South Africa,8,10,12917,true,true,false
+AIDS orphan,6,6,2764,false,false,false
+Alcohol abuse,7,10,46366,false,false,false
+Alcohol dependence,7,10,9075,false,false,false
+Alcoholism,9,10,108471,false,false,false
+Aloe vera,6,10,30838,false,false,false
+Aloe,5,10,19002,false,false,false
+Animal husbandry in South Africa,0,0,0,false,false,false
+Animal husbandry,7,10,17893,false,false,false
+Animal-powered transport,3,4,3058,false,false,false
+Apartheid,10,10,151694,true,true,false
+Atom,8,10,111088,false,false,false
+Base (chemistry),8,10,19747,false,false,false
+Bias,9,10,66235,false,false,false
+Bicycle,7,10,68401,true,true,false
+Biome,7,10,20549,false,false,false
+Bird nest,8,10,59768,false,false,false
+Boiling,10,10,10744,false,false,false
+Borehole,5,6,5452,false,false,false
+Bullying,9,10,60070,false,false,false
+Car,5,10,62299,false,false,false
+Castle of Good Hope,7,10,9950,false,false,false
+Cell (biology),5,10,45853,false,false,false
+Ceramic,8,10,18790,false,false,false
+Chapter Two of the Constitution of South Africa,3,3,28555,false,false,false
+Child abuse,3,10,124328,false,false,false
+Children's Act, 2005,1,1,3628,false,false,false
+Children's Day,8,10,65274,false,false,false
+Circuit diagram,9,10,10381,false,false,false
+Clay,8,10,11028,false,false,false
+Climate,10,10,36811,false,false,false
+Coal in South Africa,8,10,13292,true,false,false
+Coal,8,10,96046,false,false,false
+Control variable,8,10,3285,false,false,false
+Convenience food,6,10,24331,false,false,false
+Cooking,8,10,38618,false,false,false
+Cradle of Humankind,8,10,11730,true,true,false
+Day of Reconciliation,9,10,2465,true,false,false
+Decantation,8,10,2540,false,false,false
+Dependent and independent variables,9,10,13099,false,false,false
+Design,7,10,29229,false,false,false
+Discrimination,6,10,86549,true,false,false
+Domestic violence in South Africa,6,10,14291,true,true,false
+Domestic violence,9,10,295333,true,false,false
+Drakensberg,7,10,28544,false,false,false
+Duration (music),4,4,2872,false,false,false
+Economy of South Africa,7,10,79169,false,false,false
+Ecosystem,8,10,52080,false,false,false
+Electrical conductor,9,10,10397,false,false,false
+Electrical network,9,10,8021,false,false,false
+Electricity generation,6,10,34796,false,false,false
+Energy in South Africa,4,10,16081,false,false,false
+Fair trade,6,10,125704,false,false,false
+Farm,10,10,21887,false,false,false
+Fiber,5,10,12290,false,false,false
+Fire safety,8,10,15332,false,false,false
+Flag of South Africa,7,10,15513,false,false,false
+Food group,9,10,6966,false,false,false
+Food pyramid (nutrition),9,10,30187,false,false,false
+Food security,7,10,107384,false,false,false
+Food vs. fuel,7,10,84242,false,false,false
+Food,9,10,63384,false,false,false
+Frances Baard,4,4,9043,true,false,false
+Free State (province),9,10,20946,false,false,false
+Freedom Day (South Africa),6,10,1585,false,false,false
+Gana and Gwi people,5,8,1521,false,false,false
+Gangster,9,10,42544,false,false,false
+Gas,10,10,38546,false,false,true
+Gauteng,7,10,46772,false,false,false
+Gender role,10,10,109337,true,true,true
+Gender stereotypes,0,0,0,false,false,false
+Glass,8,10,60716,false,false,false
+Griqua people,7,9,11696,false,false,false
+Hand washing,7,10,46389,true,true,false
+Health,10,10,37981,false,false,false
+Healthcare in South Africa,3,10,12296,false,false,false
+Herero and Namaqua Genocide,8,10,59906,true,false,false
+Heritage Day (South Africa),8,10,4006,true,true,false
+History of South Africa,3,10,135083,false,false,false
+History of writing,8,10,45927,false,false,false
+HIV,5,10,91248,false,false,false
+HIV/AIDS,6,10,158396,false,false,false
+Home safety,5,10,6936,false,false,false
+Human nutrition,8,10,118739,false,false,false
+Human Rights Day,7,10,17084,true,true,false
+Human swimming,9,10,24652,false,false,false
+Hydraulics,7,10,10901,false,false,false
+Insulator (electricity),8,10,28307,false,false,false
+Kaditshwene,3,10,3959,false,false,true
+Khoikhoi,10,10,12405,true,true,false
+Khoisan languages,8,10,17361,false,false,false
+Kingdom of Mapungubwe,6,10,14136,false,false,false
+Later Stone Age,7,8,7670,false,false,false
+Latitude,7,10,41697,false,false,false
+Liquid fuel,5,6,13891,false,false,false
+List of South Africans,10,10,53448,false,false,false
+Longitude,10,10,20234,false,false,false
+Mahatma Gandhi,10,10,175981,false,false,false
+Makhonjwa Mountains,6,6,4349,false,false,true
+Malaria,7,10,131592,false,false,false
+Mandela Day,5,6,3748,false,false,false
+Map,7,10,28836,false,false,false
+Mapungubwe Museum,1,1,2591,true,true,false
+Mapungubwe National Park,3,10,13760,false,false,false
+Mind map,6,10,14531,false,false,true
+Mining industry of South Africa,8,10,19273,false,false,false
+Mpumalanga,9,10,17506,false,false,false
+Music of Africa,8,10,19605,false,false,false
+Music of South Africa,6,10,56080,false,false,false
+National anthem of South Africa,9,10,6616,false,false,false
+National symbols of South Africa,5,6,5584,false,false,false
+National Women's Day,7,10,3815,false,false,false
+Nelson Mandela,6,10,175720,true,true,false
+Nest,7,10,23425,false,false,false
+Noise pollution,8,10,17100,false,false,false
+Oliver Tambo,7,10,13325,true,true,false
+Outer space,7,10,97114,false,false,false
+Outline of domestic violence,4,8,40447,false,false,false
+Paper,9,10,28779,false,false,false
+People Against Gangsterism and Drugs,1,2,8187,false,false,false
+Petrol-paraffin engine,4,8,7061,false,false,false
+Pitch (music),8,10,26791,false,false,false
+Pneumatics,7,10,7217,false,false,false
+Politics of South Africa,10,10,9831,false,false,false
+Pollution,9,10,43516,false,false,false
+Processed food,0,0,0,false,false,true
+Rail transport in South Africa,7,9,13594,false,false,false
+Rail transport,7,10,66926,false,false,false
+Reproduction,3,10,24160,false,false,false
+Right to food,4,4,50590,false,false,false
+Road map,8,9,8062,false,false,false
+Rock (geology),7,10,14608,false,false,false
+Saartjie Baartman,6,10,52338,false,false,false
+San healing practices,5,6,10242,true,true,false
+San people,7,10,62149,true,true,false
+San religion,6,10,17546,false,false,false
+San rock art,3,10,7261,true,true,false
+Sand,8,10,14728,false,false,false
+Scale (map),9,10,33368,false,false,false
+Scientific method,7,10,143552,false,false,false
+Settling,7,10,10334,false,false,false
+Sexism,6,10,167142,true,false,false
+Sieve,9,10,5599,false,false,false
+Soil,9,10,199366,false,false,false
+Sound,5,10,28775,false,false,false
+South Africa,8,10,139764,false,false,false
+South African cuisine,7,10,19052,false,false,false
+South African locomotive history,2,10,88023,false,false,false
+Standard Model,9,10,48734,false,false,false
+Stereotype,8,10,83106,false,false,false
+Steve Biko,8,10,29642,false,false,false
+Tap (valve),9,10,13519,false,false,false
+Textile,6,10,28155,false,false,false
+Trade,8,10,35471,false,false,false
+Transport in South Africa,8,8,8567,true,false,false
+Transport,8,10,39327,false,false,false
+Vibration,9,10,42741,false,false,false
+Walter Sisulu,8,10,10366,true,true,false
+Water filter,9,10,10854,false,false,false
+Water pollution,6,10,37378,true,true,false
+Water privatisation in South Africa,3,10,7903,false,true,false
+Water supply and sanitation in South Africa,8,10,58253,true,true,false
+Water well,10,10,29907,false,false,false
+Wax,10,10,11774,false,false,false
+Western Cape,9,10,42628,true,true,false
+Wetland,9,10,76599,false,false,false
+Wildlife conservation,6,10,12316,false,false,false
+Wildlife management,8,10,20003,false,false,false
+Winnie Madikizela-Mandela,8,10,28534,true,false,false
+Wood,7,10,51023,true,false,false
+Wool,7,10,38039,false,false,false
+Youth culture,6,10,22693,false,false,false
+ǃKung people,8,10,16139,false,false,false

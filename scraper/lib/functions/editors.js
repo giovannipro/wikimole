@@ -30,7 +30,7 @@ http://www.epochconverter.com/
 ARTICLES AND EDITORS LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 // it does not contain bots
 var editor_list_14 = '../../data/edits/editors_14.csv';  // editors_14    editors_test
@@ -188,7 +188,7 @@ function get_edits(url) {
             //console.log(wikiResponse)
 
             container = $('#output');
-            url_clean = url.replace(/_/g,' ').replace(edits_14, '').replace(edits_15, '');
+            url_clean = url.replace(/_/g,' ').replace(edits_14, '').replace(edits_15, '').replace(', ', '_');
             
             obj = [];
             obj = $(wikiResponse.query.pageids);
@@ -196,63 +196,100 @@ function get_edits(url) {
             pageids = obj[0].toString();
             edit =  $(wikiResponse.query.pages)[0][pageids].revisions;
 
-            sum_edits = 0;
-            sum_editors = 0;
-            sum_unique_editors = 0;
-            sum_size = 0;
+            //console.log(edit)
+            container.append(url_clean + ',');
 
-            index++;
+            if (jQuery.type(edit) === 'undefined') {
+                
+                container.append('0,0,0,');
+            }
+            else {
+                sum_edits = 0;
+                sum_editors = 0;
+                sum_unique_editors = 0;
+                sum_size = 0;
 
-            var size_array = [],
-            user_array = [],
-            result = [];
+                index++;
 
-            if (edit == null) {
-                console.log(url + ' - null');
+                var size_array = [],
+                user_array = [],
+                result = [];
+
+                jQuery.each( edit, function( a,b ) {
+
+                    user = b.user;
+                    size = b.size;
+
+                    if ( user.toLowerCase().indexOf(findme1) >= 0 ) {
+                        user.toLowerCase().replace(findme1, " bot");
+                    }
+                    else {
+                        sum_edits++;
+                        
+                        user_clean = user.replace(/./g,'_');
+
+                        user_array.push( user );
+                        sorted_user_array =  user_array.sort();
+
+                        $.each(sorted_user_array, function(i, e) {
+                            if ($.inArray(e, result) == -1) {
+                                result.push(e);
+                                sorted_result = result.sort();
+
+                                sum_unique_editors++;
+                            }
+                        });
+
+                        size_array.push(size);
+
+                        total = eval(size_array.join("+"));
+                        average = Math.round(total / size_array.length);
+                    }
+                });
+
+                container.append(sum_unique_editors + ',');
+                container.append(sum_edits + ',');
+                container.append(average + ',');
+            }
+            //console.log(index + '-' + url_clean);
+            //console.log(sorted_result);
+
+            /*if (edit != null) {   
+                container.append(sum_unique_editors + ',');
             }
             else{
-                // ok;
+                container.append('0,');
+                console.log(url + ' - null');
             }
-            
-            jQuery.each( edit, function( a,b ) {
 
-                user = b.user;
-                size = b.size;
-
-                if ( user.toLowerCase().indexOf(findme1) >= 0 ) {
-                    user.toLowerCase().replace(findme1, " bot");
-                }
-                else {
-                    sum_edits++;
-                    
-                    user_clean = user.replace(/./g,'_');
-
-                    user_array.push( user );
-                    sorted_user_array =  user_array.sort();
-
-                    $.each(sorted_user_array, function(i, e) {
-                        if ($.inArray(e, result) == -1) {
-                            result.push(e);
-                            sorted_result = result.sort();
-
-                            sum_unique_editors++;
-                        }
-                    });
-
-                    size_array.push(size);
-
-                    total = eval(size_array.join("+"));
-                    average = Math.round(total / size_array.length);
-                }
-            });
-
-            console.log(index + '-' + url_clean);
-            console.log(sorted_result);
-
-            container.append(url_clean + ',');
-            container.append(sum_unique_editors + ',');
             container.append(sum_edits + ',');
-            container.append(average + '<br/>');
+            container.append(average + ',');*/
+
+
+            if ($.inArray(url_clean, community) != -1 ) {
+                container.append('true,')
+            }
+            else if ($.inArray(url_clean, community) -1 ) {
+                container.append('false,')
+            }
+
+            if ($.inArray(url_clean, review) != -1 ) {
+                //console.log('review')
+                container.append('true,')
+            }
+            else if ($.inArray(url_clean, review) -1 ) {
+                container.append('false,')
+            }
+
+            if ($.inArray(url_clean, new_articles) != -1 ) {
+                container.append('true<br/>')
+            }
+            else if ($.inArray(url_clean, new_articles) -1 ) {
+                container.append('false<br/>')
+            } 
+            else {
+               container.append('<br/>') 
+            }
 
             if (index == stop) { 
                 console.log('DONE');
@@ -273,7 +310,7 @@ function get_all_edits_2014() {
     index = 0;
     stop = 0;
 
-    container.append('article_2014,unique_editors,edits,avg_size<br/>');
+    container.append('article_2014,unique_editors,edits,avg_size,community,review,new_articles<br/>');
     jQuery.each( articles_b, function( i, val ) {
         get_edits( edits_14 + val );
         stop++;
@@ -292,7 +329,7 @@ function get_all_edits_2015() {
     index = 0;
     stop = 0;
 
-    container.append('article_2015,unique_editors,edits,avg_size<br/>');
+    container.append('article_2015,unique_editors,edits,avg_size,community,review,new_articles<br/>');
     jQuery.each( articles_b, function( i, val ) {
         get_edits( edits_15 + val );
         stop++;
