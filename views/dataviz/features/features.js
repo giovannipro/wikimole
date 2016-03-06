@@ -191,13 +191,13 @@ var in_link = article.append('g')
 	in_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
-			return start_in + (d.issues * (start_icon-start_in-offset) / max_issue )
+			return start_in + (d.issues_2015 * (start_icon-start_in-offset) / max_issue )
 		})
 		.attr('y1',function(d,i){
 			return bar_h+(bar_h)
 		})
 		.attr('x2',function(d,i){
-			return start_in + (d.issues * (start_icon-start_in-offset) / max_issue )
+			return start_in + (d.issues_2015 * (start_icon-start_in-offset) / max_issue )
 		})
 		.attr('y2',function(d,i){
 			return bar_h

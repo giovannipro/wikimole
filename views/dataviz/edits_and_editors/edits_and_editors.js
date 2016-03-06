@@ -15,8 +15,8 @@ offset = padding*1.5,
 bar_h = 5,
 offset = padding*10;
 
-var start_circle = padding*12,
-start_label = padding*15;
+var start_circle = padding*80,
+start_label = padding*2;
 
 var font_size = '0.7em';
 
@@ -26,7 +26,7 @@ var w_line = '0.5px',
 c_line = '#9E9E9E',
 c_tick = '#636362';
 
-var x = 10;
+var x = 2;
 var records = 177; 
 
 /* -----------------------
@@ -50,17 +50,24 @@ d3.csv("../../data/20160227/edits_and_editors_2014_2015.csv", loaded);
 function loaded (data){
 
 	data.sort(function(a,b) {
-		return a.edits_2014 - b.edits_2014;
+		return a.edits_2015 - b.edits_2015;
+		//return a.avg_size_2015 - b.avg_size_2015;
+
 	});
 
 	console.log(width + ',' + height)
 	console.log(data)
 
-	var max_edits = d3.max(data, function(d) { return +d.edits_2014} );
-	var max_editors = d3.max(data, function(d) { return +d.unique_editors_2014 ;} );
+	var max_edits = d3.max(data, function(d) { return +d.edits_2015} );
+	var max_editors = d3.max(data, function(d) { return +d.unique_editors_2015 ;} );
+	var max_size = d3.max(data, function(d) { return +d.avg_size_2015 ;} );
+
+	var max_i_row_edits = d3.max(data, function(d) { return +d.i_row_edits_2015 ;} );
+
 
 	console.log(max_edits)
 	console.log(max_editors)
+	console.log(max_size)
 
 /* -----------------------
 set axis
@@ -132,6 +139,9 @@ visualize grid
 visualize elements
 ------------------------- */
 
+/* --- size ------------  */
+/* ----------------------  */
+
 var article = plot.selectAll('.article')
 	.data(data)
 	.enter()
@@ -141,42 +151,55 @@ var article = plot.selectAll('.article')
 		return d.article
 	})
 
-// 2014
+// circle
 article.append('circle')
 	/*.attr('cx',function(d,i){
-		return (nomargin_w * d.edits_2014) / max_edits
+		return (nomargin_w * d.edits_2015) / max_edits
 	})*/
 	.attr('cx', start_circle)
 	.attr('cy',function(d,i){
-		//return (nomargin_h * d.edits_2014) / max_edits 
-		return (( (nomargin_h-offset) * d.unique_editors_2014) / max_editors )
+		//return (nomargin_h * d.edits_2015) / max_edits 
+		return (( (nomargin_h-offset) * d.unique_editors_2015) / max_editors )
 	})
 	.attr('r',function(d,i){
-		return Math.sqrt(d.avg_size_2014 / 3.14) / 1.5;
+		return Math.sqrt(d.avg_size_2015 / 3.14) / 1.5;
 	})
 	.attr('fill','none')
-	.attr('stroke','green')
+	.attr('stroke',function(d,i){
+		if (d.community == 'true'){
+			return 'red'
+		}
+		else{
+			return 'green'
+		}
+	})
 
 /* --- title ------------  */
 /* ----------------------  */
 
-console.log(((nomargin_w - (start_circle + (padding*1) ) ) * 10 ) / max_edits )
-
-var title = plot.selectAll('.title')
+// group
+var titles = plot.selectAll('.titles')
 	.data(data)
 	.enter()
 	.append('g')
-	.attr('class','title')
+	.attr('class','titles')
 	.attr('transform',function(d,i){
 		return 'translate(' 
-			+ /*((start_circle+(padding*10))*/ + (((nomargin_w - start_circle ) *d.edits_2014 ) / records )   //  max_edits
+			//+ ((( (nomargin_w - (start_circle + (padding*1))  ) * d.i_row_editors_2015  ) / max_i_row_edits )) * 10// edits_2015  edits_2015
+			+ padding*60
 			+ ',' 
-			+ ((( (nomargin_h-offset) * d.unique_editors_2014) / max_editors) + (padding*5) )   +')'
+			+ ((( (nomargin_h-offset) * d.unique_editors_2015) / max_editors   - (padding*7) ))
+			+ ')'
 	})
 
-title.append('g')
+// title
+titles.append('g')
 	.attr('transform',function(d,i){
-		return	'translate(' + i*8 +',0)'
+		//return	'translate(-' +  ((i*x) - x) + ',0)'
+		return 'translate(-' + d.i_row_editors_2015*20 + ',0)'
+	})
+	.attr('class',function(d,i){
+		return ((i*x) - x) 
 	})
 	.append('text')
     .attr('dy', '.20em')
@@ -185,206 +208,55 @@ title.append('g')
 		return d.article
 	})
 	.attr("font-size",font_size)	
-	.attr('transform','rotate(-90)')
+	.attr('transform','rotate(90)')
 
-title.append('g')
+// user and edits
+titles.append('g')
 	.attr('transform',function(d,i){
-		return	'translate(' + i*8 +',0)'
+		return 'translate(-' + d.i_row_editors_2015*20 + ',0)'
 	})
+	.attr('transform','rotate(-45)')
 	.append('text')
+	.attr('transform','translate(10,20)')
     .attr('dy', '.20em')
     .attr('dx', '.20em')	
 	.text(function (d,i){
-		return d.unique_editors_2014 + ',' + d.edits_2014
+		return 'u: ' + d.unique_editors_2015 + ', ed:' + d.edits_2015
 	})
 	.attr('font-size',font_size)
 
-/* --- edits ------------  */
-/* ----------------------  */
-
-title.append('g')
-	.attr('transform',function(d,i){
-		return	'translate(' + i*8 +',0)'
-	})
+// line (edits)
+titles.append('g')
+	/*.attr('transform',function(d,i){
+		return	'translate(-' +  i*x + ',0)'
+	})*/
 	.append('line')
 	.attr('class','edit')
-	.attr('x1',5)
+	.attr('x1',function(d,i){
+		return -(d.i_row_editors_2015*20 + 5)
+	})
 	.attr('y1',0)
-	.attr('x2',5)
+	.attr('x2',function(d,i){
+		return -(d.i_row_editors_2015*20 + 5)
+	})
 	.attr('y2',function(d,i){
-		return   -(180 * d.edits_2014 / max_edits)  // (  ( (nomargin_h-offset) * d.unique_editors_2014) / max_editors ) * d.edits_2014 / max_edits 
+		return   180 // (180 * d.edits_2015 / max_edits)  // (  ( (nomargin_h-offset) * d.unique_editors_2015) / max_editors ) * d.edits_2015 / max_edits 
 	})
 	.attr('stroke','red')
-
-/*
-title.append('g')
-	.attr('transform','translate(0,20)')
-	.attr('class','edit')
-	
-d3.selectAll('.edit').append('text')
-    .attr('dy', '.20em')
-    .attr('dx', '.20em')	
-	.text(function (d,i){
-		return d.unique_editors_2014
-	})
-	.attr('transform','rotate(-90)')
-
-title.append('text')
-    .attr('dy', '.20em')
-    .attr('dx', '.20em')
-	.text(function (d,i){
-		//return i + 1
-		return d.article
-	})
-	.attr("font-size",font_size)	
-	.attr('transform','rotate(-90)')
-
-/*
-	.append('g')
-	.attr('class','title')
-	//.attr('transform','rotate(90 100 100)')
-	.attr('transform',function(d,i){
-		return 'translate(100,'+ (( (nomargin_h-offset) * d.unique_editors_2014) / max_editors) + ')'
-	})
-	.attr('transform','rotate(90)')
-
-d3.selectAll('.title').append('text')
-    //.attr('y',0)
-    .attr('dy', '.20em')
-    .attr('dx', '.20em')
-	.text(function (d,i){
-		//return i + 1
-		return d.article
-	})
-	.attr("font-size",font_size)
-
-*/
-
-
-
-
-
-// lines
-/*article.append('line')
-	.attr('class','line')
-	.attr('x1',function(d,i){
-		return (nomargin_w * d.edits_2014 ) / max_edits
-	})
-	.attr('y1',function(d,i){
-		return  (nomargin_h * d.unique_editors_2014) / max_editors
-	})
-	.attr('x2',function(d,i){
-		return (nomargin_w * d.edits_2014) / max_edits 
-	})
-	.attr('y2',function(d,i){
-		return (nomargin_h * d.unique_editors_2014) / max_editors
-	})
-	.attr('stroke',c_line)
-	.attr('stroke-width',1)
-*/
-
-
-
-
-	/*
-
-	// article
-	in_link.append('rect')
-		.attr('class','issue')
-		.attr('x',start_in)
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (d.issues * (start_icon-start_in-offset) / max_issue )
-		})
-		.attr('fill',c_issues)
-		.attr('height',bar_h)
-
-/*
-	var article = plot.selectAll('.article')
-		.data(data)
-		.enter()
-		.append('g')
-		.attr('class','article')
-		.attr("id",function (d,i) {
-			return d.article_14
-		})
-		.attr('transform',function(d,i) {
-			return 'translate(0,' + (((height-margin.bottom-margin.top) / (data.length) ) * i) + ')' 
-		})	
-
-	article.append('text')
-        .attr('y', bar_h +bar_h)
-        .attr('x', start_id)
-        .attr('dy', '.20em')
-        .attr('dx', '.20em')
-		.text(function (d,i){
-			return i + 1
-		})
-		.attr("font-size",font_size)
-		.attr('class','id')
-
-	article.append('text')
-        .attr('y', bar_h+ bar_h)
-        .attr('x', start_label)
-        .attr('dy', '.20em')
-        .attr('dx', '.20em')
-		.text(function (d,i){
-			return d.article
-		})
-		.attr("font-size",font_size)
-		.attr('class','text')
-
-/* --- issues  */
-/* ----------  */
-/*
-var in_link = article.append('g')
-		.attr('class','in')
-
-	// article
-	in_link.append('rect')
-		.attr('class','issue')
-		.attr('x',start_in)
-		.attr('y',bar_h )
-		.attr('width',function(d,i){
-			return (d.issues * (start_icon-start_in-offset) / max_issue )
-		})
-		.attr('fill',c_issues)
-		.attr('height',bar_h)
-
-	// in - benchmark
-	in_link.append('line')
-		.attr('class','benchmark')
-		.attr('x1',function(d,i){
-			return start_in + (d.issues * (start_icon-start_in-offset) / max_issue )
-		})
-		.attr('y1',function(d,i){
-			return bar_h+(bar_h)
-		})
-		.attr('x2',function(d,i){
-			return start_in + (d.issues * (start_icon-start_in-offset) / max_issue )
-		})
-		.attr('y2',function(d,i){
-			return bar_h
-		})
-		.attr('stroke',c_benchmark)
-		.attr('stroke-width',1)
-
-/* --- other features ---  */
-/* ----------------------  */
-
 
 /* -----------------------
 icons
 ------------------------- */
-/*
+
     // icons
-	var icons = article.append('g')
-		.attr('class','icons')
-		.attr('transform','translate(' + start_icon  + ',' + (bar_h*0.5) +')' ) 
+titles.append('g')
+	.attr('class','icons')
+	.attr('transform',function(d,i){
+		return 'translate(-' + d.i_row_editors_2015*20 + ',-13)'
+	})
 	
 	// community/review	
 	d3.selectAll(".icons").append('g')
-		//.attr('transform','translate('+ (-padding*1.5) + ',0)' ) 
 		.append("use")
 		.attr("xlink:href", function(d,i) {
 			if (d.community === 'true') {
@@ -393,36 +265,34 @@ icons
 				}
 				return '#comm'
 			}
-			else if (d.review === 'true') {
+			else if (d.review === 'atrue') {
 				return '#rev'
 			}
 			else {
-
+				//return '#new'
 			}
 		})
 		.attr("x", 0)
-		.attr("y", bar_h-(bar_h/2) )	
-    	//.attr('transform','scale(0.2)')
+		.attr("y", 0)
 		.attr('transform','scale(' + ((height - margin.top - margin.bottom) / (data.length) / 100)  + ')' )
 
 	// new
-	d3.selectAll(".icons").append('g')
-		.attr('transform','translate('+ (-padding) + ',0)' ) 
+	d3.selectAll(".icons").append('g') 
+		.attr('transform',function(d,i){
+			return 'translate(-' + d.i_row_editors_2015*0.03 + ',-13)'
+		})
 		.append("use")
 		.attr("xlink:href", function(d,i) {
-			if (d.new_article === 'true') {
+			if (d.new_articles === 'true') {
 				return '#new'
 			}
 			else {
+				//return '#new'
 			}
 		})
 		.attr("x", 0)
-		.attr("y", bar_h/2)	
-		//.attr('transform','scale(0.2)')
+		.attr("y", 0)
 		.attr('transform','scale(' + ((height - margin.top - margin.bottom) / (data.length) / 100)  + ')' )
-
-*/
-
 };
 
 
