@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+        "period": "March 2016",
+        "date": 201603,
+        "name": "Incoming links",
+        "slug": "incoming_links",
+        "size": "530kb",
+        "file": "csv",
+        "info": "Nodes and edges"
+    },
+    {
+        "period": "March 2016",
+        "date": 201603,
+        "name": "Outgoing links",
+        "slug": "outgoing_links",
+        "size": "242kb",
+        "file": "csv",
+        "info": "Nodes and edges"
+    },
+    {
+        "period": "March 2016",
+        "date": 201603,
+        "name": "Incoming and outgoing links",
+        "slug": "entry_exit_links",
+        "size": "3kb",
+        "file": "csv",
+        "info": ""
+    },
+    {
+        "period": "March 2016",
+        "date": 201603,
+        "name": "Features",
+        "slug": "features",
+        "size": "13kb",
+        "file": "csv",
+        "info": "Issues, references, notes, images, see also"
+    },
+    {
+        "period": "August 2015",
+        "date": 201508,
+        "name": "Incoming links",
+        "slug": "incoming_links",
+        "size": "555kb",
+        "file": "csv",
+        "info": "Nodes and edges"
+    },
+    {
+        "period": "August 2015",
+        "date": 201508,
+        "name": "Outgoing links",
+        "slug": "outgoing_links",
+        "size": "471kb",
+        "file": "csv",
+        "info": "Nodes and edges"
+    },
+    {
+        "period": "August 2015",
+        "date": 201508,
+        "name": "Incoming and outgoing links",
+        "slug": "entry_exit_links",
+        "size": "7kb",
+        "file": "csv",
+        "info": ""
+    },
+    {
+        "period": "August 2015",
+        "date": 201508,
+        "name": "Features",
+        "slug": "features",
+        "size": "10kb",
+        "file": "csv",
+        "info": "Issues, references, notes, images, see also"
+    },
+    {
+        "period": "August 2015",
+        "date": 201508,
+        "name": "Edits",
+        "slug": "edits",
+        "size": "664kb",
+        "file": "csv",
+        "info": ""
+    },
+    {
+        "period": "August 2015",
+        "date": 201508,
+        "name": "Google Page Rank",
+        "slug": "pagerank",
+        "size": "2kb",
+        "file": "csv",
+        "info": ""
+    },
+    {
+        "period": "August 2015",
+        "date": 201508,
+        "name": "Pageview",
+        "slug": "pageview",
+        "size": "307kb",
+        "file": "csv",
+        "info": ""
+    }
+  ]
+}

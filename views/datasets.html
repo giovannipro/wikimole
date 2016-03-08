@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Datasets</title>
+		<link rel="stylesheet" type="text/css" href="lib/css/view.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/sidr.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/sidr_light.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	</head>
+	<body onload="datasets()"> 
+		<div id="topbar">
+			<div class="container">
+				<main class="row">
+					<div class="col-md-3 col-sm-5">
+						<a id="simple-menu" href="#sidr"  style="padding-left:0"><i class="fa fa-bars fa-lg"></i></a>
+						<a href="articles_list.html" style="font-weight:bold; padding-left:0;">Wikipedia Primary School</a>
+					</div>
+					<a href="articles_list.html"  class="first_menu">Articles</a>
+					<a href="datasets.html" class="here first_menu">Datasets</a>
+					<a href="updates.html" class="first_menu">Updates</a>
+				</main>
+			</div>
+		</div>
+
+		<div id="sidr">
+		  	<ul>
+				<li><a href="articles_list.html">Articles</a></li>
+				<li><a href="datasets.html" class="here">Datasets</a></li>
+				<li><a href="updates.html">Updates</a></li>
+			</ul>
+		</div>
+
+		<div class="container">
+		
+			<!--<main>-->
+				<header class="row" id="header">
+					<div class="col-md-12">
+						<h1>Datasets</h1>
+						<!--<h4>
+							<a href="https://meta.wikimedia.org/wiki/Research:Wikipedia_Primary_School_SSAJRP_programme/Evaluation" target="_blank">Wikimedia page</a>
+						</h4>-->
+						<h5>
+							Last update: March 8<sup>th</sup> 2016
+						</h5>
+					</div>
+				</header>
+			<!--</main>-->
+				
+			<hr class="line">
+
+			<div id="datasets"></div>
+
+			<script src="lib/js/jquery-1.11.1.min.js"></script>
+			<script src="lib/js/handlebars-v4.0.2.js"></script>
+
+			<script>
+				function datasets() {
+
+					var template_source = 'template/datasets.tpl';
+					var data_source = 'data/datasets.json';
+					var target = '#datasets';
+
+
+					$.get( template_source , function(tpl) {
+						$.getJSON( data_source , function(data) {
+
+							var template = Handlebars.compile(tpl); 
+
+							$(target).html(template(data));
+
+						});
+
+					});
+				}
+			</script>	
+		 	
+		 	<script src="lib/js/jquery.sidr.js"></script><!-- mobile menu -->		
+			<script type="text/javascript">
+				
+				$(document).ready(function() {
+				  	$('#simple-menu').sidr();
+				});
+
+			</script>
+
+		</div>
+	</body>
+</html>
