@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Updates</title>
+		<link rel="stylesheet" type="text/css" href="lib/css/view.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/sidr.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/sidr_light.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	</head>
+	<body onload="updated_articles_list()"> 
+		<div id="topbar">
+			<div class="container">
+				<main class="row">
+					<div class="col-md-3 col-sm-5">
+						<a id="simple-menu" href="#sidr"  style="padding-left:0"><i class="fa fa-bars fa-lg"></i></a>
+						<a href="articles_list.html" style="font-weight:bold; padding-left:0;">Wikipedia Primary School</a>
+					</div>
+					<a href="articles_list.html"  class="first_menu">Articles</a>
+					<a href="datasets.html" class="first_menu">Datasets</a>
+					<a href="updates.html" class="here first_menu">Updates</a>
+				</main>
+			</div>
+		</div>
+
+		<div id="sidr">
+		  	<ul>
+				<li><a href="articles_list.html" class="here">Articles</a></li>
+				<li><a href="datasets.html">Datasets</a></li>
+				<li><a href="updates.html">Updates</a></li>
+		 	 </ul>
+		</div>
+		
+		<div class="container">
+
+			<!--<main>-->
+				<header class="row" id="header">
+					<div class="col-md-12">
+						<h1>Updates</h1>
+						<h4>
+							<a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_South_Africa/Wikipedia_Primary_School/Articles_list" target="_blank">Official list of articles in Wikipedia</a>
+							&#9679;
+							<a href="https://dl.dropboxusercontent.com/u/95554914/wikipedia_primary_school/views/wikiDataviz.pdf" target="_blank">Data visualization (draft)</a>
+						</h4>
+						<h5>
+							Last update: February 22<sup>nd</sup>, 2016
+						</h5>
+						<hr class="line">
+					</div>
+				</header>
+				
+				<div class="row"> 
+					<div class="col-md-12">
+						<h3>Articles list</h3>
+						<h5>For the visualizations both new and deleted articles will be considered.</h5>
+						
+						<span style="width: 25px; height:25px; background-color:#5AFF85; padding: 7px;">New articles (March 2016)</span>
+						<span style="width: 25px; height:25px; background-color:#FF423B; padding: 7px;">Deleted articles (March 2016)</span>
+						<hr style="margin-top:10px;">
+					</div>
+					<div id="new_articles" class="col-md-12"></div> 
+				</div>
+
+			</main>
+
+			<style type="text/css"></style>
+			<script type="text/javascript">
+
+				function updated_articles_list() {
+
+					var template_source = 'template/updates.tpl';
+					var data_source = 'data/articles/updated_articles_list.json';
+					var target = '#new_articles';
+
+
+					$.get( template_source , function(tpl) {
+						$.getJSON( data_source , function(data) {
+
+							var template = Handlebars.compile(tpl); 
+
+							$(target).html(template(data));
+
+						});
+
+					});
+
+				}
+
+			</script>
+
+			<script src="lib/js/jquery-1.11.1.min.js"></script><!-- defer -->
+			<script src="lib/js/handlebars-v4.0.2.js"></script><!-- defer -->
+			<!-- mobile menu -->
+	 		<script src="lib/js/jquery.sidr.js"></script>
+
+	 		<script>
+
+				Handlebars.registerHelper('iff', function(a, operator, b, opts) {
+				var bool = false;
+				switch(operator) {
+					case '==':
+					bool = a == b;
+					break;
+					case '>':
+					bool = a > b;
+					break;
+					case '<':
+					bool = a < b;
+					break;
+					default:
+					throw "Unknown operator " + operator;
+				}
+
+				if (bool) {
+					return opts.fn(this);
+				} else {
+					return opts.inverse(this);
+				}
+			});
+
+			Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
+			    lvalue = parseFloat(lvalue);
+			    rvalue = parseFloat(rvalue);
+			        
+			    return {
+			        "+": lvalue + rvalue,
+			        "-": lvalue - rvalue,
+			        "*": lvalue * rvalue,
+			        "/": lvalue / rvalue,
+			        "%": lvalue % rvalue
+			    }[operator];
+			});
+
+			var rendered = Handlebars.compile(
+			   	'{{#each values}}' + 
+			   	'i={{@index}}: ' +
+			    'i+1 = {{math @index "+" 1}}, ' + 
+			    'i-0.5 = {{math @index "+" "-0.5"}}, ' + 
+			    'i/2 = {{math @index "*" 2}}, ' + 
+			    'i%2 = {{math @index "%" 2}}, ' + 
+			    'i*i = {{math @index "*" @index}}\n' +
+			    '{{/each}}'
+			)({
+			    values : [ 'a', 'b', 'c', 'd', 'e' ]
+			});
+
+
+			</script>
+		
+			<script type="text/javascript">
+			
+				$(document).ready(function() {
+				  	$('#simple-menu').sidr();
+				});
+
+			</script>
+		</div>
+	</body>
+</html>

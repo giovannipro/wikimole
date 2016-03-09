@@ -1,40 +1,170 @@
 {{#each articles}}
-	<div>
-		<div class="">
-			<h2>{{math @index "+" 1}} -
-				<a href="https://en.wikipedia.org/wiki/{{article}}" target="_blank">
+	<div class="row" style="border-bottom: #eee 1px solid; padding: 5px 0;">
+		<div class="col-md-12">
+			<h5>{{math @index "+" 1}}
+				<a href="https://en.wikipedia.org/wiki/{{article}}" target="_blank" title="{{article}}">
 					{{article}}
 				</a>
-			<h2>
+
+				{{#iff community '==' true}}
+					- community review
+				{{/iff}}
+
+				{{#iff review '==' true}}
+					- expert review
+				{{/iff}}
+
+				{{#iff new_article '==' true}}
+					- new article under examination
+				{{/iff}}
+			</h5>
 		</div>
-		<div class="box_100">
-			<div class="box_11">
-				Inc. links: {{entry_links_sep15}}
+
+			<div class="col-md-2 col-sm-6">
+				In. links: {{entry_links_mar16}}
 				<br/>
-				{{#iff entry_links_diff '>' 0 }}
-					<span class="green">+{{entry_links_diff}}</span>
+				{{#iff new_article '==' true }}
+					<span class="white">
+						-
+					</span>
 				{{else}}
-					{{#iff entry_links_diff '<' 0 }}
-						<span class="red">{{entry_links_diff}}</span>
+					{{#iff entry_links_mar16 '>' entry_links_sep15 }}
+						<span class="green">
+							+{{math entry_links_mar16 "-" entry_links_sep15 }}
+						</span>
 					{{else}}
-						<span class="gray">=</span>
+						{{#iff entry_links_mar16 '<' entry_links_sep15 }}
+							<span class="red">
+								-{{math entry_links_sep15 "-" entry_links_mar16 }}
+							</span>
+						{{else}}
+							<span class="gray">=</span>
+						{{/iff}}
 					{{/iff}}
 				{{/iff}}
 			</div>
-			<div class="box_11">
-				Out. links: {{exit_links_sep15}}
+
+			<div class="col-md-2 col-sm-6">
+				Out. links: {{exit_links_mar16}}
 				<br/>
-				{{#iff exit_links_diff '>' 0 }}
-					<span class="green">+{{exit_links_diff}}</span>
+				{{#iff new_article '==' true }}
+					<span class="white">
+						-
+					</span>
 				{{else}}
-					{{#iff exit_links '<' 0 }}
-						<span class="red">{{exit_links_diff}}</span>
+					{{#iff exit_links_mar16 '>' exit_links_sep15 }}
+						<span class="green">
+							+{{math exit_links_mar16 "-" exit_links_sep15 }}
+						</span>
 					{{else}}
-						<span class="gray">=</span>
+						{{#iff exit_links_mar16 '<' exit_links_sep15 }}
+							<span class="red">
+								-{{math exit_links_sep15 "-" exit_links_mar16 }}
+							</span>
+						{{else}}
+							<span class="gray">=</span>
+						{{/iff}}
 					{{/iff}}
 				{{/iff}}
 			</div>
-			<div class="box_11">
+
+			<div class="col-md-2 col-sm-6">
+				Issues: {{issues_mar16}}
+				<br/>
+				{{#iff new_article '==' true }}
+					<span class="white">
+						-
+					</span>
+				{{else}}
+					{{#iff issues_mar16 '>' issues_sep15 }}
+						<span class="red">
+							+{{math issues_mar16 "-" issues_sep15 }}
+						</span>
+					{{else}}
+						{{#iff issues_mar16 '<' issues_sep15 }}
+							<span class="green">
+								-{{math issues_sep15 "-" issues_mar16 }}
+							</span>
+						{{else}}
+							<span class="gray">=</span>
+						{{/iff}}
+					{{/iff}}
+				{{/iff}}
+			</div>
+
+			<div class="col-md-2 col-sm-6">
+				References: {{references_mar16}}
+				<br/>
+				{{#iff new_article '==' true }}
+					<span class="white">
+						-
+					</span>
+				{{else}}
+					{{#iff references_mar16 '>' references_sep15 }}
+						<span class="green">
+							+{{math references_mar16 "-" references_sep15 }}
+						</span>
+					{{else}}
+						{{#iff references_mar16 '<' references_sep15 }}
+							<span class="red">
+								-{{math references_sep15 "-" references_mar16 }}
+							</span>
+						{{else}}
+							<span class="gray">=</span>
+						{{/iff}}
+					{{/iff}}
+				{{/iff}}
+			</div>
+
+			<div class="col-md-2 col-sm-6">
+				Notes: {{notes_mar16}}
+				<br/>
+				{{#iff new_article '==' true }}
+					<span class="white">
+						-
+					</span>
+				{{else}}
+					{{#iff notes_mar16 '>' notes_sep15 }}
+						<span class="green">
+							+{{math notes_mar16 "-" notes_sep15 }}
+						</span>
+					{{else}}
+						{{#iff notes_mar16 '<' notes_sep15 }}
+							<span class="red">
+								-{{math notes_sep15 "-" notes_mar16 }}
+							</span>
+						{{else}}
+							<span class="gray">=</span>
+						{{/iff}}
+					{{/iff}}
+				{{/iff}}
+			</div>
+
+			<div class="col-md-2 col-sm-6">
+				Images: {{images_mar16}}
+				<br/>
+				{{#iff new_article '==' true }}
+					<span class="white">
+						-
+					</span>
+				{{else}}
+					{{#iff images_mar16 '>' images_sep15 }}
+						<span class="green">
+							+{{math images_mar16 "-" images_sep15 }}
+						</span>
+					{{else}}
+						{{#iff images_mar16 '<' images_sep15 }}
+							<span class="red">
+								-{{math images_sep15 "-" images_mar16 }}
+							</span>
+						{{else}}
+							<span class="gray">=</span>
+						{{/iff}}
+					{{/iff}}
+				{{/iff}}
+			</div>
+
+			<!--<div class="col-md-2">
 				Page rank: {{pagerank_sep15}}
 				<br/>
 				{{#iff pagerank_diff '>' 0 }}
@@ -63,60 +193,8 @@
 						{{/iff}}
 					{{/iff}}
 				{{/iff}}
-			</div>
-			<div class="box_11">
-				Issues: {{issues_sep15}}
-				<br/>
-				{{#iff issues_diff '<' 0 }}
-					<span class="green">{{issues_diff}}</span>
-				{{else}}
-					{{#iff issues_diff '>' 0 }}
-						<span class="red">{{issues_diff}}</span>
-					{{else}}
-						<span class="gray">=</span>
-					{{/iff}}
-				{{/iff}}
-			</div>
-			<div class="box_11">
-				References: {{references_sep15}}
-				<br/>
-				{{#iff references_diff '>' 0 }}
-					<span class="green">+{{references_diff}}</span>
-				{{else}}
-					{{#iff references_diff '<' 0 }}
-						<span class="red">{{references_diff}}</span>
-					{{else}}
-						<span class="gray">=</span>
-					{{/iff}}
-				{{/iff}}
-			</div>
-			<div class="box_11">
-				Notes: {{notes_sep15}}
-				<br/>
-				{{#iff notes_diff '>' 0 }}
-					<span class="green">+{{notes_diff}}</span>
-				{{else}}
-					{{#iff notes_diff '<' 0 }}
-						<span class="red">{{notes_diff}}</span>
-					{{else}}
-						<span class="gray">=</span>
-					{{/iff}}
-				{{/iff}}
-			</div>
-			<div class="box_11">
-				Images: {{images_sep15}}
-				<br/>
-				{{#iff images_diff '>' 0 }}
-					<span class="green">+{{images_diff}}</span>
-				{{else}}
-					{{#iff images_diff '<' 0 }}
-						<span class="red">{{images_diff}}</span>
-					{{else}}
-						<span class="gray">=</span>
-					{{/iff}}
-				{{/iff}}
-			</div>
-			<div class="box_11">
+			</div>-->
+			<!--<div class="col-md-2">
 				See Also: {{seeAlso_sep15}}
 				<br/>
 				{{#iff seeAlso_diff '>' 0 }}
@@ -129,7 +207,6 @@
 					{{/iff}}
 				{{/iff}}
 			</div>
-		</div>
-		<div class="clear"></div>
+		</div>-->
 	</div>
 {{/each}}

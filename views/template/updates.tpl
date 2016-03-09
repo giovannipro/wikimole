@@ -1,41 +1,39 @@
-<div class="list">
 {{#each articles}}
+<div class="row" style="border-bottom: #eee 1px solid; padding: 5px 0;">
 		
-		<div style="width:100%">
-			<div style="float:left; width: 5%;">
-				{{math @index "+" 1}}
-			</div>
+	<div class="col-md-1 col-sm-12">
+		{{math @index "+" 1}}
+	</div>
 
-			{{#iff status '==' 'd' }}
-				<div style="height:25px; background-color:#FF423B; padding: 5px 0 5px 10px; float:left; width: 80%;">
-			{{else}}
-				{{#iff status '==' 'n' }}
-					<div style="height:25px; background-color:#5AFF85; padding: 5px 0 5px 10px; float:left; width: 80%;">
-				{{else}}
-					<div style="padding: 5px 0 5px 10px; float:left; width: 80%;">
-				{{/iff}}
-			{{/iff}}
-				<div style="width: 35%; float:left;"><a href="https://en.wikipedia.org/wiki/{{ title }}" title="{{ title }}" target="_blank">{{ title }}</a></div>
-				
-					{{#iff community '==' 'true' }}
-						<div style="float:left; width: 20%;">
-							community review
-						</div>
-					{{else}}
-					{{/iff}}
+	{{#iff status '==' 'd' }}
+	<div class="col-md-1 col-sm-1" style="background-color:#FF423B;">D</div>
+	{{else}}
+		{{#iff status '==' 'n' }}
+			<div class="col-md-1 col-sm-1" style="background-color:#5AFF85;">N</div>
+		{{else}}
+			<div class="col-md-1 col-sm-1"></div>
+		{{/iff}}
+	{{/iff}}
 
-					{{#iff review '==' 'true' }}
-						<div style="float:left; width: 20%;">
-							expert review
-						</div>
-					{{else}}
-					{{/iff}}
-
-
-				</div>
-			</div>
+	<div class="col-md-4 col-sm-12">
+		<a href="https://en.wikipedia.org/wiki/{{ title }}" title="{{ title }}" target="_blank">{{ title }}</a>
+	</div>
+	
+	{{#iff community '==' 'true' }}
+		<div class="col-md-2 col-sm-6">
+			community review
 		</div>
+	{{else}}
+	{{/iff}}
 
-		<div style="clear:both"></div>
-{{/each}}
+	{{#iff review '==' 'true' }}
+		<div class="col-md-2 col-sm-6">
+			expert review
+		</div>
+	{{else}}
+	{{/iff}}
+
+
+	</div>
 </div>
+{{/each}}
