@@ -14,13 +14,13 @@ var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&
 var proxy_pageview = baseurl + 'proxy_pageviews.php' + "?url=" ;
 var pageview_service = "http://stats.grok.se/json/en/";
 
-var redirect = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=redirects&list=&titles='
+var redirect = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=redirects&list=&titles=';
 
 /* ------------------------------------
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
     "Reconciliation_Day",
@@ -45,7 +45,7 @@ template_ = 'Template',
 talk = origin + 'Talk:',
 user_talk = 'User talk',
 talk_ = 'Talk:',
-user_ = 'User:'
+user_ = 'User:',
 help = origin + 'Help:',
 file = origin + 'File:',
 category = origin + 'Category:',
@@ -76,14 +76,13 @@ function check_title(url) {
 
 			index++;
 
-			url_clean = url.replace(redirect,'')
+			url_clean = url.replace(redirect,'');
 			
 			container.append( '<a target="_blank" href="' + wikilink + url_clean + '">' + url_clean + '</a>')
 
 	    	jQuery.each( obj, function( i, val ) {
 
-	    		redirects = val.redirects
-	    		//console.log(redirects)
+	    		redirects = val.redirects;
 
 				if (jQuery.type(redirects) === 'undefined') {
 					container.append( ' - <span style="color:red">check</span><br/>');
@@ -159,25 +158,25 @@ function get_issues(url) {
     	container.append(url_clean + ',' + sum + ',')	        	
 
         if ($.inArray(url_clean, community) != -1 ) {
-            container.append('true,')
+            container.append('true,');
         }
         else if ($.inArray(url_clean, community) -1 ) {
-            container.append('false,')
+            container.append('false,');
         }
 
         if ($.inArray(url_clean, review) != -1 ) {
             //console.log('review')
-            container.append('true,')
+            container.append('true,');
         }
         else if ($.inArray(url_clean, review) -1 ) {
             container.append('false,')
         }
 
         if ($.inArray(url_clean, new_articles) != -1 ) {
-            container.append('true<br/>')
+            container.append('true<br/>');
         }
         else if ($.inArray(url_clean, new_articles) -1 ) {
-            container.append('false<br/>')
+            container.append('false<br/>');
         } 
 
 	})
@@ -191,8 +190,8 @@ function get_all_issues() {
 	container = $('#output')
 	container.append('article,issues,community,review,new_article<br/>')
 	jQuery.each( articles_a, function( i, val ) {  //  list; articles;
-		get_issues(val)
-		console.log(wikilink + val)
+		get_issues(val);
+		console.log(wikilink + val);
 	})	
 
 	$('#hide_a').hide();
@@ -243,8 +242,8 @@ function get_all_references() {
 	var container = $('#output')
 	container.append('article,references</br>')
 	jQuery.each( articles_a, function( i, val ) {  //articles_a;   // art_list; list 
-		get_references(val)
-		console.log(wikilink + val)
+		get_references(val);
+		console.log(wikilink + val);
 	})	
 }
 
@@ -273,10 +272,10 @@ function get_notes(url) {
 		container = $('#output')
 		
     	jQuery.each( get, function( i, val ) {
-    		txt = $(this).prop('outerHTML')
+    		txt = $(this).prop('outerHTML');
     		sum++;
     	})
-    	container.append(url_clean + ',' + sum + '</br>')	        	
+    	container.append(url_clean + ',' + sum + '</br>');	        	
 
 		$('#hide_a').hide();
     	$('#hide_b').show();
@@ -292,8 +291,8 @@ function get_all_notes() {
 	container = $('#output')
 	container.append('article,notes</br>')	
 	jQuery.each( articles_a, function( i, val ) {  // art; list; articles_a; 
-		get_notes(val)
-		console.log(wikilink + val)
+		get_notes(val);
+		console.log(wikilink + val);
 	})
 }
 
@@ -313,9 +312,9 @@ function get_images(url) {
 
     	var parsedata_func = $.parseHTML(get_ref)
 
-    	get = []
-    	get1 = []
-    	get2 = []
+    	get = [];
+    	get1 = [];
+    	get2 = [];
 
 		get1 = $(parsedata_func).find('#mw-content-text').find('.thumbimage')
 		//get2 = $(parsedata_func).find('#mw-content-text').find('.image')
@@ -335,8 +334,8 @@ function get_images(url) {
     	jQuery.each( get1, function( i, val ) {
     		txt = $(this).prop('href');
     		//txt_clean = txt.replace('http://localhost:8888/','');
-			if (txt != undefined) {
-				console.log(txt)
+			if (txt !== undefined) {
+				console.log(txt);
 				sum++;	
 			}
 			else{}
@@ -355,8 +354,8 @@ function get_images(url) {
     	})*/
     	jQuery.each( get3, function( i, val ) {
     		//txt = $(this).prop('href')
-			if (val != undefined) {
-				console.log(val)
+			if (val !== undefined) {
+				console.log(val);
 				sum++;	
 			}
 			else{
@@ -378,8 +377,8 @@ function get_all_images() {
 	container = $('#output')
 	container.append('article,images</br>')	
 	jQuery.each( articles_a, function( i, val ) {  //  list; articles_a;
-		get_images(val)
-		console.log(wikilink + val)
+		get_images(val);
+		console.log(wikilink + val);
 	})	
 
 	$('#hide_a').hide();
@@ -408,7 +407,7 @@ function get_seeAlso(url) {
 		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(', ', "_");
 
     	jQuery.each( get, function( i, val ) {
-    		txt = $(this).prop('outerHTML')
+    		txt = $(this).prop('outerHTML');
     		sum++;
     	})
 
@@ -707,25 +706,25 @@ function entrylinks(url) {
 			container.append('<span>' + page + ',' + user + ',' + port + ',' + templ + ',' + cat + ',' + sum + ',</span>');
 
             if ($.inArray(art_name, community) != -1 ) {
-                container.append('true,')
+                container.append('true,');
             }
             else if ($.inArray(art_name, community) -1 ) {
-                container.append('false,')
+                container.append('false,');
             }
 
             if ($.inArray(art_name, review) != -1 ) {
                 //console.log('review')
-                container.append('true,')
+                container.append('true,');
             }
             else if ($.inArray(art_name, review) -1 ) {
-                container.append('false,')
+                container.append('false,');
             }
 
             if ($.inArray(art_name, new_articles) != -1 ) {
-                container.append('true<br/>')
+                container.append('true<br/>');
             }
             else if ($.inArray(art_name, new_articles) -1 ) {
-                container.append('false<br/>')
+                container.append('false<br/>');
             }               
 
         },   
@@ -876,8 +875,10 @@ function get_one_daily_pageview(yearString, monthString, article, doPrint) {
 			//console.log(yearPV[yearString]);
 		}
 
+		var art_clean = article.replace(/_/g, ' ').replace(/, /g, '_');
+
 		jQuery.each( yearPV[yearString][monthString], function( i, v ) {
-			container.append( article + ',' + i +',' + v +'</br>')
+			container.append( art_clean + ',' + i +',' + v +'</br>')
 	    })
 	})
 	.error (function (xhr, ajaxOptions, thrownError) {
@@ -888,26 +889,38 @@ function get_one_daily_pageview(yearString, monthString, article, doPrint) {
 
 function get_daily_pageview(article,yearString) {
 	var container = $('#output');
+
+	index++;
 	
 	for (i = 1; i < 10; i++) { 
-		var monthString = '0'+i ;		
+		var monthString = '0'+i ;
 		get_one_daily_pageview(yearString, monthString, article);
 	}
 	for (i = 10; i < 13; i++) {
 		var monthString =  i + '';
 		get_one_daily_pageview(yearString, monthString, article, monthString === '12'); 
 	}
-	$('#hide_a').hide();
-    $('#hide_b').show();
+
+    if (index == stop) { 
+       	console.log('DONE');
+    }
 }
 
 function get_all_daily_pageview(yearString,article) {
 	var container = $('#output');
 	console.log(yearString)
 
-	jQuery.each( articles, function( i, val ) {
-		get_daily_pageview( val, yearString)
-		console.log(val)	
-	})
+	container.append('article,date,pageview<br/>')
 
+	index = 0;
+    stop = 0;
+
+	$('#hide_a').hide();
+    $('#hide_b').show();
+
+	jQuery.each( articles_a, function( i, val ) {
+		get_daily_pageview(val,yearString)
+		console.log(val)	
+		stop++;
+	})
 }

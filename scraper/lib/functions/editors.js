@@ -30,19 +30,19 @@ http://www.epochconverter.com/
 ARTICLES AND EDITORS LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 // it does not contain bots
-var editor_list_14 = '../../data/edits/editors_14.csv';  // editors_14    editors_test
-var editor_list_15 = '../../data/edits/editors_15.csv';  // editors_15    editors_test
+var editor_list_14 = '../../data/edit/20160224/editors_14.csv';  // editors_14    editors_test
+var editor_list_15 = '../../data/edit/20160224/editors_15.csv';  // editors_15    editors_test
 
-var edited_articles_14 = '../../data/edits/edited_articles_14.csv'; // edited_articles_14  articles_test
-var edited_articles_15 = '../../data/edits/edited_articles_15.csv'; // edited_articles_15  articles_test
+var edited_articles_14 = '../../data/edit/20160224/edited_articles_14.csv'; // edited_articles_14  articles_test
+var edited_articles_15 = '../../data/edit/20160224/edited_articles_15.csv'; // edited_articles_15  articles_test
 
 var editor_identity = '../../data/edits/identity_test.csv';  // editors_identity_2014  identity_test
 
 // get the list of articles
-$.getJSON(art_list, function(mydata) {
+$.getJSON(art_list, function (mydata) {
     var parse_art = $.parseHTML(mydata);
     articles_b = $(mydata);
 });
@@ -50,25 +50,6 @@ $.getJSON(art_list, function(mydata) {
 /* ------------------------------------
 LISTS
 -------------------------------------*/
-
-/*
-var list = [
-    'nelson_mandela',
-    'africa',
-    'AIDS',
-    'sexism',
-    'Alcohol_abuse'
-];  
-
-var editors = [
-    'iopensa',
-    'RebeccaCasper', 
-    'Mean_as_custard',
-    'Nonsurgicalliposection',
-    'Nanno1992',
-    'example'
-];
-*/
 
 var community = [
     'Agriculture in South Africa',
@@ -885,15 +866,16 @@ EDITS CHRONOLOGY
 -------------------------------------*/
 
 // get edits for one article
-function edits_csv(url) {
+function edits_csv(url,limit) {
     
     $.ajax(url, {
         dataType:  "jsonp",
         success: function( wikiResponse ) {
-        //console.log(wikiResponse)
+            //console.log(wikiResponse)
 
             container = $('#output');
-            url_clean = url.replace(edit_api, '')
+            url_clean = url.replace(edit_api, '').replace(/_/g,' ').replace(/, /g,'_')
+            n_limit = parseInt(limit)
             
             obj = []
             obj = $(wikiResponse.query.pageids)
@@ -909,21 +891,33 @@ function edits_csv(url) {
                 user = v.user;
                 timestamp = v.timestamp;
                 size = v.size;
-
-                user_clean = user.replace("'",'').replace(',','_')
+                
+                user_clean = user.replace("'",'').replace(/_/g,' ').replace(/, /g,'_')
                 timestamp_clean = timestamp.substring(0, 10); 
 
                 user_low = user.toLowerCase()
                 //console.log(user_low)
 
-                if ( user_low.indexOf("bot")  >= 0 ) {
-                    //console.log('bot: ' + user)
-                } else {
-                    container.append(url_clean + ',' );
-                    container.append(user_clean + ',' );
-                    container.append(timestamp_clean+ ',');
-                    container.append(size + '</br>');
+                if ( timestamp.indexOf(n_limit) >= 0 || // 2016, 15, 14, 13, 12
+                timestamp.indexOf(n_limit+1) >= 0  ||
+                timestamp.indexOf(n_limit+2) >= 0  || 
+                timestamp.indexOf(n_limit+3) >= 0  || 
+                timestamp.indexOf(n_limit+4) >= 0 ) {
+
+                    if ( user_low.indexOf("bot")  >= 0 ) {
+                        //console.log('bot: ' + user)
+                    } else {
+                        container.append(url_clean + ',' );
+                        container.append(user_clean + ',' );
+                        container.append(timestamp_clean+ ',');
+                        container.append(size + '</br>');
+                        
+                        console.log ('limit: ' + timestamp)
+                        console.log(n_limit+1)
+                    }
+
                 }
+
             })
         },   
         error : function (xhr, ajaxOptions, thrownError) {
@@ -935,14 +929,19 @@ function edits_csv(url) {
 }
 
 // get entry links for all of article
-function get_all_edits_csv() {
+function get_all_edits_csv(myLimit) {
     var container = $('#output')
-
     container.append('article,user,timestamp,size<br/>')
-    jQuery.each( articles_b, function( i, val ) { // articles; list;
-        edits_csv( edit_api + val ) 
+    
+    limit = $("#limit_edit").val(); 
+    myLimit = limit
+    console.log(myLimit);
+    
+    jQuery.each( articles_b, function( i, val ) { 
+        edits_csv( edit_api + val , myLimit) 
         console.log(val)
     })  
     $('#hide_a').hide();
     $('#hide_b').show();
+      
 }

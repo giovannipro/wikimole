@@ -16,7 +16,9 @@ bar_h = 6;
 
 var streamHeight = 20;
 
-var dateFormat = d3.time.format('%Y-%m-%d');  // %d-%m-%y"
+var dateFormat_edit = d3.time.format('%Y-%m-%d'); // 01.01.14 // %d-%m-%y"  // %d.%m.%y
+var dateFormat_pageview = d3.time.format('%Y-%m-%d');
+
 
 var shift = 180;
 var fontsize = 11;
@@ -38,14 +40,14 @@ var plot = svg.append("g")
 get data
 ------------------------- */
 
-d3.csv("../../data/20160227/pageview.csv", loaded_pv);
+d3.csv("../../data/20160227/pageview.csv", loaded_pageview);
 d3.csv("../../data/20160227/edit.csv", loaded_size); 
 
-function loaded_pv (data){
+function loaded_pageview (data){
 
     // set x and y domain
     var sizeDomain = d3.extent(data, function(d){return  +d.pageview })
-    var timeDomain = d3.extent(data, function(d){return dateFormat.parse(d.date)})
+    var timeDomain = d3.extent(data, function(d){return dateFormat_pageview.parse(d.date)})
 
     // nest dataset for every article 
     data = d3.nest().key(function(d){return d.article}).entries(data)
@@ -93,7 +95,7 @@ set axis
 
     var area = d3.svg.area()
         .interpolate("linear") // bundle
-        .x(function(d) { return x(dateFormat.parse(d.date) ) }) 
+        .x(function(d) { return x(dateFormat_pageview.parse(d.date) ) }) 
         .y0(0)
         .y1(function(d) { return - (+d.pageview ) / 260  });
 
@@ -160,7 +162,7 @@ get data
 
     // set x and y domain
     var sizeDomain = d3.extent(mydata, function(d){return  +d.size })
-    var timeDomain = d3.extent(mydata, function(d){return dateFormat.parse(d.timestamp)})
+    var timeDomain = d3.extent(mydata, function(d){return dateFormat_edit.parse(d.timestamp)})
 
     // nest dataset for every article 
     mydata = d3.nest().key(function(d){return d.article}).entries(mydata)
@@ -207,7 +209,7 @@ set axis
 
     var area = d3.svg.area()
         .interpolate("linear") // bundle
-        .x(function(d) { return x(dateFormat.parse(d.timestamp) ) }) 
+        .x(function(d) { return x(dateFormat_edit.parse(d.timestamp) ) }) 
         .y0(0)
         .y1(function(d) { return (+d.size ) / 260  });
 
