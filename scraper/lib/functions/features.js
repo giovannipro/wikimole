@@ -20,7 +20,7 @@ var redirect = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
     "Reconciliation_Day",

@@ -30,7 +30,7 @@ http://www.epochconverter.com/
 ARTICLES AND EDITORS LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 // it does not contain bots
 var editor_list_14 = '../../data/edit/20160224/editors_14.csv';  // editors_14    editors_test
@@ -898,24 +898,32 @@ function edits_csv(url,limit) {
                 user_low = user.toLowerCase()
                 //console.log(user_low)
 
-                if ( timestamp.indexOf(n_limit) >= 0 || // 2016, 15, 14, 13, 12
-                timestamp.indexOf(n_limit+1) >= 0  ||
-                timestamp.indexOf(n_limit+2) >= 0  || 
-                timestamp.indexOf(n_limit+3) >= 0  || 
-                timestamp.indexOf(n_limit+4) >= 0 ) {
+                if (limit !== 'undefined') {
 
-                    if ( user_low.indexOf("bot")  >= 0 ) {
-                        //console.log('bot: ' + user)
-                    } else {
-                        container.append(url_clean + ',' );
-                        container.append(user_clean + ',' );
-                        container.append(timestamp_clean+ ',');
-                        container.append(size + '</br>');
-                        
-                        console.log ('limit: ' + timestamp)
-                        console.log(n_limit+1)
+                     if ( timestamp.indexOf(n_limit) >= 0 || // 2016, 15, 14, 13, 12
+                    timestamp.indexOf(n_limit+1) >= 0  ||
+                    timestamp.indexOf(n_limit+2) >= 0  || 
+                    timestamp.indexOf(n_limit+3) >= 0  || 
+                    timestamp.indexOf(n_limit+4) >= 0 ) {
+
+                        if ( user_low.indexOf("bot")  >= 0 ) {
+                            //console.log('bot: ' + user)
+                        } else {
+                            container.append(url_clean + ',' );
+                            container.append(timestamp_clean+ ',');
+                            container.append(size+ ',' );
+                            container.append(user_clean + '</br>');
+                            //console.log ('limit: ' + timestamp)
+                            //console.log(limit)
+                        }
                     }
-
+                }
+                else{
+                    container.append(url_clean + ',' );
+                    container.append(timestamp_clean + ',' );
+                    container.append(size+ ',');
+                    container.append(user_clean + '</br>');
+                    //console.log('no limit')
                 }
 
             })
@@ -931,11 +939,22 @@ function edits_csv(url,limit) {
 // get entry links for all of article
 function get_all_edits_csv(myLimit) {
     var container = $('#output')
-    container.append('article,user,timestamp,size<br/>')
+    container.append('article,timestamp,size,user<br/>')
     
+    var type = typeof myLimit
+    //console.log(myLimit);
+    //console.log(type);
+
     limit = $("#limit_edit").val(); 
     myLimit = limit
-    console.log(myLimit);
+
+    if (type == 'undefined') {
+        console.log(limit);
+    }
+    else{
+        console.log('no limit');
+        console.log(limit);
+    }
     
     jQuery.each( articles_b, function( i, val ) { 
         edits_csv( edit_api + val , myLimit) 
