@@ -126,6 +126,56 @@ function check_all_titles() {
 	});
 }
 
+/* ------------------------------------
+INFOBOX
+-------------------------------------*/
+
+function get_infobox(url) {
+    
+    $.ajax({			    	
+       	type: 'GET',
+       	url: proxy + wikilink + url,
+       	processData: true,
+    })
+    .done (function (wikiResponse) {
+    	//console.log(wikiResponse)
+
+    	var parsedata_func = $.parseHTML(wikiResponse);
+    	get = []
+		get = ($(parsedata_func).find('.infobox'))  //.find('.ambox').find('.mbox-text-span'))
+
+		sum = 0;
+
+		jQuery.each( get, function( i, val ) {
+    		txt = $(this).prop('outerHTML')
+    		sum++;
+    	})
+
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(', ', "_");
+
+		container = $('#output')
+		//console.log(get)
+		container.append(url_clean + ',');
+		container.append(sum + '</br>');
+	})
+	.error (function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+	});
+}
+
+function get_all_infobox() {
+	container = $('#output')
+	container.append('article,infobox<br/>')
+	jQuery.each( articles_a, function( i, val ) {  //  list; articles;
+		get_infobox(val);
+		console.log(wikilink + val);
+	})	
+
+	$('#hide_a').hide();
+   	$('#hide_b').show();
+}
+
 
 /* ------------------------------------
 ISSUES
@@ -192,6 +242,210 @@ function get_all_issues() {
 	jQuery.each( articles_a, function( i, val ) {  //  list; articles;
 		get_issues(val);
 		console.log(wikilink + val);
+	})	
+
+	$('#hide_a').hide();
+   	$('#hide_b').show();
+}
+
+/* ------------------------------------
+ISSUES TYPE
+-------------------------------------*/
+
+function get_issuetype(url) {
+    
+    $.ajax({			    	
+       	type: 'GET',
+       	url: proxy + wikilink + url,
+       	processData: true,
+    })
+    .done (function (get_ref) {
+
+    	var parsedata_func = $.parseHTML(get_ref);
+    	get = []
+		get = ($(parsedata_func).find('.ambox').not('.ambox-move')) // .not('.hide-when-compact') // .filter('.ambox-move')  //    .find('.mbox-text-span').find('a'))
+
+		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(', ', "_");
+
+		container = $('#output')
+    	
+    	//issue = get.find('.mbox-text').find('.mbox-text-span').prop('outerHTML') // .find('.ambox')
+    	//console.log(get)
+
+    	issue = get.find('.mbox-text').find('.mbox-text-span')
+    	//total = 0
+
+
+    	if (issue.length == 0) {
+    		//consol.log(url)
+    	}
+    	else{
+    		container.append('<span class="green">' + url_clean + ',</span><br/>')
+
+	    	jQuery.each( issue, function( i, val ) {
+	    		iss = $(this).find('b').prop('outerHTML')   // 
+	    		date = $(this).find('i').text()            //.prop('outerHTML')  // 
+	    		// console.log(iss)
+	    		container.append(iss + ',')
+	    		//total += 1
+
+	    		if (date.indexOf('20')  !== 0 ) {
+	    			var just_date = date.replace('(Learn how and when to remove this template message)').match(/\((.*)\)/);
+	    			container.append('<span class="red">' + just_date[1] + '</span>,<br/>')
+	    			console.log(date)
+	    		}
+	    		else{
+	    			//console.log(date)
+	    		}
+
+	    	})
+    	}
+
+    	//console.log(total)
+
+
+    	//issue = get.find('.mbox-text').find('.mbox-text-span').prop('outerHTML')     	
+    	//container.append(issue + ',<br/>')
+
+    	//jQuery.each( get, function( i, val ) {
+    		//txt = $(this).prop('outerHTML')  //  String($(this).prop('outerHTML')) // .text()  //.find('a').prop('outerHTML') //  
+    		//console.log(txt)
+
+    		//issue = $(this).find('.mbox-text').find('.mbox-text-span')/*.not('.hide-when-compact')*/.find('b').first()/*.find('a')/**//*.prop('outerHTML') */.prop('outerHTML')   //    //    .text()
+    		//console.log(issue)
+
+    		//container.append(issue + ',<br/>')
+
+    		/*howto = 'Learn how and when'
+    		talkp = 'talk page'
+    		discuss = 'Discuss'
+			
+    		if (issue.indexOf(howto)  !== 0 && 
+    			issue.indexOf(talkp) !== 0 && 
+    			issue.indexOf(discuss)
+    			) 
+    		{*/
+
+    		//container.append(issue + ',<br/>')
+
+    		/*if (get.text().indexOf('.hide-when-compact') !== 0  ){
+    			console.log('>>>hide')
+    		}
+    		else{
+    			console.log('-')
+    		}*/
+
+
+    		/*}
+    		else{
+    			console.log('ok')
+    		}*/
+
+    		/*function unique(list) {
+			    var result = [];
+			    $.each(list, function(i, e) {
+			        if ($.inArray(e, result) == -1) result.push(e);
+			    });
+			    return result;
+			}*/
+
+			/*list = []
+
+			jQuery.each(issue, function(i, e) {
+				list.push(e)
+			})
+			
+
+
+			sorted = list.sort()
+
+			//list.push(issue)	
+			//console.log(issue)
+			container.append(issue + ',<br/>')*/
+
+		//})
+		
+		/*
+		console.log(sorted)
+		results = []
+
+		for (var i = 0; i < list.length - 1; i++) {
+		    if (sorted[i + 1] == sorted[i]) {
+		        results.push(sorted[i]);
+		    }
+		    else{
+		    	console.log('error-' + i)
+		    }
+		}
+
+		console.log(results)
+
+		//results = list.push($.unique(list.sort())
+		//console.log(list)
+
+		//console.log(list)
+
+		/*function unique(list) {
+		  var result = [];
+		  $.each(list, function(i, e) {
+		    if ($.inArray(e, result) == -1) result.push(e);
+		  });
+		  return result;
+		}*/
+
+		/*jQuery.each(list, function(i, e) {
+			
+			if ($.inArray(e, result) == -1) {
+				result.push(e);
+			}
+			//console.log('x')	
+		});
+
+		jQuery.each(result, function(i, e) {
+			container.append( e + '<br/>')
+		})   */
+	
+		/*var arr = [9, 9, 111, 2, 3, 4, 4, 5, 7];
+		var sorted_arr = arr.slice().sort(); // You can define the comparing function here. 
+		                                     // JS by default uses a crappy string compare.
+		                                     // (we use slice to clone the array so the original array won't be modified)
+		/*var results = [];
+		for (var i = 0; i < arr.length - 1; i++) {
+		    if (sorted_arr[i + 1] == sorted_arr[i]) {
+		        results.push(sorted_arr[i]);
+		    }
+		}*/
+
+		/*var sorted_list = list.slice().sort(); // 
+		var results = [];
+
+		for (var i = 0; i < list.length - 1; i++) {
+		    if (sorted_list[i + 1] == sorted_list[i]) {
+		        results.push(sorted_list[i]);
+		    }
+		    else{
+		    	console.log('error-' + i)
+		    }
+		}*/
+
+		//console.log(sorted_list)
+		//console.log(results)
+		
+    	//container.append('<br/>')
+
+	})
+	.error (function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+	});
+}
+
+function get_all_issuetype() {
+	container = $('#output')
+	container.append('article,issue,type<br/>')
+	jQuery.each( articles_a, function( i, val ) {  //  list; articles;
+		get_issuetype(val);
+		//console.log(wikilink + val);
 	})	
 
 	$('#hide_a').hide();

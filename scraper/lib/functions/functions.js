@@ -15,6 +15,7 @@ var pageview_service = "http://stats.grok.se/json/en/"; // '201506/nelson_mandel
 var edit_api = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvend=1419984000&rvdir=newer&indexpageids=&titles='; //  until Wed, 31 Dec 2014 00:00:00 GMT
 	
 	// &rvlimit=5
+	
 
 /* ------------------------------------
 ARTICLES LIST
@@ -33,7 +34,6 @@ $.getJSON(art_list, function(mydata) {
 	var parse_art = $.parseHTML(mydata);
 	articles = $(mydata)
 })
-
 
 
 /* ------------------------------------
