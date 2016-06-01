@@ -16,6 +16,9 @@ var pageview_service = "http://stats.grok.se/json/en/";
 
 var redirect = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=redirects&list=&titles=';
 
+var revision_api = 'https://en.wikipedia.org/w/api.php?action=query&format=json&indexpageids=1&prop=revisions&list=&rvprop=ids%7Ctimestamp%7Cuser&rvlimit=1&rvdir=older';
+var old_html_version = 'https://en.wikipedia.org/api/rest_v1/page/html/'
+											
 /* ------------------------------------
 ARTICLES LIST
 -------------------------------------*/
@@ -1239,3 +1242,139 @@ function get_all_sproject() {
 	$('#hide_a').remove();
    	$('#hide_b').show();
 }
+
+
+
+/* ------------------------------------
+REVISION ID
+-------------------------------------*/
+
+
+function get_revisionid(url,date) {
+
+    $.ajax(url, {
+        dataType: "jsonp",
+        success: function(wikiResponse) {
+        	//console.log(wikiResponse)
+
+        	index++;
+
+        	url_clean = url.replace(revision_api,'').replace(date,'').replace('&rvstart=','').replace('&titles=','').replace(/_/g,' ');
+
+            obj = [];
+           	obj = $(wikiResponse.query.pageids);
+			pageids = obj[0].toString();
+			revision_id = $(wikiResponse.query.pages)[0][pageids].revisions[0].revid.toString()
+
+			timestamp = $(wikiResponse.query.pages)[0][pageids].revisions[0].timestamp.toString()
+
+			console.log(timestamp + ' - ' + url)
+
+			container.append(url_clean + ',')
+			container.append(revision_id)
+			container.append('<br/>')
+
+            $('#hide_a').remove();
+    		$('#hide_b').show();
+	    	
+	    	if (index == stop) {
+	           	console.log('DONE');
+	      	}
+        },   
+		error : function (xhr, ajaxOptions, thrownError) {
+	        console.log(xhr.status);
+	        console.log(thrownError);
+		}
+    });
+}
+
+function get_all_revisionid(date) {
+
+	date = '2015-08-01T13%3A42%3A44.000Z'
+
+	container = $('#output')
+	container.append('article,rev_id_aug15<br/>')
+
+	index = 0;
+    stop = 0;
+
+	jQuery.each( articles_a, function( i, val ) {
+		var title = val.replace(/ /g,'_');
+		get_revisionid( revision_api  + '&rvstart=' + date + '&titles=' + title, date);
+		//console.log(revision_api + title + '&rvstart=' + date)
+		stop++;
+	});
+}
+
+
+/* ------------------------------------
+OLD HTML VERSION
+-------------------------------------*/
+
+
+function get_old_version(url) {
+
+    $.ajax(url, {
+        dataType: "HTML",
+        success: function(wikiResponse) {
+        	console.log(wikiResponse)
+
+        	index++;
+
+        	/*
+        	url_clean = url.replace(revision_api,'').replace(date,'').replace('&rvstart=','').replace('&titles=','').replace(/_/g,' ');
+
+            obj = [];
+           	obj = $(wikiResponse.query.pageids);
+			pageids = obj[0].toString();
+			revision_id = $(wikiResponse.query.pages)[0][pageids].revisions[0].revid.toString()
+
+			timestamp = $(wikiResponse.query.pages)[0][pageids].revisions[0].timestamp.toString()
+
+			console.log(timestamp + ' - ' + url)
+
+			container.append(url_clean + ',')
+			container.append(revision_id)
+			container.append('<br/>')
+			*/
+
+            $('#hide_a').remove();
+    		$('#hide_b').show();
+	    	
+
+	    	if (index == stop) {
+	           	console.log('DONE');
+	      	}
+        },   
+		error : function (xhr, ajaxOptions, thrownError) {
+	        console.log(xhr.status);
+	        console.log(thrownError);
+		}
+    });
+}
+
+function get_all_old_version(rev_id) {
+
+	title = 'Nelson_Mandela'
+	rev_id = '673950076';
+
+	container = $('#output')
+	container.append('article,html<br/>')
+
+	index = 0;
+    stop = 0;
+
+    get_old_version(old_html_version + title + '/' + rev_id)
+    console.log(old_html_version + title + '/' + rev_id)
+
+	/*jQuery.each( articles_a, function( i, val ) {
+		var title = val.replace(/ /g,'_');
+		get_revisionid( old_html_version  + '/' + title + '/' + rev_id);
+		console.log(old_html_version  + '/' + title + '/' + rev_id)
+		stop++;
+	});*/
+}
+
+
+
+

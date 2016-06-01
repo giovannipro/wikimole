@@ -13,7 +13,6 @@ var proxy_pageview = baseurl + 'proxy_pageviews.php' + "?url=" ;
 var wikilink = 'https://en.wikipedia.org/wiki/';
 var pageview_service = "http://stats.grok.se/json/en/"; // '201506/nelson_mandela
 var edit_api = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&format=json&rvprop=timestamp|user|size&rvlimit=500&rvend=1419984000&rvdir=newer&indexpageids=&titles='; //  until Wed, 31 Dec 2014 00:00:00 GMT
-	
 	// &rvlimit=5
 	
 
