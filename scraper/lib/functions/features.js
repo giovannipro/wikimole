@@ -20,7 +20,7 @@ var redirect = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
     "Reconciliation_Day",
@@ -1195,85 +1195,31 @@ function get_sproject(url) {
 
     	var parsedata_func = $.parseHTML(get_ref);
     	get = []
-		get = ($(parsedata_func).find('.mbox-small').find('tr'))  // .find('.extiw')
+		get = ($(parsedata_func).find('.mbox-small').find('tr') )  // .find('.extiw').prop('outerHTML').toString()
+		//console.log(get)
 
 		var url_clean = url.replace('https://en.wikipedia.org/wiki/','').replace(/^-+/, '').replace(/-+$/, '').replace('%C7%83', '!').replace(/_/g, ' ').replace('%28', '(').replace('%29', ')').replace('%27', "'").replace(', ', "_");
 
 		container = $('#output')
 		container.append(url + '</br>')
 
+		sum = 0
+
 		jQuery.each( get, function( i, val ) {
-			project = $(this).text() // .html() .prop('outerHTML')  // .find('.extiw').prop('outerHTML')    //  .prop('outerHTML')  // .prop('outerHTML')  
-			txt = String(project)			
+			project = $(this).text() // .replace(/ /g,'') // .html() .prop('outerHTML')  // .find('.extiw').prop('outerHTML')    //  .prop('outerHTML')  // .prop('outerHTML')  
+			txt = project.toString().toLowerCase() //String(project)			
 
-			if (project.indexOf('book')  === 0 ){
-				console.log('no' + proje)
+			if (txt.indexOf('book:') > -1   || txt.indexOf('find more')  > -1  ) { 
+				console.log('no' + txt)
 			}
-			else{
-				container.append('<span class="red">' + project + '</span><br/>')
+			else {
+				container.append('<span class="red">' + project + '</span>,')
+				sum += 1 
 			}
-
-			//console.log(project)			
-
-			/*if (txt.indexOf('img')  === 0 ){
-				console.log('img')
-			}
-			else{
-				container.append(txt + '</br>')
-			}*/
-
-			//container.append(txt + '</br>')
-
-			//console.log(project)
-			//txt = String(project)
-
-			//sister = '<a title="Wikipedia:Wikimedia sister projects" href="/wiki/Wikipedia:Wikimedia_sister_projects">sister projects</a>'	
-			
-
-			/*if (txt.indexOf(sister)  !== 0 ) {
-				container.append('<span class="red">' + project + '</span>')
-			}
-			else{
-				console.log(project)
-			}*/			
-
-			
 		
 		})
 
-		container.append('</br>')
-    	
-    	//issue = get.find('.mbox-text').find('.mbox-text-span').prop('outerHTML') // .find('.ambox')
-    	//console.log(get)
-
-    	/*issue = get.find('.mbox-text').find('.mbox-text-span')
-    	//total = 0
-
-
-    	if (issue.length == 0) {
-    		//consol.log(url)
-    	}
-    	else{
-    		container.append('<span class="green">' + url_clean + ',</span><br/>')
-
-	    	jQuery.each( issue, function( i, val ) {
-	    		iss = $(this).find('b').prop('outerHTML')   // 
-	    		date = $(this).find('i').text()            //.prop('outerHTML')  // 
-	    		// console.log(iss)
-	    		container.append(iss + ',')
-	    		//total += 1
-
-	    		if (date.indexOf('20')  !== 0 ) {
-	    			var just_date = date.replace('(Learn how and when to remove this template message)').match(/\((.*)\)/);
-	    			container.append('<span class="red">' + just_date[1] + '</span>,<br/>')
-	    			console.log(date)
-	    		}
-	    		else{
-	    			//console.log(date)
-	    		}
-
-	    	})
-    	}*/
+		container.append( sum + '</br>')
 
 	})
 	.error (function (xhr, ajaxOptions, thrownError) {
@@ -1284,12 +1230,12 @@ function get_sproject(url) {
 
 function get_all_sproject() {
 	container = $('#output')
-	container.append('article,issue,type<br/>')
+	container.append('article,sister_p<br/>')
 	jQuery.each( articles_a, function( i, val ) {  //  list; articles;
 		get_sproject(val);
 		//console.log(wikilink + val);
 	})	
 
-	$('#hide_a').hide();
+	$('#hide_a').remove();
    	$('#hide_b').show();
 }
