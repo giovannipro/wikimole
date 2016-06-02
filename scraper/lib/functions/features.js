@@ -23,7 +23,7 @@ var old_html_version = 'https://en.wikipedia.org/api/rest_v1/page/html/'
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
     "Reconciliation_Day",
@@ -303,138 +303,6 @@ function get_issuetype(url) {
 
 	    	})
     	}
-
-    	//console.log(total)
-
-
-    	//issue = get.find('.mbox-text').find('.mbox-text-span').prop('outerHTML')     	
-    	//container.append(issue + ',<br/>')
-
-    	//jQuery.each( get, function( i, val ) {
-    		//txt = $(this).prop('outerHTML')  //  String($(this).prop('outerHTML')) // .text()  //.find('a').prop('outerHTML') //  
-    		//console.log(txt)
-
-    		//issue = $(this).find('.mbox-text').find('.mbox-text-span')/*.not('.hide-when-compact')*/.find('b').first()/*.find('a')/**//*.prop('outerHTML') */.prop('outerHTML')   //    //    .text()
-    		//console.log(issue)
-
-    		//container.append(issue + ',<br/>')
-
-    		/*howto = 'Learn how and when'
-    		talkp = 'talk page'
-    		discuss = 'Discuss'
-			
-    		if (issue.indexOf(howto)  !== 0 && 
-    			issue.indexOf(talkp) !== 0 && 
-    			issue.indexOf(discuss)
-    			) 
-    		{*/
-
-    		//container.append(issue + ',<br/>')
-
-    		/*if (get.text().indexOf('.hide-when-compact') !== 0  ){
-    			console.log('>>>hide')
-    		}
-    		else{
-    			console.log('-')
-    		}*/
-
-
-    		/*}
-    		else{
-    			console.log('ok')
-    		}*/
-
-    		/*function unique(list) {
-			    var result = [];
-			    $.each(list, function(i, e) {
-			        if ($.inArray(e, result) == -1) result.push(e);
-			    });
-			    return result;
-			}*/
-
-			/*list = []
-
-			jQuery.each(issue, function(i, e) {
-				list.push(e)
-			})
-			
-
-
-			sorted = list.sort()
-
-			//list.push(issue)	
-			//console.log(issue)
-			container.append(issue + ',<br/>')*/
-
-		//})
-		
-		/*
-		console.log(sorted)
-		results = []
-
-		for (var i = 0; i < list.length - 1; i++) {
-		    if (sorted[i + 1] == sorted[i]) {
-		        results.push(sorted[i]);
-		    }
-		    else{
-		    	console.log('error-' + i)
-		    }
-		}
-
-		console.log(results)
-
-		//results = list.push($.unique(list.sort())
-		//console.log(list)
-
-		//console.log(list)
-
-		/*function unique(list) {
-		  var result = [];
-		  $.each(list, function(i, e) {
-		    if ($.inArray(e, result) == -1) result.push(e);
-		  });
-		  return result;
-		}*/
-
-		/*jQuery.each(list, function(i, e) {
-			
-			if ($.inArray(e, result) == -1) {
-				result.push(e);
-			}
-			//console.log('x')	
-		});
-
-		jQuery.each(result, function(i, e) {
-			container.append( e + '<br/>')
-		})   */
-	
-		/*var arr = [9, 9, 111, 2, 3, 4, 4, 5, 7];
-		var sorted_arr = arr.slice().sort(); // You can define the comparing function here. 
-		                                     // JS by default uses a crappy string compare.
-		                                     // (we use slice to clone the array so the original array won't be modified)
-		/*var results = [];
-		for (var i = 0; i < arr.length - 1; i++) {
-		    if (sorted_arr[i + 1] == sorted_arr[i]) {
-		        results.push(sorted_arr[i]);
-		    }
-		}*/
-
-		/*var sorted_list = list.slice().sort(); // 
-		var results = [];
-
-		for (var i = 0; i < list.length - 1; i++) {
-		    if (sorted_list[i + 1] == sorted_list[i]) {
-		        results.push(sorted_list[i]);
-		    }
-		    else{
-		    	console.log('error-' + i)
-		    }
-		}*/
-
-		//console.log(sorted_list)
-		//console.log(results)
-		
-    	//container.append('<br/>')
 
 	})
 	.error (function (xhr, ajaxOptions, thrownError) {
@@ -1320,23 +1188,6 @@ function get_old_version(url) {
         	console.log(wikiResponse)
 
         	index++;
-
-        	/*
-        	url_clean = url.replace(revision_api,'').replace(date,'').replace('&rvstart=','').replace('&titles=','').replace(/_/g,' ');
-
-            obj = [];
-           	obj = $(wikiResponse.query.pageids);
-			pageids = obj[0].toString();
-			revision_id = $(wikiResponse.query.pages)[0][pageids].revisions[0].revid.toString()
-
-			timestamp = $(wikiResponse.query.pages)[0][pageids].revisions[0].timestamp.toString()
-
-			console.log(timestamp + ' - ' + url)
-
-			container.append(url_clean + ',')
-			container.append(revision_id)
-			container.append('<br/>')
-			*/
 
             $('#hide_a').remove();
     		$('#hide_b').show();

@@ -30,7 +30,7 @@ http://www.epochconverter.com/
 ARTICLES AND EDITORS LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 // it does not contain bots
 var editor_list_14 = '../../data/edit/20160224/editors_14.csv';  // editors_14    editors_test

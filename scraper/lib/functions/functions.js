@@ -24,8 +24,7 @@ var art_list = '../articles/articles.json'; // '../articles/articles_test';
 
 var list = [
 	'nelson_mandela',
-	'africa'//, //nelson_mandela
-	//'cool' //Freedom Day (South Africa)
+	'africa'
 ]	
 
 // get the list of articles
@@ -45,7 +44,6 @@ function edits_json(url) {
     $.ajax(url, {
         dataType:  "jsonp",
         success: function( wikiResponse ) {
-
         	//console.log(wikiResponse)
 
         	container = $('#edits');
@@ -120,9 +118,7 @@ function edits_csv(url) {
         		container.append( url_clean + ',' )
 
         		jQuery.each( v, function( i, v ) {
-
-        			//container.append( v + ',')
-        	   		
+        			//container.append( v + ',')        	   		
         			
         	   		if (i.indexOf("size")  === 0 ) {
         	   			container.append( v )
@@ -138,18 +134,6 @@ function edits_csv(url) {
         	   			//
         	   		}
         	   	})
-
-        	   	/*
-
-        		if ( i === (edit.length-1)) {
-        			container.append( '<br/>' )
-        		}
-        		else {
-        			container.append( ',<br/>' )
-        		}
-        		*/
-
-        		//})
 
         		container.append( '</br>')
         	
@@ -171,11 +155,7 @@ function edits_csv(url) {
 function get_all_edits_json() {
 	var container = $('#edits')
 	jQuery.each( list, function( i, val ) { // articles; list;
-		edits_json( edit_api + val )
-		//container.append( '[{"article":"' + val + '"},{"edit":[<br/>')
-
-		//  start : '{"edits": ['
-		//  end : 	']}'		
+		edits_json( edit_api + val )	
 		console.log(val)
 	})	
 }
