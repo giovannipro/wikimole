@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Commons</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../lib/bootstrap-3.3.6-dist2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../lib/css/scraper.css">
+	</head>
+	<body onload="test_3()">
+
+		<main class="container-fluid" id="hide_a">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Commons<h1>
+					<h5>
+						<a href="https://www.mediawiki.org/wiki/Special:ApiSandbox" target="_blank" title="Wikipedia API sandbox">
+							Wikipedia API sandbox
+						</a>
+						&#9679;
+						<a href="https://commons.wikimedia.org/wiki/Commons:API/MediaWiki" target="_blank" title="Commons API">
+							Commons API
+						</a>
+					</h5>
+				</div>
+			</div>
+			
+			<hr>
+
+			<!--<textarea id="art_list" placeholder="articles"></textarea>-->
+			
+			<div class="row scraper">
+				<div class="col-md-4">
+					<h4 onclick="get_file_info('ZB_1917.JPG')">File info</h4>
+				</div>
+				<div class="col-md-4">
+					<h4 onclick="get_file_in_category('Zentralbibliothek_Zürich')">Files in category</h4>
+				</div>
+			</div>
+
+			<div class="container-fluid" id="hide_b">
+				<div id="output"></div>
+			</div>
+		</main>
+
+	</body>
+	<script src="../lib/js/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="../lib/js/jquery.xdomainajax.js" defer></script>
+	<script src="../lib/functions/commons.js" defer></script>
+</html>
