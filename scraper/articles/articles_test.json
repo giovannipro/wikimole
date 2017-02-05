@@ -1,3 +1,270 @@
 [
-	"HIV/AIDS"
+  {
+    "article": "Two-foot-gauge_railways_in_South_Africa",
+    "in": false,
+    "approaches": [
+      ""
+    ]
+  },
+  {
+    "article": "Acid",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Africa_Day",
+    "in": true,
+    "approaches": [
+      "Africa_Destubathon",
+      "Edit-a-thon"
+    ]
+  },
+  {
+    "article": "Agriculture_in_South_Africa",
+    "in": true,
+    "approaches": [
+      "RW_by_community",
+      "RW_by_expert_(pdf-wiki)"
+    ]
+  },
+  {
+    "article": "AIDS_orphan",
+    "in": true,
+    "approaches": [
+      "WP Assessment"
+    ]
+  },
+  {
+    "article": "Alcohol_abuse",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Alcohol_dependence",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Alcoholism",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Aloe",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Aloe_vera",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Alcoholism",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Apartheid",
+    "in": true,
+    "approaches": [
+      "RW_by_community",
+      "RW_by_expert_(pdf)"
+    ]
+  },
+  {
+    "article": "Outline_of_animal-powered_transport",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Atom",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Base_(chemistry)",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Bias",
+    "in": true,
+    "approaches": [
+      "WP_Assessment",
+      "Bold_reassesment"
+    ]
+  },
+  {
+    "article": "Bicycle",
+    "in": true,
+    "approaches": [
+      "RW_by_community",
+      "RW_by_expert_(pdf)"
+    ]
+  },
+  {
+    "article": "Biome",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Bird_nest",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Boiling",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Borehole",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Bullying",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Car",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Castle_of_Good_Hope",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Cell_(biology)",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Ceramic",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Chapter_Two_of_the_Constitution_of_South_Africa",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Child_abuse",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Children's_Act,_2005",
+    "in": true,
+    "approaches": [
+      "WP_Assessment",
+      "Africa_Destubathon"
+    ]
+  },
+  {
+    "article": "Children's_Day",
+    "in": true,
+    "approaches": [
+      "Edit-a-thon"
+    ]
+  },
+  {
+    "article": "Circuit_diagram",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Clay",
+    "in": true,
+    "approaches": [
+      "WP_Assessment"
+    ]
+  },
+  {
+    "article": "Coal",
+    "in": false,
+    "approaches": [
+      "Climate"
+    ]
+  },
+  {
+    "article": "Coal_in_South_Africa",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Control_variable",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Convenience_food",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Cooking",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "Cradle_of_Humankind",
+    "in": true,
+    "approaches": [
+      "WP_Assessment"
+    ]
+  },
+  {
+    "article": "Day_of_Reconciliation",
+    "in": true,
+    "approaches": [
+      "Africa_Destubathon",
+      "Edit-a-thon"
+    ]
+  },
+  {
+    "article": "Decantation",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "",
+    "in": false,
+    "approaches": []
+  },
+  {
+    "article": "",
+    "in": false,
+    "approaches": []
+  }
 ]
