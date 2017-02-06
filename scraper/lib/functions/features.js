@@ -7,6 +7,7 @@ SOURCE
 -------------------------------------*/
 
 var baseurl = 'http://localhost:8888/wikimole/scraper/proxy/';
+var simple_proxy =  baseurl + "proxy.php" + "?url=";
 var proxy = baseurl + 'proxy_interlinks.php' + "?url=" ;
 var wikilink = 'https://en.wikipedia.org/wiki/';
 var backlinks = 'https://en.wikipedia.org/w/api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=';
@@ -18,7 +19,9 @@ var redirect = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop
 
 var revision_api = 'https://en.wikipedia.org/w/api.php?action=query&format=json&indexpageids=1&prop=revisions&list=&rvprop=ids%7Ctimestamp%7Cuser&rvlimit=1&rvdir=older';
 var old_html_version = 'https://en.wikipedia.org/api/rest_v1/page/html/'
-											
+
+var cross_origin = "http://crossorigin.me/";
+
 /* ------------------------------------
 ARTICLES LIST
 -------------------------------------*/
@@ -158,8 +161,6 @@ function check_all_titles() {
 			//console.log(wikilink + v)
 			stop++;
 		}
-		
-		
 	});
 }
 
@@ -218,15 +219,15 @@ function get_all_infobox() {
 ISSUES
 -------------------------------------*/
 
-function get_issues(url) {
+function get_issues(url,approaches) {
 	
 	$.ajax({					
 	   	type: 'GET',
-	   	url: proxy + wikilink + url,
+	   	url: my_proxy + wikilink + url,
 	   	processData: true,
 	})
 	.done (function (get_ref) {
-		console.log(url)
+		//console.log(url)
 
 		var parsedata_func = $.parseHTML(get_ref);
 		get = []
@@ -243,29 +244,86 @@ function get_issues(url) {
 			sum++;
 		})
 
-		container.append(url_clean + ',' + sum + ',')				
+		container.append(url_clean + ',' + sum + ',')	
 
-		if ($.inArray(url_clean, community) != -1 ) {
-			container.append('true,');
-		}
-		else if ($.inArray(url_clean, community) -1 ) {
-			container.append('false,');
-		}
-
-		if ($.inArray(url_clean, review) != -1 ) {
-			//console.log('review')
-			container.append('true,');
-		}
-		else if ($.inArray(url_clean, review) -1 ) {
-			container.append('false,')
+		if (approaches.indexOf("RW_by_community") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
 		}
 
-		if ($.inArray(url_clean, new_articles) != -1 ) {
-			container.append('true<br/>');
+		if (approaches.indexOf("RW_by_expert_pdf") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
 		}
-		else if ($.inArray(url_clean, new_articles) -1 ) {
-			container.append('false<br/>');
-		} 
+
+		if (approaches.indexOf("RW_by_expert_pdf_wiki") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("New_article_suggested_by_expert") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("AFC") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("Featured_on_WP_SA_portal") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("Rewrite_based_on_expert_review") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("WP_Assessment") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("Bold_reassesment") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("Africa_Destubathon") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("Edit_a_thon") >= 0){
+			container.append(1)
+		}	
+		else{
+			container.append(0)
+		}
+		container.append("<br/>")
+
 
 	})
 	.error (function (xhr, ajaxOptions, thrownError) {
@@ -276,7 +334,7 @@ function get_issues(url) {
 
 function get_all_issues() {
 	container = $('#output')
-	container.append('article,issues,community,review,new_article<br/>')
+	container.append('article,issues,RW_by_community,RW_by_expert_pdf,RW_by_expert_pdf_wiki,New_article_suggested_by_expert,AFC,Featured_on_WP_SA_portal,Rewrite_based_on_expert_review,WP_Assessment,Bold_reassesment,Africa_Destubathon,Edit_a_thon<br/>')
 	$.each(articles_a, function( i, val ) {  //  list; articles;
 
 		var article = val.article;
@@ -284,10 +342,9 @@ function get_all_issues() {
 		var approaches = val.approaches;
 		
 		if (in_out == true) {
-			get_issues(article);
+			get_issues(article,approaches);
+			console.log(wikilink + article);
 		}
-		
-		console.log(wikilink + article);
 	})	
 
 	$('#hide_a').hide();
@@ -375,7 +432,7 @@ function get_references(url) {
 	
 	$.ajax({					
 	   	type: 'GET',
-	   	url: proxy + wikilink + url,
+	   	url: my_proxy + wikilink + url,
 	   	processData: true,
 	})
 	.done (function (get_ref) {
@@ -409,9 +466,15 @@ function get_references(url) {
 function get_all_references() {
 	var container = $('#output')
 	container.append('article,references</br>')
-	jQuery.each( articles_a, function( i, val ) {  //articles_a;   // art_list; list 
-		get_references(val);
-		console.log(wikilink + val);
+	$.each( articles_a, function( i, val ) {  //articles_a;   // art_list; list 
+		var article = val.article;
+		var in_out = val.in;
+		var approaches = val.approaches;
+		
+		if (in_out == true) {
+			get_references(article);
+			console.log(my_proxy + wikilink + article);
+		}
 	})	
 }
 
@@ -420,14 +483,17 @@ function get_all_references() {
 NOTES
 -------------------------------------*/
 
+var my_proxy = simple_proxy; //cross_origin;
+
 function get_notes(url) {
 	
 	$.ajax({					
 	   	type: 'GET',
-	   	url: proxy + wikilink + url,
+	   	url: my_proxy + wikilink + url,
 	   	processData: true,
 	})
 	.done (function (get_ref) {
+		//console.log(get_ref)
 
 		var parsedata_func = $.parseHTML(get_ref);
 		get = []
@@ -459,8 +525,14 @@ function get_all_notes() {
 	container = $('#output')
 	container.append('article,notes</br>')	
 	jQuery.each( articles_a, function( i, val ) {  // art; list; articles_a; 
-		get_notes(val);
-		console.log(wikilink + val);
+		var article = val.article;
+		var in_out = val.in;
+		var approaches = val.approaches;
+		
+		if (in_out == true) {
+			get_notes(article);
+			console.log(my_proxy + wikilink + article);
+		}
 	})
 }
 
@@ -473,10 +545,11 @@ function get_images(url) {
 	
 	$.ajax({					
 	   	type: 'GET',
-	   	url: proxy + wikilink + url,
+	   	url: my_proxy + wikilink + url, //my_proxy + url,
 	   	processData: true,
 	})
 	.done (function (get_ref) {
+		//console.log(get_ref)
 
 		var parsedata_func = $.parseHTML(get_ref)
 
@@ -484,14 +557,14 @@ function get_images(url) {
 		get1 = [];
 		get2 = [];
 
-		get1 = $(parsedata_func).find('#mw-content-text').find('.thumbimage')
+		get1 = $(parsedata_func).find('.thumbimage') // .find('#mw-content-text')
 		//get2 = $(parsedata_func).find('#mw-content-text').find('.image')
 		get3 = ($(parsedata_func).find('.thumb').find('a').find('img'));
 
 		/*console.log(url)
 		console.log(get1)
 		console.log(get2)*/
-		//console.log(get3)
+		//console.log(get1)
 
 		sum = 0;
 
@@ -499,7 +572,7 @@ function get_images(url) {
 		
 		container = $('#output')
 		
-		jQuery.each( get1, function( i, val ) {
+		$.each( get1, function( i, val ) {
 			txt = $(this).prop('href');
 			//txt_clean = txt.replace('http://localhost:8888/','');
 			if (txt !== undefined) {
@@ -523,7 +596,7 @@ function get_images(url) {
 		jQuery.each( get3, function( i, val ) {
 			//txt = $(this).prop('href')
 			if (val !== undefined) {
-				console.log(val);
+				//console.log(val);
 				sum++;	
 			}
 			else{
@@ -545,8 +618,15 @@ function get_all_images() {
 	container = $('#output')
 	container.append('article,images</br>')	
 	jQuery.each( articles_a, function( i, val ) {  //  list; articles_a;
-		get_images(val);
-		console.log(wikilink + val);
+
+		var article = val.article;
+		var in_out = val.in;
+		var approaches = val.approaches;
+		
+		if (in_out == true) {
+			get_images(article);
+			console.log(my_proxy + wikilink + article);
+		}
 	})	
 
 	$('#hide_a').hide();
@@ -561,7 +641,7 @@ function get_seeAlso(url) {
 	
 	$.ajax({					
 	   	type: 'GET',
-	   	url: proxy + wikilink + url,
+	   	url: my_proxy + wikilink + url,
 	   	processData: true,
 	})
 	.done (function (get_ref) {
@@ -592,8 +672,14 @@ function get_all_seeAlso() {
 	container = $('#output');
 	container.append('article,seeAlso</br>');	
 	jQuery.each( articles_a, function( i, val ) {  //list; articles_a;
-		console.log(wikilink + val);
-		get_seeAlso(val);
+		var article = val.article;
+		var in_out = val.in;
+		var approaches = val.approaches;
+		
+		if (in_out == true) {
+			get_seeAlso(article);
+			console.log(my_proxy + wikilink + article);
+		}
 	})	
 	$('#hide_a').hide();
 	$('#hide_b').show();
