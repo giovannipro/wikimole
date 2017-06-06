@@ -4,20 +4,20 @@ main variables
 
 var w = window;
 width = w.outerWidth,
-height = width + (width*0.5);
+height = width - (width * 0.01); // 0.5
 
 var margin = {top: 50, right: 50, bottom: 50, left: 50},
 nomargin_w = width - margin ;
 
 var padding = width/100,
 offset = padding*1.5,
-bar_h = 5;
+bar_h = 8; //5
 
 var start_id = padding,
-start_out = padding*20,
-start_in = padding*60,
-start_icon = padding*73,
-start_label = padding*75;
+start_out = padding * 10,
+start_in = padding * 45,
+start_icon = padding * 55,
+start_label = padding * 75;
 
 var font_size = '0.8em';
 
@@ -48,7 +48,8 @@ var plot = svg.append("g")
 get data
 ------------------------- */
 
-d3.csv("../../data/20160227/in_out_links.csv", loaded);
+d3.csv("../../data/20170205/links_2015.csv", loaded); // 20160227/in_out_links
+console.log("links_2015")
 
 function loaded (data){
 
@@ -57,7 +58,7 @@ function loaded (data){
 	console.log(width + ',' + height)
 	console.log(data)
 
-	var max_in = d3.max(data, function(d) { return +d.total_in_2015;} );
+	var max_in = d3.max(data, function(d) { return +d.total_in;} );
 	var max_out = d3.max(data, function(d) { return +d.total_out;} );
 
 /* -----------------------
@@ -234,7 +235,7 @@ var in_link = article.append('g')
 		.attr('height',bar_h)
 
 	// in - benchmark
-	in_link.append('line')
+	/*in_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
 			return start_in + (d.total_in_2015 * (start_icon-start_in-offset) / max_in )
@@ -250,6 +251,7 @@ var in_link = article.append('g')
 		})
 		.attr('stroke',c_benchmark)
 		.attr('stroke-width',1)
+		*/
 
 /* --- out ---  */
 /* ----------  */
@@ -324,54 +326,301 @@ var in_link = article.append('g')
 		.attr('height',bar_h)
 
 	// out - benchmark
-	out_link.append('line')
+	/*out_link.append('line')
 		.attr('class','benchmark')
 		.attr('x1',function(d,i){
-			return start_out /*- 2*/ + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
+			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
 		})
 		.attr('y1',function(d,i){
 			return bar_h+(bar_h)
 		})
 		.attr('x2',function(d,i){
-			return start_out /*- 2*/ + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
+			return start_out + ( (start_in-start_out-offset) - (((start_in-start_out-offset) * d.total_out_2015) / max_out ))
 		})
 		.attr('y2',function(d,i){
 			return bar_h
 		})
 		.attr('stroke',c_benchmark)
 		.attr('stroke-width',1)
+		*/
 
 /* -----------------------
 icons
 ------------------------- */
 
+	var icon_scale = 0.12;
+	var icon_space = 15;
+	var roate = "90";
+
     // icons
 	var icons = article.append('g')
+		//.attr('transform','scale(0.2)')
+		.attr('transform','translate(' + start_icon  + ',' + 0 +')' )  // bar_hx
 		.attr('class','icons')
-		.attr('transform','translate(' + start_icon  + ',' + (bar_h*0.5) +')' ) 
-	
-	// community/review	
+		
+	// 1 RW_by_community
 	d3.selectAll(".icons").append('g')
-		//.attr('transform','translate('+ (-padding*1.5) + ',0)' ) 
+		.attr('transform', function (d,i){
+			if (d.RW_by_community == 1)   { 
+				return 'translate('+ (icon_space*2) + ',' + bar_h +')'
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.RW_by_community == 1)   { 
+				return "RW_by_community"
+			}
+		})	
+		.append('g')
+		.attr('transform','rotate(90)')	
 		.append("use")
 		.attr("xlink:href", function(d,i) {
-			if (d.community === 'true') {
-				if (d.review === 'true') {
-					return '#comm_rev'
-				}
-				return '#comm'
-			}
-			else if (d.review === 'true') {
-				return '#rev'
-			}
-			else {
-
+			if (d.RW_by_community == 1) { // (1 == 1)
+				return '#RW_by_community'
 			}
 		})
 		.attr("x", 0)
-		.attr("y", bar_h-(bar_h/2) )	
-    	//.attr('transform','scale(0.2)')
-		.attr('transform','scale(' + ((height - margin.top - margin.bottom) / (data.length) / 100)  + ')' )
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
+
+	// 2 RW_by_expert_pdf
+	d3.selectAll(".icons").append('g')
+		.attr('transform', function (d,i){
+			if (d.RW_by_expert_pdf == 1)   { 
+				return 'translate('+ (icon_space*3) + ',' + bar_h +')'
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.RW_by_expert_pdf == 1)   { 
+				return "RW_by_expert_pdf"
+			}
+		})
+		.append('g')
+		.attr('transform','rotate(90)')
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if (d.RW_by_expert_pdf == 1) {
+				return '#RW_by_expert_pdf'
+			}
+		})
+		.attr("x", 0)
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
+
+	// 3 RW_by_expert_pdf_wiki
+	d3.selectAll(".icons").append('g')
+		.attr('transform', function (d,i){
+			if (d.RW_by_expert_pdf_wiki == 1){ 
+				return 'translate('+ (icon_space*4) + ',' + bar_h + ')' 
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.RW_by_expert_pdf_wiki == 1)   { 
+				return "RW_by_expert_pdf_wiki"
+			}
+		})
+		.append('g')
+		.attr('transform','rotate(90)')	
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if  (d.RW_by_expert_pdf_wiki == 1) { // (1 == 1)
+				return '#RW_by_expert_pdf_wiki'
+			}
+		})	
+		.attr("x", 0)
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
+
+	// 4 New_article_suggested_by_expert
+	d3.selectAll(".icons").append('g')
+		.attr('transform', function (d,i){
+			if (d.New_article_suggested_by_expert == 1){ 
+				return 'translate('+ (icon_space*5) + ',' + bar_h + ')' 
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.New_article_suggested_by_expert == 1)   { 
+				return "New_article_suggested_by_expert"
+			}
+		})
+		.append('g')
+		.attr('transform','rotate(90)')	
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if  (d.New_article_suggested_by_expert == 1) { // (1 == 1)
+				return '#New_article_suggested_by_expert'
+			}
+		})
+		.attr("x", 0)
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
+
+	// 5 AFC
+	d3.selectAll(".icons").append('g')
+		.attr('transform', function (d,i){
+			if (d.AFC == 1){ 
+				return 'translate('+ (icon_space*6) + ',' + bar_h + ')' 
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.AFC == 1)   { 
+				return "AFC"
+			}
+		})	
+		.append('g')
+		.attr('transform','rotate(90)')	
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if  (d.AFC == 1) { // (1 == 1)
+				return '#AFC'
+			}
+		})
+		.attr("x", 0)
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
+
+	// 6 Featured_on_WP_SA_portal
+	d3.selectAll(".icons").append('g')
+		.attr('transform', function (d,i){
+			if (d.Featured_on_WP_SA_portal == 1){ 
+				return 'translate('+ (icon_space*7) + ',' + bar_h + ')' 
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.Featured_on_WP_SA_portal == 1)   { 
+				return "Featured_on_WP_SA_portal"
+			}
+		})	
+		.append('g')
+		.attr('transform','rotate(90)')	
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if  (d.Featured_on_WP_SA_portal == 1) { // (1 == 1)
+				return '#Featured_on_WP_SA_portal'
+			}
+		})
+		.attr("x", 0)
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
+
+	// 7 Rewrite_based_on_expert_review
+	d3.selectAll(".icons").append('g')
+		.attr('transform', function (d,i){
+			if (d.Rewrite_based_on_expert_review == 1){ 
+				return 'translate('+ (icon_space*8) + ',' + bar_h + ')' 
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.Rewrite_based_on_expert_review == 1)   { 
+				return "Rewrite_based_on_expert_review"
+			}
+		})	
+		.append('g')
+		.attr('transform','rotate(90)')	
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if  (d.Rewrite_based_on_expert_review == 1) { // (1 == 1)
+				return '#Rewrite_based_on_expert_review'
+			}
+		})
+		.attr("x", 0)
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
+
+	// 8 WP_Assessment
+	d3.selectAll(".icons").append('g')
+		.attr('transform', function (d,i){
+			if (d.WP_Assessment == 1){ 
+				return 'translate('+ (icon_space*9) + ',' + bar_h + ')' 
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.WP_Assessment == 1)   { 
+				return "WP_Assessment"
+			}
+		})	
+		.append('g')
+		.attr('transform','rotate(90)')	
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if  (d.WP_Assessment == 1) { // (1 == 1)
+				return '#WP_Assessment'
+			}
+		})
+		.attr("x", 0)
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
+
+	// 9 Bold_reassesment
+	d3.selectAll(".icons").append('g')
+		.attr('transform', function (d,i){
+			if (d.Bold_reassesment == 1){ 
+				return 'translate('+ (icon_space*10) + ',' + bar_h + ')' 
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.Bold_reassesment == 1)   { 
+				return "Bold_reassesment"
+			}
+		})
+		.append('g')
+		.attr('transform','rotate(90)')	
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if  (d.Bold_reassesment == 1) { // (1 == 1)
+				return '#Bold_reassesment'
+			}
+		})
+		.attr("x", 0)
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
+
+	// 10 Africa_Destubathon
+	d3.selectAll(".icons").append('g')
+		.attr('transform', function (d,i){
+			if (d.Africa_Destubathon == 1){ 
+				return 'translate('+ (icon_space*11) + ',' + bar_h + ')' 
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.Africa_Destubathon == 1)   { 
+				return "Africa_Destubathon"
+			}
+		})	
+		.append('g')
+		.attr('transform','rotate(90)')	
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if  (d.Africa_Destubathon == 1) { // (1 == 1)
+				return '#Africa_Destubathon'
+			}
+		})
+		.attr("x", 0)
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
+
+	// 12 Edit_a_thon
+	d3.selectAll(".icons").append('g')
+		.attr('transform', function (d,i){
+			if (d.Edit_a_thon == 1){ 
+				return 'translate('+ (icon_space*12) + ',' + bar_h + ')' 
+			}
+		})
+		.attr('class', function (d,i){
+			if (d.Edit_a_thon == 1)   { 
+				return "Edit_a_thon"
+			}
+		})	
+		.append('g')
+		.attr('transform','rotate(90)')	
+		.append("use")
+		.attr("xlink:href", function(d,i) {
+			if  (d.Edit_a_thon == 1) { // (1 == 1)
+				return '#Edit_a_thon'
+			}
+		})
+		.attr("x", 0)
+		.attr("y", 45) // bar_h-(bar_h/2)
+		.attr('transform','scale(' + icon_scale + ')')
 
 	// new
 	d3.selectAll(".icons").append('g')
@@ -388,7 +637,6 @@ icons
 		.attr("y", bar_h/2)	
 		//.attr('transform','scale(0.2)')
 		.attr('transform','scale(' + ((height - margin.top - margin.bottom) / (data.length) / 100)  + ')' )
-
 };
 
 

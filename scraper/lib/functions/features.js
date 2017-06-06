@@ -21,12 +21,13 @@ var revision_api = 'https://en.wikipedia.org/w/api.php?action=query&format=json&
 var old_html_version = 'https://en.wikipedia.org/api/rest_v1/page/html/'
 
 var cross_origin = "http://crossorigin.me/";
+var my_proxy = simple_proxy; //cross_origin;
 
 /* ------------------------------------
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
 	"Reconciliation_Day",
@@ -47,7 +48,6 @@ $.getJSON(art_list, function(mydata) {
 		//console.log(article)
 	})
 });
-
 
 /* ---------------- 
 FINDME 
@@ -483,8 +483,6 @@ function get_all_references() {
 NOTES
 -------------------------------------*/
 
-var my_proxy = simple_proxy; //cross_origin;
-
 function get_notes(url) {
 	
 	$.ajax({					
@@ -745,10 +743,21 @@ function get_entrylinks_st() {
 	$('#output').html('source,target<br/>');
 
 	jQuery.each( articles_a, function( i, val ) {
+		var article = val.article;
+		var in_out = val.in;
+		var approaches = val.approaches;
+		
+		if (in_out == true) {
+			get_source_target(backlinks + article);
+			console.log(my_proxy + wikilink + article);
+		}
+
+		/*
 		var title = val;
 		get_source_target( backlinks + val );
 		console.log(wikilink + val);
 		stop++;
+		*/
 	});
 }
 
@@ -779,7 +788,7 @@ function scrape_exitlinks(url) {
 
 	$.ajax({					
 	   	type: 'GET',
-	   	url: proxy + wikilink + url,
+	   	url: my_proxy + wikilink + url,
 	   	processData: true,
 	})
 	.done (function (get_func) {
@@ -885,10 +894,14 @@ AMOUNT OF ENTRY LINKS
 
 // get entry links for one article
 function entrylinks(url) {
-	
-	$.ajax(url, {
-		dataType:  "jsonp",
-		success: function( wikiResponse ) {
+
+	$.ajax({					
+	   	type: 'GET',
+	   	url: backlinks + url, //my_proxy + wikilink + url,
+	   	processData: true,
+	})
+	.done (function (wikiResponse) {
+			console.log(wikiResponse)
 
 			container = $('#output');
 
@@ -903,8 +916,8 @@ function entrylinks(url) {
 		   	var parse_back = $.parseHTML(wikiResponse);
 
 			back = [];
-			back = $(wikiResponse.query.backlinks);
-			//console.log(back)
+			back = $(wikiResponse.query); // backlinks
+			console.log(back)
 
 			index++;
 
@@ -979,14 +992,13 @@ function entrylinks(url) {
 			}
 			else if ($.inArray(art_name, new_articles) -1 ) {
 				container.append('false<br/>');
-			}			   
+			}		
+		})	   
 
-		},   
-		error : function (xhr, ajaxOptions, thrownError) {
+		.error (function (xhr, ajaxOptions, thrownError) {
 			console.log(xhr.status);
 			console.log(thrownError);
-		}
-	});
+		});
 }
 
 // get entry links for all of article
@@ -996,9 +1008,22 @@ function get_n_entrylink() {
 
 	$('#output').html('article(entry),page,user,portal,template,category,total,community,review,new_article<br/>');
 	jQuery.each( articles_a, function( i, val ) {  // articles list
+		
+		var article = val.article;
+		var in_out = val.in;
+		var approaches = val.approaches;
+		
+		if (in_out == true) {
+			entrylinks(backlinks + article);
+			//console.log(backlinks + article);
+			stop++;
+		}
+
+		/*
 		entrylinks( backlinks + val );
 		console.log( wikilink + val);
-		stop++;
+		
+		*/
 	});	
 }
 
@@ -1007,14 +1032,16 @@ function get_n_entrylink() {
 AMOUNT OF EXIT LINKS
 -------------------------------------*/
 
-function exitlinks(url) {
+function exitlinks(url,approaches) {
 	
 	$.ajax({					
 	   	type: 'GET',
-	   	url: proxy + wikilink + url,
+	   	url: my_proxy + wikilink + url,
 	   	processData: true,
 	})
 	.done (function (get_func) {
+		//console.log(get_func)
+		console.log(my_proxy + wikilink + url)
 
 		container = $('#output');
 
@@ -1045,7 +1072,7 @@ function exitlinks(url) {
 			if (typeof href_clean === 'string'  &&  href_clean !== '' &&  href_clean.indexOf(talk_) !== 0  ) {  //   &&  v.indexOf(wikipedia) !== 0   &&  v.indexOf(user_talk) !== 0 
 
 				//console.log(href)
-
+				
 				if ( href_clean.indexOf(user_) === 0  ) { 
 					user++;
 					sum++;
@@ -1072,8 +1099,87 @@ function exitlinks(url) {
 					sum++;
 					//console.log('article: ' + v)
 				}
+
 			}
 		})
+
+		if (approaches.indexOf("RW_by_community") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("RW_by_expert_pdf") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("RW_by_expert_pdf_wiki") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("New_article_suggested_by_expert") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("AFC") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("Featured_on_WP_SA_portal") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("Rewrite_based_on_expert_review") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("WP_Assessment") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("Bold_reassesment") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("Africa_Destubathon") >= 0){
+			container.append(1 + ",")
+		}	
+		else{
+			container.append(0 + ",")
+		}
+
+		if (approaches.indexOf("Edit_a_thon") >= 0){
+			container.append(1)
+		}	
+		else{
+			container.append(0)
+		}
+		container.append("<br/>")
 		
 		$('#hide_a').hide();
 		$('#hide_b').show();
@@ -1091,9 +1197,19 @@ function exitlinks(url) {
 // get entry links for one article
 function get_n_exitlink() {
 	var container = $('#output')
-	container.html('article(exit),page,user,portal,template,category,total<br/>')
+	$('#output').html('article(entry),page,user,portal,template,category,total,community,review,new_article<br/>');
 	jQuery.each( articles_a, function( i, val ) { // list articles
-		exitlinks( val )
+		
+		var article = val.article;
+		var in_out = val.in;
+		var approaches = val.approaches;
+		
+		if (in_out == true) {
+			exitlinks(article,approaches)
+			//console.log(backlinks + article);
+			stop++;
+		}
+
 	})
 }
 
@@ -1172,13 +1288,16 @@ function get_all_daily_pageview(yearString,article) {
 	$('#hide_a').hide();
 	$('#hide_b').show();
 
-	jQuery.each( articles_a, function( i, val ) {
+	/*jQuery.each( articles_a, function( i, val ) {
 		get_daily_pageview(val,yearString)
 		console.log(val)	
-		stop++;
-	})
-}
 
+		stop++;
+	})*/
+
+	get_daily_pageview("Day_of_Reconciliation",2008)
+}
+console.log("test")
 
 /* ------------------------------------
 SISTER PROJECTS

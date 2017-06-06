@@ -48,16 +48,27 @@ var plot = svg.append("g")
 get data
 ------------------------- */
 
-d3.csv("../../data/20170205/features_2017.csv", loaded); // features_2017 features_2015
+csv = "../../data/20170205/features_2015.csv"  // features_2017 features_2015
+d3.csv(csv, loaded);
 
 function loaded (data){
 
 	data.sort(function(a,b) {
 		
-		total_2016 = a.references + a.notes + a.images + a.seeAlso
-		total_2015 = a.references_2015 + a.notes_2015 + a.images_2015 + a.seeAlso_2015 
+		total = a.references + a.notes + a.images + a.seeAlso
+		//total_2016 = a.references + a.notes + a.images + a.seeAlso
+		//total_2015 = a.references_2015 + a.notes_2015 + a.images_2015 + a.seeAlso_2015 
 		
-		return a.total - b.total;
+		//features_2015
+		if (csv == "../../data/20170205/features_2015.csv") {
+			//return a.total - b.total;
+			return a.id - b.id;
+		}
+		// features_2017
+		else if (csv == "../../data/20170205/features_2017.csv"){
+			return a.id - b.id;
+		}
+		
 	});
 
 	console.log(width + ',' + height)
@@ -142,13 +153,13 @@ visualize elements
 		.append('g')
 		.attr('class','article')
 		.attr("id",function (d,i) {
-			return d.article_14
+			return d.article
 		})
 		.attr('transform',function(d,i) {
 			return 'translate(0,' + (((height-margin.bottom-margin.top) / (data.length) ) * i) + ')' 
 		})	
 
-	article.append('text')
+	/*article.append('text')
         .attr('y', bar_h +bar_h)
         .attr('x', start_id)
         .attr('dy', '.20em')
@@ -157,7 +168,7 @@ visualize elements
 			return i + 1
 		})
 		.attr("font-size",font_size)
-		.attr('class','id')
+		.attr('class','id')*/
 
 	article.append('text')
         .attr('y', bar_h+ bar_h)
@@ -165,7 +176,7 @@ visualize elements
         .attr('dy', '.20em')
         .attr('dx', '.20em')
 		.text(function (d,i){
-			return d.article
+			return /*d.id + '-' + */ d.article
 		})
 		.attr("font-size",font_size)
 		.attr('class','text')
@@ -566,7 +577,7 @@ icons
 		.attr('transform','scale(' + icon_scale + ')')
 
 	// new
-	d3.selectAll(".icons").append('g')
+	/*d3.selectAll(".icons").append('g')
 		.attr('transform','translate('+ icon_space + ',' + bar_h + ')' ) 
 		.attr('class', function (d,i){
 			if (d.new_article == true)   { 
@@ -589,7 +600,7 @@ icons
 		.attr('transform','scale(' + icon_scale + ')')	
 		//.attr('transform','scale(0.2)')
 		//.attr('transform','scale(' + ((height - margin.top - margin.bottom) / (data.length) / 100)  + ')' )
-		
+		*/
 };
 
 
