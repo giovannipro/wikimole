@@ -23,7 +23,7 @@ var old_html_version = 'https://en.wikipedia.org/api/rest_v1/page/html/'
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
     "Reconciliation_Day",
@@ -81,7 +81,7 @@ function check_title(url) {
 
 			url_clean = url.replace(redirect,'');
 			
-			container.append( '<a target="_blank" href="' + wikilink + url_clean + '">' + url_clean + '</a>')
+			container.append(index + ' - <a target="_blank" href="' + wikilink + url_clean + '">' + url_clean + '</a>')
 
 	    	jQuery.each( obj, function( i, val ) {
 
