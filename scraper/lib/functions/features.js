@@ -27,7 +27,7 @@ var my_proxy = simple_proxy; //cross_origin;
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 var list = [
 	"Reconciliation_Day",
@@ -699,26 +699,35 @@ function get_source_target(url) {
 		dataType: "jsonp",
 		success: function( wikiResponse ) {
 
+<<<<<<< HEAD
 			var parse_back = $.parseHTML(wikiResponse),
 			back = [],
 			back = $(wikiResponse.query.backlinks);
+=======
+        	var parse_back = $.parseHTML(wikiResponse),
+	        	back = [],
+				back = $(wikiResponse.query.backlinks),
+				continue_ = $(wikiResponse.continue.blcontinue);
+
+			console.log(continue_.slice(2,-1)) //toString())
+>>>>>>> origin/master
 	
 			var art_name = url.replace('api.php?action=query&list=backlinks&bllimit=500&format=json&bltitle=',''),
-			art_name_dec = decodeURIComponent(art_name).replace('https://en.wikipedia.org/w/','').replace(/,/g, ';');
-
-			index++;
+				art_name_dec = decodeURIComponent(art_name).replace('https://en.wikipedia.org/w/','').replace(/,/g, ';');
 			
 			jQuery.each( back, function( i, val ) {
 
+				index++;
+
 				var cont = val.title,
-			 	cont_clean = cont.replace(/,/g, ';');
+			 		cont_clean = cont.replace(/,/g, ';');
 			 	//console.log(cont)
 
 			 	if (cont.indexOf(wikipedia) === 0) {
 			 		//console.log('no: ' + cont)
 			 	}
 			 	else{
-			 		$('#output').append('<span class="red">' + art_name_dec  + '</span>,' + cont_clean + '<br/>'); 
+			 		$('#output').append(index + ' - <span class="red">' + art_name_dec  + '</span>,' + cont_clean + '<br/>'); 
 			 		//console.log(cont)
 			 	}
 				
