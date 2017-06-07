@@ -94,12 +94,8 @@ function check_title(url) {
 
 			url_clean = url.replace(redirect,'');
 			
-<<<<<<< HEAD
-			container.append(index + ' - <a target="_blank" href="' + wikilink + url_clean + '">' + url_clean + '</a>')
-=======
 			container.append("<span>" + index + " - </span>")
 			container.append( '<a target="_blank" href="' + wikilink + url_clean + '">' + url_clean + '</a>')
->>>>>>> glam_tool
 
 			$.each( obj, function( i, val ) {
 
