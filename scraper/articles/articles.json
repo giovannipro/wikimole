@@ -1,1033 +1,175 @@
 [
-  {
-    "article": "Two-foot-gauge_railways_in_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Acid",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Africa_Day",
-    "in": true,
-    "approaches": [
-      "Africa_Destubathon",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Agriculture_in_South_Africa",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf_wiki"
-    ]
-  },
-  {
-    "article": "AIDS_orphan",
-    "in": true,
-    "approaches": [
-      "WP_Assessment"
-    ]
-  },
-  {
-    "article": "Alcohol_abuse",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Alcohol_dependence",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Alcoholism",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Aloe",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Aloe_vera",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Alcoholism",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Apartheid",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf"
-    ]
-  },
-  {
-    "article": "Outline_of_animal-powered_transport",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Atom",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Base_(chemistry)",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Bias",
-    "in": true,
-    "approaches": [
-      "WP_Assessment",
-      "Bold_reassesment"
-    ]
-  },
-  {
-    "article": "Bicycle",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf"
-    ]
-  },
-  {
-    "article": "Biome",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Bird_nest",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Boiling",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Borehole",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Bullying",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Car",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Castle_of_Good_Hope",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Cell_(biology)",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Ceramic",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Chapter_Two_of_the_Constitution_of_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Child_abuse",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Children's_Act,_2005",
-    "in": true,
-    "approaches": [
-      "WP_Assessment",
-      "Africa_Destubathon"
-    ]
-  },
-  {
-    "article": "Children's_Day",
-    "in": true,
-    "approaches": [
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Circuit_diagram",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Clay",
-    "in": true,
-    "approaches": [
-      "WP_Assessment"
-    ]
-  },
-  {
-    "article": "Coal",
-    "in": false,
-    "approaches": [
-      "Climate"
-    ]
-  },
-  {
-    "article": "Coal_in_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Control_variable",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Convenience_food",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Cooking",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Cradle_of_Humankind",
-    "in": true,
-    "approaches": [
-      "WP_Assessment"
-    ]
-  },
-  {
-    "article": "Day_of_Reconciliation",
-    "in": true,
-    "approaches": [
-      "Africa_Destubathon",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Decantation",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Dependent_and_independent_variables",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Design",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Discrimination",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Domestic_violence",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Domestic_violence_in_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Drakensberg",
-    "in": true,
-    "approaches": [
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Duration_(music)",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Economy_of_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Ecosystem",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Electrical_conductor",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Electrical_network",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Electricity_generation",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Energy_in_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Fair_trade",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Farm",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Fiber",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Fire_safety",
-    "in": true,
-    "approaches": [
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Flag_of_South_Africa",
-    "in": true,
-    "approaches": [
-      "RW_by_expert_pdf_wiki",
-      "New_article_suggested_by_expert",
-      "Featured_on_WP_SA_portal",
-      "Rewrite_based_on_expert_review"
-    ]
-  },
-  {
-    "article": "Food",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Food_group",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Food_pyramid_(nutrition)",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf",
-      "WP_Assessment",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Food_security",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Food_vs._fuel",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Frances_Baard",
-    "in": true,
-    "approaches": [
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Free_State_(province)",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Freedom_Day_(South_Africa)",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "San_people",
-    "in": true,
-    "approaches": [
-      "Africa_Destubathon"
-    ]
-  },
-  {
-    "article": "Gangster",
-    "in": true,
-    "approaches": [
-      "WP_Assessment"
-    ]
-  },
-  {
-    "article": "Gas",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Gauteng",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Gender_role",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf",
-      "Bold_reassesment"
-    ]
-  },
-  {
-    "article": "Glass",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Griqua_people",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Hand_washing",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Health",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Healthcare_in_South_Africa",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf"
-    ]
-  },
-  {
-    "article": "Herero_and_Namaqua_Genocide",
-    "in": true,
-    "approaches": [
-      "RW_by_expert_pdf_wiki",
-      "Rewrite_based_on_expert_review",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Heritage_Day_(South_Africa)",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf",
-      "Bold_reassesment",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "History_of_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "History_of_writing",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "HIV",
-    "in": true,
-    "approaches": [
-      "RW_by_expert_pdf_wiki"
-    ]
-  },
-  {
-    "article": "HIV/AIDS",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Home_safety",
-    "in": true,
-    "approaches": [
-      "WP_Assessment"
-    ]
-  },
-  {
-    "article": "Human_nutrition",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Human_Rights_Day",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf"
-    ]
-  },
-  {
-    "article": "Human_swimming",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Hydraulics",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Insulator_(electricity)",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Kaditshwene",
-    "in": true,
-    "approaches": [
-      "AFC",
-      "WP_Assessment"
-    ]
-  },
-  {
-    "article": "Khoikhoi",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf"
-    ]
-  },
-  {
-    "article": "Khoisan_languages",
-    "in": true,
-    "approaches": [
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Kingdom_of_Mapungubwe",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Later_Stone_Age",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Latitude",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Liquid_fuel",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "List_of_South_Africans",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Longitude",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Mahatma_Gandhi",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Makhonjwa_Mountains",
-    "in": true,
-    "approaches": [
-      "AFC"
-    ]
-  },
-  {
-    "article": "Malaria",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Mandela_Day",
-    "in": true,
-    "approaches": [
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Map",
-    "in": true,
-    "approaches": [
-      "Bold_reassesment"
-    ]
-  },
-  {
-    "article": "Mapungubwe_Collection",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf",
-      "New_article_suggested_by_expert",
-      "Rewrite_based_on_expert_review",
-      "Bold_reassesment"
-    ]
-  },
-  {
-    "article": "Mapungubwe_National_Park",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Mind_map",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Mining_industry_of_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Mpumalanga",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Music_of_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Music_of_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "National_anthem_of_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "National_symbols_of_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "National_Women's_Day",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf",
-      "Africa_Destubathon",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Nelson_Mandela",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf"
-    ]
-  },
-  {
-    "article": "Nest",
-    "in": true,
-    "approaches": [
-      "Bold_reassesment"
-    ]
-  },
-  {
-    "article": "Noise_pollution",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Oliver_Tambo",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Outer_space",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Outline_of_domestic_violence",
-    "in": true,
-    "approaches": [
-      "Bold_reassesment"
-    ]
-  },
-  {
-    "article": "Paper",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "People_Against_Gangsterism_and_Drugs",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Petrol-paraffin_engine",
-    "in": true,
-    "approaches": [
-      "WP_Assessment"
-    ]
-  },
-  {
-    "article": "Pitch_(music)",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Pneumatics",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Politics_of_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Pollution",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Convenience_food",
-    "in": true,
-    "approaches": [
-      "Bold_reassesment"
-    ]
-  },
-  {
-    "article": "Rail_transport",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Rail_transport_in_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Reproduction",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Right_to_food",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Road_map",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Rock_(geology)",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Saartjie_Baartman",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "San_healing_practices",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf",
-      "WP_Assessment",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "San_people",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf",
-      "Featured_on_WP_SA_portal"
-    ]
-  },
-  {
-    "article": "San_religion",
-    "in": true,
-    "approaches": [
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "San_rock_art",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Sand",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Scale_(map)",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Scientific_method",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Settling",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Sexism",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Sieve",
-    "in": true,
-    "approaches": [
-      "WP_Assessment"
-    ]
-  },
-  {
-    "article": "Soil",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Sound",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "South_African_cuisine",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "South_African_locomotive_history",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Standard_Model",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Stereotype",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Steve_Biko",
-    "in": true,
-    "approaches": [
-      "Featured_on_WP_SA_portal",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Tap_(valve)",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Textile",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Trade",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Trade",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Transport",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Transport_in_South_Africa",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Vibration",
-    "in": true,
-    "approaches": [
-      "WP_Assessment",
-      "Bold_reassesment"
-    ]
-  },
-  {
-    "article": "Walter_Sisulu",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf",
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Water_filter",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Water_pollution",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf_wiki"
-    ]
-  },
-  {
-    "article": "Water_privatization_in_South_Africa",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf_wiki"
-    ]
-  },
-  {
-    "article": "Water_supply_and_sanitation_in_South_Africa",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf_wiki",
-      "Featured_on_WP_SA_portal"
-    ]
-  },
-  {
-    "article": "Water_well",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Wax",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Western_Cape",
-    "in": true,
-    "approaches": [
-      "RW_by_community",
-      "RW_by_expert_pdf_wiki"
-    ]
-  },
-  {
-    "article": "Wetland",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Wildlife_conservation",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Wildlife_management",
-    "in": true,
-    "approaches": [
-      "WP_Assessment"
-    ]
-  },
-  {
-    "article": "Winnie_Madikizela-Mandela",
-    "in": true,
-    "approaches": [
-      "Edit_a_thon"
-    ]
-  },
-  {
-    "article": "Wood",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Wool",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "Youth_culture",
-    "in": false,
-    "approaches": []
-  },
-  {
-    "article": "ǃKung people",
-    "in": true,
-    "approaches": [
-      "Bold_reassesment",
-      "Edit_a_thon"
-    ]
-  }
+	"Acid",
+	"Africa_Day",
+	"Agriculture_in_South_Africa",
+	"AIDS_orphan",
+	"Alcohol_abuse",
+	"Alcohol_dependence",
+	"Alcoholism",
+	"Aloe",
+	"Aloe_vera",
+	"Animal_husbandry",
+	"Animal_husbandry_in_South_Africa",
+	"Apartheid",
+	"Atom",
+	"Base_(chemistry)",
+	"Bias",
+	"Bicycle",
+	"Biome",
+	"Bird_nest",
+	"Boiling",
+	"Borehole",
+	"Bullying",
+	"Car",
+	"Castle_of_Good_Hope",
+	"Cell_(biology)",
+	"Ceramic",
+	"Chapter_Two_of_the_Constitution_of_South_Africa",
+	"Child_abuse",
+	"Children's_Act,_2005",
+	"Children's_Day",
+	"Circuit_diagram",
+	"Clay",
+	"Climate",
+	"Coal",
+	"Coal_in_South_Africa",
+	"Control_variable",
+	"Convenience_food",
+	"Cooking",
+	"Cradle_of_Humankind",
+	"Day_of_Reconciliation",
+	"Decantation",
+	"Dependent_and_independent_variables",
+	"Design",
+	"Discrimination",
+	"Domestic_violence",
+	"Domestic_violence_in_South_Africa",
+	"Drakensberg",
+	"Duration_(music)",
+	"Economy_of_South_Africa",
+	"Ecosystem",
+	"Electrical_conductor",
+	"Electrical_network",
+	"Electricity_generation",
+	"Energy_in_South_Africa",
+	"Fair_trade",
+	"Farm",
+	"Fiber",
+	"Fire_safety",
+	"Flag_of_South_Africa",
+	"Food",
+	"Food_group",
+	"Food_pyramid_(nutrition)",
+	"Food_security",
+	"Food_vs._fuel",
+	"Frances_Baard",
+	"Free_State_(province)",
+	"Freedom_Day_(South_Africa)",
+	"Gangster",
+	"Gas",
+	"Gauteng",
+	"Gender_role",
+	"Glass",
+	"Griqua_people",
+	"Hand_washing",
+	"Health",
+	"Healthcare_in_South_Africa",
+	"Herero_and_Namaqua_genocide",
+	"Heritage_Day_(South_Africa)",
+	"History_of_South_Africa",
+	"History_of_writing",
+	"HIV",
+	"HIV/AIDS",
+	"Home_safety",
+	"Human_nutrition",
+	"Human_Rights_Day",
+	"Human_swimming",
+	"Hydraulics",
+	"Insulator_(electricity)",
+	"Kaditshwene",
+	"Khoikhoi",
+	"Khoisan_languages",
+	"Kingdom_of_Mapungubwe",
+	"Later_Stone_Age",
+	"Latitude",
+	"Liquid_fuel",
+	"List_of_South_Africans",
+	"Longitude",
+	"Mahatma_Gandhi",
+	"Makhonjwa_Mountains",
+	"Malaria",
+	"Mandela_Day",
+	"Map",
+	"Mapungubwe_Collection",
+	"Mapungubwe_National_Park",
+	"Mind_map",
+	"Mining_industry_of_South_Africa",
+	"Mpumalanga",
+	"Music_of_Africa",
+	"Music_of_South_Africa",
+	"National_anthem_of_South_Africa",
+	"National_symbols_of_South_Africa",
+	"National_Women's_Day",
+	"Nelson_Mandela",
+	"Nest",
+	"Noise_pollution",
+	"Oliver_Tambo",
+	"Outer_space",
+	"Outline_of_animal-powered_transport",
+	"Outline_of_domestic_violence",
+	"Paper",
+	"People_Against_Gangsterism_and_Drugs",
+	"Petrol-paraffin_engine",
+	"Pitch_(music)",
+	"Pneumatics",
+	"Politics_of_South_Africa",
+	"Pollution",
+	"Rail_transport",
+	"Rail_transport_in_South_Africa",
+	"Reproduction",
+	"Right_to_food",
+	"Road_map",
+	"Rock_(geology)",
+	"San_healing_practices",
+	"San_people",
+	"San_religion",
+	"San_rock_art",
+	"Sand",
+	"Sarah_Baartman",
+	"Scale_(map)",
+	"Scientific_method",
+	"Settling",
+	"Sexism",
+	"Sieve",
+	"Soil",
+	"Sound",
+	"South_Africa",
+	"South_African_cuisine",
+	"South_African_locomotive_history",
+	"Standard_Model",
+	"Stereotype",
+	"Steve_Biko",
+	"Tap_(valve)",
+	"Textile",
+	"Trade",
+	"Transport",
+	"Transport_in_South_Africa",
+	"Two-foot-gauge_railways_in_South_Africa",
+	"Vibration",
+	"Walter_Sisulu",
+	"Water_filter",
+	"Water_pollution",
+	"Water_privatisation_in_South_Africa",
+	"Water_supply_and_sanitation_in_South_Africa",
+	"Water_well",
+	"Wax",
+	"Western_Cape",
+	"Wetland",
+	"Wildlife_conservation",
+	"Wildlife_management",
+	"Winnie_Madikizela-Mandela",
+	"Wood",
+	"Wool",
+	"Youth_culture",
+	"ǃKung people"
 ]

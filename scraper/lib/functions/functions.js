@@ -40,114 +40,114 @@ EDITS
 
 // get edits for one article
 function edits_json(url) {
-    
-    $.ajax(url, {
-        dataType:  "jsonp",
-        success: function( wikiResponse ) {
-        	//console.log(wikiResponse)
+	
+	$.ajax(url, {
+		dataType:  "jsonp",
+		success: function( wikiResponse ) {
+			//console.log(wikiResponse)
 
-        	container = $('#edits');
-        	url_clean = url.replace(edit_api, '')
-        	
-        	container.append( '[{"article":"' + url_clean + '"},{"edit":[<br/>')
+			container = $('#edits');
+			url_clean = url.replace(edit_api, '')
+			
+			container.append( '[{"article":"' + url_clean + '"},{"edit":[<br/>')
 
-        	obj = []
+			obj = []
 			obj = $(wikiResponse.query.pageids)//.pages)[0]
 			pageids = obj[0].toString()
 			edit =  $(wikiResponse.query.pages)[0][pageids].revisions //.pageids; .revisions
 
-        	//console.log(edit)
-        	console.log(url_clean)
+			//console.log(edit)
+			console.log(url_clean)
 
-        	jQuery.each( edit, function( i , v ) {
+			jQuery.each( edit, function( i , v ) {
 
-        		container.append( '{' )
+				container.append( '{' )
 
-        		jQuery.each( v, function( i, v ) {
-        	   		if (i.indexOf("size")  === 0 ) {
-        	   			container.append( '"' +i + '":' + v )
-        	   		}
-        	   		else{
-        	   			container.append( '"' +i + '":"' + v + '",')
-        	   		}
-        	   	})
+				jQuery.each( v, function( i, v ) {
+			   		if (i.indexOf("size")  === 0 ) {
+			   			container.append( '"' +i + '":' + v )
+			   		}
+			   		else{
+			   			container.append( '"' +i + '":"' + v + '",')
+			   		}
+			   	})
 
-        		if ( i === (edit.length-1)) {
-        			container.append( '}<br/>' )
-        		}
-        		else {
-        			container.append( '},<br/>' )
-        		}
-        	
-        	})
+				if ( i === (edit.length-1)) {
+					container.append( '}<br/>' )
+				}
+				else {
+					container.append( '},<br/>' )
+				}
+			
+			})
 
-        	container.append( ']}],<br/>' )
+			container.append( ']}],<br/>' )
 
 			$('.hide_1').hide()
-        },   
+		},   
 		error : function (xhr, ajaxOptions, thrownError) {
-	        console.log(xhr.status);
-	        console.log(thrownError);
+			console.log(xhr.status);
+			console.log(thrownError);
 		}
-    })
+	})
 
 }
 
 function edits_csv(url) {
-    
-    $.ajax(url, {
-        dataType:  "jsonp",
-        success: function( wikiResponse ) {
+	
+	$.ajax(url, {
+		dataType:  "jsonp",
+		success: function( wikiResponse ) {
 
-        	//console.log(wikiResponse)
+			//console.log(wikiResponse)
 
-        	container = $('#edits');
-        	url_clean = url.replace(edit_api, '')
-        	
-        	obj = []
+			container = $('#edits');
+			url_clean = url.replace(edit_api, '')
+			
+			obj = []
 			obj = $(wikiResponse.query.pageids)//.pages)[0]
 
 			pageids = obj[0].toString()
 			edit =  $(wikiResponse.query.pages)[0][pageids].revisions //.pageids; .revisions
 
-        	//console.log(edit)
-        	console.log(url_clean)
+			//console.log(edit)
+			console.log(url_clean)
 
-        	jQuery.each( edit, function( i , v ) {
+			jQuery.each( edit, function( i , v ) {
 
-        		container.append( url_clean + ',' )
+				container.append( url_clean + ',' )
 
-        		jQuery.each( v, function( i, v ) {
-        			//container.append( v + ',')        	   		
-        			
-        	   		if (i.indexOf("size")  === 0 ) {
-        	   			container.append( v )
-        	   		}
-        	   	   	if (i.indexOf("timestamp")  === 0 ) {
-        	   	   		// str.substring(1, 4); 
-        	   			container.append( v.substring(0, 10) + ',' ); 
-        	   		}
-        	   		if (i.indexOf("user")  === 0 ) {
-        	   			container.append( v + ',')
-        	   		}
-        	   		else {
-        	   			//
-        	   		}
-        	   	})
+				jQuery.each( v, function( i, v ) {
+					//container.append( v + ',')			   		
+					
+			   		if (i.indexOf("size")  === 0 ) {
+			   			container.append( v )
+			   		}
+			   	   	if (i.indexOf("timestamp")  === 0 ) {
+			   	   		// str.substring(1, 4); 
+			   			container.append( v.substring(0, 10) + ',' ); 
+			   		}
+			   		if (i.indexOf("user")  === 0 ) {
+			   			container.append( v + ',')
+			   		}
+			   		else {
+			   			//
+			   		}
+			   	})
 
-        		container.append( '</br>')
-        	
-        	})
+				container.append( '</br>')
+			
+			})
 
-        	//container.append( ']}],<br/>' )
+			//container.append( ']}],<br/>' )
 
 			$('.hide_1').hide()
-        },   
+		},   
 		error : function (xhr, ajaxOptions, thrownError) {
-	        console.log(xhr.status);
-	        console.log(thrownError);
+			console.log(xhr.status);
+			console.log(thrownError);
 		}
-    })
+	})
 
 }
 
@@ -185,13 +185,13 @@ function get_one_year_pageview(yearString, monthString, article, doPrint) {
 
 	var container = $('#output');
 
-	    $.ajax({			    	
-       	type: 'GET',
-       	url: with_proxy,
-       	processData: true,
-       	dataType: 'json',
-       	crossOrigin: true,
-    })
+		$.ajax({					
+	   	type: 'GET',
+	   	url: with_proxy,
+	   	processData: true,
+	   	dataType: 'json',
+	   	crossOrigin: true,
+	})
 	.done (function (wikiResponse) {
 		if (!yearPV.hasOwnProperty(yearString)) {
 			yearPV[yearString] = {};
@@ -209,14 +209,14 @@ function get_one_year_pageview(yearString, monthString, article, doPrint) {
 
 		jQuery.each( yearPV[yearString][monthString], function( i, v ) {
 			year =  year + v
-	    })
+		})
 
-	    container.append( article_clean + ',' + monthString + ',' + year  +'</br>')
+		container.append( article_clean + ',' + monthString + ',' + year  +'</br>')
 
 	})
 	.error (function (xhr, ajaxOptions, thrownError) {
-        console.log(xhr.status);
-        console.log(thrownError);
+		console.log(xhr.status);
+		console.log(thrownError);
 	})
 };
 
@@ -250,7 +250,7 @@ function get_yearly_pageview(article) {
 		get_one_year_pageview(yearString, monthString, article, monthString === '12'); 
 	}
 	$('#hide_a').hide();
-    $('#hide_b').show();
+	$('#hide_b').show();
 }
 
 function get_all_yearly_pageview(yearString,article) {
