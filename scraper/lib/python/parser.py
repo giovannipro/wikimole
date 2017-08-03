@@ -32,7 +32,7 @@ s = " "
 
 def parse(mfile):
 
-	art_list = folder + "raw_data/" + "articles_2015" + ".tsv";
+	art_list = folder + "raw_data/" + "articles_2017" + ".tsv";
 	myFile = folder + "raw_data/" + mfile + ".tsv";
 	output = folder + "raw_data/" + mfile + "_output.tsv";
 
@@ -55,19 +55,49 @@ def parse(mfile):
 				
 				output_a = str(index) + t + art_ + t
 				out_file.write(output_a)
-				print(output_a)
+				# print(art_)
 
 				for x in filecontents_b:
-					x0 = x[0];
+					x1 = x[1];
+					print x1;
 
-					if art_ in x0:
+					if art_ in x1:
+						# print(art_ + x1)
 						output_b = x[1] + "|"
 						out_file.write(output_b)
+						print(output_b)
 
 				out_file.write(n)
 
 	except IOError as e:
 		print e #'Error: no files found'  # %s' % e.strerror
+
+def get_edges(mfile):
+
+	my_file = folder + "raw_data/" + mfile + ".tsv";
+	out_file = folder + "raw_data/" + mfile + "_edges.tsv";
+
+	try:
+		with open(my_file, "rb") as a_file, \
+			open(out_file, "wb") as b_file:
+
+			a_file = csv.reader(a_file, delimiter = t)
+			filecontents_a = [line for line in a_file]
+
+			index = 0
+
+			for art in filecontents_a:
+				article = art[1]
+				links = art[2].split("|")
+				print article
+
+				for link in links:
+					output = article + t + link
+					output_ = output + n
+					b_file.write(output_)
+
+	except IOError as e:
+		print e 
 
 def count_co_occurrences(nodes,edges):
 	my_input_nodes = folder + "raw_data/" + nodes + ".tsv"
@@ -128,9 +158,11 @@ def count_co_occurrences(nodes,edges):
 # -----------------------------------
 # Launch script
 
-#parse("edges_2016") # nodes_raw nodes_raw_test , edges_raw edges_raw_test
+#parse("articles-links_2017") # nodes_raw nodes_raw_test , edges_raw edges_raw_test
 
-count_co_occurrences("nodes_2016","edges_2016_output")
+get_edges("articles-links_2017");
+
+#count_co_occurrences("nodes_2016","edges_2016_output")
 
 
 

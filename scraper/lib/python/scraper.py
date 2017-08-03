@@ -140,4 +140,7 @@ def get_incoming_links(art_list):
 # Launch script
 
 #time()
-#get_incoming_links("articles/articles_test") # articles articles_test
+get_incoming_links("articles/articles") # articles articles_test
+
+
+
