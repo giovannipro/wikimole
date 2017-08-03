@@ -3,11 +3,16 @@ main variables
 ------------------------- */
 
 var w = window;
-width = w.outerWidth,
-height = width - (width * 0.01); // 0.5
+	width = w.outerWidth,
+	height = width - (width * 0.01); // 0.5
 
-var margin = {top: 50, right: 50, bottom: 50, left: 50},
-nomargin_w = width - margin ;
+var margin = {
+		top: 50, 
+		right: 50, 
+		bottom: 50, 
+		left: 50
+	},
+	nomargin_w = width - margin ;
 
 var padding = width/100,
 offset = padding*1.5,
@@ -41,14 +46,16 @@ var svg = d3.select("#svg_container")
 	.attr("viewBox", '0 0 ' + width + ' ' + (height) )
 
 var plot = svg.append("g")
-    .attr("id", "d3_plot")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	.attr("id", "d3_plot")
+	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 /* -----------------------
 get data
 ------------------------- */
 
-d3.csv("../../data/20170205/links_2015.csv", loaded); // 20160227/in_out_links
+var dataset = "20170803/links_2015.csv";
+
+d3.csv("../../data/" + dataset, loaded); // 20160227/in_out_links
 console.log("links_2015")
 
 function loaded (data){
@@ -67,24 +74,24 @@ set axis
 
 	var x_in = d3.scale.linear()
 		.domain([0,max_in])
-        .range([start_in,(start_icon-offset) ]);
+		.range([start_in,(start_icon-offset) ]);
 
 	var in_Axis = d3.svg.axis()
-        .scale(x_in)
-        .ticks(5)
-        .tickSize(-height + (margin.top*2) )
-        .orient('top')
-    typeof(in_Axis);
+		.scale(x_in)
+		.ticks(5)
+		.tickSize(-height + (margin.top*2) )
+		.orient('top')
+	typeof(in_Axis);
 
 	var x_out = d3.scale.linear()
 		.domain([0,max_out])
-        .range([(start_in-offset),start_out]);
+		.range([(start_in-offset),start_out]);
 
 	var out_Axis = d3.svg.axis()
-        .scale(x_out)
-        .ticks(10)
-        .tickSize(-height + (margin.top*2) )
-        .orient('top')
+		.scale(x_out)
+		.ticks(10)
+		.tickSize(-height + (margin.top*2) )
+		.orient('top')
 	typeof(out_Axis);
 
 /* -----------------------
@@ -95,19 +102,19 @@ visualize grid
 		.attr('class','v_lines')
 		.call(in_Axis)
 	.selectAll('text')
-        .attr("transform", "rotate(90)")
-        .style("text-anchor", "start")
-        .attr('fill',c_tick)
-        .attr("font-size",font_size)
+		.attr("transform", "rotate(90)")
+		.style("text-anchor", "start")
+		.attr('fill',c_tick)
+		.attr("font-size",font_size)
 
 	var vl_out = plot.append('g')
 		.attr('class','v_lines')
 		.call(out_Axis)
 	.selectAll('text')
-        .attr("transform", "rotate(90)")
-        .style("text-anchor", "start")
-        .attr('fill',c_tick)
-        .attr("font-size",font_size)
+		.attr("transform", "rotate(90)")
+		.style("text-anchor", "start")
+		.attr('fill',c_tick)
+		.attr("font-size",font_size)
 
 	// o_lines
 	var o_lines = plot.append('g')
@@ -116,7 +123,7 @@ visualize grid
 
 	for (var i=0; i<data.length; i++) { 
 		if( i % 5 == 0 ){
-       		o_lines.append('line')
+	   		o_lines.append('line')
 			.attr('x1', 0)
 			.attr('y1', i * ((height - margin.top - margin.bottom) / (data.length) ))
 			.attr('x2', width - margin.top - margin.bottom)
@@ -124,7 +131,7 @@ visualize grid
 			.attr('class','o_line')
 			.attr('stroke',c_line)
 			.attr('stroke-width',w_line)
-    	}
+		}
 	}
 
 /* -----------------------
@@ -144,10 +151,10 @@ visualize elements
 		})	
 
 	article.append('text')
-        .attr('y', bar_h +bar_h)
-        .attr('x', start_id)
-        .attr('dy', '.20em')
-        .attr('dx', '.20em')
+		.attr('y', bar_h +bar_h)
+		.attr('x', start_id)
+		.attr('dy', '.20em')
+		.attr('dx', '.20em')
 		.text(function (d,i){
 			return i + 1
 		})
@@ -155,10 +162,10 @@ visualize elements
 		.attr('class','id')
 
 	article.append('text')
-        .attr('y', bar_h+ bar_h)
-        .attr('x', start_label)
-        .attr('dy', '.20em')
-        .attr('dx', '.20em')
+		.attr('y', bar_h+ bar_h)
+		.attr('x', start_label)
+		.attr('dy', '.20em')
+		.attr('dx', '.20em')
 		.text(function (d,i){
 			return d.article
 		})
@@ -352,7 +359,7 @@ icons
 	var icon_space = 15;
 	var roate = "90";
 
-    // icons
+	// icons
 	var icons = article.append('g')
 		//.attr('transform','scale(0.2)')
 		.attr('transform','translate(' + start_icon  + ',' + 0 +')' )  // bar_hx

@@ -1,3 +1,15 @@
 [
-  "!Kung_people"
+  {
+    "title": "Acid",
+    "in_out": false,
+    "appr": null
+  },
+  {
+    "title": "Africa_Day",
+    "in_out": true,
+    "appr": [
+      "Africa_Destubathon",
+      "Edit_a_thon"
+    ]
+  }
 ]

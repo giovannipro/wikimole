@@ -42,226 +42,229 @@
 
 			<hr>
 
-			<div class="row scraper">
-				<div class="col-md-4">
-					<h4 onclick="get_all_revisionid()">Revision ID</h4>
-				</div>
-				<!--<div class="col-md-4">
-					<h4 onclick="get_all_old_version()">Old html versions</h4>
-				</div>-->
-			</div>
+			<div id="standby">
 
-			<hr>
-
-			<div class="row">
-				<div class="col-md-12">
-					<h2>Pageviews</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Daily pageviews</h3>
-				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4" onclick="get_all_daily_pageview(2014)">
-					<h4>2014</h4>
-				</div>
-				<div class="col-md-4" onclick="get_all_daily_pageview(2015)">
-					<h4>2015</h4>
-				</div>
-			</div>
-
-			<hr>
-
-			<div class="row">
-				<div class="col-md-12">
-					<h2>Sister projects</h2>
-				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4" onclick="get_all_sproject()">
-					<h4 class="red">Sister projects</h4>
-				</div>
-			</div>
-
-			<hr>
-
-			<div class="row">
-				<div class="col-md-12">
-					<h2>Article's features</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Features</h3>
-				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4" onclick="get_all_issues()">
-					<h4>Issues</h4>
-				</div>
-				<div class="col-md-4" onclick="get_all_references()">
-					<h4>References</h4>
-				</div>
-				<div class="col-md-4" onclick="get_all_notes()">
-					<h4>Notes</h4>
-				</div>
-				<div class="col-md-4" onclick="get_all_images()">
-					<h4>Images</h4>
-				</div>
-				<div class="col-md-4" onclick="get_all_seeAlso()">
-					<h4>See Also</h4>
-				</div>
-				<div class="col-md-4" onclick="get_all_infobox()">
-					<h4 class="red">Infobox</h4>
-				</div>
-				<div class="col-md-4" onclick="get_all_issuetype()">
-					<h4 class="red">Issue type</h4>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Amount of links</h3>
-					<p>article,page,user,portal,template,category,total</p>
-				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4" onclick="get_n_entrylink()">
-					<h4>Incoming links</h4>
-				</div>
-				<div class="col-md-4" onclick="get_n_exitlink()">
-					<h4>Outgoing links</h4>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Incoming links</h3>
-				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4" onclick="get_entrylinks_st()">
-					<h4>Edge: source,target<h4>
-				</div>
-				<div class="col-md-4" onclick="get_entrylinks_il()">
-					<h4>Node: id,label<h4>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Outgoing links</h3>
-				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4" onclick="get_exitlinks_st()">
-					<h4>Edge: source,target</h4>
-				</div>
-				<div class="col-md-4" onclick="get_exitlinks_il()">
-					<h4>Node: id,label</h4>
-				</div>
-			</div>
-
-
-			<hr>
-
-			<div class="row">
-				<div class="col-md-12">
-					<h2>Edits</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Edits chronology (human only)</h3>
-					<p>article,user,timestamp,size</p>
-				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4">
-					<span style="font-weight:bold">Edits</span>
-                    <label style="font-weight:normal">Limit</label>
-                    <input type='text' id="limit_edit" placeholder="2014"></input>
-                    <span onclick="get_all_edits_csv()">Get</span>
-					<!--
-					<div class="dropdown">
-					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-					    Dropdown
-					    <span class="caret"></span>
-					  </button>
-					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					    <li><a href="#">Action</a></li>
-					    <li><a href="#">Another action</a></li>
-					    <li><a href="#">Something else here</a></li>
-					    <li role="separator" class="divider"></li>
-					    <li><a href="#">Separated link</a></li>
-					  </ul>
+				<div class="row scraper">
+					<div class="col-md-4">
+						<h4 onclick="get_all_revisionid()">Revision ID</h4>
 					</div>
-					-->
+					<!--<div class="col-md-4">
+						<h4 onclick="get_all_old_version()">Old html versions</h4>
+					</div>-->
 				</div>
-			</div>
 
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Edits, size, editors</h3>
-					<p>article,edits,unique_editors,avg_size</p>
-				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4" onclick="get_all_edits_2014()">
-					<h4>2014</h4>
-				</div>
-				<div class="col-md-4" onclick="get_all_edits_2015()">
-					<h4>2015</h4>
-				</div>
-			</div>
+				<hr>
 
-			<div class="row">
-				<div class="col-md-12">
-					<h3>All editors (bots included)</h3>
-					<p>editors</p>
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Pageviews</h2>
+					</div>
 				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4" onclick="get_all_editors_2014()">
-					<h4>2014</h4>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Daily pageviews</h3>
+					</div>
 				</div>
-				<div class="col-md-4" onclick="get_all_editors_2015()">
-					<h4>2015</h4>
+				<div class="row scraper">
+					<div class="col-md-4" onclick="get_all_daily_pageview(2014)">
+						<h4>2014</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_daily_pageview(2015)">
+						<h4>2015</h4>
+					</div>
 				</div>
-			</div>
 
-			<div class="row">
-				<div class="col-md-12">
-					<h3>All edited articles (human only)</h3>
-					<p>edited_articles</p>
-				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4" onclick="get_all_edited_articles_2014()">
-					<h4>2014</h4>
-				</div>
-				<div class="col-md-4" onclick="get_all_edited_articles_2015()">
-					<h4>2015</h4>
-				</div>
-			</div>
+				<hr>
 
-			<div class="row">
-				<div class="col-md-12">
-					<h3>All editors info</h3>
-					<p>article,editor,gender,editcount,emailable,registration,rigths</p>
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Sister projects</h2>
+					</div>
 				</div>
-			</div>
-			<div class="row scraper">
-				<div class="col-md-4" onclick="get_all_editor_info_2014()">
-					<h4>All user info 2014</h4>
+				<div class="row scraper">
+					<div class="col-md-4" onclick="get_all_sproject()">
+						<h4 class="red">Sister projects</h4>
+					</div>
 				</div>
-				<div class="col-md-4" onclick="get_all_editor_info_2015()">
-					<h4>All user info 2015</h4>
-				</div>		
-			</div>
 
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Article's features</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Features</h3>
+					</div>
+				</div>
+				<div class="row scraper">
+					<div class="col-md-4" onclick="get_all_issues()">
+						<h4>Issues</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_references()">
+						<h4>References</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_notes()">
+						<h4>Notes</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_images()">
+						<h4>Images</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_seeAlso()">
+						<h4>See Also</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_infobox()">
+						<h4 class="red">Infobox</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_issuetype()">
+						<h4 class="red">Issue type</h4>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Amount of links</h3>
+						<p>article,page,user,portal,template,category,total</p>
+					</div>
+				</div>
+				<div class="row scraper">
+					<div class="col-md-4" onclick="get_n_entrylink()">
+						<h4>Incoming links</h4>
+					</div>
+					<div class="col-md-4" onclick="get_n_exitlink()">
+						<h4>Outgoing links</h4>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Incoming links</h3>
+					</div>
+				</div>
+				<div class="row scraper">
+					<div class="col-md-4" onclick="get_entrylinks_st()">
+						<h4>Edge: source,target<h4>
+					</div>
+					<div class="col-md-4" onclick="get_entrylinks_il()">
+						<h4>Node: id,label<h4>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Outgoing links</h3>
+					</div>
+				</div>
+				<div class="row scraper">
+					<div class="col-md-4" onclick="get_exitlinks_st()">
+						<h4>Edge: source,target</h4>
+					</div>
+					<div class="col-md-4" onclick="get_exitlinks_il()">
+						<h4>Node: id,label</h4>
+					</div>
+				</div>
+
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Edits</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Edits chronology (human only)</h3>
+						<p>article,user,timestamp,size</p>
+					</div>
+				</div>
+				<div class="row scraper">
+					<div class="col-md-4">
+						<span style="font-weight:bold">Edits</span>
+	                    <label style="font-weight:normal">Limit</label>
+	                    <input type='text' id="limit_edit" placeholder="2014"></input>
+	                    <span onclick="get_all_edits_csv()">Get</span>
+						<!--
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    Dropdown
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">Action</a></li>
+						    <li><a href="#">Another action</a></li>
+						    <li><a href="#">Something else here</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+						-->
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Edits, size, editors</h3>
+						<p>article,edits,unique_editors,avg_size</p>
+					</div>
+				</div>
+				<div class="row scraper">
+					<div class="col-md-4" onclick="get_all_edits_2014()">
+						<h4>2014</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_edits_2015()">
+						<h4>2015</h4>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h3>All editors (bots included)</h3>
+						<p>editors</p>
+					</div>
+				</div>
+				<div class="row scraper">
+					<div class="col-md-4" onclick="get_all_editors_2014()">
+						<h4>2014</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_editors_2015()">
+						<h4>2015</h4>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h3>All edited articles (human only)</h3>
+						<p>edited_articles</p>
+					</div>
+				</div>
+				<div class="row scraper">
+					<div class="col-md-4" onclick="get_all_edited_articles_2014()">
+						<h4>2014</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_edited_articles_2015()">
+						<h4>2015</h4>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h3>All editors info</h3>
+						<p>article,editor,gender,editcount,emailable,registration,rigths</p>
+					</div>
+				</div>
+				<div class="row scraper">
+					<div class="col-md-4" onclick="get_all_editor_info_2014()">
+						<h4>All user info 2014</h4>
+					</div>
+					<div class="col-md-4" onclick="get_all_editor_info_2015()">
+						<h4>All user info 2015</h4>
+					</div>		
+				</div>
+				
+			</div>
 		</main>
 	</body>
 	<script src="../lib/js/jquery.min.js"></script>
