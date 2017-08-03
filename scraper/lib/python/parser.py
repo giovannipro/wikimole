@@ -125,13 +125,12 @@ def count_co_occurrences(nodes,edges):
 	except IOError as e:
 		print e #'Error: no files found'  # %s' % e.strerror
 
-
 # -----------------------------------
 # Launch script
 
-#parse("edges_2015") # nodes_raw nodes_raw_test , edges_raw edges_raw_test
+#parse("edges_2016") # nodes_raw nodes_raw_test , edges_raw edges_raw_test
 
-count_co_occurrences("nodes_2015","edges_2015_output")
+count_co_occurrences("nodes_2016","edges_2016_output")
 
 
 
