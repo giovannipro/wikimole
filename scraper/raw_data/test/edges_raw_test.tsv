@@ -1,7 +1,9 @@
 source	target	weight
-A	C	1
-A	B	2
-B	C	1
-B	A	2
+D	B	2
+B	D	2
+B	A	1
+A	B	1
+A	D	1
+D	A	1
 C	B	1
-C	A	1
+B	C	1

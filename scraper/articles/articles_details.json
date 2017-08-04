@@ -2,7 +2,7 @@
   {
     "title": "Acid",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Africa_Day",
@@ -30,37 +30,37 @@
   {
     "title": "Alcohol_abuse",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Alcohol_dependence",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Alcoholism",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Aloe",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Aloe_vera",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Animal_husbandry",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Animal_husbandry_in_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Apartheid",
@@ -73,12 +73,12 @@
   {
     "title": "Atom",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Base_(chemistry)",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Bias",
@@ -99,56 +99,56 @@
   {
     "title": "Biome",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Bird_nest",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Boiling",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Borehole",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Bullying",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },{
     "title": "Car",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Castle_of_Good_Hope",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Cell_(biology)",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Ceramic",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Chapter_Two_of_the_Constitution_of_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Child_abuse",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Children's_Act,_2005",
@@ -168,7 +168,7 @@
   {
     "title": "Circuit_diagram",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Clay",
@@ -180,22 +180,22 @@
   {
     "title": "Climate",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Coal",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Coal_in_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Control_variable",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Convenience_food",
@@ -207,7 +207,7 @@
   {
     "title": "Cooking",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Cradle_of_Humankind",
@@ -227,22 +227,22 @@
   {
     "title": "Decantation",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Dependent_and_independent_variables",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Design",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Discrimination",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Outline of domestic violence",
@@ -254,12 +254,12 @@
   {
     "title": "Domestic_violence",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Domestic_violence_in_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Drakensberg",
@@ -271,51 +271,51 @@
   {
     "title": "Duration_(music)",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Economy_of_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Ecosystem",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Electrical_conductor",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Electrical_network",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Electricity_generation",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Energy_in_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },{
     "title": "Fair_trade",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Farm",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Fiber",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Fire_safety",
@@ -337,12 +337,12 @@
   {
     "title": "Food",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Food_group",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Food_pyramid_(nutrition)",
@@ -357,12 +357,12 @@
   {
     "title": "Food_security",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Food_vs._fuel",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Frances_Baard",
@@ -374,12 +374,12 @@
   {
     "title": "Free_State_(province)",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Freedom_Day_(South_Africa)",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Gangster",
@@ -391,12 +391,12 @@
   {
     "title": "Gas",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Gauteng",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Gender_role",
@@ -410,12 +410,12 @@
   {
     "title": "Glass",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Griqua_people",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Hand_washing",
@@ -429,7 +429,7 @@
   {
     "title": "Health",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Healthcare_in_South_Africa",
@@ -461,12 +461,12 @@
   {
     "title": "History_of_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "History_of_writing",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "HIV",
@@ -478,7 +478,7 @@
   {
     "title": "HIV/AIDS",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Home_safety",
@@ -489,7 +489,7 @@
   },{
     "title": "Human_nutrition",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Human_Rights_Day",
@@ -502,17 +502,17 @@
   {
     "title": "Human_swimming",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Hydraulics",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Insulator_(electricity)",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Kaditshwene",
@@ -540,36 +540,36 @@
   {
     "title": "Kingdom_of_Mapungubwe",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Later_Stone_Age",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Latitude",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "List_of_South_Africans",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },{
     "title": "Liquid_fuel",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Longitude",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Mahatma_Gandhi",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Makhonjwa_Mountains",
@@ -581,7 +581,7 @@
   {
     "title": "Malaria",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Mandela_Day",
@@ -611,42 +611,42 @@
   {
     "title": "Mapungubwe_National_Park",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Mind_map",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Mining_industry_of_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Mpumalanga",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Music_of_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Music_of_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "National_anthem_of_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "National_symbols_of_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "National_Women's_Day",
@@ -676,7 +676,7 @@
   {
     "title": "Noise_pollution",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Oliver_Tambo",
@@ -689,27 +689,27 @@
   {
     "title": "Outer_space",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Outline_of_animal-powered_transport",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Outline_of_domestic_violence",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Paper",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "People_Against_Gangsterism_and_Drugs",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Petrol-paraffin_engine",
@@ -721,52 +721,52 @@
   {
     "title": "Pitch_(music)",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Pneumatics",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Politics_of_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Pollution",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Rail_transport",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Rail_transport_in_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Reproduction",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Right_to_food",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Road_map",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Rock_(geology)",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "San_healing_practices",
@@ -795,37 +795,37 @@
   {
     "title": "San_rock_art",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Sand",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Sarah_Baartman",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Scale_(map)",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Scientific_method",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Settling",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Sexism",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Sieve",
@@ -837,37 +837,37 @@
   {
     "title": "Soil",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Sound",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "South_African_cuisine",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "South_African_locomotive_history",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Standard_Model",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Stereotype",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Steve_Biko",
@@ -879,27 +879,27 @@
   {
     "title": "Tap_(valve)",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Textile",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Trade",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Transport",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Two-foot-gauge_railways_in_South_Africa",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Vibration",
@@ -921,7 +921,7 @@
   {
     "title": "Water_filter",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Water_pollution",
@@ -951,12 +951,12 @@
   {
     "title": "Water_well",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Wax",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Western_Cape",
@@ -969,12 +969,12 @@
   {
     "title": "Wetland",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Wildlife_conservation",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Wildlife_management",
@@ -993,17 +993,17 @@
   {
     "title": "Wood",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Wool",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "Youth_culture",
     "in_out": false,
-    "appr": null
+    "appr": [""]
   },
   {
     "title": "ǃKung_people",

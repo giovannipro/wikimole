@@ -33,108 +33,6 @@ def time():
 	ts = datetime.datetime.utcnow().strftime(my_format)
 	print(ts)
 
-def get_incoming_links_continue(article,cont,index):
-
-	f_out = folder + "/" + art_list + "-links.tsv" 
-
-	with open(f_out, "a") as f2:
-		if cont == 0:
-			request = backlinks + article
-		else:
-			request = backlinks + article + "&blcontinue=" + str(cont)
-		#print(request)
-
-		response = urlopen(request).read()
-		data = json.loads(response)
-
-		back = data["query"]["backlinks"]
-
-		index +=1
-		links = []
-
-		for i in back:
-			try:
-				link = i["title"]
-				links.append(link)
-				#print (link)
-			except:
-				print(request)
-				pass
-
-		#print(links)
-		links_string = ('|'.join(links))
-		
-		output = str(index) + t + article + t + links_string
-		output_ = output + n
-
-		# # head = article + t + links
-		print(article)
-		f2.write(output_)
-
-	try:
-		new_new_cont = data["continue"]["blcontinue"]	
-		if (new_new_cont != 0 and new_new_cont != cont): 
-			get_incoming_links_continue(article,new_new_cont,index)
-			index += 1
-			#print(index)
-		else:
-			time()
-			print("stop")
-	except:
-		pass
-
-def get_incoming_links(art_list,cont,index):
-	time()
-
-	f_in = folder + "/" + art_list + ".json"  # test / data
-	f_out = folder + "/" + art_list + "-links.tsv" 
-
-	with open(f_in, "r") as f1:
-		with open(f_out, "a") as f2:
-
-			articles = json.load(f1)
-			index = 0
-
-			for article in articles:
-				try:
-					req = backlinks + article 
-					request = req.decode("utf-8").encode("ascii","ignore") #.decode('ascii')
-					response = urlopen(request).read()
-					data = json.loads(response)
-
-					back = data["query"]["backlinks"]
-					#print(back)
-
-					index +=1
-					links = []
-
-					for i in back:
-						try:
-							link = i["title"]
-							links.append(link)
-							#print (link)
-						except:
-							print(request)
-							pass
-
-					#print(links)
-					links_string = ('|'.join(links))
-					
-					output = str(index) + t + article + t + links_string
-					output_ = output + n
-
-					# # head = article + t + links
-					print(article)
-					f2.write(output_)
-
-					new_new_cont = data["continue"]["blcontinue"]	
-					if (new_new_cont != 0): 
-						get_incoming_links_continue(article,new_new_cont,index)
-
-				except:
-					#print("no_continue" + t + request)
-					pass
-
 def get_n_entrylink(art_list):
 
 	f_in = folder + "/" + art_list + ".json"
@@ -297,7 +195,7 @@ def get_n_entrylink(art_list):
 # -----------------------------------
 # Launch script
 
-# get_incoming_links("articles/articles") # articles articles_test
+get_incoming_links("articles/articles_test") # articles_details articles_test
 
-get_n_entrylink("articles/articles_test")
+#get_n_entrylink("articles/articles_test")
 

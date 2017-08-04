@@ -1,11 +1,18 @@
 [
   {
-    "title": "Acid",
+    "title": "Alcohol_abuse",
     "in_out": false,
     "appr": null
   },
   {
-    "title": "Africa_Day",
+    "title": "Alcoholism",
+    "in_out": true,
+    "appr": [
+      "Africa_Destubathon",
+      "Edit_a_thon"
+    ]
+  },{
+    "title": "Aloe",
     "in_out": true,
     "appr": [
       "Africa_Destubathon",
