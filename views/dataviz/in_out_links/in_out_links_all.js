@@ -4,7 +4,7 @@ main variables
 
 var w = window;
 	width = w.outerWidth,
-	height = width * 1.95; // 0.5
+	height = width * 1.5;
 
 var margin = {
 		top: 50, 
@@ -18,7 +18,7 @@ var padding = width/100,
 	offset = padding * 1.5,
 	bar_h = 8; //5
 
-var article_shift = 12.6;
+var article_shift = 13.3; // 12.6
 
 var translate_out = 180,
 	width_out = 250,
@@ -33,14 +33,6 @@ var translate_out = 180,
 
 	start_id = 0,
 	start_label = 960;
-
-/* to be removed
-var start_id = padding,
-	start_out = padding * 10,
-	start_in = padding * 45,
-	// start_icon = padding * 70,
-	start_label = padding * 75;
-*/
 
 var font_size = '0.8em';
 
@@ -73,8 +65,7 @@ get data
 
 var dataset = "20170803/in_out_links_2017.csv";
 
-d3.csv("../../data/" + dataset, loaded);
-// console.log("links_2015")
+d3.csv("../../assets/data/" + dataset, loaded);
 
 function loaded (data){
 
@@ -117,17 +108,16 @@ function loaded (data){
 	data.sort(function(a,b) {
 		return d3.ascending(b.in_out, a.in_out) || d3.ascending(a.total_in, b.total_in);
 	})
-	// .sort(function(a,b) {
-	// 	return d3.ascending(b.total_in, a.total_in);
-	// })
-	
-	// console.log(width, height)
 	console.log(data)
 
-	var max_in = d3.max(data, function(d) { return d.total_in;} );
-	var max_out = d3.max(data, function(d) { return d.total_out;} );
+	var max_in = d3.max(data, function(d) { 
+		return d.total_in;
+	});
+	var max_out = d3.max(data, function(d) { 
+		return d.total_out;
+	});
 	var max_bench = d3.max(data, function(d) { 
-		return d.page_out - d.page_out_2015;
+		return d.total_out - d.page_out_2015;
 	});
 	console.log(max_in, max_out, max_bench)
 
@@ -136,11 +126,8 @@ set axis
 ------------------------- */
 
 	var x_in = d3.scale.linear()
-		//d3.scale.log()
-		//.base(10) // Math.E
-		//.domain([Math.exp(0), 200000])
-		.domain([0, 10000]) // 120000
-		.range([0,width_in]) //[start_in,(start_icon-offset) ]);
+		.domain([0, 10000])
+		.range([0,width_in])
 
 	var in_Axis = d3.svg.axis()
 		.scale(x_in)
@@ -216,7 +203,7 @@ set axis
 	// o_lines
 	var o_lines = plot.append('g')
 		.attr('class','o_lines')
-		.attr('transform','translate(0,' + (bar_h-(bar_h/2.5)) + ')' )  
+		.attr('transform','translate(0,' +  article_shift/2 + ")") // + (bar_h-(bar_h/2.5)) + ')' )  
 
 	for (var i=0; i<data.length; i++) { 
 		if( i % 5 == 0 ){
@@ -275,7 +262,7 @@ set axis
 		})
 		.attr("transform","translate(" + translate_in + ",0)")
 
-	// article
+	// article 
 	in_link.append('rect')
 		.attr('class', function (d){
 			return 'page ' + d.page_in
@@ -741,11 +728,11 @@ set axis
 
 	benchmark.append('rect')
 		.attr('class', function (d,i){
-			var b = d.page_out - d.page_out_2015;
+			var b = d.total_out - d.total_out_2015;
 			return 'bench ' + b
 		})
 		.attr('x', function (d,i){
-			var b = d.page_out - d.page_out_2015;
+			var b = d.total_out - d.total_out_2015;
 
 			if (b < 0){
 				return x_ben(b)
@@ -756,11 +743,11 @@ set axis
 		})
 		.attr('y',bar_h )
 		.attr('width',function(d,i){
-			var b = d.page_out - d.page_out_2015;
+			var b = d.total_out - d.total_out_2015;
 			return Math.abs(x_ben(0) - x_ben(b));
 		})
 		.attr('fill',function(d){
-			var b = d.page_out - d.page_out_2015;
+			var b = d.total_out - d.total_out_2015;
 			if (b>0){
 				return "black"
 			}
@@ -769,7 +756,7 @@ set axis
 			}
 		}) 
 		.attr('stroke',function(d){
-			var b = d.page_out - d.page_out_2015;
+			var b = d.total_out - d.total_out_2015;
 			if (b>0){
 				return "none"
 			}

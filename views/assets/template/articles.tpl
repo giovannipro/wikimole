@@ -1,25 +1,38 @@
 {{#each articles}}
-	<div class="row" style="border-bottom: #eee 1px solid; padding: 5px 0;">
-		<div class="col-md-12">
-			<h5>{{math @index "+" 1}}
-				<a href="https://en.wikipedia.org/wiki/{{article}}" target="_blank" title="{{article}}">
-					{{article}}
-				</a>
+	<div class="art">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>{{math @index "+" 1}}
+                    <a href="https://en.wikipedia.org/wiki/{{article}}" target="_blank" title="{{article}}">
+                        {{article}}
+                    </a>
+                    {{#if category}}
+                       <span class="cat"> ({{category}})</span>
+                    {{/if}}
+                </h5>
+            </div>
+            {{#iff community '==' true }}
+                {{#iff community '==' true}}
+                    <div class="col-md-2">
+                        <h5 class="review">community review</h5>
+                    </div>
+                {{/iff}}
 
-				{{#iff community '==' true}}
-					- community review
-				{{/iff}}
+                {{#iff review '==' true}}
+                    <div class="col-md-2">
+                        <h5 class="review">expert review</h5>
+                    </div>
+                {{/iff}}
 
-				{{#iff review '==' true}}
-					- expert review
-				{{/iff}}
-
-				{{#iff new_article '==' true}}
-					- new article under examination
-				{{/iff}}
-			</h5>
-		</div>
-
+                {{#iff new_article '==' true}}
+                    <div class="col-md-2"> 
+                        <h5 class="review">new article under examination</h5>
+                    </div>
+                {{/iff}}
+            {{/iff}}
+        </div>
+        
+        <div class="row">
 			<div class="col-md-2 col-sm-6">
 				In. links: {{entry_links_mar16}}
 				<br/>
@@ -209,4 +222,5 @@
 			</div>
 		</div>-->
 	</div>
+    </div>
 {{/each}}
