@@ -1,0 +1,54 @@
+id,article,images,notes,references,seeAlso,total,issues,RW_by_community,RW_by_expert_pdf,RW_by_expert_pdf_wiki,New_article_suggested_by_expert,AFC,Featured_on_WP_SA_portal,Rewrite_based_on_expert_review,WP_Assessment,Bold_reassesment,Africa_Destubathon,Edit_a_thon
+1,Kaditshwene,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0
+2,Makhonjwa Mountains,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+3,Children's Act_2005,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0
+4,Day of Reconciliation,1,0,2,0,3,0,0,0,0,0,0,0,0,0,0,1,1
+5,San people,1,0,0,2,3,3,0,0,0,0,0,0,0,0,0,1,0
+6,Africa Day,2,0,3,0,5,0,0,0,0,0,0,0,0,0,0,1,1
+7,Home safety,0,0,4,2,6,1,0,0,0,0,0,0,0,1,0,0,0
+8,Frances Baard,0,0,7,0,7,0,0,0,0,0,0,0,0,0,0,0,1
+9,Water privatization in South Africa,0,0,6,1,7,0,1,0,1,0,0,0,0,0,0,0,0
+11,AIDS orphan,2,0,5,1,8,0,0,0,0,0,0,0,0,1,0,0,0
+10,Heritage Day (South Africa),3,0,5,0,8,0,1,1,0,0,0,0,0,0,1,0,1
+12,Mapungubwe Collection,7,0,1,0,8,0,1,1,0,1,0,0,1,0,1,0,0
+13,Mandela Day,3,0,6,0,9,0,0,0,0,0,0,0,0,0,0,0,1
+14,Khoisan languages,1,5,5,0,11,0,0,0,0,0,0,0,0,0,0,0,1
+15,National Women's Day,4,0,4,3,11,0,1,1,0,0,0,0,0,0,0,1,1
+16,San healing practices,0,0,10,1,11,1,1,1,0,0,0,0,0,1,0,0,1
+17,Cradle of Humankind,5,0,7,0,12,0,0,0,0,0,0,0,0,1,0,0,0
+19,Bias,3,0,10,0,13,4,0,0,0,0,0,0,0,1,1,0,0
+18,Walter Sisulu,3,0,10,0,13,0,1,1,0,0,0,0,0,0,0,0,1
+20,Sieve,8,0,6,0,14,1,0,0,0,0,0,0,0,1,0,0,0
+21,!Kung people,0,0,15,0,15,1,0,0,0,0,0,0,0,0,1,0,1
+22,Petrol-paraffin engine,9,0,8,0,17,1,0,0,0,0,0,0,0,1,0,0,0
+23,Clay,12,0,7,0,19,0,0,0,0,0,0,0,0,1,0,0,0
+24,Khoikhoi,12,0,9,0,21,1,1,1,0,0,0,0,0,0,0,0,0
+25,Wildlife management,5,0,20,0,25,0,0,0,0,0,0,0,0,1,0,0,0
+26,Fire safety,6,0,8,12,26,4,0,0,0,0,0,0,0,0,0,0,1
+27,Map,21,0,6,0,27,0,0,0,0,0,0,0,0,0,1,0,0
+28,San religion,2,0,27,0,29,0,0,0,0,0,0,0,0,0,0,0,1
+29,Agriculture in South Africa,11,0,16,3,30,0,1,0,1,0,0,0,0,0,0,0,0
+30,Nest,16,0,11,3,30,0,0,0,0,0,0,0,0,0,1,0,0
+31,Oliver Tambo,4,13,13,0,30,1,1,1,0,0,0,0,0,0,0,0,1
+32,Human Rights Day,7,0,19,5,31,0,1,1,0,0,0,0,0,0,0,0,0
+33,Flag of South Africa,22,0,10,0,32,0,0,0,1,1,0,1,1,0,0,0,0
+34,Drakensberg,19,0,19,2,40,0,0,0,0,0,0,0,0,0,0,0,1
+35,Convenience food,10,0,34,0,44,0,0,0,0,0,0,0,0,0,1,0,0
+36,Winnie Madikizela-Mandela,5,0,43,1,49,2,0,0,0,0,0,0,0,0,0,0,1
+37,Steve Biko,4,0,42,4,50,0,0,0,0,0,0,1,0,0,0,0,1
+38,Western Cape,27,0,28,0,55,2,1,0,1,0,0,0,0,0,0,0,0
+39,Food pyramid (nutrition),16,0,41,3,60,0,1,1,0,0,0,0,0,1,0,0,1
+40,Healthcare in South Africa,5,26,26,8,65,0,1,1,0,0,0,0,0,0,0,0,0
+41,Vibration,25,0,9,34,68,1,0,0,0,0,0,0,0,1,1,0,0
+42,Gangster,19,0,53,0,72,1,0,0,0,0,0,0,0,1,0,0,0
+43,Outline of domestic violence,2,0,65,9,76,0,0,0,0,0,0,0,0,0,1,0,0
+44,Water pollution,38,0,42,0,80,0,1,0,1,0,0,0,0,0,0,0,0
+45,Water supply and sanitation in South Africa,11,0,67,4,82,0,1,0,1,0,0,1,0,0,0,0,0
+46,Children's Day,33,0,52,3,88,0,0,0,0,0,0,0,0,0,0,0,1
+47,Hand washing,20,0,64,11,95,0,1,1,0,0,0,0,0,0,0,0,1
+48,Herero and Namaqua Genocide,25,0,88,0,113,1,0,0,1,0,0,0,1,0,0,0,1
+49,HIV,27,0,124,0,151,0,0,0,1,0,0,0,0,0,0,0,0
+50,Bicycle,58,0,119,0,177,0,1,1,0,0,0,0,0,0,0,0,0
+51,Apartheid,32,0,187,0,219,0,1,1,0,0,0,0,0,0,0,0,0
+52,Gender role,41,0,185,0,226,4,1,1,0,0,0,0,0,0,1,0,0
+53,Nelson Mandela,58,0,401,0,459,0,1,1,0,0,0,0,0,0,0,0,0

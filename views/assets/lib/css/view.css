@@ -1,0 +1,238 @@
+html, body {
+    margin: 0;
+    padding: 0; 
+    font-family: 'Open Sans', Tahoma, sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+.bar {
+    fill: steelblue;
+}
+.bar:hover {
+    fill: brown;
+}
+.axis {
+    font: 10px sans-serif;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.x.axis path {
+    display: none;
+}
+#chart {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+.svg_content {
+    /*position: relative;*/
+    margin: auto;
+    width: 90%;
+    /*height: 90%;
+    position: absolute;*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    vertical-align: middle;
+}
+#header{
+    margin-top: 80px; 
+}
+header h2{
+    /*position: fixed;
+    width: 100%;*/
+    /*text-align: center;
+    font-size: 72px;
+    line-height: 108px;
+    height: 108px;
+    background: #335C7D;
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;*/
+}
+ol li, ul li {
+    line-height: 2em;
+}
+.sticky {
+  font-size: 24px;
+  line-height: 48px;
+  height: 48px;
+  background: #efc47D;
+  text-align: left;
+  padding-left: 20px;
+  transition: all 0.4s ease;
+}
+.art {
+    border-bottom: #eee 1px solid;
+    padding: 5px 0;
+}
+.box_100 {
+    width: 100%;
+    float: none;
+    display: block;
+    clear: both;
+    /*padding-bottom: 30px; */
+    height: 50px;
+}
+.box_50{
+    width: 48%;
+    float: left; 
+}
+.box_11 {
+    width: 11.11%;
+    float: left;
+    /*padding-right: 1%;*/
+}
+.clear{
+    clear: both;
+    border-bottom: 1px solid gray;
+    margin: 5px 0;
+    padding: 5px 0;
+}
+h2{
+    font-size: 14px;
+}
+#topbar main a {
+    float: left;
+    padding: 19px;
+    
+    text-decoration: none;
+    color: black;
+    /*background-color: gray;
+    display: block;*/
+}
+#topbar {
+    /*border-bottom: 1px solid black;*/
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.38);
+    -moz-box-shadow:    0px 3px 6px 0px rgba(50, 50, 50, 0.38);
+    box-shadow:         0px 3px 6px 0px rgba(50, 50, 50, 0.38);
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top:0;
+    background-color: #f3f3f3;
+    z-index: 1;
+}
+.button{
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    background-color: gray;
+}
+.col_50 {
+    width: 50%;
+    float: left;
+}
+.green{
+    background-color: #0BC10B;
+    display: block;
+    padding: 10px 5px;
+    width: 100%; /* 34px */
+    text-align: center;
+}
+.red{
+    background-color: #FF5E00;
+    display: block;
+    padding: 10px 5px;
+    width: 100%; /* 34px; */
+    text-align: center;
+}           
+.gray{
+    background-color: #D8D8D8;
+    display: block;
+    padding: 10px 5px;
+    width: 100%; /* 34px; */
+    text-align: center;
+}
+.white{
+    background-color: #F3F3F3;
+    display: block;
+    padding: 10px 5px;
+    width: 100%; /* 34px; */
+    text-align: center;
+}
+.list li {
+    padding: 5px 0;
+}
+.here{
+    background-color: white;
+}
+.clear{
+    clear: both;
+}
+.line{
+    border: 2px solid black; 
+    clear: both; 
+    width: 100%;
+}
+main #simple-menu{
+    display: none;
+}
+.i_link{
+    color: #FF847C;
+    font-weight: bold;
+}
+.protocol{
+    border-bottom: #eee 1px solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+footer{
+    background-color: #f3f3f3;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 0.8em;
+    margin: 50px 0 0 0;
+}
+@media (max-width: 1200px) {
+    #labels{
+        display: none;
+    }
+    .box_100{
+        height: auto;
+    }
+    .box_50{
+        float: none;
+        width: 100%;
+        margin-bottom: 20px; 
+        border-bottom: 3px solid black;
+
+    }
+    .box_11 {
+        width: 33%;
+        margin: 0 0 15px;
+    }
+    .box_11:last-child {
+        height: 50px; 
+        }
+}
+@media (max-width: 700px) {
+
+    .box_100{
+        height: auto;
+    }
+    .box_11 {
+        width: 100%;
+        float: none;
+    }
+    main #simple-menu{
+        display: block;
+        padding-left: 0; 
+    }
+    .first_menu{
+        display: none
+}
+}

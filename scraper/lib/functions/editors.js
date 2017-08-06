@@ -30,7 +30,7 @@ http://www.epochconverter.com/
 ARTICLES AND EDITORS LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
+var art_list = 'articles/articles_test.json';  // articles_test  articles_1of2 articles_2of2  articles
 
 // it does not contain bots
 var editor_list_14 = '../../data/edit/20160224/editors_14.csv';  // editors_14    editors_test
@@ -449,25 +449,25 @@ EDITED ARTICLES
 editors_14 = [];
 editors_15 = [];
 
-$.get(editor_list_14, function(data) {
+// $.get(editor_list_14, function(data) {
 
-    var rows = data.split(",\n");
+//     var rows = data.split(",\n");
     
-    rows.forEach( function getvalues(ourrow) {
-        //var columns = ourrow.split(",");
-        editors_14.push(ourrow);
-    });
-});
+//     rows.forEach( function getvalues(ourrow) {
+//         //var columns = ourrow.split(",");
+//         editors_14.push(ourrow);
+//     });
+// });
 
 
-$.get(editor_list_15, function(data) {
+// $.get(editor_list_15, function(data) {
 
-    var rows = data.split(",\n");
+//     var rows = data.split(",\n");
     
-    rows.forEach( function getvalues(ourrow) {
-        editors_15.push(ourrow);
-    });
-});
+//     rows.forEach( function getvalues(ourrow) {
+//         editors_15.push(ourrow);
+//     });
+// });
 
 function get_edited_articles(url) {
     

@@ -27,7 +27,7 @@ var my_proxy = simple_proxy; //cross_origin;
 ARTICLES LIST
 -------------------------------------*/
 
-var art_list = '../articles/articles_details.json';  // articles_test articles articles_details
+var art_list = 'articles/articles_details.json';  // articles_test articles articles_details
 
 var list = [
 	"Reconciliation_Day",

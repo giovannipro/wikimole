@@ -1,0 +1,5837 @@
+article,date,pageview
+!!!test1,2014-01-1,3200
+!!!test1,2014-03-1,3400
+!!!test1,2014-06-1,3000
+!!!test1,2014-09-1,7700
+!!!test1,2014-12-31,13000
+Nelson Mandela,2014-01-01,20841
+Nelson Mandela,2014-01-02,24870
+Nelson Mandela,2014-01-03,23189
+Nelson Mandela,2014-01-04,22065
+Nelson Mandela,2014-01-05,4097
+Nelson Mandela,2014-01-06,0
+Nelson Mandela,2014-01-07,31117
+Nelson Mandela,2014-01-08,31048
+Nelson Mandela,2014-01-09,30870
+Nelson Mandela,2014-01-10,25875
+Nelson Mandela,2014-01-11,17986
+Nelson Mandela,2014-01-12,22368
+Nelson Mandela,2014-01-13,29526
+Nelson Mandela,2014-01-14,26738
+Nelson Mandela,2014-01-15,26123
+Nelson Mandela,2014-01-16,26626
+Nelson Mandela,2014-01-17,21905
+Nelson Mandela,2014-01-18,14553
+Nelson Mandela,2014-01-19,18612
+Nelson Mandela,2014-01-20,23371
+Nelson Mandela,2014-01-21,23930
+Nelson Mandela,2014-01-22,22940
+Nelson Mandela,2014-01-23,22452
+Nelson Mandela,2014-01-24,17749
+Nelson Mandela,2014-01-25,12306
+Nelson Mandela,2014-01-26,16193
+Nelson Mandela,2014-01-27,20421
+Nelson Mandela,2014-01-28,24587
+Nelson Mandela,2014-01-29,21216
+Nelson Mandela,2014-01-30,19919
+Nelson Mandela,2014-01-31,15296
+Nelson Mandela,2014-02-01,11725
+Nelson Mandela,2014-02-02,15156
+Nelson Mandela,2014-02-03,22720
+Nelson Mandela,2014-02-04,24066
+Nelson Mandela,2014-02-05,22196
+Nelson Mandela,2014-02-06,20554
+Nelson Mandela,2014-02-07,17588
+Nelson Mandela,2014-02-08,11534
+Nelson Mandela,2014-02-09,15214
+Nelson Mandela,2014-02-10,20591
+Nelson Mandela,2014-02-11,27230
+Nelson Mandela,2014-02-12,20433
+Nelson Mandela,2014-02-13,17563
+Nelson Mandela,2014-02-14,13163
+Nelson Mandela,2014-02-15,10248
+Nelson Mandela,2014-02-16,12484
+Nelson Mandela,2014-02-17,15450
+Nelson Mandela,2014-02-18,17617
+Nelson Mandela,2014-02-19,17798
+Nelson Mandela,2014-02-20,17924
+Nelson Mandela,2014-02-21,14198
+Nelson Mandela,2014-02-22,11810
+Nelson Mandela,2014-02-23,14763
+Nelson Mandela,2014-02-24,20076
+Nelson Mandela,2014-02-25,19649
+Nelson Mandela,2014-02-26,18172
+Nelson Mandela,2014-02-27,17451
+Nelson Mandela,2014-02-28,13912
+Nelson Mandela,2014-03-01,9374
+Nelson Mandela,2014-03-02,12469
+Nelson Mandela,2014-03-03,19595
+Nelson Mandela,2014-03-04,15699
+Nelson Mandela,2014-03-05,15327
+Nelson Mandela,2014-03-06,15187
+Nelson Mandela,2014-03-07,12357
+Nelson Mandela,2014-03-08,8685
+Nelson Mandela,2014-03-09,10639
+Nelson Mandela,2014-03-10,14304
+Nelson Mandela,2014-03-11,14441
+Nelson Mandela,2014-03-12,13406
+Nelson Mandela,2014-03-13,12604
+Nelson Mandela,2014-03-14,10513
+Nelson Mandela,2014-03-15,7533
+Nelson Mandela,2014-03-16,9614
+Nelson Mandela,2014-03-17,13826
+Nelson Mandela,2014-03-18,12904
+Nelson Mandela,2014-03-19,14739
+Nelson Mandela,2014-03-20,13516
+Nelson Mandela,2014-03-21,11220
+Nelson Mandela,2014-03-22,9154
+Nelson Mandela,2014-03-23,13508
+Nelson Mandela,2014-03-24,16067
+Nelson Mandela,2014-03-25,15192
+Nelson Mandela,2014-03-26,14036
+Nelson Mandela,2014-03-27,12858
+Nelson Mandela,2014-03-28,10203
+Nelson Mandela,2014-03-29,7777
+Nelson Mandela,2014-03-30,10892
+Nelson Mandela,2014-03-31,12622
+Nelson Mandela,2014-04-01,12201
+Nelson Mandela,2014-04-02,12254
+Nelson Mandela,2014-04-03,12346
+Nelson Mandela,2014-04-04,9612
+Nelson Mandela,2014-04-05,7369
+Nelson Mandela,2014-04-06,9436
+Nelson Mandela,2014-04-07,12212
+Nelson Mandela,2014-04-08,11683
+Nelson Mandela,2014-04-09,11787
+Nelson Mandela,2014-04-10,11453
+Nelson Mandela,2014-04-11,9835
+Nelson Mandela,2014-04-12,6791
+Nelson Mandela,2014-04-13,8477
+Nelson Mandela,2014-04-14,10304
+Nelson Mandela,2014-04-15,9832
+Nelson Mandela,2014-04-16,9330
+Nelson Mandela,2014-04-17,10294
+Nelson Mandela,2014-04-18,6654
+Nelson Mandela,2014-04-19,10458
+Nelson Mandela,2014-04-20,10530
+Nelson Mandela,2014-04-21,10675
+Nelson Mandela,2014-04-22,11644
+Nelson Mandela,2014-04-23,11972
+Nelson Mandela,2014-04-24,11509
+Nelson Mandela,2014-04-25,9858
+Nelson Mandela,2014-04-26,9213
+Nelson Mandela,2014-04-27,9932
+Nelson Mandela,2014-04-28,13206
+Nelson Mandela,2014-04-29,13518
+Nelson Mandela,2014-04-30,12335
+Nelson Mandela,2014-05-01,11676
+Nelson Mandela,2014-05-02,10505
+Nelson Mandela,2014-05-03,8140
+Nelson Mandela,2014-05-04,10590
+Nelson Mandela,2014-05-05,13450
+Nelson Mandela,2014-05-06,13124
+Nelson Mandela,2014-05-07,13477
+Nelson Mandela,2014-05-08,13763
+Nelson Mandela,2014-05-09,11421
+Nelson Mandela,2014-05-10,8314
+Nelson Mandela,2014-05-11,10297
+Nelson Mandela,2014-05-12,14345
+Nelson Mandela,2014-05-13,14210
+Nelson Mandela,2014-05-14,14022
+Nelson Mandela,2014-05-15,12477
+Nelson Mandela,2014-05-16,10315
+Nelson Mandela,2014-05-17,6810
+Nelson Mandela,2014-05-18,8833
+Nelson Mandela,2014-05-19,14671
+Nelson Mandela,2014-05-20,14303
+Nelson Mandela,2014-05-21,13193
+Nelson Mandela,2014-05-22,12035
+Nelson Mandela,2014-05-23,10387
+Nelson Mandela,2014-05-24,6852
+Nelson Mandela,2014-05-25,7883
+Nelson Mandela,2014-05-26,10457
+Nelson Mandela,2014-05-27,12104
+Nelson Mandela,2014-05-28,11956
+Nelson Mandela,2014-05-29,12580
+Nelson Mandela,2014-05-30,8534
+Nelson Mandela,2014-05-31,6784
+Nelson Mandela,2014-06-01,9011
+Nelson Mandela,2014-06-02,11722
+Nelson Mandela,2014-06-03,12281
+Nelson Mandela,2014-06-04,11769
+Nelson Mandela,2014-06-05,10743
+Nelson Mandela,2014-06-06,8381
+Nelson Mandela,2014-06-07,6230
+Nelson Mandela,2014-06-08,7316
+Nelson Mandela,2014-06-09,10141
+Nelson Mandela,2014-06-10,10465
+Nelson Mandela,2014-06-11,9653
+Nelson Mandela,2014-06-12,10736
+Nelson Mandela,2014-06-13,7575
+Nelson Mandela,2014-06-14,7461
+Nelson Mandela,2014-06-15,7104
+Nelson Mandela,2014-06-16,8810
+Nelson Mandela,2014-06-17,8767
+Nelson Mandela,2014-06-18,8994
+Nelson Mandela,2014-06-19,8380
+Nelson Mandela,2014-06-20,7066
+Nelson Mandela,2014-06-21,6000
+Nelson Mandela,2014-06-22,6857
+Nelson Mandela,2014-06-23,7928
+Nelson Mandela,2014-06-24,7739
+Nelson Mandela,2014-06-25,8003
+Nelson Mandela,2014-06-26,7216
+Nelson Mandela,2014-06-27,6168
+Nelson Mandela,2014-06-28,5171
+Nelson Mandela,2014-06-29,8177
+Nelson Mandela,2014-06-30,6998
+Nelson Mandela,2014-07-01,6664
+Nelson Mandela,2014-07-02,6759
+Nelson Mandela,2014-07-03,6943
+Nelson Mandela,2014-07-04,6102
+Nelson Mandela,2014-07-05,4950
+Nelson Mandela,2014-07-06,6757
+Nelson Mandela,2014-07-07,7405
+Nelson Mandela,2014-07-08,6563
+Nelson Mandela,2014-07-09,6221
+Nelson Mandela,2014-07-10,6739
+Nelson Mandela,2014-07-11,5853
+Nelson Mandela,2014-07-12,5390
+Nelson Mandela,2014-07-13,6525
+Nelson Mandela,2014-07-14,7783
+Nelson Mandela,2014-07-15,7451
+Nelson Mandela,2014-07-16,7300
+Nelson Mandela,2014-07-17,34688
+Nelson Mandela,2014-07-18,399983
+Nelson Mandela,2014-07-19,33505
+Nelson Mandela,2014-07-20,10216
+Nelson Mandela,2014-07-21,9574
+Nelson Mandela,2014-07-22,10214
+Nelson Mandela,2014-07-23,7892
+Nelson Mandela,2014-07-24,7195
+Nelson Mandela,2014-07-25,5799
+Nelson Mandela,2014-07-26,4839
+Nelson Mandela,2014-07-27,5658
+Nelson Mandela,2014-07-28,6164
+Nelson Mandela,2014-07-29,7134
+Nelson Mandela,2014-07-30,6598
+Nelson Mandela,2014-07-31,6517
+Nelson Mandela,2014-08-01,5558
+Nelson Mandela,2014-08-02,4960
+Nelson Mandela,2014-08-03,6365
+Nelson Mandela,2014-08-04,6665
+Nelson Mandela,2014-08-05,7428
+Nelson Mandela,2014-08-06,7010
+Nelson Mandela,2014-08-07,6234
+Nelson Mandela,2014-08-08,8082
+Nelson Mandela,2014-08-09,7115
+Nelson Mandela,2014-08-10,6086
+Nelson Mandela,2014-08-11,6959
+Nelson Mandela,2014-08-12,7383
+Nelson Mandela,2014-08-13,7393
+Nelson Mandela,2014-08-14,6573
+Nelson Mandela,2014-08-15,5436
+Nelson Mandela,2014-08-16,4835
+Nelson Mandela,2014-08-17,6218
+Nelson Mandela,2014-08-18,7949
+Nelson Mandela,2014-08-19,7594
+Nelson Mandela,2014-08-20,7247
+Nelson Mandela,2014-08-21,7367
+Nelson Mandela,2014-08-22,6207
+Nelson Mandela,2014-08-23,4872
+Nelson Mandela,2014-08-24,6886
+Nelson Mandela,2014-08-25,7476
+Nelson Mandela,2014-08-26,7128
+Nelson Mandela,2014-08-27,6563
+Nelson Mandela,2014-08-28,0
+Nelson Mandela,2014-08-29,5699
+Nelson Mandela,2014-08-30,4567
+Nelson Mandela,2014-08-31,6107
+Nelson Mandela,2014-09-01,7372
+Nelson Mandela,2014-09-02,8152
+Nelson Mandela,2014-09-03,8139
+Nelson Mandela,2014-09-04,8292
+Nelson Mandela,2014-09-05,7006
+Nelson Mandela,2014-09-06,5225
+Nelson Mandela,2014-09-07,7209
+Nelson Mandela,2014-09-08,8293
+Nelson Mandela,2014-09-09,8891
+Nelson Mandela,2014-09-10,8938
+Nelson Mandela,2014-09-11,9325
+Nelson Mandela,2014-09-12,7101
+Nelson Mandela,2014-09-13,5681
+Nelson Mandela,2014-09-14,7566
+Nelson Mandela,2014-09-15,8581
+Nelson Mandela,2014-09-16,20383
+Nelson Mandela,2014-09-17,8567
+Nelson Mandela,2014-09-18,8957
+Nelson Mandela,2014-09-19,7048
+Nelson Mandela,2014-09-20,4986
+Nelson Mandela,2014-09-21,6944
+Nelson Mandela,2014-09-22,8367
+Nelson Mandela,2014-09-23,8825
+Nelson Mandela,2014-09-24,8811
+Nelson Mandela,2014-09-25,9152
+Nelson Mandela,2014-09-26,7012
+Nelson Mandela,2014-09-27,5154
+Nelson Mandela,2014-09-28,6780
+Nelson Mandela,2014-09-29,10514
+Nelson Mandela,2014-09-30,8469
+Nelson Mandela,2014-10-01,8287
+Nelson Mandela,2014-10-02,10218
+Nelson Mandela,2014-10-03,7106
+Nelson Mandela,2014-10-04,5232
+Nelson Mandela,2014-10-05,6391
+Nelson Mandela,2014-10-06,9225
+Nelson Mandela,2014-10-07,9398
+Nelson Mandela,2014-10-08,9189
+Nelson Mandela,2014-10-09,9250
+Nelson Mandela,2014-10-10,7464
+Nelson Mandela,2014-10-11,5713
+Nelson Mandela,2014-10-12,7478
+Nelson Mandela,2014-10-13,9178
+Nelson Mandela,2014-10-14,9909
+Nelson Mandela,2014-10-15,9398
+Nelson Mandela,2014-10-16,7929
+Nelson Mandela,2014-10-17,6933
+Nelson Mandela,2014-10-18,4522
+Nelson Mandela,2014-10-19,6174
+Nelson Mandela,2014-10-20,8268
+Nelson Mandela,2014-10-21,9476
+Nelson Mandela,2014-10-22,8735
+Nelson Mandela,2014-10-23,8577
+Nelson Mandela,2014-10-24,6137
+Nelson Mandela,2014-10-25,4168
+Nelson Mandela,2014-10-26,5309
+Nelson Mandela,2014-10-27,7409
+Nelson Mandela,2014-10-28,7650
+Nelson Mandela,2014-10-29,7368
+Nelson Mandela,2014-10-30,7229
+Nelson Mandela,2014-10-31,6011
+Nelson Mandela,2014-11-01,4930
+Nelson Mandela,2014-11-02,6883
+Nelson Mandela,2014-11-03,8387
+Nelson Mandela,2014-11-04,9245
+Nelson Mandela,2014-11-05,8601
+Nelson Mandela,2014-11-06,8268
+Nelson Mandela,2014-11-07,15556
+Nelson Mandela,2014-11-08,7124
+Nelson Mandela,2014-11-09,6835
+Nelson Mandela,2014-11-10,8846
+Nelson Mandela,2014-11-11,8692
+Nelson Mandela,2014-11-12,8869
+Nelson Mandela,2014-11-13,8538
+Nelson Mandela,2014-11-14,7604
+Nelson Mandela,2014-11-15,5948
+Nelson Mandela,2014-11-16,6379
+Nelson Mandela,2014-11-17,8507
+Nelson Mandela,2014-11-18,8411
+Nelson Mandela,2014-11-19,8298
+Nelson Mandela,2014-11-20,8050
+Nelson Mandela,2014-11-21,13921
+Nelson Mandela,2014-11-22,4414
+Nelson Mandela,2014-11-23,5847
+Nelson Mandela,2014-11-24,8176
+Nelson Mandela,2014-11-25,10638
+Nelson Mandela,2014-11-26,7514
+Nelson Mandela,2014-11-27,6617
+Nelson Mandela,2014-11-28,5278
+Nelson Mandela,2014-11-29,4581
+Nelson Mandela,2014-11-30,5950
+Nelson Mandela,2014-12-01,9021
+Nelson Mandela,2014-12-02,21646
+Nelson Mandela,2014-12-03,9060
+Nelson Mandela,2014-12-04,9771
+Nelson Mandela,2014-12-05,14078
+Nelson Mandela,2014-12-06,9088
+Nelson Mandela,2014-12-07,8348
+Nelson Mandela,2014-12-08,9379
+Nelson Mandela,2014-12-09,11400
+Nelson Mandela,2014-12-10,11766
+Nelson Mandela,2014-12-11,9277
+Nelson Mandela,2014-12-12,7416
+Nelson Mandela,2014-12-13,5595
+Nelson Mandela,2014-12-14,6592
+Nelson Mandela,2014-12-15,7981
+Nelson Mandela,2014-12-16,7379
+Nelson Mandela,2014-12-17,7070
+Nelson Mandela,2014-12-18,6482
+Nelson Mandela,2014-12-19,4900
+Nelson Mandela,2014-12-20,3277
+Nelson Mandela,2014-12-21,3674
+Nelson Mandela,2014-12-22,4699
+Nelson Mandela,2014-12-23,4676
+Nelson Mandela,2014-12-24,3735
+Nelson Mandela,2014-12-25,3307
+Nelson Mandela,2014-12-26,3404
+Nelson Mandela,2014-12-27,4707
+Nelson Mandela,2014-12-28,3842
+Nelson Mandela,2014-12-29,4288
+Nelson Mandela,2014-12-30,4451
+Nelson Mandela,2014-12-31,3787
+Nelson Mandela,2015-01-01,3077
+Nelson Mandela,2015-01-02,4840
+Nelson Mandela,2015-01-03,4199
+Nelson Mandela,2015-01-04,5195
+Nelson Mandela,2015-01-05,6536
+Nelson Mandela,2015-01-06,8865
+Nelson Mandela,2015-01-07,7338
+Nelson Mandela,2015-01-08,7170
+Nelson Mandela,2015-01-09,6594
+Nelson Mandela,2015-01-10,5459
+Nelson Mandela,2015-01-11,6279
+Nelson Mandela,2015-01-12,8318
+Nelson Mandela,2015-01-13,8162
+Nelson Mandela,2015-01-14,7834
+Nelson Mandela,2015-01-15,7841
+Nelson Mandela,2015-01-16,6777
+Nelson Mandela,2015-01-17,4711
+Nelson Mandela,2015-01-18,10419
+Nelson Mandela,2015-01-19,8287
+Nelson Mandela,2015-01-20,9377
+Nelson Mandela,2015-01-21,8255
+Nelson Mandela,2015-01-22,8425
+Nelson Mandela,2015-01-23,8211
+Nelson Mandela,2015-01-24,6311
+Nelson Mandela,2015-01-25,7233
+Nelson Mandela,2015-01-26,8189
+Nelson Mandela,2015-01-27,8971
+Nelson Mandela,2015-01-28,8578
+Nelson Mandela,2015-01-29,8637
+Nelson Mandela,2015-01-30,7434
+Nelson Mandela,2015-01-31,3844
+Nelson Mandela,2015-02-01,5780
+Nelson Mandela,2015-02-02,8886
+Nelson Mandela,2015-02-03,8940
+Nelson Mandela,2015-02-04,10407
+Nelson Mandela,2015-02-05,0
+Nelson Mandela,2015-02-06,8105
+Nelson Mandela,2015-02-07,5984
+Nelson Mandela,2015-02-08,6119
+Nelson Mandela,2015-02-09,9256
+Nelson Mandela,2015-02-10,10184
+Nelson Mandela,2015-02-11,17164
+Nelson Mandela,2015-02-12,10834
+Nelson Mandela,2015-02-13,7213
+Nelson Mandela,2015-02-14,6033
+Nelson Mandela,2015-02-15,5800
+Nelson Mandela,2015-02-16,9117
+Nelson Mandela,2015-02-17,8892
+Nelson Mandela,2015-02-18,8215
+Nelson Mandela,2015-02-19,8147
+Nelson Mandela,2015-02-20,6890
+Nelson Mandela,2015-02-21,4824
+Nelson Mandela,2015-02-22,7371
+Nelson Mandela,2015-02-23,9351
+Nelson Mandela,2015-02-24,9107
+Nelson Mandela,2015-02-25,9426
+Nelson Mandela,2015-02-26,8336
+Nelson Mandela,2015-02-27,7038
+Nelson Mandela,2015-02-28,4298
+Nelson Mandela,2015-03-01,5773
+Nelson Mandela,2015-03-02,9692
+Nelson Mandela,2015-03-03,8417
+Nelson Mandela,2015-03-04,8369
+Nelson Mandela,2015-03-05,7416
+Nelson Mandela,2015-03-06,6999
+Nelson Mandela,2015-03-07,4417
+Nelson Mandela,2015-03-08,5509
+Nelson Mandela,2015-03-09,7767
+Nelson Mandela,2015-03-10,7756
+Nelson Mandela,2015-03-11,7676
+Nelson Mandela,2015-03-12,7483
+Nelson Mandela,2015-03-13,6586
+Nelson Mandela,2015-03-14,11444
+Nelson Mandela,2015-03-15,5233
+Nelson Mandela,2015-03-16,8950
+Nelson Mandela,2015-03-17,8808
+Nelson Mandela,2015-03-18,7299
+Nelson Mandela,2015-03-19,7663
+Nelson Mandela,2015-03-20,6145
+Nelson Mandela,2015-03-21,4169
+Nelson Mandela,2015-03-22,5419
+Nelson Mandela,2015-03-23,8004
+Nelson Mandela,2015-03-24,7943
+Nelson Mandela,2015-03-25,8034
+Nelson Mandela,2015-03-26,7210
+Nelson Mandela,2015-03-27,6480
+Nelson Mandela,2015-03-28,4079
+Nelson Mandela,2015-03-29,4560
+Nelson Mandela,2015-03-30,6305
+Nelson Mandela,2015-03-31,6372
+Nelson Mandela,2015-04-01,5595
+Nelson Mandela,2015-04-02,5176
+Nelson Mandela,2015-04-03,5705
+Nelson Mandela,2015-04-04,5247
+Nelson Mandela,2015-04-05,3777
+Nelson Mandela,2015-04-06,5275
+Nelson Mandela,2015-04-07,5703
+Nelson Mandela,2015-04-08,5734
+Nelson Mandela,2015-04-09,6102
+Nelson Mandela,2015-04-10,5493
+Nelson Mandela,2015-04-11,4048
+Nelson Mandela,2015-04-12,4605
+Nelson Mandela,2015-04-13,7252
+Nelson Mandela,2015-04-14,7401
+Nelson Mandela,2015-04-15,7275
+Nelson Mandela,2015-04-16,6959
+Nelson Mandela,2015-04-17,5891
+Nelson Mandela,2015-04-18,4170
+Nelson Mandela,2015-04-19,5354
+Nelson Mandela,2015-04-20,8021
+Nelson Mandela,2015-04-21,7780
+Nelson Mandela,2015-04-22,7860
+Nelson Mandela,2015-04-23,8297
+Nelson Mandela,2015-04-24,7202
+Nelson Mandela,2015-04-25,4300
+Nelson Mandela,2015-04-26,5605
+Nelson Mandela,2015-04-27,10544
+Nelson Mandela,2015-04-28,9057
+Nelson Mandela,2015-04-29,9093
+Nelson Mandela,2015-04-30,7542
+Nelson Mandela,2015-05-01,6008
+Nelson Mandela,2015-05-02,4939
+Nelson Mandela,2015-05-03,4959
+Nelson Mandela,2015-05-04,7646
+Nelson Mandela,2015-05-05,8152
+Nelson Mandela,2015-05-06,9047
+Nelson Mandela,2015-05-07,7517
+Nelson Mandela,2015-05-08,6411
+Nelson Mandela,2015-05-09,3926
+Nelson Mandela,2015-05-10,5570
+Nelson Mandela,2015-05-11,20943
+Nelson Mandela,2015-05-12,8318
+Nelson Mandela,2015-05-13,7654
+Nelson Mandela,2015-05-14,7486
+Nelson Mandela,2015-05-15,6315
+Nelson Mandela,2015-05-16,4065
+Nelson Mandela,2015-05-17,4916
+Nelson Mandela,2015-05-18,7645
+Nelson Mandela,2015-05-19,7872
+Nelson Mandela,2015-05-20,7567
+Nelson Mandela,2015-05-21,9814
+Nelson Mandela,2015-05-22,6203
+Nelson Mandela,2015-05-23,3638
+Nelson Mandela,2015-05-24,4076
+Nelson Mandela,2015-05-25,5886
+Nelson Mandela,2015-05-26,7177
+Nelson Mandela,2015-05-27,7352
+Nelson Mandela,2015-05-28,7835
+Nelson Mandela,2015-05-29,5562
+Nelson Mandela,2015-05-30,4024
+Nelson Mandela,2015-05-31,4831
+Nelson Mandela,2015-06-01,7459
+Nelson Mandela,2015-06-02,7796
+Nelson Mandela,2015-06-03,7633
+Nelson Mandela,2015-06-04,7580
+Nelson Mandela,2015-06-05,7915
+Nelson Mandela,2015-06-06,3765
+Nelson Mandela,2015-06-07,4580
+Nelson Mandela,2015-06-08,6932
+Nelson Mandela,2015-06-09,6943
+Nelson Mandela,2015-06-10,7006
+Nelson Mandela,2015-06-11,6652
+Nelson Mandela,2015-06-12,5228
+Nelson Mandela,2015-06-13,3293
+Nelson Mandela,2015-06-14,4205
+Nelson Mandela,2015-06-15,5849
+Nelson Mandela,2015-06-16,5926
+Nelson Mandela,2015-06-17,5845
+Nelson Mandela,2015-06-18,5816
+Nelson Mandela,2015-06-19,4773
+Nelson Mandela,2015-06-20,3567
+Nelson Mandela,2015-06-21,3981
+Nelson Mandela,2015-06-22,5582
+Nelson Mandela,2015-06-23,5557
+Nelson Mandela,2015-06-24,4961
+Nelson Mandela,2015-06-25,4550
+Nelson Mandela,2015-06-26,3505
+Nelson Mandela,2015-06-27,2903
+Nelson Mandela,2015-06-28,3563
+Nelson Mandela,2015-06-29,4408
+Nelson Mandela,2015-06-30,4233
+Nelson Mandela,2015-07-01,4350
+Nelson Mandela,2015-07-02,4385
+Nelson Mandela,2015-07-03,3654
+Nelson Mandela,2015-07-04,2707
+Nelson Mandela,2015-07-05,3176
+Nelson Mandela,2015-07-06,3957
+Nelson Mandela,2015-07-07,4165
+Nelson Mandela,2015-07-08,4064
+Nelson Mandela,2015-07-09,4065
+Nelson Mandela,2015-07-10,3035
+Nelson Mandela,2015-07-11,2685
+Nelson Mandela,2015-07-12,3438
+Nelson Mandela,2015-07-13,4113
+Nelson Mandela,2015-07-14,4208
+Nelson Mandela,2015-07-15,4929
+Nelson Mandela,2015-07-16,7223
+Nelson Mandela,2015-07-17,5122
+Nelson Mandela,2015-07-18,7260
+Nelson Mandela,2015-07-19,4615
+Nelson Mandela,2015-07-20,4967
+Nelson Mandela,2015-07-21,4955
+Nelson Mandela,2015-07-22,4721
+Nelson Mandela,2015-07-23,4228
+Nelson Mandela,2015-07-24,3714
+Nelson Mandela,2015-07-25,2920
+Nelson Mandela,2015-07-26,3306
+Nelson Mandela,2015-07-27,6055
+Nelson Mandela,2015-07-28,5064
+Nelson Mandela,2015-07-29,4409
+Nelson Mandela,2015-07-30,4424
+Nelson Mandela,2015-07-31,3494
+Nelson Mandela,2015-08-01,2852
+Nelson Mandela,2015-08-02,3152
+Nelson Mandela,2015-08-03,3473
+Nelson Mandela,2015-08-04,5717
+Nelson Mandela,2015-08-05,5218
+Nelson Mandela,2015-08-06,4774
+Nelson Mandela,2015-08-07,3641
+Nelson Mandela,2015-08-08,2926
+Nelson Mandela,2015-08-09,3460
+Nelson Mandela,2015-08-10,3751
+Nelson Mandela,2015-08-11,4398
+Nelson Mandela,2015-08-12,4166
+Nelson Mandela,2015-08-13,4317
+Nelson Mandela,2015-08-14,3330
+Nelson Mandela,2015-08-15,2941
+Nelson Mandela,2015-08-16,3618
+Nelson Mandela,2015-08-17,4680
+Nelson Mandela,2015-08-18,4816
+Nelson Mandela,2015-08-19,5862
+Nelson Mandela,2015-08-20,4867
+Nelson Mandela,2015-08-21,3939
+Nelson Mandela,2015-08-22,2879
+Nelson Mandela,2015-08-23,3915
+Nelson Mandela,2015-08-24,4763
+Nelson Mandela,2015-08-25,4854
+Nelson Mandela,2015-08-26,4697
+Nelson Mandela,2015-08-27,4511
+Nelson Mandela,2015-08-28,3527
+Nelson Mandela,2015-08-29,2733
+Nelson Mandela,2015-08-30,3630
+Nelson Mandela,2015-08-31,5198
+Nelson Mandela,2015-09-01,5410
+Nelson Mandela,2015-09-02,5262
+Nelson Mandela,2015-09-03,5105
+Nelson Mandela,2015-09-04,4035
+Nelson Mandela,2015-09-05,3544
+Nelson Mandela,2015-09-06,4321
+Nelson Mandela,2015-09-07,5483
+Nelson Mandela,2015-09-08,6032
+Nelson Mandela,2015-09-09,6189
+Nelson Mandela,2015-09-10,7573
+Nelson Mandela,2015-09-11,5905
+Nelson Mandela,2015-09-12,3910
+Nelson Mandela,2015-09-13,4317
+Nelson Mandela,2015-09-14,6118
+Nelson Mandela,2015-09-15,6252
+Nelson Mandela,2015-09-16,4842
+Nelson Mandela,2015-09-17,6148
+Nelson Mandela,2015-09-18,5121
+Nelson Mandela,2015-09-19,3641
+Nelson Mandela,2015-09-20,4835
+Nelson Mandela,2015-09-21,6082
+Nelson Mandela,2015-09-22,6203
+Nelson Mandela,2015-09-23,5740
+Nelson Mandela,2015-09-24,5136
+Nelson Mandela,2015-09-25,4745
+Nelson Mandela,2015-09-26,3331
+Nelson Mandela,2015-09-27,4361
+Nelson Mandela,2015-09-28,5558
+Nelson Mandela,2015-09-29,5764
+Nelson Mandela,2015-09-30,6004
+Nelson Mandela,2015-10-01,5781
+Nelson Mandela,2015-10-02,5392
+Nelson Mandela,2015-10-03,4186
+Nelson Mandela,2015-10-04,4632
+Nelson Mandela,2015-10-05,6250
+Nelson Mandela,2015-10-06,6935
+Nelson Mandela,2015-10-07,6223
+Nelson Mandela,2015-10-08,5949
+Nelson Mandela,2015-10-09,4946
+Nelson Mandela,2015-10-10,3763
+Nelson Mandela,2015-10-11,5229
+Nelson Mandela,2015-10-13,6646
+Nelson Mandela,2015-10-14,6388
+Nelson Mandela,2015-10-15,6415
+Nelson Mandela,2015-10-16,5012
+Nelson Mandela,2015-10-17,3851
+Nelson Mandela,2015-10-18,5005
+Nelson Mandela,2015-10-19,6270
+Nelson Mandela,2015-10-20,6790
+Nelson Mandela,2015-10-21,6366
+Nelson Mandela,2015-10-22,6123
+Nelson Mandela,2015-10-23,5225
+Nelson Mandela,2015-10-24,3700
+Nelson Mandela,2015-10-25,4907
+Nelson Mandela,2015-10-26,6515
+Nelson Mandela,2015-10-27,6616
+Nelson Mandela,2015-10-28,6351
+Nelson Mandela,2015-10-29,6077
+Nelson Mandela,2015-10-30,4857
+Nelson Mandela,2015-10-31,3796
+Nelson Mandela,2015-11-01,4820
+Nelson Mandela,2015-11-02,6483
+Nelson Mandela,2015-11-03,6477
+Nelson Mandela,2015-11-04,6976
+Nelson Mandela,2015-11-05,6218
+Nelson Mandela,2015-11-06,5105
+Nelson Mandela,2015-11-07,3491
+Nelson Mandela,2015-11-08,4252
+Nelson Mandela,2015-11-09,6469
+Nelson Mandela,2015-11-10,6438
+Nelson Mandela,2015-11-11,5916
+Nelson Mandela,2015-11-12,5952
+Nelson Mandela,2015-11-13,4632
+Nelson Mandela,2015-11-14,4578
+Nelson Mandela,2015-11-15,4901
+Nelson Mandela,2015-11-16,6288
+Nelson Mandela,2015-11-17,6244
+Nelson Mandela,2015-11-18,7059
+Nelson Mandela,2015-11-19,5964
+Nelson Mandela,2015-11-20,4919
+Nelson Mandela,2015-11-21,3460
+Nelson Mandela,2015-11-22,4490
+Nelson Mandela,2015-11-23,7402
+Nelson Mandela,2015-11-24,8027
+Nelson Mandela,2015-11-25,5579
+Nelson Mandela,2015-11-26,5225
+Nelson Mandela,2015-11-27,3723
+Nelson Mandela,2015-11-28,3098
+Nelson Mandela,2015-11-29,4589
+Nelson Mandela,2015-11-30,6363
+Nelson Mandela,2015-12-01,6870
+Nelson Mandela,2015-12-02,6677
+Nelson Mandela,2015-12-03,6652
+Nelson Mandela,2015-12-04,5747
+Nelson Mandela,2015-12-05,4700
+Nelson Mandela,2015-12-06,5945
+Nelson Mandela,2015-12-07,6741
+Nelson Mandela,2015-12-08,6447
+Nelson Mandela,2015-12-09,6133
+Nelson Mandela,2015-12-10,6084
+Nelson Mandela,2015-12-11,4419
+Nelson Mandela,2015-12-12,3148
+Nelson Mandela,2015-12-13,4022
+Nelson Mandela,2015-12-14,5835
+Nelson Mandela,2015-12-15,5289
+Nelson Mandela,2015-12-16,4805
+Nelson Mandela,2015-12-17,4184
+Nelson Mandela,2015-12-18,3211
+Nelson Mandela,2015-12-19,2427
+Nelson Mandela,2015-12-20,2500
+Nelson Mandela,2015-12-21,2943
+Nelson Mandela,2015-12-22,2638
+Nelson Mandela,2015-12-23,2455
+Nelson Mandela,2015-12-24,2122
+Nelson Mandela,2015-12-25,1827
+Nelson Mandela,2015-12-26,2157
+Nelson Mandela,2015-12-27,2419
+Nelson Mandela,2015-12-28,2651
+Nelson Mandela,2015-12-29,2790
+Nelson Mandela,2015-12-30,2630
+Nelson Mandela,2015-12-31,2329
+!Kung people,2014-01-01,0
+!Kung people,2014-01-02,0
+!Kung people,2014-01-03,1
+!Kung people,2014-01-04,0
+!Kung people,2014-01-05,0
+!Kung people,2014-01-06,0
+!Kung people,2014-01-07,0
+!Kung people,2014-01-08,0
+!Kung people,2014-01-09,1
+!Kung people,2014-01-10,0
+!Kung people,2014-01-11,0
+!Kung people,2014-01-12,1
+!Kung people,2014-01-13,1
+!Kung people,2014-01-14,1
+!Kung people,2014-01-15,0
+!Kung people,2014-01-16,2
+!Kung people,2014-01-17,2
+!Kung people,2014-01-18,0
+!Kung people,2014-01-19,1
+!Kung people,2014-01-20,2
+!Kung people,2014-01-21,0
+!Kung people,2014-01-22,0
+!Kung people,2014-01-23,0
+!Kung people,2014-01-24,1
+!Kung people,2014-01-25,2
+!Kung people,2014-01-26,1
+!Kung people,2014-01-27,0
+!Kung people,2014-01-28,1
+!Kung people,2014-01-29,0
+!Kung people,2014-01-30,3
+!Kung people,2014-01-31,0
+!Kung people,2014-02-01,0
+!Kung people,2014-02-02,1
+!Kung people,2014-02-03,0
+!Kung people,2014-02-04,0
+!Kung people,2014-02-05,0
+!Kung people,2014-02-06,1
+!Kung people,2014-02-07,0
+!Kung people,2014-02-08,0
+!Kung people,2014-02-09,3
+!Kung people,2014-02-10,1
+!Kung people,2014-02-11,3
+!Kung people,2014-02-12,1
+!Kung people,2014-02-13,1
+!Kung people,2014-02-14,1
+!Kung people,2014-02-15,1
+!Kung people,2014-02-16,1
+!Kung people,2014-02-17,0
+!Kung people,2014-02-18,1
+!Kung people,2014-02-19,0
+!Kung people,2014-02-20,3
+!Kung people,2014-02-21,2
+!Kung people,2014-02-22,3
+!Kung people,2014-02-23,0
+!Kung people,2014-02-24,0
+!Kung people,2014-02-25,2
+!Kung people,2014-02-26,1
+!Kung people,2014-02-27,0
+!Kung people,2014-02-28,0
+!Kung people,2014-03-01,0
+!Kung people,2014-03-02,1
+!Kung people,2014-03-03,0
+!Kung people,2014-03-04,0
+!Kung people,2014-03-05,1
+!Kung people,2014-03-06,0
+!Kung people,2014-03-07,1
+!Kung people,2014-03-08,3
+!Kung people,2014-03-09,1
+!Kung people,2014-03-10,2
+!Kung people,2014-03-11,0
+!Kung people,2014-03-12,0
+!Kung people,2014-03-13,0
+!Kung people,2014-03-14,1
+!Kung people,2014-03-15,0
+!Kung people,2014-03-16,2
+!Kung people,2014-03-17,0
+!Kung people,2014-03-18,3
+!Kung people,2014-03-19,0
+!Kung people,2014-03-20,0
+!Kung people,2014-03-21,0
+!Kung people,2014-03-22,1
+!Kung people,2014-03-23,3
+!Kung people,2014-03-24,0
+!Kung people,2014-03-25,2
+!Kung people,2014-03-26,0
+!Kung people,2014-03-27,0
+!Kung people,2014-03-28,0
+!Kung people,2014-03-29,1
+!Kung people,2014-03-30,0
+!Kung people,2014-03-31,2
+!Kung people,2014-04-01,1
+!Kung people,2014-04-02,4
+!Kung people,2014-04-03,0
+!Kung people,2014-04-04,0
+!Kung people,2014-04-05,0
+!Kung people,2014-04-06,1
+!Kung people,2014-04-07,1
+!Kung people,2014-04-08,1
+!Kung people,2014-04-09,5
+!Kung people,2014-04-10,0
+!Kung people,2014-04-11,0
+!Kung people,2014-04-12,0
+!Kung people,2014-04-13,0
+!Kung people,2014-04-14,1
+!Kung people,2014-04-15,0
+!Kung people,2014-04-16,1
+!Kung people,2014-04-17,3
+!Kung people,2014-04-18,1
+!Kung people,2014-04-19,1
+!Kung people,2014-04-20,0
+!Kung people,2014-04-21,0
+!Kung people,2014-04-22,1
+!Kung people,2014-04-23,0
+!Kung people,2014-04-24,0
+!Kung people,2014-04-25,3
+!Kung people,2014-04-26,2
+!Kung people,2014-04-27,0
+!Kung people,2014-04-28,1
+!Kung people,2014-04-29,0
+!Kung people,2014-04-30,2
+!Kung people,2014-05-01,2
+!Kung people,2014-05-02,0
+!Kung people,2014-05-03,1
+!Kung people,2014-05-04,2
+!Kung people,2014-05-05,0
+!Kung people,2014-05-06,1
+!Kung people,2014-05-07,1
+!Kung people,2014-05-08,0
+!Kung people,2014-05-09,0
+!Kung people,2014-05-10,0
+!Kung people,2014-05-11,1
+!Kung people,2014-05-12,1
+!Kung people,2014-05-13,0
+!Kung people,2014-05-14,2
+!Kung people,2014-05-15,0
+!Kung people,2014-05-16,0
+!Kung people,2014-05-17,1
+!Kung people,2014-05-18,0
+!Kung people,2014-05-19,0
+!Kung people,2014-05-20,1
+!Kung people,2014-05-21,1
+!Kung people,2014-05-22,2
+!Kung people,2014-05-23,0
+!Kung people,2014-05-24,1
+!Kung people,2014-05-25,0
+!Kung people,2014-05-26,0
+!Kung people,2014-05-27,0
+!Kung people,2014-05-28,2
+!Kung people,2014-05-29,2
+!Kung people,2014-05-30,0
+!Kung people,2014-05-31,1
+!Kung people,2014-06-01,0
+!Kung people,2014-06-02,0
+!Kung people,2014-06-03,1
+!Kung people,2014-06-04,0
+!Kung people,2014-06-05,0
+!Kung people,2014-06-06,1
+!Kung people,2014-06-07,0
+!Kung people,2014-06-08,0
+!Kung people,2014-06-09,1
+!Kung people,2014-06-10,0
+!Kung people,2014-06-11,1
+!Kung people,2014-06-12,1
+!Kung people,2014-06-13,0
+!Kung people,2014-06-14,3
+!Kung people,2014-06-15,0
+!Kung people,2014-06-16,0
+!Kung people,2014-06-17,0
+!Kung people,2014-06-18,0
+!Kung people,2014-06-19,0
+!Kung people,2014-06-20,1
+!Kung people,2014-06-21,1
+!Kung people,2014-06-22,1
+!Kung people,2014-06-23,1
+!Kung people,2014-06-24,1
+!Kung people,2014-06-25,0
+!Kung people,2014-06-26,0
+!Kung people,2014-06-27,0
+!Kung people,2014-06-28,0
+!Kung people,2014-06-29,0
+!Kung people,2014-06-30,1
+!Kung people,2014-07-01,1
+!Kung people,2014-07-02,1
+!Kung people,2014-07-03,1
+!Kung people,2014-07-04,0
+!Kung people,2014-07-05,1
+!Kung people,2014-07-06,0
+!Kung people,2014-07-07,0
+!Kung people,2014-07-08,2
+!Kung people,2014-07-09,0
+!Kung people,2014-07-10,1
+!Kung people,2014-07-11,0
+!Kung people,2014-07-12,1
+!Kung people,2014-07-13,1
+!Kung people,2014-07-14,0
+!Kung people,2014-07-15,0
+!Kung people,2014-07-16,7
+!Kung people,2014-07-17,0
+!Kung people,2014-07-18,0
+!Kung people,2014-07-19,0
+!Kung people,2014-07-20,0
+!Kung people,2014-07-21,0
+!Kung people,2014-07-22,0
+!Kung people,2014-07-23,3
+!Kung people,2014-07-24,2
+!Kung people,2014-07-25,0
+!Kung people,2014-07-26,0
+!Kung people,2014-07-27,0
+!Kung people,2014-07-28,0
+!Kung people,2014-07-29,0
+!Kung people,2014-07-30,0
+!Kung people,2014-07-31,1
+!Kung people,2014-08-01,0
+!Kung people,2014-08-02,1
+!Kung people,2014-08-03,0
+!Kung people,2014-08-04,1
+!Kung people,2014-08-05,2
+!Kung people,2014-08-06,0
+!Kung people,2014-08-07,0
+!Kung people,2014-08-08,11
+!Kung people,2014-08-09,2
+!Kung people,2014-08-10,0
+!Kung people,2014-08-11,0
+!Kung people,2014-08-12,1
+!Kung people,2014-08-13,3
+!Kung people,2014-08-14,1
+!Kung people,2014-08-15,0
+!Kung people,2014-08-16,1
+!Kung people,2014-08-17,0
+!Kung people,2014-08-18,0
+!Kung people,2014-08-19,2
+!Kung people,2014-08-20,0
+!Kung people,2014-08-21,2
+!Kung people,2014-08-22,0
+!Kung people,2014-08-23,0
+!Kung people,2014-08-24,1
+!Kung people,2014-08-25,0
+!Kung people,2014-08-26,0
+!Kung people,2014-08-27,1
+!Kung people,2014-08-28,0
+!Kung people,2014-08-29,0
+!Kung people,2014-08-30,0
+!Kung people,2014-08-31,0
+!Kung people,2014-09-01,1
+!Kung people,2014-09-02,1
+!Kung people,2014-09-03,0
+!Kung people,2014-09-04,0
+!Kung people,2014-09-05,1
+!Kung people,2014-09-06,0
+!Kung people,2014-09-07,1
+!Kung people,2014-09-08,0
+!Kung people,2014-09-09,0
+!Kung people,2014-09-10,0
+!Kung people,2014-09-11,0
+!Kung people,2014-09-12,2
+!Kung people,2014-09-13,1
+!Kung people,2014-09-14,1
+!Kung people,2014-09-15,3
+!Kung people,2014-09-16,2
+!Kung people,2014-09-17,1
+!Kung people,2014-09-18,0
+!Kung people,2014-09-19,1
+!Kung people,2014-09-20,0
+!Kung people,2014-09-21,0
+!Kung people,2014-09-22,0
+!Kung people,2014-09-23,2
+!Kung people,2014-09-24,2
+!Kung people,2014-09-25,0
+!Kung people,2014-09-26,0
+!Kung people,2014-09-27,1
+!Kung people,2014-09-28,0
+!Kung people,2014-09-29,0
+!Kung people,2014-09-30,1
+!Kung people,2014-10-01,0
+!Kung people,2014-10-02,0
+!Kung people,2014-10-03,0
+!Kung people,2014-10-04,1
+!Kung people,2014-10-05,0
+!Kung people,2014-10-06,1
+!Kung people,2014-10-07,0
+!Kung people,2014-10-08,0
+!Kung people,2014-10-09,1
+!Kung people,2014-10-10,0
+!Kung people,2014-10-11,0
+!Kung people,2014-10-12,0
+!Kung people,2014-10-13,0
+!Kung people,2014-10-14,1
+!Kung people,2014-10-15,0
+!Kung people,2014-10-16,0
+!Kung people,2014-10-17,0
+!Kung people,2014-10-18,1
+!Kung people,2014-10-19,0
+!Kung people,2014-10-20,1
+!Kung people,2014-10-21,0
+!Kung people,2014-10-22,0
+!Kung people,2014-10-23,0
+!Kung people,2014-10-24,0
+!Kung people,2014-10-25,1
+!Kung people,2014-10-26,0
+!Kung people,2014-10-27,0
+!Kung people,2014-10-28,1
+!Kung people,2014-10-29,0
+!Kung people,2014-10-30,0
+!Kung people,2014-10-31,12
+!Kung people,2014-11-01,0
+!Kung people,2014-11-02,0
+!Kung people,2014-11-03,0
+!Kung people,2014-11-04,2
+!Kung people,2014-11-05,0
+!Kung people,2014-11-06,0
+!Kung people,2014-11-07,0
+!Kung people,2014-11-08,1
+!Kung people,2014-11-09,1
+!Kung people,2014-11-10,0
+!Kung people,2014-11-11,0
+!Kung people,2014-11-12,0
+!Kung people,2014-11-13,1
+!Kung people,2014-11-14,1
+!Kung people,2014-11-15,0
+!Kung people,2014-11-16,0
+!Kung people,2014-11-17,0
+!Kung people,2014-11-18,0
+!Kung people,2014-11-19,0
+!Kung people,2014-11-20,1
+!Kung people,2014-11-21,1
+!Kung people,2014-11-22,1
+!Kung people,2014-11-23,0
+!Kung people,2014-11-24,0
+!Kung people,2014-11-25,1
+!Kung people,2014-11-26,0
+!Kung people,2014-11-27,0
+!Kung people,2014-11-28,0
+!Kung people,2014-11-29,1
+!Kung people,2014-11-30,0
+!Kung people,2014-12-01,12
+!Kung people,2014-12-02,0
+!Kung people,2014-12-03,0
+!Kung people,2014-12-04,1
+!Kung people,2014-12-05,0
+!Kung people,2014-12-06,2
+!Kung people,2014-12-07,1
+!Kung people,2014-12-08,0
+!Kung people,2014-12-09,0
+!Kung people,2014-12-10,0
+!Kung people,2014-12-11,0
+!Kung people,2014-12-12,0
+!Kung people,2014-12-13,0
+!Kung people,2014-12-14,0
+!Kung people,2014-12-15,2
+!Kung people,2014-12-16,1
+!Kung people,2014-12-17,0
+!Kung people,2014-12-18,1
+!Kung people,2014-12-19,0
+!Kung people,2014-12-20,0
+!Kung people,2014-12-21,0
+!Kung people,2014-12-22,0
+!Kung people,2014-12-23,1
+!Kung people,2014-12-24,0
+!Kung people,2014-12-25,1
+!Kung people,2014-12-26,0
+!Kung people,2014-12-27,0
+!Kung people,2014-12-28,0
+!Kung people,2014-12-29,0
+!Kung people,2014-12-30,0
+!Kung people,2014-12-31,0
+!Kung people,2015-01-01,0
+!Kung people,2015-01-02,1
+!Kung people,2015-01-03,0
+!Kung people,2015-01-04,1
+!Kung people,2015-01-05,0
+!Kung people,2015-01-06,0
+!Kung people,2015-01-07,1
+!Kung people,2015-01-08,0
+!Kung people,2015-01-09,1
+!Kung people,2015-01-10,1
+!Kung people,2015-01-11,1
+!Kung people,2015-01-12,0
+!Kung people,2015-01-13,0
+!Kung people,2015-01-14,1
+!Kung people,2015-01-15,0
+!Kung people,2015-01-16,0
+!Kung people,2015-01-17,1
+!Kung people,2015-01-18,1
+!Kung people,2015-01-19,0
+!Kung people,2015-01-20,0
+!Kung people,2015-01-21,0
+!Kung people,2015-01-22,0
+!Kung people,2015-01-23,0
+!Kung people,2015-01-24,0
+!Kung people,2015-01-25,1
+!Kung people,2015-01-26,0
+!Kung people,2015-01-27,0
+!Kung people,2015-01-28,0
+!Kung people,2015-01-29,14
+!Kung people,2015-01-30,0
+!Kung people,2015-01-31,0
+!Kung people,2015-02-01,1
+!Kung people,2015-02-02,1
+!Kung people,2015-02-03,0
+!Kung people,2015-02-04,0
+!Kung people,2015-02-05,0
+!Kung people,2015-02-06,0
+!Kung people,2015-02-07,0
+!Kung people,2015-02-08,1
+!Kung people,2015-02-09,0
+!Kung people,2015-02-10,1
+!Kung people,2015-02-11,0
+!Kung people,2015-02-12,0
+!Kung people,2015-02-13,1
+!Kung people,2015-02-14,0
+!Kung people,2015-02-15,0
+!Kung people,2015-02-16,0
+!Kung people,2015-02-17,0
+!Kung people,2015-02-18,2
+!Kung people,2015-02-19,0
+!Kung people,2015-02-20,0
+!Kung people,2015-02-21,0
+!Kung people,2015-02-22,0
+!Kung people,2015-02-23,0
+!Kung people,2015-02-24,0
+!Kung people,2015-02-25,0
+!Kung people,2015-02-26,0
+!Kung people,2015-02-27,12
+!Kung people,2015-02-28,0
+!Kung people,2015-03-01,0
+!Kung people,2015-03-02,0
+!Kung people,2015-03-03,1
+!Kung people,2015-03-04,0
+!Kung people,2015-03-05,0
+!Kung people,2015-03-06,0
+!Kung people,2015-03-07,1
+!Kung people,2015-03-08,0
+!Kung people,2015-03-09,0
+!Kung people,2015-03-10,0
+!Kung people,2015-03-11,0
+!Kung people,2015-03-12,0
+!Kung people,2015-03-13,0
+!Kung people,2015-03-14,1
+!Kung people,2015-03-15,0
+!Kung people,2015-03-16,1
+!Kung people,2015-03-17,0
+!Kung people,2015-03-18,0
+!Kung people,2015-03-19,0
+!Kung people,2015-03-20,0
+!Kung people,2015-03-21,0
+!Kung people,2015-03-22,0
+!Kung people,2015-03-23,0
+!Kung people,2015-03-24,1
+!Kung people,2015-03-25,2
+!Kung people,2015-03-26,0
+!Kung people,2015-03-27,0
+!Kung people,2015-03-28,0
+!Kung people,2015-03-29,1
+!Kung people,2015-03-30,0
+!Kung people,2015-03-31,0
+!Kung people,2015-04-01,0
+!Kung people,2015-04-02,12
+!Kung people,2015-04-03,0
+!Kung people,2015-04-04,0
+!Kung people,2015-04-05,1
+!Kung people,2015-04-06,11
+!Kung people,2015-04-07,1
+!Kung people,2015-04-08,0
+!Kung people,2015-04-09,0
+!Kung people,2015-04-10,1
+!Kung people,2015-04-11,0
+!Kung people,2015-04-12,0
+!Kung people,2015-04-13,1
+!Kung people,2015-04-14,0
+!Kung people,2015-04-15,0
+!Kung people,2015-04-16,0
+!Kung people,2015-04-17,1
+!Kung people,2015-04-18,0
+!Kung people,2015-04-19,0
+!Kung people,2015-04-20,1
+!Kung people,2015-04-21,1
+!Kung people,2015-04-22,0
+!Kung people,2015-04-23,0
+!Kung people,2015-04-24,0
+!Kung people,2015-04-25,0
+!Kung people,2015-04-26,0
+!Kung people,2015-04-27,2
+!Kung people,2015-04-28,0
+!Kung people,2015-04-29,1
+!Kung people,2015-04-30,1
+!Kung people,2015-05-01,0
+!Kung people,2015-05-02,0
+!Kung people,2015-05-03,0
+!Kung people,2015-05-04,0
+!Kung people,2015-05-05,0
+!Kung people,2015-05-06,0
+!Kung people,2015-05-07,1
+!Kung people,2015-05-08,1
+!Kung people,2015-05-09,0
+!Kung people,2015-05-10,1
+!Kung people,2015-05-11,2
+!Kung people,2015-05-12,0
+!Kung people,2015-05-13,2
+!Kung people,2015-05-14,0
+!Kung people,2015-05-15,0
+!Kung people,2015-05-16,0
+!Kung people,2015-05-17,0
+!Kung people,2015-05-18,0
+!Kung people,2015-05-19,1
+!Kung people,2015-05-20,2
+!Kung people,2015-05-21,0
+!Kung people,2015-05-22,0
+!Kung people,2015-05-23,0
+!Kung people,2015-05-24,0
+!Kung people,2015-05-25,0
+!Kung people,2015-05-26,0
+!Kung people,2015-05-27,0
+!Kung people,2015-05-28,0
+!Kung people,2015-05-29,0
+!Kung people,2015-05-30,0
+!Kung people,2015-05-31,1
+!Kung people,2015-06-01,0
+!Kung people,2015-06-02,1
+!Kung people,2015-06-03,0
+!Kung people,2015-06-04,0
+!Kung people,2015-06-05,0
+!Kung people,2015-06-06,0
+!Kung people,2015-06-07,0
+!Kung people,2015-06-08,0
+!Kung people,2015-06-09,0
+!Kung people,2015-06-10,0
+!Kung people,2015-06-11,0
+!Kung people,2015-06-12,0
+!Kung people,2015-06-13,0
+!Kung people,2015-06-14,0
+!Kung people,2015-06-15,0
+!Kung people,2015-06-16,0
+!Kung people,2015-06-17,0
+!Kung people,2015-06-18,0
+!Kung people,2015-06-19,0
+!Kung people,2015-06-20,0
+!Kung people,2015-06-21,0
+!Kung people,2015-06-22,0
+!Kung people,2015-06-23,0
+!Kung people,2015-06-24,1
+!Kung people,2015-06-25,0
+!Kung people,2015-06-26,0
+!Kung people,2015-06-27,0
+!Kung people,2015-06-28,1
+!Kung people,2015-06-29,0
+!Kung people,2015-06-30,0
+!Kung people,2015-07-01,0
+!Kung people,2015-07-02,0
+!Kung people,2015-07-03,1
+!Kung people,2015-07-04,0
+!Kung people,2015-07-05,0
+!Kung people,2015-07-06,0
+!Kung people,2015-07-07,0
+!Kung people,2015-07-08,0
+!Kung people,2015-07-09,0
+!Kung people,2015-07-10,0
+!Kung people,2015-07-11,0
+!Kung people,2015-07-12,0
+!Kung people,2015-07-13,1
+!Kung people,2015-07-14,0
+!Kung people,2015-07-15,0
+!Kung people,2015-07-16,0
+!Kung people,2015-07-17,0
+!Kung people,2015-07-18,0
+!Kung people,2015-07-19,0
+!Kung people,2015-07-20,0
+!Kung people,2015-07-21,0
+!Kung people,2015-07-22,0
+!Kung people,2015-07-23,0
+!Kung people,2015-07-24,0
+!Kung people,2015-07-25,0
+!Kung people,2015-07-26,1
+!Kung people,2015-07-27,0
+!Kung people,2015-07-28,2
+!Kung people,2015-07-29,0
+!Kung people,2015-07-30,0
+!Kung people,2015-07-31,0
+!Kung people,2015-08-01,0
+!Kung people,2015-08-02,0
+!Kung people,2015-08-03,1
+!Kung people,2015-08-04,0
+!Kung people,2015-08-05,0
+!Kung people,2015-08-06,0
+!Kung people,2015-08-07,0
+!Kung people,2015-08-08,0
+!Kung people,2015-08-09,3
+!Kung people,2015-08-10,0
+!Kung people,2015-08-11,0
+!Kung people,2015-08-12,0
+!Kung people,2015-08-13,0
+!Kung people,2015-08-14,0
+!Kung people,2015-08-15,0
+!Kung people,2015-08-16,3
+!Kung people,2015-08-17,0
+!Kung people,2015-08-18,0
+!Kung people,2015-08-19,0
+!Kung people,2015-08-20,0
+!Kung people,2015-08-21,1
+!Kung people,2015-08-22,2
+!Kung people,2015-08-23,0
+!Kung people,2015-08-24,4
+!Kung people,2015-08-25,0
+!Kung people,2015-08-26,0
+!Kung people,2015-08-27,0
+!Kung people,2015-08-28,2
+!Kung people,2015-08-29,1
+!Kung people,2015-08-30,0
+!Kung people,2015-08-31,0
+!Kung people,2015-09-01,0
+!Kung people,2015-09-02,0
+!Kung people,2015-09-03,0
+!Kung people,2015-09-04,1
+!Kung people,2015-09-05,2
+!Kung people,2015-09-06,0
+!Kung people,2015-09-07,0
+!Kung people,2015-09-08,0
+!Kung people,2015-09-09,0
+!Kung people,2015-09-10,0
+!Kung people,2015-09-11,1
+!Kung people,2015-09-12,0
+!Kung people,2015-09-13,2
+!Kung people,2015-09-14,1
+!Kung people,2015-09-15,0
+!Kung people,2015-09-16,0
+!Kung people,2015-09-17,0
+!Kung people,2015-09-18,0
+!Kung people,2015-09-19,1
+!Kung people,2015-09-20,0
+!Kung people,2015-09-21,2
+!Kung people,2015-09-22,0
+!Kung people,2015-09-23,0
+!Kung people,2015-09-24,1
+!Kung people,2015-09-25,0
+!Kung people,2015-09-26,1
+!Kung people,2015-09-27,0
+!Kung people,2015-09-28,2
+!Kung people,2015-09-29,0
+!Kung people,2015-09-30,0
+!Kung people,2015-10-01,0
+!Kung people,2015-10-02,0
+!Kung people,2015-10-03,1
+!Kung people,2015-10-04,1
+!Kung people,2015-10-05,0
+!Kung people,2015-10-06,0
+!Kung people,2015-10-07,1
+!Kung people,2015-10-08,0
+!Kung people,2015-10-09,0
+!Kung people,2015-10-10,1
+!Kung people,2015-10-11,0
+!Kung people,2015-10-13,1
+!Kung people,2015-10-14,0
+!Kung people,2015-10-15,0
+!Kung people,2015-10-16,0
+!Kung people,2015-10-17,1
+!Kung people,2015-10-18,0
+!Kung people,2015-10-19,0
+!Kung people,2015-10-20,0
+!Kung people,2015-10-21,1
+!Kung people,2015-10-22,0
+!Kung people,2015-10-23,1
+!Kung people,2015-10-24,1
+!Kung people,2015-10-25,2
+!Kung people,2015-10-26,0
+!Kung people,2015-10-27,0
+!Kung people,2015-10-28,3
+!Kung people,2015-10-29,0
+!Kung people,2015-10-30,0
+!Kung people,2015-10-31,1
+!Kung people,2015-11-01,1
+!Kung people,2015-11-02,0
+!Kung people,2015-11-03,1
+!Kung people,2015-11-04,1
+!Kung people,2015-11-05,1
+!Kung people,2015-11-06,1
+!Kung people,2015-11-07,0
+!Kung people,2015-11-08,0
+!Kung people,2015-11-09,1
+!Kung people,2015-11-10,2
+!Kung people,2015-11-11,0
+!Kung people,2015-11-12,0
+!Kung people,2015-11-13,0
+!Kung people,2015-11-14,0
+!Kung people,2015-11-15,0
+!Kung people,2015-11-16,1
+!Kung people,2015-11-17,0
+!Kung people,2015-11-18,0
+!Kung people,2015-11-19,0
+!Kung people,2015-11-20,0
+!Kung people,2015-11-21,0
+!Kung people,2015-11-22,0
+!Kung people,2015-11-23,2
+!Kung people,2015-11-24,0
+!Kung people,2015-11-25,0
+!Kung people,2015-11-26,0
+!Kung people,2015-11-27,1
+!Kung people,2015-11-28,0
+!Kung people,2015-11-29,0
+!Kung people,2015-11-30,0
+!Kung people,2015-12-01,1
+!Kung people,2015-12-02,0
+!Kung people,2015-12-03,0
+!Kung people,2015-12-04,2
+!Kung people,2015-12-05,1
+!Kung people,2015-12-06,0
+!Kung people,2015-12-07,1
+!Kung people,2015-12-08,0
+!Kung people,2015-12-09,0
+!Kung people,2015-12-10,0
+!Kung people,2015-12-11,0
+!Kung people,2015-12-12,0
+!Kung people,2015-12-13,1
+!Kung people,2015-12-14,1
+!Kung people,2015-12-15,1
+!Kung people,2015-12-16,1
+!Kung people,2015-12-17,0
+!Kung people,2015-12-18,0
+!Kung people,2015-12-19,1
+!Kung people,2015-12-20,1
+!Kung people,2015-12-21,1
+!Kung people,2015-12-22,1
+!Kung people,2015-12-23,0
+!Kung people,2015-12-24,0
+!Kung people,2015-12-25,0
+!Kung people,2015-12-26,0
+!Kung people,2015-12-27,2
+!Kung people,2015-12-28,0
+!Kung people,2015-12-29,1
+!Kung people,2015-12-30,0
+2 ft gauge railways in South Africa,2014-01-01,0
+2 ft gauge railways in South Africa,2014-01-02,0
+2 ft gauge railways in South Africa,2014-01-03,0
+2 ft gauge railways in South Africa,2014-01-04,0
+2 ft gauge railways in South Africa,2014-01-05,0
+2 ft gauge railways in South Africa,2014-01-06,0
+2 ft gauge railways in South Africa,2014-01-07,0
+2 ft gauge railways in South Africa,2014-01-08,0
+2 ft gauge railways in South Africa,2014-01-09,0
+2 ft gauge railways in South Africa,2014-01-10,0
+2 ft gauge railways in South Africa,2014-01-11,0
+2 ft gauge railways in South Africa,2014-01-12,0
+2 ft gauge railways in South Africa,2014-01-13,0
+2 ft gauge railways in South Africa,2014-01-14,0
+2 ft gauge railways in South Africa,2014-01-15,0
+2 ft gauge railways in South Africa,2014-01-16,0
+2 ft gauge railways in South Africa,2014-01-17,0
+2 ft gauge railways in South Africa,2014-01-18,0
+2 ft gauge railways in South Africa,2014-01-19,0
+2 ft gauge railways in South Africa,2014-01-20,0
+2 ft gauge railways in South Africa,2014-01-21,0
+2 ft gauge railways in South Africa,2014-01-22,0
+2 ft gauge railways in South Africa,2014-01-23,0
+2 ft gauge railways in South Africa,2014-01-24,0
+2 ft gauge railways in South Africa,2014-01-25,0
+2 ft gauge railways in South Africa,2014-01-26,0
+2 ft gauge railways in South Africa,2014-01-27,0
+2 ft gauge railways in South Africa,2014-01-28,0
+2 ft gauge railways in South Africa,2014-01-29,0
+2 ft gauge railways in South Africa,2014-01-30,0
+2 ft gauge railways in South Africa,2014-01-31,0
+2 ft gauge railways in South Africa,2014-02-01,0
+2 ft gauge railways in South Africa,2014-02-02,0
+2 ft gauge railways in South Africa,2014-02-03,0
+2 ft gauge railways in South Africa,2014-02-04,0
+2 ft gauge railways in South Africa,2014-02-05,0
+2 ft gauge railways in South Africa,2014-02-06,0
+2 ft gauge railways in South Africa,2014-02-07,0
+2 ft gauge railways in South Africa,2014-02-08,0
+2 ft gauge railways in South Africa,2014-02-09,0
+2 ft gauge railways in South Africa,2014-02-10,0
+2 ft gauge railways in South Africa,2014-02-11,0
+2 ft gauge railways in South Africa,2014-02-12,0
+2 ft gauge railways in South Africa,2014-02-13,0
+2 ft gauge railways in South Africa,2014-02-14,0
+2 ft gauge railways in South Africa,2014-02-15,0
+2 ft gauge railways in South Africa,2014-02-16,0
+2 ft gauge railways in South Africa,2014-02-17,0
+2 ft gauge railways in South Africa,2014-02-18,0
+2 ft gauge railways in South Africa,2014-02-19,0
+2 ft gauge railways in South Africa,2014-02-20,0
+2 ft gauge railways in South Africa,2014-02-21,0
+2 ft gauge railways in South Africa,2014-02-22,0
+2 ft gauge railways in South Africa,2014-02-23,0
+2 ft gauge railways in South Africa,2014-02-24,0
+2 ft gauge railways in South Africa,2014-02-25,0
+2 ft gauge railways in South Africa,2014-02-26,0
+2 ft gauge railways in South Africa,2014-02-27,0
+2 ft gauge railways in South Africa,2014-02-28,0
+2 ft gauge railways in South Africa,2014-03-01,0
+2 ft gauge railways in South Africa,2014-03-02,0
+2 ft gauge railways in South Africa,2014-03-03,0
+2 ft gauge railways in South Africa,2014-03-04,0
+2 ft gauge railways in South Africa,2014-03-05,0
+2 ft gauge railways in South Africa,2014-03-06,0
+2 ft gauge railways in South Africa,2014-03-07,0
+2 ft gauge railways in South Africa,2014-03-08,0
+2 ft gauge railways in South Africa,2014-03-09,0
+2 ft gauge railways in South Africa,2014-03-10,0
+2 ft gauge railways in South Africa,2014-03-11,0
+2 ft gauge railways in South Africa,2014-03-12,0
+2 ft gauge railways in South Africa,2014-03-13,0
+2 ft gauge railways in South Africa,2014-03-14,0
+2 ft gauge railways in South Africa,2014-03-15,0
+2 ft gauge railways in South Africa,2014-03-16,0
+2 ft gauge railways in South Africa,2014-03-17,0
+2 ft gauge railways in South Africa,2014-03-18,0
+2 ft gauge railways in South Africa,2014-03-19,0
+2 ft gauge railways in South Africa,2014-03-20,0
+2 ft gauge railways in South Africa,2014-03-21,0
+2 ft gauge railways in South Africa,2014-03-22,0
+2 ft gauge railways in South Africa,2014-03-23,0
+2 ft gauge railways in South Africa,2014-03-24,0
+2 ft gauge railways in South Africa,2014-03-25,0
+2 ft gauge railways in South Africa,2014-03-26,0
+2 ft gauge railways in South Africa,2014-03-27,0
+2 ft gauge railways in South Africa,2014-03-28,0
+2 ft gauge railways in South Africa,2014-03-29,0
+2 ft gauge railways in South Africa,2014-03-30,0
+2 ft gauge railways in South Africa,2014-03-31,0
+2 ft gauge railways in South Africa,2014-04-01,0
+2 ft gauge railways in South Africa,2014-04-02,0
+2 ft gauge railways in South Africa,2014-04-03,0
+2 ft gauge railways in South Africa,2014-04-04,0
+2 ft gauge railways in South Africa,2014-04-05,0
+2 ft gauge railways in South Africa,2014-04-06,0
+2 ft gauge railways in South Africa,2014-04-07,0
+2 ft gauge railways in South Africa,2014-04-08,0
+2 ft gauge railways in South Africa,2014-04-09,0
+2 ft gauge railways in South Africa,2014-04-10,0
+2 ft gauge railways in South Africa,2014-04-11,0
+2 ft gauge railways in South Africa,2014-04-12,0
+2 ft gauge railways in South Africa,2014-04-13,0
+2 ft gauge railways in South Africa,2014-04-14,0
+2 ft gauge railways in South Africa,2014-04-15,0
+2 ft gauge railways in South Africa,2014-04-16,0
+2 ft gauge railways in South Africa,2014-04-17,0
+2 ft gauge railways in South Africa,2014-04-18,0
+2 ft gauge railways in South Africa,2014-04-19,0
+2 ft gauge railways in South Africa,2014-04-20,0
+2 ft gauge railways in South Africa,2014-04-21,0
+2 ft gauge railways in South Africa,2014-04-22,0
+2 ft gauge railways in South Africa,2014-04-23,0
+2 ft gauge railways in South Africa,2014-04-24,0
+2 ft gauge railways in South Africa,2014-04-25,0
+2 ft gauge railways in South Africa,2014-04-26,0
+2 ft gauge railways in South Africa,2014-04-27,0
+2 ft gauge railways in South Africa,2014-04-28,0
+2 ft gauge railways in South Africa,2014-04-29,0
+2 ft gauge railways in South Africa,2014-04-30,0
+2 ft gauge railways in South Africa,2014-05-01,0
+2 ft gauge railways in South Africa,2014-05-02,0
+2 ft gauge railways in South Africa,2014-05-03,0
+2 ft gauge railways in South Africa,2014-05-04,0
+2 ft gauge railways in South Africa,2014-05-05,0
+2 ft gauge railways in South Africa,2014-05-06,0
+2 ft gauge railways in South Africa,2014-05-07,0
+2 ft gauge railways in South Africa,2014-05-08,0
+2 ft gauge railways in South Africa,2014-05-09,0
+2 ft gauge railways in South Africa,2014-05-10,0
+2 ft gauge railways in South Africa,2014-05-11,0
+2 ft gauge railways in South Africa,2014-05-12,0
+2 ft gauge railways in South Africa,2014-05-13,0
+2 ft gauge railways in South Africa,2014-05-14,0
+2 ft gauge railways in South Africa,2014-05-15,0
+2 ft gauge railways in South Africa,2014-05-16,0
+2 ft gauge railways in South Africa,2014-05-17,0
+2 ft gauge railways in South Africa,2014-05-18,0
+2 ft gauge railways in South Africa,2014-05-19,0
+2 ft gauge railways in South Africa,2014-05-20,0
+2 ft gauge railways in South Africa,2014-05-21,0
+2 ft gauge railways in South Africa,2014-05-22,0
+2 ft gauge railways in South Africa,2014-05-23,0
+2 ft gauge railways in South Africa,2014-05-24,0
+2 ft gauge railways in South Africa,2014-05-25,0
+2 ft gauge railways in South Africa,2014-05-26,0
+2 ft gauge railways in South Africa,2014-05-27,0
+2 ft gauge railways in South Africa,2014-05-28,0
+2 ft gauge railways in South Africa,2014-05-29,0
+2 ft gauge railways in South Africa,2014-05-30,0
+2 ft gauge railways in South Africa,2014-05-31,0
+2 ft gauge railways in South Africa,2014-06-01,0
+2 ft gauge railways in South Africa,2014-06-02,0
+2 ft gauge railways in South Africa,2014-06-03,0
+2 ft gauge railways in South Africa,2014-06-04,0
+2 ft gauge railways in South Africa,2014-06-05,0
+2 ft gauge railways in South Africa,2014-06-06,0
+2 ft gauge railways in South Africa,2014-06-07,0
+2 ft gauge railways in South Africa,2014-06-08,0
+2 ft gauge railways in South Africa,2014-06-09,0
+2 ft gauge railways in South Africa,2014-06-10,0
+2 ft gauge railways in South Africa,2014-06-11,0
+2 ft gauge railways in South Africa,2014-06-12,0
+2 ft gauge railways in South Africa,2014-06-13,0
+2 ft gauge railways in South Africa,2014-06-14,0
+2 ft gauge railways in South Africa,2014-06-15,0
+2 ft gauge railways in South Africa,2014-06-16,0
+2 ft gauge railways in South Africa,2014-06-17,4
+2 ft gauge railways in South Africa,2014-06-18,2
+2 ft gauge railways in South Africa,2014-06-19,4
+2 ft gauge railways in South Africa,2014-06-20,2
+2 ft gauge railways in South Africa,2014-06-21,2
+2 ft gauge railways in South Africa,2014-06-22,3
+2 ft gauge railways in South Africa,2014-06-23,11
+2 ft gauge railways in South Africa,2014-06-24,3
+2 ft gauge railways in South Africa,2014-06-25,12
+2 ft gauge railways in South Africa,2014-06-26,7
+2 ft gauge railways in South Africa,2014-06-27,7
+2 ft gauge railways in South Africa,2014-06-28,5
+2 ft gauge railways in South Africa,2014-06-29,2
+2 ft gauge railways in South Africa,2014-06-30,10
+2 ft gauge railways in South Africa,2014-07-01,8
+2 ft gauge railways in South Africa,2014-07-02,2
+2 ft gauge railways in South Africa,2014-07-03,5
+2 ft gauge railways in South Africa,2014-07-04,9
+2 ft gauge railways in South Africa,2014-07-05,6
+2 ft gauge railways in South Africa,2014-07-06,2
+2 ft gauge railways in South Africa,2014-07-07,8
+2 ft gauge railways in South Africa,2014-07-08,9
+2 ft gauge railways in South Africa,2014-07-09,4
+2 ft gauge railways in South Africa,2014-07-10,8
+2 ft gauge railways in South Africa,2014-07-11,12
+2 ft gauge railways in South Africa,2014-07-12,7
+2 ft gauge railways in South Africa,2014-07-13,13
+2 ft gauge railways in South Africa,2014-07-14,10
+2 ft gauge railways in South Africa,2014-07-15,7
+2 ft gauge railways in South Africa,2014-07-16,6
+2 ft gauge railways in South Africa,2014-07-17,7
+2 ft gauge railways in South Africa,2014-07-18,8
+2 ft gauge railways in South Africa,2014-07-19,4
+2 ft gauge railways in South Africa,2014-07-20,10
+2 ft gauge railways in South Africa,2014-07-21,16
+2 ft gauge railways in South Africa,2014-07-22,8
+2 ft gauge railways in South Africa,2014-07-23,8
+2 ft gauge railways in South Africa,2014-07-24,16
+2 ft gauge railways in South Africa,2014-07-25,9
+2 ft gauge railways in South Africa,2014-07-26,8
+2 ft gauge railways in South Africa,2014-07-27,7
+2 ft gauge railways in South Africa,2014-07-28,7
+2 ft gauge railways in South Africa,2014-07-29,24
+2 ft gauge railways in South Africa,2014-07-30,5
+2 ft gauge railways in South Africa,2014-07-31,1
+2 ft gauge railways in South Africa,2014-08-01,16
+2 ft gauge railways in South Africa,2014-08-02,4
+2 ft gauge railways in South Africa,2014-08-03,14
+2 ft gauge railways in South Africa,2014-08-04,13
+2 ft gauge railways in South Africa,2014-08-05,7
+2 ft gauge railways in South Africa,2014-08-06,17
+2 ft gauge railways in South Africa,2014-08-07,7
+2 ft gauge railways in South Africa,2014-08-08,6
+2 ft gauge railways in South Africa,2014-08-09,15
+2 ft gauge railways in South Africa,2014-08-10,10
+2 ft gauge railways in South Africa,2014-08-11,11
+2 ft gauge railways in South Africa,2014-08-12,9
+2 ft gauge railways in South Africa,2014-08-13,13
+2 ft gauge railways in South Africa,2014-08-14,9
+2 ft gauge railways in South Africa,2014-08-15,9
+2 ft gauge railways in South Africa,2014-08-16,4
+2 ft gauge railways in South Africa,2014-08-17,6
+2 ft gauge railways in South Africa,2014-08-18,14
+2 ft gauge railways in South Africa,2014-08-19,3
+2 ft gauge railways in South Africa,2014-08-20,6
+2 ft gauge railways in South Africa,2014-08-21,11
+2 ft gauge railways in South Africa,2014-08-22,15
+2 ft gauge railways in South Africa,2014-08-23,8
+2 ft gauge railways in South Africa,2014-08-24,27
+2 ft gauge railways in South Africa,2014-08-25,5
+2 ft gauge railways in South Africa,2014-08-26,13
+2 ft gauge railways in South Africa,2014-08-27,10
+2 ft gauge railways in South Africa,2014-08-28,0
+2 ft gauge railways in South Africa,2014-08-29,6
+2 ft gauge railways in South Africa,2014-08-30,9
+2 ft gauge railways in South Africa,2014-08-31,11
+2 ft gauge railways in South Africa,2014-09-01,28
+2 ft gauge railways in South Africa,2014-09-02,14
+2 ft gauge railways in South Africa,2014-09-03,4
+2 ft gauge railways in South Africa,2014-09-04,10
+2 ft gauge railways in South Africa,2014-09-05,6
+2 ft gauge railways in South Africa,2014-09-06,12
+2 ft gauge railways in South Africa,2014-09-07,9
+2 ft gauge railways in South Africa,2014-09-08,9
+2 ft gauge railways in South Africa,2014-09-09,31
+2 ft gauge railways in South Africa,2014-09-10,6
+2 ft gauge railways in South Africa,2014-09-11,5
+2 ft gauge railways in South Africa,2014-09-12,10
+2 ft gauge railways in South Africa,2014-09-13,7
+2 ft gauge railways in South Africa,2014-09-14,4
+2 ft gauge railways in South Africa,2014-09-15,15
+2 ft gauge railways in South Africa,2014-09-16,15
+2 ft gauge railways in South Africa,2014-09-17,12
+2 ft gauge railways in South Africa,2014-09-18,9
+2 ft gauge railways in South Africa,2014-09-19,8
+2 ft gauge railways in South Africa,2014-09-20,12
+2 ft gauge railways in South Africa,2014-09-21,16
+2 ft gauge railways in South Africa,2014-09-22,14
+2 ft gauge railways in South Africa,2014-09-23,10
+2 ft gauge railways in South Africa,2014-09-24,9
+2 ft gauge railways in South Africa,2014-09-25,25
+2 ft gauge railways in South Africa,2014-09-26,6
+2 ft gauge railways in South Africa,2014-09-27,3
+2 ft gauge railways in South Africa,2014-09-28,12
+2 ft gauge railways in South Africa,2014-09-29,7
+2 ft gauge railways in South Africa,2014-09-30,8
+2 ft gauge railways in South Africa,2014-10-01,11
+2 ft gauge railways in South Africa,2014-10-02,12
+2 ft gauge railways in South Africa,2014-10-03,12
+2 ft gauge railways in South Africa,2014-10-04,15
+2 ft gauge railways in South Africa,2014-10-05,10
+2 ft gauge railways in South Africa,2014-10-06,11
+2 ft gauge railways in South Africa,2014-10-07,9
+2 ft gauge railways in South Africa,2014-10-08,7
+2 ft gauge railways in South Africa,2014-10-09,8
+2 ft gauge railways in South Africa,2014-10-10,13
+2 ft gauge railways in South Africa,2014-10-11,5
+2 ft gauge railways in South Africa,2014-10-12,8
+2 ft gauge railways in South Africa,2014-10-13,11
+2 ft gauge railways in South Africa,2014-10-14,33
+2 ft gauge railways in South Africa,2014-10-15,10
+2 ft gauge railways in South Africa,2014-10-16,10
+2 ft gauge railways in South Africa,2014-10-17,12
+2 ft gauge railways in South Africa,2014-10-18,5
+2 ft gauge railways in South Africa,2014-10-19,11
+2 ft gauge railways in South Africa,2014-10-20,10
+2 ft gauge railways in South Africa,2014-10-21,10
+2 ft gauge railways in South Africa,2014-10-22,12
+2 ft gauge railways in South Africa,2014-10-23,6
+2 ft gauge railways in South Africa,2014-10-24,15
+2 ft gauge railways in South Africa,2014-10-25,8
+2 ft gauge railways in South Africa,2014-10-26,7
+2 ft gauge railways in South Africa,2014-10-27,13
+2 ft gauge railways in South Africa,2014-10-28,9
+2 ft gauge railways in South Africa,2014-10-29,5
+2 ft gauge railways in South Africa,2014-10-30,12
+2 ft gauge railways in South Africa,2014-10-31,2
+2 ft gauge railways in South Africa,2014-11-01,7
+2 ft gauge railways in South Africa,2014-11-02,11
+2 ft gauge railways in South Africa,2014-11-03,9
+2 ft gauge railways in South Africa,2014-11-04,16
+2 ft gauge railways in South Africa,2014-11-05,6
+2 ft gauge railways in South Africa,2014-11-06,9
+2 ft gauge railways in South Africa,2014-11-07,7
+2 ft gauge railways in South Africa,2014-11-08,5
+2 ft gauge railways in South Africa,2014-11-09,34
+2 ft gauge railways in South Africa,2014-11-10,8
+2 ft gauge railways in South Africa,2014-11-11,9
+2 ft gauge railways in South Africa,2014-11-12,11
+2 ft gauge railways in South Africa,2014-11-13,24
+2 ft gauge railways in South Africa,2014-11-14,12
+2 ft gauge railways in South Africa,2014-11-15,11
+2 ft gauge railways in South Africa,2014-11-16,8
+2 ft gauge railways in South Africa,2014-11-17,15
+2 ft gauge railways in South Africa,2014-11-18,7
+2 ft gauge railways in South Africa,2014-11-19,7
+2 ft gauge railways in South Africa,2014-11-20,19
+2 ft gauge railways in South Africa,2014-11-21,22
+2 ft gauge railways in South Africa,2014-11-22,3
+2 ft gauge railways in South Africa,2014-11-23,7
+2 ft gauge railways in South Africa,2014-11-24,7
+2 ft gauge railways in South Africa,2014-11-25,7
+2 ft gauge railways in South Africa,2014-11-26,9
+2 ft gauge railways in South Africa,2014-11-27,9
+2 ft gauge railways in South Africa,2014-11-28,9
+2 ft gauge railways in South Africa,2014-11-29,10
+2 ft gauge railways in South Africa,2014-11-30,7
+2 ft gauge railways in South Africa,2014-12-01,10
+2 ft gauge railways in South Africa,2014-12-02,12
+2 ft gauge railways in South Africa,2014-12-03,26
+2 ft gauge railways in South Africa,2014-12-04,20
+2 ft gauge railways in South Africa,2014-12-05,6
+2 ft gauge railways in South Africa,2014-12-06,14
+2 ft gauge railways in South Africa,2014-12-07,11
+2 ft gauge railways in South Africa,2014-12-08,5
+2 ft gauge railways in South Africa,2014-12-09,6
+2 ft gauge railways in South Africa,2014-12-10,14
+2 ft gauge railways in South Africa,2014-12-11,10
+2 ft gauge railways in South Africa,2014-12-12,8
+2 ft gauge railways in South Africa,2014-12-13,5
+2 ft gauge railways in South Africa,2014-12-14,8
+2 ft gauge railways in South Africa,2014-12-15,15
+2 ft gauge railways in South Africa,2014-12-16,16
+2 ft gauge railways in South Africa,2014-12-17,3
+2 ft gauge railways in South Africa,2014-12-18,8
+2 ft gauge railways in South Africa,2014-12-19,21
+2 ft gauge railways in South Africa,2014-12-20,6
+2 ft gauge railways in South Africa,2014-12-21,14
+2 ft gauge railways in South Africa,2014-12-22,10
+2 ft gauge railways in South Africa,2014-12-23,9
+2 ft gauge railways in South Africa,2014-12-24,10
+2 ft gauge railways in South Africa,2014-12-25,6
+2 ft gauge railways in South Africa,2014-12-26,9
+2 ft gauge railways in South Africa,2014-12-27,23
+2 ft gauge railways in South Africa,2014-12-28,11
+2 ft gauge railways in South Africa,2014-12-29,15
+2 ft gauge railways in South Africa,2014-12-30,22
+2 ft gauge railways in South Africa,2014-12-31,7
+2 ft gauge railways in South Africa,2015-01-01,7
+2 ft gauge railways in South Africa,2015-01-02,13
+2 ft gauge railways in South Africa,2015-01-03,22
+2 ft gauge railways in South Africa,2015-01-04,19
+2 ft gauge railways in South Africa,2015-01-05,13
+2 ft gauge railways in South Africa,2015-01-06,23
+2 ft gauge railways in South Africa,2015-01-07,16
+2 ft gauge railways in South Africa,2015-01-08,9
+2 ft gauge railways in South Africa,2015-01-09,9
+2 ft gauge railways in South Africa,2015-01-10,90
+2 ft gauge railways in South Africa,2015-01-11,13
+2 ft gauge railways in South Africa,2015-01-12,35
+2 ft gauge railways in South Africa,2015-01-13,12
+2 ft gauge railways in South Africa,2015-01-14,2
+2 ft gauge railways in South Africa,2015-01-15,10
+2 ft gauge railways in South Africa,2015-01-16,6
+2 ft gauge railways in South Africa,2015-01-17,7
+2 ft gauge railways in South Africa,2015-01-18,12
+2 ft gauge railways in South Africa,2015-01-19,8
+2 ft gauge railways in South Africa,2015-01-20,11
+2 ft gauge railways in South Africa,2015-01-21,8
+2 ft gauge railways in South Africa,2015-01-22,6
+2 ft gauge railways in South Africa,2015-01-23,20
+2 ft gauge railways in South Africa,2015-01-24,6
+2 ft gauge railways in South Africa,2015-01-25,7
+2 ft gauge railways in South Africa,2015-01-26,10
+2 ft gauge railways in South Africa,2015-01-27,8
+2 ft gauge railways in South Africa,2015-01-28,10
+2 ft gauge railways in South Africa,2015-01-29,8
+2 ft gauge railways in South Africa,2015-01-30,5
+2 ft gauge railways in South Africa,2015-01-31,8
+2 ft gauge railways in South Africa,2015-02-01,3
+2 ft gauge railways in South Africa,2015-02-02,6
+2 ft gauge railways in South Africa,2015-02-03,6
+2 ft gauge railways in South Africa,2015-02-04,9
+2 ft gauge railways in South Africa,2015-02-05,0
+2 ft gauge railways in South Africa,2015-02-06,17
+2 ft gauge railways in South Africa,2015-02-07,8
+2 ft gauge railways in South Africa,2015-02-08,10
+2 ft gauge railways in South Africa,2015-02-09,10
+2 ft gauge railways in South Africa,2015-02-10,4
+2 ft gauge railways in South Africa,2015-02-11,13
+2 ft gauge railways in South Africa,2015-02-12,5
+2 ft gauge railways in South Africa,2015-02-13,12
+2 ft gauge railways in South Africa,2015-02-14,9
+2 ft gauge railways in South Africa,2015-02-15,6
+2 ft gauge railways in South Africa,2015-02-16,12
+2 ft gauge railways in South Africa,2015-02-17,16
+2 ft gauge railways in South Africa,2015-02-18,13
+2 ft gauge railways in South Africa,2015-02-19,12
+2 ft gauge railways in South Africa,2015-02-20,13
+2 ft gauge railways in South Africa,2015-02-21,8
+2 ft gauge railways in South Africa,2015-02-22,20
+2 ft gauge railways in South Africa,2015-02-23,10
+2 ft gauge railways in South Africa,2015-02-24,6
+2 ft gauge railways in South Africa,2015-02-25,12
+2 ft gauge railways in South Africa,2015-02-26,12
+2 ft gauge railways in South Africa,2015-02-27,8
+2 ft gauge railways in South Africa,2015-02-28,3
+2 ft gauge railways in South Africa,2015-03-01,5
+2 ft gauge railways in South Africa,2015-03-02,14
+2 ft gauge railways in South Africa,2015-03-03,15
+2 ft gauge railways in South Africa,2015-03-04,6
+2 ft gauge railways in South Africa,2015-03-05,7
+2 ft gauge railways in South Africa,2015-03-06,8
+2 ft gauge railways in South Africa,2015-03-07,5
+2 ft gauge railways in South Africa,2015-03-08,10
+2 ft gauge railways in South Africa,2015-03-09,16
+2 ft gauge railways in South Africa,2015-03-10,8
+2 ft gauge railways in South Africa,2015-03-11,10
+2 ft gauge railways in South Africa,2015-03-12,8
+2 ft gauge railways in South Africa,2015-03-13,16
+2 ft gauge railways in South Africa,2015-03-14,10
+2 ft gauge railways in South Africa,2015-03-15,8
+2 ft gauge railways in South Africa,2015-03-16,10
+2 ft gauge railways in South Africa,2015-03-17,15
+2 ft gauge railways in South Africa,2015-03-18,9
+2 ft gauge railways in South Africa,2015-03-19,6
+2 ft gauge railways in South Africa,2015-03-20,6
+2 ft gauge railways in South Africa,2015-03-21,6
+2 ft gauge railways in South Africa,2015-03-22,12
+2 ft gauge railways in South Africa,2015-03-23,6
+2 ft gauge railways in South Africa,2015-03-24,7
+2 ft gauge railways in South Africa,2015-03-25,11
+2 ft gauge railways in South Africa,2015-03-26,6
+2 ft gauge railways in South Africa,2015-03-27,8
+2 ft gauge railways in South Africa,2015-03-28,4
+2 ft gauge railways in South Africa,2015-03-29,7
+2 ft gauge railways in South Africa,2015-03-30,4
+2 ft gauge railways in South Africa,2015-03-31,7
+2 ft gauge railways in South Africa,2015-04-01,11
+2 ft gauge railways in South Africa,2015-04-02,5
+2 ft gauge railways in South Africa,2015-04-03,5
+2 ft gauge railways in South Africa,2015-04-04,9
+2 ft gauge railways in South Africa,2015-04-05,10
+2 ft gauge railways in South Africa,2015-04-06,8
+2 ft gauge railways in South Africa,2015-04-07,9
+2 ft gauge railways in South Africa,2015-04-08,12
+2 ft gauge railways in South Africa,2015-04-09,16
+2 ft gauge railways in South Africa,2015-04-10,5
+2 ft gauge railways in South Africa,2015-04-11,7
+2 ft gauge railways in South Africa,2015-04-12,10
+2 ft gauge railways in South Africa,2015-04-13,4
+2 ft gauge railways in South Africa,2015-04-14,9
+2 ft gauge railways in South Africa,2015-04-15,7
+2 ft gauge railways in South Africa,2015-04-16,9
+2 ft gauge railways in South Africa,2015-04-17,9
+2 ft gauge railways in South Africa,2015-04-18,5
+2 ft gauge railways in South Africa,2015-04-19,6
+2 ft gauge railways in South Africa,2015-04-20,11
+2 ft gauge railways in South Africa,2015-04-21,5
+2 ft gauge railways in South Africa,2015-04-22,3
+2 ft gauge railways in South Africa,2015-04-23,5
+2 ft gauge railways in South Africa,2015-04-24,17
+2 ft gauge railways in South Africa,2015-04-25,3
+2 ft gauge railways in South Africa,2015-04-26,5
+2 ft gauge railways in South Africa,2015-04-27,8
+2 ft gauge railways in South Africa,2015-04-28,9
+2 ft gauge railways in South Africa,2015-04-29,7
+2 ft gauge railways in South Africa,2015-04-30,10
+2 ft gauge railways in South Africa,2015-05-01,4
+2 ft gauge railways in South Africa,2015-05-02,5
+2 ft gauge railways in South Africa,2015-05-03,18
+2 ft gauge railways in South Africa,2015-05-04,28
+2 ft gauge railways in South Africa,2015-05-05,10
+2 ft gauge railways in South Africa,2015-05-06,5
+2 ft gauge railways in South Africa,2015-05-07,5
+2 ft gauge railways in South Africa,2015-05-08,7
+2 ft gauge railways in South Africa,2015-05-09,9
+2 ft gauge railways in South Africa,2015-05-10,3
+2 ft gauge railways in South Africa,2015-05-11,8
+2 ft gauge railways in South Africa,2015-05-12,9
+2 ft gauge railways in South Africa,2015-05-13,4
+2 ft gauge railways in South Africa,2015-05-14,12
+2 ft gauge railways in South Africa,2015-05-15,4
+2 ft gauge railways in South Africa,2015-05-16,4
+2 ft gauge railways in South Africa,2015-05-17,9
+2 ft gauge railways in South Africa,2015-05-18,7
+2 ft gauge railways in South Africa,2015-05-19,7
+2 ft gauge railways in South Africa,2015-05-20,17
+2 ft gauge railways in South Africa,2015-05-21,7
+2 ft gauge railways in South Africa,2015-05-22,3
+2 ft gauge railways in South Africa,2015-05-23,2
+2 ft gauge railways in South Africa,2015-05-24,10
+2 ft gauge railways in South Africa,2015-05-25,13
+2 ft gauge railways in South Africa,2015-05-26,8
+2 ft gauge railways in South Africa,2015-05-27,3
+2 ft gauge railways in South Africa,2015-05-28,20
+2 ft gauge railways in South Africa,2015-05-29,9
+2 ft gauge railways in South Africa,2015-05-30,16
+2 ft gauge railways in South Africa,2015-05-31,9
+2 ft gauge railways in South Africa,2015-06-01,6
+2 ft gauge railways in South Africa,2015-06-02,6
+2 ft gauge railways in South Africa,2015-06-03,8
+2 ft gauge railways in South Africa,2015-06-04,6
+2 ft gauge railways in South Africa,2015-06-05,7
+2 ft gauge railways in South Africa,2015-06-06,10
+2 ft gauge railways in South Africa,2015-06-07,5
+2 ft gauge railways in South Africa,2015-06-08,7
+2 ft gauge railways in South Africa,2015-06-09,3
+2 ft gauge railways in South Africa,2015-06-10,8
+2 ft gauge railways in South Africa,2015-06-11,16
+2 ft gauge railways in South Africa,2015-06-12,1
+2 ft gauge railways in South Africa,2015-06-13,9
+2 ft gauge railways in South Africa,2015-06-14,8
+2 ft gauge railways in South Africa,2015-06-15,14
+2 ft gauge railways in South Africa,2015-06-16,3
+2 ft gauge railways in South Africa,2015-06-17,5
+2 ft gauge railways in South Africa,2015-06-18,17
+2 ft gauge railways in South Africa,2015-06-19,4
+2 ft gauge railways in South Africa,2015-06-20,10
+2 ft gauge railways in South Africa,2015-06-21,7
+2 ft gauge railways in South Africa,2015-06-22,2
+2 ft gauge railways in South Africa,2015-06-23,14
+2 ft gauge railways in South Africa,2015-06-24,3
+2 ft gauge railways in South Africa,2015-06-25,7
+2 ft gauge railways in South Africa,2015-06-26,1
+2 ft gauge railways in South Africa,2015-06-27,4
+2 ft gauge railways in South Africa,2015-06-28,3
+2 ft gauge railways in South Africa,2015-06-29,4
+2 ft gauge railways in South Africa,2015-06-30,4
+2 ft gauge railways in South Africa,2015-07-01,6
+2 ft gauge railways in South Africa,2015-07-02,15
+2 ft gauge railways in South Africa,2015-07-03,8
+2 ft gauge railways in South Africa,2015-07-04,4
+2 ft gauge railways in South Africa,2015-07-05,15
+2 ft gauge railways in South Africa,2015-07-06,8
+2 ft gauge railways in South Africa,2015-07-07,2
+2 ft gauge railways in South Africa,2015-07-08,15
+2 ft gauge railways in South Africa,2015-07-09,9
+2 ft gauge railways in South Africa,2015-07-10,10
+2 ft gauge railways in South Africa,2015-07-11,8
+2 ft gauge railways in South Africa,2015-07-12,7
+2 ft gauge railways in South Africa,2015-07-13,6
+2 ft gauge railways in South Africa,2015-07-14,6
+2 ft gauge railways in South Africa,2015-07-15,12
+2 ft gauge railways in South Africa,2015-07-16,6
+2 ft gauge railways in South Africa,2015-07-17,12
+2 ft gauge railways in South Africa,2015-07-18,10
+2 ft gauge railways in South Africa,2015-07-19,6
+2 ft gauge railways in South Africa,2015-07-20,5
+2 ft gauge railways in South Africa,2015-07-21,10
+2 ft gauge railways in South Africa,2015-07-22,3
+2 ft gauge railways in South Africa,2015-07-23,12
+2 ft gauge railways in South Africa,2015-07-24,7
+2 ft gauge railways in South Africa,2015-07-25,6
+2 ft gauge railways in South Africa,2015-07-26,12
+2 ft gauge railways in South Africa,2015-07-27,8
+2 ft gauge railways in South Africa,2015-07-28,13
+2 ft gauge railways in South Africa,2015-07-29,10
+2 ft gauge railways in South Africa,2015-07-30,18
+2 ft gauge railways in South Africa,2015-07-31,15
+2 ft gauge railways in South Africa,2015-08-01,3
+2 ft gauge railways in South Africa,2015-08-02,3
+2 ft gauge railways in South Africa,2015-08-03,10
+2 ft gauge railways in South Africa,2015-08-04,9
+2 ft gauge railways in South Africa,2015-08-05,10
+2 ft gauge railways in South Africa,2015-08-06,6
+2 ft gauge railways in South Africa,2015-08-07,8
+2 ft gauge railways in South Africa,2015-08-08,7
+2 ft gauge railways in South Africa,2015-08-09,4
+2 ft gauge railways in South Africa,2015-08-10,3
+2 ft gauge railways in South Africa,2015-08-11,8
+2 ft gauge railways in South Africa,2015-08-12,3
+2 ft gauge railways in South Africa,2015-08-13,8
+2 ft gauge railways in South Africa,2015-08-14,3
+2 ft gauge railways in South Africa,2015-08-15,9
+2 ft gauge railways in South Africa,2015-08-16,13
+2 ft gauge railways in South Africa,2015-08-17,9
+2 ft gauge railways in South Africa,2015-08-18,5
+2 ft gauge railways in South Africa,2015-08-19,18
+2 ft gauge railways in South Africa,2015-08-20,4
+2 ft gauge railways in South Africa,2015-08-21,9
+2 ft gauge railways in South Africa,2015-08-22,13
+2 ft gauge railways in South Africa,2015-08-23,5
+2 ft gauge railways in South Africa,2015-08-24,8
+2 ft gauge railways in South Africa,2015-08-25,4
+2 ft gauge railways in South Africa,2015-08-26,4
+2 ft gauge railways in South Africa,2015-08-27,1
+2 ft gauge railways in South Africa,2015-08-28,10
+2 ft gauge railways in South Africa,2015-08-29,2
+2 ft gauge railways in South Africa,2015-08-30,6
+2 ft gauge railways in South Africa,2015-08-31,7
+2 ft gauge railways in South Africa,2015-09-01,5
+2 ft gauge railways in South Africa,2015-09-02,9
+2 ft gauge railways in South Africa,2015-09-03,0
+2 ft gauge railways in South Africa,2015-09-04,4
+2 ft gauge railways in South Africa,2015-09-05,3
+2 ft gauge railways in South Africa,2015-09-06,11
+2 ft gauge railways in South Africa,2015-09-07,9
+2 ft gauge railways in South Africa,2015-09-08,8
+2 ft gauge railways in South Africa,2015-09-09,7
+2 ft gauge railways in South Africa,2015-09-10,7
+2 ft gauge railways in South Africa,2015-09-11,4
+2 ft gauge railways in South Africa,2015-09-12,6
+2 ft gauge railways in South Africa,2015-09-13,30
+2 ft gauge railways in South Africa,2015-09-14,9
+2 ft gauge railways in South Africa,2015-09-15,7
+2 ft gauge railways in South Africa,2015-09-16,13
+2 ft gauge railways in South Africa,2015-09-17,11
+2 ft gauge railways in South Africa,2015-09-18,8
+2 ft gauge railways in South Africa,2015-09-19,8
+2 ft gauge railways in South Africa,2015-09-20,5
+2 ft gauge railways in South Africa,2015-09-21,12
+2 ft gauge railways in South Africa,2015-09-22,4
+2 ft gauge railways in South Africa,2015-09-23,13
+2 ft gauge railways in South Africa,2015-09-24,9
+2 ft gauge railways in South Africa,2015-09-25,11
+2 ft gauge railways in South Africa,2015-09-26,12
+2 ft gauge railways in South Africa,2015-09-27,7
+2 ft gauge railways in South Africa,2015-09-28,8
+2 ft gauge railways in South Africa,2015-09-29,8
+2 ft gauge railways in South Africa,2015-09-30,14
+2 ft gauge railways in South Africa,2015-10-01,4
+2 ft gauge railways in South Africa,2015-10-02,7
+2 ft gauge railways in South Africa,2015-10-03,5
+2 ft gauge railways in South Africa,2015-10-04,8
+2 ft gauge railways in South Africa,2015-10-05,6
+2 ft gauge railways in South Africa,2015-10-06,7
+2 ft gauge railways in South Africa,2015-10-07,10
+2 ft gauge railways in South Africa,2015-10-08,5
+2 ft gauge railways in South Africa,2015-10-09,3
+2 ft gauge railways in South Africa,2015-10-10,9
+2 ft gauge railways in South Africa,2015-10-11,13
+2 ft gauge railways in South Africa,2015-10-13,5
+2 ft gauge railways in South Africa,2015-10-14,4
+2 ft gauge railways in South Africa,2015-10-15,11
+2 ft gauge railways in South Africa,2015-10-16,8
+2 ft gauge railways in South Africa,2015-10-17,7
+2 ft gauge railways in South Africa,2015-10-18,8
+2 ft gauge railways in South Africa,2015-10-19,9
+2 ft gauge railways in South Africa,2015-10-20,5
+2 ft gauge railways in South Africa,2015-10-21,12
+2 ft gauge railways in South Africa,2015-10-22,11
+2 ft gauge railways in South Africa,2015-10-23,9
+2 ft gauge railways in South Africa,2015-10-24,6
+2 ft gauge railways in South Africa,2015-10-25,15
+2 ft gauge railways in South Africa,2015-10-26,18
+2 ft gauge railways in South Africa,2015-10-27,27
+2 ft gauge railways in South Africa,2015-10-28,10
+2 ft gauge railways in South Africa,2015-10-29,7
+2 ft gauge railways in South Africa,2015-10-30,13
+2 ft gauge railways in South Africa,2015-10-31,7
+2 ft gauge railways in South Africa,2015-11-01,2
+2 ft gauge railways in South Africa,2015-11-02,7
+2 ft gauge railways in South Africa,2015-11-03,8
+2 ft gauge railways in South Africa,2015-11-04,7
+2 ft gauge railways in South Africa,2015-11-05,21
+2 ft gauge railways in South Africa,2015-11-06,16
+2 ft gauge railways in South Africa,2015-11-07,5
+2 ft gauge railways in South Africa,2015-11-08,72
+2 ft gauge railways in South Africa,2015-11-09,5
+2 ft gauge railways in South Africa,2015-11-10,10
+2 ft gauge railways in South Africa,2015-11-11,11
+2 ft gauge railways in South Africa,2015-11-12,29
+2 ft gauge railways in South Africa,2015-11-13,6
+2 ft gauge railways in South Africa,2015-11-14,11
+2 ft gauge railways in South Africa,2015-11-15,9
+2 ft gauge railways in South Africa,2015-11-16,13
+2 ft gauge railways in South Africa,2015-11-17,11
+2 ft gauge railways in South Africa,2015-11-18,7
+2 ft gauge railways in South Africa,2015-11-19,4
+2 ft gauge railways in South Africa,2015-11-20,6
+2 ft gauge railways in South Africa,2015-11-21,7
+2 ft gauge railways in South Africa,2015-11-22,6
+2 ft gauge railways in South Africa,2015-11-23,22
+2 ft gauge railways in South Africa,2015-11-24,11
+2 ft gauge railways in South Africa,2015-11-25,12
+2 ft gauge railways in South Africa,2015-11-26,13
+2 ft gauge railways in South Africa,2015-11-27,5
+2 ft gauge railways in South Africa,2015-11-28,22
+2 ft gauge railways in South Africa,2015-11-29,9
+2 ft gauge railways in South Africa,2015-11-30,6
+2 ft gauge railways in South Africa,2015-12-01,5
+2 ft gauge railways in South Africa,2015-12-02,18
+2 ft gauge railways in South Africa,2015-12-03,5
+2 ft gauge railways in South Africa,2015-12-04,8
+2 ft gauge railways in South Africa,2015-12-05,1
+2 ft gauge railways in South Africa,2015-12-06,12
+2 ft gauge railways in South Africa,2015-12-07,7
+2 ft gauge railways in South Africa,2015-12-08,5
+2 ft gauge railways in South Africa,2015-12-09,13
+2 ft gauge railways in South Africa,2015-12-10,15
+2 ft gauge railways in South Africa,2015-12-11,10
+2 ft gauge railways in South Africa,2015-12-12,12
+2 ft gauge railways in South Africa,2015-12-13,13
+2 ft gauge railways in South Africa,2015-12-14,6
+2 ft gauge railways in South Africa,2015-12-15,8
+2 ft gauge railways in South Africa,2015-12-16,7
+2 ft gauge railways in South Africa,2015-12-17,10
+2 ft gauge railways in South Africa,2015-12-18,8
+2 ft gauge railways in South Africa,2015-12-19,22
+2 ft gauge railways in South Africa,2015-12-20,8
+2 ft gauge railways in South Africa,2015-12-21,4
+2 ft gauge railways in South Africa,2015-12-22,3
+2 ft gauge railways in South Africa,2015-12-23,8
+2 ft gauge railways in South Africa,2015-12-24,3
+2 ft gauge railways in South Africa,2015-12-25,2
+2 ft gauge railways in South Africa,2015-12-26,11
+2 ft gauge railways in South Africa,2015-12-27,6
+2 ft gauge railways in South Africa,2015-12-28,7
+2 ft gauge railways in South Africa,2015-12-29,5
+2 ft gauge railways in South Africa,2015-12-30,4
+2 ft gauge railways in South Africa,2015-12-31,5
+AIDS orphan,2014-01-01,15
+AIDS orphan,2014-01-02,25
+AIDS orphan,2014-01-03,22
+AIDS orphan,2014-01-04,9
+AIDS orphan,2014-01-05,6
+AIDS orphan,2014-01-06,0
+AIDS orphan,2014-01-07,26
+AIDS orphan,2014-01-08,18
+AIDS orphan,2014-01-09,22
+AIDS orphan,2014-01-10,18
+AIDS orphan,2014-01-11,23
+AIDS orphan,2014-01-12,20
+AIDS orphan,2014-01-13,21
+AIDS orphan,2014-01-14,20
+AIDS orphan,2014-01-15,20
+AIDS orphan,2014-01-16,25
+AIDS orphan,2014-01-17,18
+AIDS orphan,2014-01-18,17
+AIDS orphan,2014-01-19,27
+AIDS orphan,2014-01-20,28
+AIDS orphan,2014-01-21,14
+AIDS orphan,2014-01-22,19
+AIDS orphan,2014-01-23,18
+AIDS orphan,2014-01-24,25
+AIDS orphan,2014-01-25,16
+AIDS orphan,2014-01-26,14
+AIDS orphan,2014-01-27,29
+AIDS orphan,2014-01-28,37
+AIDS orphan,2014-01-29,18
+AIDS orphan,2014-01-30,23
+AIDS orphan,2014-01-31,34
+AIDS orphan,2014-02-01,12
+AIDS orphan,2014-02-02,18
+AIDS orphan,2014-02-03,23
+AIDS orphan,2014-02-04,34
+AIDS orphan,2014-02-05,24
+AIDS orphan,2014-02-06,34
+AIDS orphan,2014-02-07,25
+AIDS orphan,2014-02-08,19
+AIDS orphan,2014-02-09,30
+AIDS orphan,2014-02-10,34
+AIDS orphan,2014-02-11,28
+AIDS orphan,2014-02-12,39
+AIDS orphan,2014-02-13,45
+AIDS orphan,2014-02-14,20
+AIDS orphan,2014-02-15,21
+AIDS orphan,2014-02-16,18
+AIDS orphan,2014-02-17,25
+AIDS orphan,2014-02-18,11
+AIDS orphan,2014-02-19,24
+AIDS orphan,2014-02-20,35
+AIDS orphan,2014-02-21,16
+AIDS orphan,2014-02-22,20
+AIDS orphan,2014-02-23,34
+AIDS orphan,2014-02-24,42
+AIDS orphan,2014-02-25,29
+AIDS orphan,2014-02-26,28
+AIDS orphan,2014-02-27,36
+AIDS orphan,2014-02-28,25
+AIDS orphan,2014-03-01,19
+AIDS orphan,2014-03-02,24
+AIDS orphan,2014-03-03,44
+AIDS orphan,2014-03-04,34
+AIDS orphan,2014-03-05,36
+AIDS orphan,2014-03-06,47
+AIDS orphan,2014-03-07,35
+AIDS orphan,2014-03-08,23
+AIDS orphan,2014-03-09,35
+AIDS orphan,2014-03-10,34
+AIDS orphan,2014-03-11,21
+AIDS orphan,2014-03-12,28
+AIDS orphan,2014-03-13,29
+AIDS orphan,2014-03-14,38
+AIDS orphan,2014-03-15,22
+AIDS orphan,2014-03-16,28
+AIDS orphan,2014-03-17,30
+AIDS orphan,2014-03-18,26
+AIDS orphan,2014-03-19,34
+AIDS orphan,2014-03-20,34
+AIDS orphan,2014-03-21,21
+AIDS orphan,2014-03-22,26
+AIDS orphan,2014-03-23,17
+AIDS orphan,2014-03-24,44
+AIDS orphan,2014-03-25,51
+AIDS orphan,2014-03-26,60
+AIDS orphan,2014-03-27,34
+AIDS orphan,2014-03-28,28
+AIDS orphan,2014-03-29,26
+AIDS orphan,2014-03-30,28
+AIDS orphan,2014-03-31,36
+AIDS orphan,2014-04-01,45
+AIDS orphan,2014-04-02,35
+AIDS orphan,2014-04-03,31
+AIDS orphan,2014-04-04,37
+AIDS orphan,2014-04-05,21
+AIDS orphan,2014-04-06,29
+AIDS orphan,2014-04-07,37
+AIDS orphan,2014-04-08,31
+AIDS orphan,2014-04-09,30
+AIDS orphan,2014-04-10,43
+AIDS orphan,2014-04-11,35
+AIDS orphan,2014-04-12,27
+AIDS orphan,2014-04-13,35
+AIDS orphan,2014-04-14,42
+AIDS orphan,2014-04-15,43
+AIDS orphan,2014-04-16,32
+AIDS orphan,2014-04-17,27
+AIDS orphan,2014-04-18,32
+AIDS orphan,2014-04-19,15
+AIDS orphan,2014-04-20,21
+AIDS orphan,2014-04-21,53
+AIDS orphan,2014-04-22,45
+AIDS orphan,2014-04-23,27
+AIDS orphan,2014-04-24,31
+AIDS orphan,2014-04-25,33
+AIDS orphan,2014-04-26,28
+AIDS orphan,2014-04-27,43
+AIDS orphan,2014-04-28,28
+AIDS orphan,2014-04-29,50
+AIDS orphan,2014-04-30,47
+AIDS orphan,2014-05-01,27
+AIDS orphan,2014-05-02,37
+AIDS orphan,2014-05-03,39
+AIDS orphan,2014-05-04,31
+AIDS orphan,2014-05-05,37
+AIDS orphan,2014-05-06,37
+AIDS orphan,2014-05-07,43
+AIDS orphan,2014-05-08,30
+AIDS orphan,2014-05-09,35
+AIDS orphan,2014-05-10,25
+AIDS orphan,2014-05-11,25
+AIDS orphan,2014-05-12,29
+AIDS orphan,2014-05-13,39
+AIDS orphan,2014-05-14,32
+AIDS orphan,2014-05-15,34
+AIDS orphan,2014-05-16,41
+AIDS orphan,2014-05-17,21
+AIDS orphan,2014-05-18,18
+AIDS orphan,2014-05-19,28
+AIDS orphan,2014-05-20,29
+AIDS orphan,2014-05-21,43
+AIDS orphan,2014-05-22,37
+AIDS orphan,2014-05-23,33
+AIDS orphan,2014-05-24,16
+AIDS orphan,2014-05-25,33
+AIDS orphan,2014-05-26,26
+AIDS orphan,2014-05-27,36
+AIDS orphan,2014-05-28,32
+AIDS orphan,2014-05-29,39
+AIDS orphan,2014-05-30,37
+AIDS orphan,2014-05-31,31
+AIDS orphan,2014-06-01,36
+AIDS orphan,2014-06-02,34
+AIDS orphan,2014-06-03,27
+AIDS orphan,2014-06-04,36
+AIDS orphan,2014-06-05,45
+AIDS orphan,2014-06-06,28
+AIDS orphan,2014-06-07,37
+AIDS orphan,2014-06-08,29
+AIDS orphan,2014-06-09,23
+AIDS orphan,2014-06-10,30
+AIDS orphan,2014-06-11,24
+AIDS orphan,2014-06-12,30
+AIDS orphan,2014-06-13,27
+AIDS orphan,2014-06-14,32
+AIDS orphan,2014-06-15,30
+AIDS orphan,2014-06-16,36
+AIDS orphan,2014-06-17,28
+AIDS orphan,2014-06-18,21
+AIDS orphan,2014-06-19,31
+AIDS orphan,2014-06-20,19
+AIDS orphan,2014-06-21,15
+AIDS orphan,2014-06-22,20
+AIDS orphan,2014-06-23,24
+AIDS orphan,2014-06-24,30
+AIDS orphan,2014-06-25,28
+AIDS orphan,2014-06-26,20
+AIDS orphan,2014-06-27,19
+AIDS orphan,2014-06-28,23
+AIDS orphan,2014-06-29,13
+AIDS orphan,2014-06-30,23
+AIDS orphan,2014-07-01,20
+AIDS orphan,2014-07-02,30
+AIDS orphan,2014-07-03,19
+AIDS orphan,2014-07-04,18
+AIDS orphan,2014-07-05,20
+AIDS orphan,2014-07-06,22
+AIDS orphan,2014-07-07,28
+AIDS orphan,2014-07-08,16
+AIDS orphan,2014-07-09,36
+AIDS orphan,2014-07-10,16
+AIDS orphan,2014-07-11,32
+AIDS orphan,2014-07-12,23
+AIDS orphan,2014-07-13,22
+AIDS orphan,2014-07-14,23
+AIDS orphan,2014-07-15,31
+AIDS orphan,2014-07-16,29
+AIDS orphan,2014-07-17,14
+AIDS orphan,2014-07-18,32
+AIDS orphan,2014-07-19,17
+AIDS orphan,2014-07-20,28
+AIDS orphan,2014-07-21,28
+AIDS orphan,2014-07-22,36
+AIDS orphan,2014-07-23,17
+AIDS orphan,2014-07-24,23
+AIDS orphan,2014-07-25,22
+AIDS orphan,2014-07-26,27
+AIDS orphan,2014-07-27,10
+AIDS orphan,2014-07-28,32
+AIDS orphan,2014-07-29,29
+AIDS orphan,2014-07-30,30
+AIDS orphan,2014-07-31,23
+AIDS orphan,2014-08-01,28
+AIDS orphan,2014-08-02,22
+AIDS orphan,2014-08-03,19
+AIDS orphan,2014-08-04,18
+AIDS orphan,2014-08-05,43
+AIDS orphan,2014-08-06,24
+AIDS orphan,2014-08-07,17
+AIDS orphan,2014-08-08,22
+AIDS orphan,2014-08-09,16
+AIDS orphan,2014-08-10,9
+AIDS orphan,2014-08-11,23
+AIDS orphan,2014-08-12,24
+AIDS orphan,2014-08-13,28
+AIDS orphan,2014-08-14,24
+AIDS orphan,2014-08-15,25
+AIDS orphan,2014-08-16,20
+AIDS orphan,2014-08-17,22
+AIDS orphan,2014-08-18,26
+AIDS orphan,2014-08-19,14
+AIDS orphan,2014-08-20,22
+AIDS orphan,2014-08-21,28
+AIDS orphan,2014-08-22,19
+AIDS orphan,2014-08-23,23
+AIDS orphan,2014-08-24,28
+AIDS orphan,2014-08-25,19
+AIDS orphan,2014-08-26,25
+AIDS orphan,2014-08-27,18
+AIDS orphan,2014-08-28,0
+AIDS orphan,2014-08-29,41
+AIDS orphan,2014-08-30,22
+AIDS orphan,2014-08-31,32
+AIDS orphan,2014-09-01,28
+AIDS orphan,2014-09-02,35
+AIDS orphan,2014-09-03,24
+AIDS orphan,2014-09-04,44
+AIDS orphan,2014-09-05,38
+AIDS orphan,2014-09-06,38
+AIDS orphan,2014-09-07,28
+AIDS orphan,2014-09-08,26
+AIDS orphan,2014-09-09,28
+AIDS orphan,2014-09-10,22
+AIDS orphan,2014-09-11,19
+AIDS orphan,2014-09-12,27
+AIDS orphan,2014-09-13,9
+AIDS orphan,2014-09-14,16
+AIDS orphan,2014-09-15,29
+AIDS orphan,2014-09-16,22
+AIDS orphan,2014-09-17,25
+AIDS orphan,2014-09-18,24
+AIDS orphan,2014-09-19,27
+AIDS orphan,2014-09-20,20
+AIDS orphan,2014-09-21,21
+AIDS orphan,2014-09-22,12
+AIDS orphan,2014-09-23,25
+AIDS orphan,2014-09-24,18
+AIDS orphan,2014-09-25,25
+AIDS orphan,2014-09-26,18
+AIDS orphan,2014-09-27,24
+AIDS orphan,2014-09-28,25
+AIDS orphan,2014-09-29,26
+AIDS orphan,2014-09-30,22
+AIDS orphan,2014-10-01,24
+AIDS orphan,2014-10-02,13
+AIDS orphan,2014-10-03,31
+AIDS orphan,2014-10-04,20
+AIDS orphan,2014-10-05,29
+AIDS orphan,2014-10-06,33
+AIDS orphan,2014-10-07,33
+AIDS orphan,2014-10-08,24
+AIDS orphan,2014-10-09,43
+AIDS orphan,2014-10-10,14
+AIDS orphan,2014-10-11,27
+AIDS orphan,2014-10-12,25
+AIDS orphan,2014-10-13,35
+AIDS orphan,2014-10-14,14
+AIDS orphan,2014-10-15,22
+AIDS orphan,2014-10-16,18
+AIDS orphan,2014-10-17,21
+AIDS orphan,2014-10-18,28
+AIDS orphan,2014-10-19,11
+AIDS orphan,2014-10-20,33
+AIDS orphan,2014-10-21,31
+AIDS orphan,2014-10-22,12
+AIDS orphan,2014-10-23,22
+AIDS orphan,2014-10-24,22
+AIDS orphan,2014-10-25,23
+AIDS orphan,2014-10-26,5
+AIDS orphan,2014-10-27,21
+AIDS orphan,2014-10-28,22
+AIDS orphan,2014-10-29,32
+AIDS orphan,2014-10-30,24
+AIDS orphan,2014-10-31,21
+AIDS orphan,2014-11-01,22
+AIDS orphan,2014-11-02,18
+AIDS orphan,2014-11-03,21
+AIDS orphan,2014-11-04,47
+AIDS orphan,2014-11-05,22
+AIDS orphan,2014-11-06,40
+AIDS orphan,2014-11-07,23
+AIDS orphan,2014-11-08,24
+AIDS orphan,2014-11-09,31
+AIDS orphan,2014-11-10,25
+AIDS orphan,2014-11-11,29
+AIDS orphan,2014-11-12,24
+AIDS orphan,2014-11-13,26
+AIDS orphan,2014-11-14,27
+AIDS orphan,2014-11-15,43
+AIDS orphan,2014-11-16,23
+AIDS orphan,2014-11-17,39
+AIDS orphan,2014-11-18,18
+AIDS orphan,2014-11-19,21
+AIDS orphan,2014-11-20,25
+AIDS orphan,2014-11-21,31
+AIDS orphan,2014-11-22,31
+AIDS orphan,2014-11-23,19
+AIDS orphan,2014-11-24,29
+AIDS orphan,2014-11-25,32
+AIDS orphan,2014-11-26,33
+AIDS orphan,2014-11-27,22
+AIDS orphan,2014-11-28,22
+AIDS orphan,2014-11-29,30
+AIDS orphan,2014-11-30,9
+AIDS orphan,2014-12-01,44
+AIDS orphan,2014-12-02,37
+AIDS orphan,2014-12-03,21
+AIDS orphan,2014-12-04,22
+AIDS orphan,2014-12-05,13
+AIDS orphan,2014-12-06,19
+AIDS orphan,2014-12-07,21
+AIDS orphan,2014-12-08,44
+AIDS orphan,2014-12-09,89
+AIDS orphan,2014-12-10,21
+AIDS orphan,2014-12-11,41
+AIDS orphan,2014-12-12,34
+AIDS orphan,2014-12-13,20
+AIDS orphan,2014-12-14,24
+AIDS orphan,2014-12-15,20
+AIDS orphan,2014-12-16,25
+AIDS orphan,2014-12-17,30
+AIDS orphan,2014-12-18,23
+AIDS orphan,2014-12-19,22
+AIDS orphan,2014-12-20,36
+AIDS orphan,2014-12-21,44
+AIDS orphan,2014-12-22,25
+AIDS orphan,2014-12-23,23
+AIDS orphan,2014-12-24,20
+AIDS orphan,2014-12-25,21
+AIDS orphan,2014-12-26,22
+AIDS orphan,2014-12-27,18
+AIDS orphan,2014-12-28,17
+AIDS orphan,2014-12-29,21
+AIDS orphan,2014-12-30,14
+AIDS orphan,2014-12-31,16
+AIDS orphan,2015-01-01,23
+AIDS orphan,2015-01-02,20
+AIDS orphan,2015-01-03,16
+AIDS orphan,2015-01-04,25
+AIDS orphan,2015-01-05,30
+AIDS orphan,2015-01-06,30
+AIDS orphan,2015-01-07,27
+AIDS orphan,2015-01-08,20
+AIDS orphan,2015-01-09,14
+AIDS orphan,2015-01-10,353
+AIDS orphan,2015-01-11,286
+AIDS orphan,2015-01-12,122
+AIDS orphan,2015-01-13,13
+AIDS orphan,2015-01-14,23
+AIDS orphan,2015-01-15,18
+AIDS orphan,2015-01-16,28
+AIDS orphan,2015-01-17,20
+AIDS orphan,2015-01-18,37
+AIDS orphan,2015-01-19,35
+AIDS orphan,2015-01-20,19
+AIDS orphan,2015-01-21,32
+AIDS orphan,2015-01-22,30
+AIDS orphan,2015-01-23,33
+AIDS orphan,2015-01-24,29
+AIDS orphan,2015-01-25,32
+AIDS orphan,2015-01-26,27
+AIDS orphan,2015-01-27,27
+AIDS orphan,2015-01-28,29
+AIDS orphan,2015-01-29,15
+AIDS orphan,2015-01-30,25
+AIDS orphan,2015-01-31,19
+AIDS orphan,2015-02-01,22
+AIDS orphan,2015-02-02,15
+AIDS orphan,2015-02-03,29
+AIDS orphan,2015-02-04,33
+AIDS orphan,2015-02-05,0
+AIDS orphan,2015-02-06,29
+AIDS orphan,2015-02-07,30
+AIDS orphan,2015-02-08,27
+AIDS orphan,2015-02-09,32
+AIDS orphan,2015-02-10,27
+AIDS orphan,2015-02-11,22
+AIDS orphan,2015-02-12,22
+AIDS orphan,2015-02-13,26
+AIDS orphan,2015-02-14,23
+AIDS orphan,2015-02-15,26
+AIDS orphan,2015-02-16,30
+AIDS orphan,2015-02-17,25
+AIDS orphan,2015-02-18,19
+AIDS orphan,2015-02-19,25
+AIDS orphan,2015-02-20,22
+AIDS orphan,2015-02-21,27
+AIDS orphan,2015-02-22,24
+AIDS orphan,2015-02-23,24
+AIDS orphan,2015-02-24,30
+AIDS orphan,2015-02-25,37
+AIDS orphan,2015-02-26,21
+AIDS orphan,2015-02-27,43
+AIDS orphan,2015-02-28,12
+AIDS orphan,2015-03-01,31
+AIDS orphan,2015-03-02,34
+AIDS orphan,2015-03-03,22
+AIDS orphan,2015-03-04,28
+AIDS orphan,2015-03-05,35
+AIDS orphan,2015-03-06,30
+AIDS orphan,2015-03-07,17
+AIDS orphan,2015-03-08,19
+AIDS orphan,2015-03-09,28
+AIDS orphan,2015-03-10,32
+AIDS orphan,2015-03-11,51
+AIDS orphan,2015-03-12,15
+AIDS orphan,2015-03-13,43
+AIDS orphan,2015-03-14,23
+AIDS orphan,2015-03-15,24
+AIDS orphan,2015-03-16,25
+AIDS orphan,2015-03-17,15
+AIDS orphan,2015-03-18,28
+AIDS orphan,2015-03-19,29
+AIDS orphan,2015-03-20,27
+AIDS orphan,2015-03-21,18
+AIDS orphan,2015-03-22,26
+AIDS orphan,2015-03-23,26
+AIDS orphan,2015-03-24,46
+AIDS orphan,2015-03-25,46
+AIDS orphan,2015-03-26,36
+AIDS orphan,2015-03-27,29
+AIDS orphan,2015-03-28,16
+AIDS orphan,2015-03-29,63
+AIDS orphan,2015-03-30,68
+AIDS orphan,2015-03-31,48
+AIDS orphan,2015-04-01,37
+AIDS orphan,2015-04-02,28
+AIDS orphan,2015-04-03,23
+AIDS orphan,2015-04-04,37
+AIDS orphan,2015-04-05,30
+AIDS orphan,2015-04-06,36
+AIDS orphan,2015-04-07,28
+AIDS orphan,2015-04-08,51
+AIDS orphan,2015-04-09,17
+AIDS orphan,2015-04-10,28
+AIDS orphan,2015-04-11,20
+AIDS orphan,2015-04-12,29
+AIDS orphan,2015-04-13,36
+AIDS orphan,2015-04-14,27
+AIDS orphan,2015-04-15,21
+AIDS orphan,2015-04-16,34
+AIDS orphan,2015-04-17,22
+AIDS orphan,2015-04-18,31
+AIDS orphan,2015-04-19,20
+AIDS orphan,2015-04-20,24
+AIDS orphan,2015-04-21,32
+AIDS orphan,2015-04-22,32
+AIDS orphan,2015-04-23,22
+AIDS orphan,2015-04-24,25
+AIDS orphan,2015-04-25,13
+AIDS orphan,2015-04-26,30
+AIDS orphan,2015-04-27,40
+AIDS orphan,2015-04-28,32
+AIDS orphan,2015-04-29,37
+AIDS orphan,2015-04-30,33
+AIDS orphan,2015-05-01,45
+AIDS orphan,2015-05-02,13
+AIDS orphan,2015-05-03,32
+AIDS orphan,2015-05-04,32
+AIDS orphan,2015-05-05,31
+AIDS orphan,2015-05-06,32
+AIDS orphan,2015-05-07,34
+AIDS orphan,2015-05-08,52
+AIDS orphan,2015-05-09,29
+AIDS orphan,2015-05-10,25
+AIDS orphan,2015-05-11,35
+AIDS orphan,2015-05-12,31
+AIDS orphan,2015-05-13,51
+AIDS orphan,2015-05-14,31
+AIDS orphan,2015-05-15,31
+AIDS orphan,2015-05-16,19
+AIDS orphan,2015-05-17,36
+AIDS orphan,2015-05-18,27
+AIDS orphan,2015-05-19,36
+AIDS orphan,2015-05-20,36
+AIDS orphan,2015-05-21,38
+AIDS orphan,2015-05-22,36
+AIDS orphan,2015-05-23,30
+AIDS orphan,2015-05-24,32
+AIDS orphan,2015-05-25,20
+AIDS orphan,2015-05-26,25
+AIDS orphan,2015-05-27,37
+AIDS orphan,2015-05-28,19
+AIDS orphan,2015-05-29,14
+AIDS orphan,2015-05-30,34
+AIDS orphan,2015-05-31,31
+AIDS orphan,2015-06-01,25
+AIDS orphan,2015-06-02,26
+AIDS orphan,2015-06-03,37
+AIDS orphan,2015-06-04,32
+AIDS orphan,2015-06-05,28
+AIDS orphan,2015-06-06,31
+AIDS orphan,2015-06-07,30
+AIDS orphan,2015-06-08,37
+AIDS orphan,2015-06-09,33
+AIDS orphan,2015-06-10,31
+AIDS orphan,2015-06-11,21
+AIDS orphan,2015-06-12,20
+AIDS orphan,2015-06-13,20
+AIDS orphan,2015-06-14,21
+AIDS orphan,2015-06-15,25
+AIDS orphan,2015-06-16,18
+AIDS orphan,2015-06-17,9
+AIDS orphan,2015-06-18,14
+AIDS orphan,2015-06-19,22
+AIDS orphan,2015-06-20,12
+AIDS orphan,2015-06-21,18
+AIDS orphan,2015-06-22,16
+AIDS orphan,2015-06-23,13
+AIDS orphan,2015-06-24,16
+AIDS orphan,2015-06-25,17
+AIDS orphan,2015-06-26,15
+AIDS orphan,2015-06-27,22
+AIDS orphan,2015-06-28,16
+AIDS orphan,2015-06-29,26
+AIDS orphan,2015-06-30,21
+AIDS orphan,2015-07-01,31
+AIDS orphan,2015-07-02,37
+AIDS orphan,2015-07-03,29
+AIDS orphan,2015-07-04,29
+AIDS orphan,2015-07-05,36
+AIDS orphan,2015-07-06,21
+AIDS orphan,2015-07-07,21
+AIDS orphan,2015-07-08,99
+AIDS orphan,2015-07-09,215
+AIDS orphan,2015-07-10,12
+AIDS orphan,2015-07-11,33
+AIDS orphan,2015-07-12,23
+AIDS orphan,2015-07-13,19
+AIDS orphan,2015-07-14,19
+AIDS orphan,2015-07-15,39
+AIDS orphan,2015-07-16,18
+AIDS orphan,2015-07-17,20
+AIDS orphan,2015-07-18,16
+AIDS orphan,2015-07-19,24
+AIDS orphan,2015-07-20,25
+AIDS orphan,2015-07-21,13
+AIDS orphan,2015-07-22,23
+AIDS orphan,2015-07-23,19
+AIDS orphan,2015-07-24,24
+AIDS orphan,2015-07-25,14
+AIDS orphan,2015-07-26,14
+AIDS orphan,2015-07-27,17
+AIDS orphan,2015-07-28,20
+AIDS orphan,2015-07-29,22
+AIDS orphan,2015-07-30,34
+AIDS orphan,2015-07-31,25
+AIDS orphan,2015-08-01,20
+AIDS orphan,2015-08-02,28
+AIDS orphan,2015-08-03,18
+AIDS orphan,2015-08-04,47
+AIDS orphan,2015-08-05,20
+AIDS orphan,2015-08-06,33
+AIDS orphan,2015-08-07,20
+AIDS orphan,2015-08-08,40
+AIDS orphan,2015-08-09,30
+AIDS orphan,2015-08-10,22
+AIDS orphan,2015-08-11,20
+AIDS orphan,2015-08-12,13
+AIDS orphan,2015-08-13,25
+AIDS orphan,2015-08-14,19
+AIDS orphan,2015-08-15,10
+AIDS orphan,2015-08-16,17
+AIDS orphan,2015-08-17,54
+AIDS orphan,2015-08-18,20
+AIDS orphan,2015-08-19,24
+AIDS orphan,2015-08-20,27
+AIDS orphan,2015-08-21,12
+AIDS orphan,2015-08-22,23
+AIDS orphan,2015-08-23,21
+AIDS orphan,2015-08-24,17
+AIDS orphan,2015-08-25,20
+AIDS orphan,2015-08-26,27
+AIDS orphan,2015-08-27,22
+AIDS orphan,2015-08-28,13
+AIDS orphan,2015-08-29,14
+AIDS orphan,2015-08-30,16
+AIDS orphan,2015-08-31,16
+AIDS orphan,2015-09-01,10
+AIDS orphan,2015-09-02,17
+AIDS orphan,2015-09-03,36
+AIDS orphan,2015-09-04,20
+AIDS orphan,2015-09-05,15
+AIDS orphan,2015-09-06,25
+AIDS orphan,2015-09-07,13
+AIDS orphan,2015-09-08,19
+AIDS orphan,2015-09-09,31
+AIDS orphan,2015-09-10,21
+AIDS orphan,2015-09-11,18
+AIDS orphan,2015-09-12,13
+AIDS orphan,2015-09-13,10
+AIDS orphan,2015-09-14,22
+AIDS orphan,2015-09-15,19
+AIDS orphan,2015-09-16,23
+AIDS orphan,2015-09-17,28
+AIDS orphan,2015-09-18,26
+AIDS orphan,2015-09-19,21
+AIDS orphan,2015-09-20,19
+AIDS orphan,2015-09-21,19
+AIDS orphan,2015-09-22,26
+AIDS orphan,2015-09-23,29
+AIDS orphan,2015-09-24,24
+AIDS orphan,2015-09-25,19
+AIDS orphan,2015-09-26,16
+AIDS orphan,2015-09-27,21
+AIDS orphan,2015-09-28,34
+AIDS orphan,2015-09-29,18
+AIDS orphan,2015-09-30,16
+AIDS orphan,2015-10-01,33
+AIDS orphan,2015-10-02,55
+AIDS orphan,2015-10-03,23
+AIDS orphan,2015-10-04,19
+AIDS orphan,2015-10-05,17
+AIDS orphan,2015-10-06,13
+AIDS orphan,2015-10-07,26
+AIDS orphan,2015-10-08,19
+AIDS orphan,2015-10-09,15
+AIDS orphan,2015-10-10,23
+AIDS orphan,2015-10-11,13
+AIDS orphan,2015-10-13,18
+AIDS orphan,2015-10-14,16
+AIDS orphan,2015-10-15,26
+AIDS orphan,2015-10-16,28
+AIDS orphan,2015-10-17,35
+AIDS orphan,2015-10-18,24
+AIDS orphan,2015-10-19,24
+AIDS orphan,2015-10-20,25
+AIDS orphan,2015-10-21,22
+AIDS orphan,2015-10-22,15
+AIDS orphan,2015-10-23,17
+AIDS orphan,2015-10-24,14
+AIDS orphan,2015-10-25,8
+AIDS orphan,2015-10-26,19
+AIDS orphan,2015-10-27,22
+AIDS orphan,2015-10-28,28
+AIDS orphan,2015-10-29,36
+AIDS orphan,2015-10-30,30
+AIDS orphan,2015-10-31,17
+AIDS orphan,2015-11-01,15
+AIDS orphan,2015-11-02,16
+AIDS orphan,2015-11-03,24
+AIDS orphan,2015-11-04,19
+AIDS orphan,2015-11-05,29
+AIDS orphan,2015-11-06,26
+AIDS orphan,2015-11-07,19
+AIDS orphan,2015-11-08,22
+AIDS orphan,2015-11-09,25
+AIDS orphan,2015-11-10,22
+AIDS orphan,2015-11-11,30
+AIDS orphan,2015-11-12,26
+AIDS orphan,2015-11-13,15
+AIDS orphan,2015-11-14,18
+AIDS orphan,2015-11-15,24
+AIDS orphan,2015-11-16,26
+AIDS orphan,2015-11-17,26
+AIDS orphan,2015-11-18,27
+AIDS orphan,2015-11-19,23
+AIDS orphan,2015-11-20,22
+AIDS orphan,2015-11-21,30
+AIDS orphan,2015-11-22,27
+AIDS orphan,2015-11-23,26
+AIDS orphan,2015-11-24,32
+AIDS orphan,2015-11-25,26
+AIDS orphan,2015-11-26,19
+AIDS orphan,2015-11-27,28
+AIDS orphan,2015-11-28,19
+AIDS orphan,2015-11-29,24
+AIDS orphan,2015-11-30,29
+AIDS orphan,2015-12-01,36
+AIDS orphan,2015-12-02,25
+AIDS orphan,2015-12-03,30
+AIDS orphan,2015-12-04,25
+AIDS orphan,2015-12-05,19
+AIDS orphan,2015-12-06,18
+AIDS orphan,2015-12-07,17
+AIDS orphan,2015-12-08,19
+AIDS orphan,2015-12-09,22
+AIDS orphan,2015-12-10,24
+AIDS orphan,2015-12-11,18
+AIDS orphan,2015-12-12,13
+AIDS orphan,2015-12-13,17
+AIDS orphan,2015-12-14,30
+AIDS orphan,2015-12-15,15
+AIDS orphan,2015-12-16,18
+AIDS orphan,2015-12-17,24
+AIDS orphan,2015-12-18,28
+AIDS orphan,2015-12-19,19
+AIDS orphan,2015-12-20,9
+AIDS orphan,2015-12-21,16
+AIDS orphan,2015-12-22,19
+AIDS orphan,2015-12-23,21
+AIDS orphan,2015-12-24,20
+AIDS orphan,2015-12-25,17
+AIDS orphan,2015-12-26,18
+AIDS orphan,2015-12-27,20
+AIDS orphan,2015-12-28,14
+AIDS orphan,2015-12-29,27
+AIDS orphan,2015-12-30,18
+AIDS orphan,2015-12-31,18
+Acid,2014-01-01,1282
+Acid,2014-01-02,2102
+Acid,2014-01-03,2064
+Acid,2014-01-04,1621
+Acid,2014-01-05,247
+Acid,2014-01-06,0
+Acid,2014-01-07,3578
+Acid,2014-01-08,3230
+Acid,2014-01-09,3369
+Acid,2014-01-10,3033
+Acid,2014-01-11,1862
+Acid,2014-01-12,2218
+Acid,2014-01-13,3376
+Acid,2014-01-14,3384
+Acid,2014-01-15,3529
+Acid,2014-01-16,3525
+Acid,2014-01-17,3013
+Acid,2014-01-18,1925
+Acid,2014-01-19,2048
+Acid,2014-01-20,3072
+Acid,2014-01-21,3452
+Acid,2014-01-22,3635
+Acid,2014-01-23,3496
+Acid,2014-01-24,3011
+Acid,2014-01-25,1978
+Acid,2014-01-26,2158
+Acid,2014-01-27,3489
+Acid,2014-01-28,3631
+Acid,2014-01-29,3519
+Acid,2014-01-30,3624
+Acid,2014-01-31,2761
+Acid,2014-02-01,1961
+Acid,2014-02-02,2346
+Acid,2014-02-03,3436
+Acid,2014-02-04,3858
+Acid,2014-02-05,3780
+Acid,2014-02-06,3712
+Acid,2014-02-07,3274
+Acid,2014-02-08,2051
+Acid,2014-02-09,2527
+Acid,2014-02-10,3742
+Acid,2014-02-11,3973
+Acid,2014-02-12,3646
+Acid,2014-02-13,3422
+Acid,2014-02-14,2773
+Acid,2014-02-15,1918
+Acid,2014-02-16,2194
+Acid,2014-02-17,3402
+Acid,2014-02-18,3557
+Acid,2014-02-19,3584
+Acid,2014-02-20,3539
+Acid,2014-02-21,2977
+Acid,2014-02-22,1922
+Acid,2014-02-23,2071
+Acid,2014-02-24,3514
+Acid,2014-02-25,3974
+Acid,2014-02-26,3843
+Acid,2014-02-27,3660
+Acid,2014-02-28,3023
+Acid,2014-03-01,1963
+Acid,2014-03-02,2345
+Acid,2014-03-03,3641
+Acid,2014-03-04,3552
+Acid,2014-03-05,3986
+Acid,2014-03-06,4188
+Acid,2014-03-07,3473
+Acid,2014-03-08,2054
+Acid,2014-03-09,2494
+Acid,2014-03-10,3671
+Acid,2014-03-11,3769
+Acid,2014-03-12,3596
+Acid,2014-03-13,3401
+Acid,2014-03-14,2927
+Acid,2014-03-15,1946
+Acid,2014-03-16,2208
+Acid,2014-03-17,3745
+Acid,2014-03-18,3715
+Acid,2014-03-19,3746
+Acid,2014-03-20,3721
+Acid,2014-03-21,3183
+Acid,2014-03-22,1988
+Acid,2014-03-23,2458
+Acid,2014-03-24,3598
+Acid,2014-03-25,4000
+Acid,2014-03-26,3833
+Acid,2014-03-27,3537
+Acid,2014-03-28,2927
+Acid,2014-03-29,1913
+Acid,2014-03-30,2107
+Acid,2014-03-31,3400
+Acid,2014-04-01,3508
+Acid,2014-04-02,3487
+Acid,2014-04-03,3498
+Acid,2014-04-04,2967
+Acid,2014-04-05,1831
+Acid,2014-04-06,2139
+Acid,2014-04-07,3589
+Acid,2014-04-08,3727
+Acid,2014-04-09,3736
+Acid,2014-04-10,3451
+Acid,2014-04-11,3036
+Acid,2014-04-12,1962
+Acid,2014-04-13,1909
+Acid,2014-04-14,3403
+Acid,2014-04-15,3480
+Acid,2014-04-16,3454
+Acid,2014-04-17,3057
+Acid,2014-04-18,2394
+Acid,2014-04-19,1816
+Acid,2014-04-20,1819
+Acid,2014-04-21,3000
+Acid,2014-04-22,3720
+Acid,2014-04-23,3533
+Acid,2014-04-24,3452
+Acid,2014-04-25,3461
+Acid,2014-04-26,2343
+Acid,2014-04-27,2513
+Acid,2014-04-28,3939
+Acid,2014-04-29,3977
+Acid,2014-04-30,3490
+Acid,2014-05-01,3191
+Acid,2014-05-02,3095
+Acid,2014-05-03,1990
+Acid,2014-05-04,2332
+Acid,2014-05-05,3589
+Acid,2014-05-06,3723
+Acid,2014-05-07,3727
+Acid,2014-05-08,3586
+Acid,2014-05-09,3234
+Acid,2014-05-10,1894
+Acid,2014-05-11,2071
+Acid,2014-05-12,3730
+Acid,2014-05-13,3889
+Acid,2014-05-14,3751
+Acid,2014-05-15,3497
+Acid,2014-05-16,2879
+Acid,2014-05-17,1812
+Acid,2014-05-18,2006
+Acid,2014-05-19,3386
+Acid,2014-05-20,3597
+Acid,2014-05-21,3615
+Acid,2014-05-22,3323
+Acid,2014-05-23,3158
+Acid,2014-05-24,1729
+Acid,2014-05-25,1906
+Acid,2014-05-26,2742
+Acid,2014-05-27,3364
+Acid,2014-05-28,3315
+Acid,2014-05-29,3045
+Acid,2014-05-30,2594
+Acid,2014-05-31,1707
+Acid,2014-06-01,2289
+Acid,2014-06-02,3533
+Acid,2014-06-03,3406
+Acid,2014-06-04,3314
+Acid,2014-06-05,3133
+Acid,2014-06-06,2767
+Acid,2014-06-07,1658
+Acid,2014-06-08,1947
+Acid,2014-06-09,3117
+Acid,2014-06-10,3245
+Acid,2014-06-11,2922
+Acid,2014-06-12,3107
+Acid,2014-06-13,2500
+Acid,2014-06-14,1762
+Acid,2014-06-15,2050
+Acid,2014-06-16,3197
+Acid,2014-06-17,3138
+Acid,2014-06-18,3101
+Acid,2014-06-19,3296
+Acid,2014-06-20,2554
+Acid,2014-06-21,1728
+Acid,2014-06-22,1998
+Acid,2014-06-23,3160
+Acid,2014-06-24,3064
+Acid,2014-06-25,3169
+Acid,2014-06-26,2874
+Acid,2014-06-27,2357
+Acid,2014-06-28,1576
+Acid,2014-06-29,1795
+Acid,2014-06-30,2982
+Acid,2014-07-01,2863
+Acid,2014-07-02,2677
+Acid,2014-07-03,2600
+Acid,2014-07-04,2018
+Acid,2014-07-05,1471
+Acid,2014-07-06,1788
+Acid,2014-07-07,3095
+Acid,2014-07-08,3148
+Acid,2014-07-09,2982
+Acid,2014-07-10,2871
+Acid,2014-07-11,2530
+Acid,2014-07-12,1659
+Acid,2014-07-13,1731
+Acid,2014-07-14,2848
+Acid,2014-07-15,3071
+Acid,2014-07-16,2631
+Acid,2014-07-17,2675
+Acid,2014-07-18,2386
+Acid,2014-07-19,1673
+Acid,2014-07-20,1981
+Acid,2014-07-21,3307
+Acid,2014-07-22,3337
+Acid,2014-07-23,3121
+Acid,2014-07-24,3124
+Acid,2014-07-25,2559
+Acid,2014-07-26,1781
+Acid,2014-07-27,2089
+Acid,2014-07-28,2692
+Acid,2014-07-29,3040
+Acid,2014-07-30,3235
+Acid,2014-07-31,7229
+Acid,2014-08-01,3268
+Acid,2014-08-02,2108
+Acid,2014-08-03,2388
+Acid,2014-08-04,3218
+Acid,2014-08-05,3153
+Acid,2014-08-06,3209
+Acid,2014-08-07,3103
+Acid,2014-08-08,2396
+Acid,2014-08-09,1724
+Acid,2014-08-10,1904
+Acid,2014-08-11,2873
+Acid,2014-08-12,2986
+Acid,2014-08-13,3681
+Acid,2014-08-14,2568
+Acid,2014-08-15,2166
+Acid,2014-08-16,1556
+Acid,2014-08-17,1867
+Acid,2014-08-18,2762
+Acid,2014-08-19,2840
+Acid,2014-08-20,2866
+Acid,2014-08-21,2873
+Acid,2014-08-22,2659
+Acid,2014-08-23,1760
+Acid,2014-08-24,1936
+Acid,2014-08-25,2803
+Acid,2014-08-26,2882
+Acid,2014-08-27,2829
+Acid,2014-08-28,0
+Acid,2014-08-29,2278
+Acid,2014-08-30,1612
+Acid,2014-08-31,2083
+Acid,2014-09-01,2535
+Acid,2014-09-02,3181
+Acid,2014-09-03,3291
+Acid,2014-09-04,3199
+Acid,2014-09-05,2746
+Acid,2014-09-06,1922
+Acid,2014-09-07,2088
+Acid,2014-09-08,3047
+Acid,2014-09-09,3492
+Acid,2014-09-10,3675
+Acid,2014-09-11,3648
+Acid,2014-09-12,3196
+Acid,2014-09-13,1818
+Acid,2014-09-14,2254
+Acid,2014-09-15,3459
+Acid,2014-09-16,3518
+Acid,2014-09-17,3545
+Acid,2014-09-18,3422
+Acid,2014-09-19,3107
+Acid,2014-09-20,1953
+Acid,2014-09-21,2161
+Acid,2014-09-22,3598
+Acid,2014-09-23,3999
+Acid,2014-09-24,3677
+Acid,2014-09-25,3655
+Acid,2014-09-26,2940
+Acid,2014-09-27,2089
+Acid,2014-09-28,2353
+Acid,2014-09-29,3614
+Acid,2014-09-30,3584
+Acid,2014-10-01,3371
+Acid,2014-10-02,3282
+Acid,2014-10-03,2772
+Acid,2014-10-04,1813
+Acid,2014-10-05,1985
+Acid,2014-10-06,3365
+Acid,2014-10-07,3860
+Acid,2014-10-08,3842
+Acid,2014-10-09,3516
+Acid,2014-10-10,2858
+Acid,2014-10-11,1854
+Acid,2014-10-12,2020
+Acid,2014-10-13,3239
+Acid,2014-10-14,3715
+Acid,2014-10-15,3708
+Acid,2014-10-16,3097
+Acid,2014-10-17,2651
+Acid,2014-10-18,1595
+Acid,2014-10-19,1907
+Acid,2014-10-20,3299
+Acid,2014-10-21,3183
+Acid,2014-10-22,3021
+Acid,2014-10-23,2834
+Acid,2014-10-24,2473
+Acid,2014-10-25,1618
+Acid,2014-10-26,1928
+Acid,2014-10-27,3004
+Acid,2014-10-28,3231
+Acid,2014-10-29,3072
+Acid,2014-10-30,2936
+Acid,2014-10-31,2482
+Acid,2014-11-01,1534
+Acid,2014-11-02,1854
+Acid,2014-11-03,3030
+Acid,2014-11-04,3291
+Acid,2014-11-05,3183
+Acid,2014-11-06,3150
+Acid,2014-11-07,2583
+Acid,2014-11-08,1606
+Acid,2014-11-09,2000
+Acid,2014-11-10,3118
+Acid,2014-11-11,2992
+Acid,2014-11-12,3171
+Acid,2014-11-13,3158
+Acid,2014-11-14,2652
+Acid,2014-11-15,1830
+Acid,2014-11-16,2052
+Acid,2014-11-17,3076
+Acid,2014-11-18,3409
+Acid,2014-11-19,3285
+Acid,2014-11-20,2944
+Acid,2014-11-21,2426
+Acid,2014-11-22,1515
+Acid,2014-11-23,1741
+Acid,2014-11-24,3056
+Acid,2014-11-25,2975
+Acid,2014-11-26,2870
+Acid,2014-11-27,2276
+Acid,2014-11-28,1882
+Acid,2014-11-29,1493
+Acid,2014-11-30,1338
+Acid,2014-12-01,3106
+Acid,2014-12-02,3072
+Acid,2014-12-03,3166
+Acid,2014-12-04,3146
+Acid,2014-12-05,2707
+Acid,2014-12-06,1664
+Acid,2014-12-07,1764
+Acid,2014-12-08,3094
+Acid,2014-12-09,3204
+Acid,2014-12-10,2997
+Acid,2014-12-11,2981
+Acid,2014-12-12,2452
+Acid,2014-12-13,2153
+Acid,2014-12-14,2179
+Acid,2014-12-15,3040
+Acid,2014-12-16,2859
+Acid,2014-12-17,2749
+Acid,2014-12-18,2487
+Acid,2014-12-19,1924
+Acid,2014-12-20,1163
+Acid,2014-12-21,1105
+Acid,2014-12-22,1672
+Acid,2014-12-23,1626
+Acid,2014-12-24,1248
+Acid,2014-12-25,852
+Acid,2014-12-26,1157
+Acid,2014-12-27,1000
+Acid,2014-12-28,1101
+Acid,2014-12-29,1619
+Acid,2014-12-30,1626
+Acid,2014-12-31,1264
+Acid,2015-01-01,960
+Acid,2015-01-02,1433
+Acid,2015-01-03,1290
+Acid,2015-01-04,1378
+Acid,2015-01-05,2407
+Acid,2015-01-06,2510
+Acid,2015-01-07,2568
+Acid,2015-01-08,2551
+Acid,2015-01-09,2286
+Acid,2015-01-10,1454
+Acid,2015-01-11,1632
+Acid,2015-01-12,2702
+Acid,2015-01-13,2957
+Acid,2015-01-14,2824
+Acid,2015-01-15,2776
+Acid,2015-01-16,2483
+Acid,2015-01-17,1403
+Acid,2015-01-18,1655
+Acid,2015-01-19,2691
+Acid,2015-01-20,2915
+Acid,2015-01-21,2871
+Acid,2015-01-22,2780
+Acid,2015-01-23,2432
+Acid,2015-01-24,1570
+Acid,2015-01-25,1694
+Acid,2015-01-26,2738
+Acid,2015-01-27,3005
+Acid,2015-01-28,2976
+Acid,2015-01-29,2876
+Acid,2015-01-30,2469
+Acid,2015-01-31,1199
+Acid,2015-02-01,1664
+Acid,2015-02-02,2623
+Acid,2015-02-03,3791
+Acid,2015-02-04,3134
+Acid,2015-02-05,0
+Acid,2015-02-06,2465
+Acid,2015-02-07,1718
+Acid,2015-02-08,1803
+Acid,2015-02-09,2868
+Acid,2015-02-10,2972
+Acid,2015-02-11,2860
+Acid,2015-02-12,2830
+Acid,2015-02-13,2450
+Acid,2015-02-14,1384
+Acid,2015-02-15,1577
+Acid,2015-02-16,2402
+Acid,2015-02-17,3292
+Acid,2015-02-18,2788
+Acid,2015-02-19,2615
+Acid,2015-02-20,2342
+Acid,2015-02-21,1536
+Acid,2015-02-22,1861
+Acid,2015-02-23,2794
+Acid,2015-02-24,2843
+Acid,2015-02-25,3044
+Acid,2015-02-26,2703
+Acid,2015-02-27,2544
+Acid,2015-02-28,1561
+Acid,2015-03-01,1692
+Acid,2015-03-02,2961
+Acid,2015-03-03,2910
+Acid,2015-03-04,2884
+Acid,2015-03-05,2728
+Acid,2015-03-06,2469
+Acid,2015-03-07,1502
+Acid,2015-03-08,1676
+Acid,2015-03-09,2789
+Acid,2015-03-10,3044
+Acid,2015-03-11,3002
+Acid,2015-03-12,2873
+Acid,2015-03-13,2593
+Acid,2015-03-14,1594
+Acid,2015-03-15,1588
+Acid,2015-03-16,2821
+Acid,2015-03-17,2921
+Acid,2015-03-18,2943
+Acid,2015-03-19,2928
+Acid,2015-03-20,2441
+Acid,2015-03-21,1555
+Acid,2015-03-22,1559
+Acid,2015-03-23,3312
+Acid,2015-03-24,3487
+Acid,2015-03-25,6792
+Acid,2015-03-26,3944
+Acid,2015-03-27,3041
+Acid,2015-03-28,1668
+Acid,2015-03-29,1654
+Acid,2015-03-30,3163
+Acid,2015-03-31,3331
+Acid,2015-04-01,2740
+Acid,2015-04-02,2538
+Acid,2015-04-03,1762
+Acid,2015-04-04,1328
+Acid,2015-04-05,1381
+Acid,2015-04-06,2459
+Acid,2015-04-07,2883
+Acid,2015-04-08,3682
+Acid,2015-04-09,2826
+Acid,2015-04-10,2411
+Acid,2015-04-11,1494
+Acid,2015-04-12,1542
+Acid,2015-04-13,2956
+Acid,2015-04-14,2889
+Acid,2015-04-15,3013
+Acid,2015-04-16,2769
+Acid,2015-04-17,2345
+Acid,2015-04-18,1737
+Acid,2015-04-19,1656
+Acid,2015-04-20,2933
+Acid,2015-04-21,2879
+Acid,2015-04-22,3094
+Acid,2015-04-23,2771
+Acid,2015-04-24,2700
+Acid,2015-04-25,1484
+Acid,2015-04-26,1742
+Acid,2015-04-27,2742
+Acid,2015-04-28,2975
+Acid,2015-04-29,2833
+Acid,2015-04-30,2639
+Acid,2015-05-01,2050
+Acid,2015-05-02,1441
+Acid,2015-05-03,1526
+Acid,2015-05-04,3070
+Acid,2015-05-05,3304
+Acid,2015-05-06,3287
+Acid,2015-05-07,3211
+Acid,2015-05-08,3092
+Acid,2015-05-09,2322
+Acid,2015-05-10,1773
+Acid,2015-05-11,3290
+Acid,2015-05-12,3136
+Acid,2015-05-13,3069
+Acid,2015-05-14,2723
+Acid,2015-05-15,2725
+Acid,2015-05-16,1601
+Acid,2015-05-17,1565
+Acid,2015-05-18,2987
+Acid,2015-05-19,3460
+Acid,2015-05-20,3028
+Acid,2015-05-21,2803
+Acid,2015-05-22,2351
+Acid,2015-05-23,1419
+Acid,2015-05-24,1564
+Acid,2015-05-25,2053
+Acid,2015-05-26,2710
+Acid,2015-05-27,2980
+Acid,2015-05-28,2954
+Acid,2015-05-29,2414
+Acid,2015-05-30,1674
+Acid,2015-05-31,1810
+Acid,2015-06-01,2861
+Acid,2015-06-02,2918
+Acid,2015-06-03,2788
+Acid,2015-06-04,2787
+Acid,2015-06-05,2266
+Acid,2015-06-06,1570
+Acid,2015-06-07,1577
+Acid,2015-06-08,2781
+Acid,2015-06-09,2756
+Acid,2015-06-10,2788
+Acid,2015-06-11,2510
+Acid,2015-06-12,2145
+Acid,2015-06-13,1329
+Acid,2015-06-14,1324
+Acid,2015-06-15,2071
+Acid,2015-06-16,2267
+Acid,2015-06-17,1667
+Acid,2015-06-18,1541
+Acid,2015-06-19,1288
+Acid,2015-06-20,864
+Acid,2015-06-21,986
+Acid,2015-06-22,1642
+Acid,2015-06-23,1606
+Acid,2015-06-24,1670
+Acid,2015-06-25,1739
+Acid,2015-06-26,1428
+Acid,2015-06-27,1053
+Acid,2015-06-28,1399
+Acid,2015-06-29,2037
+Acid,2015-06-30,2082
+Acid,2015-07-01,2103
+Acid,2015-07-02,2338
+Acid,2015-07-03,1490
+Acid,2015-07-04,1174
+Acid,2015-07-05,1239
+Acid,2015-07-06,2145
+Acid,2015-07-07,2198
+Acid,2015-07-08,2232
+Acid,2015-07-09,2310
+Acid,2015-07-10,1893
+Acid,2015-07-11,1213
+Acid,2015-07-12,1343
+Acid,2015-07-13,2313
+Acid,2015-07-14,2679
+Acid,2015-07-15,2356
+Acid,2015-07-16,2120
+Acid,2015-07-17,1753
+Acid,2015-07-18,1263
+Acid,2015-07-19,1484
+Acid,2015-07-20,2950
+Acid,2015-07-21,2803
+Acid,2015-07-22,2585
+Acid,2015-07-23,2495
+Acid,2015-07-24,1868
+Acid,2015-07-25,1360
+Acid,2015-07-26,1539
+Acid,2015-07-27,2391
+Acid,2015-07-28,2476
+Acid,2015-07-29,2470
+Acid,2015-07-30,2517
+Acid,2015-07-31,1845
+Acid,2015-08-01,1293
+Acid,2015-08-02,1634
+Acid,2015-08-03,1951
+Acid,2015-08-04,2440
+Acid,2015-08-05,2165
+Acid,2015-08-06,2217
+Acid,2015-08-07,1918
+Acid,2015-08-08,1403
+Acid,2015-08-09,1527
+Acid,2015-08-10,2286
+Acid,2015-08-11,2260
+Acid,2015-08-12,2086
+Acid,2015-08-13,2006
+Acid,2015-08-14,1690
+Acid,2015-08-15,1180
+Acid,2015-08-16,1383
+Acid,2015-08-17,2343
+Acid,2015-08-18,2354
+Acid,2015-08-19,2214
+Acid,2015-08-20,2147
+Acid,2015-08-21,2030
+Acid,2015-08-22,1183
+Acid,2015-08-23,1308
+Acid,2015-08-24,2332
+Acid,2015-08-25,2436
+Acid,2015-08-26,2285
+Acid,2015-08-27,2220
+Acid,2015-08-28,1878
+Acid,2015-08-29,1085
+Acid,2015-08-30,1344
+Acid,2015-08-31,2149
+Acid,2015-09-01,2496
+Acid,2015-09-02,2597
+Acid,2015-09-03,2372
+Acid,2015-09-04,2186
+Acid,2015-09-05,1208
+Acid,2015-09-06,1432
+Acid,2015-09-07,2116
+Acid,2015-09-08,2556
+Acid,2015-09-09,2475
+Acid,2015-09-10,2592
+Acid,2015-09-11,2079
+Acid,2015-09-12,1280
+Acid,2015-09-13,1473
+Acid,2015-09-14,2672
+Acid,2015-09-15,2537
+Acid,2015-09-16,2035
+Acid,2015-09-17,2257
+Acid,2015-09-18,2047
+Acid,2015-09-19,1243
+Acid,2015-09-20,1480
+Acid,2015-09-21,2441
+Acid,2015-09-22,2519
+Acid,2015-09-23,2568
+Acid,2015-09-24,2336
+Acid,2015-09-25,2153
+Acid,2015-09-26,1306
+Acid,2015-09-27,1521
+Acid,2015-09-28,2470
+Acid,2015-09-29,2623
+Acid,2015-09-30,2567
+Acid,2015-10-01,2317
+Acid,2015-10-02,1891
+Acid,2015-10-03,1433
+Acid,2015-10-04,1523
+Acid,2015-10-05,2306
+Acid,2015-10-06,2721
+Acid,2015-10-07,2775
+Acid,2015-10-08,2619
+Acid,2015-10-09,2141
+Acid,2015-10-10,1383
+Acid,2015-10-11,1516
+Acid,2015-10-13,2734
+Acid,2015-10-14,2592
+Acid,2015-10-15,2808
+Acid,2015-10-16,2263
+Acid,2015-10-17,1382
+Acid,2015-10-18,1679
+Acid,2015-10-19,2603
+Acid,2015-10-20,2591
+Acid,2015-10-21,2469
+Acid,2015-10-22,2349
+Acid,2015-10-23,2097
+Acid,2015-10-24,1303
+Acid,2015-10-25,1568
+Acid,2015-10-26,2465
+Acid,2015-10-27,2590
+Acid,2015-10-28,2613
+Acid,2015-10-29,2860
+Acid,2015-10-30,2531
+Acid,2015-10-31,1576
+Acid,2015-11-01,1432
+Acid,2015-11-02,2464
+Acid,2015-11-03,2836
+Acid,2015-11-04,2846
+Acid,2015-11-05,2620
+Acid,2015-11-06,2099
+Acid,2015-11-07,1564
+Acid,2015-11-08,1601
+Acid,2015-11-09,2549
+Acid,2015-11-10,2375
+Acid,2015-11-11,2344
+Acid,2015-11-12,2458
+Acid,2015-11-13,2074
+Acid,2015-11-14,1247
+Acid,2015-11-15,1504
+Acid,2015-11-16,2488
+Acid,2015-11-17,2493
+Acid,2015-11-18,2665
+Acid,2015-11-19,2529
+Acid,2015-11-20,2087
+Acid,2015-11-21,1359
+Acid,2015-11-22,1504
+Acid,2015-11-23,2578
+Acid,2015-11-24,2377
+Acid,2015-11-25,2177
+Acid,2015-11-26,2009
+Acid,2015-11-27,1555
+Acid,2015-11-28,1149
+Acid,2015-11-29,1508
+Acid,2015-11-30,2554
+Acid,2015-12-01,2513
+Acid,2015-12-02,2547
+Acid,2015-12-03,2452
+Acid,2015-12-04,2176
+Acid,2015-12-05,1325
+Acid,2015-12-06,1560
+Acid,2015-12-07,2708
+Acid,2015-12-08,2581
+Acid,2015-12-09,2663
+Acid,2015-12-10,2643
+Acid,2015-12-11,2259
+Acid,2015-12-12,1316
+Acid,2015-12-13,1526
+Acid,2015-12-14,2433
+Acid,2015-12-15,2718
+Acid,2015-12-16,2657
+Acid,2015-12-17,2441
+Acid,2015-12-18,2187
+Acid,2015-12-19,1175
+Acid,2015-12-20,1066
+Acid,2015-12-21,1690
+Acid,2015-12-22,1615
+Acid,2015-12-23,1470
+Acid,2015-12-24,1000
+Acid,2015-12-25,800
+Acid,2015-12-26,824
+Acid,2015-12-27,911
+Acid,2015-12-28,1385
+Acid,2015-12-29,1495
+Acid,2015-12-30,1336
+Acid,2015-12-31,1149
+Africa Day,2014-01-01,8
+Africa Day,2014-01-02,15
+Africa Day,2014-01-03,13
+Africa Day,2014-01-04,15
+Africa Day,2014-01-05,0
+Africa Day,2014-01-06,0
+Africa Day,2014-01-07,19
+Africa Day,2014-01-08,38
+Africa Day,2014-01-09,42
+Africa Day,2014-01-10,34
+Africa Day,2014-01-11,16
+Africa Day,2014-01-12,18
+Africa Day,2014-01-13,26
+Africa Day,2014-01-14,26
+Africa Day,2014-01-15,27
+Africa Day,2014-01-16,32
+Africa Day,2014-01-17,18
+Africa Day,2014-01-18,9
+Africa Day,2014-01-19,18
+Africa Day,2014-01-20,22
+Africa Day,2014-01-21,37
+Africa Day,2014-01-22,28
+Africa Day,2014-01-23,28
+Africa Day,2014-01-24,23
+Africa Day,2014-01-25,23
+Africa Day,2014-01-26,23
+Africa Day,2014-01-27,35
+Africa Day,2014-01-28,22
+Africa Day,2014-01-29,26
+Africa Day,2014-01-30,43
+Africa Day,2014-01-31,33
+Africa Day,2014-02-01,24
+Africa Day,2014-02-02,21
+Africa Day,2014-02-03,34
+Africa Day,2014-02-04,45
+Africa Day,2014-02-05,41
+Africa Day,2014-02-06,45
+Africa Day,2014-02-07,50
+Africa Day,2014-02-08,28
+Africa Day,2014-02-09,38
+Africa Day,2014-02-10,62
+Africa Day,2014-02-11,60
+Africa Day,2014-02-12,48
+Africa Day,2014-02-13,41
+Africa Day,2014-02-14,42
+Africa Day,2014-02-15,42
+Africa Day,2014-02-16,34
+Africa Day,2014-02-17,63
+Africa Day,2014-02-18,40
+Africa Day,2014-02-19,57
+Africa Day,2014-02-20,43
+Africa Day,2014-02-21,53
+Africa Day,2014-02-22,34
+Africa Day,2014-02-23,29
+Africa Day,2014-02-24,62
+Africa Day,2014-02-25,41
+Africa Day,2014-02-26,54
+Africa Day,2014-02-27,47
+Africa Day,2014-02-28,48
+Africa Day,2014-03-01,30
+Africa Day,2014-03-02,35
+Africa Day,2014-03-03,68
+Africa Day,2014-03-04,38
+Africa Day,2014-03-05,51
+Africa Day,2014-03-06,63
+Africa Day,2014-03-07,52
+Africa Day,2014-03-08,42
+Africa Day,2014-03-09,35
+Africa Day,2014-03-10,66
+Africa Day,2014-03-11,55
+Africa Day,2014-03-12,64
+Africa Day,2014-03-13,66
+Africa Day,2014-03-14,60
+Africa Day,2014-03-15,48
+Africa Day,2014-03-16,50
+Africa Day,2014-03-17,52
+Africa Day,2014-03-18,64
+Africa Day,2014-03-19,53
+Africa Day,2014-03-20,59
+Africa Day,2014-03-21,46
+Africa Day,2014-03-22,51
+Africa Day,2014-03-23,54
+Africa Day,2014-03-24,80
+Africa Day,2014-03-25,79
+Africa Day,2014-03-26,55
+Africa Day,2014-03-27,73
+Africa Day,2014-03-28,70
+Africa Day,2014-03-29,60
+Africa Day,2014-03-30,59
+Africa Day,2014-03-31,99
+Africa Day,2014-04-01,110
+Africa Day,2014-04-02,79
+Africa Day,2014-04-03,72
+Africa Day,2014-04-04,65
+Africa Day,2014-04-05,34
+Africa Day,2014-04-06,59
+Africa Day,2014-04-07,81
+Africa Day,2014-04-08,98
+Africa Day,2014-04-09,72
+Africa Day,2014-04-10,82
+Africa Day,2014-04-11,59
+Africa Day,2014-04-12,60
+Africa Day,2014-04-13,52
+Africa Day,2014-04-14,82
+Africa Day,2014-04-15,96
+Africa Day,2014-04-16,103
+Africa Day,2014-04-17,84
+Africa Day,2014-04-18,52
+Africa Day,2014-04-19,36
+Africa Day,2014-04-20,42
+Africa Day,2014-04-21,87
+Africa Day,2014-04-22,89
+Africa Day,2014-04-23,159
+Africa Day,2014-04-24,574
+Africa Day,2014-04-25,105
+Africa Day,2014-04-26,52
+Africa Day,2014-04-27,53
+Africa Day,2014-04-28,135
+Africa Day,2014-04-29,131
+Africa Day,2014-04-30,119
+Africa Day,2014-05-01,86
+Africa Day,2014-05-02,128
+Africa Day,2014-05-03,70
+Africa Day,2014-05-04,87
+Africa Day,2014-05-05,120
+Africa Day,2014-05-06,151
+Africa Day,2014-05-07,131
+Africa Day,2014-05-08,148
+Africa Day,2014-05-09,139
+Africa Day,2014-05-10,93
+Africa Day,2014-05-11,87
+Africa Day,2014-05-12,202
+Africa Day,2014-05-13,146
+Africa Day,2014-05-14,181
+Africa Day,2014-05-15,177
+Africa Day,2014-05-16,165
+Africa Day,2014-05-17,111
+Africa Day,2014-05-18,112
+Africa Day,2014-05-19,324
+Africa Day,2014-05-20,413
+Africa Day,2014-05-21,378
+Africa Day,2014-05-22,498
+Africa Day,2014-05-23,821
+Africa Day,2014-05-24,703
+Africa Day,2014-05-25,2002
+Africa Day,2014-05-26,976
+Africa Day,2014-05-27,389
+Africa Day,2014-05-28,196
+Africa Day,2014-05-29,178
+Africa Day,2014-05-30,98
+Africa Day,2014-05-31,76
+Africa Day,2014-06-01,100
+Africa Day,2014-06-02,101
+Africa Day,2014-06-03,110
+Africa Day,2014-06-04,75
+Africa Day,2014-06-05,80
+Africa Day,2014-06-06,55
+Africa Day,2014-06-07,63
+Africa Day,2014-06-08,54
+Africa Day,2014-06-09,87
+Africa Day,2014-06-10,69
+Africa Day,2014-06-11,85
+Africa Day,2014-06-12,50
+Africa Day,2014-06-13,41
+Africa Day,2014-06-14,60
+Africa Day,2014-06-15,53
+Africa Day,2014-06-16,52
+Africa Day,2014-06-17,69
+Africa Day,2014-06-18,59
+Africa Day,2014-06-19,54
+Africa Day,2014-06-20,47
+Africa Day,2014-06-21,39
+Africa Day,2014-06-22,42
+Africa Day,2014-06-23,56
+Africa Day,2014-06-24,64
+Africa Day,2014-06-25,60
+Africa Day,2014-06-26,44
+Africa Day,2014-06-27,61
+Africa Day,2014-06-28,46
+Africa Day,2014-06-29,40
+Africa Day,2014-06-30,68
+Africa Day,2014-07-01,74
+Africa Day,2014-07-02,70
+Africa Day,2014-07-03,56
+Africa Day,2014-07-04,52
+Africa Day,2014-07-05,51
+Africa Day,2014-07-06,49
+Africa Day,2014-07-07,46
+Africa Day,2014-07-08,48
+Africa Day,2014-07-09,47
+Africa Day,2014-07-10,40
+Africa Day,2014-07-11,47
+Africa Day,2014-07-12,44
+Africa Day,2014-07-13,49
+Africa Day,2014-07-14,64
+Africa Day,2014-07-15,39
+Africa Day,2014-07-16,61
+Africa Day,2014-07-17,40
+Africa Day,2014-07-18,51
+Africa Day,2014-07-19,50
+Africa Day,2014-07-20,38
+Africa Day,2014-07-21,42
+Africa Day,2014-07-22,69
+Africa Day,2014-07-23,47
+Africa Day,2014-07-24,53
+Africa Day,2014-07-25,59
+Africa Day,2014-07-26,53
+Africa Day,2014-07-27,53
+Africa Day,2014-07-28,51
+Africa Day,2014-07-29,73
+Africa Day,2014-07-30,70
+Africa Day,2014-07-31,63
+Africa Day,2014-08-01,63
+Africa Day,2014-08-02,49
+Africa Day,2014-08-03,51
+Africa Day,2014-08-04,58
+Africa Day,2014-08-05,58
+Africa Day,2014-08-06,66
+Africa Day,2014-08-07,70
+Africa Day,2014-08-08,49
+Africa Day,2014-08-09,39
+Africa Day,2014-08-10,64
+Africa Day,2014-08-11,61
+Africa Day,2014-08-12,71
+Africa Day,2014-08-13,88
+Africa Day,2014-08-14,57
+Africa Day,2014-08-15,52
+Africa Day,2014-08-16,51
+Africa Day,2014-08-17,61
+Africa Day,2014-08-18,71
+Africa Day,2014-08-19,76
+Africa Day,2014-08-20,84
+Africa Day,2014-08-21,78
+Africa Day,2014-08-22,64
+Africa Day,2014-08-23,38
+Africa Day,2014-08-24,66
+Africa Day,2014-08-25,62
+Africa Day,2014-08-26,69
+Africa Day,2014-08-27,67
+Africa Day,2014-08-28,0
+Africa Day,2014-08-29,75
+Africa Day,2014-08-30,66
+Africa Day,2014-08-31,70
+Africa Day,2014-09-01,70
+Africa Day,2014-09-02,76
+Africa Day,2014-09-03,57
+Africa Day,2014-09-04,65
+Africa Day,2014-09-05,63
+Africa Day,2014-09-06,52
+Africa Day,2014-09-07,65
+Africa Day,2014-09-08,73
+Africa Day,2014-09-09,89
+Africa Day,2014-09-10,98
+Africa Day,2014-09-11,80
+Africa Day,2014-09-12,65
+Africa Day,2014-09-13,60
+Africa Day,2014-09-14,64
+Africa Day,2014-09-15,77
+Africa Day,2014-09-16,52
+Africa Day,2014-09-17,66
+Africa Day,2014-09-18,57
+Africa Day,2014-09-19,55
+Africa Day,2014-09-20,41
+Africa Day,2014-09-21,63
+Africa Day,2014-09-22,74
+Africa Day,2014-09-23,62
+Africa Day,2014-09-24,58
+Africa Day,2014-09-25,75
+Africa Day,2014-09-26,54
+Africa Day,2014-09-27,69
+Africa Day,2014-09-28,38
+Africa Day,2014-09-29,75
+Africa Day,2014-09-30,48
+Africa Day,2014-10-01,58
+Africa Day,2014-10-02,58
+Africa Day,2014-10-03,54
+Africa Day,2014-10-04,33
+Africa Day,2014-10-05,40
+Africa Day,2014-10-06,57
+Africa Day,2014-10-07,49
+Africa Day,2014-10-08,83
+Africa Day,2014-10-09,67
+Africa Day,2014-10-10,53
+Africa Day,2014-10-11,36
+Africa Day,2014-10-12,43
+Africa Day,2014-10-13,45
+Africa Day,2014-10-14,55
+Africa Day,2014-10-15,48
+Africa Day,2014-10-16,52
+Africa Day,2014-10-17,42
+Africa Day,2014-10-18,50
+Africa Day,2014-10-19,35
+Africa Day,2014-10-20,75
+Africa Day,2014-10-21,74
+Africa Day,2014-10-22,62
+Africa Day,2014-10-23,45
+Africa Day,2014-10-24,52
+Africa Day,2014-10-25,38
+Africa Day,2014-10-26,50
+Africa Day,2014-10-27,60
+Africa Day,2014-10-28,64
+Africa Day,2014-10-29,49
+Africa Day,2014-10-30,62
+Africa Day,2014-10-31,45
+Africa Day,2014-11-01,47
+Africa Day,2014-11-02,48
+Africa Day,2014-11-03,74
+Africa Day,2014-11-04,67
+Africa Day,2014-11-05,59
+Africa Day,2014-11-06,62
+Africa Day,2014-11-07,51
+Africa Day,2014-11-08,73
+Africa Day,2014-11-09,58
+Africa Day,2014-11-10,64
+Africa Day,2014-11-11,72
+Africa Day,2014-11-12,61
+Africa Day,2014-11-13,50
+Africa Day,2014-11-14,66
+Africa Day,2014-11-15,135
+Africa Day,2014-11-16,49
+Africa Day,2014-11-17,56
+Africa Day,2014-11-18,62
+Africa Day,2014-11-19,46
+Africa Day,2014-11-20,48
+Africa Day,2014-11-21,49
+Africa Day,2014-11-22,36
+Africa Day,2014-11-23,37
+Africa Day,2014-11-24,53
+Africa Day,2014-11-25,44
+Africa Day,2014-11-26,47
+Africa Day,2014-11-27,46
+Africa Day,2014-11-28,60
+Africa Day,2014-11-29,37
+Africa Day,2014-11-30,27
+Africa Day,2014-12-01,56
+Africa Day,2014-12-02,60
+Africa Day,2014-12-03,65
+Africa Day,2014-12-04,154
+Africa Day,2014-12-05,72
+Africa Day,2014-12-06,39
+Africa Day,2014-12-07,42
+Africa Day,2014-12-08,140
+Africa Day,2014-12-09,48
+Africa Day,2014-12-10,48
+Africa Day,2014-12-11,131
+Africa Day,2014-12-12,51
+Africa Day,2014-12-13,47
+Africa Day,2014-12-14,45
+Africa Day,2014-12-15,71
+Africa Day,2014-12-16,50
+Africa Day,2014-12-17,53
+Africa Day,2014-12-18,56
+Africa Day,2014-12-19,44
+Africa Day,2014-12-20,39
+Africa Day,2014-12-21,33
+Africa Day,2014-12-22,50
+Africa Day,2014-12-23,44
+Africa Day,2014-12-24,35
+Africa Day,2014-12-25,36
+Africa Day,2014-12-26,36
+Africa Day,2014-12-27,40
+Africa Day,2014-12-28,37
+Africa Day,2014-12-29,32
+Africa Day,2014-12-30,27
+Africa Day,2014-12-31,32
+Africa Day,2015-01-01,35
+Africa Day,2015-01-02,64
+Africa Day,2015-01-03,60
+Africa Day,2015-01-04,38
+Africa Day,2015-01-05,60
+Africa Day,2015-01-06,48
+Africa Day,2015-01-07,42
+Africa Day,2015-01-08,56
+Africa Day,2015-01-09,46
+Africa Day,2015-01-10,37
+Africa Day,2015-01-11,36
+Africa Day,2015-01-12,62
+Africa Day,2015-01-13,66
+Africa Day,2015-01-14,48
+Africa Day,2015-01-15,52
+Africa Day,2015-01-16,41
+Africa Day,2015-01-17,36
+Africa Day,2015-01-18,42
+Africa Day,2015-01-19,48
+Africa Day,2015-01-20,66
+Africa Day,2015-01-21,47
+Africa Day,2015-01-22,55
+Africa Day,2015-01-23,57
+Africa Day,2015-01-24,35
+Africa Day,2015-01-25,40
+Africa Day,2015-01-26,53
+Africa Day,2015-01-27,65
+Africa Day,2015-01-28,43
+Africa Day,2015-01-29,53
+Africa Day,2015-01-30,47
+Africa Day,2015-01-31,30
+Africa Day,2015-02-01,46
+Africa Day,2015-02-02,141
+Africa Day,2015-02-03,62
+Africa Day,2015-02-04,53
+Africa Day,2015-02-05,0
+Africa Day,2015-02-06,46
+Africa Day,2015-02-07,41
+Africa Day,2015-02-08,49
+Africa Day,2015-02-09,53
+Africa Day,2015-02-10,76
+Africa Day,2015-02-11,68
+Africa Day,2015-02-12,51
+Africa Day,2015-02-13,50
+Africa Day,2015-02-14,48
+Africa Day,2015-02-15,34
+Africa Day,2015-02-16,48
+Africa Day,2015-02-17,57
+Africa Day,2015-02-18,42
+Africa Day,2015-02-19,76
+Africa Day,2015-02-20,51
+Africa Day,2015-02-21,38
+Africa Day,2015-02-22,39
+Africa Day,2015-02-23,62
+Africa Day,2015-02-24,56
+Africa Day,2015-02-25,63
+Africa Day,2015-02-26,39
+Africa Day,2015-02-27,73
+Africa Day,2015-02-28,49
+Africa Day,2015-03-01,53
+Africa Day,2015-03-02,50
+Africa Day,2015-03-03,110
+Africa Day,2015-03-04,62
+Africa Day,2015-03-05,48
+Africa Day,2015-03-06,51
+Africa Day,2015-03-07,37
+Africa Day,2015-03-08,55
+Africa Day,2015-03-09,56
+Africa Day,2015-03-10,58
+Africa Day,2015-03-11,55
+Africa Day,2015-03-12,62
+Africa Day,2015-03-13,58
+Africa Day,2015-03-14,43
+Africa Day,2015-03-15,50
+Africa Day,2015-03-16,65
+Africa Day,2015-03-17,76
+Africa Day,2015-03-18,75
+Africa Day,2015-03-19,60
+Africa Day,2015-03-20,64
+Africa Day,2015-03-21,50
+Africa Day,2015-03-22,58
+Africa Day,2015-03-23,60
+Africa Day,2015-03-24,66
+Africa Day,2015-03-25,68
+Africa Day,2015-03-26,86
+Africa Day,2015-03-27,58
+Africa Day,2015-03-28,59
+Africa Day,2015-03-29,59
+Africa Day,2015-03-30,78
+Africa Day,2015-03-31,61
+Africa Day,2015-04-01,91
+Africa Day,2015-04-02,72
+Africa Day,2015-04-03,48
+Africa Day,2015-04-04,40
+Africa Day,2015-04-05,41
+Africa Day,2015-04-06,64
+Africa Day,2015-04-07,91
+Africa Day,2015-04-08,79
+Africa Day,2015-04-09,99
+Africa Day,2015-04-10,73
+Africa Day,2015-04-11,36
+Africa Day,2015-04-12,65
+Africa Day,2015-04-13,83
+Africa Day,2015-04-14,71
+Africa Day,2015-04-15,86
+Africa Day,2015-04-16,87
+Africa Day,2015-04-17,59
+Africa Day,2015-04-18,65
+Africa Day,2015-04-19,62
+Africa Day,2015-04-20,110
+Africa Day,2015-04-21,126
+Africa Day,2015-04-22,112
+Africa Day,2015-04-23,102
+Africa Day,2015-04-24,101
+Africa Day,2015-04-25,44
+Africa Day,2015-04-26,60
+Africa Day,2015-04-27,78
+Africa Day,2015-04-28,107
+Africa Day,2015-04-29,125
+Africa Day,2015-04-30,119
+Africa Day,2015-05-01,135
+Africa Day,2015-05-02,54
+Africa Day,2015-05-03,51
+Africa Day,2015-05-04,119
+Africa Day,2015-05-05,129
+Africa Day,2015-05-06,164
+Africa Day,2015-05-07,161
+Africa Day,2015-05-08,142
+Africa Day,2015-05-09,86
+Africa Day,2015-05-10,86
+Africa Day,2015-05-11,229
+Africa Day,2015-05-12,202
+Africa Day,2015-05-13,179
+Africa Day,2015-05-14,184
+Africa Day,2015-05-15,158
+Africa Day,2015-05-16,73
+Africa Day,2015-05-17,91
+Africa Day,2015-05-18,267
+Africa Day,2015-05-19,374
+Africa Day,2015-05-20,382
+Africa Day,2015-05-21,513
+Africa Day,2015-05-22,678
+Africa Day,2015-05-23,307
+Africa Day,2015-05-24,657
+Africa Day,2015-05-25,4267
+Africa Day,2015-05-26,960
+Africa Day,2015-05-27,471
+Africa Day,2015-05-28,302
+Africa Day,2015-05-29,200
+Africa Day,2015-05-30,98
+Africa Day,2015-05-31,111
+Africa Day,2015-06-01,125
+Africa Day,2015-06-02,120
+Africa Day,2015-06-03,106
+Africa Day,2015-06-04,95
+Africa Day,2015-06-05,74
+Africa Day,2015-06-06,52
+Africa Day,2015-06-07,43
+Africa Day,2015-06-08,70
+Africa Day,2015-06-09,65
+Africa Day,2015-06-10,63
+Africa Day,2015-06-11,73
+Africa Day,2015-06-12,55
+Africa Day,2015-06-13,35
+Africa Day,2015-06-14,31
+Africa Day,2015-06-15,59
+Africa Day,2015-06-16,48
+Africa Day,2015-06-17,51
+Africa Day,2015-06-18,55
+Africa Day,2015-06-19,167
+Africa Day,2015-06-20,43
+Africa Day,2015-06-21,47
+Africa Day,2015-06-22,43
+Africa Day,2015-06-23,55
+Africa Day,2015-06-24,56
+Africa Day,2015-06-25,40
+Africa Day,2015-06-26,41
+Africa Day,2015-06-27,37
+Africa Day,2015-06-28,55
+Africa Day,2015-06-29,79
+Africa Day,2015-06-30,49
+Africa Day,2015-07-01,40
+Africa Day,2015-07-02,77
+Africa Day,2015-07-03,32
+Africa Day,2015-07-04,30
+Africa Day,2015-07-05,29
+Africa Day,2015-07-06,55
+Africa Day,2015-07-07,51
+Africa Day,2015-07-08,87
+Africa Day,2015-07-09,31
+Africa Day,2015-07-10,65
+Africa Day,2015-07-11,32
+Africa Day,2015-07-12,20
+Africa Day,2015-07-13,46
+Africa Day,2015-07-14,64
+Africa Day,2015-07-15,44
+Africa Day,2015-07-16,40
+Africa Day,2015-07-17,35
+Africa Day,2015-07-18,33
+Africa Day,2015-07-19,43
+Africa Day,2015-07-20,48
+Africa Day,2015-07-21,43
+Africa Day,2015-07-22,77
+Africa Day,2015-07-23,55
+Africa Day,2015-07-24,43
+Africa Day,2015-07-25,40
+Africa Day,2015-07-26,34
+Africa Day,2015-07-27,47
+Africa Day,2015-07-28,64
+Africa Day,2015-07-29,44
+Africa Day,2015-07-30,922
+Africa Day,2015-07-31,1604
+Africa Day,2015-08-01,54
+Africa Day,2015-08-02,33
+Africa Day,2015-08-03,103
+Africa Day,2015-08-04,121
+Africa Day,2015-08-05,45
+Africa Day,2015-08-06,61
+Africa Day,2015-08-07,38
+Africa Day,2015-08-08,117
+Africa Day,2015-08-09,40
+Africa Day,2015-08-10,48
+Africa Day,2015-08-11,37
+Africa Day,2015-08-12,39
+Africa Day,2015-08-13,47
+Africa Day,2015-08-14,36
+Africa Day,2015-08-15,38
+Africa Day,2015-08-16,37
+Africa Day,2015-08-17,70
+Africa Day,2015-08-18,55
+Africa Day,2015-08-19,42
+Africa Day,2015-08-20,69
+Africa Day,2015-08-21,22
+Africa Day,2015-08-22,50
+Africa Day,2015-08-23,41
+Africa Day,2015-08-24,56
+Africa Day,2015-08-25,40
+Africa Day,2015-08-26,75
+Africa Day,2015-08-27,33
+Africa Day,2015-08-28,44
+Africa Day,2015-08-29,29
+Africa Day,2015-08-30,35
+Africa Day,2015-08-31,42
+Africa Day,2015-09-01,39
+Africa Day,2015-09-02,43
+Africa Day,2015-09-03,53
+Africa Day,2015-09-04,37
+Africa Day,2015-09-05,29
+Africa Day,2015-09-06,50
+Africa Day,2015-09-07,57
+Africa Day,2015-09-08,87
+Africa Day,2015-09-09,62
+Africa Day,2015-09-10,57
+Africa Day,2015-09-11,61
+Africa Day,2015-09-12,31
+Africa Day,2015-09-13,26
+Africa Day,2015-09-14,40
+Africa Day,2015-09-15,60
+Africa Day,2015-09-16,27
+Africa Day,2015-09-17,58
+Africa Day,2015-09-18,42
+Africa Day,2015-09-19,41
+Africa Day,2015-09-20,32
+Africa Day,2015-09-21,45
+Africa Day,2015-09-22,45
+Africa Day,2015-09-23,56
+Africa Day,2015-09-24,57
+Africa Day,2015-09-25,49
+Africa Day,2015-09-26,34
+Africa Day,2015-09-27,29
+Africa Day,2015-09-28,35
+Africa Day,2015-09-29,40
+Africa Day,2015-09-30,50
+Africa Day,2015-10-01,43
+Africa Day,2015-10-02,43
+Africa Day,2015-10-03,38
+Africa Day,2015-10-04,24
+Africa Day,2015-10-05,34
+Africa Day,2015-10-06,48
+Africa Day,2015-10-07,72
+Africa Day,2015-10-08,45
+Africa Day,2015-10-09,39
+Africa Day,2015-10-10,30
+Africa Day,2015-10-11,25
+Africa Day,2015-10-13,32
+Africa Day,2015-10-14,49
+Africa Day,2015-10-15,55
+Africa Day,2015-10-16,20
+Africa Day,2015-10-17,32
+Africa Day,2015-10-18,27
+Africa Day,2015-10-19,50
+Africa Day,2015-10-20,41
+Africa Day,2015-10-21,39
+Africa Day,2015-10-22,59
+Africa Day,2015-10-23,34
+Africa Day,2015-10-24,31
+Africa Day,2015-10-25,47
+Africa Day,2015-10-26,42
+Africa Day,2015-10-27,36
+Africa Day,2015-10-28,49
+Africa Day,2015-10-29,44
+Africa Day,2015-10-30,39
+Africa Day,2015-10-31,27
+Africa Day,2015-11-01,59
+Africa Day,2015-11-02,47
+Africa Day,2015-11-03,34
+Africa Day,2015-11-04,62
+Africa Day,2015-11-05,46
+Africa Day,2015-11-06,40
+Africa Day,2015-11-07,27
+Africa Day,2015-11-08,27
+Africa Day,2015-11-09,27
+Africa Day,2015-11-10,55
+Africa Day,2015-11-11,39
+Africa Day,2015-11-12,39
+Africa Day,2015-11-13,28
+Africa Day,2015-11-14,30
+Africa Day,2015-11-15,30
+Africa Day,2015-11-16,43
+Africa Day,2015-11-17,50
+Africa Day,2015-11-18,47
+Africa Day,2015-11-19,54
+Africa Day,2015-11-20,42
+Africa Day,2015-11-21,28
+Africa Day,2015-11-22,32
+Africa Day,2015-11-23,33
+Africa Day,2015-11-24,43
+Africa Day,2015-11-25,42
+Africa Day,2015-11-26,45
+Africa Day,2015-11-27,37
+Africa Day,2015-11-28,22
+Africa Day,2015-11-29,26
+Africa Day,2015-11-30,38
+Africa Day,2015-12-01,32
+Africa Day,2015-12-02,41
+Africa Day,2015-12-03,39
+Africa Day,2015-12-04,35
+Africa Day,2015-12-05,23
+Africa Day,2015-12-06,27
+Africa Day,2015-12-07,49
+Africa Day,2015-12-08,35
+Africa Day,2015-12-09,55
+Africa Day,2015-12-10,49
+Africa Day,2015-12-11,38
+Africa Day,2015-12-12,32
+Africa Day,2015-12-13,43
+Africa Day,2015-12-14,46
+Africa Day,2015-12-15,52
+Africa Day,2015-12-16,41
+Africa Day,2015-12-17,34
+Africa Day,2015-12-18,35
+Africa Day,2015-12-19,34
+Africa Day,2015-12-20,29
+Africa Day,2015-12-21,36
+Africa Day,2015-12-22,37
+Africa Day,2015-12-23,31
+Africa Day,2015-12-24,21
+Africa Day,2015-12-25,28
+Africa Day,2015-12-26,31
+Africa Day,2015-12-27,27
+Africa Day,2015-12-28,22
+Africa Day,2015-12-29,28
+Africa Day,2015-12-30,31
+Africa Day,2015-12-31,26
+Children's Day,2014-01-01,1468
+Children's Day,2014-01-02,1364
+Children's Day,2014-01-03,659
+Children's Day,2014-01-04,520
+Children's Day,2014-01-05,79
+Children's Day,2014-01-06,0
+Children's Day,2014-01-07,2000
+Children's Day,2014-01-08,1142
+Children's Day,2014-01-09,997
+Children's Day,2014-01-10,1178
+Children's Day,2014-01-11,1517
+Children's Day,2014-01-12,667
+Children's Day,2014-01-13,693
+Children's Day,2014-01-14,676
+Children's Day,2014-01-15,598
+Children's Day,2014-01-16,628
+Children's Day,2014-01-17,530
+Children's Day,2014-01-18,399
+Children's Day,2014-01-19,498
+Children's Day,2014-01-20,630
+Children's Day,2014-01-21,736
+Children's Day,2014-01-22,632
+Children's Day,2014-01-23,713
+Children's Day,2014-01-24,554
+Children's Day,2014-01-25,383
+Children's Day,2014-01-26,504
+Children's Day,2014-01-27,627
+Children's Day,2014-01-28,574
+Children's Day,2014-01-29,564
+Children's Day,2014-01-30,695
+Children's Day,2014-01-31,503
+Children's Day,2014-02-01,493
+Children's Day,2014-02-02,434
+Children's Day,2014-02-03,587
+Children's Day,2014-02-04,754
+Children's Day,2014-02-05,2135
+Children's Day,2014-02-06,1753
+Children's Day,2014-02-07,1475
+Children's Day,2014-02-08,767
+Children's Day,2014-02-09,621
+Children's Day,2014-02-10,767
+Children's Day,2014-02-11,874
+Children's Day,2014-02-12,777
+Children's Day,2014-02-13,956
+Children's Day,2014-02-14,1139
+Children's Day,2014-02-15,722
+Children's Day,2014-02-16,604
+Children's Day,2014-02-17,767
+Children's Day,2014-02-18,814
+Children's Day,2014-02-19,734
+Children's Day,2014-02-20,785
+Children's Day,2014-02-21,561
+Children's Day,2014-02-22,434
+Children's Day,2014-02-23,551
+Children's Day,2014-02-24,600
+Children's Day,2014-02-25,653
+Children's Day,2014-02-26,656
+Children's Day,2014-02-27,722
+Children's Day,2014-02-28,598
+Children's Day,2014-03-01,471
+Children's Day,2014-03-02,610
+Children's Day,2014-03-03,850
+Children's Day,2014-03-04,855
+Children's Day,2014-03-05,838
+Children's Day,2014-03-06,807
+Children's Day,2014-03-07,1289
+Children's Day,2014-03-08,979
+Children's Day,2014-03-09,666
+Children's Day,2014-03-10,755
+Children's Day,2014-03-11,725
+Children's Day,2014-03-12,715
+Children's Day,2014-03-13,689
+Children's Day,2014-03-14,670
+Children's Day,2014-03-15,448
+Children's Day,2014-03-16,608
+Children's Day,2014-03-17,885
+Children's Day,2014-03-18,788
+Children's Day,2014-03-19,788
+Children's Day,2014-03-20,850
+Children's Day,2014-03-21,740
+Children's Day,2014-03-22,520
+Children's Day,2014-03-23,501
+Children's Day,2014-03-24,715
+Children's Day,2014-03-25,835
+Children's Day,2014-03-26,747
+Children's Day,2014-03-27,798
+Children's Day,2014-03-28,777
+Children's Day,2014-03-29,628
+Children's Day,2014-03-30,1717
+Children's Day,2014-03-31,1025
+Children's Day,2014-04-01,1165
+Children's Day,2014-04-02,1178
+Children's Day,2014-04-03,1463
+Children's Day,2014-04-04,5164
+Children's Day,2014-04-05,741
+Children's Day,2014-04-06,581
+Children's Day,2014-04-07,866
+Children's Day,2014-04-08,1217
+Children's Day,2014-04-09,926
+Children's Day,2014-04-10,931
+Children's Day,2014-04-11,816
+Children's Day,2014-04-12,518
+Children's Day,2014-04-13,524
+Children's Day,2014-04-14,859
+Children's Day,2014-04-15,778
+Children's Day,2014-04-16,736
+Children's Day,2014-04-17,639
+Children's Day,2014-04-18,584
+Children's Day,2014-04-19,520
+Children's Day,2014-04-20,581
+Children's Day,2014-04-21,1061
+Children's Day,2014-04-22,2003
+Children's Day,2014-04-23,4723
+Children's Day,2014-04-24,1577
+Children's Day,2014-04-25,1231
+Children's Day,2014-04-26,937
+Children's Day,2014-04-27,963
+Children's Day,2014-04-28,1639
+Children's Day,2014-04-29,2144
+Children's Day,2014-04-30,8914
+Children's Day,2014-05-01,3402
+Children's Day,2014-05-02,1816
+Children's Day,2014-05-03,959
+Children's Day,2014-05-04,1559
+Children's Day,2014-05-05,5185
+Children's Day,2014-05-06,2193
+Children's Day,2014-05-07,1726
+Children's Day,2014-05-08,1627
+Children's Day,2014-05-09,1753
+Children's Day,2014-05-10,2782
+Children's Day,2014-05-11,9814
+Children's Day,2014-05-12,3728
+Children's Day,2014-05-13,1681
+Children's Day,2014-05-14,1579
+Children's Day,2014-05-15,1397
+Children's Day,2014-05-16,1194
+Children's Day,2014-05-17,938
+Children's Day,2014-05-18,939
+Children's Day,2014-05-19,1517
+Children's Day,2014-05-20,1752
+Children's Day,2014-05-21,1631
+Children's Day,2014-05-22,1597
+Children's Day,2014-05-23,1736
+Children's Day,2014-05-24,1374
+Children's Day,2014-05-25,1856
+Children's Day,2014-05-26,3218
+Children's Day,2014-05-27,7481
+Children's Day,2014-05-28,2719
+Children's Day,2014-05-29,3048
+Children's Day,2014-05-30,3521
+Children's Day,2014-05-31,9968
+Children's Day,2014-06-01,46049
+Children's Day,2014-06-02,6559
+Children's Day,2014-06-03,2349
+Children's Day,2014-06-04,1657
+Children's Day,2014-06-05,1267
+Children's Day,2014-06-06,1035
+Children's Day,2014-06-07,870
+Children's Day,2014-06-08,1108
+Children's Day,2014-06-09,1207
+Children's Day,2014-06-10,1032
+Children's Day,2014-06-11,932
+Children's Day,2014-06-12,1001
+Children's Day,2014-06-13,950
+Children's Day,2014-06-14,1019
+Children's Day,2014-06-15,3326
+Children's Day,2014-06-16,1689
+Children's Day,2014-06-17,939
+Children's Day,2014-06-18,690
+Children's Day,2014-06-19,709
+Children's Day,2014-06-20,616
+Children's Day,2014-06-21,499
+Children's Day,2014-06-22,551
+Children's Day,2014-06-23,657
+Children's Day,2014-06-24,673
+Children's Day,2014-06-25,688
+Children's Day,2014-06-26,598
+Children's Day,2014-06-27,574
+Children's Day,2014-06-28,393
+Children's Day,2014-06-29,398
+Children's Day,2014-06-30,497
+Children's Day,2014-07-01,595
+Children's Day,2014-07-02,551
+Children's Day,2014-07-03,547
+Children's Day,2014-07-04,490
+Children's Day,2014-07-05,374
+Children's Day,2014-07-06,520
+Children's Day,2014-07-07,635
+Children's Day,2014-07-08,581
+Children's Day,2014-07-09,516
+Children's Day,2014-07-10,508
+Children's Day,2014-07-11,448
+Children's Day,2014-07-12,386
+Children's Day,2014-07-13,347
+Children's Day,2014-07-14,479
+Children's Day,2014-07-15,552
+Children's Day,2014-07-16,462
+Children's Day,2014-07-17,537
+Children's Day,2014-07-18,443
+Children's Day,2014-07-19,376
+Children's Day,2014-07-20,853
+Children's Day,2014-07-21,615
+Children's Day,2014-07-22,1438
+Children's Day,2014-07-23,6445
+Children's Day,2014-07-24,696
+Children's Day,2014-07-25,534
+Children's Day,2014-07-26,406
+Children's Day,2014-07-27,478
+Children's Day,2014-07-28,538
+Children's Day,2014-07-29,514
+Children's Day,2014-07-30,535
+Children's Day,2014-07-31,563
+Children's Day,2014-08-01,524
+Children's Day,2014-08-02,400
+Children's Day,2014-08-03,523
+Children's Day,2014-08-04,617
+Children's Day,2014-08-05,601
+Children's Day,2014-08-06,637
+Children's Day,2014-08-07,661
+Children's Day,2014-08-08,593
+Children's Day,2014-08-09,487
+Children's Day,2014-08-10,980
+Children's Day,2014-08-11,873
+Children's Day,2014-08-12,676
+Children's Day,2014-08-13,737
+Children's Day,2014-08-14,609
+Children's Day,2014-08-15,533
+Children's Day,2014-08-16,901
+Children's Day,2014-08-17,633
+Children's Day,2014-08-18,652
+Children's Day,2014-08-19,656
+Children's Day,2014-08-20,587
+Children's Day,2014-08-21,583
+Children's Day,2014-08-22,599
+Children's Day,2014-08-23,436
+Children's Day,2014-08-24,440
+Children's Day,2014-08-25,625
+Children's Day,2014-08-26,1558
+Children's Day,2014-08-27,588
+Children's Day,2014-08-28,0
+Children's Day,2014-08-29,471
+Children's Day,2014-08-30,421
+Children's Day,2014-08-31,527
+Children's Day,2014-09-01,693
+Children's Day,2014-09-02,846
+Children's Day,2014-09-03,795
+Children's Day,2014-09-04,1017
+Children's Day,2014-09-05,1481
+Children's Day,2014-09-06,760
+Children's Day,2014-09-07,811
+Children's Day,2014-09-08,938
+Children's Day,2014-09-09,1441
+Children's Day,2014-09-10,1320
+Children's Day,2014-09-11,1023
+Children's Day,2014-09-12,879
+Children's Day,2014-09-13,926
+Children's Day,2014-09-14,1310
+Children's Day,2014-09-15,974
+Children's Day,2014-09-16,893
+Children's Day,2014-09-17,782
+Children's Day,2014-09-18,857
+Children's Day,2014-09-19,922
+Children's Day,2014-09-20,1227
+Children's Day,2014-09-21,856
+Children's Day,2014-09-22,1017
+Children's Day,2014-09-23,909
+Children's Day,2014-09-24,1028
+Children's Day,2014-09-25,1171
+Children's Day,2014-09-26,819
+Children's Day,2014-09-27,742
+Children's Day,2014-09-28,909
+Children's Day,2014-09-29,1872
+Children's Day,2014-09-30,3117
+Children's Day,2014-10-01,5141
+Children's Day,2014-10-02,1638
+Children's Day,2014-10-03,1283
+Children's Day,2014-10-04,729
+Children's Day,2014-10-05,764
+Children's Day,2014-10-06,1428
+Children's Day,2014-10-07,1414
+Children's Day,2014-10-08,1631
+Children's Day,2014-10-09,1416
+Children's Day,2014-10-10,1158
+Children's Day,2014-10-11,1107
+Children's Day,2014-10-12,2518
+Children's Day,2014-10-13,4430
+Children's Day,2014-10-14,1336
+Children's Day,2014-10-15,1172
+Children's Day,2014-10-16,1045
+Children's Day,2014-10-17,777
+Children's Day,2014-10-18,705
+Children's Day,2014-10-19,753
+Children's Day,2014-10-20,1046
+Children's Day,2014-10-21,1011
+Children's Day,2014-10-22,891
+Children's Day,2014-10-23,854
+Children's Day,2014-10-24,840
+Children's Day,2014-10-25,843
+Children's Day,2014-10-26,919
+Children's Day,2014-10-27,1439
+Children's Day,2014-10-28,1763
+Children's Day,2014-10-29,1801
+Children's Day,2014-10-30,1891
+Children's Day,2014-10-31,1944
+Children's Day,2014-11-01,1623
+Children's Day,2014-11-02,1978
+Children's Day,2014-11-03,2335
+Children's Day,2014-11-04,3211
+Children's Day,2014-11-05,3164
+Children's Day,2014-11-06,8243
+Children's Day,2014-11-07,3475
+Children's Day,2014-11-08,3100
+Children's Day,2014-11-09,5090
+Children's Day,2014-11-10,6921
+Children's Day,2014-11-11,9619
+Children's Day,2014-11-12,15967
+Children's Day,2014-11-13,35220
+Children's Day,2014-11-14,25272
+Children's Day,2014-11-15,3027
+Children's Day,2014-11-16,2315
+Children's Day,2014-11-17,2761
+Children's Day,2014-11-18,3354
+Children's Day,2014-11-19,5183
+Children's Day,2014-11-20,54234
+Children's Day,2014-11-21,6475
+Children's Day,2014-11-22,1069
+Children's Day,2014-11-23,1052
+Children's Day,2014-11-24,1331
+Children's Day,2014-11-25,1192
+Children's Day,2014-11-26,935
+Children's Day,2014-11-27,863
+Children's Day,2014-11-28,639
+Children's Day,2014-11-29,583
+Children's Day,2014-11-30,420
+Children's Day,2014-12-01,867
+Children's Day,2014-12-02,872
+Children's Day,2014-12-03,846
+Children's Day,2014-12-04,858
+Children's Day,2014-12-05,659
+Children's Day,2014-12-06,470
+Children's Day,2014-12-07,499
+Children's Day,2014-12-08,809
+Children's Day,2014-12-09,739
+Children's Day,2014-12-10,720
+Children's Day,2014-12-11,762
+Children's Day,2014-12-12,627
+Children's Day,2014-12-13,412
+Children's Day,2014-12-14,576
+Children's Day,2014-12-15,638
+Children's Day,2014-12-16,619
+Children's Day,2014-12-17,633
+Children's Day,2014-12-18,519
+Children's Day,2014-12-19,445
+Children's Day,2014-12-20,356
+Children's Day,2014-12-21,442
+Children's Day,2014-12-22,569
+Children's Day,2014-12-23,472
+Children's Day,2014-12-24,358
+Children's Day,2014-12-25,324
+Children's Day,2014-12-26,425
+Children's Day,2014-12-27,413
+Children's Day,2014-12-28,355
+Children's Day,2014-12-29,437
+Children's Day,2014-12-30,426
+Children's Day,2014-12-31,310
+Children's Day,2015-01-01,299
+Children's Day,2015-01-02,436
+Children's Day,2015-01-03,427
+Children's Day,2015-01-04,502
+Children's Day,2015-01-05,661
+Children's Day,2015-01-06,734
+Children's Day,2015-01-07,692
+Children's Day,2015-01-08,711
+Children's Day,2015-01-09,964
+Children's Day,2015-01-10,1276
+Children's Day,2015-01-11,551
+Children's Day,2015-01-12,681
+Children's Day,2015-01-13,570
+Children's Day,2015-01-14,546
+Children's Day,2015-01-15,513
+Children's Day,2015-01-16,454
+Children's Day,2015-01-17,456
+Children's Day,2015-01-18,474
+Children's Day,2015-01-19,613
+Children's Day,2015-01-20,605
+Children's Day,2015-01-21,654
+Children's Day,2015-01-22,594
+Children's Day,2015-01-23,491
+Children's Day,2015-01-24,327
+Children's Day,2015-01-25,349
+Children's Day,2015-01-26,524
+Children's Day,2015-01-27,571
+Children's Day,2015-01-28,800
+Children's Day,2015-01-29,536
+Children's Day,2015-01-30,438
+Children's Day,2015-01-31,295
+Children's Day,2015-02-01,311
+Children's Day,2015-02-02,561
+Children's Day,2015-02-03,524
+Children's Day,2015-02-04,561
+Children's Day,2015-02-05,0
+Children's Day,2015-02-06,509
+Children's Day,2015-02-07,375
+Children's Day,2015-02-08,480
+Children's Day,2015-02-09,614
+Children's Day,2015-02-10,634
+Children's Day,2015-02-11,510
+Children's Day,2015-02-12,601
+Children's Day,2015-02-13,592
+Children's Day,2015-02-14,822
+Children's Day,2015-02-15,510
+Children's Day,2015-02-16,547
+Children's Day,2015-02-17,566
+Children's Day,2015-02-18,546
+Children's Day,2015-02-19,516
+Children's Day,2015-02-20,427
+Children's Day,2015-02-21,341
+Children's Day,2015-02-22,391
+Children's Day,2015-02-23,553
+Children's Day,2015-02-24,579
+Children's Day,2015-02-25,713
+Children's Day,2015-02-26,506
+Children's Day,2015-02-27,507
+Children's Day,2015-02-28,367
+Children's Day,2015-03-01,438
+Children's Day,2015-03-02,681
+Children's Day,2015-03-03,735
+Children's Day,2015-03-04,726
+Children's Day,2015-03-05,584
+Children's Day,2015-03-06,576
+Children's Day,2015-03-07,417
+Children's Day,2015-03-08,958
+Children's Day,2015-03-09,788
+Children's Day,2015-03-10,748
+Children's Day,2015-03-11,666
+Children's Day,2015-03-12,607
+Children's Day,2015-03-13,613
+Children's Day,2015-03-14,447
+Children's Day,2015-03-15,1208
+Children's Day,2015-03-16,862
+Children's Day,2015-03-17,989
+Children's Day,2015-03-18,967
+Children's Day,2015-03-19,682
+Children's Day,2015-03-20,639
+Children's Day,2015-03-21,524
+Children's Day,2015-03-22,454
+Children's Day,2015-03-23,671
+Children's Day,2015-03-24,700
+Children's Day,2015-03-25,692
+Children's Day,2015-03-26,632
+Children's Day,2015-03-27,550
+Children's Day,2015-03-28,351
+Children's Day,2015-03-29,379
+Children's Day,2015-03-30,694
+Children's Day,2015-03-31,695
+Children's Day,2015-04-01,608
+Children's Day,2015-04-02,682
+Children's Day,2015-04-03,887
+Children's Day,2015-04-04,3264
+Children's Day,2015-04-05,505
+Children's Day,2015-04-06,635
+Children's Day,2015-04-07,699
+Children's Day,2015-04-08,719
+Children's Day,2015-04-09,817
+Children's Day,2015-04-10,726
+Children's Day,2015-04-11,476
+Children's Day,2015-04-12,488
+Children's Day,2015-04-13,814
+Children's Day,2015-04-14,924
+Children's Day,2015-04-15,914
+Children's Day,2015-04-16,854
+Children's Day,2015-04-17,660
+Children's Day,2015-04-18,348
+Children's Day,2015-04-19,439
+Children's Day,2015-04-20,907
+Children's Day,2015-04-21,1008
+Children's Day,2015-04-22,1374
+Children's Day,2015-04-23,2980
+Children's Day,2015-04-24,1256
+Children's Day,2015-04-25,829
+Children's Day,2015-04-26,821
+Children's Day,2015-04-27,1308
+Children's Day,2015-04-28,1406
+Children's Day,2015-04-29,1906
+Children's Day,2015-04-30,7315
+Children's Day,2015-05-01,2246
+Children's Day,2015-05-02,686
+Children's Day,2015-05-03,926
+Children's Day,2015-05-04,2542
+Children's Day,2015-05-05,5888
+Children's Day,2015-05-06,2485
+Children's Day,2015-05-07,1448
+Children's Day,2015-05-08,1395
+Children's Day,2015-05-09,1132
+Children's Day,2015-05-10,3992
+Children's Day,2015-05-11,2274
+Children's Day,2015-05-12,1184
+Children's Day,2015-05-13,1130
+Children's Day,2015-05-14,988
+Children's Day,2015-05-15,919
+Children's Day,2015-05-16,694
+Children's Day,2015-05-17,769
+Children's Day,2015-05-18,1084
+Children's Day,2015-05-19,1145
+Children's Day,2015-05-20,1159
+Children's Day,2015-05-21,1074
+Children's Day,2015-05-22,980
+Children's Day,2015-05-23,641
+Children's Day,2015-05-24,739
+Children's Day,2015-05-25,1437
+Children's Day,2015-05-26,2051
+Children's Day,2015-05-27,4960
+Children's Day,2015-05-28,2530
+Children's Day,2015-05-29,2924
+Children's Day,2015-05-30,1796
+Children's Day,2015-05-31,4724
+Children's Day,2015-06-01,30239
+Children's Day,2015-06-02,4116
+Children's Day,2015-06-03,1569
+Children's Day,2015-06-04,1160
+Children's Day,2015-06-05,871
+Children's Day,2015-06-06,536
+Children's Day,2015-06-07,544
+Children's Day,2015-06-08,1086
+Children's Day,2015-06-09,715
+Children's Day,2015-06-10,679
+Children's Day,2015-06-11,660
+Children's Day,2015-06-12,638
+Children's Day,2015-06-13,552
+Children's Day,2015-06-14,672
+Children's Day,2015-06-15,599
+Children's Day,2015-06-16,598
+Children's Day,2015-06-17,519
+Children's Day,2015-06-18,506
+Children's Day,2015-06-19,534
+Children's Day,2015-06-20,478
+Children's Day,2015-06-21,3198
+Children's Day,2015-06-22,1109
+Children's Day,2015-06-23,514
+Children's Day,2015-06-24,517
+Children's Day,2015-06-25,491
+Children's Day,2015-06-26,385
+Children's Day,2015-06-27,327
+Children's Day,2015-06-28,334
+Children's Day,2015-06-29,443
+Children's Day,2015-06-30,526
+Children's Day,2015-07-01,543
+Children's Day,2015-07-02,471
+Children's Day,2015-07-03,362
+Children's Day,2015-07-04,287
+Children's Day,2015-07-05,339
+Children's Day,2015-07-06,494
+Children's Day,2015-07-07,432
+Children's Day,2015-07-08,422
+Children's Day,2015-07-09,566
+Children's Day,2015-07-10,312
+Children's Day,2015-07-11,226
+Children's Day,2015-07-12,255
+Children's Day,2015-07-13,486
+Children's Day,2015-07-14,475
+Children's Day,2015-07-15,352
+Children's Day,2015-07-16,328
+Children's Day,2015-07-17,291
+Children's Day,2015-07-18,174
+Children's Day,2015-07-19,317
+Children's Day,2015-07-20,353
+Children's Day,2015-07-21,375
+Children's Day,2015-07-22,659
+Children's Day,2015-07-23,3044
+Children's Day,2015-07-24,491
+Children's Day,2015-07-25,290
+Children's Day,2015-07-26,351
+Children's Day,2015-07-27,440
+Children's Day,2015-07-28,620
+Children's Day,2015-07-29,617
+Children's Day,2015-07-30,634
+Children's Day,2015-07-31,393
+Children's Day,2015-08-01,377
+Children's Day,2015-08-02,687
+Children's Day,2015-08-03,556
+Children's Day,2015-08-04,461
+Children's Day,2015-08-05,412
+Children's Day,2015-08-06,470
+Children's Day,2015-08-07,341
+Children's Day,2015-08-08,312
+Children's Day,2015-08-09,369
+Children's Day,2015-08-10,435
+Children's Day,2015-08-11,432
+Children's Day,2015-08-12,449
+Children's Day,2015-08-13,489
+Children's Day,2015-08-14,414
+Children's Day,2015-08-15,334
+Children's Day,2015-08-16,1597
+Children's Day,2015-08-17,626
+Children's Day,2015-08-18,454
+Children's Day,2015-08-19,432
+Children's Day,2015-08-20,380
+Children's Day,2015-08-21,401
+Children's Day,2015-08-22,237
+Children's Day,2015-08-23,267
+Children's Day,2015-08-24,450
+Children's Day,2015-08-25,469
+Children's Day,2015-08-26,444
+Children's Day,2015-08-27,434
+Children's Day,2015-08-28,331
+Children's Day,2015-08-29,248
+Children's Day,2015-08-30,301
+Children's Day,2015-08-31,460
+Children's Day,2015-09-01,510
+Children's Day,2015-09-02,507
+Children's Day,2015-09-03,496
+Children's Day,2015-09-04,553
+Children's Day,2015-09-05,595
+Children's Day,2015-09-06,647
+Children's Day,2015-09-07,492
+Children's Day,2015-09-08,598
+Children's Day,2015-09-09,898
+Children's Day,2015-09-10,745
+Children's Day,2015-09-11,466
+Children's Day,2015-09-12,494
+Children's Day,2015-09-13,594
+Children's Day,2015-09-14,1085
+Children's Day,2015-09-15,898
+Children's Day,2015-09-16,470
+Children's Day,2015-09-17,615
+Children's Day,2015-09-18,506
+Children's Day,2015-09-19,387
+Children's Day,2015-09-20,1091
+Children's Day,2015-09-21,725
+Children's Day,2015-09-22,616
+Children's Day,2015-09-23,656
+Children's Day,2015-09-24,616
+Children's Day,2015-09-25,618
+Children's Day,2015-09-26,449
+Children's Day,2015-09-27,520
+Children's Day,2015-09-28,941
+Children's Day,2015-09-29,1160
+Children's Day,2015-09-30,2246
+Children's Day,2015-10-01,4515
+Children's Day,2015-10-02,886
+Children's Day,2015-10-03,553
+Children's Day,2015-10-04,748
+Children's Day,2015-10-05,1151
+Children's Day,2015-10-06,1050
+Children's Day,2015-10-07,1008
+Children's Day,2015-10-08,1397
+Children's Day,2015-10-09,1239
+Children's Day,2015-10-10,712
+Children's Day,2015-10-11,872
+Children's Day,2015-10-13,1243
+Children's Day,2015-10-14,833
+Children's Day,2015-10-15,842
+Children's Day,2015-10-16,674
+Children's Day,2015-10-17,551
+Children's Day,2015-10-18,585
+Children's Day,2015-10-19,789
+Children's Day,2015-10-20,674
+Children's Day,2015-10-21,761
+Children's Day,2015-10-22,639
+Children's Day,2015-10-23,708
+Children's Day,2015-10-24,602
+Children's Day,2015-10-25,650
+Children's Day,2015-10-26,1112
+Children's Day,2015-10-27,1265
+Children's Day,2015-10-28,1247
+Children's Day,2015-10-29,1150
+Children's Day,2015-10-30,1128
+Children's Day,2015-10-31,877
+Children's Day,2015-11-01,1022
+Children's Day,2015-11-02,1634
+Children's Day,2015-11-03,1897
+Children's Day,2015-11-04,2123
+Children's Day,2015-11-05,2210
+Children's Day,2015-11-06,1931
+Children's Day,2015-11-07,1798
+Children's Day,2015-11-08,1932
+Children's Day,2015-11-09,2135
+Children's Day,2015-11-10,2062
+Children's Day,2015-11-11,2696
+Children's Day,2015-11-12,4505
+Children's Day,2015-11-13,7884
+Children's Day,2015-11-14,10327
+Children's Day,2015-11-15,2377
+Children's Day,2015-11-16,2480
+Children's Day,2015-11-17,2098
+Children's Day,2015-11-18,1974
+Children's Day,2015-11-19,2895
+Children's Day,2015-11-20,5370
+Children's Day,2015-11-21,1855
+Children's Day,2015-11-22,992
+Children's Day,2015-11-23,1195
+Children's Day,2015-11-24,1082
+Children's Day,2015-11-25,794
+Children's Day,2015-11-26,892
+Children's Day,2015-11-27,618
+Children's Day,2015-11-28,572
+Children's Day,2015-11-29,542
+Children's Day,2015-11-30,852
+Children's Day,2015-12-01,1131
+Children's Day,2015-12-02,680
+Children's Day,2015-12-03,664
+Children's Day,2015-12-04,523
+Children's Day,2015-12-05,378
+Children's Day,2015-12-06,376
+Children's Day,2015-12-07,622
+Children's Day,2015-12-08,567
+Children's Day,2015-12-09,631
+Children's Day,2015-12-10,462
+Children's Day,2015-12-11,469
+Children's Day,2015-12-12,289
+Children's Day,2015-12-13,366
+Children's Day,2015-12-14,704
+Children's Day,2015-12-15,463
+Children's Day,2015-12-16,469
+Children's Day,2015-12-17,452
+Children's Day,2015-12-18,345
+Children's Day,2015-12-19,299
+Children's Day,2015-12-20,245
+Children's Day,2015-12-21,337
+Children's Day,2015-12-22,392
+Children's Day,2015-12-23,376
+Children's Day,2015-12-24,316
+Children's Day,2015-12-25,292
+Children's Day,2015-12-26,243
+Children's Day,2015-12-27,261
+Children's Day,2015-12-28,331
+Children's Day,2015-12-29,400
+Children's Day,2015-12-30,341
+Children's Day,2015-12-31,232
+Circuit diagram,2014-01-01,273
+Circuit diagram,2014-01-02,379
+Circuit diagram,2014-01-03,436
+Circuit diagram,2014-01-04,330
+Circuit diagram,2014-01-05,40
+Circuit diagram,2014-01-06,0
+Circuit diagram,2014-01-07,642
+Circuit diagram,2014-01-08,592
+Circuit diagram,2014-01-09,670
+Circuit diagram,2014-01-10,567
+Circuit diagram,2014-01-11,378
+Circuit diagram,2014-01-12,469
+Circuit diagram,2014-01-13,664
+Circuit diagram,2014-01-14,698
+Circuit diagram,2014-01-15,709
+Circuit diagram,2014-01-16,572
+Circuit diagram,2014-01-17,579
+Circuit diagram,2014-01-18,413
+Circuit diagram,2014-01-19,406
+Circuit diagram,2014-01-20,567
+Circuit diagram,2014-01-21,691
+Circuit diagram,2014-01-22,720
+Circuit diagram,2014-01-23,685
+Circuit diagram,2014-01-24,617
+Circuit diagram,2014-01-25,345
+Circuit diagram,2014-01-26,490
+Circuit diagram,2014-01-27,679
+Circuit diagram,2014-01-28,750
+Circuit diagram,2014-01-29,689
+Circuit diagram,2014-01-30,671
+Circuit diagram,2014-01-31,562
+Circuit diagram,2014-02-01,422
+Circuit diagram,2014-02-02,405
+Circuit diagram,2014-02-03,624
+Circuit diagram,2014-02-04,662
+Circuit diagram,2014-02-05,743
+Circuit diagram,2014-02-06,686
+Circuit diagram,2014-02-07,664
+Circuit diagram,2014-02-08,377
+Circuit diagram,2014-02-09,475
+Circuit diagram,2014-02-10,706
+Circuit diagram,2014-02-11,631
+Circuit diagram,2014-02-12,614
+Circuit diagram,2014-02-13,584
+Circuit diagram,2014-02-14,503
+Circuit diagram,2014-02-15,392
+Circuit diagram,2014-02-16,404
+Circuit diagram,2014-02-17,534
+Circuit diagram,2014-02-18,656
+Circuit diagram,2014-02-19,716
+Circuit diagram,2014-02-20,629
+Circuit diagram,2014-02-21,559
+Circuit diagram,2014-02-22,386
+Circuit diagram,2014-02-23,464
+Circuit diagram,2014-02-24,616
+Circuit diagram,2014-02-25,664
+Circuit diagram,2014-02-26,683
+Circuit diagram,2014-02-27,698
+Circuit diagram,2014-02-28,556
+Circuit diagram,2014-03-01,430
+Circuit diagram,2014-03-02,467
+Circuit diagram,2014-03-03,637
+Circuit diagram,2014-03-04,625
+Circuit diagram,2014-03-05,612
+Circuit diagram,2014-03-06,688
+Circuit diagram,2014-03-07,590
+Circuit diagram,2014-03-08,360
+Circuit diagram,2014-03-09,452
+Circuit diagram,2014-03-10,651
+Circuit diagram,2014-03-11,705
+Circuit diagram,2014-03-12,674
+Circuit diagram,2014-03-13,609
+Circuit diagram,2014-03-14,535
+Circuit diagram,2014-03-15,367
+Circuit diagram,2014-03-16,372
+Circuit diagram,2014-03-17,643
+Circuit diagram,2014-03-18,581
+Circuit diagram,2014-03-19,645
+Circuit diagram,2014-03-20,699
+Circuit diagram,2014-03-21,547
+Circuit diagram,2014-03-22,336
+Circuit diagram,2014-03-23,418
+Circuit diagram,2014-03-24,665
+Circuit diagram,2014-03-25,710
+Circuit diagram,2014-03-26,695
+Circuit diagram,2014-03-27,609
+Circuit diagram,2014-03-28,549
+Circuit diagram,2014-03-29,357
+Circuit diagram,2014-03-30,406
+Circuit diagram,2014-03-31,553
+Circuit diagram,2014-04-01,631
+Circuit diagram,2014-04-02,651
+Circuit diagram,2014-04-03,585
+Circuit diagram,2014-04-04,513
+Circuit diagram,2014-04-05,308
+Circuit diagram,2014-04-06,375
+Circuit diagram,2014-04-07,582
+Circuit diagram,2014-04-08,578
+Circuit diagram,2014-04-09,558
+Circuit diagram,2014-04-10,550
+Circuit diagram,2014-04-11,470
+Circuit diagram,2014-04-12,328
+Circuit diagram,2014-04-13,389
+Circuit diagram,2014-04-14,513
+Circuit diagram,2014-04-15,1249
+Circuit diagram,2014-04-16,504
+Circuit diagram,2014-04-17,459
+Circuit diagram,2014-04-18,375
+Circuit diagram,2014-04-19,290
+Circuit diagram,2014-04-20,286
+Circuit diagram,2014-04-21,480
+Circuit diagram,2014-04-22,607
+Circuit diagram,2014-04-23,558
+Circuit diagram,2014-04-24,537
+Circuit diagram,2014-04-25,453
+Circuit diagram,2014-04-26,291
+Circuit diagram,2014-04-27,330
+Circuit diagram,2014-04-28,602
+Circuit diagram,2014-04-29,538
+Circuit diagram,2014-04-30,550
+Circuit diagram,2014-05-01,497
+Circuit diagram,2014-05-02,462
+Circuit diagram,2014-05-03,337
+Circuit diagram,2014-05-04,313
+Circuit diagram,2014-05-05,485
+Circuit diagram,2014-05-06,509
+Circuit diagram,2014-05-07,654
+Circuit diagram,2014-05-08,591
+Circuit diagram,2014-05-09,417
+Circuit diagram,2014-05-10,291
+Circuit diagram,2014-05-11,324
+Circuit diagram,2014-05-12,509
+Circuit diagram,2014-05-13,556
+Circuit diagram,2014-05-14,620
+Circuit diagram,2014-05-15,539
+Circuit diagram,2014-05-16,424
+Circuit diagram,2014-05-17,235
+Circuit diagram,2014-05-18,283
+Circuit diagram,2014-05-19,514
+Circuit diagram,2014-05-20,582
+Circuit diagram,2014-05-21,522
+Circuit diagram,2014-05-22,545
+Circuit diagram,2014-05-23,434
+Circuit diagram,2014-05-24,266
+Circuit diagram,2014-05-25,266
+Circuit diagram,2014-05-26,350
+Circuit diagram,2014-05-27,483
+Circuit diagram,2014-05-28,483
+Circuit diagram,2014-05-29,478
+Circuit diagram,2014-05-30,341
+Circuit diagram,2014-05-31,277
+Circuit diagram,2014-06-01,327
+Circuit diagram,2014-06-02,476
+Circuit diagram,2014-06-03,535
+Circuit diagram,2014-06-04,483
+Circuit diagram,2014-06-05,537
+Circuit diagram,2014-06-06,397
+Circuit diagram,2014-06-07,268
+Circuit diagram,2014-06-08,300
+Circuit diagram,2014-06-09,467
+Circuit diagram,2014-06-10,494
+Circuit diagram,2014-06-11,435
+Circuit diagram,2014-06-12,450
+Circuit diagram,2014-06-13,365
+Circuit diagram,2014-06-14,264
+Circuit diagram,2014-06-15,282
+Circuit diagram,2014-06-16,537
+Circuit diagram,2014-06-17,475
+Circuit diagram,2014-06-18,486
+Circuit diagram,2014-06-19,397
+Circuit diagram,2014-06-20,412
+Circuit diagram,2014-06-21,315
+Circuit diagram,2014-06-22,302
+Circuit diagram,2014-06-23,476
+Circuit diagram,2014-06-24,543
+Circuit diagram,2014-06-25,505
+Circuit diagram,2014-06-26,382
+Circuit diagram,2014-06-27,367
+Circuit diagram,2014-06-28,252
+Circuit diagram,2014-06-29,287
+Circuit diagram,2014-06-30,421
+Circuit diagram,2014-07-01,423
+Circuit diagram,2014-07-02,390
+Circuit diagram,2014-07-03,395
+Circuit diagram,2014-07-04,357
+Circuit diagram,2014-07-05,255
+Circuit diagram,2014-07-06,245
+Circuit diagram,2014-07-07,415
+Circuit diagram,2014-07-08,426
+Circuit diagram,2014-07-09,398
+Circuit diagram,2014-07-10,407
+Circuit diagram,2014-07-11,371
+Circuit diagram,2014-07-12,267
+Circuit diagram,2014-07-13,239
+Circuit diagram,2014-07-14,444
+Circuit diagram,2014-07-15,391
+Circuit diagram,2014-07-16,397
+Circuit diagram,2014-07-17,365
+Circuit diagram,2014-07-18,340
+Circuit diagram,2014-07-19,261
+Circuit diagram,2014-07-20,226
+Circuit diagram,2014-07-21,415
+Circuit diagram,2014-07-22,434
+Circuit diagram,2014-07-23,401
+Circuit diagram,2014-07-24,410
+Circuit diagram,2014-07-25,380
+Circuit diagram,2014-07-26,273
+Circuit diagram,2014-07-27,260
+Circuit diagram,2014-07-28,397
+Circuit diagram,2014-07-29,489
+Circuit diagram,2014-07-30,396
+Circuit diagram,2014-07-31,444
+Circuit diagram,2014-08-01,380
+Circuit diagram,2014-08-02,310
+Circuit diagram,2014-08-03,242
+Circuit diagram,2014-08-04,324
+Circuit diagram,2014-08-05,412
+Circuit diagram,2014-08-06,353
+Circuit diagram,2014-08-07,429
+Circuit diagram,2014-08-08,341
+Circuit diagram,2014-08-09,254
+Circuit diagram,2014-08-10,293
+Circuit diagram,2014-08-11,456
+Circuit diagram,2014-08-12,487
+Circuit diagram,2014-08-13,427
+Circuit diagram,2014-08-14,464
+Circuit diagram,2014-08-15,370
+Circuit diagram,2014-08-16,261
+Circuit diagram,2014-08-17,277
+Circuit diagram,2014-08-18,481
+Circuit diagram,2014-08-19,616
+Circuit diagram,2014-08-20,425
+Circuit diagram,2014-08-21,489
+Circuit diagram,2014-08-22,375
+Circuit diagram,2014-08-23,288
+Circuit diagram,2014-08-24,338
+Circuit diagram,2014-08-25,484
+Circuit diagram,2014-08-26,512
+Circuit diagram,2014-08-27,407
+Circuit diagram,2014-08-28,0
+Circuit diagram,2014-08-29,308
+Circuit diagram,2014-08-30,285
+Circuit diagram,2014-08-31,312
+Circuit diagram,2014-09-01,443
+Circuit diagram,2014-09-02,540
+Circuit diagram,2014-09-03,542
+Circuit diagram,2014-09-04,496
+Circuit diagram,2014-09-05,414
+Circuit diagram,2014-09-06,308
+Circuit diagram,2014-09-07,371
+Circuit diagram,2014-09-08,516
+Circuit diagram,2014-09-09,565
+Circuit diagram,2014-09-10,550
+Circuit diagram,2014-09-11,611
+Circuit diagram,2014-09-12,481
+Circuit diagram,2014-09-13,318
+Circuit diagram,2014-09-14,408
+Circuit diagram,2014-09-15,519
+Circuit diagram,2014-09-16,542
+Circuit diagram,2014-09-17,624
+Circuit diagram,2014-09-18,551
+Circuit diagram,2014-09-19,506
+Circuit diagram,2014-09-20,334
+Circuit diagram,2014-09-21,317
+Circuit diagram,2014-09-22,581
+Circuit diagram,2014-09-23,629
+Circuit diagram,2014-09-24,613
+Circuit diagram,2014-09-25,556
+Circuit diagram,2014-09-26,436
+Circuit diagram,2014-09-27,318
+Circuit diagram,2014-09-28,341
+Circuit diagram,2014-09-29,509
+Circuit diagram,2014-09-30,567
+Circuit diagram,2014-10-01,522
+Circuit diagram,2014-10-02,456
+Circuit diagram,2014-10-03,443
+Circuit diagram,2014-10-04,288
+Circuit diagram,2014-10-05,324
+Circuit diagram,2014-10-06,481
+Circuit diagram,2014-10-07,574
+Circuit diagram,2014-10-08,576
+Circuit diagram,2014-10-09,531
+Circuit diagram,2014-10-10,421
+Circuit diagram,2014-10-11,303
+Circuit diagram,2014-10-12,355
+Circuit diagram,2014-10-13,571
+Circuit diagram,2014-10-14,561
+Circuit diagram,2014-10-15,558
+Circuit diagram,2014-10-16,461
+Circuit diagram,2014-10-17,377
+Circuit diagram,2014-10-18,263
+Circuit diagram,2014-10-19,316
+Circuit diagram,2014-10-20,424
+Circuit diagram,2014-10-21,451
+Circuit diagram,2014-10-22,480
+Circuit diagram,2014-10-23,455
+Circuit diagram,2014-10-24,338
+Circuit diagram,2014-10-25,220
+Circuit diagram,2014-10-26,254
+Circuit diagram,2014-10-27,362
+Circuit diagram,2014-10-28,448
+Circuit diagram,2014-10-29,472
+Circuit diagram,2014-10-30,422
+Circuit diagram,2014-10-31,359
+Circuit diagram,2014-11-01,301
+Circuit diagram,2014-11-02,279
+Circuit diagram,2014-11-03,472
+Circuit diagram,2014-11-04,537
+Circuit diagram,2014-11-05,482
+Circuit diagram,2014-11-06,468
+Circuit diagram,2014-11-07,339
+Circuit diagram,2014-11-08,265
+Circuit diagram,2014-11-09,290
+Circuit diagram,2014-11-10,489
+Circuit diagram,2014-11-11,449
+Circuit diagram,2014-11-12,534
+Circuit diagram,2014-11-13,466
+Circuit diagram,2014-11-14,368
+Circuit diagram,2014-11-15,276
+Circuit diagram,2014-11-16,299
+Circuit diagram,2014-11-17,507
+Circuit diagram,2014-11-18,475
+Circuit diagram,2014-11-19,433
+Circuit diagram,2014-11-20,477
+Circuit diagram,2014-11-21,345
+Circuit diagram,2014-11-22,243
+Circuit diagram,2014-11-23,298
+Circuit diagram,2014-11-24,465
+Circuit diagram,2014-11-25,502
+Circuit diagram,2014-11-26,430
+Circuit diagram,2014-11-27,375
+Circuit diagram,2014-11-28,360
+Circuit diagram,2014-11-29,300
+Circuit diagram,2014-11-30,239
+Circuit diagram,2014-12-01,469
+Circuit diagram,2014-12-02,461
+Circuit diagram,2014-12-03,485
+Circuit diagram,2014-12-04,458
+Circuit diagram,2014-12-05,398
+Circuit diagram,2014-12-06,292
+Circuit diagram,2014-12-07,293
+Circuit diagram,2014-12-08,464
+Circuit diagram,2014-12-09,433
+Circuit diagram,2014-12-10,405
+Circuit diagram,2014-12-11,487
+Circuit diagram,2014-12-12,353
+Circuit diagram,2014-12-13,231
+Circuit diagram,2014-12-14,294
+Circuit diagram,2014-12-15,410
+Circuit diagram,2014-12-16,391
+Circuit diagram,2014-12-17,471
+Circuit diagram,2014-12-18,401
+Circuit diagram,2014-12-19,308
+Circuit diagram,2014-12-20,196
+Circuit diagram,2014-12-21,212
+Circuit diagram,2014-12-22,365
+Circuit diagram,2014-12-23,272
+Circuit diagram,2014-12-24,214
+Circuit diagram,2014-12-25,153
+Circuit diagram,2014-12-26,220
+Circuit diagram,2014-12-27,236
+Circuit diagram,2014-12-28,181
+Circuit diagram,2014-12-29,297
+Circuit diagram,2014-12-30,255
+Circuit diagram,2014-12-31,223
+Circuit diagram,2015-01-01,164
+Circuit diagram,2015-01-02,289
+Circuit diagram,2015-01-03,252
+Circuit diagram,2015-01-04,275
+Circuit diagram,2015-01-05,396
+Circuit diagram,2015-01-06,433
+Circuit diagram,2015-01-07,441
+Circuit diagram,2015-01-08,381
+Circuit diagram,2015-01-09,300
+Circuit diagram,2015-01-10,250
+Circuit diagram,2015-01-11,277
+Circuit diagram,2015-01-12,462
+Circuit diagram,2015-01-13,472
+Circuit diagram,2015-01-14,471
+Circuit diagram,2015-01-15,347
+Circuit diagram,2015-01-16,411
+Circuit diagram,2015-01-17,273
+Circuit diagram,2015-01-18,269
+Circuit diagram,2015-01-19,427
+Circuit diagram,2015-01-20,498
+Circuit diagram,2015-01-21,419
+Circuit diagram,2015-01-22,501
+Circuit diagram,2015-01-23,435
+Circuit diagram,2015-01-24,264
+Circuit diagram,2015-01-25,319
+Circuit diagram,2015-01-26,545
+Circuit diagram,2015-01-27,495
+Circuit diagram,2015-01-28,537
+Circuit diagram,2015-01-29,484
+Circuit diagram,2015-01-30,409
+Circuit diagram,2015-01-31,198
+Circuit diagram,2015-02-01,293
+Circuit diagram,2015-02-02,484
+Circuit diagram,2015-02-03,556
+Circuit diagram,2015-02-04,505
+Circuit diagram,2015-02-05,0
+Circuit diagram,2015-02-06,447
+Circuit diagram,2015-02-07,255
+Circuit diagram,2015-02-08,289
+Circuit diagram,2015-02-09,397
+Circuit diagram,2015-02-10,496
+Circuit diagram,2015-02-11,539
+Circuit diagram,2015-02-12,450
+Circuit diagram,2015-02-13,359
+Circuit diagram,2015-02-14,264
+Circuit diagram,2015-02-15,294
+Circuit diagram,2015-02-16,427
+Circuit diagram,2015-02-17,463
+Circuit diagram,2015-02-18,463
+Circuit diagram,2015-02-19,450
+Circuit diagram,2015-02-20,321
+Circuit diagram,2015-02-21,237
+Circuit diagram,2015-02-22,322
+Circuit diagram,2015-02-23,441
+Circuit diagram,2015-02-24,487
+Circuit diagram,2015-02-25,421
+Circuit diagram,2015-02-26,421
+Circuit diagram,2015-02-27,400
+Circuit diagram,2015-02-28,290
+Circuit diagram,2015-03-01,329
+Circuit diagram,2015-03-02,458
+Circuit diagram,2015-03-03,519
+Circuit diagram,2015-03-04,494
+Circuit diagram,2015-03-05,473
+Circuit diagram,2015-03-06,364
+Circuit diagram,2015-03-07,257
+Circuit diagram,2015-03-08,295
+Circuit diagram,2015-03-09,447
+Circuit diagram,2015-03-10,467
+Circuit diagram,2015-03-11,455
+Circuit diagram,2015-03-12,408
+Circuit diagram,2015-03-13,371
+Circuit diagram,2015-03-14,290
+Circuit diagram,2015-03-15,314
+Circuit diagram,2015-03-16,395
+Circuit diagram,2015-03-17,435
+Circuit diagram,2015-03-18,410
+Circuit diagram,2015-03-19,544
+Circuit diagram,2015-03-20,391
+Circuit diagram,2015-03-21,227
+Circuit diagram,2015-03-22,262
+Circuit diagram,2015-03-23,436
+Circuit diagram,2015-03-24,456
+Circuit diagram,2015-03-25,451
+Circuit diagram,2015-03-26,407
+Circuit diagram,2015-03-27,383
+Circuit diagram,2015-03-28,233
+Circuit diagram,2015-03-29,297
+Circuit diagram,2015-03-30,490
+Circuit diagram,2015-03-31,452
+Circuit diagram,2015-04-01,410
+Circuit diagram,2015-04-02,392
+Circuit diagram,2015-04-03,289
+Circuit diagram,2015-04-04,242
+Circuit diagram,2015-04-05,261
+Circuit diagram,2015-04-06,348
+Circuit diagram,2015-04-07,479
+Circuit diagram,2015-04-08,530
+Circuit diagram,2015-04-09,428
+Circuit diagram,2015-04-10,363
+Circuit diagram,2015-04-11,241
+Circuit diagram,2015-04-12,231
+Circuit diagram,2015-04-13,490
+Circuit diagram,2015-04-14,493
+Circuit diagram,2015-04-15,456
+Circuit diagram,2015-04-16,422
+Circuit diagram,2015-04-17,381
+Circuit diagram,2015-04-18,237
+Circuit diagram,2015-04-19,278
+Circuit diagram,2015-04-20,400
+Circuit diagram,2015-04-21,459
+Circuit diagram,2015-04-22,483
+Circuit diagram,2015-04-23,419
+Circuit diagram,2015-04-24,429
+Circuit diagram,2015-04-25,205
+Circuit diagram,2015-04-26,241
+Circuit diagram,2015-04-27,391
+Circuit diagram,2015-04-28,436
+Circuit diagram,2015-04-29,374
+Circuit diagram,2015-04-30,415
+Circuit diagram,2015-05-01,319
+Circuit diagram,2015-05-02,266
+Circuit diagram,2015-05-03,249
+Circuit diagram,2015-05-04,409
+Circuit diagram,2015-05-05,502
+Circuit diagram,2015-05-06,412
+Circuit diagram,2015-05-07,427
+Circuit diagram,2015-05-08,375
+Circuit diagram,2015-05-09,258
+Circuit diagram,2015-05-10,265
+Circuit diagram,2015-05-11,386
+Circuit diagram,2015-05-12,399
+Circuit diagram,2015-05-13,392
+Circuit diagram,2015-05-14,435
+Circuit diagram,2015-05-15,375
+Circuit diagram,2015-05-16,226
+Circuit diagram,2015-05-17,277
+Circuit diagram,2015-05-18,462
+Circuit diagram,2015-05-19,516
+Circuit diagram,2015-05-20,428
+Circuit diagram,2015-05-21,463
+Circuit diagram,2015-05-22,308
+Circuit diagram,2015-05-23,230
+Circuit diagram,2015-05-24,275
+Circuit diagram,2015-05-25,372
+Circuit diagram,2015-05-26,371
+Circuit diagram,2015-05-27,453
+Circuit diagram,2015-05-28,375
+Circuit diagram,2015-05-29,341
+Circuit diagram,2015-05-30,268
+Circuit diagram,2015-05-31,310
+Circuit diagram,2015-06-01,431
+Circuit diagram,2015-06-02,437
+Circuit diagram,2015-06-03,409
+Circuit diagram,2015-06-04,487
+Circuit diagram,2015-06-05,353
+Circuit diagram,2015-06-06,250
+Circuit diagram,2015-06-07,266
+Circuit diagram,2015-06-08,445
+Circuit diagram,2015-06-09,404
+Circuit diagram,2015-06-10,427
+Circuit diagram,2015-06-11,400
+Circuit diagram,2015-06-12,416
+Circuit diagram,2015-06-13,286
+Circuit diagram,2015-06-14,253
+Circuit diagram,2015-06-15,471
+Circuit diagram,2015-06-16,437
+Circuit diagram,2015-06-17,387
+Circuit diagram,2015-06-18,352
+Circuit diagram,2015-06-19,299
+Circuit diagram,2015-06-20,202
+Circuit diagram,2015-06-21,209
+Circuit diagram,2015-06-22,350
+Circuit diagram,2015-06-23,330
+Circuit diagram,2015-06-24,340
+Circuit diagram,2015-06-25,309
+Circuit diagram,2015-06-26,238
+Circuit diagram,2015-06-27,182
+Circuit diagram,2015-06-28,213
+Circuit diagram,2015-06-29,314
+Circuit diagram,2015-06-30,365
+Circuit diagram,2015-07-01,271
+Circuit diagram,2015-07-02,360
+Circuit diagram,2015-07-03,210
+Circuit diagram,2015-07-04,200
+Circuit diagram,2015-07-05,187
+Circuit diagram,2015-07-06,287
+Circuit diagram,2015-07-07,303
+Circuit diagram,2015-07-08,341
+Circuit diagram,2015-07-09,309
+Circuit diagram,2015-07-10,289
+Circuit diagram,2015-07-11,199
+Circuit diagram,2015-07-12,173
+Circuit diagram,2015-07-13,284
+Circuit diagram,2015-07-14,297
+Circuit diagram,2015-07-15,261
+Circuit diagram,2015-07-16,252
+Circuit diagram,2015-07-17,236
+Circuit diagram,2015-07-18,199
+Circuit diagram,2015-07-19,204
+Circuit diagram,2015-07-20,323
+Circuit diagram,2015-07-21,296
+Circuit diagram,2015-07-22,338
+Circuit diagram,2015-07-23,272
+Circuit diagram,2015-07-24,314
+Circuit diagram,2015-07-25,186
+Circuit diagram,2015-07-26,200
+Circuit diagram,2015-07-27,294
+Circuit diagram,2015-07-28,285
+Circuit diagram,2015-07-29,356
+Circuit diagram,2015-07-30,305
+Circuit diagram,2015-07-31,235
+Circuit diagram,2015-08-01,188
+Circuit diagram,2015-08-02,171
+Circuit diagram,2015-08-03,206
+Circuit diagram,2015-08-04,325
+Circuit diagram,2015-08-05,312
+Circuit diagram,2015-08-06,316
+Circuit diagram,2015-08-07,275
+Circuit diagram,2015-08-08,239
+Circuit diagram,2015-08-09,186
+Circuit diagram,2015-08-10,286
+Circuit diagram,2015-08-11,299
+Circuit diagram,2015-08-12,268
+Circuit diagram,2015-08-13,315
+Circuit diagram,2015-08-14,222
+Circuit diagram,2015-08-15,172
+Circuit diagram,2015-08-16,173
+Circuit diagram,2015-08-17,308
+Circuit diagram,2015-08-18,322
+Circuit diagram,2015-08-19,289
+Circuit diagram,2015-08-20,300
+Circuit diagram,2015-08-21,238
+Circuit diagram,2015-08-22,187
+Circuit diagram,2015-08-23,206
+Circuit diagram,2015-08-24,304
+Circuit diagram,2015-08-25,411
+Circuit diagram,2015-08-26,361
+Circuit diagram,2015-08-27,343
+Circuit diagram,2015-08-28,271
+Circuit diagram,2015-08-29,181
+Circuit diagram,2015-08-30,206
+Circuit diagram,2015-08-31,331
+Circuit diagram,2015-09-01,318
+Circuit diagram,2015-09-02,323
+Circuit diagram,2015-09-03,336
+Circuit diagram,2015-09-04,281
+Circuit diagram,2015-09-05,204
+Circuit diagram,2015-09-06,248
+Circuit diagram,2015-09-07,343
+Circuit diagram,2015-09-08,360
+Circuit diagram,2015-09-09,348
+Circuit diagram,2015-09-10,380
+Circuit diagram,2015-09-11,303
+Circuit diagram,2015-09-12,208
+Circuit diagram,2015-09-13,228
+Circuit diagram,2015-09-14,394
+Circuit diagram,2015-09-15,431
+Circuit diagram,2015-09-16,345
+Circuit diagram,2015-09-17,349
+Circuit diagram,2015-09-18,328
+Circuit diagram,2015-09-19,209
+Circuit diagram,2015-09-20,258
+Circuit diagram,2015-09-21,370
+Circuit diagram,2015-09-22,419
+Circuit diagram,2015-09-23,373
+Circuit diagram,2015-09-24,357
+Circuit diagram,2015-09-25,332
+Circuit diagram,2015-09-26,202
+Circuit diagram,2015-09-27,236
+Circuit diagram,2015-09-28,321
+Circuit diagram,2015-09-29,362
+Circuit diagram,2015-09-30,423
+Circuit diagram,2015-10-01,359
+Circuit diagram,2015-10-02,286
+Circuit diagram,2015-10-03,231
+Circuit diagram,2015-10-04,232
+Circuit diagram,2015-10-05,361
+Circuit diagram,2015-10-06,433
+Circuit diagram,2015-10-07,400
+Circuit diagram,2015-10-08,393
+Circuit diagram,2015-10-09,323
+Circuit diagram,2015-10-10,250
+Circuit diagram,2015-10-11,264
+Circuit diagram,2015-10-13,487
+Circuit diagram,2015-10-14,421
+Circuit diagram,2015-10-15,362
+Circuit diagram,2015-10-16,338
+Circuit diagram,2015-10-17,221
+Circuit diagram,2015-10-18,256
+Circuit diagram,2015-10-19,400
+Circuit diagram,2015-10-20,371
+Circuit diagram,2015-10-21,386
+Circuit diagram,2015-10-22,373
+Circuit diagram,2015-10-23,337
+Circuit diagram,2015-10-24,200
+Circuit diagram,2015-10-25,232
+Circuit diagram,2015-10-26,424
+Circuit diagram,2015-10-27,398
+Circuit diagram,2015-10-28,399
+Circuit diagram,2015-10-29,375
+Circuit diagram,2015-10-30,308
+Circuit diagram,2015-10-31,256
+Circuit diagram,2015-11-01,268
+Circuit diagram,2015-11-02,421
+Circuit diagram,2015-11-03,385
+Circuit diagram,2015-11-04,507
+Circuit diagram,2015-11-05,387
+Circuit diagram,2015-11-06,324
+Circuit diagram,2015-11-07,250
+Circuit diagram,2015-11-08,251
+Circuit diagram,2015-11-09,394
+Circuit diagram,2015-11-10,432
+Circuit diagram,2015-11-11,392
+Circuit diagram,2015-11-12,361
+Circuit diagram,2015-11-13,379
+Circuit diagram,2015-11-14,225
+Circuit diagram,2015-11-15,258
+Circuit diagram,2015-11-16,359
+Circuit diagram,2015-11-17,447
+Circuit diagram,2015-11-18,395
+Circuit diagram,2015-11-19,404
+Circuit diagram,2015-11-20,342
+Circuit diagram,2015-11-21,232
+Circuit diagram,2015-11-22,280
+Circuit diagram,2015-11-23,446
+Circuit diagram,2015-11-24,403
+Circuit diagram,2015-11-25,351
+Circuit diagram,2015-11-26,346
+Circuit diagram,2015-11-27,323
+Circuit diagram,2015-11-28,217
+Circuit diagram,2015-11-29,256
+Circuit diagram,2015-11-30,398
+Circuit diagram,2015-12-01,477
+Circuit diagram,2015-12-02,372
+Circuit diagram,2015-12-03,367
+Circuit diagram,2015-12-04,332
+Circuit diagram,2015-12-05,211
+Circuit diagram,2015-12-06,229
+Circuit diagram,2015-12-07,382
+Circuit diagram,2015-12-08,382
+Circuit diagram,2015-12-09,391
+Circuit diagram,2015-12-10,398
+Circuit diagram,2015-12-11,351
+Circuit diagram,2015-12-12,214
+Circuit diagram,2015-12-13,268
+Circuit diagram,2015-12-14,369
+Circuit diagram,2015-12-15,420
+Circuit diagram,2015-12-16,402
+Circuit diagram,2015-12-17,350
+Circuit diagram,2015-12-18,234
+Circuit diagram,2015-12-19,192
+Circuit diagram,2015-12-20,181
+Circuit diagram,2015-12-21,273
+Circuit diagram,2015-12-22,270
+Circuit diagram,2015-12-23,216
+Circuit diagram,2015-12-24,178
+Circuit diagram,2015-12-25,155
+Circuit diagram,2015-12-26,156
+Circuit diagram,2015-12-27,159
+Circuit diagram,2015-12-28,230
+Circuit diagram,2015-12-29,266
+Circuit diagram,2015-12-30,275
+Circuit diagram,2015-12-31,196

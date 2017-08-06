@@ -15,25 +15,24 @@
 				<main class="row">
 					<div class="col-md-3 col-sm-5">
 						<a id="simple-menu" href="#sidr"  style="padding-left:0"><i class="fa fa-bars fa-lg"></i></a>
-						<a href="articles_list.html" style="font-weight:bold; padding-left:0;">Wikipedia Primary School</a>
+						<a href="../views" style="font-weight:bold; padding-left:0;">Wikipedia Primary School</a>
 					</div>
-					<a href="articles_list.html"  class="first_menu">Articles</a>
+					<a href="../views"  class="first_menu">Articles</a>
 					<a href="datasets.html" class="here first_menu">Datasets</a>
-					<!--<a href="updates.html" class="first_menu">Updates</a>-->
+					<a href="protocols.html" class="first_menu">Protocols</a>
 				</main>
 			</div>
 		</div>
 
 		<div id="sidr">
 		  	<ul>
-				<li><a href="articles_list.html">Articles</a></li>
+				<li><a href="../views">Articles</a></li>
 				<li><a href="datasets.html" class="here">Datasets</a></li>
-				<!--<li><a href="updates.html">Updates</a></li>-->
+				<li><a href="protocols.html">Protocols</a></li>
 			</ul>
 		</div>
 
-		<div class="container">
-		
+		<div class="container">		
 			<!--<main>-->
 				<header class="row" id="header">
 					<div class="col-md-12">
@@ -51,40 +50,49 @@
 			<hr class="line">
 
 			<div id="datasets"></div>
+		</div>
 
-			<script src="lib/js/jquery-1.11.1.min.js"></script>
-			<script src="lib/js/handlebars-v4.0.2.js"></script>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						Licensed under the <a href="http://creativecommons.org/licenses/by-sa/4.0/" title="Attribution-ShareAlike License" target="_blank">Creative Commons Attribution-ShareAlike 4.0 Unported License</a>.
+					</div>
+				</div>
+			</div>
+		</footer>
 
-			<script>
-				function datasets() {
+		<script src="lib/js/jquery-1.11.1.min.js"></script>
+		<script src="lib/js/handlebars-v4.0.2.js"></script>
 
-					var template_source = 'template/datasets.tpl';
-					var data_source = 'data/articles/datasets.json';
-					var target = '#datasets';
+		<script>
+			function datasets() {
+
+				var template_source = 'template/datasets.tpl';
+				var data_source = 'data/articles/datasets.json';
+				var target = '#datasets';
 
 
-					$.get( template_source , function(tpl) {
-						$.getJSON( data_source , function(data) {
+				$.get( template_source , function(tpl) {
+					$.getJSON( data_source , function(data) {
 
-							var template = Handlebars.compile(tpl); 
+						var template = Handlebars.compile(tpl); 
 
-							$(target).html(template(data));
-
-						});
+						$(target).html(template(data));
 
 					});
-				}
-			</script>	
-		 	
-		 	<script src="lib/js/jquery.sidr.js"></script><!-- mobile menu -->		
-			<script type="text/javascript">
-				
-				$(document).ready(function() {
-				  	$('#simple-menu').sidr();
+
 				});
+			}
+		</script>	
+	 	
+	 	<script src="lib/js/jquery.sidr.js"></script><!-- mobile menu -->		
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+			  	$('#simple-menu').sidr();
+			});
 
-			</script>
-
-		</div>
+		</script>
 	</body>
 </html>

@@ -21,6 +21,7 @@ Wikimole has been developed using the following resources:
 -	[d3.js](https://d3js.org/)
 -	[Handlebars.js](http://handlebarsjs.com/)
 -	[Bootstrap](http://getbootstrap.com/)
+-	[Sidr](https://github.com/artberri/sidr)
 -	[PRclass](http://99webtools.com/blog/php-script-to-get-pagerank/)
 
 Credits
