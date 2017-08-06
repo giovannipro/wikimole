@@ -13,6 +13,16 @@ Wikimole collects and visualizes data from articles under examination of the Wik
 * Verifying the project impact in Wikipedia content
 * Evaluating significant variables of interest for other research projects
 
+Libraries
+--------
+Wikimole has been developed using the following resources:
+
+-	[jQuery](https://jquery.com/)
+-	[d3.js](https://d3js.org/)
+-	[Handlebars.js](http://handlebarsjs.com/)
+-	[Bootstrap](http://getbootstrap.com/)
+-	[PRclass](http://99webtools.com/blog/php-script-to-get-pagerank/)
+
 Credits
 --------
 Wikimole is an open source project made by [Giovanni Profeta](https://github.com/giovannipro).
@@ -20,4 +30,5 @@ Wikimole is an open source project made by [Giovanni Profeta](https://github.com
 
 License
 --------
-This work is licensed under the [Creative Commons Attribution-Share Alike 4.0 International license](http://creativecommons.org/licenses/by-sa/4.0/).
+The source code is licensed under the [GNU GPLv3 license](https://github.com/giovannipro/wikimole/blob/master/LICENSE).
+The data are released under the [CC-BY-SA 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/).

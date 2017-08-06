@@ -17,7 +17,7 @@
     "in_out": true,
     "appr": [
       "Review_by_community",
-      "Review_by_expert_pdf_and_wiki"
+      "Rw_by_expert_pdf_and_wiki"
     ]
   },
   {
@@ -245,13 +245,6 @@
     "appr": [""]
   },
   {
-    "title": "Outline of domestic violence",
-    "in_out": true,
-    "appr": [
-      "Bold_reassesment"
-    ]
-  },
-  {
     "title": "Domestic_violence",
     "in_out": false,
     "appr": [""]
@@ -328,7 +321,7 @@
     "title": "Flag_of_South_Africa",
     "in_out": true,
     "appr": [
-      "Review_by_expert_pdf_and_wiki",
+      "Rw_by_expert_pdf_and_wiki",
       "New_article_suggested_by_expert",
       "Featured_on_WikiProject_South_Africa",
       "Rewrite_based_on_expert_review"
@@ -443,7 +436,7 @@
     "title": "Herero_and_Namaqua_genocide",
     "in_out": true,
     "appr": [
-      "Review_by_expert_pdf_and_wiki",
+      "Rw_by_expert_pdf_and_wiki",
       "Rewrite_based_on_expert_review",
       "Edit_a_thon"
     ]
@@ -472,7 +465,7 @@
     "title": "HIV",
     "in_out": true,
     "appr": [
-      "Review_by_expert_pdf_and_wiki"
+      "Rw_by_expert_pdf_and_wiki"
     ]
   },
   {
@@ -896,6 +889,11 @@
     "in_out": false,
     "appr": [""]
   },
+   {
+    "title": "Transport_in_South_Africa",
+    "in_out": false,
+    "appr": [""]
+  },
   {
     "title": "Two-foot-gauge_railways_in_South_Africa",
     "in_out": false,
@@ -928,7 +926,7 @@
     "in_out": true,
     "appr": [
       "Review_by_community",
-      "Review_by_expert_pdf_and_wiki"
+      "Rw_by_expert_pdf_and_wiki"
     ]
   },
   {
@@ -936,7 +934,7 @@
     "in_out": true,
     "appr": [
       "Review_by_community",
-      "Review_by_expert_pdf_and_wiki"
+      "Rw_by_expert_pdf_and_wiki"
     ]
   },
   {
@@ -944,7 +942,7 @@
     "in_out": true,
     "appr": [
       "Review_by_community",
-      "Review_by_expert_pdf_and_wiki",
+      "Rw_by_expert_pdf_and_wiki",
       "Featured_on_WikiProject_South_Africa"
     ]
   },
@@ -963,7 +961,7 @@
     "in_out": true,
     "appr": [
       "Review_by_community",
-      "Review_by_expert_pdf_and_wiki"
+      "Rw_by_expert_pdf_and_wiki"
     ]
   },
   {
