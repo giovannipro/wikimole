@@ -6,7 +6,7 @@
 	<div class="col-md-3 col-sm-6">		
 		<span class="glyphicon glyphicon-download" aria-hidden="true"></span>
 		<strong>
-			<a href="https://dl.dropboxusercontent.com/u/95554914/wikipedia_primary_school/views/data/{{ date }}/{{ date }}_{{ slug }}.zip">
+			<a href="assets/data_download/{{ date }}/{{ date }}_{{ slug }}.zip" target="blank" title="downlod {{name}}">
 				{{ name }} 
 			</a>
 		</strong>
@@ -19,3 +19,4 @@
 	</div>
 </div>
 {{/each}}
+

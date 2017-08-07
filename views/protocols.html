@@ -15,9 +15,9 @@
                 <main class="row">
                     <div class="col-md-3 col-sm-5">
                         <a id="simple-menu" href="#sidr"  style="padding-left:0"><i class="fa fa-bars fa-lg"></i></a>
-                        <a href="../views" style="font-weight:bold; padding-left:0;">Wikipedia Primary School</a>
+                        <a href="index.html" style="font-weight:bold; padding-left:0;">Wikipedia Primary School</a>
                     </div>
-                    <a href="../views"  class="first_menu">Articles</a>
+                    <a href="index.html"  class="first_menu">Articles</a>
                     <a href="datasets.html" class="first_menu">Datasets</a>
                     <a href="protocols.html" class="here first_menu">Protocols</a>
                 </main>
@@ -26,7 +26,7 @@
 
         <div id="sidr">
               <ul>
-                <li><a href="../views">Articles</a></li>
+                <li><a href="index.html">Articles</a></li>
                 <li><a href="datasets.html">Datasets</a></li>
                 <li><a href="protocols.html" class="here">Protocols</a></li>
             </ul>
@@ -65,7 +65,7 @@
                     <h4><a name="before_start">Before start</a></h4>
                     <p>Please run the script to check the title of the articles (it may change over time).</p>
                     <ol>
-                        <li>Go to <span class="i_link">wikimole/scraper/page_scrapers/</span></li>
+                        <li>Go to <a href="https://github.com/giovannipro/wikimole/blob/master/scraper/index.html" target="_blank">wikimole/scraper</a></li>
                         <li>Click on Check article title</li>
                     </ol>
                 </div>
@@ -76,13 +76,13 @@
 
                     <h5>Data scraping</h5>
                     <ol>
-                        <li>Go to <span class="i_link">wikimole/scraper/lib/scraper.py</span></li>
+                        <li>Go to <a href="https://github.com/giovannipro/wikimole/blob/master/scraper/python/scraper.py" target="_blank">wikimole/scraper/lib/scraper.py</a></li>
                         <li>Run the function get_incoming_links() and get the file with the list of incoming links</li>
                     </ol>
 
                     <h5>Data parsing</h5>
                     <ol>
-                        <li>Go to <span class="i_link">wikimole/scraper/lib/parser.py</span></li>
+                        <li>Go to <a href="https://github.com/giovannipro/wikimole/blob/master/scraper/python/parser.py" target="_blank">wikimole/scraper/lib/parser.py</a></li>
                         <li>Run the function count_co_occurrences() to get the raw file with the list of co-occurrences</li>
                         <li>Create an Excel file and import the file gathered through the previous step</li>
                         <li>Make a pivot table with the following columns: couple (source + target), count (number of co-occurrences)</li>
@@ -112,13 +112,13 @@
 
                     <h5>Data scraping</h5>
                     <ol>
-                        <li>Go to <span class="i_link">wikimole/scraper/lib/scraper.py</span></li>
+                        <li>Go to <a href="https://github.com/giovannipro/wikimole/blob/master/scraper/python/scraper.py" target="_blank">wikimole/scraper/lib/scraper.py</a></li>
                         <li>Run the function get_incoming_links() and get the file with the list of incoming links</li>
                     </ol>
 
                     <h5>Data parsing</h5>
                     <ol>
-                        <li>Go to <span class="i_link">wikimole/scraper/lib/parser.py</span></li>
+                        <li>Go to <a href="https://github.com/giovannipro/wikimole/blob/master/scraper/python/parser.py" target="_blank">wikimole/scraper/lib/parser.py</a></li>
                         <li>Run the function get_edges() to get the edges file</li>
                         <li>Make the nodes file with the following header: id (article title), label (article title)</li>
                     </ol>
@@ -144,7 +144,7 @@
 
                     <h5>Data scraping</h5>
                     <ol>
-                        <li>Go to <span class="i_link">wikimole/scraper/lib/scraper.py</span></li>
+                        <li>Go to <a href="https://github.com/giovannipro/wikimole/blob/master/scraper/python/scraper.py" target="_blank">wikimole/scraper/lib/scraper.py</a></li>
                         <li>Run the function get_incoming_links() and get the file with the list of incoming links</li>
                         <li>Run the function get_outgoing_links() and get the file with the list of outgoing links</li>
                     </ol>
@@ -152,12 +152,12 @@
                     <h5>Data parsing</h5>
                     <ol>
                         <li>Create an Excel file and import both the files with incoming links and outgoing links</li>
-                        <li>Create the dataset to be visualized like the following: <span class="i_link">wikimole/views/data/20170803/in_out_links_2017.csv</span></li>
+                        <li>Create the dataset to be visualized like the following: <a href="https://github.com/giovannipro/wikimole/blob/mastindex.html/assets/data/20170803/in_out_links_2017.csv" target="_blank">wikimoindex.html/assets/data/20170803/in_out_links_2017.csv</a></li>
                     </ol>
 
                     <h5>Data visualization</h5>
                     <ol>
-                        <li>Import the dataset in the script like the following: <span class="i_link">wikimole/views/dataviz/in_out_links/in_out_links_all.js</span></li></li>
+                        <li>Import the dataset in the script like the following: <a href="https://github.com/giovannipro/wikimole/blob/mastindex.html/dataviz/in_out_links/in_out_links_all.js" target="_blank">wikimoindex.html/dataviz/in_out_links/in_out_links_all.js</a></li></li>
                         <li>Export the svg file to be further edited in a vector graphics editors</li>
                     </ol>
                 </div>
