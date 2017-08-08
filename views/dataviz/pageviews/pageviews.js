@@ -3,6 +3,8 @@
 
 var w = window;
 
+var t = "\t";
+
 var width = w.outerWidth;
     height = 10500; //3000; //width + (width*0.3);
 // console.log(w)
@@ -27,7 +29,8 @@ var v_shift = 60,
 var fontsize = 16,
     fontweight = 300;
 
-// var n_art = 177; // 177 9
+var filter = "control" // examined control all
+console.log(filter)
 
 // set plot
 // ------------------
@@ -64,7 +67,9 @@ function horizon_chart (error, data){
     var timeDomain = d3.extent(data, function(d){return d.timestamp});
 
     var nest = d3.nest()
-        .key(function(d) { return d.article; })
+        .key(function(d) { 
+            return d.article; 
+        })
         .rollup(function (g) {
             return g.map(function (d) {
                 return [d.timestamp, d.pageviews]
@@ -85,23 +90,36 @@ function horizon_chart (error, data){
         .domain(timeDomain)
         .range([0,nomargin_w - (label_space + 10)]); //margin.left - margin.right 
 
+    // var y = d3.time.scale()
+    //     .domain(timeDomain)
+    //     .range([0,nomargin_w - (label_space + 10)]); //margin.left - margin.right 
+
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient('top')
         .ticks(d3.time.months, 1)
         .tickFormat(d3.time.format('%y.%m'))
-        .tickSize(5)
-        .tickSubdivide(true)
+        .tickSize(10)
+        // .tickSubdivide(true)
 
     var o_line = plot.append('g')
         .attr("transform","translate(" + 0 + ",0)")
-        .attr('class','v_lines')
+        .attr('class','o_lines')
         .call(xAxis)
         .selectAll('text')
             .attr("transform", "rotate(0)")
             .style("text-anchor", "start")
-            .attr('fill',"red")
+            .attr('fill',"gray")
             .attr("font-size",fontsize)
+
+    // var line = d3.svg.line()
+    //     .x(function(d) { return x(d.key); })
+    //     .y(function(d) { return 0 });
+
+    // svg.append("path")
+    //     .data(nest)
+    //     .attr("class", "line")
+    //     .attr("d", line);
 
 // visual elements
 
@@ -114,7 +132,123 @@ function horizon_chart (error, data){
         .interpolate("basis") // basis linear
 
     var article = plot.selectAll('.article')
-        .data(nest)
+        .data(nest
+            .filter(function (d) { 
+                if (filter == "examined") {
+                    return d.key == "Coal" ||
+                        d.key == "Africa_Day" ||
+                        d.key == "Agriculture_in_South_Africa" ||
+                        d.key == "AIDS_orphan" ||
+                        d.key == "Apartheid" ||
+                        d.key == "Bias" ||
+                        d.key == "Bicycle" ||
+                        d.key == "Children's_Act_2005" ||
+                        d.key == "Children's_Day" ||
+                        d.key == "Clay" ||
+                        d.key == "Convenience_food" ||
+                        d.key == "Cradle_of_Humankind" ||
+                        d.key == "Day_of_Reconciliation" ||
+                        d.key == "Drakensberg" ||
+                        d.key == "Fire_safety" ||
+                        d.key == "Flag_of_South_Africa" ||
+                        d.key == "Food_pyramid_(nutrition)" ||
+                        d.key == "Frances_Baard" ||
+                        d.key == "Gangster" ||
+                        d.key == "Gender_role" ||
+                        d.key == "Hand_washing" ||
+                        d.key == "Healthcare_in_South_Africa" ||
+                        d.key == "Herero_and_Namaqua_genocide" ||
+                        d.key == "Heritage_Day_(South_Africa)" ||
+                        d.key == "HIV" ||
+                        d.key == "Home_safety" ||
+                        d.key == "Human_Rights_Day" ||
+                        d.key == "Kaditshwene" ||
+                        d.key == "Khoikhoi" ||
+                        d.key == "Khoisan_languages" ||
+                        d.key == "Makhonjwa_Mountains" ||
+                        d.key == "Mandela_Day" ||
+                        d.key == "Map" ||
+                        d.key == "Mapungubwe_Collection" ||
+                        d.key == "National_Women's_Day" ||
+                        d.key == "Nelson_Mandela" ||
+                        d.key == "Nest" ||
+                        d.key == "Oliver_Tambo" ||
+                        d.key == "Petrol-paraffin_engine" ||
+                        d.key == "San_healing_practices" ||
+                        d.key == "San_people" ||
+                        d.key == "San_religion" ||
+                        d.key == "Sieve" ||
+                        d.key == "Steve_Biko" ||
+                        d.key == "Vibration" ||
+                        d.key == "Walter_Sisulu" ||
+                        d.key == "Water_pollution" ||
+                        d.key == "Water_privatisation_in_South_Africa" ||
+                        d.key == "Water_supply_and_sanitation_in_South_Africa" ||
+                        d.key == "Western_Cape" ||
+                        d.key == "Wildlife_management" ||
+                        d.key == "Winnie_Madikizela-Mandela" ||
+                        d.key == "!Kung_people"         
+                }
+                else if (filter == "control") {
+                    return d.key != "Coal" &&
+                        d.key != "Africa_Day" &&
+                        d.key != "Agriculture_in_South_Africa" &&
+                        d.key != "AIDS_orphan" &&
+                        d.key != "Apartheid" &&
+                        d.key != "Bias" &&
+                        d.key != "Bicycle" &&
+                        d.key != "Children's_Act_2005" &&
+                        d.key != "Children's_Day" &&
+                        d.key != "Clay" &&
+                        d.key != "Convenience_food" &&
+                        d.key != "Cradle_of_Humankind" &&
+                        d.key != "Day_of_Reconciliation" &&
+                        d.key != "Drakensberg" &&
+                        d.key != "Fire_safety" &&
+                        d.key != "Flag_of_South_Africa" &&
+                        d.key != "Food_pyramid_(nutrition)" &&
+                        d.key != "Frances_Baard" &&
+                        d.key != "Gangster" &&
+                        d.key != "Gender_role" &&
+                        d.key != "Hand_washing" &&
+                        d.key != "Healthcare_in_South_Africa" &&
+                        d.key != "Herero_and_Namaqua_genocide" &&
+                        d.key != "Heritage_Day_(South_Africa)" &&
+                        d.key != "HIV" &&
+                        d.key != "Home_safety" &&
+                        d.key != "Human_Rights_Day" &&
+                        d.key != "Kaditshwene" &&
+                        d.key != "Khoikhoi" &&
+                        d.key != "Khoisan_languages" &&
+                        d.key != "Makhonjwa_Mountains" &&
+                        d.key != "Mandela_Day" &&
+                        d.key != "Map" &&
+                        d.key != "Mapungubwe_Collection" &&
+                        d.key != "National_Women's_Day" &&
+                        d.key != "Nelson_Mandela" &&
+                        d.key != "Nest" &&
+                        d.key != "Oliver_Tambo" &&
+                        d.key != "Petrol-paraffin_engine" &&
+                        d.key != "San_healing_practices" &&
+                        d.key != "San_people" &&
+                        d.key != "San_religion" &&
+                        d.key != "Sieve" &&
+                        d.key != "Steve_Biko" &&
+                        d.key != "Vibration" &&
+                        d.key != "Walter_Sisulu" &&
+                        d.key != "Water_pollution" &&
+                        d.key != "Water_privatisation_in_South_Africa" &&
+                        d.key != "Water_supply_and_sanitation_in_South_Africa" &&
+                        d.key != "Western_Cape" &&
+                        d.key != "Wildlife_management" &&
+                        d.key != "Winnie_Madikizela-Mandela" &&
+                        d.key != "!Kung_people" 
+                } 
+                else {
+                    return d.art != "xyz"
+                }                            
+            })
+        )        
         .enter()
         .append('g')
         .attr("class","article")
@@ -132,7 +266,6 @@ function horizon_chart (error, data){
         })
         .append("text")
         .attr("x", 0)
-        // .attr("dy",5)
         .attr("y", function(d){
             return (fontsize * 2)
         })        
@@ -141,15 +274,19 @@ function horizon_chart (error, data){
         .style("letter-spacing",0)
         .style("text-anchor","start") // end
         .text(function(d,i){
-            return (d.key)
+            // return (i+1) + t + (d.key)
+            return d.key
         })
 
     var horizon = article.selectAll('horizon')
         .data(function (d) {
-            return [d.values];
-        })
-        .enter().append('g')
+        return [d.values]
+        })       
+        .enter()
+        .append('g')
         .call(horizon);
+
+        
 };
 
 function loaded_pageview (data){
@@ -247,7 +384,7 @@ function loaded_pageview (data){
         .attr('class','pageviews')
         .append("path")
         //.attr("transform", function(d, i) { return "translate(" + shift + "," + (y(d.key) + padding )   + ")" }) // 
-        .style("fill", "red")
+        // .style("fill", "red")
         .style("stroke", "white") 
         .style("stroke-width", "1")
         .attr("d", function(d){ 

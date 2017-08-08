@@ -188,6 +188,9 @@ main #simple-menu{
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
+#defs{
+    display: none;
+}
 footer{
     background-color: #f3f3f3;
     bottom: 0;
