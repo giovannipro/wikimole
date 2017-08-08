@@ -4,7 +4,8 @@
 var w = window;
 
 var width = w.outerWidth;
-var height = width * 7.4; //3000; //width + (width*0.3);
+    height = 10500; //3000; //width + (width*0.3);
+// console.log(w)
 
 var margin = {top: 50, right: 50, bottom: 50, left: 50},
     nomargin_w = width - (margin.left + margin.right),
@@ -19,8 +20,9 @@ var padding = width/100,
 
 var dateFormat_pageview = d3.time.format('%Y%m%d%H'); // 2015070100
 
-var v_shift = 100,
-    label_space = 300;
+var v_shift = 60,
+    label_space = 300,
+    bands = 3;
 
 var fontsize = 16,
     fontweight = 300;
@@ -32,6 +34,8 @@ var fontsize = 16,
 
 var svg = d3.select("#svg_container")
     .append("svg")
+    .attr("widht",width)
+    .attr("height",height)
     .attr("viewBox", '0 0 ' + width + ' ' + (height) )
 
 var plot = svg.append("g")
@@ -105,9 +109,9 @@ function horizon_chart (error, data){
         // .scale(scale() ? "global" : "local")
         .width(nomargin_w - (label_space + 10))
         .height(v_shift)
-        .bands(5) // 1 - 5
+        .bands(bands) // 1 - 5
         .mode("mirror") // mirror offset
-        .interpolate("basis")
+        .interpolate("basis") // basis linear
 
     var article = plot.selectAll('.article')
         .data(nest)
