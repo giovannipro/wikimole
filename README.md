@@ -9,9 +9,9 @@ Wikipedia Primary School Project aims at providing on Wikipedia the information 
 
 Wikimole collects and visualizes data from articles under examination of the Wikipedia Primary School Project. The [visual analysis](https://bitly.com/WPS-evaluation) aims to:
 
-* Analyzing the state of the art of topics related to Wikipedia Primary School Project
-* Verifying the project impact in Wikipedia content
-* Evaluating significant variables of interest for other research projects
+*	Analyzing the state of the art of topics related to Wikipedia Primary School Project
+*	Verifying the project impact in Wikipedia content
+*	Evaluating significant variables of interest for other research projects
 
 Libraries
 --------

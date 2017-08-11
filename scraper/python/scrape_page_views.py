@@ -113,17 +113,17 @@ def scrape_pv_before_2015(article,start,end):
 			timespan = str(start) + str(add_zero(x))
 
 			request = api_old + timespan + "/" + article
-			print request
+			# print request
 			
-			# response = urlopen(request).read()
-			# data = json.loads(response)
+			response = urlopen(request).read()
+			data = json.loads(response)
 
-			# for key, value in data["daily_views"].items():
-			# 	date = str(key)
-			# 	views = str(value)
-			# 	output = date + "\t" + views
+			for key, value in data["daily_views"].items():
+				date = str(key)
+				views = str(value)
+				output = date + "\t" + views
 
-			# 	print(output)
+				print(output)
 
 		start += 1
 
@@ -133,21 +133,6 @@ def scrape_pv_before_2015(article,start,end):
 
 #scrape_pv_before_2015("Day_of_Reconciliation",2004,2015)
 scrape_pv_after_2015("articles_test","20150701","20170630") #  articles_details articles_test 20150701 20170630 // 20170601 20170602
-
-#scrape_pv_after_2016("en","Wikipedia:Graphics Lab/FPhotography workshop","20161231","20170330")
-#scrape_pv_before_2015("Day_of_Reconciliation",2008,2015)
-
-
-
-
-############
-
-# https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Wikipedia%3AGraphics_Lab%2FPhotography_workshop/daily/2017042400/2017051400
-# https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Wikipedia%3Graphics_Lab%2FPhotography_workshop/daily/2016070100/2016033100
-
-
-
-
 
 
 
