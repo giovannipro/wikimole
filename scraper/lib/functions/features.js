@@ -34,6 +34,7 @@ var list = [
 	"Domestic violence in South Africa"
 ];  
 
+
 // get the list of articles
 // $.getJSON(art_list, function(mydata) {
 // 	//var parse_art = $.parseHTML(mydata);
@@ -49,10 +50,19 @@ var list = [
 // });
 
 $.getJSON(art_list, function(mydata) {
-	var parse_art = $.parseHTML(mydata);
+
+	//var parse_art = $.parseHTML(mydata);
 	articles_a = $(mydata)
 	//console.log(articles_a)
-})
+
+	$.each( articles_a, function( i, val ) {
+		var article = val.article;
+		var in_out = val.in;
+		var approaches = val.approaches;
+		//console.log(article)
+	})
+});
+
 
 /* ---------------- 
 FINDME 
@@ -1303,7 +1313,6 @@ function get_all_daily_pageview(yearString,article) {
 
 	get_daily_pageview("Day_of_Reconciliation",2008)
 }
-//console.log("test")
 
 /* ------------------------------------
 SISTER PROJECTS
@@ -1384,7 +1393,7 @@ function get_revisionid(url,date) {
 			url_clean = url.replace(revision_api,'').replace(date,'').replace('&rvstart=','').replace('&titles=','').replace(/_/g,' ');
 
 			obj = [];
-		  	obj = $(wikiResponse.query.pageids);
+		   	obj = $(wikiResponse.query.pageids);
 			pageids = obj[0].toString();
 			revision_id = $(wikiResponse.query.pages)[0][pageids].revisions[0].revid.toString()
 
@@ -1402,7 +1411,7 @@ function get_revisionid(url,date) {
 			if (index == stop) {
 			  	console.log('DONE');
 		 	}
-		},   
+    },   
 		error : function (xhr, ajaxOptions, thrownError) {
 			console.log(xhr.status);
 			console.log(thrownError);
