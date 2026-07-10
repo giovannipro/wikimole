@@ -32,4 +32,4 @@ Wikimole is an open source project made by [Giovanni Profeta](https://github.com
 License
 --------
 The source code is licensed under the [GNU GPLv3 license](https://github.com/giovannipro/wikimole/blob/master/LICENSE).
-The data are released under the [CC-BY-SA 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/).
+The data are released under the [CC0 1.0. license](https://creativecommons.org/publicdomain/zero/1.0/).
