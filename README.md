@@ -1,7 +1,7 @@
 Wikimole
 =========
 
-Wikimole is a scraper and a set of data visualizations made in the framework of [Wikipedia Primary School Project](https://meta.wikimedia.org/wiki/Research:Wikipedia_Primary_School_SSAJRP_programme).
+Wikimole collects data from Wikipedia API and visualizes them in the framework of [Wikipedia Primary School Project](https://meta.wikimedia.org/wiki/Research:Wikipedia_Primary_School_SSAJRP_programme).
 
 Wikipedia Primary School is an applied research involving a team lead by [SUPSI University of Applied Sciences and Arts of Southern Switzerland](http://www.supsi.ch/lcv) and the [University of Cape Town](http://www.uct.ac.za/). It is supported in Switzerland by the Swiss National Science Foundation (SNSF) and in South Africa by the National Research Foundation (NRF).
 
